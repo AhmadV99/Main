@@ -1,17 +1,20 @@
+
 local passes, fails, undefined = 0, 0, 0
-local running = 0
 
 local function GetGB(Path)
-    local GB = _G or getgenv()
-    return GB[Path]
+    local value = getgenv() or _G
+    local Str = Path
+    while value ~= nil and Str ~= "" do
+        local Name, Next = Str:match("^([^.]+)%.?(.*)$")
+        value = value[Name]
+        Str = Next
+    end
+    return value
 end
 
 local function test(Code)
-    running += 1
     task.spawn(function()
-        local strippedCode = Code:match('^"(.*)"$') 
-        local success, result = pcall(function() return type(loadstring(strippedCode)) == 'function' or GetGB(Code) end)
-        if success and result then
+        if GetGB(Code) then
             passes += 1
             print("✅ " .. Code)
         else
@@ -19,7 +22,7 @@ local function test(Code)
             warn("⛔ " .. Code)
         end
     end)
-    task.wait(.5)
+    task.wait()
 end
 
 local function Print(Name)
@@ -41,12 +44,14 @@ test("clonefunction")
 test("getcallingscript")
 test("getscriptclosure")
 test("hookfunction")
+test("hookfunc")
 test("iscclosure")
 test("islclosure")
 test("isexecutorclosure")
 test("loadstring")
 test("newcclosure")
 test("newcclosure")
+test("newlclosure")
 
 Print("Console")
 
@@ -66,6 +71,7 @@ test("crypt.decrypt")
 test("crypt.generatebytes")
 test("crypt.generatekey")
 test("crypt.hash")
+test("crypt.hex")
 
 Print("Debug")
 
@@ -80,6 +86,22 @@ test("debug.getupvalues")
 test("debug.setconstant")
 test("debug.setstack")
 test("debug.setupvalue")
+test("debug.isvalidlevel")
+
+Print("No Debug")
+
+test("getconstant")
+test("getconstants")
+test("getinfo")
+test("getproto")
+test("getprotos")
+test("getstack")
+test("getupvalue")
+test("getupvalues")
+test("setconstant")
+test("setstack")
+test("setupvalue")
+test("isvalidlevel")
 
 Print("File System")
 
@@ -132,6 +154,7 @@ test("getnamecallmethod")
 test("isreadonly")
 test("setrawmetatable")
 test("setreadonly")
+test("setmetatable")
 
 Print("Miscellaneous")
 
@@ -158,18 +181,42 @@ test("getscripts")
 test("getsenv")
 test("getthreadidentity")
 test("setthreadidentity")
+test("getfenv")
+test("setfenv")
 
 Print("Drawing")
 
 test("Drawing")
 test("Drawing.new")
 test("Drawing.Fonts")
+test("Drawing.clear")
 test("isrenderobj")
 test("getrenderproperty")
 test("setrenderproperty")
 test("cleardrawcache")
 test("WebSocket")
 test("WebSocket.connect")
+
+Print("Other")
+
+test("clonefunction")
+test("getcallbackmember")
+test("restorefunction")
+test("isfunctionhooked")
+test("firesignal")
+test("require")
+test("getallthreads")
+test("getfpscap")
+test("fireproximityprompt")
+test("firetouchtransmitter")
+test("getproperties")
+test("gethiddenproperties")
+test("getexecutioncontext")
+test("protect_gui")
+test("securecall")
+test("emulate_call")
+test("keypress")
+test("writecustomasset")
 
 Print("FPS")
 
@@ -182,9 +229,7 @@ local function GetFPS()
     end 
     return math.round(Value / 5) 
 end
-print("FPS: " ..GetFPS() "/60")
-
-task.wait(2.5)
+print("FPS: " ..GetFPS().. "/60")
 
 local rate = math.round(passes / (passes + fails) * 100)
 local outOf = passes .. " out of " .. (passes + fails)
