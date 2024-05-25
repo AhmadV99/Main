@@ -50,6 +50,7 @@ test("isexecutorclosure")
 test("loadstring")
 test("newcclosure")
 test("newcclosure")
+test("newlclosure")
 
 Print("Console")
 
@@ -69,6 +70,7 @@ test("crypt.decrypt")
 test("crypt.generatebytes")
 test("crypt.generatekey")
 test("crypt.hash")
+test("crypt.hex")
 
 Print("Debug")
 
@@ -83,6 +85,7 @@ test("debug.getupvalues")
 test("debug.setconstant")
 test("debug.setstack")
 test("debug.setupvalue")
+test("debug.isvalidlevel")
 
 Print("No Debug")
 
@@ -97,6 +100,7 @@ test("getupvalues")
 test("setconstant")
 test("setstack")
 test("setupvalue")
+test("isvalidlevel")
 
 Print("File System")
 
@@ -184,6 +188,7 @@ Print("Drawing")
 test("Drawing")
 test("Drawing.new")
 test("Drawing.Fonts")
+test("Drawing.clear")
 test("isrenderobj")
 test("getrenderproperty")
 test("setrenderproperty")
@@ -195,6 +200,23 @@ test("WebSocket.connect")
 Print("Other")
 
 test("clonefunction")
+test("getcallbackmember")
+test("restorefunction")
+test("isfunctionhooked")
+test("firesignal")
+test("require")
+test("getallthreads")
+test("getfpscap")
+test("fireproximityprompt")
+test("firetouchtransmitter")
+test("getproperties")
+test("gethiddenproperties")
+test("getexecutioncontext")
+test("protect_gui")
+test("securecall")
+test("emulate_call")
+test("keypress")
+test("writecustomasset")
 
 Print("FPS")
 
@@ -207,6 +229,7 @@ local function GetFPS()
     end 
     return math.round(Value / 5) 
 end
+
 print("FPS: " ..GetFPS().. "/60")
 
 local rate = math.round(passes / (passes + fails) * 100)
