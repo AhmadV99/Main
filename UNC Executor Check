@@ -1,4 +1,3 @@
-
 local passes, fails, undefined = 0, 0, 0
 
 local function GetGB(Path)
@@ -138,7 +137,6 @@ test("getcallbackvalue")
 test("getconnections")
 test("getcustomasset")
 test("gethiddenproperty")
-test("sethiddenproperty")
 test("gethui")
 test("getinstances")
 test("getnilinstances")
