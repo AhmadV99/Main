@@ -1,0 +1,220 @@
+local passes, fails, undefined = 0, 0, 0
+
+local function GetGB(Path)
+    local value = getgenv() or _G
+    local Str = Path
+    while value ~= nil and Str ~= "" do
+        local Name, Next = Str:match("^([^.]+)%.?(.*)$")
+        value = value[Name]
+        Str = Next
+    end
+    return value
+end
+
+local function test(Code)
+    task.spawn(function()
+        if GetGB(Code) then
+            passes += 1
+            print("✅ " .. Code)
+        else
+            fails += 1
+            warn("⛔ " .. Code)
+        end
+    end)
+    task.wait()
+end
+
+local function Print(Name)
+    return print(' ----- [ ' .. Name .. ' ] ----- ')
+end
+
+Print("Cache")
+
+test("cache.invalidate")
+test("cache.iscached")
+test("cache.replace")
+test("cloneref")
+test("compareinstances")
+
+Print("Closures")
+
+test("checkcaller")
+test("clonefunction")
+test("getcallingscript")
+test("getscriptclosure")
+test("hookfunction")
+test("hookfunc")
+test("iscclosure")
+test("islclosure")
+test("isexecutorclosure")
+test("loadstring")
+test("newcclosure")
+test("newcclosure")
+
+Print("Console")
+
+test("rconsoleclear")
+test("rconsolecreate")
+test("rconsoledestroy")
+test("rconsoleinput")
+test("rconsoleprint")
+test("rconsolesettitle")
+
+Print("Crypt")
+
+test("crypt.base64encode")
+test("crypt.base64decode")
+test("crypt.encrypt")
+test("crypt.decrypt")
+test("crypt.generatebytes")
+test("crypt.generatekey")
+test("crypt.hash")
+
+Print("Debug")
+
+test("debug.getconstant")
+test("debug.getconstants")
+test("debug.getinfo")
+test("debug.getproto")
+test("debug.getprotos")
+test("debug.getstack")
+test("debug.getupvalue")
+test("debug.getupvalues")
+test("debug.setconstant")
+test("debug.setstack")
+test("debug.setupvalue")
+
+Print("No Debug")
+
+test("getconstant")
+test("getconstants")
+test("getinfo")
+test("getproto")
+test("getprotos")
+test("getstack")
+test("getupvalue")
+test("getupvalues")
+test("setconstant")
+test("setstack")
+test("setupvalue")
+
+Print("File System")
+
+test("readfile")
+test("listfiles")
+test("writefile")
+test("makefolder")
+test("appendfile")
+test("isfile")
+test("isfolder")
+test("delfolder")
+test("delfile")
+test("delfile")
+test("loadfile")
+test("dofile")
+
+Print("Input")
+
+test("isrbxactive")
+test("mouse1click")
+test("mouse1press")
+test("mouse1release")
+test("mouse2click")
+test("mouse2press")
+test("mouse2release")
+test("mousemoveabs")
+test("mousemoverel")
+test("mousescroll")
+
+Print("Instances")
+
+test("fireclickdetector")
+test("getcallbackvalue")
+test("getconnections")
+test("getcustomasset")
+test("gethiddenproperty")
+test("sethiddenproperty")
+test("gethui")
+test("getinstances")
+test("getnilinstances")
+test("isscriptable")
+test("setscriptable")
+test("setrbxclipboard")
+
+Print("Metatable")
+
+test("getrawmetatable")
+test("hookmetamethod")
+test("getnamecallmethod")
+test("isreadonly")
+test("setrawmetatable")
+test("setreadonly")
+test("setmetatable")
+
+Print("Miscellaneous")
+
+test("identifyexecutor")
+test("lz4compress")
+test("lz4decompress")
+test("messagebox")
+test("queue_on_teleport")
+test("request")
+test("setclipboard")
+test("getclipboard")
+test("setfpscap")
+
+Print("Scripts")
+
+test("getgc")
+test("getgenv")
+test("getloadedmodules")
+test("getrenv")
+test("getrunningscripts")
+test("getscriptbytecode")
+test("getscripthash")
+test("getscripts")
+test("getsenv")
+test("getthreadidentity")
+test("setthreadidentity")
+test("getfenv")
+test("setfenv")
+
+Print("Drawing")
+
+test("Drawing")
+test("Drawing.new")
+test("Drawing.Fonts")
+test("isrenderobj")
+test("getrenderproperty")
+test("setrenderproperty")
+test("cleardrawcache")
+test("WebSocket")
+test("WebSocket.connect")
+test("WebSocket.connect")
+
+Print("Other")
+
+test("clonefunction")
+
+Print("FPS")
+
+local renderStepped = game:GetService("RunService").RenderStepped
+local function GetFPS() 
+    renderStepped:Wait() 
+    local Value = 0 
+    for _ = 1, 5 do 
+        Value += 1 / renderStepped:Wait() 
+    end 
+    return math.round(Value / 5) 
+end
+print("FPS: " ..GetFPS().. "/60")
+
+local rate = math.round(passes / (passes + fails) * 100)
+local outOf = passes .. " out of " .. (passes + fails)
+
+print("\n")
+
+print("UNC Summary Executor")
+print("✅ Tested with a " .. rate .. "% success rate (" .. outOf .. ")")
+print("⛔ " .. fails .. " tests failed")
+print("⚠️ " .. undefined .. " globals are missing aliases")
