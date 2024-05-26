@@ -2,7 +2,7 @@ local passes, fails, undefined = 0, 0, 0
 local TestR = {}
 
 local function GetGB(Path)
-    local value = getgenv() or _G
+    local value = getgenv() or _G or getfenv(0)
     local Str = Path
     while value ~= nil and Str ~= "" do
         local Name, Next = Str:match("^([^.]+)%.?(.*)$")
@@ -31,9 +31,7 @@ local function test(Code)
 end
 
 local function Print(Name)
-    print("\n")
-    print(' ----- [ ' .. Name .. ' ] ----- ')
-    print("\n")
+    return print(' ----- [ ' .. Name .. ' ] ----- ')
 end
 
 Print("Cache")
@@ -294,4 +292,3 @@ print("\n")
 print("UNC Summary Executor")
 print("✅ Tested with a " .. rate .. "% success rate (" .. outOf .. ")")
 print("⛔ " .. fails .. " tests failed")
-print("⚠️ " .. undefined .. " globals are missing aliases")
