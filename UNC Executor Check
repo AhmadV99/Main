@@ -1,4 +1,5 @@
 local passes, fails, undefined = 0, 0, 0
+local TestR = {}
 
 local function GetGB(Path)
     local value = getgenv() or _G
@@ -13,18 +14,26 @@ end
 
 local function test(Code)
     task.spawn(function()
-        if GetGB(Code) then
+        local Start = os.clock()
+        local Success, Error = pcall(function() return GetGB(Code) ~= nil end)
+        local endT = os.clock()
+        local dura = endT - Start
+        if Success and Error then
             passes += 1
-            print("✅ " .. Code)
+            print(string.format("✅ %s (%.2f ms)", Code, dura * 1000))
+            table.insert(TestR, {code = Code, result = "pass", message = string.format("Duration: %.2f ms", dura * 1000)})
         else
             fails += 1
             warn("⛔ " .. Code)
         end
     end)
+    task.wait()
 end
 
 local function Print(Name)
-    return print(' ----- [ ' .. Name .. ' ] ----- ')
+    print("\n")
+    print(' ----- [ ' .. Name .. ' ] ----- ')
+    print("\n")
 end
 
 Print("Cache")
@@ -32,7 +41,6 @@ Print("Cache")
 test("cache.invalidate")
 test("cache.iscached")
 test("cache.replace")
-test("cloneref")
 test("compareinstances")
 
 Print("Closures")
@@ -48,7 +56,6 @@ test("islclosure")
 test("isexecutorclosure")
 test("loadstring")
 test("newcclosure")
-test("newcclosure")
 test("newlclosure")
 
 Print("Console")
@@ -59,6 +66,11 @@ test("rconsoledestroy")
 test("rconsoleinput")
 test("rconsoleprint")
 test("rconsolesettitle")
+test("rconsoleinfo")
+test("rconsolewarn")
+test("rconsoleerr")
+test("rconsolename")
+test("rconsoleclose")
 
 Print("Crypt")
 
@@ -114,6 +126,7 @@ test("delfolder")
 test("delfile")
 test("loadfile")
 test("dofile")
+test("zip_inflate")
 
 Print("Input")
 
@@ -127,6 +140,10 @@ test("mouse2release")
 test("mousemoveabs")
 test("mousemoverel")
 test("mousescroll")
+test("keyrelease")
+test("keypress")
+test("mouse1up")
+test("mouse2up")
 
 Print("Instances")
 
@@ -135,8 +152,10 @@ test("getcallbackvalue")
 test("getconnections")
 test("getcustomasset")
 test("gethiddenproperty")
+test("sethiddenproperty")
 test("gethui")
 test("getinstances")
+test("getinstancecache")
 test("getnilinstances")
 test("isscriptable")
 test("setscriptable")
@@ -160,11 +179,23 @@ test("lz4decompress")
 test("messagebox")
 test("queue_on_teleport")
 test("request")
-test("http.request")
 test("syn.request")
+test("http_request")
+test("HttpPost")
+test("syn")
 test("setclipboard")
 test("getclipboard")
 test("setfpscap")
+test("setfflag")
+test("getspecialinfo")
+test("cloneref")
+test("game:GetObjects")
+test("setparentinternal")
+test("addchildinternal")
+test("isluau")
+test("run_secure")
+test("getnetworkmode")
+test("setnetworkmode")
 
 Print("Scripts")
 
@@ -177,6 +208,7 @@ test("getscriptbytecode")
 test("getscripthash")
 test("getscripts")
 test("getsenv")
+test("getregistry")
 test("getthreadidentity")
 test("setthreadidentity")
 test("getfenv")
@@ -195,8 +227,22 @@ test("cleardrawcache")
 test("WebSocket")
 test("WebSocket.connect")
 
+Print("Http")
+
+test("game:httpGet")
+test("game:HttpGetAsync")
+test("game.HttpGetAsync")
+test("game.httpGet")
+
+Print("Instance Saving")
+
+test("saveinstance")
+test("decompile")
+
 Print("Other")
 
+test("game")
+test("Game")
 test("clonefunction")
 test("getcallbackmember")
 test("restorefunction")
@@ -213,10 +259,20 @@ test("getexecutioncontext")
 test("protect_gui")
 test("securecall")
 test("emulate_call")
-test("keypress")
 test("writecustomasset")
 test("rawget")
 test("unprotect_gui")
+test("firetouchinterest")
+test("setsimulationradius")
+test("getthreadcontext")
+test("setthreadcontext")
+test("getmoduleunlocked")
+test("setmoduleunlocked")
+test("run_auto_execute_scripts")
+test("run_teleport_queue_scripts")
+test("assign_socket")
+test("send_socket")
+test("close_socket")
 
 Print("FPS")
 
