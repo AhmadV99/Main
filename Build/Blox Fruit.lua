@@ -71,15 +71,15 @@ Dropdown(Main, "Choose Chest Area", "", {"Mirage Island", "Island Other"}, "Isla
 Toggle(Main, "Auto Collect Chest", "Stop Collect Chest if Get God's Chalice or Fist of Darkness", false)
 Toggle(Main, "Auto Hop", "Hop if No Found Chest", false)
 Main:AddSection("Bosses")
-local BossList = Dropdown(Main, "Choose Boss", "", TableBoss(), "")
+local BossList = Dropdown(Main, "Choose Boss", "", TableBoss, "")
 Main:AddButton({Name = "Refersh Boss", Description = "", Callback = function()
-    BossList:Set(TableBoss())
+    BossList:Set(TableBoss)
 end})
 Toggle(Main, "Auto Attack Boss", "This Can Attack a Mob Bosses!", false)
 Toggle(Main, "Auto Attack Boss All", "This Can Attack a Mob Bosses All!", false)
 Main:AddButton({Name = "Hop Server", Description = "", Callback = function()Server("Hop1")end})
 Main:AddSection("Material")
-Dropdown(Main, "Choose Material", "", MaterialList(), "")
+Dropdown(Main, "Choose Material", "", MaterialList, "")
 Toggle(Main, "Auto Farm Material", "This Can Farm Material Item!", false)
 
 return SpeedHubX
