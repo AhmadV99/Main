@@ -117,7 +117,7 @@ elseif World2 then
   Toggle(ItemQuest, "Auto Cursed Captain", "This Attack Boss Cursed Captain!", false)
   ItemQuest:AddSection({"Law"})
   Toggle(ItemQuest, "Auto Order Law", "This Attack Law Order!", false)
-elseif Sea3 then
+elseif World3 then
   ItemQuest:AddSection("Sword Item")
   Toggle(ItemQuest, "Auto Twin Hooks", "", false)
   Toggle(ItemQuest, "Auto Buddy Sword", "", false)
@@ -151,7 +151,7 @@ elseif Sea3 then
       elseif FindNPC({"Cake Prince"}) then
         StatusC:Set("Cake Prince : Spawned")
       else
-        StatusC:Set("Status Cake Prince", "Status : " .. string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", ""))
+        StatusC:Set("Status Cake Prince", "Status : " .. CheckMob("CakePrinceSpawner"))
       end
     end
   end)
