@@ -5,7 +5,8 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Player = Players.LocalPlayer
-local CommF_ = ReplicatedStorage.Remotes.CommF_
+local Remotes = ReplicatedStorage.Remotes
+local CommF_ = Remotes.CommF_
 
 local Window = Library:MakeWindow({
     Title = "Speed Hub X | " .. Version,
@@ -280,4 +281,131 @@ if World2 or World3 then
   Dropdown(Maps, "Select NPCs", "", getgenv().TableNPCs, "")
   Toggle(Maps, "Tween To NPCs", "", false)
 end
+local Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"})
+Shop:AddSection({"Other"})
+Toggle(Shop, "Auto Buy Legendary Sword", "", false)
+Toggle(Shop, "Auto Buy True Triple Katana", "", false)
+AddShop(Shop)
+local DevilFruit = Window:MakeTab({"Devil Fruit", "apple"})
+Dropdown(DevilFruit, "Select Fruit Sniper", "", getgenv().TableFruit, "")
+Toggle(DevilFruit, "Auto Buy Fruit Sniper", "", false)
+DevilFruit:AddSection({"Fruit"})
+Toggle(DevilFruit, "Auto Store Fruit", "", false)
+Toggle(DevilFruit, "Auto Random Fruit", "", false)
+Toggle(DevilFruit, "Auto Find Fruit", "", false)
+local PvP = Window:MakeTab({"PvP", "rbxassetid://16053202595"})
+PvP:AddSection({"Config PvP"})
+Dropdown(PvP, "Choose PvP", "", {"Neareast", "Select Player"}, "Neareast")
+Dropdown(PvP, "Choose Kill", "", {"Skill", "Click"}, "Click")
+Dropdown(PvP, "Choose Skill Equip", "", {"Melee","Sword","Blox Fruit","Gun", "Random Fruit"}, "Blox Fruit")
+local Update1 = Dropdown(PvP, "Select Player", "", getgenv().TablePlayer, "")
+PvP:AddButton({Name = "Refersh Player", Description = "", Callback = function()
+  Update1:Set(getgenv().TablePlayer)
+end})
+PvP:AddSection({"Farming PvP"})
+Toggle(PvP, "Auto Farm PvP", "This Farm PvP Meaning Attack Player In PvP", false)
+PvP:AddSection({"Settings Skill PvP"})
+Toggle(PvP, "Skill Z (PvP)", "", true)Toggle(PvP, "Skill X (PvP)", "", true)Toggle(PvP, "Skill C (PvP)", "", true)Toggle(PvP, "Skill V (PvP)", "", true)Toggle(PvP, "Skill F (PvP)", "", true)
+PvP:AddSection({"Aim"})
+Toggle(PvP, "Silent Aim", "", false)
+PvP:AddSection({"Misc"})
+Toggle(PvP, "Auto Enable PvP", "", false)
+if Sea2 or Sea3 then
+  local Raid = Window:MakeTab({"Raid", "rbxassetid://11446957539"})
+  Dropdown(Raid, "Select Chips", "", getgenv().ListChips, "")
+  Toggle(Raid, "Auto Buy Chips", "", false)
+  Toggle(Raid, "Auto Farm Raid", "", false)
+  Toggle(Raid, "Kill Aura", "", false)
+  local RaceV4 = Window:MakeTab({"Race V4", "rbxassetid://11446900930"})
+  local FindMirage = RaceV4:AddSection({"Status"})
+  local FindMiragePuzzle = RaceV4:AddSection({"Status"})
+  local SetUpdateMoon = RaceV4:AddSection({"Status"})
+  task.spawn(function()
+    while task.wait() do
+      CheckMoon(SetUpdateMoon)
+    end
+  end)
+  task.spawn(function()
+    while task.wait() do
+      if VerifyIsland("Mirage Island Path") then
+        FindMirage:Set("Mirage Island : Spawned ")
+      else
+        FindMirage:Set("Mirage Island : Not Spawn")
+      end
+    end
+  end)
+  task.spawn(function()
+    while task.wait() do
+      if CommF_:InvokeServer("CheckTempleDoor") then
+        FindMiragePuzzle:Set("Mirage Puzzle : Spawned ")
+      else
+        FindMiragePuzzle:Set("Mirage Puzzle : Not Spawn ")
+      end
+    end
+  end)
+  Toggle(RaceV4, "Auto Summon Mirage Island", "This Summon, When Spawn Mirage At Chance ???%", false)
+  Toggle(RaceV4, "Tween To Mirage Island", "Spawn Mirage if Tween to Mirage", false)
+  Toggle(RaceV4, "Tween To Gear", "", false)
+  Toggle(RaceV4, "Tween To Gear Blue", "", false)
+  Toggle(RaceV4, "Tween To Highest Point", "This Mean Highest Mountain In Mirage Island", false)
+  Toggle(RaceV4, "Tween To Advanced Dealer", "Shop Fruit Advanced", false)
+  RaceV4:AddSection({"Race"})
+  Toggle(RaceV4, "Auto Complete Trial", "Finish All Trial", false)
+  Toggle(RaceV4, "Auto Mirage Puzzle", "Get Mirage Puzzle", false)
+  Toggle(RaceV4, "Auto Kill Player In Trial", "Kill Player After Trial", false)
+  Toggle(RaceV4, "Auto Buy Gear", "", false)
+  Toggle(RaceV4, "Auto Awakening One Quest", "", false)
+  RaceV4:AddSection({"Active Race"})
+  Toggle(RaceV4, "Auto Use Race V3", "", false)
+  Toggle(RaceV4, "Auto Use Race V4", "", false)
+  RaceV4:AddSection({"Tween Race"})
+  Dropdown(RaceV4, "Select Tween Race", "", {"Top Great Tree","Timple Of Time","Lever Pull", "Acient One", "Cyborg Door", "Fish Door", "Ghoul Door", "Human Door", "Mink Door", "Sky Door"}, "Timple Of Time")
+  Toggle(RaceV4, "Tween On Select Tween Race", "", false)
+end
+local ESP = Window:MakeTab({"ESP", "mountain-snow"})
+Toggle(ESP, "ESP Player", "", false)
+Toggle(ESP, "ESP Chest", "", false)
+Toggle(ESP, "ESP Fruit", "", false)
+if World2 then
+  Toggle(ESP, "ESP Flower", "", false)
+elseif World3 then
+  Toggle(ESP, "ESP Mirage Island", "", false)
+  Toggle(ESP, "ESP Kitsune Island", "", false)
+end
+local Misc = Window:MakeTab({"Miscellaneous", "rbxassetid://11447063791"})
+Misc:AddSection({"Server"})
+Misc:AddButton({Name = "Server Hop",Callback = function()Server("Hop")end})
+Misc:AddButton({Name = "Server Hop [Low Player]",Callback = function()Server("Hop1")end})
+Misc:AddButton({Name = "Rejoin",Callback = function()Server("Rejoin")end})
+Misc:AddSection({"Team"})
+Misc:AddButton({Name = "Join Pirates Team",Callback = function()CommF_:InvokeServer("SetTeam", "Pirates")end})
+Misc:AddButton({Name = "Join Marines Team",Callback = function()CommF_:InvokeServer("SetTeam", "Marines")end})
+Misc:AddSection({"Menu UI"})
+Misc:AddButton({Name = "Devil Fruit Shop",Callback = function()CommF_:InvokeServer("GetFruits")Player.PlayerGui.Main.FruitShop.Visible = true end})
+Misc:AddButton({Name = "Titles",Callback = function()CommF_:InvokeServer("getTitles")Player.PlayerGui.Main.Titles.Visible = true end})
+Misc:AddButton({Name = "Haki Color",Callback = function()Player.PlayerGui.Main.Colors.Visible = true end})
+Misc:AddSection({"Codes"})
+Misc:AddButton({Name = "Redeem Codes",Callback = function()
+  for _, CodeFunc in pairs({"NEWTROLL","KITT_RESET","Sub2Fer999","Magicbus","kittgaming","SECRET_ADMIN","EXP_5B","CONTROL","UPDATE11","XMASEXP","1BILLION","ShutDownFix2","UPD14","STRAWHATMAINE","TantaiGaming","Colosseum","Axiore","Sub2Daigrock","Sky Island 3","Sub2OfficialNoobie","SUB2NOOBMASTER123","THEGREATACE","Fountain City","BIGNEWS","FUDD10","SUB2GAMERROBOT_EXP1","UPD15","2BILLION","UPD16","3BVISITS","Starcodeheo","Bluxxy","DRAGONABUSE","Sub2CaptainMaui","DEVSCOOKING","Enyu_is_Pro","JCWK","Starcodeheo","Bluxxy","fudd10_v2","SUB2GAMERROBOT_EXP1","Sub2NoobMaster123","Sub2UncleKizaru","Sub2Daigrock","Axiore","TantaiGaming","StrawHatMaine"}) do
+    Remotes.Redeem:InvokeServer(CodeFunc)
+  end
+end})
+Misc:AddSection({"Remove"})
+Toggle(Misc, "Remove Damage", "", false)
+Toggle(Misc, "Remove Notifications", "", false)
+Misc:AddSection({"Reduce Lag"})
+Misc:AddButton({Name = "Anti-Crash",Callback = function()FixLag(1)end})
+Misc:AddButton({Name = "Reduce Lag",Callback = function()FixLag(2)end})
+Misc:AddSection({"Other"})
+Toggle(Misc, "Walk On Water", "", true)
+local Settings = Window:MakeTab({"Settings", "settings"})
+Toggle(Settings, "Auto Haki", "", true)
+Toggle(Settings, "Auto Ken", "", true)
+Settings:AddSection({"System Script"})
+Settings:AddButton({Name = "Reset Script / Save Config",Callback = function()
+  if isfile("Speed Hub X") then
+    delfile("Speed Hub X")
+  end
+end})
+Window:SelectTab(2)
 return SpeedHubX
