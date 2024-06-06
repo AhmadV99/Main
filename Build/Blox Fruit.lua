@@ -148,7 +148,7 @@ elseif World3 then
     while task.wait() do
       if CheckMob({"Dough King"}) then
         StatusC:Set("Dough King : Spawned")
-      elseif FindNPC({"Cake Prince"}) then
+      elseif CheckMob({"Cake Prince"}) then
         StatusC:Set("Cake Prince : Spawned")
       else
         StatusC:Set("Status Cake Prince", "Status : " .. CheckMob("CakePrinceSpawner"))
