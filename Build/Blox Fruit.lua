@@ -151,7 +151,7 @@ elseif Sea3 then
       elseif FindNPC({"Cake Prince"}) then
         StatusC:Set("Cake Prince : Spawned")
       else
-        StatusC:Set("Status Cake Prince", "Status : " .. CheckMob("CakePrinceSpawner"))
+        StatusC:Set("Status Cake Prince", "Status : " .. string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", ""))
       end
     end
   end)
