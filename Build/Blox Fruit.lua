@@ -148,7 +148,7 @@ elseif Sea3 then
 end
 Toggle(ItemQuest, "Auto Cake Prince", "This Can Attack Mob Cake Prince or Something", false)
 Toggle(ItemQuest, "Auto Dough King", "This Attack Raid Boss Dough King", false)
-ItemQ:AddSection({"Rip Indra"})
+ItemQuest:AddSection({"Rip Indra"})
 Toggle(ItemQuest, "Auto Active Haki Color", "This Get Haki Color", false)
 Toggle(ItemQuest, "Auto Rip Indra", "This Attack Raid Boss Rip Indra", false)
 ItemQuest:AddSection({"Elite Hunter"})
