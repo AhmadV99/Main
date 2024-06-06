@@ -169,5 +169,29 @@ task.spawn(function()
   end
 end)
 Toggle(ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false)
+if World2 or World3 then
+  Toggle(ItemQuest, "Auto Death Step", "", false)
+  Toggle(ItemQuest, "Auto Electric Claw", "", false)
+  Toggle(ItemQuest, "Auto Sharkman Karate", "", false)
+  Toggle(ItemQuest, "Auto Dragon Talon", "", false)
+  Toggle(ItemQuest, "Auto Superhuman", "", false)
+  Toggle(ItemQuest, "Auto God Human", "", false)
+  Toggle(ItemQuest, "Auto Sanguine Art", "", false)
+  ItemQuest:AddSection({"Haki Color"})
+  Toggle(ItemQuest, "Auto Buy Haki Color", "", false)
+  Toggle(ItemQuest, "Auto Rainbow Haki", "", false)
+end
 
+if World1 or World2 or World3 then
+  ItemQuest:AddSection({"Observation"})
+  local StatusObs = ItemQuest:AddSection({"Total: none"})
+  task.spawn(function()
+    while task.wait(1) do
+      StatusObs:Set({"Total: ".. Player.VisionRadius.Value})
+    end
+  end)
+  Toggle(ItemQuest, "Auto Observation", "", false)
+  Toggle(ItemQuest, "Auto Observation V2", "", false)
+  Toggle(ItemQuest, "Observation Hop", "Hop For Find Materials", false)
+end
 return SpeedHubX
