@@ -84,7 +84,7 @@ Main:AddButton({Name = "Refersh Boss", Description = "", Callback = function()
 end})
 Toggle(Main, "Auto Attack Boss", "This Can Attack a Mob Bosses!", false)
 Toggle(Main, "Auto Attack Boss All", "This Can Attack a Mob Bosses All!", false)
-Main:AddButton({Name = "Hop Server", Description = "", Callback = function()Server("Hop1")end})
+Main:AddButton({Name = "Hop Server", Description = "", Callback = function()getgenv().Server("Hop1")end})
 Main:AddSection("Material")
 Dropdown(Main, "Choose Material", "", getgenv().MaterialList, "")
 Toggle(Main, "Auto Farm Material", "This Can Farm Material Item!", false)
@@ -147,12 +147,12 @@ elseif World3 then
   local StatusC = ItemQuest:AddParagraph({"Status Cake Prince"})
   task.spawn(function()
     while task.wait() do
-      if CheckMob({"Dough King"}) then
+      if getgenv().CheckMob({"Dough King"}) then
         StatusC:Set("Dough King : Spawned")
-      elseif FindNPC({"Cake Prince"}) then
+      elseif getgenv().CheckMob({"Cake Prince"}) then
         StatusC:Set("Cake Prince : Spawned")
       else
-        StatusC:Set("Status Cake Prince", "Status : " .. CheckMob("CakePrinceSpawner"))
+        StatusC:Set("Status Cake Prince", "Status : " .. getgenv().CheckMob("CakePrinceSpawner"))
       end
     end
   end)
@@ -167,7 +167,7 @@ local StatusE = ItemQuest:AddSection({"Status"})
 local GetNumE = ItemQuest:AddSection({"Status"})
 task.spawn(function()
   while task.wait() do
-    if CheckMob({"Diablo","Deandre","Urban"}) then
+    if getgenv().CheckMob({"Diablo","Deandre","Urban"}) then
       StatusE:Set("Elite Hunter : Spawned")
     else
       StatusE:Set("Elite Hunter : Not Spawn")
@@ -214,7 +214,7 @@ if World2 or World3 then
   local StatsAzure = SeaEvent:AddSection({"Status"})
   task.spawn(function()
     while task.wait() do
-      if VerifyIsland("Kitsune Island Path") then
+      if getgenv().VerifyIsland("Kitsune Island Path") then
         FindKitsune:Set("Kitsune Island : Spawned")
       else
         FindKitsune:Set("Kitsune Island : Not Spawn")
@@ -242,7 +242,7 @@ if World2 or World3 then
   SeaEvent:AddSection({"Misc Sea Event"})
   Toggle(SeaEvent, "No Clip Rock", "", false)
   SeaEvent:AddButton({Name = "No Fog", Description = "", Callback = function()
-    NoFog()
+    getgenv().NoFog()
   end})  
   SeaEvent:AddSection({"Settings Sea Event"})
   Dropdown(SeaEvent, "Select Level Danger", "", {"1","2","3","4","5","6"}, "6")
@@ -254,7 +254,7 @@ if World2 or World3 then
   local StatusFrozen = SeaEvent:AddSection({"Status"})
   task.spawn(function()
     while task.wait() do
-      if VerifyIsland("Frozen Dimension Path") then
+      if getgenv().VerifyIsland("Frozen Dimension Path") then
         StatusFrozen:Set("Frozen Dimension : Spawned")
       else
         StatusFrozen:Set("Frozen Dimension : Not Spawn")
@@ -274,9 +274,9 @@ if World2 or World3 then
   Dropdown(Maps, "Select Island", "", getgenv().IslandList, "")
   Toggle(Maps, "Tween To Island", "", false)
   Maps:AddSection({"World"})
-  Maps:AddButton({Name = "First World",Callback = function()Server("TravelMain")end})
-  Maps:AddButton({Name = "Second World",Callback = function()Server("TravelDressrosa")end})
-  Maps:AddButton({Name = "Third World",Callback = function()Server("TravelZou")end})
+  Maps:AddButton({Name = "First World",Callback = function()getgenv().Server("TravelMain")end})
+  Maps:AddButton({Name = "Second World",Callback = function()getgenv().Server("TravelDressrosa")end})
+  Maps:AddButton({Name = "Third World",Callback = function()getgenv().Server("TravelZou")end})
   Maps:AddSection({"NPCs"})
   Dropdown(Maps, "Select NPCs", "", getgenv().TableNPCs, "")
   Toggle(Maps, "Tween To NPCs", "", false)
@@ -285,7 +285,7 @@ local Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"})
 Shop:AddSection({"Other"})
 Toggle(Shop, "Auto Buy Legendary Sword", "", false)
 Toggle(Shop, "Auto Buy True Triple Katana", "", false)
-AddShop(Shop)
+getgenv().AddShop(Shop)
 local DevilFruit = Window:MakeTab({"Devil Fruit", "apple"})
 Dropdown(DevilFruit, "Select Fruit Sniper", "", getgenv().TableFruit, "")
 Toggle(DevilFruit, "Auto Buy Fruit Sniper", "", false)
@@ -322,12 +322,12 @@ if World2 or World3 then
   local SetUpdateMoon = RaceV4:AddSection({"Status"})
   task.spawn(function()
     while task.wait() do
-      CheckMoon(SetUpdateMoon)
+      getgenv().CheckMoon(SetUpdateMoon)
     end
   end)
   task.spawn(function()
     while task.wait() do
-      if VerifyIsland("Mirage Island Path") then
+      if getgenv().VerifyIsland("Mirage Island Path") then
         FindMirage:Set("Mirage Island : Spawned ")
       else
         FindMirage:Set("Mirage Island : Not Spawn")
@@ -374,9 +374,9 @@ elseif World3 then
 end
 local Misc = Window:MakeTab({"Miscellaneous", "rbxassetid://11447063791"})
 Misc:AddSection({"Server"})
-Misc:AddButton({Name = "Server Hop",Callback = function()Server("Hop")end})
-Misc:AddButton({Name = "Server Hop [Low Player]",Callback = function()Server("Hop1")end})
-Misc:AddButton({Name = "Rejoin",Callback = function()Server("Rejoin")end})
+Misc:AddButton({Name = "Server Hop",Callback = function()getgenv().Server("Hop")end})
+Misc:AddButton({Name = "Server Hop [Low Player]",Callback = function()getgenv().Server("Hop1")end})
+Misc:AddButton({Name = "Rejoin",Callback = function()getgenv().Server("Rejoin")end})
 Misc:AddSection({"Team"})
 Misc:AddButton({Name = "Join Pirates Team",Callback = function()CommF_:InvokeServer("SetTeam", "Pirates")end})
 Misc:AddButton({Name = "Join Marines Team",Callback = function()CommF_:InvokeServer("SetTeam", "Marines")end})
