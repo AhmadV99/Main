@@ -132,13 +132,17 @@ elseif Sea3 then
   Toggle(ItemQuest, "Auto Soul Guitar [Loading Update]", "", false)
   ItemQuest:AddSection({"Bones"})
   local StatusBone = ItemQuest:AddParagraph({"Bones Status", "Bones Total:"})
-  task.spawn(function()while task.wait() do StatusBone:Set("Bones Status", "Bones Total: ".. VerifyMaterial("Bones")) end end)
+  task.spawn(function()
+    while task.wait() do 
+      StatusBone:Set("Bones Status", "Bones Total: ".. VerifyMaterial("Bones")) 
+    end 
+  end)
   Toggle(ItemQuest, "Auto Farm Bones", "This Farm Bone x4 or x5 or x3 Each", false)
   Toggle(ItemQuest, "Auto Trade Bones", "Trade Bones 50 (Bone >= 50)", false)
   ItemQuest:AddSection({"Cake Prince"})
   local StatusC = ItemQuest:AddParagraph({"Status Cake Prince"})
   task.spawn(function()
-    while task.wait(1) do
+    while task.wait() do
       if CheckMob({"Dough King"}) then
         StatusC:Set("Dough King : Spawned")
       elseif FindNPC({"Cake Prince"}) then
@@ -167,12 +171,13 @@ task.spawn(function()
   end
 end)
 task.spawn(function()
-  while task.wait(1) do
+  while task.wait() do
     GetNumE:Set("Elite Hunter Progress : " .. CommF_:InvokeServer("EliteHunter", "Progress"))
   end
 end)
 Toggle(ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false)
 if World2 or World3 then
+  ItemQuest:AddSection({"Fighting Style"})
   Toggle(ItemQuest, "Auto Death Step", "", false)
   Toggle(ItemQuest, "Auto Electric Claw", "", false)
   Toggle(ItemQuest, "Auto Sharkman Karate", "", false)
@@ -187,9 +192,9 @@ end
 
 if World1 or World2 or World3 then
   ItemQuest:AddSection({"Observation"})
-  local StatusObs = ItemQuest:AddSection({"Total: none"})
+  local StatusObs = ItemQuest:AddSection({"Total: None"})
   task.spawn(function()
-    while task.wait(1) do
+    while task.wait() do
       StatusObs:Set({"Total: ".. Player.VisionRadius.Value})
     end
   end)
