@@ -3,7 +3,7 @@ local Library = loadstring(game:HttpGet("https://speedhubxv3-library.surge.sh"))
 local World1, World2, World3 = game.PlaceId == 2753915549, game.PlaceId == 4442272183, game.PlaceId == 7449423635
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
-local CommF_ = game:GetService("ReplicatedStorage").Remotes.CommF_
+
 local Window = Library:MakeWindow({
     Title = "Speed Hub X | " .. Version,
     SaveFolder = "Speed Hub X"
@@ -148,7 +148,7 @@ elseif Sea3 then
       elseif FindNPC({"Cake Prince"}) then
         StatusC:Set("Cake Prince : Spawned")
       else
-        StatusC:Set("Status Cake Prince", "Status : " .. string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", ""))
+        StatusC:Set("Status Cake Prince", "Status : " .. CheckMob("CakePrinceSpawner"))
       end
     end
   end)
