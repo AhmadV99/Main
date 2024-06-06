@@ -148,7 +148,7 @@ elseif World3 then
     while task.wait() do
       if CheckMob({"Dough King"}) then
         StatusC:Set("Dough King : Spawned")
-      elseif CheckMob({"Cake Prince"}) then
+      elseif FindNPC({"Cake Prince"}) then
         StatusC:Set("Cake Prince : Spawned")
       else
         StatusC:Set("Status Cake Prince", "Status : " .. CheckMob("CakePrinceSpawner"))
@@ -251,6 +251,15 @@ if World2 or World3 then
   Toggle(SeaEvent, "Skill Z (Sea)", "", true)Toggle(SeaEvent, "Skill X (Sea)", "", true)Toggle(SeaEvent, "Skill C (Sea)", "", true)Toggle(SeaEvent, "Skill V (Sea)", "", true)Toggle(SeaEvent, "Skill F (Sea)", "", true)
   SeaEvent:AddSection({"Frozen Dimension Island"})
   local StatusFrozen = SeaEvent:AddSection({"Status"})
+  task.spawn(function()
+    while task.wait() do
+      if VerifyIsland("Frozen Dimension Path") then
+        StatusFrozen:Set("Frozen Dimension : Spawned")
+      else
+        StatusFrozen:Set("Frozen Dimension : Not Spawn")
+      end
+    end
+  end)
   Toggle(SeaEvent, "Tween To Frozen Dimension", "Spawn Frozen Dimension if Tween to", false)
   Toggle(SeaEvent, "Auto Summon Frozen Dimension", "Spawn Frozen Dimension if Tween to", false)
   local Stats = Window:MakeTab({"Stats", "plus-circle"})
