@@ -310,7 +310,7 @@ PvP:AddSection({"Aim"})
 Toggle(PvP, "Silent Aim", "", false)
 PvP:AddSection({"Misc"})
 Toggle(PvP, "Auto Enable PvP", "", false)
-if Sea2 or Sea3 then
+if World2 or World3 then
   local Raid = Window:MakeTab({"Raid", "rbxassetid://11446957539"})
   Dropdown(Raid, "Select Chips", "", getgenv().ListChips, "")
   Toggle(Raid, "Auto Buy Chips", "", false)
