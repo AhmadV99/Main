@@ -26,7 +26,7 @@ local function Toggle(Tab, Name, Desc, Default)
   local Ver = Tab:AddToggle({
     Name = Name,Description = Desc or "",Default = Default,
     Callback = function(Value)
-      task.spawn(function()SpeedHubX[Name] = Value;end)
+      SpeedHubX[Name] = Value
     end, Flag = "SpeedHubX/Toggle/"..Name})
     return Ver
 end
@@ -230,7 +230,9 @@ if World2 or World3 then
   Toggle(SeaEvent, "Auto Collect Azure Ember", "Collect Azure Ember", false)
   SeaEvent:AddSection({"Wood"})
   Toggle(SeaEvent, "Auto Wood Planks", "Farm Get Wood Planks", false)
-  Silder(SeaEvent, "Panic Mode", 20, 70, 25)
+  SeaEvent:AddSection({"Panic"})
+  Silder(SeaEvent, "Select Health", 20, 70, 25)
+  Toggle(SeaEvent, "Panic Mode", "", false)
   SeaEvent:AddSection({"Sea Event"})
   Toggle(SeaEvent, "Auto Farm Sea", "Farm Sea / Attack Mob In Sea Event", false)
   SeaEvent:AddSection({"Attack Mob (Sea Event)"})
