@@ -26,7 +26,7 @@ local function Toggle(Tab, Name, Desc, Default)
   local Ver = Tab:AddToggle({
     Name = Name,Description = Desc or "",Default = Default,
     Callback = function(Value)
-      SpeedHubX[Name] = Value
+      task.spawn(function()SpeedHubX[Name] = Value;end)
     end, Flag = "SpeedHubX/Toggle/"..Name})
     return Ver
 end
