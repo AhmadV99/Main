@@ -9,14 +9,14 @@ local Remotes = ReplicatedStorage.Remotes
 local CommF_ = Remotes.CommF_
 
 task.spawn(function() -- Remove Effect
-  local _hookfunc = (hookfunction or hookfunc or function(...) end)
-  local Container = ReplicatedStorage.Effect.Container
-  local CameraShaker = require(ReplicatedStorage.Util.CameraShaker)
-  local Death = Container:FindFirstChild("Death")
-  local Respawn = Container:FindFirstChild("Respawn")
-  _hookfunc(Death, function() return nil end)
-  _hookfunc(Respawn, function() return nil end)
-  CameraShaker:Stop()
+    local _hookfunc = (hookfunction or hookfunc or function(...) end)
+    local Container = ReplicatedStorage.Effect.Container
+    local CameraShaker = require(ReplicatedStorage.Util.CameraShaker)
+    local Death = require(Container:FindFirstChild("Death"))
+    local Respawn = require(Container:FindFirstChild("Respawn"))
+    _hookfunc(Death, function() return nil end)
+    _hookfunc(Respawn, function() return nil end)
+    CameraShaker:Stop()
 end)
 
 local Window = Library:MakeWindow({
