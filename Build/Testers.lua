@@ -80,7 +80,9 @@ elseif World2 then
     Toggle(Main, "Auto Factory", "This Can Attack Core!", false)
 end
 Main:AddSection("- [ Farming Mastery ] -")
-Toggle(Main, "Farm Mastery", "Only Farm Level, Not All", false)
+Dropdown(Main, "Choose Mastery Mode", "", {"Level","Bone","Cake Prince","Nearest"}, "Level")
+Dropdown(Main, "Choose Mastery Tool", "", {"Blox Fruit","Sword","Gun"}, "Blox Fruit")
+Toggle(Main, "Farm Mastery", "", false)
 Silder(Main, "Mastery Health", 0, 100, 25)
 Main:AddSection("- [ Skill Mastery ] -")
 Toggle(Main, "Skill Z", "", true)Toggle(Main, "Skill X", "", true)Toggle(Main, "Skill C", "", true)Toggle(Main, "Skill V", "", true)Toggle(Main, "Skill F", "", true)
