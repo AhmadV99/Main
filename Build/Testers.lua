@@ -323,6 +323,7 @@ PvP:AddSection({"- [ Settings Skill PvP ] -"})
 Toggle(PvP, "Skill Z (PvP)", "", true)Toggle(PvP, "Skill X (PvP)", "", true)Toggle(PvP, "Skill C (PvP)", "", true)Toggle(PvP, "Skill V (PvP)", "", true)Toggle(PvP, "Skill F (PvP)", "", true)
 PvP:AddSection({"- [ Aim ] -"})
 Toggle(PvP, "Silent Aim", "", false)
+Toggle(PvP, "Silent Aim (Gun)", "", false)
 PvP:AddSection({"Misc"})
 Toggle(PvP, "Auto Enable PvP", "", false)
 if World2 or World3 then
