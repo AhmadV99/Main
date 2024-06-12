@@ -81,7 +81,7 @@ elseif World2 then
 end
 Main:AddSection("- [ Farming Mastery ] -")
 Toggle(Main, "Farm Mastery", "Only Farm Level, Not All", false)
-Silder(Main, "Matery Health", 0, 100, 25)
+Silder(Main, "Mastery Health", 0, 100, 25)
 Main:AddSection("- [ Skill Mastery ] -")
 Toggle(Main, "Skill Z", "", true)Toggle(Main, "Skill X", "", true)Toggle(Main, "Skill C", "", true)Toggle(Main, "Skill V", "", true)Toggle(Main, "Skill F", "", true)
 Main:AddSection("- [ Farming Chest ] -")
