@@ -46,3 +46,4 @@ Silder(Home, "Set Gravity", 0, 100000, 1000)
 Toggle(Home, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
 Toggle(Home, "Enable JumpPower", "This Can Set JumpPower!", false)
 Toggle(Home, "Enable Gravity", "This Can Set Gravity!", false)
+return SpeedHubX
