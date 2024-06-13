@@ -327,7 +327,7 @@ Toggle(PvP, "Skill Z (PvP)", "", true)Toggle(PvP, "Skill X (PvP)", "", true)Togg
 PvP:AddSection({"- [ Aim ] -"})
 Toggle(PvP, "Silent Aim", "", false)
 Toggle(PvP, "Silent Aim (Gun)", "", false)
-PvP:AddSection({"Misc"})
+PvP:AddSection({"- [ Misc ] -"})
 Toggle(PvP, "Auto Enable PvP", "", false)
 Toggle(PvP, "Auto Use Ken", "", false)
 if World2 or World3 then
