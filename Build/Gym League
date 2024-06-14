@@ -48,7 +48,7 @@ local Main = Window:MakeTab({"Main", "home"})
 Main:AddSection("Farming Beach Gym")
 Toggle(Main, "Auto Bench Press 1", "", false)
 Toggle(Main, "Auto Bench Press 2", "", false)
-Toggle(Main, "Auto Push Press 1", "", false)
-Toggle(Main, "Auto Push Press 2", "", false)
+Toggle(Main, "Auto Deadlift", "", false)
+Toggle(Main, "Auto Push Press", "", false)
 
 return SpeedHubX
