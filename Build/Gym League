@@ -43,10 +43,8 @@ Home:AddSection({"Local Player"})
 Silder(Home, "Set WalkSpeed", 0, 100000, 1000)
 Silder(Home, "Set JumpPower", 0, 100000, 1000)
 Silder(Home, "Set Gravity", 0, 100000, 1000)
-Silder(Home, "Set Size", 0, 100, 2)
 Toggle(Home, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
 Toggle(Home, "Enable JumpPower", "This Can Set JumpPower!", false)
 Toggle(Home, "Enable Gravity", "This Can Set Gravity!", false)
-Toggle(Home, "Enable Size", "This Can Set Size!", false)
 
 return SpeedHubX
