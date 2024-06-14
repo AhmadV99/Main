@@ -46,6 +46,9 @@ Toggle(Home, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
 Toggle(Home, "Enable JumpPower", "This Can Set JumpPower!", false)
 local Main = Window:MakeTab({"Main", "home"})
 Main:AddSection("Farming Beach Gym")
-Toggle(Home, "Auto Bench Press", "", false)
+Toggle(Main, "Auto Bench Press 1", "", false)
+Toggle(Main, "Auto Bench Press 2", "", false)
+Toggle(Main, "Auto Push Press 1", "", false)
+Toggle(Main, "Auto Push Press 2", "", false)
 
 return SpeedHubX
