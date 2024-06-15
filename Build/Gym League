@@ -60,5 +60,11 @@ Toggle(Main, "Auto Bench Press 2", "", false)
 Toggle(Main, "Auto Deadlift", "", false)
 Toggle(Main, "Auto Push Press", "", false)
 Toggle(Main, "Auto Front Squat", "", false)
+Toggle(Main, "Auto Deadlift 1", "", false)
+Toggle(Main, "Auto Leg Press 1", "", false)
+Toggle(Main, "Auto Leg Press 2", "", false)
+Toggle(Main, "Auto Abs 1", "", false)
+Toggle(Main, "Auto Abs 2", "", false)
+Toggle(Main, "Auto Front Squat 1", "", false)
 
 return SpeedHubX
