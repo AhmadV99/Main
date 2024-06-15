@@ -39,12 +39,21 @@ local function Silder(Tab, Name, Min, Max, Default)
     end})
     return Ver
 end
+local function TextBox(Tab, Name, Desc, default)
+  local Ver = Tab:AddTextBox({
+    Name = Name,Description = Desc,Default = default,Callback = function(Value)
+      SpeedHubX[Name] = Value
+    end})
+    return Ver
+end
 Home:AddSection({"Local Player"})
 Silder(Home, "Set WalkSpeed", 0, 100000, 1000)
 Silder(Home, "Set JumpPower", 0, 100000, 1000)
 Toggle(Home, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
 Toggle(Home, "Enable JumpPower", "This Can Set JumpPower!", false)
 local Main = Window:MakeTab({"Main", "home"})
+Main:AddSection("Config")
+TextBox(Main, "Set Stamina Threshold", "", 50)
 Main:AddSection("Farming Beach Gym")
 Toggle(Main, "Auto Bench Press 1", "", false)
 Toggle(Main, "Auto Bench Press 2", "", false)
