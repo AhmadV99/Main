@@ -1,6 +1,9 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Settings.lua"))()
 local Library = loadstring(game:HttpGet("https://speedhubxv3-library.surge.sh"))() -- i dont care, you can use this library free :)
 
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local index = ReplicatedStorage.common.packages._Index
+
 local Window = Library:MakeWindow({
     Title = "Speed Hub X | " .. Version,
     SaveFolder = "Speed Hub X"
@@ -91,5 +94,11 @@ Toggle(Auto, "Auto Treadmill", "", false)
 Auto:AddSection("Competition")
 Toggle(Auto, "Auto Join Competition", "", false)
 Toggle(Auto, "Auto Win In Competition", "", false)
+local Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"})
+Dropdown(Shop, "Select Power-Ups", "", getgenv().TablePowerUPS, "")
+Shop:AddButton({Name = "Buy",Callback = function()index["sleitnick_knit@1.5.1"].knit.Services.PowerUpsService.RF.Buy:InvokeServer(SpeedHubX["Select Power-Ups"])end})
+Toggle(Shop, "Auto Roll Aura", "", false)
+Toggle(Shop, "Auto Alter", "", false)
+Toggle(Shop, "Auto Roll Pose", "", false)
 
 return SpeedHubX
