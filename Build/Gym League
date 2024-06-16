@@ -88,5 +88,8 @@ local Auto = Window:MakeTab({"Auto", "rbxassetid://16035565718"})
 Toggle(Auto, "Auto Train", "", false)
 Toggle(Auto, "Auto Load", "", false)
 Toggle(Auto, "Auto Treadmill", "", false)
+Auto:AddSection("School")
+Toggle(Auto, "Auto Competition", "", false)
+Toggle(Auto, "Auto Win In School", "", false)
 
 return SpeedHubX
