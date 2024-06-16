@@ -53,7 +53,12 @@ Toggle(Home, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
 Toggle(Home, "Enable JumpPower", "This Can Set JumpPower!", false)
 local Main = Window:MakeTab({"Main", "home"})
 Main:AddSection("Config")
-Silder(Main, "Set Stamina Threshold", 0, getgenv().StaminaMax, 50)
+local Update = Silder(Main, "Set Stamina Threshold", 0, getgenv().StaminaMax, 50)
+task.spawn(function()
+  while task.wait() do
+    Update:Set(getgenv().StaminaMax)
+  end
+end)
 Main:AddSection("Farming Beach Gym")
 Toggle(Main, "Auto Bench Press 1", "", false)
 Toggle(Main, "Auto Bench Press 2", "", false)
