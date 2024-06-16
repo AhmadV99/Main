@@ -82,9 +82,5 @@ Toggle(Main, "Auto Push Up 1", "", false)
 Toggle(Main, "Auto Push Up 2", "", false)
 Toggle(Main, "Auto Lat Pulldown 1", "", false)
 Toggle(Main, "Auto Lat Pulldown 2", "", false)
-Toggle(Main, "Auto Treadmill 1", "", false)
-Toggle(Main, "Auto Treadmill 2", "", false)
-Toggle(Main, "Auto Treadmill 3", "", false)
-Toggle(Main, "Auto Treadmill 4", "", false)
 
 return SpeedHubX
