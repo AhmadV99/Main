@@ -75,6 +75,4 @@ Shop:AddButton({Name = "Buy",Callback = function()index["sleitnick_knit@1.5.1"].
 Toggle(Shop, "Auto Roll Aura", "", false)
 Toggle(Shop, "Auto Alter", "", false)
 Toggle(Shop, "Auto Roll Pose", "", false)
-local Stats = Window:MakeTab({"Stats", "plus-circle"})
-AddStats(Stats)
 return SpeedHubX
