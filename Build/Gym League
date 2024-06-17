@@ -77,7 +77,7 @@ Toggle(Shop, "Auto Alter", "", false)
 Toggle(Shop, "Auto Roll Pose", "", false)
 local Misc = Window:MakeTab({"Misc", "rbxassetid://11447063791"})
 Toggle(Misc, "No Clip", "", false)
-Toggle(Misc, "Jump Ping", "", false)
+Toggle(Misc, "Infinits Jump Ping", "", false)
 Toggle(Misc, "Hop Server", "", false)
 Toggle(Misc, "Hop Server 1", "", false)
 
