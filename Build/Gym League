@@ -4,6 +4,19 @@ local Library = loadstring(game:HttpGet("https://speedhubxv3-library.surge.sh"))
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local index = ReplicatedStorage.common.packages._Index
 
+local Window = Library:MakeWindow({
+    Title = "Speed Hub X | " .. Version,
+    SaveFolder = "Speed Hub X"
+});Window:AddMinimizeButton({
+    Button = {Image = "rbxassetid://16022917595"},
+    Corner = {CornerRadius = UDim.new(0, 5)}
+})
+local Home = Window:MakeTab({"Home", "scan-face"})
+Home:AddDiscordInvite({
+    Name = "Speed Hub X | Official Server",
+    Logo = "rbxassetid://16022917595",
+    Invite = Discord
+})
 local SpeedHubX = {}
 local function Toggle(Tab, Name, Desc, Default)
   local Ver = Tab:AddToggle({
@@ -29,65 +42,46 @@ local function Silder(Tab, Name, Min, Max, Default)
     end})
     return Ver
 end
-
-local Window = Library:MakeWindow({
-    Title = "Speed Hub X | " .. Version,
-    SaveFolder = "Speed Hub X"
-});Window:AddMinimizeButton({
-    Button = {Image = "rbxassetid://16022917595"},
-    Corner = {CornerRadius = UDim.new(0, 5)}
-})
-local Home = Window:MakeTab({"Home", "scan-face"}) do
-  Home:AddDiscordInvite({
-    Name = "Speed Hub X | Official Server",
-    Logo = "rbxassetid://16022917595",
-    Invite = Discord
-  })
-  Home:AddSection({"Local Player"})
-  Silder(Home, "Set WalkSpeed", 0, 100000, 1000)
-  Silder(Home, "Set JumpPower", 0, 100000, 1000)
-  Toggle(Home, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
-  Toggle(Home, "Enable JumpPower", "This Can Set JumpPower!", false)
-  Toggle(Home, "No Clip", "", false)
-  Toggle(Home, "Infinits Jump Ping", "", false)
-end
-local Main = Window:MakeTab({"Main", "home"}) do
-  Main:AddSection("Config")
-  Silder(Main, "Set Stamina Threshold", 0, getgenv().StaminaMax, 50)
-  Main:AddSection("Farming")
-  Dropdown(Main, "Select Gym", "", getgenv().TableGym, "frontsquat")
-  Toggle(Main, "Auto Train On Select Gym", "This Mean Auto Farm On Select Gym", false)
-  Main:AddSection("Auto")
-  Toggle(Main, "Auto Train", "This Mean Auto Clicker", false)
-  Toggle(Main, "Auto Load", "This Mean Auto Load Weights", false)
-  Toggle(Main, "Auto Treadmill", "", false)
-  Main:AddSection("Competition")
-  Toggle(Main, "Auto Join Competition", "Only Join Competition", false)
-  Toggle(Main, "Auto Win In Competition", "when you join then faster press space after you win", false)
-  Main:AddSection("Item")
-  Toggle(Main, "Auto Activate Item", "This will Activate your Item", false)
-end
-local Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"}) do
-  Dropdown(Shop, "Select Power-Ups", "", getgenv().TablePowerUPS, "")
-  Shop:AddButton({Name = "Buy",Callback = function()index["sleitnick_knit@1.5.1"].knit.Services.PowerUpsService.RF.Buy:InvokeServer(SpeedHubX["Select Power-Ups"])end})
-  Toggle(Shop, "Auto Roll Aura", "", false)
-  Toggle(Shop, "Auto Alter", "", false)
-  Toggle(Shop, "Auto Roll Pose", "", false)
-end
-local Stats = Window:MakeTab({"Stats", "plus-circle"}) do
-  Stats:AddSection("Farming Fully Stats 100%")
-  Toggle(Stats, "Auto Farm Fully Stats", "This Mean Auto Farm 100% Stats", false)
-  Stats:AddSection("Farming Stats 100%")
-  Dropdown(Stats, "Select Gym Stats", "", getgenv().TableStats, "")
-  Toggle(Stats, "Auto Farm Stats 100% On Select Gym", "", false)
-  Stats:AddSection(" - [ Status Label ] - ")
-  AddStatsLabel(Stats)
-end
-local Visual = Window:MakeTab({"Visual", "rbxassetid://15877464662"}) do
-  Silder(Visual, "Set Cash", 0, 10000000, 50000)
-  Toggle(Visual, "Enable Cash Fake", "", false)
-  Visual:AddSection("ESP")
-  Toggle(Visual, "ESP Player", "", false) 
-end
+Home:AddSection({"Local Player"})
+Silder(Home, "Set WalkSpeed", 0, 100000, 1000)
+Silder(Home, "Set JumpPower", 0, 100000, 1000)
+Toggle(Home, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
+Toggle(Home, "Enable JumpPower", "This Can Set JumpPower!", false)
+Toggle(Home, "No Clip", "", false)
+Toggle(Home, "Infinits Jump Ping", "", false)
+local Main = Window:MakeTab({"Main", "home"})
+Main:AddSection("Config")
+Silder(Main, "Set Stamina Threshold", 0, getgenv().StaminaMax, 50)
+Main:AddSection("Farming")
+Dropdown(Main, "Select Gym", "", getgenv().TableGym, "frontsquat")
+Toggle(Main, "Auto Train On Select Gym", "This Mean Auto Farm On Select Gym", false)
+Main:AddSection("Auto")
+Toggle(Main, "Auto Train", "This Mean Auto Clicker", false)
+Toggle(Main, "Auto Load", "This Mean Auto Load Weights", false)
+Toggle(Main, "Auto Treadmill", "", false)
+Main:AddSection("Competition")
+Toggle(Main, "Auto Join Competition", "Only Join Competition", false)
+Toggle(Main, "Auto Win In Competition", "when you join then faster press space after you win", false)
+Main:AddSection("Item")
+Toggle(Main, "Auto Activate Item", "This will Activate your Item", false)
+local Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"})
+Dropdown(Shop, "Select Power-Ups", "", getgenv().TablePowerUPS, "")
+Shop:AddButton({Name = "Buy",Callback = function()index["sleitnick_knit@1.5.1"].knit.Services.PowerUpsService.RF.Buy:InvokeServer(SpeedHubX["Select Power-Ups"])end})
+Toggle(Shop, "Auto Roll Aura", "", false)
+Toggle(Shop, "Auto Alter", "", false)
+Toggle(Shop, "Auto Roll Pose", "", false)
+local Stats = Window:MakeTab({"Stats", "plus-circle"})
+Stats:AddSection("Farming Fully Stats 100%")
+Toggle(Stats, "Auto Farm Fully Stats", "This Mean Auto Farm 100% Stats", false)
+Stats:AddSection("Farming Stats 100%")
+Dropdown(Stats, "Select Gym Stats", "", getgenv().TableStats, "")
+Toggle(Stats, "Auto Farm Stats 100% On Select Gym", "", false)
+Stats:AddSection(" - [ Status Label ] - ")
+AddStatsLabel(Stats)
+local Visual = Window:MakeTab({"Visual", "rbxassetid://15877464662"})
+Silder(Visual, "Set Cash", 0, 10000000, 50000)
+Toggle(Visual, "Enable Cash Fake", "", false)
+Visual:AddSection("ESP")
+Toggle(Visual, "ESP Player", "", false)
 Window:SelectTab(2)
 return SpeedHubX
