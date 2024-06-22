@@ -1,5 +1,6 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Settings.lua"))()
-local Library = loadstring(game:HttpGet("https://speedhubxv3-library.surge.sh"))() -- i dont care, you can use this library free :)
+local Success, Error = pcall(function()Library = loadstring(game:HttpGet("https://speedhubxv3-library.surge.sh"))()end)
+if not Success then Library = loadstring(game:HttpGet("https://speedhubxv3-library.surge.sh"))()end
 local World1, World2, World3 = game.PlaceId == 2753915549, game.PlaceId == 4442272183, game.PlaceId == 7449423635
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
