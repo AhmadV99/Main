@@ -58,7 +58,24 @@ Toggle(Home, "Enable Size", "This Can Set Size!", false)
 local Main = Window:MakeTab({"Main", "home"})
 Main:AddSection({"Farming Gym"})
 Dropdown(Main, "Select City Gym", "", {"Frost","Mystical","Eternal","Legends","Muscle King"}, "Frost")
-getgenv().UpdateGym = Dropdown(Main, "Select Gym", "", "", "")
+local UpdateGym = Dropdown(Main, "Select Gym", "", "", "")
+task.spawn(function()
+  while task.wait(1) do
+    pcall(function()
+      if SpeedHubX["Select City Gym"] == "Frost" then
+        UpdateGym:Set({"Lift", "Press", "Squat", "Punch"})
+      elseif SpeedHubX["Select City Gym"] == "Mystical" then
+        UpdateGym:Set({"Pullup", "Throw", "Press", "Punch"})
+      elseif SpeedHubX["Select City Gym"] == "Eternal" then
+        UpdateGym:Set({"Press", "Punch"})
+      elseif SpeedHubX["Select City Gym"] == "Legends" then
+        UpdateGym:Set({"Pullup", "Squat", "Lift", "Punch"})
+      elseif SpeedHubX["Select City Gym"] == "Muscle King" then
+        UpdateGym:Set({"Lift", "Squat", "Bench", "Punch"})
+      end
+    end)
+  end
+end)
 Toggle(Main, "Auto Farm On Select Gym", "", false)
 Main:AddSection({"Farming General"})
 Toggle(Main, "Auto Weight", "", false)
