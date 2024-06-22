@@ -58,7 +58,7 @@ Toggle(Home, "Enable Size", "This Can Set Size!", false)
 local Main = Window:MakeTab({"Main", "home"})
 Main:AddSection({"Farming Gym"})
 Dropdown(Main, "Select City Gym", "", {"Frost","Mystical","Eternal","Legends","Muscle King"}, "Frost")
-local UpdateGym = Dropdown(Main, "Select Gym", "", "", "")
+local UpdateGym = Dropdown(Main, "Select Gym", "", {""}, "")
 task.spawn(function()
   while task.wait(1) do
     pcall(function()
