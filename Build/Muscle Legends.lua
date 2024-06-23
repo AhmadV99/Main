@@ -1,5 +1,5 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Settings.lua"))()
-local Library = loadstring(game:HttpGet("https://speedhubxv3-library.surge.sh"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/V3.lua"))()
 local Window = Library:MakeWindow({
     Title = "Speed Hub X | " .. Version,
     SaveFolder = "Speed Hub X"
