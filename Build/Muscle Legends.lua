@@ -27,6 +27,7 @@ local function Dropdown(Tab, Name, Desc, Option, Default)
     Name = Name,Description = Desc or "",Options = Option,Default = Default,
     Callback = function(Value)
       SpeedHubX[Name] = Value
+      getgenv()[Name] = Value
     end})
     return Ver
 end
@@ -35,6 +36,7 @@ local function Silder(Tab, Name, Min, Max, Default)
     Name = Name,Min = Min,Max = Max,Default = Default,
     Callback = function(Value)
       SpeedHubX[Name] = Value
+      getgenv()[Name] = Value
     end})
     return Ver
 end
@@ -43,6 +45,7 @@ local function Textbox(Tab, Name, Desc, Default)
     Name = Name,Description = Desc,Default = Default,
     Callback = function(Value)
       SpeedHubX[Name] = Value
+      getgenv()[Name] = Value
     end
   })
   return Ver
