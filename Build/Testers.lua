@@ -92,7 +92,6 @@ Main:AddSection({"Brawl"})
 Toggle(Main, "Auto Join Brawl", "", false)
 Toggle(Main, "Auto Win Brawl", "", false)
 local Rebirths = Window:MakeTab({"Rebirths", "refresh"})
-Textbox(Rebirths, "Stopping Rebirths Number", "", "")
 Rebirths:AddTextBox({
     Name = "Stopping Rebirths Number", Description = "", Default = "", Callback = function(Value)
         getgenv().StoppingRebirthsNumber = Value
