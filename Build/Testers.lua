@@ -40,9 +40,9 @@ local function Silder(Tab, Name, Min, Max, Default)
 end
 local function Textbox(Tab, Name, Desc, Default)
   local Ver = Tab:AddTextBox({
-    Name = Name,Description = Desc,Default = Default,
+    Name = Name, Description = Desc, Default = Default,
     Callback = function(Value)
-      SpeedHubX[Name] = Value
+      getgenv()[Name] = Value
     end
   })
   return Ver
@@ -93,6 +93,12 @@ Toggle(Main, "Auto Join Brawl", "", false)
 Toggle(Main, "Auto Win Brawl", "", false)
 local Rebirths = Window:MakeTab({"Rebirths", "refresh"})
 Textbox(Rebirths, "Stopping Rebirths Number", "", "")
+Rebirths:AddTextBox({
+    Name = "Stopping Rebirths Number", Description = "", Default = "", Callback = function(Value)
+        getgenv().StoppingRebirthsNumber = Value
+        print(Value)
+    end
+})
 Dropdown(Rebirths, "Choose At Stopping Rebirths Number", "", {"Leave", "Crash", "Kick", "Rejoin", "Off"}, "Kick")
 Toggle(Rebirths, "Auto Rebirths [Stopping Rebirths Number]", "", false)
 Toggle(Rebirths, "Auto Rebirths", "This Auto Rebirths Without Stopping Rebirths Number", false)
@@ -111,9 +117,6 @@ local Crystal = Window:MakeTab({"Crystal", "gem"})
 Dropdown(Crystal, "Select Crystal", "", {"Blue Crystal", "Green Crystal", "Frost Crystal", "Mythical Crystal", "Inferno Crystal", "Legends Crystal", "Dark Nebula Crystal", "Muscle Elite Crystal", "Galaxy Oracle Crystal", "Battle Legends Crystal", "Sky Eclipse Crystal"}, "")
 Toggle(Crystal, "Auto Open Crystal", "", false)
 local Stats = Window:MakeTab({"Stats", "plus-circle"})
-Stats:AddSection({" - [ Player Status ] - "})
-AddStatus(Stats)
-Stats:AddSection({" - [ Main Status ] - "})
 AddStatusMain(Stats)
 local Misc = Window:MakeTab({"Misc", "rbxassetid://15877464662"})
 Misc:AddSection({"Server"})
