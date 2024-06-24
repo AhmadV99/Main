@@ -92,12 +92,7 @@ Main:AddSection({"Brawl"})
 Toggle(Main, "Auto Join Brawl", "", false)
 Toggle(Main, "Auto Win Brawl", "", false)
 local Rebirths = Window:MakeTab({"Rebirths", "refresh"})
-Rebirths:AddTextBox({
-    Name = "Stopping Rebirths Number", Description = "", Default = "", Callback = function(Value)
-        getgenv().StoppingRebirthsNumber = Value
-        print(Value)
-    end
-})
+AddTextFunc(Rebirths)
 Dropdown(Rebirths, "Choose At Stopping Rebirths Number", "", {"Leave", "Crash", "Kick", "Rejoin", "Off"}, "Kick")
 Toggle(Rebirths, "Auto Rebirths [Stopping Rebirths Number]", "", false)
 Toggle(Rebirths, "Auto Rebirths", "This Auto Rebirths Without Stopping Rebirths Number", false)
