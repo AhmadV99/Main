@@ -38,15 +38,6 @@ local function Silder(Tab, Name, Min, Max, Default)
     end})
     return Ver
 end
-local function Textbox(Tab, Name, Desc, Default)
-  local Ver = Tab:AddTextBox({
-    Name = Name, Description = Desc, Default = Default,
-    Callback = function(Value)
-      getgenv()[Name] = Value
-    end
-  })
-  return Ver
-end
 Home:AddSection({"Local Player"})
 Silder(Home, "Set WalkSpeed", 0, 100000, 1000)
 Silder(Home, "Set JumpPower", 0, 100000, 1000)
@@ -92,7 +83,7 @@ Main:AddSection({"Brawl"})
 Toggle(Main, "Auto Join Brawl", "", false)
 Toggle(Main, "Auto Win Brawl", "", false)
 local Rebirths = Window:MakeTab({"Rebirths", "refresh"})
-Textbox(Rebirths, "Stopping Rebirths Number", "", "")
+Silder(Rebirths, "Stopping Rebirths Number", 1, 500000, 10000)
 Dropdown(Rebirths, "Choose At Stopping Rebirths Number", "", {"Leave", "Crash", "Kick", "Rejoin", "Off"}, "Kick")
 Toggle(Rebirths, "Auto Rebirths [Stopping Rebirths Number]", "", false)
 Toggle(Rebirths, "Auto Rebirths", "This Auto Rebirths Without Stopping Rebirths Number", false)
