@@ -40,9 +40,9 @@ local function Silder(Tab, Name, Min, Max, Default)
 end
 local function Textbox(Tab, Name, Desc, Default)
   local Ver = Tab:AddTextBox({
-    Name = Name,Description = Desc,Default = Default,
+    Name = Name, Description = Desc, Default = Default,
     Callback = function(Value)
-      SpeedHubX[Name] = Value
+      getgenv()[Name] = Value
     end
   })
   return Ver
