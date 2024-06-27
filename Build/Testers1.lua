@@ -38,15 +38,6 @@ local function Silder(Tab, Name, Min, Max, Default)
     end})
     return Ver
 end
-local function Textbox(Tab, Name, Desc, Default)
-  local Ver = Tab:AddTextBox({
-    Name = Name, Description = Desc, Default = Default,
-    Callback = function(Value)
-      getgenv()[Name] = Value
-    end
-  })
-  return Ver
-end
 Home:AddSection({"Local Player"})
 Silder(Home, "Set WalkSpeed", 0, 100000, 1000)
 Silder(Home, "Set JumpPower", 0, 100000, 1000)
@@ -124,8 +115,6 @@ Dropdown(Glitcher, "Choose At Stopping Strength Number", "", {"Go To Farm Select
 Glitcher:AddSection({"Config Farm"})
 Dropdown(Glitcher, "Choose Rock Map", "", {"Frost","Mystical","Eternal","Legends","Muscle King"}, "Muscle King")
 Toggle(Glitcher, "Auto Farm On Choose Rock Map", "", false)
-Glitcher:AddSection({" - [ Status ] - "})
-AddStatsGlitcher(Glitcher)
 local Misc = Window:MakeTab({"Misc", "rbxassetid://15877464662"})
 Misc:AddSection({"Server"})
 Misc:AddButton({Name = "Server Hop",Callback = function()getgenv().Server("Hop")end})
