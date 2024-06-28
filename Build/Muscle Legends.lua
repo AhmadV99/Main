@@ -38,15 +38,6 @@ local function Silder(Tab, Name, Min, Max, Default)
     end})
     return Ver
 end
-local function Textbox(Tab, Name, Desc, Default)
-  local Ver = Tab:AddTextBox({
-    Name = Name, Description = Desc, Default = Default,
-    Callback = function(Value)
-      getgenv()[Name] = Value
-    end
-  })
-  return Ver
-end
 Home:AddSection({"Local Player"})
 Silder(Home, "Set WalkSpeed", 0, 100000, 1000)
 Silder(Home, "Set JumpPower", 0, 100000, 1000)
@@ -107,11 +98,23 @@ Killer:AddButton({Name = "Refersh Player", Description = "", Callback = function
   update1:Set(getgenv().TablePlayerR)
 end})
 Toggle(Killer, "Auto Kill Player", "", false)
+Toggle(Killer, "Teleport Player", "", false)
+Toggle(Killer, "Spectate Player", "", false)
 local Crystal = Window:MakeTab({"Crystal", "gem"})
 Dropdown(Crystal, "Select Crystal", "", {"Blue Crystal", "Green Crystal", "Frost Crystal", "Mythical Crystal", "Inferno Crystal", "Legends Crystal", "Dark Nebula Crystal", "Muscle Elite Crystal", "Galaxy Oracle Crystal", "Battle Legends Crystal", "Sky Eclipse Crystal"}, "")
 Toggle(Crystal, "Auto Open Crystal", "", false)
 local Stats = Window:MakeTab({"Stats", "plus-circle"})
 AddStatusMain(Stats)
+local Glitcher = Window:MakeTab({"Glitcher", "rbxassetid://15623956340"})
+Glitcher:AddSection({"Config Pets"})
+Dropdown(Glitcher, "Choose Pets (Only Unique)", "", {"Darkstar Hunter", "Gold Warrior", "Cybernetic Showdown Dragon", "Flaming Hedgehog"}, "Flaming Hedgehog")
+Dropdown(Glitcher, "How Many Pets do You Carry", "", {"1", "2", "3", "4", "5"}, "2")
+Glitcher:AddSection({"Config Stopping Strength Number"})
+AddTextFunc1(Glitcher)
+Dropdown(Glitcher, "Choose At Stopping Strength Number", "", {"Go To Farm Select Gym", "Go To Farm Rebirths On Stopping"}, "Go To Farm Select Gym")
+Glitcher:AddSection({"Config Farm"})
+Dropdown(Glitcher, "Choose Rock Map", "", {"Frost","Mystical","Eternal","Legends","Muscle King"}, "Muscle King")
+Toggle(Glitcher, "Auto Farm On Choose Rock Map", "", false)
 local Misc = Window:MakeTab({"Misc", "rbxassetid://15877464662"})
 Misc:AddSection({"Server"})
 Misc:AddButton({Name = "Server Hop",Callback = function()getgenv().Server("Hop")end})
