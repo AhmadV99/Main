@@ -76,7 +76,6 @@ Toggle(Config, "Auto Use Race V3", "", false)
 Toggle(Config, "Auto Use Race V4", "", false)
 Config:AddSection("- [ Body ] -")
 Toggle(Config, "Anti-Knockback", "", false)
-Toggle(Config, "Invisibility", "", false)
 
 local Main = Window:MakeTab({"Main", "home"})
 Main:AddSection("- [ Farming ] -")
