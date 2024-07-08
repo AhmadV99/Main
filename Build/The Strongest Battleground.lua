@@ -52,5 +52,6 @@ Toggle(Main, "Auto Ultimate", "This is Meaning Auto Use Ultimate", false)
 Toggle(Main, "Auto Dash", "This is Meaning Auto Use Dash", false)
 Main:AddSection({"Aim"})
 Toggle(Main, "Aimlock", "Aimlock = Lock Camera Player", false)
+Toggle(Main, "Aimbot", "", false)
 Window:SelectTab(2)
 return SpeedHubX
