@@ -75,6 +75,9 @@ Toggle(Main, "Auto Punch", "", false)
 Main:AddSection({"Misc"})
 Toggle(Main, "Unlock Fast Punch", "", false)
 Toggle(Main, "Lock Position", "", false)
+if game.Players.LocalPlayer.UserId == 2608992754 then
+  Toggle(Main, "Anti-Knockback", "", false)
+end
 Toggle(Main, "Anti-Rebirths", "", false)
 Toggle(Main, "Walk On Water", "", false)
 Toggle(Main, "Disable Punch Animation", "", false)
