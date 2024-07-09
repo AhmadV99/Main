@@ -82,6 +82,6 @@ Misc:AddButton({Name = "Server Hop",Callback = function()getgenv().Server("Hop")
 Misc:AddButton({Name = "Server Hop [Low Player]",Callback = function()getgenv().Server("Hop1")end})
 Misc:AddButton({Name = "Rejoin",Callback = function()getgenv().Server("Rejoin")end})
 Misc:AddSection({"ESP"})
-Toggle(Killer, "ESP Player", "", false)
+Toggle(Misc, "ESP Player", "", false)
 Window:SelectTab(2)
 return SpeedHubX
