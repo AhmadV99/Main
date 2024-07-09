@@ -76,6 +76,12 @@ Toggle(Killer, "Teleport Player", "", false)
 Toggle(Killer, "Spectate Player", "", false)
 Killer:AddSection({"Misc"})
 Toggle(Killer, "Auto Dodge Attack", "", false)
-
+local Misc = Window:MakeTab({"Misc", "mountain-snow"})
+Misc:AddSection({"Server"})
+Misc:AddButton({Name = "Server Hop",Callback = function()getgenv().Server("Hop")end})
+Misc:AddButton({Name = "Server Hop [Low Player]",Callback = function()getgenv().Server("Hop1")end})
+Misc:AddButton({Name = "Rejoin",Callback = function()getgenv().Server("Rejoin")end})
+Misc:AddSection({"ESP"})
+Toggle(Killer, "ESP Player", "", false)
 Window:SelectTab(2)
 return SpeedHubX
