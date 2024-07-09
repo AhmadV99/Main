@@ -67,6 +67,7 @@ Dropdown(Farming, "Choose Equip Character", "", {"Bald","Hunter","Cyborg","Ninja
 Toggle(Farming, "Equip Character", "", false)
 local Killer = Window:MakeTab({"Killer", "rbxassetid://16279627995"})
 Toggle(Killer, "Auto Kill", "", false)
+Toggle(Killer, "Auto Play To Kill", "", false)
 Killer:AddSection({"Player"})
 Dropdown(Killer, "Select Player", "", getgenv().TablePlayer, "")
 Toggle(Killer, "Auto Kill Player", "", false)
