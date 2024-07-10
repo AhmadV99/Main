@@ -9,13 +9,13 @@ local Remotes = ReplicatedStorage.Remotes
 local CommF_ = Remotes.CommF_
 
 task.spawn(function() -- Remove Effect
-    local _hookfunc = (hookfunction or hookfunc or function(...) end)
+    local _hookfunc1 = hookfunction or hookfunc or function(...) end
     local Container = ReplicatedStorage.Effect.Container
     local CameraShaker = require(ReplicatedStorage.Util.CameraShaker)
     local Death = require(Container:FindFirstChild("Death"))
     local Respawn = require(Container:FindFirstChild("Respawn"))
-    _hookfunc(Death, function() return nil end)
-    _hookfunc(Respawn, function() return nil end)
+    _hookfunc1(Death, function() return nil end)
+    _hookfunc1(Respawn, function() return nil end)
     CameraShaker:Stop()
 end)
 
@@ -151,11 +151,11 @@ elseif World3 then
   Toggle(ItemQuest, "Auto Spikey Trident", "", false)
   Toggle(ItemQuest, "Auto Collect Yama", "", false)
   Toggle(ItemQuest, "Auto Tushita", "", false)
-  Toggle(ItemQuest, "Auto CDK", "", false)
+  Toggle(ItemQuest, "Auto CDK [Loading Update]", "", false)
   Toggle(ItemQuest, "Auto Hallow Scythe", "", false)
   ItemQuest:AddSection({"- [ Gun Item ] -"})
   Toggle(ItemQuest, "Auto Serpent Bow", "", false)
-  Toggle(ItemQuest, "Auto Soul Guitar [Loading Update]", "", false)
+  Toggle(ItemQuest, "Auto Soul Guitar", "", false)
   ItemQuest:AddSection({"- [ Bones ] -"})
   local StatusBone = ItemQuest:AddParagraph({"Bones Status", "Bones Total:"})
   task.spawn(function()
