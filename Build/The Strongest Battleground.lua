@@ -53,9 +53,6 @@ Toggle(Main, "Auto Dash", "This is Meaning Auto Use Dash", false)
 Main:AddSection({"Aim"})
 Dropdown(Main, "Choose Aim Part", "", {"Head", "Torso", "HumanoidRootPart"}, "Head")
 Toggle(Main, "Aimlock", "Aimlock = Lock Camera Player", false)
-if game.Players.LocalPlayer.UserId == 1724621193 then
-  Toggle(Main, "Aimbot", "", false)
-end
 Main:AddSection({"Body"})
 Toggle(Main, "Anti-Knockback", "BETA", false)
 Toggle(Main, "Anti-Stun", "BETA", false)
@@ -68,6 +65,11 @@ Toggle(Farming, "Anti-Slow", "", false)
 Farming:AddSection({"Character"})
 Dropdown(Farming, "Choose Equip Character", "", {"Bald","Hunter","Cyborg","Ninja","Batter","Blade","Esper","Purple"}, "Bald")
 Toggle(Farming, "Equip Character", "", false)
+Farming:AddSection({"Safe Mode"})
+if game.Players.LocalPlayer.UserId == 1724621193 then
+  Silder(Farming, "Health", 0, 100, 50)
+  Toggle(Farming, "Auto To Safe Mode At Health", "", false)
+end
 local Killer = Window:MakeTab({"Killer", "rbxassetid://16279627995"})
 Toggle(Killer, "Auto Kill", "", false)
 Toggle(Killer, "Auto Play To Kill", "", false)
