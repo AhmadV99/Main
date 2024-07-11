@@ -53,6 +53,9 @@ Toggle(Main, "Auto Dash", "This is Meaning Auto Use Dash", false)
 Main:AddSection({"Aim"})
 Dropdown(Main, "Choose Aim Part", "", {"Head", "Torso", "HumanoidRootPart"}, "Head")
 Toggle(Main, "Aimlock", "Aimlock = Lock Camera Player", false)
+if game.Players.LocalPlayer.UserId == 1724621193 then
+  Toggle(Main, "Aimbot", "", false)
+end
 Main:AddSection({"Body"})
 Toggle(Main, "Anti-Knockback", "BETA", false)
 Toggle(Main, "Anti-Stun", "BETA", false)
