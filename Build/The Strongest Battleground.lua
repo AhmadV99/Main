@@ -70,8 +70,6 @@ if game.Players.LocalPlayer.UserId == 1724621193 then
   Silder(Farming, "Health", 0, 100, 50)
   Silder(Farming, "Until Health To back", 0, 100, 70)
   Toggle(Farming, "Auto To Safe Mode At Health", "", false)
-  Farming:AddSection({"Misc"})
-  Toggle(Farming, "God Mode", "", false)
 end
 local Killer = Window:MakeTab({"Killer", "rbxassetid://16279627995"})
 Toggle(Killer, "Auto Kill", "", false)
