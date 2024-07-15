@@ -1,59 +1,174 @@
 local passes, fails, undefined = 0, 0, 0
 local TestR = {}
+local RunService = game:GetService("RunService")
 
 local function GetGB(Path)
-    local value = getgenv() or _G or getfenv(0)
-    local Str = Path
-    while value ~= nil and Str ~= "" do
-        local Name, Next = Str:match("^([^.]+)%.?(.*)$")
-        value = value[Name]
-        Str = Next
-    end
-    return value
+  local value = getgenv() or _G or getfenv(0)
+  local Str = Path
+  while value ~= nil and Str ~= "" do
+    local Name, Next = Str:match("^([^.]+)%.?(.*)$")
+    value = value[Name]
+    Str = Next
+  end
+  return value
 end
 
-local function test(Code)
-    task.spawn(function()
-        local Start = os.clock()
-        local Success, Error = pcall(function() return GetGB(Code) ~= nil end)
-        local endT = os.clock()
-        local dura = endT - Start
-        if Success and Error then
-            passes += 1
-            print(string.format("✅ %s (%.2f ms)", Code, dura * 1000))
-            table.insert(TestR, {code = Code, result = "pass", message = string.format("Duration: %.2f ms", dura * 1000)})
-        else
-            fails += 1
-            warn("⛔ " .. Code)
-        end
-    end)
-    task.wait()
+local function isEqual(VAL, VAL1)
+  if VAL == VAL1 then return true end
+  local uniqueTypes = {["function"] = true, ["table"] = true,["userdata"] = true,["thread"] = true}
+  for Index, Value in pairs(VAL) do
+    if uniqueTypes[type(Value)] then
+      if type(VAL1[Index]) ~= type(Value) then
+        return false
+      end
+    elseif VAL1[Index] ~= Value then
+      return false
+    end
+  end
+  for Index, Value in pairs(VAL1) do
+    if uniqueTypes[type(Value)] then
+      if type(VAL[Index]) ~= type(Value) then
+        return false
+      end
+    elseif VAL[Index] ~= Value then
+      return false
+    end
+  end
+  return true
+end
+
+
+local function test(name, callback)
+  task.spawn(function()
+    if not callback and GetGB(name) then
+      passes += 1
+      print("✅ " .. name .. (message and " - " .. message or ""))
+    elseif not GetGB(name) then
+      fails += 1
+      warn("⛔ " .. name)
+    else
+      local success, message = pcall(callback)
+      if success then
+        passes += 1
+        print("✅ " .. name .. (message and " - " .. message or ""))
+      else
+        fails += 1
+        warn("⛔ " .. name .. " failed: " .. message)
+      end
+    end
+  end)
 end
 
 local function Print(Name)
-    return print(' ----- [ ' .. Name .. ' ] ----- ')
+  return print(' ----- [ ' .. Name .. ' ] ----- ')
 end
 
 Print("Cache")
 
-test("cache.invalidate")
-test("cache.iscached")
-test("cache.replace")
-test("compareinstances")
+test("cache.invalidate", function()
+  local Con, Cach = Instance.new("Folder"), Con:FindFirstChild("Part")
+
+  cache.invalidate(Cach)
+  assert(Instance.new("Part", Con) ~= Cach, "The Reference to [ Part ] was not successfully invalidated")
+end)
+
+test("cache.iscached", function()
+  local part = Instance.new("Part")
+
+  assert(cache.iscached(part), "Part should be cached")
+  cache.invalidate(part)
+  assert(not cache.iscached(part), "Part should not be cached after invalidation")
+end)
+
+test("cache.replace", function()
+  local Part = Instance.new("Part")
+  local Replacement = Instance.new("Fire")
+
+  cache.replace(Part, Replacement)
+  assert(Part == Replacement, "Part was not replaced with Fire instance")
+end)
+
+test("compareinstances", function()
+  local cloneref = cloneref or function(agrs) return agrs:clone() end
+
+  local Part = Instance.new("Part")
+  local Cloned = cloneref(Part)
+
+  assert(Part ~= Cloned, "Cloned instance should not be identical to the Part")
+  assert(compareInstances(Part, Cloned), "Cloned instance should be equivalent to the Part according to compareInstances()")
+end)
 
 Print("Closures")
 
-test("checkcaller")
-test("clonefunction")
+test("checkcaller", function()
+  assert(checkCaller(), "Main scope should return true")
+end)
+
+test("clonefunction", function()
+  local function Check()return "success"end
+
+	local CloneFunc = clonefunction(Check)
+
+	assert(Check() == CloneFunc(), "The clonefunction should return the same value as the original")
+	assert(Check ~= CloneFunc, "The clonefunction should not reference the original function")
+end)
+
 test("getcallingscript")
-test("getscriptclosure")
-test("hookfunction")
-test("hookfunc")
-test("iscclosure")
-test("islclosure")
-test("isexecutorclosure")
-test("loadstring")
+
+test("getscriptclosure", function()
+  local module = game:GetService("CoreGui").RobloxGui.Modules.Common.Constants
+  local constants, generated = getrenv().require(module), getscriptclosure(module)()
+
+  assert(constants ~= generated, "The generated module does not match the original")
+  assert(isEqual(constants, generated), "The generated constant table is not shallow equal to the original")
+end)
+
+test("hookfunction", function()
+  local function test()return true end
+  local reference = hookfunction(test, function()
+    return false
+  end)
+
+  assert(test() == false, "The function should return false")
+  assert(reference() == true, "The hookfunction function should return true")
+  assert(test ~= reference, "The hookfunction function should not be the same as the reference")
+end)
+
+test("iscclosure", function()
+  assert(iscclosure(print) == true, "Function 'print' should be a C closure")
+  assert(iscclosure(function() end) == false, "Executor function should not be a C closure")
+end)
+
+test("islclosure", function()
+  assert(islclosure(print) == false, "Function 'print' should not be a Lua closure")
+  assert(islclosure(function() end) == true, "Executor function should be a Lua closure")
+end)
+
+test("isexecutorclosure", function()
+  local isexe = isexecutorclosure
+
+  assert(isexe(isexe) == true, "Did not return true for an executor global")
+  assert(isexe(newcclosure(function() end)) == true, "Did not return true for an executor C closure")
+  assert(isexe(function() end) == true, "Did not return true for an executor Luau closure")
+  assert(isexe(print) == false, "Did not return false for a Roblox global")
+end)
+
+test("loadstring", function()
+  local animate = game:GetService("Players").LocalPlayer.Character:WaitForChild("Animate")
+  local bytecode = getscriptbytecode(animate)
+
+  local func, err = loadstring(bytecode)
+  assert(not func, "Luau bytecode should not be loadable!")
+
+  local mathFunc, mathErr = loadstring("return... + 1")
+  assert(mathFunc and mathFunc(1) == 2, "Failed to do simple math: ".. tostring(mathErr))
+
+  local errFunc, errErr = loadstring("f")
+  assert(errErr and type(errErr) == "string", "Loadstring did not return an error for a compiler error")
+end)
+
 test("newcclosure")
+
 test("newlclosure")
 
 Print("Console")
@@ -273,22 +388,25 @@ test("close_socket")
 
 Print("FPS")
 
-local renderStepped = game:GetService("RunService").RenderStepped
-local function GetFPS() 
-    renderStepped:Wait() 
-    local Value = 0 
-    for _ = 1, 5 do 
-        Value += 1 / renderStepped:Wait() 
-    end 
-    return math.round(Value / 5) 
+local function getFPS()
+  local St = tick()
+  local Count = 0
+  RunService.RenderStepped:Wait()
+  local en = tick()
+  while tick() - St < 1 do
+    Count += 1
+    RunService.RenderStepped:Wait()
+  end
+  return math.floor(Count / (en - St) + 0.5)
 end
-print("FPS: " ..GetFPS().. "/60")
+
+print("FPS: " .. getFPS() .. "/60")
 
 local rate = math.round(passes / (passes + fails) * 100)
 local outOf = passes .. " out of " .. (passes + fails)
 
 print("\n")
 
-print("UNC Summary Executor")
+print("Cubical Executor Functions")
 print("✅ Tested with a " .. rate .. "% success rate (" .. outOf .. ")")
 print("⛔ " .. fails .. " tests failed")
