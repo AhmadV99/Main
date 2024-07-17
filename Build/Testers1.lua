@@ -271,6 +271,7 @@ if World2 or World3 then
     getgenv().NoFog()
   end})
   Toggle(SeaEvent, "Auto Dodge Sea Rough", "", false)
+  Toggle(SeaEvent, "Protect Boat", "", false)
   SeaEvent:AddSection({"- [ Settings Sea Event ] -"})
   Dropdown(SeaEvent, "Select Level Danger", "", {"1","2","3","4","5","6"}, "6")
   Dropdown(SeaEvent, "Select Boat", "", {"Pirate Brigade", "Pirate Grand Brigade", "Beast Hunter"}, "Pirate Brigade")
