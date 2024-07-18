@@ -274,6 +274,7 @@ if World2 or World3 then
   Toggle(SeaEvent, "Protect Boat", "", false)
   SeaEvent:AddSection({"- [ Safe Mode ] -"})
   Silder(SeaEvent, "Return Safe At Heath %", 0, Player.Character.Humanoid.Health, 5000)
+  Silder(SeaEvent, "Return Back At Heath %", 0, Player.Character.Humanoid.Health, 8000)
   Toggle(SeaEvent, "Auto Return Safe", "", false)
   SeaEvent:AddSection({"- [ Settings Sea Event ] -"})
   Dropdown(SeaEvent, "Select Level Danger", "", {"1","2","3","4","5","6"}, "6")
