@@ -264,7 +264,11 @@ if World2 or World3 then
   SeaEvent:AddSection({"- [ Attack Boat ] -"})
   Toggle(SeaEvent, "Ghost Ship", "Attack Ghost Ship in Sea Event", true)
   SeaEvent:AddSection({"- [ Attack Sea Beast ] -"})
-  Toggle(SeaEvent, "Sea Beast [Loading Fix]", "Attack Sea Beast in Sea Event", true)
+  if game.Players.LocalPlayer.UserId == 1724621193 then
+    Toggle(SeaEvent, "Sea Beast", "Attack Sea Beast in Sea Event", true)
+  else
+    Toggle(SeaEvent, "Sea Beast [Loading Fix]", "Attack Sea Beast in Sea Event", true)
+  end
   SeaEvent:AddSection({"- [ Misc Sea Event ] -"})
   Toggle(SeaEvent, "No Clip Rock", "", false)
   SeaEvent:AddButton({Name = "No Fog", Description = "", Callback = function()
