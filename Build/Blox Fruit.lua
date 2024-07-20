@@ -14,8 +14,10 @@ task.spawn(function() -- Remove Effect
     local CameraShaker = require(ReplicatedStorage.Util.CameraShaker)
     local Death = require(Container:FindFirstChild("Death"))
     local Respawn = require(Container:FindFirstChild("Respawn"))
+    local DisplayNPC = require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
     _hookfunc1(Death, function() return nil end)
     _hookfunc1(Respawn, function() return nil end)
+    _hookfunc1(DisplayNPC, function() return nil end)
     CameraShaker:Stop()
 end)
 
