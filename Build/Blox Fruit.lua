@@ -180,30 +180,30 @@ elseif World3 then
       end
     end
   end)
-end
-Toggle(ItemQuest, "Auto Cake Prince", "This Can Attack Mob Cake Prince or Something", false)
-Toggle(ItemQuest, "Auto Dough King", "This Attack Raid Boss Dough King", false)
-ItemQuest:AddSection({"- [ Rip Indra ] -"})
-Toggle(ItemQuest, "Auto Active Haki Color", "This Get Haki Color", false)
-Toggle(ItemQuest, "Auto Rip Indra", "This Attack Raid Boss Rip Indra", false)
-ItemQuest:AddSection({"- [ Elite Hunter ] -"})
-local StatusE = ItemQuest:AddSection({"Status"})
-local GetNumE = ItemQuest:AddSection({"Status"})
-task.spawn(function()
-  while task.wait() do
-    if getgenv().CheckMob({"Diablo","Deandre","Urban"}) then
-      StatusE:Set("Elite Hunter : Spawned")
-    else
-      StatusE:Set("Elite Hunter : Not Spawn")
+  Toggle(ItemQuest, "Auto Cake Prince", "This Can Attack Mob Cake Prince or Something", false)
+  Toggle(ItemQuest, "Auto Dough King", "This Attack Raid Boss Dough King", false)
+  ItemQuest:AddSection({"- [ Rip Indra ] -"})
+  Toggle(ItemQuest, "Auto Active Haki Color", "This Get Haki Color", false)
+  Toggle(ItemQuest, "Auto Rip Indra", "This Attack Raid Boss Rip Indra", false)
+  ItemQuest:AddSection({"- [ Elite Hunter ] -"})
+  local StatusE = ItemQuest:AddSection({"Status"})
+  local GetNumE = ItemQuest:AddSection({"Status"})
+  task.spawn(function()
+    while task.wait() do
+        if getgenv().CheckMob({"Diablo","Deandre","Urban"}) then
+            StatusE:Set("Elite Hunter : Spawned")
+        else
+            StatusE:Set("Elite Hunter : Not Spawn")
+        end
     end
-  end
 end)
 task.spawn(function()
-  while task.wait() do
-    GetNumE:Set("Elite Hunter Progress : " .. CommF_:InvokeServer("EliteHunter", "Progress"))
-  end
+    while task.wait() do
+        GetNumE:Set("Elite Hunter Progress : " .. CommF_:InvokeServer("EliteHunter", "Progress"))
+    end
 end)
 Toggle(ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false)
+end
 if World2 or World3 then
   ItemQuest:AddSection({"- [ Fighting Style ] -"})
   Toggle(ItemQuest, "Auto Death Step", "", false)
