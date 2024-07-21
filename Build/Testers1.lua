@@ -14,8 +14,10 @@ task.spawn(function() -- Remove Effect
     local CameraShaker = require(ReplicatedStorage.Util.CameraShaker)
     local Death = require(Container:FindFirstChild("Death"))
     local Respawn = require(Container:FindFirstChild("Respawn"))
+    local DisplayNPC = require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
     _hookfunc1(Death, function() return nil end)
     _hookfunc1(Respawn, function() return nil end)
+    _hookfunc1(DisplayNPC, function() return nil end)
     CameraShaker:Stop()
 end)
 
@@ -178,30 +180,30 @@ elseif World3 then
       end
     end
   end)
-end
-Toggle(ItemQuest, "Auto Cake Prince", "This Can Attack Mob Cake Prince or Something", false)
-Toggle(ItemQuest, "Auto Dough King", "This Attack Raid Boss Dough King", false)
-ItemQuest:AddSection({"- [ Rip Indra ] -"})
-Toggle(ItemQuest, "Auto Active Haki Color", "This Get Haki Color", false)
-Toggle(ItemQuest, "Auto Rip Indra", "This Attack Raid Boss Rip Indra", false)
-ItemQuest:AddSection({"- [ Elite Hunter ] -"})
-local StatusE = ItemQuest:AddSection({"Status"})
-local GetNumE = ItemQuest:AddSection({"Status"})
-task.spawn(function()
-  while task.wait() do
-    if getgenv().CheckMob({"Diablo","Deandre","Urban"}) then
-      StatusE:Set("Elite Hunter : Spawned")
-    else
-      StatusE:Set("Elite Hunter : Not Spawn")
+  Toggle(ItemQuest, "Auto Cake Prince", "This Can Attack Mob Cake Prince or Something", false)
+  Toggle(ItemQuest, "Auto Dough King", "This Attack Raid Boss Dough King", false)
+  ItemQuest:AddSection({"- [ Rip Indra ] -"})
+  Toggle(ItemQuest, "Auto Active Haki Color", "This Get Haki Color", false)
+  Toggle(ItemQuest, "Auto Rip Indra", "This Attack Raid Boss Rip Indra", false)
+  ItemQuest:AddSection({"- [ Elite Hunter ] -"})
+  local StatusE = ItemQuest:AddSection({"Status"})
+  local GetNumE = ItemQuest:AddSection({"Status"})
+  task.spawn(function()
+    while task.wait() do
+        if getgenv().CheckMob({"Diablo","Deandre","Urban"}) then
+            StatusE:Set("Elite Hunter : Spawned")
+        else
+            StatusE:Set("Elite Hunter : Not Spawn")
+        end
     end
-  end
 end)
 task.spawn(function()
-  while task.wait() do
-    GetNumE:Set("Elite Hunter Progress : " .. CommF_:InvokeServer("EliteHunter", "Progress"))
-  end
+    while task.wait() do
+        GetNumE:Set("Elite Hunter Progress : " .. CommF_:InvokeServer("EliteHunter", "Progress"))
+    end
 end)
 Toggle(ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false)
+end
 if World2 or World3 then
   ItemQuest:AddSection({"- [ Fighting Style ] -"})
   Toggle(ItemQuest, "Auto Death Step", "", false)
@@ -265,19 +267,6 @@ if World2 or World3 then
   Toggle(SeaEvent, "Ghost Ship", "Attack Ghost Ship in Sea Event", true)
   SeaEvent:AddSection({"- [ Attack Sea Beast ] -"})
   Toggle(SeaEvent, "Sea Beast", "Attack Sea Beast in Sea Event", true)
-  SeaEvent:AddSection({"- [ Misc Sea Event ] -"})
-  Toggle(SeaEvent, "No Clip Rock", "", false)
-  SeaEvent:AddButton({Name = "No Fog", Description = "", Callback = function()
-    getgenv().NoFog()
-  end})
-  Toggle(SeaEvent, "Auto Dodge Sea Rough", "", false)
-  Toggle(SeaEvent, "Protect Boat", "", false)
-  SeaEvent:AddSection({"- [ Settings Sea Event ] -"})
-  Dropdown(SeaEvent, "Select Level Danger", "", {"1","2","3","4","5","6"}, "6")
-  Dropdown(SeaEvent, "Select Boat", "", {"Pirate Brigade", "Pirate Grand Brigade", "Beast Hunter"}, "Pirate Brigade")
-  Silder(SeaEvent, "Tween Boat Speed", 0, 500, 300)
-  SeaEvent:AddSection({"- [ Sea Event Skill ] -"})
-  Toggle(SeaEvent, "Skill Z (Sea)", "", true)Toggle(SeaEvent, "Skill X (Sea)", "", true)Toggle(SeaEvent, "Skill C (Sea)", "", true)Toggle(SeaEvent, "Skill V (Sea)", "", true)Toggle(SeaEvent, "Skill F (Sea)", "", true)
   SeaEvent:AddSection({"- [ Frozen Dimension Island ] -"})
   local StatusFrozen = SeaEvent:AddSection({"Status"})
   task.spawn(function()
@@ -291,6 +280,24 @@ if World2 or World3 then
   end)
   Toggle(SeaEvent, "Tween To Frozen Dimension", "Spawn Frozen Dimension if Tween to", false)
   Toggle(SeaEvent, "Auto Summon Frozen Dimension", "Spawn Frozen Dimension if Tween to", false)
+  Toggle(SeaEvent, "Auto Attack Leviathan", "BETA", false)
+  SeaEvent:AddSection({"- [ Item ] -"})
+  Toggle(SeaEvent, "Auto Shark Anchor", "", false)
+  Toggle(SeaEvent, "Auto Terror Jaw", "", false)
+  Toggle(SeaEvent, "Auto Shark Tooth", "", false)
+  SeaEvent:AddSection({"- [ Misc ] -"})
+  Toggle(SeaEvent, "No Clip Rock", "", false)
+  SeaEvent:AddButton({Name = "No Fog", Description = "", Callback = function()
+    getgenv().NoFog()
+  end})
+  Toggle(SeaEvent, "Auto Dodge Sea Rough", "", true)
+  Toggle(SeaEvent, "Protect Boat", "", true)
+  SeaEvent:AddSection({"- [ Settings Sea Event ] -"})
+  Dropdown(SeaEvent, "Select Level Danger", "", {"1","2","3","4","5","6","infinity"}, "6")
+  Dropdown(SeaEvent, "Select Boat", "", {"Pirate Brigade", "Pirate Grand Brigade", "Beast Hunter"}, "Pirate Brigade")
+  Silder(SeaEvent, "Tween Boat Speed", 0, 500, 300)
+  SeaEvent:AddSection({"- [ Sea Event Skill ] -"})
+  Toggle(SeaEvent, "Skill Z (Sea)", "", true)Toggle(SeaEvent, "Skill X (Sea)", "", true)Toggle(SeaEvent, "Skill C (Sea)", "", true)Toggle(SeaEvent, "Skill V (Sea)", "", true)Toggle(SeaEvent, "Skill F (Sea)", "", true)
 end
 local Stats = Window:MakeTab({"Stats", "plus-circle"})
 Silder(Stats, "Set Point", 0, 100, 2)
@@ -353,11 +360,7 @@ if World2 or World3 then
   local FindMirage = RaceV4:AddSection({"Status"})
   local FindMiragePuzzle = RaceV4:AddSection({"Status"})
   local SetUpdateMoon = RaceV4:AddSection({"Status"})
-  task.spawn(function()
-    while task.wait() do
-      getgenv().CheckMoon(SetUpdateMoon)
-    end
-  end)
+  getgenv().CheckMoon(SetUpdateMoon)
   task.spawn(function()
     while task.wait() do
       if getgenv().VerifyIsland("Mirage Island Path") then
