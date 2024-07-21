@@ -284,7 +284,7 @@ if World2 or World3 then
   Toggle(SeaEvent, "Auto Shark Anchor", "", false)
   Toggle(SeaEvent, "Auto Monster Magnet", "", false)
   Toggle(SeaEvent, "Auto Terror Jaw", "", false)
-  Toggle(SeaEvent, "Auto Shark Tooth", "", false)
+  Toggle(SeaEvent, "Auto Shark Tooth Necklace", "", false)
   SeaEvent:AddSection({"- [ Misc ] -"})
   Toggle(SeaEvent, "No Clip Rock", "", false)
   SeaEvent:AddButton({Name = "No Fog", Description = "", Callback = function()
