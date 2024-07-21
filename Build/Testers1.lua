@@ -257,7 +257,7 @@ if World2 or World3 then
   Toggle(SeaEvent, "Auto Farm Sea", "Farm Sea / Attack Mob In Sea Event", false)
   SeaEvent:AddSection({"- [ Terrorshark ] -"})
   Toggle(SeaEvent, "Terrorshark", "Attack Raid Boss Terrorshark", true)
-  Toggle(SeaEvent, "Auto Dodge Terrorshark Skill", "Dodge Skill Sea", false)
+  Toggle(SeaEvent, "Auto Dodge Terrorshark Skill", "Dodge Skill Sea", true)
   SeaEvent:AddSection({"- [ Sea Mob ] -"})
   Toggle(SeaEvent, "Piranha", "Attack Piranha Mob in Sea Event", true)
   Toggle(SeaEvent, "Shark", "Attack Shark Mob in Sea Event", true)
