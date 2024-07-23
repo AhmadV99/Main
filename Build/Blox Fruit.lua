@@ -251,6 +251,7 @@ if World2 or World3 then
   end)
   Toggle(SeaEvent, "Tween To Kitsune Island", "Tween to Kitsune If Spawn Kitsune", false)
   Toggle(SeaEvent, "Auto Collect Azure Ember", "Collect Azure Ember", false)
+  Toggle(SeaEvent, "Auto Trade Azure Ember", "", false)
   SeaEvent:AddSection({"- [ Wood ] -"})
   Toggle(SeaEvent, "Auto Wood Planks", "Farm Get Wood Planks", false)
   SeaEvent:AddSection({"- [ Sea Event ] -"})
@@ -266,7 +267,7 @@ if World2 or World3 then
   Toggle(SeaEvent, "Ghost Ship", "Attack Ghost Ship in Sea Event", true)
   SeaEvent:AddSection({"- [ Attack Sea Beast ] -"})
   Toggle(SeaEvent, "Sea Beast", "Attack Sea Beast in Sea Event", true)
-  SeaEvent:AddSection({"- [ Frozen Dimension Island ] -"})
+  SeaEvent:AddSection({"- [ Leviathan ] -"})
   local StatusFrozen = SeaEvent:AddSection({"Status"})
   task.spawn(function()
     while task.wait() do
@@ -277,9 +278,12 @@ if World2 or World3 then
       end
     end
   end)
-  Toggle(SeaEvent, "Tween To Frozen Dimension", "Spawn Frozen Dimension if Tween to", false)
-  Toggle(SeaEvent, "Auto Summon Frozen Dimension", "Spawn Frozen Dimension if Tween to", false)
-  Toggle(SeaEvent, "Auto Attack Leviathan", "BETA", false)
+  Toggle(SeaEvent, "Tween To Frozen Dimension", "Spawned Frozen Dimension if Tween to", false)
+  Toggle(SeaEvent, "Auto Summon Leviathan", "Only Buy Beast Hunter and Need Player 5+", false)
+  Toggle(SeaEvent, "Auto Attack Leviathan", "Must Spawn First", false)
+  Toggle(SeaEvent, "Auto Attack Leviathan Segment", "", false)
+  Toggle(SeaEvent, "Auto Attack Leviathan Tail", "", false)
+  Toggle(SeaEvent, "Tween To Heart Leviathan [BOAT TWEEN]", "", false)
   SeaEvent:AddSection({"- [ Item ] -"})
   Toggle(SeaEvent, "Auto Shark Anchor", "", false)
   Toggle(SeaEvent, "Auto Monster Magnet", "", false)
