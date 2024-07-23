@@ -251,6 +251,7 @@ if World2 or World3 then
   end)
   Toggle(SeaEvent, "Tween To Kitsune Island", "Tween to Kitsune If Spawn Kitsune", false)
   Toggle(SeaEvent, "Auto Collect Azure Ember", "Collect Azure Ember", false)
+  Toggle(SeaEvent, "Auto Trade Azure Ember", "", false)
   SeaEvent:AddSection({"- [ Wood ] -"})
   Toggle(SeaEvent, "Auto Wood Planks", "Farm Get Wood Planks", false)
   SeaEvent:AddSection({"- [ Sea Event ] -"})
