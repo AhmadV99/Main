@@ -94,9 +94,9 @@ Window:AddMinimizeButton({
 })
 
 local Tabs = {
-  H = Window:MakeTab({"Home", "scan-face"}),
-  C = Window:MakeTab({"Config", "rbxassetid://18361516966"}),
-  M = Window:MakeTab({"Main", "home"}),
+  H = Window:MakeTab({Name = "Home", Icon = "scan-face"}),
+  C = Window:MakeTab({Name = "Config", Icon = "rbxassetid://18361516966"}),
+  M = Window:MakeTab({Name = "Main", Icon = "home"}),
 }
 
 local __HomeT = Tabs.H do
@@ -114,7 +114,7 @@ end
 
 local __ConfigT = Tabs.C do
   Func:Dropdown(__ConfigT, "Weapon Tool", "Weapon + Equip = Equiped Weapon", {"Melee","Sword","Blox Fruit","Gun"}, "Melee")
-  Func:Silder(__ConfigT, "Tween Speed", 0, 500, 200)
+  Func:Slider(__ConfigT, "Tween Speed", 0, 500, 200)
   Func:Slider(__ConfigT, "Farm Distance", 0, 100, 40)
   Func:Slider(__ConfigT, "Bring Mob Radius", 0, 500, 200)
   Func:Toggle(__ConfigT, "Bring Mob", "This Can Bring Mob 5+ or 6+ Each", true)
@@ -122,15 +122,15 @@ local __ConfigT = Tabs.C do
   Func:Slider(__ConfigT, "Fast Attack Delay", 0, 20, 0)
   Func:Toggle(__ConfigT, "Hop if Admin or Staff", "", true)
   Func:Toggle(__ConfigT, "Auto Dodge Mob Skill", "", false)
-  __ConfigT:AddSection("- [ Race ] -")
+  __ConfigT:AddSection({"- [ Race ] -"})
   Func:Toggle(__ConfigT, "Auto Use Race V3", "", false)
   Func:Toggle(__ConfigT, "Auto Use Race V4", "", false)
-  __ConfigT:AddSection("- [ Body ] -")
+  __ConfigT:AddSection({"- [ Body ] -"})
   Func:Toggle(__ConfigT, "Anti-Knockback", "", false)
 end
 
 local __MainT = Tabs.M do
-  __MainT:AddSection("- [ Farming ] -")
+  __MainT:AddSection({"- [ Farming ] -"})
   Func:Toggle(__MainT, "Auto Farm Level", "This Can Farm Level!", false)
   Func:Toggle(__MainT, "Auto Farm Nearest", "This Can Attack Nearest Mob!", false)
 
@@ -140,7 +140,7 @@ local __MainT = Tabs.M do
     Func:Toggle(__MainT, "Auto Factory", "This Can Attack Core!", false)
   end
 
-  __MainT:AddSection("- [ Farming Mastery ] -")
+  __MainT:AddSection({"- [ Farming Mastery ] -"})
   Func:Dropdown(__MainT, "Choose Mastery Mode", "", {"Level","Bone","Cake Prince","Nearest"}, "Level")
   Func:Dropdown(__MainT, "Choose Mastery Tool", "", {"Blox Fruit","Sword","Gun"}, "Blox Fruit")
   Func:Toggle(__MainT, "Farm Mastery", "", false)
