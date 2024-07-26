@@ -8,7 +8,7 @@ local _PlaceID = game.PlaceId
 
 local Player, Remotes, CommF_ = Players.LocalPlayer, ReplicatedStorage.Remotes, ReplicatedStorage.Remotes.CommF_
 
-local __env = getgenv and getgenv() or {}
+local __env = getgenv and getgenv()
 
 local World = {
   [1] = _PlaceID == 2753915549,
@@ -48,34 +48,34 @@ local Tabs = {
 }
 
 local Func = {} do
-  Func.Toggle = function(Tab, Name, Desc, Default, CallBacks)
+  Func.Toggle = function(Tab, Name, Desc, Default)
     return Tab:AddToggle({
       Name = Name,
       Description = Desc or "",
       Default = Default,
-      Callback = CallBacks or function(Value) __env[Name] = Value end,
+      Callback = function(Value) __env[Name] = Value end,
       Flag = "SpeedHubX/Toggle/" .. tostring(Name)
     })
   end
   
-  Func.Dropdown = function(Tab, Name, Desc, Option, Default, CallBacks)
+  Func.Dropdown = function(Tab, Name, Desc, Option, Default)
     return Tab:AddDropdown({
       Name = Name,
       Description = Desc or "",
       Options = Option,
       Default = Default,
-      Callback = CallBacks or function(Value) __env[Name] = Value end,
+      Callback = function(Value) __env[Name] = Value end,
       Flag = "SpeedHubX/Dropdown/" .. tostring(Name)
     })
   end
 
-  Func.Slider = function(Tab, Name, Min, Max, Default, CallBacks)
+  Func.Slider = function(Tab, Name, Min, Max, Default)
     return Tab:AddSlider({
       Name = Name,
       Min = Min,
       Max = Max,
       Default = Default,
-      Callback = CallBacks or function(Value) __env[Name] = Value end,
+      Callback = function(Value) __env[Name] = Value end,
       Flag = "SpeedHubX/Slider/" .. tostring(Name)
     })
   end
@@ -88,12 +88,12 @@ local Func = {} do
     })
   end
 
-  Func.TextBox = function(Tab, Name, Description, Default, Callbacks)
+  Func.TextBox = function(Tab, Name, Description, Default)
     return Tab:AddTextBox({
       Name = Name,
       Description = Description,
       Default = Default,
-      Callback = CallBacks or function(Value) __env[Name] = Value end,
+      Callback = function(Value) __env[Name] = Value end,
       Flag = "SpeedHubX/TextBox/" .. tostring(Name)
     })
   end
@@ -145,5 +145,5 @@ local __MainT = Tabs.M do
   Func.Dropdown(__MainT, "Choose Mastery Tool", "", {"Blox Fruit","Sword","Gun"}, "Blox Fruit")
   Func.Toggle(__MainT, "Farm Mastery", "", false)
 end
-
+Window:SelectTab(Tabs.H)
 return __env
