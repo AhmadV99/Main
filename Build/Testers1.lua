@@ -38,7 +38,7 @@ local Func = {} do
       Description = Desc or "",
       Default = Default,
       Callback = CallBacks or function(Value) __env[Name] = Value end,
-      Flag = "SpeedHubX/Toggle/"..Name
+      Flag = "SpeedHubX/Toggle/" .. tostring(Name)
     })
   end
   
@@ -49,7 +49,7 @@ local Func = {} do
       Options = Option,
       Default = Default,
       Callback = CallBacks or function(Value) __env[Name] = Value end,
-      Flag = "SpeedHubX/Dropdown/"..Name
+      Flag = "SpeedHubX/Dropdown/" .. tostring(Name)
     })
   end
 
@@ -60,7 +60,7 @@ local Func = {} do
       Max = Max,
       Default = Default,
       Callback = CallBacks or function(Value) __env[Name] = Value end,
-      Flag = "SpeedHubX/Slider/"..Name
+      Flag = "SpeedHubX/Slider/" .. tostring(Name)
     })
   end
 
@@ -78,7 +78,7 @@ local Func = {} do
       Description = Description,
       Default = Default,
       Callback = CallBacks or function(Value) __env[Name] = Value end,
-      Flag = "SpeedHubX/TextBox/"..Name
+      Flag = "SpeedHubX/TextBox/" .. tostring(Name)
     })
   end
 end
@@ -106,42 +106,42 @@ local __HomeT = Tabs.H do
     Invite = Discord
   })
 
-  __HomeT:AddSection({"- [ Local Player ] -"})
+  __HomeT:AddSection("- [ Local Player ] -")
 
-  Func:Slider(__HomeT, "Set WalkSpeed", 0, 500, 300)
-  Func:Toggle(__HomeT, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
+  Func.Slider(__HomeT, "Set WalkSpeed", 0, 500, 300)
+  Func.Toggle(__HomeT, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
 end
 
 local __ConfigT = Tabs.C do
-  Func:Dropdown(__ConfigT, "Weapon Tool", "Weapon + Equip = Equiped Weapon", {"Melee","Sword","Blox Fruit","Gun"}, "Melee")
-  Func:Slider(__ConfigT, "Tween Speed", 0, 500, 200)
-  Func:Slider(__ConfigT, "Farm Distance", 0, 100, 40)
-  Func:Slider(__ConfigT, "Bring Mob Radius", 0, 500, 200)
-  Func:Toggle(__ConfigT, "Bring Mob", "This Can Bring Mob 5+ or 6+ Each", true)
-  Func:Toggle(__ConfigT, "Fast Attack", "This Fast Attack Can Attack a Mob in Fast", true)
-  Func:Slider(__ConfigT, "Fast Attack Delay", 0, 20, 0)
-  Func:Toggle(__ConfigT, "Hop if Admin or Staff", "", true)
-  Func:Toggle(__ConfigT, "Auto Dodge Mob Skill", "", false)
-  __ConfigT:AddSection({"- [ Race ] -"})
-  Func:Toggle(__ConfigT, "Auto Use Race V3", "", false)
-  Func:Toggle(__ConfigT, "Auto Use Race V4", "", false)
-  __ConfigT:AddSection({"- [ Body ] -"})
-  Func:Toggle(__ConfigT, "Anti-Knockback", "", false)
+  Func.Dropdown(__ConfigT, "Weapon Tool", "Weapon + Equip = Equipped Weapon", {"Melee","Sword","Blox Fruit","Gun"}, "Melee")
+  Func.Slider(__ConfigT, "Tween Speed", 0, 500, 200)
+  Func.Slider(__ConfigT, "Farm Distance", 0, 100, 40)
+  Func.Slider(__ConfigT, "Bring Mob Radius", 0, 500, 200)
+  Func.Toggle(__ConfigT, "Bring Mob", "This Can Bring Mob 5+ or 6+ Each", true)
+  Func.Toggle(__ConfigT, "Fast Attack", "This Fast Attack Can Attack a Mob in Fast", true)
+  Func.Slider(__ConfigT, "Fast Attack Delay", 0, 20, 0)
+  Func.Toggle(__ConfigT, "Hop if Admin or Staff", "", true)
+  Func.Toggle(__ConfigT, "Auto Dodge Mob Skill", "", false)
+  __ConfigT:AddSection("- [ Race ] -")
+  Func.Toggle(__ConfigT, "Auto Use Race V3", "", false)
+  Func.Toggle(__ConfigT, "Auto Use Race V4", "", false)
+  __ConfigT:AddSection("- [ Body ] -")
+  Func.Toggle(__ConfigT, "Anti-Knockback", "", false)
 end
 
 local __MainT = Tabs.M do
-  __MainT:AddSection({"- [ Farming ] -"})
-  Func:Toggle(__MainT, "Auto Farm Level", "This Can Farm Level!", false)
-  Func:Toggle(__MainT, "Auto Farm Nearest", "This Can Attack Nearest Mob!", false)
+  __MainT:AddSection("- [ Farming ] -")
+  Func.Toggle(__MainT, "Auto Farm Level", "This Can Farm Level!", false)
+  Func.Toggle(__MainT, "Auto Farm Nearest", "This Can Attack Nearest Mob!", false)
 
   if World[3] then
-    Func:Toggle(__MainT, "Auto Pirates Sea", "This Can Attack Rip Indra Or Something!", false)
+    Func.Toggle(__MainT, "Auto Pirates Sea", "This Can Attack Rip Indra Or Something!", false)
   elseif World[2] then
-    Func:Toggle(__MainT, "Auto Factory", "This Can Attack Core!", false)
+    Func.Toggle(__MainT, "Auto Factory", "This Can Attack Core!", false)
   end
 
-  __MainT:AddSection({"- [ Farming Mastery ] -"})
-  Func:Dropdown(__MainT, "Choose Mastery Mode", "", {"Level","Bone","Cake Prince","Nearest"}, "Level")
-  Func:Dropdown(__MainT, "Choose Mastery Tool", "", {"Blox Fruit","Sword","Gun"}, "Blox Fruit")
-  Func:Toggle(__MainT, "Farm Mastery", "", false)
+  __MainT:AddSection("- [ Farming Mastery ] -")
+  Func.Dropdown(__MainT, "Choose Mastery Mode", "", {"Level","Bone","Cake Prince","Nearest"}, "Level")
+  Func.Dropdown(__MainT, "Choose Mastery Tool", "", {"Blox Fruit","Sword","Gun"}, "Blox Fruit")
+  Func.Toggle(__MainT, "Farm Mastery", "", false)
 end
