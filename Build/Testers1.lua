@@ -6,7 +6,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local _PlaceID = game.PlaceId
 
-local Player, Remotes, CommF_ = Players.LocalPlayer, ReplicatedStorage:WaitForChild("Remotes"), Remotes:WaitForChild("CommF_")
+local Player, Remotes, CommF_ = Players.LocalPlayer, ReplicatedStorage:WaitForChild("Remotes"), ReplicatedStorage.Remotes:WaitForChild("CommF_")
 
 local __env = getgenv and getgenv() or {}
 
