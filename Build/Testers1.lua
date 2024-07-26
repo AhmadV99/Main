@@ -147,4 +147,3 @@ local __MainT = Tabs.M do
 end
 
 Window:SelectTab(Tabs.H)
-return __env
