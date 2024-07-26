@@ -31,6 +31,22 @@ task.spawn(function() -- Remove Effect
   CameraShaker:Stop()
 end)
 
+local Window = Library:MakeWindow({
+  Title = "Speed Hub X | " .. Version,
+  SaveFolder = "Speed Hub X"
+})
+
+Window:AddMinimizeButton({
+  Button = {Image = "rbxassetid://16022917595"},
+  Corner = {CornerRadius = UDim.new(0, 5)}
+})
+
+local Tabs = {
+  H = Window:MakeTab({Name = "Home", Icon = "scan-face"}),
+  C = Window:MakeTab({Name = "Config", Icon = "rbxassetid://18361516966"}),
+  M = Window:MakeTab({Name = "Main", Icon = "home"}),
+}
+
 local Func = {} do
   Func.Toggle = function(Tab, Name, Desc, Default, CallBacks)
     return Tab:AddToggle({
@@ -82,22 +98,6 @@ local Func = {} do
     })
   end
 end
-
-local Window = Library:MakeWindow({
-  Title = "Speed Hub X | " .. Version,
-  SaveFolder = "Speed Hub X"
-})
-
-Window:AddMinimizeButton({
-  Button = {Image = "rbxassetid://16022917595"},
-  Corner = {CornerRadius = UDim.new(0, 5)}
-})
-
-local Tabs = {
-  H = Window:MakeTab({Name = "Home", Icon = "scan-face"}),
-  C = Window:MakeTab({Name = "Config", Icon = "rbxassetid://18361516966"}),
-  M = Window:MakeTab({Name = "Main", Icon = "home"}),
-}
 
 local __HomeT = Tabs.H do
   __HomeT:AddDiscordInvite({
