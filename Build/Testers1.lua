@@ -8,7 +8,7 @@ local _PlaceID = game.PlaceId
 
 local Player, Remotes, CommF_ = Players.LocalPlayer, ReplicatedStorage.Remotes, ReplicatedStorage.Remotes.CommF_
 
-local __env = getgenv and getgenv()
+local __env = getgenv and getgenv() or {}
 
 local World = {
   [1] = _PlaceID == 2753915549,
@@ -146,4 +146,3 @@ local __MainT = Tabs.M do
   Func.Toggle(__MainT, "Farm Mastery", "", false)
 end
 Window:SelectTab(Tabs.H)
-return __env
