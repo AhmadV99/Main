@@ -145,4 +145,6 @@ local __MainT = Tabs.M do
   Func.Dropdown(__MainT, "Choose Mastery Tool", "", {"Blox Fruit","Sword","Gun"}, "Blox Fruit")
   Func.Toggle(__MainT, "Farm Mastery", "", false)
 end
+
 Window:SelectTab(Tabs.H)
+return __env
