@@ -144,6 +144,25 @@ local __MainT = Tabs.M do
   Func.Dropdown(__MainT, "Choose Mastery Mode", "", {"Level","Bone","Cake Prince","Nearest"}, "Level")
   Func.Dropdown(__MainT, "Choose Mastery Tool", "", {"Blox Fruit","Sword","Gun"}, "Blox Fruit")
   Func.Toggle(__MainT, "Farm Mastery", "", false)
+  Func.Silder(__MainT, "Mastery Health", 0, 100, 25)
+  __MainT:AddSection("- [ Skill Mastery ] -")
+  for _, skill in ipairs({"Skill Z", "Skill X", "Skill C", "Skill V", "Skill F"}) do
+    Func.Toggle(__MainT, skill, "", true)
+  end
+  __MainT:AddSection("- [ Farming Chest ] -")
+  Func.Dropdown(__MainT, "Choose Chest Area", "", {"Mirage Island", "Island Other"}, "Island Other")
+  Func.Toggle(__MainT, "Auto Collect Chest", "Stop Collect Chest if Get God's Chalice or Fist of Darkness", false)
+  Func.Toggle(__MainT, "Auto Hop", "Hop if No Found Chest", false)
+  local BossList = Func.Dropdown(__MainT, "Choose Boss", "", __env.TableBoss, "")
+  __MainT:AddButton({Name = "Refersh Boss", Description = "", Callback = function()
+    BossList:Remove()
+    BossList:Set(__env.TableBoss)
+  end})
+  Func.Toggle(__MainT, "Auto Attack Boss", "This Can Attack a Mob Bosses!", false)
+  Func.Toggle(__MainT, "Auto Attack Boss All", "This Can Attack a Mob Bosses All!", false)
+  __MainT:AddButton({Name = "Hop Server", Description = "", Callback = function()
+    __env.Server(false,"", 0)
+  end})
 end
 
-Window:SelectTab(Tabs.H)
+Window:SelectTab(Tabs.M)
