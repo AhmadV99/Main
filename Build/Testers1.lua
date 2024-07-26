@@ -38,7 +38,7 @@ local Func = {} do
       Description = Desc or "",
       Default = Default,
       Callback = CallBacks or function(Value) __env[Name] = Value end,
-      Flag = "SpeedHubX/Toggle/" ..Name
+      Flag = "SpeedHubX/Toggle/"..Name
     })
   end
   
@@ -49,7 +49,7 @@ local Func = {} do
       Options = Option,
       Default = Default,
       Callback = CallBacks or function(Value) __env[Name] = Value end,
-      Flag = "SpeedHubX/Dropdown/" ..Name
+      Flag = "SpeedHubX/Dropdown/"..Name
     })
   end
 
@@ -60,7 +60,7 @@ local Func = {} do
       Max = Max,
       Default = Default,
       Callback = CallBacks or function(Value) __env[Name] = Value end,
-      Flag = "SpeedHubX/Slider/" ..Name
+      Flag = "SpeedHubX/Slider/"..Name
     })
   end
 
@@ -78,7 +78,7 @@ local Func = {} do
       Description = Description,
       Default = Default,
       Callback = CallBacks or function(Value) __env[Name] = Value end,
-      Flag = "SpeedHubX/TextBox/" ..Name
+      Flag = "SpeedHubX/TextBox/"..Name
     })
   end
 end
