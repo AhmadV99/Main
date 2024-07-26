@@ -144,7 +144,7 @@ local __MainT = Tabs.M do
   Func.Dropdown(__MainT, "Choose Mastery Mode", "", {"Level","Bone","Cake Prince","Nearest"}, "Level")
   Func.Dropdown(__MainT, "Choose Mastery Tool", "", {"Blox Fruit","Sword","Gun"}, "Blox Fruit")
   Func.Toggle(__MainT, "Farm Mastery", "", false)
-  Func.Silder(__MainT, "Mastery Health", 0, 100, 25)
+  Func.Slider(__MainT, "Mastery Health", 0, 100, 25)
   __MainT:AddSection("- [ Skill Mastery ] -")
   for _, skill in ipairs({"Skill Z", "Skill X", "Skill C", "Skill V", "Skill F"}) do
     Func.Toggle(__MainT, skill, "", true)
