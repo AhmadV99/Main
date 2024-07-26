@@ -4,42 +4,44 @@ local World1, World2, World3 = game.PlaceId == 2753915549, game.PlaceId == 44422
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local Player = Players.LocalPlayer
-local Remotes = ReplicatedStorage.Remotes
-local CommF_ = Remotes.CommF_
+local Player, Remotes, CommF_ = Players.LocalPlayer, ReplicatedStorage.Remotes, ReplicatedStorage.Remotes.CommF_
+
+local __env = getgenv and getgenv() or {}
+
+local _hookfunc1 = hookfunction or hookfunc or (function()end)
+local _require1 = require or (function()end)
 
 task.spawn(function() -- Remove Effect
-    local _hookfunc1 = hookfunction or hookfunc or function(...) end
-    local Container = ReplicatedStorage.Effect.Container
-    local CameraShaker = require(ReplicatedStorage.Util.CameraShaker)
-    local Death = require(Container:FindFirstChild("Death"))
-    local Respawn = require(Container:FindFirstChild("Respawn"))
-    local DisplayNPC = require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
-    _hookfunc1(Death, function() return nil end)
-    _hookfunc1(Respawn, function() return nil end)
-    _hookfunc1(DisplayNPC, function() return nil end)
-    CameraShaker:Stop()
+  local Container = ReplicatedStorage.Effect.Container
+  local CameraShaker = _require1(ReplicatedStorage.Util.CameraShaker)
+  local Death = _require1(Container:FindFirstChild("Death"))
+  local Respawn = _require1(Container:FindFirstChild("Respawn"))
+  local DisplayNPC = _require1(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
+  _hookfunc1(Death, function() return nil end)
+  _hookfunc1(Respawn, function() return nil end)
+  _hookfunc1(DisplayNPC, function() return nil end)
+  CameraShaker:Stop()
 end)
 
 local Window = Library:MakeWindow({
-    Title = "Speed Hub X | " .. Version,
-    SaveFolder = "Speed Hub X"
+  Title = "Speed Hub X | " .. Version,
+  SaveFolder = "Speed Hub X"
 });Window:AddMinimizeButton({
-    Button = {Image = "rbxassetid://16022917595"},
-    Corner = {CornerRadius = UDim.new(0, 5)}
+  Button = {Image = "rbxassetid://16022917595"},
+  Corner = {CornerRadius = UDim.new(0, 5)}
 })
 local Home = Window:MakeTab({"Home", "scan-face"})
 Home:AddDiscordInvite({
-    Name = "Speed Hub X | Official Server",
-    Logo = "rbxassetid://16022917595",
-    Invite = Discord
+  Name = "Speed Hub X | Official Server",
+  Logo = "rbxassetid://16022917595",
+  Invite = Discord
 })
 local SpeedHubX = {}
 local function Toggle(Tab, Name, Desc, Default)
   local Ver = Tab:AddToggle({
     Name = Name,Description = Desc or "",Default = Default,
     Callback = function(Value)
-      SpeedHubX[Name] = Value
+      __env[Name] = Value
     end, Flag = "SpeedHubX/Toggle/"..Name})
     return Ver
 end
@@ -47,7 +49,7 @@ local function Dropdown(Tab, Name, Desc, Option, Default)
   local Ver = Tab:AddDropdown({
     Name = Name,Description = Desc or "",Options = Option,Default = Default,
     Callback = function(Value)
-      SpeedHubX[Name] = Value
+      __env[Name] = Value
     end, Flag = "SpeedHubX/Dropdown/"..Name})
     return Ver
 end
@@ -55,7 +57,7 @@ local function Silder(Tab, Name, Min, Max, Default)
   local Ver = Tab:AddSlider({
     Name = Name,Min = Min,Max = Max,Default = Default,
     Callback = function(Value)
-      SpeedHubX[Name] = Value
+      __env[Name] = Value
     end, Flag = "SpeedHubX/Slider/"..Name})
     return Ver
 end
@@ -102,15 +104,15 @@ Dropdown(Main, "Choose Chest Area", "", {"Mirage Island", "Island Other"}, "Isla
 Toggle(Main, "Auto Collect Chest", "Stop Collect Chest if Get God's Chalice or Fist of Darkness", false)
 Toggle(Main, "Auto Hop", "Hop if No Found Chest", false)
 Main:AddSection("- [ Bosses ] -")
-local BossList = Dropdown(Main, "Choose Boss", "", getgenv().TableBoss, "")
+local BossList = Dropdown(Main, "Choose Boss", "", __env.TableBoss, "")
 Main:AddButton({Name = "Refersh Boss", Description = "", Callback = function()
-    BossList:Set(getgenv().TableBoss)
+  BossList:Set(__env.TableBoss)
 end})
 Toggle(Main, "Auto Attack Boss", "This Can Attack a Mob Bosses!", false)
 Toggle(Main, "Auto Attack Boss All", "This Can Attack a Mob Bosses All!", false)
-Main:AddButton({Name = "Hop Server", Description = "", Callback = function()getgenv().Server("Hop1")end})
+Main:AddButton({Name = "Hop Server", Description = "", Callback = function()__env.Server("Hop1")end})
 Main:AddSection("- [ Material ] -")
-Dropdown(Main, "Choose Material", "", getgenv().MaterialList, "")
+Dropdown(Main, "Choose Material", "", __env.MaterialList, "")
 Toggle(Main, "Auto Farm Material", "This Can Farm Material Item!", false)
 local ItemQuest = Window:MakeTab({"Item/Quest", "swords"})
 if World1 then
@@ -170,12 +172,12 @@ elseif World3 then
   local StatusC = ItemQuest:AddParagraph({"Status Cake Prince"})
   task.spawn(function()
     while task.wait() do
-      if getgenv().CheckMob({"Dough King"}) then
+      if __env.CheckMob({"Dough King"}) then
         StatusC:Set("Dough King : Spawned")
-      elseif getgenv().CheckMob({"Cake Prince"}) then
+      elseif __env.CheckMob({"Cake Prince"}) then
         StatusC:Set("Cake Prince : Spawned")
       else
-        StatusC:Set("Status Cake Prince", "Status : " .. getgenv().CheckMob("CakePrinceSpawner"))
+        StatusC:Set("Status Cake Prince", "Status : " .. __env.CheckMob("CakePrinceSpawner"))
       end
     end
   end)
@@ -189,7 +191,7 @@ elseif World3 then
   local GetNumE = ItemQuest:AddSection({"Status"})
   task.spawn(function()
     while task.wait() do
-        if getgenv().CheckMob({"Diablo","Deandre","Urban"}) then
+        if __env.CheckMob({"Diablo","Deandre","Urban"}) then
             StatusE:Set("Elite Hunter : Spawned")
         else
             StatusE:Set("Elite Hunter : Not Spawn")
@@ -197,9 +199,9 @@ elseif World3 then
     end
 end)
 task.spawn(function()
-    while task.wait() do
-        GetNumE:Set("Elite Hunter Progress : " .. CommF_:InvokeServer("EliteHunter", "Progress"))
-    end
+  while task.wait(1) do
+    GetNumE:Set("Elite Hunter Progress : " .. CommF_:InvokeServer("EliteHunter", "Progress"))
+  end
 end)
 Toggle(ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false)
 end
@@ -221,7 +223,7 @@ if World1 or World2 or World3 then
   ItemQuest:AddSection({"- [ Observation ] -"})
   local StatusObs = ItemQuest:AddSection({"Total: None"})
   task.spawn(function()
-    while task.wait() do
+    while task.wait(1) do
       StatusObs:Set({"Total: ".. Player.VisionRadius.Value})
     end
   end)
@@ -237,7 +239,7 @@ if World2 or World3 then
   local StatsAzure = SeaEvent:AddSection({"Status"})
   task.spawn(function()
     while task.wait() do
-      if getgenv().VerifyIsland("Kitsune Island Path") then
+      if __env.VerifyIsland("Kitsune Island Path") then
         FindKitsune:Set("Kitsune Island : Spawned")
       else
         FindKitsune:Set("Kitsune Island : Not Spawn")
@@ -271,7 +273,7 @@ if World2 or World3 then
   local StatusFrozen = SeaEvent:AddSection({"Status"})
   task.spawn(function()
     while task.wait() do
-      if getgenv().VerifyIsland("Frozen Dimension Path") then
+      if __env.VerifyIsland("Frozen Dimension Path") then
         StatusFrozen:Set("Frozen Dimension : Spawned")
       else
         StatusFrozen:Set("Frozen Dimension : Not Spawn")
@@ -292,7 +294,7 @@ if World2 or World3 then
   SeaEvent:AddSection({"- [ Misc ] -"})
   Toggle(SeaEvent, "No Clip Rock", "", false)
   SeaEvent:AddButton({Name = "No Fog", Description = "", Callback = function()
-    getgenv().NoFog()
+    __env.NoFog()
   end})
   Toggle(SeaEvent, "Auto Dodge Sea Rough", "", true)
   Toggle(SeaEvent, "Protect Boat", "", true)
@@ -311,22 +313,22 @@ Toggle(Stats, "Sword", "", false)
 Toggle(Stats, "Gun", "", false)
 Toggle(Stats, "Devil Fruit", "", false)
 local Maps = Window:MakeTab({"Maps", "rbxassetid://6035190846"})
-Dropdown(Maps, "Select Island", "", getgenv().IslandList, "")
+Dropdown(Maps, "Select Island", "", __env.IslandList, "")
 Toggle(Maps, "Tween To Island", "", false)
 Maps:AddSection({"- [ World ] -"})
-Maps:AddButton({Name = "First World",Callback = function()getgenv().Server("TravelMain")end})
-Maps:AddButton({Name = "Second World",Callback = function()getgenv().Server("TravelDressrosa")end})
-Maps:AddButton({Name = "Third World",Callback = function()getgenv().Server("TravelZou")end})
+Maps:AddButton({Name = "First World",Callback = function()__env.Server("TravelMain")end})
+Maps:AddButton({Name = "Second World",Callback = function()__env.Server("TravelDressrosa")end})
+Maps:AddButton({Name = "Third World",Callback = function()__env.Server("TravelZou")end})
 Maps:AddSection({"- [ NPCs ] -"})
-Dropdown(Maps, "Select NPCs", "", getgenv().TableNPCs, "")
+Dropdown(Maps, "Select NPCs", "", __env.TableNPCs, "")
 Toggle(Maps, "Tween To NPCs", "", false)
 local Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"})
 Shop:AddSection({"- [ Other ] -"})
 Toggle(Shop, "Auto Buy Legendary Sword", "", false)
 Toggle(Shop, "Auto Buy True Triple Katana", "", false)
-getgenv().AddShop(Shop)
+__env.AddShop(Shop)
 local DevilFruit = Window:MakeTab({"Devil Fruit", "apple"})
-Dropdown(DevilFruit, "Select Fruit Sniper", "", getgenv().TableFruit, "")
+Dropdown(DevilFruit, "Select Fruit Sniper", "", __env.TableFruit, "")
 Toggle(DevilFruit, "Auto Buy Fruit Sniper", "", false)
 DevilFruit:AddSection({"- [ Fruit ] -"})
 Toggle(DevilFruit, "Auto Store Fruit", "", false)
@@ -337,9 +339,9 @@ PvP:AddSection({"- [ Config PvP ] -"})
 Dropdown(PvP, "Choose PvP", "", {"Neareast", "Select Player"}, "Neareast")
 Dropdown(PvP, "Choose Kill", "", {"Skill", "Click"}, "Click")
 Dropdown(PvP, "Choose Skill Equip", "", {"Melee","Sword","Blox Fruit","Gun", "Random Fruit"}, "Blox Fruit")
-local Update1 = Dropdown(PvP, "Select Player", "", getgenv().TablePlayer, "")
+local Update1 = Dropdown(PvP, "Select Player", "", __env.TablePlayer, "")
 PvP:AddButton({Name = "Refersh Player", Description = "", Callback = function()
-  Update1:Set(getgenv().TablePlayer)
+  Update1:Set(__env.TablePlayer)
 end})
 PvP:AddSection({"- [ Farming PvP ] -"})
 Toggle(PvP, "Auto Farm PvP", "This Farm PvP Meaning Attack Player In PvP", false)
@@ -356,7 +358,7 @@ Toggle(PvP, "Auto Enable PvP", "", false)
 Toggle(PvP, "Auto Use Ken", "", false)
 if World2 or World3 then
   local Raid = Window:MakeTab({"Raid", "rbxassetid://11446957539"})
-  Dropdown(Raid, "Select Chips", "", getgenv().ListChips, "")
+  Dropdown(Raid, "Select Chips", "", __env.ListChips, "")
   Toggle(Raid, "Auto Buy Chips", "", false)
   Toggle(Raid, "Auto Farm Raid", "", false)
   Toggle(Raid, "Kill Aura", "", false)
@@ -364,10 +366,10 @@ if World2 or World3 then
   local FindMirage = RaceV4:AddSection({"Status"})
   local FindMiragePuzzle = RaceV4:AddSection({"Status"})
   local SetUpdateMoon = RaceV4:AddSection({"Status"})
-  getgenv().CheckMoon(SetUpdateMoon)
+  __env.CheckMoon(SetUpdateMoon)
   task.spawn(function()
     while task.wait() do
-      if getgenv().VerifyIsland("Mirage Island Path") then
+      if __env.VerifyIsland("Mirage Island Path") then
         FindMirage:Set("Mirage Island : Spawned ")
       else
         FindMirage:Set("Mirage Island : Not Spawn")
@@ -414,9 +416,9 @@ elseif World3 then
 end
 local Misc = Window:MakeTab({"Miscellaneous", "rbxassetid://11447063791"})
 Misc:AddSection({"- [ Server ] -"})
-Misc:AddButton({Name = "Server Hop",Callback = function()getgenv().Server("Hop")end})
-Misc:AddButton({Name = "Server Hop [Low Player]",Callback = function()getgenv().Server("Hop1")end})
-Misc:AddButton({Name = "Rejoin",Callback = function()getgenv().Server("Rejoin")end})
+Misc:AddButton({Name = "Server Hop",Callback = function()__env.Server("Hop")end})
+Misc:AddButton({Name = "Server Hop [Low Player]",Callback = function()__env.Server("Hop1")end})
+Misc:AddButton({Name = "Rejoin",Callback = function()__env.Server("Rejoin")end})
 Misc:AddSection({"- [ Team ] -"})
 Misc:AddButton({Name = "Join Pirates Team",Callback = function()CommF_:InvokeServer("SetTeam", "Pirates")end})
 Misc:AddButton({Name = "Join Marines Team",Callback = function()CommF_:InvokeServer("SetTeam", "Marines")end})
@@ -448,4 +450,3 @@ Settings:AddButton({Name = "Reset Script / Save Config",Callback = function()
   end
 end})
 Window:SelectTab(2)
-return SpeedHubX
