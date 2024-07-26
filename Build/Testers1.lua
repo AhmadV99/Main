@@ -42,9 +42,9 @@ Window:AddMinimizeButton({
 })
 
 local Tabs = {
-  H = Window:MakeTab({Name = "Home", Icon = "scan-face"}),
-  C = Window:MakeTab({Name = "Config", Icon = "rbxassetid://18361516966"}),
-  M = Window:MakeTab({Name = "Main", Icon = "home"}),
+  H = Window:MakeTab({"Home", "scan-face"}),
+  C = Window:MakeTab({"Config", "rbxassetid://18361516966"}),
+  M = Window:MakeTab({"Main", "home"}),
 }
 
 local Func = {} do
@@ -145,3 +145,5 @@ local __MainT = Tabs.M do
   Func.Dropdown(__MainT, "Choose Mastery Tool", "", {"Blox Fruit","Sword","Gun"}, "Blox Fruit")
   Func.Toggle(__MainT, "Farm Mastery", "", false)
 end
+
+return __env
