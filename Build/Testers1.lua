@@ -19,7 +19,7 @@ local World = {
 local _hookfunc1 = hookfunction or hookfunc or (function() end)
 local _require1 = require or (function() end)
 
-task.spawn(function() -- Remove Effect
+task.spawn(function()
   local Container = ReplicatedStorage:WaitForChild("Effect"):WaitForChild("Container")
   local CameraShaker = _require1(ReplicatedStorage.Util.CameraShaker)
   local Death = _require1(Container:FindFirstChild("Death"))
@@ -30,6 +30,24 @@ task.spawn(function() -- Remove Effect
   _hookfunc1(DisplayNPC, function() return nil end)
   CameraShaker:Stop()
 end)
+
+__env.BossList = function() -- boss list
+  local BossTable = {}
+
+  local function GetBoss(Object)
+    for _, Boss in ipairs(Object) do
+      local Humanoid = Boss:FindFirstChildOfClass("Humanoid")
+      if Humanoid and string.find(Humanoid.DisplayName, "Boss") then
+        table.insert(BossTable, Boss.Name)
+      end
+    end
+  end
+
+  GetBoss(game.ReplicatedStorage:GetDescendants())
+  GetBoss(workspace.Enemies:GetDescendants())
+
+  return BossTable
+end
 
 local Window = Library:MakeWindow({
   Title = "Speed Hub X | " .. Version,
@@ -153,10 +171,10 @@ local __MainT = Tabs.M do
   Func.Dropdown(__MainT, "Choose Chest Area", "", {"Mirage Island", "Island Other"}, "Island Other")
   Func.Toggle(__MainT, "Auto Collect Chest", "Stop Collect Chest if Get God's Chalice or Fist of Darkness", false)
   Func.Toggle(__MainT, "Auto Hop", "Hop if No Found Chest", false)
-  local BossList = Func.Dropdown(__MainT, "Choose Boss", "", __env.TableBoss, "")
+  local BossList = Func.Dropdown(__MainT, "Choose Boss", "", __env.BossList, "")
   __MainT:AddButton({Name = "Refersh Boss", Description = "", Callback = function()
     BossList:Remove()
-    BossList:Set(__env.TableBoss)
+    BossList:Set(__env.BossList)
   end})
   Func.Toggle(__MainT, "Auto Attack Boss", "This Can Attack a Mob Bosses!", false)
   Func.Toggle(__MainT, "Auto Attack Boss All", "This Can Attack a Mob Bosses All!", false)
