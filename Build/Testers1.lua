@@ -171,16 +171,18 @@ local __MainT = Tabs.M do
   Func.Dropdown(__MainT, "Choose Chest Area", "", {"Mirage Island", "Island Other"}, "Island Other")
   Func.Toggle(__MainT, "Auto Collect Chest", "Stop Collect Chest if Get God's Chalice or Fist of Darkness", false)
   Func.Toggle(__MainT, "Auto Hop", "Hop if No Found Chest", false)
+  __MainT:AddSection("- [ Farming Boss ] -")
   local BossList = Func.Dropdown(__MainT, "Choose Boss", "", __env.BossList(), "")
   Func.Button(__MainT, "Refersh Boss", "", function()
-    BossList:Remove()
+    BossList:Remove(__env.BossList())
     BossList:Set(__env.BossList())
   end)
   Func.Toggle(__MainT, "Auto Attack Boss", "This Can Attack a Mob Bosses!", false)
   Func.Toggle(__MainT, "Auto Attack Boss All", "This Can Attack a Mob Bosses All!", false)
-  __MainT:AddButton({Name = "Hop Server", Description = "", Callback = function()
+  Func.Button(__MainT, "Hop Server", "", function()
     __env.Server(false,"", 0)
-  end})
+  end)
+  
 end
 
 Window:SelectTab(Tabs.M)
