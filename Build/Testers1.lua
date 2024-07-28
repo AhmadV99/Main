@@ -115,79 +115,53 @@ local Tabs = {
 }
 
 local Func = {} do
-  Func.Toggle = function(Tab, Name, Desc, Default, Callback)
-    local name = type(Name) == "string" and Name or ""
-    local desc = type(Desc) == "string" and Desc or ""
-    local default = type(Default) == "boolean" and Default or false
-    local callback = type(Callback) == "function" and Callback or function(Value) __env[name] = Value end
-
+  Func.Toggle = function(Tab, Name, Desc, Default)
     return Tab:AddToggle({
-      Name = name,
-      Description = desc,
-      Default = default,
-      Callback = callback,
-      Flag = "SpeedHubX/Toggle/" .. tostring(name)
+      Name = Name,
+      Description = Desc or "",
+      Default = Default,
+      Callback = function(Value) __env[Name] = Value end,
+      Flag = "SpeedHubX/Toggle/" .. tostring(Name)
     })
-end
+  end
   
-  Func.Dropdown = function(Tab, Name, Desc, Option, Default, Callback)
-    local name = type(Name) == "string" and Name or ""
-    local desc = type(Desc) == "string" and Desc or ""
-    local option = type(Option) == "table" and Option or {}
-    local default = type(Default) == "boolean" and Default or false
-    local callback = type(Callback) == "function" and Callback or function(Value) __env[name] = Value end
-
+  Func.Dropdown = function(Tab, Name, Desc, Option, Default)
     return Tab:AddDropdown({
-      Name = name,
-      Description = desc,
-      Options = option,
-      Default = default,
-      Callback = callback,
-      Flag = "SpeedHubX/Dropdown/" .. tostring(name)
+      Name = Name,
+      Description = Desc or "",
+      Options = Option,
+      Default = Default,
+      Callback = function(Value) __env[Name] = Value end,
+      Flag = "SpeedHubX/Dropdown/" .. tostring(Name)
     })
   end
 
-  Func.Slider = function(Tab, Name, Min, Max, Default, Callback)
-    local name = type(Name) == "string" and Name or ""
-    local min = type(Min) == "number" and Min or 0
-    local max = type(Max) == "number" and Max or 0
-    local default = type(Default) == "number" and Default or 0
-    local callback = type(Callback) == "function" and Callback or function(Value) __env[name] = Value end
-
+  Func.Slider = function(Tab, Name, Min, Max, Default)
     return Tab:AddSlider({
-      Name = name,
-      Min = min,
-      Max = max,
-      Default = default,
-      Callback = Callback,
-      Flag = "SpeedHubX/Slider/" .. tostring(name)
+      Name = Name,
+      Min = Min,
+      Max = Max,
+      Default = Default,
+      Callback = function(Value) __env[Name] = Value end,
+      Flag = "SpeedHubX/Slider/" .. tostring(Name)
     })
   end
 
-  Func.Button = function(Tab, Name, Description, Callback)
-    local name = type(Name) == "string" and Name or ""
-    local desc = type(Desc) == "string" and Desc or ""
-    local callback = type(Callback) == "function" and Callback or function(Value) __env[name] = Value end
-
+  Func.Button = function(Tab, Name, Description, CallBacks)
     return Tab:AddButton({
-      Name = name,
-      Description = desc, 
-      Callback = callback
+      Name = Name,
+      Description = Description, 
+      Callback = CallBacks or function(Value) __env[Name] = Value end
     })
   end
 
-  Func.TextBox = function(Tab, Name, Desc, Default, Callback)
-    local name = type(Name) == "string" and Name or ""
-    local desc = type(Desc) == "string" and Desc or ""
-    local default = (type(Default) == "number" or type(Default) == "string") and Default or ""
-    local callback = type(Callback) == "function" and Callback or function(Value) __env[name] = Value end
-
+  Func.TextBox = function(Tab, Name, Description, Default)
     return Tab:AddTextBox({
-      Name = name,
-      Description = desc,
-      Default = default,
-      Callback = callback,
-      Flag = "SpeedHubX/TextBox/" .. tostring(name)
+      Name = Name,
+      Description = Description,
+      Default = Default,
+      Callback = function(Value) __env[Name] = Value end,
+      Flag = "SpeedHubX/TextBox/" .. tostring(Name)
     })
   end
 end
