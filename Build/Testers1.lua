@@ -245,7 +245,7 @@ local _ItemQuest = Tabs.Item_Quest do
   elseif World[2] then
     _ItemQuest:AddSection("- [ Sea ] -")
     Func.Toggle(_ItemQuest, "Auto Sea Third", "This Can Get Sea Third then Travel Third World!", false)
-      _ItemQuest:AddSection("- [ Item Sword ] -")
+    _ItemQuest:AddSection("- [ Item Sword ] -")
     Func.Toggle(_ItemQuest, "Auto Dragon Trident", "", false)
     Func.Toggle(_ItemQuest, "Auto Gravity Cane", "", false)
     Func.Toggle(_ItemQuest, "Auto Jitte", "", false)
@@ -255,6 +255,7 @@ local _ItemQuest = Tabs.Item_Quest do
     Func.Toggle(_ItemQuest, "Auto Rengoku", "", false)
     _ItemQuest:AddSection({"- [ Ectoplasm ] -"})
     Func.Toggle(_ItemQuest, "Auto Ectoplasm", "This Can Farm Ectoplasm in Item!", false)
+    _ItemQuest:AddSection({"- [ Bartilo Quest ] -"})
     Func.Toggle(_ItemQuest, "Auto Bartilo Quest", "This Can Farm Bartilo Quest!", false)
     _ItemQuest:AddSection({"- [ Don Swan ] -"})
     Func.Toggle(_ItemQuest, "Auto Don Swan", "This Can Attack Boss Called (Don Swan)", false)
