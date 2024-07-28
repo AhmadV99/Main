@@ -296,7 +296,7 @@ local _ItemQuest = Tabs.Item_Quest do
     _ItemQuest:AddSection("- [ Sword Item ] -")
     Func.Toggle(_ItemQuest, "Auto Twin Hooks", "", false)
     Func.Toggle(_ItemQuest, "Auto Buddy Sword", "", false)
-    Func.Toggle(ItemQuest, "Auto Canvander", "", false)
+    Func.Toggle(_ItemQuest, "Auto Canvander", "", false)
     Func.Toggle(_ItemQuest, "Auto Dark Dagger", "", false)
     Func.Toggle(_ItemQuest, "Auto Fox Lamp", "", false)
     Func.Toggle(_ItemQuest, "Auto Spikey Trident", "", false)
