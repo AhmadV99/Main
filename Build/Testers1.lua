@@ -3,6 +3,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Ahmad
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Lighting = game:GetService("Lighting")
 
 local Player = Players.LocalPlayer
 
@@ -21,8 +22,9 @@ local World = {
   [3] = _PlaceID == 7449423635
 }
 
-local _hookfunc1 = hookfunction or hookfunc or (function() end)
-local _require1 = require or (function() end)
+local _hookfunc1 = hookfunction or hookfunc or (function(...) return ... end)
+local _require1 = require or (function(...) return ... end)
+local _getnilinstances1 = getnilinstances or (function(...) return ... end)
 
 task.spawn(function()
   local Container = ReplicatedStorage:WaitForChild("Effect"):WaitForChild("Container")
@@ -97,6 +99,45 @@ elseif World[3] then
   __env.MaterialList = {"Leather + Scrap Metal","Fish Tail","Gunpowder","Mini Tusk","Conjured Cocoa","Dragon Scale"}
 end
 
+__env.IslandList = function() -- Island List
+  local islandList = {}
+
+	for _, Island in pairs(workspace.Island:GetChildren()) do
+		if Island and Island:IsA("Model") then
+			table.insert(islandList, Island.Name)
+		end
+	end
+  return islandList
+end
+
+__env.TableNPCs = function() -- NPCs list
+  local NPCS = {}
+  local function AddNPCsToTable(NPCs)
+    for _, Npc in ipairs(NPCs) do
+      local Head = Npc:FindFirstChild("Head")
+      if Head then
+        local QuestBBG = Head:FindFirstChild("QuestBBG")
+        if QuestBBG and QuestBBG:FindFirstChild("Title") then
+          table.insert(NPCS, Npc.Name)
+        end
+      end
+    end
+  end
+  AddNPCsToTable(workspace.NPCs:GetChildren())
+  AddNPCsToTable(_getnilinstances1())
+  return NPCS
+end
+
+__env.TableFruit = function() -- Fruit List
+  local Fruit = {}
+  local GETFRUIT = CommF_:InvokeServer("GetFruits")
+
+  for _, Data in ipairs(GETFRUIT) do
+    table.insert(Fruit, Data.Name)
+  end
+  return Fruit
+end
+
 local Window = Library:MakeWindow({
   Title = "Speed Hub X | " .. Version,
   SaveFolder = "Speed Hub X"
@@ -111,7 +152,18 @@ local Tabs = {
   Home = Window:MakeTab({"Home", "scan-face"}),
   Config = Window:MakeTab({"Config", "rbxassetid://18361516966"}),
   Main = Window:MakeTab({"Main", "home"}),
-  Item_Quest = Window:MakeTab({"Item/Quest", "swords"})
+  Item_Quest = Window:MakeTab({"Item/Quest", "swords"}),
+  SeaEvent = Window:MakeTab({"Sea Event", "rbxassetid://16175025368"}),
+  Stats = Window:MakeTab({"Stats", "plus-circle"}),
+  Maps = Window:MakeTab({"Maps", "rbxassetid://6035190846"}),
+  Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"}),
+  Devil = Window:MakeTab({"Devil Fruit", "apple"}),
+  PvP = Window:MakeTab({"PvP", "rbxassetid://16053202595"}),
+  Raid = Window:MakeTab({"Raid", "rbxassetid://11446957539"}),
+  Race = Window:MakeTab({"Race", "rbxassetid://11446900930"}),
+  ESP = Window:MakeTab({"ESP", "mountain-snow"}),
+  Misc = Window:MakeTab({"Miscellaneous", "rbxassetid://11447063791"}),
+  Settings = Window:MakeTab({"Settings", "settings"}),
 }
 
 local Func = {} do
@@ -259,8 +311,6 @@ local _ItemQuest = Tabs.Item_Quest do
     Func.Toggle(_ItemQuest, "Auto Bartilo Quest", "This Can Farm Bartilo Quest!", false)
     _ItemQuest:AddSection({"- [ Don Swan ] -"})
     Func.Toggle(_ItemQuest, "Auto Don Swan", "This Can Attack Boss Called (Don Swan)", false)
-    _ItemQuest:AddSection({"- [ Race Evo ] -"})
-    Func.Toggle(_ItemQuest, "Auto Race Evo", "This Get Race Evo!", false)
     _ItemQuest:AddSection({"- [ Dark Beard ] -"})
     Func.Toggle(_ItemQuest, "Auto Dark Beard", "This Get Dark Beard item!", false)
     _ItemQuest:AddSection({"- [ Cursed Captain ] -"})
@@ -287,7 +337,7 @@ local _ItemQuest = Tabs.Item_Quest do
 
     task.spawn(function()
       while task.wait(1) do 
-        StatusBone:Set("Bones Status", "Bones Total: ".. VerifyMaterial("Bones")) 
+        StatusBone:Set("Bones Status", "Bones Total: ".. __env.VerifyMaterial("Bones")) 
       end
     end)
 
@@ -314,7 +364,276 @@ local _ItemQuest = Tabs.Item_Quest do
     _ItemQuest:AddSection({"- [ Rip Indra ] -"})
     Func.Toggle(_ItemQuest, "Auto Active Haki Color", "This Get Haki Color", false)
     Func.Toggle(_ItemQuest, "Auto Rip Indra", "This Attack Raid Boss Rip Indra", false)
+    _ItemQuest:AddSection({"- [ Elite Hunter ] -"})
+    local StatusE = _ItemQuest:AddSection({"Status"})
+    local GetNumE = _ItemQuest:AddSection({"Status"})
+
+    task.spawn(function()
+      while task.wait(1) do
+        if __env.CheckMob({"Diablo","Deandre","Urban"}) then
+          StatusE:Set("Elite Hunter : Spawned")
+        else
+          StatusE:Set("Elite Hunter : Not Spawn")
+        end
+      end
+    end)
+    task.spawn(function()
+      while task.wait() do
+        GetNumE:Set("Elite Hunter Progress : " .. tostring(CommF_:InvokeServer("EliteHunter", "Progress")))
+      end
+    end)
+
+    Func.Toggle(_ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false) 
   end
+
+  if World[2] or World[3] then
+    _ItemQuest:AddSection({"- [ Haki Color ] -"})
+    Func.Toggle(_ItemQuest, "Auto Buy Haki Color", "", false)
+    Func.Toggle(_ItemQuest, "Auto Rainbow Haki", "", false)
+    _ItemQuest:AddSection({"- [ Observation ] -"})
+    local StatusObs = _ItemQuest:AddSection({"Total: None"})
+
+    task.spawn(function()
+      while task.wait(1) do
+        StatusObs:Set({"Total: ".. Player.VisionRadius.Value})
+      end
+    end)
+
+    Func.Toggle(_ItemQuest, "Auto Observation", "", false)
+    Func.Toggle(_ItemQuest, "Auto Observation V2", "", false)
+    Func.Toggle(_ItemQuest, "Observation Hop", "Hop For Find Materials", false)
+  end
+end
+
+local _SeaEvent = Tabs.SeaEvent do
+  _SeaEvent:AddSection({"- [ Kitsune Island ] -"})
+  local FindKitsune = _SeaEvent:AddSection({"Status"})
+  local StatsAzure = _SeaEvent:AddSection({"Status"})
+
+  task.spawn(function()
+    while task.wait(1) do
+      if game.Workspace.Map:FindFirstChild("KitsuneIsland") then
+        FindKitsune:Set("Kitsune Island : Spawned")
+      else
+        FindKitsune:Set("Kitsune Island : Not Spawn")
+      end
+    end
+  end)
+
+  task.spawn(function()
+    while task.wait() do
+      StatsAzure:Set("Total Azura Ember : ".. __env.VerifyMaterial("Azure Ember"))
+    end
+  end)
+  Func.Toggle(_SeaEvent, "Tween To Kitsune Island", "Tween to Kitsune If Spawn Kitsune", false)
+  Func.Toggle(_SeaEvent, "Auto Collect Azure Ember", "Collect Azure Ember", false)
+  Func.Toggle(_SeaEvent, "Auto Trade Azure Ember", "", false)
+  _SeaEvent:AddSection({"- [ Wood ] -"})
+  Func.Toggle(_SeaEvent, "Auto Wood Planks", "Farm Get Wood Planks", false)
+  _SeaEvent:AddSection({"- [ Sea Event ] -"})
+  Func.Toggle(_SeaEvent, "Auto Farm Sea", "Farm Sea / Attack Mob In Sea Event", false)
+  _SeaEvent:AddSection({"- [ Terrorshark ] -"})
+  Func.Toggle(_SeaEvent, "Terrorshark", "Attack Raid Boss Terrorshark", true)
+  Func.Toggle(_SeaEvent, "Auto Dodge Terrorshark Skill", "Dodge Skill Sea", true)
+  _SeaEvent:AddSection({"- [ Sea Mob ] -"})
+  Func.Toggle(_SeaEvent, "Piranha", "Attack Piranha Mob in Sea Event", true)
+  Func.Toggle(_SeaEvent, "Shark", "Attack Shark Mob in Sea Event", true)
+  Func.Toggle(_SeaEvent, "Fish Crew Member", "Attack Fish Crew Member Mob in Sea Event", true)
+  _SeaEvent:AddSection({"- [ Attack Boat ] -"})
+  Func.Toggle(_SeaEvent, "Ghost Ship", "Attack Ghost Ship in Sea Event", true)
+  _SeaEvent:AddSection({"- [ Attack Sea Beast ] -"})
+  Func.Toggle(_SeaEvent, "Sea Beast", "Attack Sea Beast in Sea Event", true)
+  _SeaEvent:AddSection({"- [ Leviathan ] -"})
+  local StatusFrozen = _SeaEvent:AddSection({"Status"})
+
+  task.spawn(function()
+    while task.wait(1) do
+      if workspace._WorldOrigin.Locations:FindFirstChild("Frozen Dimension") then
+        StatusFrozen:Set("Frozen Dimension : Spawned")
+      else
+        StatusFrozen:Set("Frozen Dimension : Not Spawn")
+      end
+    end
+  end)
+
+  Func.Toggle(_SeaEvent, "Tween To Frozen Dimension", "Spawned Frozen Dimension if Tween to", false)
+  Func.Toggle(_SeaEvent, "Auto Summon Leviathan", "Only Buy Beast Hunter and Need Player 5+", false)
+  Func.Toggle(_SeaEvent, "Auto Attack Leviathan", "Must Spawn First", false)
+  Func.Toggle(_SeaEvent, "Auto Attack Leviathan Segment", "", false)
+  Func.Toggle(_SeaEvent, "Auto Attack Leviathan Tail", "", false)
+  Func.Toggle(_SeaEvent, "Tween To Heart Leviathan [BOAT TWEEN]", "", false)
+  _SeaEvent:AddSection({"- [ Item ] -"})
+  Func.Toggle(_SeaEvent, "Auto Shark Anchor", "", false)
+  Func.Toggle(_SeaEvent, "Auto Monster Magnet", "", false)
+  Func.Toggle(_SeaEvent, "Auto Terror Jaw", "", false)
+  Func.Toggle(_SeaEvent, "Auto Shark Tooth Necklace", "", false)
+  _SeaEvent:AddSection({"- [ Misc ] -"})
+  Func.Toggle(_SeaEvent, "No Clip Rock", "", false)
+  Func.Button(SeaEvent, "No Fog", "", function()
+    Lighting.FogEnd = 9e9
+    for _, v in pairs(Lighting:GetDescendants()) do
+      if v:IsA("Atmosphere") then
+        v:Destroy()
+      end
+    end
+    local Laysers = Lighting:FindFirstChild("LightingLayers")
+    local SeaTerrorCC = Lighting:FindFirstChild("SeaTerrorCC")
+    if Laysers then
+      Laysers:Destroy()
+    end
+    if SeaTerrorCC then
+      SeaTerrorCC:Destroy()
+    end
+  end)
+  Func.Toggle(_SeaEvent, "Auto Dodge Sea Rough", "", true)
+  Func.Toggle(_SeaEvent, "Protect Boat", "", true)
+  SeaEvent:AddSection({"- [ Settings Sea Event ] -"})
+  Func.Dropdown(_SeaEvent, "Select Level Danger", "", {"1","2","3","4","5","6","infinity"}, "6")
+  Func.Dropdown(_SeaEvent, "Select Boat", "", {"Pirate Brigade", "Pirate Grand Brigade", "Beast Hunter"}, "Pirate Brigade")
+  Func.Silder(_SeaEvent, "Tween Boat Speed", 0, 500, 300)
+  _SeaEvent:AddSection({"- [ Sea Event Skill ] -"})
+  for _, skill in pairs({
+    {"Z"},
+    {"X"},
+    {"C"},
+    {"V"},
+    {"F"}
+  }) do
+    Func.Toggle(SeaEvent, "Skill " .. skill[1] .. " (Sea)", "", true)
+  end
+end
+
+local _Stats = Tabs.Stats do
+  Func.Silder(_Stats, "Set Point", 0, 100, 2)
+  Func.Toggle(_Stats, "Melee", "", false)
+  Func.Toggle(_Stats, "Defense", "", false)
+  Func.Toggle(_Stats, "Sword", "", false)
+  Func.Toggle(_Stats, "Gun", "", false)
+  Func.Toggle(_Stats, "Devil Fruit", "", false)
+end
+
+local _Maps = Tabs.Maps do
+  Func.Dropdown(_Maps, "Select Island", "", {__env.IslandList}, "")
+  Func.Toggle(_Maps, "Tween To Island", "", false)
+  _Maps:AddSection({"- [ World ] -"})
+  Func.Button(_Maps, "First World", "", function()CommF_:InvokeServer("TravelMain")end)
+  Func.Button(_Maps, "Second World", "", function()CommF_:InvokeServer("TravelDressrosa")end)
+  Func.Button(_Maps, "Third World", "", function()CommF_:InvokeServer("TravelZou")end)
+  _Maps:AddSection({"- [ NPCs ] -"})
+  Func.Dropdown(_Maps, "Select NPCs", "", {__env.TableNPCs}, "")
+  Func.Toggle(_Maps, "Tween To NPCs", "", false)
+end
+
+local _Shop = Tabs.Shop do
+  Func.Toggle(_Shop, "Auto Buy Legendary Sword", "", false)
+  Func.Toggle(_Shop, "Auto Buy True Triple Katana", "", false)
+  for _, ShopName in ipairs({
+    {"Frags", {
+      {"Race Rerol", {"BlackbeardReward", "Reroll", "2"}},
+      {"Reset Stats", {"BlackbeardReward", "Refund", "2"}}
+    }},
+    {"Fighting Style", {
+      {"Buy Black Leg", {"BuyBlackLeg"}},
+      {"Buy Electro", {"BuyElectro"}},
+      {"Buy Fishman Karate", {"BuyFishmanKarate"}},
+      {"Buy Dragon Claw", {"BlackbeardReward", "DragonClaw", "2"}},
+      {"Buy Superhuman", {"BuySuperhuman"}},
+      {"Buy Death Step", {"BuyDeathStep"}},
+      {"Buy Sharkman Karate", {"BuySharkmanKarate"}},
+      {"Buy Electric Claw", {"BuyElectricClaw"}},
+      {"Buy Dragon Talon", {"BuyDragonTalon"}},
+      {"Buy GodHuman", {"BuyGodhuman"}},
+      {"Buy Sanguine Art", {"BuySanguineArt"}}
+    }},
+    {"Ability Teacher", {
+      {"Buy Geppo", {"BuyHaki", "Geppo"}},
+      {"Buy Buso", {"BuyHaki", "Buso"}},
+      {"Buy Soru", {"BuyHaki", "Soru"}},
+      {"Buy Ken", {"KenTalk", "Buy"}}
+    }},
+    {"Sword", {
+      {"Buy Katana", {"BuyItem", "Katana"}},
+      {"Buy Cutlass", {"BuyItem", "Cutlass"}},
+      {"Buy Dual Katana", {"BuyItem", "Dual Katana"}},
+      {"Buy Iron Mace", {"BuyItem", "Iron Mace"}},
+      {"Buy Triple Katana", {"BuyItem", "Triple Katana"}},
+      {"Buy Pipe", {"BuyItem", "Pipe"}},
+      {"Buy Dual-Headed Blade", {"BuyItem", "Dual-Headed Blade"}},
+      {"Buy Soul Cane", {"BuyItem", "Soul Cane"}},
+      {"Buy Bisento", {"BuyItem", "Bisento"}}
+    }},
+    {"Gun", {
+      {"Buy Musket", {"BuyItem", "Musket"}},
+      {"Buy Slingshot", {"BuyItem", "Slingshot"}},
+      {"Buy Flintlock", {"BuyItem", "Flintlock"}},
+      {"Buy Refined Slingshot", {"BuyItem", "Refined Slingshot"}},
+      {"Buy Refined Flintlock", {"BuyItem", "Refined Flintlock"}},
+      {"Buy Cannon", {"BuyItem", "Cannon"}},
+      {"Buy Kabucha", {"BlackbeardReward", "Slingshot", "2"}}
+    }},
+    {"Accessories", {
+      {"Buy Black Cape", {"BuyItem", "Black Cape"}},
+      {"Buy Swordsman Hat", {"BuyItem", "Swordsman Hat"}},
+      {"Buy Tomoe Ring", {"BuyItem", "Tomoe Ring"}}
+    }},
+    {"Race", {
+      {"Ghoul Race", {"Ectoplasm", "Change", 4}},
+      {"Cyborg Race", {"CyborgTrainer", "Buy"}}
+    }}
+  }) do
+    local name, items = ShopName[1], ShopName[2]
+    _Shop:AddSection({"- [ " .. name .. " ] -"})
+    for _, item in ipairs(items) do
+      local ButtonName, Funcs = item[1], item[2]
+      local buyfunc = type(Funcs) == "table" and function()
+        CommF_:InvokeServer(unpack(Funcs))
+      end or Funcs
+      _Shop:AddButton({ButtonName, buyfunc})
+    end
+  end
+end
+
+local _DevilFruit = Tabs.Devil do
+  Func.Dropdown(_DevilFruit, "Select Fruit Sniper", "", {__env.TableFruit}, "")
+  Func.Toggle(_DevilFruit, "Auto Buy Fruit Sniper", "", false)
+  _DevilFruit:AddSection({"- [ Fruit ] -"})
+  Func.Toggle(_DevilFruit, "Auto Store Fruit", "", false)
+  Func.Toggle(_DevilFruit, "Auto Random Fruit", "", false)
+  Func.Toggle(_DevilFruit, "Auto Find Fruit", "", false)
+end
+
+local _PvP = Tabs.PvP do
+  _PvP:AddSection({"- [ Config PvP ] -"})
+  Func.Dropdown(_PvP, "Choose PvP", "", {"Neareast", "Select Player"}, "Neareast")
+  Func.Dropdown(_PvP, "Choose Kill", "", {"Skill", "Click"}, "Click")
+  Func.Dropdown(_PvP, "Choose Skill Equip", "", {"Melee","Sword","Blox Fruit","Gun","Random"}, "Blox Fruit")
+  local UpdatePlayer = Func.Dropdown(_PvP, "Select Player", "", {game.Players:GetPlayers()}, "")
+  Func.Button(_Maps, "Refersh Player", "", function()
+    UpdatePlayer:Remove(game.Players:GetPlayers())
+    UpdatePlayer:Set(game.Players:GetPlayers())
+  end)
+  _PvP:AddSection({"- [ Farming PvP ] -"})
+  Func.Toggle(_PvP, "Auto Farm PvP", "This Farm PvP Meaning Attack Player In PvP", false)
+  _PvP:AddSection({"- [ Misc PvP ] -"})
+  Func.Toggle(_PvP, "Spectate Player", "", false)
+  Func.Toggle(_PvP, "Teleport Player", "", false)
+  _PvP:AddSection({"- [ Settings Skill PvP ] -"})
+  for _, skill in ipairs({
+    "Skill Z (PvP)",
+    "Skill X (PvP)",
+    "Skill C (PvP)",
+    "Skill V (PvP)",
+    "Skill F (PvP)"
+  }) do
+    Func.Toggle(_PvP, skill, "", true)
+  end
+  _PvP:AddSection({"- [ Aim ] -"})
+
+  Func.Toggle(_PvP, "Silent Aim", "", false)
+  Func.Toggle(_PvP, "Silent Aim (Gun)", "", false)
+  _PvP:AddSection({"- [ Misc ] -"})
+  Func.Toggle(_PvP, "Auto Enable PvP", "", false)
+  Func.Toggle(_PvP, "Auto Use Ken", "", false)
 end
 
 Window:SelectTab(Tabs.Main)
