@@ -469,7 +469,7 @@ local _SeaEvent = Tabs.SeaEvent do
   Func.Toggle(_SeaEvent, "Auto Shark Tooth Necklace", "", false)
   _SeaEvent:AddSection({"- [ Misc ] -"})
   Func.Toggle(_SeaEvent, "No Clip Rock", "", false)
-  Func.Button(SeaEvent, "No Fog", "", function()
+  Func.Button(_SeaEvent, "No Fog", "", function()
     Lighting.FogEnd = 9e9
     for _, v in pairs(Lighting:GetDescendants()) do
       if v:IsA("Atmosphere") then
