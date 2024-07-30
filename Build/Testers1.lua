@@ -142,18 +142,14 @@ __env.TableFruit = function() -- Fruit List
   return Fruit
 end
 
-__env.ListChips = function() -- Chips List
-  __env.Chips = {}
-  local Raids = _require1(ReplicatedStorage.Raids)
+local Raids = _require1(ReplicatedStorage.Raids)
 
-  for _, Chip in ipairs(Raids.raids) do
-    table.insert(__env.Chips, Chip.Name)
-  end
-  for _, Chip in ipairs(Raids.advancedRaids) do
-    table.insert(__env.Chips, Chip.Name)
-  end
-
-  return __env.Chips
+__env.Chips = {}
+for _, Chip in ipairs(Raids.raids) do
+  table.insert(__env.Chips, Chip.Name)
+end
+for _, Chip in ipairs(Raids.advancedRaids) do
+  table.insert(__env.Chips, Chip.Name)
 end
 
 local Window = Library:MakeWindow({
@@ -655,7 +651,7 @@ end
 
 local _Raid = Tabs.Raid do
   if World[2] or World[3] then
-    Func.Dropdown(_Raid, "Select Chips", "", __env.ListChips(), "")
+    Func.Dropdown(_Raid, "Select Chips", "", __env.Chips, "")
     Func.Toggle(_Raid, "Auto Buy Chips", "", false)
     Func.Toggle(_Raid, "Auto Farm Raid", "", false)
     Func.Toggle(_Raid, "Kill Aura", "", false)
