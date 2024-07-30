@@ -490,7 +490,7 @@ local _SeaEvent = Tabs.SeaEvent do
   _SeaEvent:AddSection({"- [ Settings Sea Event ] -"})
   Func.Dropdown(_SeaEvent, "Select Level Danger", "", {"1","2","3","4","5","6","infinity"}, "6")
   Func.Dropdown(_SeaEvent, "Select Boat", "", {"Pirate Brigade", "Pirate Grand Brigade", "Beast Hunter"}, "Pirate Brigade")
-  Func.Silder(_SeaEvent, "Tween Boat Speed", 0, 500, 300)
+  Func.Slider(_SeaEvent, "Tween Boat Speed", 0, 500, 300)
   _SeaEvent:AddSection({"- [ Sea Event Skill ] -"})
   for _, skill in pairs({
     {"Z"},
@@ -504,7 +504,7 @@ local _SeaEvent = Tabs.SeaEvent do
 end
 
 local _Stats = Tabs.Stats do
-  Func.Silder(_Stats, "Set Point", 0, 100, 2)
+  Func.Slider(_Stats, "Set Point", 0, 100, 2)
   Func.Toggle(_Stats, "Melee", "", false)
   Func.Toggle(_Stats, "Defense", "", false)
   Func.Toggle(_Stats, "Sword", "", false)
