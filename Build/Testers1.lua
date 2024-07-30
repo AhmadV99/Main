@@ -100,13 +100,15 @@ elseif World[3] then
 end
 
 __env.IslandList = function() -- Island List
-  local islandList = {}
+  local islandList, GetIslandName = {}, {}
 
-	for _, Island in pairs(workspace.Island:GetChildren()) do
-		if Island and Island:IsA("Model") then
-			table.insert(islandList, Island.Name)
-		end
+	for _, Island in pairs(workspace._WorldOrigin.Locations:GetChildren()) do
+    if not GetIslandName[Island.Name] then
+      table.insert(islandList, Island.Name)
+      GetIslandName[Island.Name] = true
+    end
 	end
+
   return islandList
 end
 
