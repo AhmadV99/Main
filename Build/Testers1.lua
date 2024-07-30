@@ -147,9 +147,9 @@ __env.ListChips = function() -- Chips List
   local Raids = _require1(ReplicatedStorage.Raids)
 
   local function AddListChips(Path)
-    for _, Chips in ipairs(Path) do
-      if Chips then
-        table.insert(Chips, Chips.Name)
+    for _, Chip in ipairs(Path) do
+      if Chip then
+        table.insert(Chips, Chip.Name)
       end
     end
   end
