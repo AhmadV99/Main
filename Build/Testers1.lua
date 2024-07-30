@@ -143,12 +143,18 @@ __env.TableFruit = function() -- Fruit List
 end
 
 __env.Chips = {}
-for _, Chip in pairs(_require1(ReplicatedStorage.Raids).raids) do
-  table.insert(__env.Chips, Chip.Name)
+local RaidsModule = _require1(ReplicatedStorage.Raids)
+for _, v in pairs(RaidsModule.raids) do
+  if v.Name ~= " " then
+    table.insert(__env.Chips, v)
+  end
 end
-for _, Chip in pairs(_require1(ReplicatedStorage.Raids).advancedRaids) do
-  table.insert(__env.Chips, Chip.Name)
+for _, v in pairs(RaidsModule.advancedRaids) do
+  if v.Name ~= " " then
+    table.insert(__env.Chips, v)
+  end
 end
+
 
 local Window = Library:MakeWindow({
   Title = "Speed Hub X | " .. Version,
