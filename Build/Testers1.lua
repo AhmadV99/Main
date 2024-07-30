@@ -143,20 +143,17 @@ __env.TableFruit = function() -- Fruit List
 end
 
 __env.ListChips = function() -- Chips List
-  local Chips = {}
+  __env.Chips = {}
   local Raids = _require1(ReplicatedStorage.Raids)
 
-  local function AddListChips(Path)
-    for _, Chip in ipairs(Path) do
-      if Chip then
-        table.insert(Chips, Chip.Name)
-      end
-    end
+  for _, Chip in ipairs(Raids.raids) do
+    table.insert(__env.Chips, Chip.Name)
+  end
+  for _, Chip in ipairs(Raids.advancedRaids) do
+    table.insert(__env.Chips, Chip.Name)
   end
 
-  AddListChips(Raids.raids)
-  AddListChips(Raids.advancedRaids)
-  return Chips
+  return __env.Chips
 end
 
 local Window = Library:MakeWindow({
