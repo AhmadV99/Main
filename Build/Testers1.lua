@@ -499,7 +499,7 @@ local _SeaEvent = Tabs.SeaEvent do
     {"V"},
     {"F"}
   }) do
-    Func.Toggle(SeaEvent, "Skill " .. skill[1] .. " (Sea)", "", true)
+    Func.Toggle(_SeaEvent, "Skill " .. skill[1] .. " (Sea)", "", true)
   end
 end
 
