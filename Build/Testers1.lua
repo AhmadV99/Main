@@ -609,7 +609,7 @@ local _PvP = Tabs.PvP do
   Func.Dropdown(_PvP, "Choose PvP", "", {"Neareast", "Select Player"}, "Neareast")
   Func.Dropdown(_PvP, "Choose Kill", "", {"Skill", "Click"}, "Click")
   Func.Dropdown(_PvP, "Choose Skill Equip", "", {"Melee","Sword","Blox Fruit","Gun","Random"}, "Blox Fruit")
-  local UpdatePlayer = Func.Dropdown(_PvP, "Select Player", "", {game.Players:GetPlayers()}, "")
+  local UpdatePlayer = Func.Dropdown(_PvP, "Select Player", "", game.Players:GetPlayers(), "")
   Func.Button(_Maps, "Refersh Player", "", function()
     UpdatePlayer:Remove(game.Players:GetPlayers())
     UpdatePlayer:Set(game.Players:GetPlayers())
