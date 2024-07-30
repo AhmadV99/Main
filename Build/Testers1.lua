@@ -513,14 +513,14 @@ local _Stats = Tabs.Stats do
 end
 
 local _Maps = Tabs.Maps do
-  Func.Dropdown(_Maps, "Select Island", "", {__env.IslandList}, "")
+  Func.Dropdown(_Maps, "Select Island", "", __env.IslandList(), "")
   Func.Toggle(_Maps, "Tween To Island", "", false)
   _Maps:AddSection({"- [ World ] -"})
   Func.Button(_Maps, "First World", "", function()CommF_:InvokeServer("TravelMain")end)
   Func.Button(_Maps, "Second World", "", function()CommF_:InvokeServer("TravelDressrosa")end)
   Func.Button(_Maps, "Third World", "", function()CommF_:InvokeServer("TravelZou")end)
   _Maps:AddSection({"- [ NPCs ] -"})
-  Func.Dropdown(_Maps, "Select NPCs", "", {__env.TableNPCs}, "")
+  Func.Dropdown(_Maps, "Select NPCs", "", __env.TableNPCs(), "")
   Func.Toggle(_Maps, "Tween To NPCs", "", false)
 end
 
