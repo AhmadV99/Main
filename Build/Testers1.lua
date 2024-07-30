@@ -142,13 +142,11 @@ __env.TableFruit = function() -- Fruit List
   return Fruit
 end
 
-local Raids = _require1(ReplicatedStorage.Raids)
-
 __env.Chips = {}
-for _, Chip in ipairs(Raids.raids) do
+for _, Chip in pairs(_require1(ReplicatedStorage.Raids).raids) do
   table.insert(__env.Chips, Chip.Name)
 end
-for _, Chip in ipairs(Raids.advancedRaids) do
+for _, Chip in pairs(_require1(ReplicatedStorage.Raids).advancedRaids) do
   table.insert(__env.Chips, Chip.Name)
 end
 
