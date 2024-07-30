@@ -487,7 +487,7 @@ local _SeaEvent = Tabs.SeaEvent do
   end)
   Func.Toggle(_SeaEvent, "Auto Dodge Sea Rough", "", true)
   Func.Toggle(_SeaEvent, "Protect Boat", "", true)
-  SeaEvent:AddSection({"- [ Settings Sea Event ] -"})
+  _SeaEvent:AddSection({"- [ Settings Sea Event ] -"})
   Func.Dropdown(_SeaEvent, "Select Level Danger", "", {"1","2","3","4","5","6","infinity"}, "6")
   Func.Dropdown(_SeaEvent, "Select Boat", "", {"Pirate Brigade", "Pirate Grand Brigade", "Beast Hunter"}, "Pirate Brigade")
   Func.Silder(_SeaEvent, "Tween Boat Speed", 0, 500, 300)
