@@ -114,6 +114,7 @@ end
 
 __env.TableNPCs = function() -- NPCs list
   local NPCS = {}
+
   local function AddNPCsToTable(NPCs)
     for _, Npc in ipairs(NPCs) do
       local Head = Npc:FindFirstChild("Head")
@@ -125,6 +126,7 @@ __env.TableNPCs = function() -- NPCs list
       end
     end
   end
+
   AddNPCsToTable(workspace.NPCs:GetChildren())
   AddNPCsToTable(_getnilinstances1())
   return NPCS
@@ -138,6 +140,23 @@ __env.TableFruit = function() -- Fruit List
     table.insert(Fruit, Data.Name)
   end
   return Fruit
+end
+
+__env.ListChips = function() -- Chips List
+  local Chips = {}
+  local Raids = _require1(ReplicatedStorage.Raids)
+
+  local function AddListChips(Path)
+    for _, Chips in ipairs(Path) do
+      if Chips then
+        table.insert(Chips, Chips.Name)
+      end
+    end
+  end
+
+  AddListChips(Raids.raids)
+  AddListChips(Raids.advancedRaids)
+  return Chips
 end
 
 local Window = Library:MakeWindow({
@@ -636,6 +655,147 @@ local _PvP = Tabs.PvP do
   _PvP:AddSection({"- [ Misc ] -"})
   Func.Toggle(_PvP, "Auto Enable PvP", "", false)
   Func.Toggle(_PvP, "Auto Use Ken", "", false)
+end
+
+local _Raid = Tabs.Raid do
+  if World[2] or World[3] then
+    Func.Dropdown(_Raid, "Select Chips", "", __env.ListChips(), "")
+    Func.Toggle(_Raid, "Auto Buy Chips", "", false)
+    Func.Toggle(_Raid, "Auto Farm Raid", "", false)
+    Func.Toggle(_Raid, "Kill Aura", "", false)
+  end
+end
+
+local _Race = Tabs.Race do
+  local FindMirage = _Race:AddSection({"Status"})
+  local SetUpdateMoon = _Race:AddSection({"Status"})
+
+  local MoonPhases = {
+    ["http://www.roblox.com/asset/?id=9709149431"] = "100% 🌝",
+    ["http://www.roblox.com/asset/?id=9709149052"] = "75% 🌖",
+    ["http://www.roblox.com/asset/?id=9709143733"] = "50% 🌗",
+    ["http://www.roblox.com/asset/?id=9709150086"] = "50% 🌗",
+    ["http://www.roblox.com/asset/?id=9709150401"] = "25% 🌘",
+    ["http://www.roblox.com/asset/?id=9709149680"] = "15% 🌙",
+    ["http://www.roblox.com/asset/?id=9709139597"] = "15% 🌙"
+  }
+
+  task.spawn(function()
+    while task.wait(1) do
+      if workspace._WorldOrigin.Locations:FindFirstChild("Mirage Island") then
+        FindMirage:Set("Mirage Island : Spawned ")
+      else
+        FindMirage:Set("Mirage Island : Not Spawn")
+      end
+    end
+  end)
+  task.spawn(function()
+    while task.wait(1) do
+      local MoonP = MoonPhases[Lighting.Sky.MoonTextureId] or "0% 🌑"
+      SetUpdateMoon:Set("Stats Moon : " .. MoonP .. " | " .. tostring(Lighting.TimeOfDay))
+    end
+  end)
+
+  Func.Toggle(_Race, "Auto Summon Mirage Island", "This Summon, When Spawn Mirage At Chance ???%", false)
+  Func.Toggle(_Race, "Tween To Mirage Island", "Spawn Mirage if Tween to Mirage", false)
+  Func.Toggle(_Race, "Tween To Gear", "", false)
+  Func.Toggle(_Race, "Tween To Gear Blue", "", false)
+  Func.Toggle(_Race, "Tween To Highest Point", "This Mean Highest Mountain In Mirage Island", false)
+  Func.Toggle(_Race, "Tween To Advanced Dealer", "Shop Fruit Advanced", false)
+
+  _Race:AddSection({"Race Version"})
+  _Race:AddSection({"Coming Soon"})
+end
+
+local _ESP = Tabs.ESP do
+  Func.Toggle(_ESP, "ESP Player", "", false)
+  Func.Toggle(_ESP, "ESP Chest", "", false)
+  Func.Toggle(_ESP, "ESP Fruit", "", false)
+
+  if World[2] then
+    Func.Toggle(_ESP, "ESP Flower", "", false)
+  elseif World[3] then
+    Func.Toggle(_ESP, "ESP Mirage Island", "", false)
+    Func.Toggle(_ESP, "ESP Kitsune Island", "", false)
+  end
+end
+
+local _Misc = Tabs.Misc do
+  _Misc:AddSection({"- [ Server ] -"})
+  Func.Button(_Misc, "Hop Server", "", function()
+    __env.Server(false, "", 0)
+  end)
+  Func.Button(_Misc, "Rejoin", "", function()
+    game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
+  end)
+  _Misc:AddSection({"- [ Team ] -"})
+  Func.Button(_Misc, "Join Pirates Team", "", function()
+    CommF_:InvokeServer("SetTeam", "Pirates")
+  end)
+  Func.Button(_Misc, "Join Marines Team", "", function()
+    CommF_:InvokeServer("SetTeam", "Marines")
+  end)
+  _Misc:AddSection({"- [ Menu UI ] -"})
+  Func.Button(_Misc, "Devil Fruit Shop", "", function()
+    CommF_:InvokeServer("GetFruits")Player.PlayerGui.Main.FruitShop.Visible = true
+  end)
+  Func.Button(_Misc, "Titles", "", function()
+    CommF_:InvokeServer("getTitles")Player.PlayerGui.Main.Titles.Visible = true
+  end)
+  Func.Button(_Misc, "Haki Color", "", function()
+    Player.PlayerGui.Main.Colors.Visible = true
+  end)
+  _Misc:AddSection({"- [ Codes ] -"})
+  Func.Button(_Misc, "Redeem Code", "", function()
+    for _, CodeFunc in pairs({"NEWTROLL","KITT_RESET","Sub2Fer999","Magicbus","kittgaming","SECRET_ADMIN","EXP_5B","CONTROL","UPDATE11","XMASEXP","1BILLION","ShutDownFix2","UPD14","STRAWHATMAINE","TantaiGaming","Colosseum","Axiore","Sub2Daigrock","Sky Island 3","Sub2OfficialNoobie","SUB2NOOBMASTER123","THEGREATACE","Fountain City","BIGNEWS","FUDD10","SUB2GAMERROBOT_EXP1","UPD15","2BILLION","UPD16","3BVISITS","Starcodeheo","Bluxxy","DRAGONABUSE","Sub2CaptainMaui","DEVSCOOKING","Enyu_is_Pro","JCWK","Starcodeheo","Bluxxy","fudd10_v2","SUB2GAMERROBOT_EXP1","Sub2NoobMaster123","Sub2UncleKizaru","Sub2Daigrock","Axiore","TantaiGaming","StrawHatMaine"}) do
+      Remotes.Redeem:InvokeServer(CodeFunc)
+    end
+  end)
+  _Misc:AddSection({"- [ Remove ] -"})
+  Func.Toggle(_Misc, "Remove Damage", "", false)
+  Func.Toggle(_Misc, "Remove Notifications", "", false)
+  _Misc:AddSection({"- [ Reduce Lag ] -"})
+
+  local function reduce(v)
+    if v:IsA("Part") then
+      v.Material = Enum.Material.Plastic
+    elseif v:IsA("Light") or v:IsA("Effect") then
+      v:Destroy()
+    elseif v:IsA("Texture") then
+      v:Destroy()
+    end
+  end
+  local function Descendants(container)
+    for _, v in pairs(container:GetDescendants()) do
+      reduce(v)
+    end
+    container.DescendantAdded:Connect(reduce)
+  end
+  Func.Button(_Misc, "Anti-Crash", "", function()
+    Descendants(Lighting)Descendants(workspace)
+  end)
+  Func.Button(_Misc, "Reduce Lag", "", function()
+    for _, v in pairs(workspace:GetDescendants()) do
+      if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
+        v.Material = Enum.Material.SmoothPlastic
+        reduce(v)
+      end
+    end
+  end)
+
+  _Misc:AddSection({"- [ Other ] -"})
+  Func.Toggle(_Misc, "Walk On Water", "", true)
+end
+
+local _Settings = Tabs.Settings do
+  Func.Toggle(_Settings, "Auto Haki", "", true)
+  Func.Toggle(_Settings, "Auto Ken", "", false)
+  _Settings:AddSection({"- [ System Script ] -"})
+  Func.Button(_Misc, "Reset Script / Save Config", "", function()
+    if isfile("Speed Hub X") then
+      delfile("Speed Hub X")
+    end
+  end)
 end
 
 Window:SelectTab(Tabs.Main)
