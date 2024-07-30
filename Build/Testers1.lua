@@ -649,7 +649,6 @@ local _PvP = Tabs.PvP do
     Func.Toggle(_PvP, skill, "", true)
   end
   _PvP:AddSection({"- [ Aim ] -"})
-
   Func.Toggle(_PvP, "Silent Aim", "", false)
   Func.Toggle(_PvP, "Silent Aim (Gun)", "", false)
   _PvP:AddSection({"- [ Misc ] -"})
@@ -791,7 +790,7 @@ local _Settings = Tabs.Settings do
   Func.Toggle(_Settings, "Auto Haki", "", true)
   Func.Toggle(_Settings, "Auto Ken", "", false)
   _Settings:AddSection({"- [ System Script ] -"})
-  Func.Button(_Misc, "Reset Script / Save Config", "", function()
+  Func.Button(_Settings, "Reset Script / Save Config", "", function()
     if isfile("Speed Hub X") then
       delfile("Speed Hub X")
     end
