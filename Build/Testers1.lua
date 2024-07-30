@@ -596,7 +596,7 @@ local _Shop = Tabs.Shop do
 end
 
 local _DevilFruit = Tabs.Devil do
-  Func.Dropdown(_DevilFruit, "Select Fruit Sniper", "", {__env.TableFruit}, "")
+  Func.Dropdown(_DevilFruit, "Select Fruit Sniper", "", __env.TableFruit(), "")
   Func.Toggle(_DevilFruit, "Auto Buy Fruit Sniper", "", false)
   _DevilFruit:AddSection({"- [ Fruit ] -"})
   Func.Toggle(_DevilFruit, "Auto Store Fruit", "", false)
