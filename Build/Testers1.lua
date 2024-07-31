@@ -13,8 +13,7 @@ local Enemies = workspace.Enemies
 
 local _PlaceID = game.PlaceId
 
-
-local __env = getgenv and getgenv() or {}
+local __env = {}
 
 local World = {
   [1] = _PlaceID == 2753915549,
@@ -701,7 +700,7 @@ end
 local _Misc = Window:MakeTab({"Miscellaneous", "rbxassetid://11447063791"}) do
   _Misc:AddSection({"- [ Server ] -"})
   Func.Button(_Misc, "Hop Server", "", function()
-    __env.Server(false, "", 0)
+    Server("Hop1")
   end)
   Func.Button(_Misc, "Rejoin", "", function()
     game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
@@ -777,3 +776,4 @@ local _Settings = Window:MakeTab({"Settings", "settings"}) do
 end
 
 Window:SelectTab(Tabs.Main)
+return __env
