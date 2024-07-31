@@ -166,24 +166,6 @@ Window:AddMinimizeButton({
   Corner = {CornerRadius = UDim.new(0, 5)}
 })
 
-local Tabs = {
-  Home = Window:MakeTab({"Home", "scan-face"}),
-  Config = Window:MakeTab({"Config", "rbxassetid://18361516966"}),
-  Main = Window:MakeTab({"Main", "home"}),
-  Item_Quest = Window:MakeTab({"Item/Quest", "swords"}),
-  SeaEvent = Window:MakeTab({"Sea Event", "rbxassetid://16175025368"}),
-  Stats = Window:MakeTab({"Stats", "plus-circle"}),
-  Maps = Window:MakeTab({"Maps", "rbxassetid://6035190846"}),
-  Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"}),
-  Devil = Window:MakeTab({"Devil Fruit", "apple"}),
-  PvP = Window:MakeTab({"PvP", "rbxassetid://16053202595"}),
-  Raid = Window:MakeTab({"Raid", "rbxassetid://11446957539"}),
-  Race = Window:MakeTab({"Race", "rbxassetid://11446900930"}),
-  ESP = Window:MakeTab({"ESP", "mountain-snow"}),
-  Misc = Window:MakeTab({"Miscellaneous", "rbxassetid://11447063791"}),
-  Settings = Window:MakeTab({"Settings", "settings"}),
-}
-
 local Func = {} do
   Func.Toggle = function(Tab, Name, Desc, Default)
     return Tab:AddToggle({
@@ -236,7 +218,7 @@ local Func = {} do
   end
 end
 
-local _HomeT = Tabs.Home do
+local _HomeT = Window:MakeTab({"Home", "scan-face"}) do
   _HomeT:AddDiscordInvite({
     Name = "Speed Hub X | Official Server",
     Logo = "rbxassetid://16022917595",
@@ -249,7 +231,7 @@ local _HomeT = Tabs.Home do
   Func.Toggle(_HomeT, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
 end
 
-local _ConfigT = Tabs.Config do
+local _ConfigT = Window:MakeTab({"Config", "rbxassetid://18361516966"}) do
   Func.Dropdown(_ConfigT, "Weapon Tool", "Weapon + Equip = Equipped Weapon", {"Melee","Sword","Blox Fruit","Gun"}, "Melee")
   Func.Slider(_ConfigT, "Tween Speed", 0, 500, 200)
   Func.Slider(_ConfigT, "Farm Distance", 0, 100, 40)
@@ -258,7 +240,7 @@ local _ConfigT = Tabs.Config do
   Func.Toggle(_ConfigT, "Fast Attack", "This Fast Attack Can Attack a Mob in Fast", true)
   Func.Slider(_ConfigT, "Fast Attack Delay", 0, 20, 0)
   Func.Toggle(_ConfigT, "Hop if Admin or Staff", "", true)
-  Func.Toggle(_ConfigT, "Auto Dodge Mob Skill", "", false)
+  Func.Toggle(_ConfigT, "Auto Dodge Skill", "", false)
   _ConfigT:AddSection("- [ Race ] -")
   Func.Toggle(_ConfigT, "Auto Use Race V3", "", false)
   Func.Toggle(_ConfigT, "Auto Use Race V4", "", false)
@@ -266,7 +248,7 @@ local _ConfigT = Tabs.Config do
   Func.Toggle(_ConfigT, "Anti-Knockback", "", false)
 end
 
-local _MainT = Tabs.Main do
+local _MainT = Window:MakeTab({"Main", "home"}) do
   _MainT:AddSection("- [ Farming ] -")
   Func.Toggle(_MainT, "Auto Farm Level", "This Can Farm Level!", false)
   Func.Toggle(_MainT, "Auto Farm Nearest", "This Can Attack Nearest Mob!", false)
@@ -306,7 +288,7 @@ local _MainT = Tabs.Main do
   Func.Toggle(_MainT, "Auto Farm Material", "This Can Farm Material Item!", false)
 end
 
-local _ItemQuest = Tabs.Item_Quest do
+local _ItemQuest = Window:MakeTab({"Item/Quest", "swords"}) do
   if World[1] then
     Func.Toggle(_ItemQuest, "Auto Sea Second", "Only Get Level 700 if Auto Sea Second!", false)
     _ItemQuest:AddSection("- [ Item ] -")
@@ -423,7 +405,7 @@ local _ItemQuest = Tabs.Item_Quest do
   end
 end
 
-local _SeaEvent = Tabs.SeaEvent do
+local _SeaEvent = Window:MakeTab({"Sea Event", "rbxassetid://16175025368"}) do
   _SeaEvent:AddSection({"- [ Kitsune Island ] -"})
   local FindKitsune = _SeaEvent:AddSection({"Status"})
   local StatsAzure = _SeaEvent:AddSection({"Status"})
@@ -439,7 +421,7 @@ local _SeaEvent = Tabs.SeaEvent do
   end)
 
   task.spawn(function()
-    while task.wait() do
+    while task.wait(1) do
       StatsAzure:Set("Total Azura Ember : ".. __env.VerifyMaterial("Azure Ember"))
     end
   end)
@@ -521,7 +503,7 @@ local _SeaEvent = Tabs.SeaEvent do
   end
 end
 
-local _Stats = Tabs.Stats do
+local _Stats = Window:MakeTab({"Stats", "plus-circle"}) do
   Func.Slider(_Stats, "Set Point", 0, 100, 2)
   Func.Toggle(_Stats, "Melee", "", false)
   Func.Toggle(_Stats, "Defense", "", false)
@@ -530,7 +512,7 @@ local _Stats = Tabs.Stats do
   Func.Toggle(_Stats, "Devil Fruit", "", false)
 end
 
-local _Maps = Tabs.Maps do
+local _Maps = Window:MakeTab({"Maps", "rbxassetid://6035190846"}) do
   Func.Dropdown(_Maps, "Select Island", "", __env.IslandList(), "")
   Func.Toggle(_Maps, "Tween To Island", "", false)
   _Maps:AddSection({"- [ World ] -"})
@@ -542,7 +524,7 @@ local _Maps = Tabs.Maps do
   Func.Toggle(_Maps, "Tween To NPCs", "", false)
 end
 
-local _Shop = Tabs.Shop do
+local _Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"}) do
   Func.Toggle(_Shop, "Auto Buy Legendary Sword", "", false)
   Func.Toggle(_Shop, "Auto Buy True Triple Katana", "", false)
   for _, ShopName in ipairs({
@@ -611,7 +593,7 @@ local _Shop = Tabs.Shop do
   end
 end
 
-local _DevilFruit = Tabs.Devil do
+local _DevilFruit = Window:MakeTab({"Devil Fruit", "apple"}) do
   Func.Dropdown(_DevilFruit, "Select Fruit Sniper", "", __env.TableFruit(), "")
   Func.Toggle(_DevilFruit, "Auto Buy Fruit Sniper", "", false)
   _DevilFruit:AddSection({"- [ Fruit ] -"})
@@ -620,7 +602,7 @@ local _DevilFruit = Tabs.Devil do
   Func.Toggle(_DevilFruit, "Auto Find Fruit", "", false)
 end
 
-local _PvP = Tabs.PvP do
+local _PvP = Window:MakeTab({"PvP", "rbxassetid://16053202595"}) do
   _PvP:AddSection({"- [ Config PvP ] -"})
   Func.Dropdown(_PvP, "Choose PvP", "", {"Neareast", "Select Player"}, "Neareast")
   Func.Dropdown(_PvP, "Choose Kill", "", {"Skill", "Click"}, "Click")
@@ -653,7 +635,7 @@ local _PvP = Tabs.PvP do
   Func.Toggle(_PvP, "Auto Use Ken", "", false)
 end
 
-local _Raid = Tabs.Raid do
+local _Raid = Window:MakeTab({"Raid", "rbxassetid://11446957539"}) do
   if World[2] or World[3] then
     Func.Dropdown(_Raid, "Select Chips", "", __env.Chips, "")
     Func.Toggle(_Raid, "Auto Buy Chips", "", false)
@@ -662,7 +644,7 @@ local _Raid = Tabs.Raid do
   end
 end
 
-local _Race = Tabs.Race do
+local _Race = Window:MakeTab({"Race", "rbxassetid://11446900930"}) do
   local FindMirage = _Race:AddSection({"Status"})
   local SetUpdateMoon = _Race:AddSection({"Status"})
 
@@ -703,7 +685,7 @@ local _Race = Tabs.Race do
   _Race:AddSection({"Coming Soon"})
 end
 
-local _ESP = Tabs.ESP do
+local _ESP = Window:MakeTab({"ESP", "mountain-snow"}) do
   Func.Toggle(_ESP, "ESP Player", "", false)
   Func.Toggle(_ESP, "ESP Chest", "", false)
   Func.Toggle(_ESP, "ESP Fruit", "", false)
@@ -716,7 +698,7 @@ local _ESP = Tabs.ESP do
   end
 end
 
-local _Misc = Tabs.Misc do
+local _Misc = Window:MakeTab({"Miscellaneous", "rbxassetid://11447063791"}) do
   _Misc:AddSection({"- [ Server ] -"})
   Func.Button(_Misc, "Hop Server", "", function()
     __env.Server(false, "", 0)
@@ -783,7 +765,7 @@ local _Misc = Tabs.Misc do
   Func.Toggle(_Misc, "Walk On Water", "", true)
 end
 
-local _Settings = Tabs.Settings do
+local _Settings = Window:MakeTab({"Settings", "settings"}) do
   Func.Toggle(_Settings, "Auto Haki", "", true)
   Func.Toggle(_Settings, "Auto Ken", "", false)
   _Settings:AddSection({"- [ System Script ] -"})
