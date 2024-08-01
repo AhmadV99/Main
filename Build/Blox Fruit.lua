@@ -270,7 +270,7 @@ if World2 or World3 then
   SeaEvent:AddSection({"- [ Leviathan ] -"})
   local StatusFrozen = SeaEvent:AddSection({"Status"})
   task.spawn(function()
-    while task.wait() do
+    while task.wait(1) do
       if getgenv().VerifyIsland("Frozen Dimension Path") then
         StatusFrozen:Set("Frozen Dimension : Spawned")
       else
@@ -336,7 +336,7 @@ local PvP = Window:MakeTab({"PvP", "rbxassetid://16053202595"})
 PvP:AddSection({"- [ Config PvP ] -"})
 Dropdown(PvP, "Choose PvP", "", {"Neareast", "Select Player"}, "Neareast")
 Dropdown(PvP, "Choose Kill", "", {"Skill", "Click"}, "Click")
-Dropdown(PvP, "Choose Skill Equip", "", {"Melee","Sword","Blox Fruit","Gun", "Random Fruit"}, "Blox Fruit")
+Dropdown(PvP, "Choose Skill Equip", "", {"Melee","Sword","Blox Fruit","Gun", "Random Equip"}, "Blox Fruit")
 local Update1 = Dropdown(PvP, "Select Player", "", getgenv().TablePlayer, "")
 PvP:AddButton({Name = "Refersh Player", Description = "", Callback = function()
   Update1:Set(getgenv().TablePlayer)
