@@ -779,5 +779,4 @@ local _Settings = Window:MakeTab({"Settings", "settings"}) do
   end)
 end
 
-Window:SelectTab(Tabs.Main)
-return __env
+Window:SelectTab(2)
