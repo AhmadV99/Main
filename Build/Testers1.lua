@@ -1,3 +1,4 @@
+repeat task.wait()until game:IsLoaded()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Settings.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/V3.lua"))()
 
@@ -352,7 +353,8 @@ local _ItemQuest = Window:MakeTab({"Item/Quest", "swords"}) do
         elseif __env.CheckMob({"Cake Prince"}) then
           StatusC:Set("Status Cake Prince", "Cake Prince : Spawned")
         else
-          StatusC:Set("Status Cake Prince", "Status : " .. string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", ""))
+          local PrinceSpawner = string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", "")
+          StatusC:Set("Status Cake Prince", "Status : " .. PrinceSpawner)
         end
       end
     end)
@@ -377,8 +379,9 @@ local _ItemQuest = Window:MakeTab({"Item/Quest", "swords"}) do
       end
     end)
     task.spawn(function()
-      while task.wait() do
-        GetNumE:Set("Elite Hunter Progress : " .. tostring(CommF_:InvokeServer("EliteHunter", "Progress")))
+      while task.wait(1) do
+        local Progress = CommF_:InvokeServer("EliteHunter", "Progress")
+        GetNumE:Set("Elite Hunter Progress : " .. tostring(Progress))
       end
     end)
 
@@ -421,7 +424,8 @@ local _SeaEvent = Window:MakeTab({"Sea Event", "rbxassetid://16175025368"}) do
 
   task.spawn(function()
     while task.wait(1) do
-      StatsAzure:Set("Total Azura Ember : ".. __env.VerifyMaterial("Azure Ember"))
+      local AzureTotal = __env.VerifyMaterial("Azure Ember")
+      StatsAzure:Set("Total Azura Ember : ".. AzureTotal)
     end
   end)
   Func.Toggle(_SeaEvent, "Tween To Kitsune Island", "Tween to Kitsune If Spawn Kitsune", false)
