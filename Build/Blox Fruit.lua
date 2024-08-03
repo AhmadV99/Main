@@ -9,16 +9,16 @@ local Remotes = ReplicatedStorage.Remotes
 local CommF_ = Remotes.CommF_
 
 task.spawn(function() -- Remove Effect
-    local _hookfunc1 = hookfunction or hookfunc or function(...) end
-    local Container = ReplicatedStorage.Effect.Container
-    local CameraShaker = require(ReplicatedStorage.Util.CameraShaker)
-    local Death = require(Container:FindFirstChild("Death"))
-    local Respawn = require(Container:FindFirstChild("Respawn"))
-    local DisplayNPC = require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
-    _hookfunc1(Death, function() return nil end)
-    _hookfunc1(Respawn, function() return nil end)
-    _hookfunc1(DisplayNPC, function() return nil end)
-    CameraShaker:Stop()
+  local _hookfunc1 = hookfunction or hookfunc or function(...) end
+  local Container = ReplicatedStorage.Effect.Container
+  local CameraShaker = require(ReplicatedStorage.Util.CameraShaker)
+  local Death = require(Container:FindFirstChild("Death"))
+  local Respawn = require(Container:FindFirstChild("Respawn"))
+  local DisplayNPC = require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
+  _hookfunc1(Death, function() return nil end)
+  _hookfunc1(Respawn, function() return nil end)
+  _hookfunc1(DisplayNPC, function() return nil end)
+  CameraShaker:Stop()
 end)
 
 local Window = Library:MakeWindow({
@@ -160,8 +160,9 @@ elseif World3 then
   ItemQuest:AddSection({"- [ Bones ] -"})
   local StatusBone = ItemQuest:AddParagraph({"Bones Status", "Bones Total:"})
   task.spawn(function()
-    while task.wait() do 
-      StatusBone:Set("Bones Status", "Bones Total: ".. VerifyMaterial("Bones")) 
+    while task.wait(1) do 
+      local Bones = VerifyMaterial("Bones")
+      StatusBone:Set("Bones Status", "Bones Total: ".. Bones) 
     end 
   end)
   Toggle(ItemQuest, "Auto Farm Bones", "This Farm Bone x4 or x5 or x3 Each", false)
@@ -169,7 +170,7 @@ elseif World3 then
   ItemQuest:AddSection({"- [ Cake Prince ] -"})
   local StatusC = ItemQuest:AddParagraph({"Status Cake Prince"})
   task.spawn(function()
-    while task.wait() do
+    while task.wait(1) do
       if getgenv().CheckMob({"Dough King"}) then
         StatusC:Set("Dough King : Spawned")
       elseif getgenv().CheckMob({"Cake Prince"}) then
@@ -188,21 +189,23 @@ elseif World3 then
   local StatusE = ItemQuest:AddSection({"Status"})
   local GetNumE = ItemQuest:AddSection({"Status"})
   task.spawn(function()
-    while task.wait() do
-        if getgenv().CheckMob({"Diablo","Deandre","Urban"}) then
-            StatusE:Set("Elite Hunter : Spawned")
-        else
-            StatusE:Set("Elite Hunter : Not Spawn")
-        end
+    while task.wait(1) do
+      if getgenv().CheckMob({"Diablo","Deandre","Urban"}) then
+        StatusE:Set("Elite Hunter : Spawned")
+      else
+        StatusE:Set("Elite Hunter : Not Spawn")
+       end
     end
-end)
-task.spawn(function()
-    while task.wait() do
-        GetNumE:Set("Elite Hunter Progress : " .. CommF_:InvokeServer("EliteHunter", "Progress"))
-    end
-end)
-Toggle(ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false)
+  end)
+  task.spawn(function()
+    while task.wait(1) do
+      local Progress = CommF_:InvokeServer("EliteHunter", "Progress")
+      GetNumE:Set("Elite Hunter Progress : " .. Progress)
+      end
+    end)
+    Toggle(ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false)
 end
+
 if World2 or World3 then
   ItemQuest:AddSection({"- [ Fighting Style ] -"})
   Toggle(ItemQuest, "Auto Death Step", "", false)
@@ -221,7 +224,7 @@ if World1 or World2 or World3 then
   ItemQuest:AddSection({"- [ Observation ] -"})
   local StatusObs = ItemQuest:AddSection({"Total: None"})
   task.spawn(function()
-    while task.wait() do
+    while task.wait(1) do
       StatusObs:Set({"Total: ".. Player.VisionRadius.Value})
     end
   end)
@@ -236,7 +239,7 @@ if World2 or World3 then
   local FindKitsune = SeaEvent:AddSection({"Status"})
   local StatsAzure = SeaEvent:AddSection({"Status"})
   task.spawn(function()
-    while task.wait() do
+    while task.wait(1) do
       if getgenv().VerifyIsland("Kitsune Island Path") then
         FindKitsune:Set("Kitsune Island : Spawned")
       else
@@ -245,7 +248,7 @@ if World2 or World3 then
     end
   end)
   task.spawn(function()
-    while task.wait() do
+    while task.wait(1) do
       StatsAzure:Set("Total Azura Ember : "..VerifyMaterial("Azure Ember"))
     end
   end)
@@ -366,7 +369,7 @@ if World2 or World3 then
   local SetUpdateMoon = RaceV4:AddSection({"Status"})
   getgenv().CheckMoon(SetUpdateMoon)
   task.spawn(function()
-    while task.wait() do
+    while task.wait(1) do
       if getgenv().VerifyIsland("Mirage Island Path") then
         FindMirage:Set("Mirage Island : Spawned ")
       else
@@ -375,7 +378,7 @@ if World2 or World3 then
     end
   end)
   task.spawn(function()
-    while task.wait() do
+    while task.wait(1) do
       if CommF_:InvokeServer("CheckTempleDoor") then
         FindMiragePuzzle:Set("Mirage Puzzle : Spawned ")
       else
