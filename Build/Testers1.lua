@@ -14,7 +14,7 @@ local Enemies = workspace.Enemies
 
 local _PlaceID = game.PlaceId
 
-local __env = {}
+local __env = getgenv and getgenv() or {}
 
 local World = {
   [1] = _PlaceID == 2753915549,
