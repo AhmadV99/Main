@@ -368,6 +368,7 @@ Toggle(PvP, "Silent Aim (Gun)", "", false)
 PvP:AddSection({"- [ Gun ] -"})
 Toggle(PvP, "Auto Shoot Player (Gun)", "", false)
 PvP:AddSection({"- [ Misc ] -"})
+Toggle(PvP, "Auto Dodge Skill Player", "", false)
 Toggle(PvP, "Auto Enable PvP", "", false)
 Toggle(PvP, "Auto Use Ken", "", false)
 
