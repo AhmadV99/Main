@@ -9,15 +9,16 @@ local Remotes = ReplicatedStorage.Remotes
 local CommF_ = Remotes.CommF_
 
 task.spawn(function() -- Remove Effect
-  local _hookfunc1 = hookfunction or hookfunc or function(...) end
+  local _hookfunc1 = hookfunction or hookfunc or (function(...)return...end)
+  local _require1 = require or (function(...)return...end)
   local Container = ReplicatedStorage.Effect.Container
-  local CameraShaker = require(ReplicatedStorage.Util.CameraShaker)
-  local Death = require(Container:FindFirstChild("Death"))
-  local Respawn = require(Container:FindFirstChild("Respawn"))
-  local DisplayNPC = require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
-  _hookfunc1(Death, function() return nil end)
-  _hookfunc1(Respawn, function() return nil end)
-  _hookfunc1(DisplayNPC, function() return nil end)
+  local CameraShaker = _require1(ReplicatedStorage.Util.CameraShaker)
+  local Death = _require1(Container:FindFirstChild("Death"))
+  local Respawn = _require1(Container:FindFirstChild("Respawn"))
+  local DisplayNPC = _require1(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
+  _hookfunc1(Death, function()return nil end)
+  _hookfunc1(Respawn, function()return nil end)
+  _hookfunc1(DisplayNPC, function()return nil end)
   CameraShaker:Stop()
 end)
 
@@ -40,7 +41,7 @@ local function Toggle(Tab, Name, Desc, Default)
     Name = Name,Description = Desc or "",Default = Default,
     Callback = function(Value)
       SpeedHubX[Name] = Value
-    end, Flag = "SpeedHubX/Toggle/"..Name})
+    end, Flag = "SpeedHubX/Toggle/" .. Name})
     return Ver
 end
 local function Dropdown(Tab, Name, Desc, Option, Default)
@@ -48,7 +49,7 @@ local function Dropdown(Tab, Name, Desc, Option, Default)
     Name = Name,Description = Desc or "",Options = Option,Default = Default,
     Callback = function(Value)
       SpeedHubX[Name] = Value
-    end, Flag = "SpeedHubX/Dropdown/"..Name})
+    end, Flag = "SpeedHubX/Dropdown/" .. Name})
     return Ver
 end
 local function Silder(Tab, Name, Min, Max, Default)
@@ -56,7 +57,7 @@ local function Silder(Tab, Name, Min, Max, Default)
     Name = Name,Min = Min,Max = Max,Default = Default,
     Callback = function(Value)
       SpeedHubX[Name] = Value
-    end, Flag = "SpeedHubX/Slider/"..Name})
+    end, Flag = "SpeedHubX/Slider/" .. Name})
     return Ver
 end
 
@@ -64,6 +65,7 @@ Home:AddSection({"- [ Local Player ] -"})
 Silder(Home, "Set WalkSpeed", 0, 500, 300)
 Toggle(Home, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
 local Config = Window:MakeTab({"Config", "rbxassetid://18361516966"})
+
 Dropdown(Config, "Weapon Tool", "Weapon + Equip = Equiped Weapon", {"Melee","Sword","Blox Fruit","Gun"}, "Melee")
 Silder(Config, "Tween Speed", 0, 500, 200)
 Silder(Config, "Farm Distance", 0, 100, 40)
@@ -80,6 +82,7 @@ Config:AddSection("- [ Body ] -")
 Toggle(Config, "Anti-Knockback", "", false)
 
 local Main = Window:MakeTab({"Main", "home"})
+
 Main:AddSection("- [ Farming ] -")
 Toggle(Main, "Auto Farm Level", "This Can Farm Level!", false)
 Toggle(Main, "Auto Farm Nearest", "This Can Attack Nearest Mob!", false)
@@ -113,6 +116,7 @@ Main:AddButton({Name = "Hop Server", Description = "", Callback = function()getg
 Main:AddSection("- [ Material ] -")
 Dropdown(Main, "Choose Material", "", getgenv().MaterialList, "")
 Toggle(Main, "Auto Farm Material", "This Can Farm Material Item!", false)
+
 local ItemQuest = Window:MakeTab({"Item/Quest", "swords"})
 if World1 then
   Toggle(ItemQuest, "Auto Sea Second", "Only Get Level 700 if Auto Sea Second!", false)
@@ -190,7 +194,7 @@ elseif World3 then
   local StatusE = ItemQuest:AddSection({"Status"})
   local GetNumE = ItemQuest:AddSection({"Status"})
   task.spawn(function()
-    while task.wait(1) do
+    while task.wait(2) do
       if getgenv().CheckMob({"Diablo","Deandre","Urban"}) then
         StatusE:Set("Elite Hunter : Spawned")
       else
@@ -199,12 +203,12 @@ elseif World3 then
     end
   end)
   task.spawn(function()
-    while task.wait(1) do
+    while task.wait(2) do
       local Progress = CommF_:InvokeServer("EliteHunter", "Progress")
       GetNumE:Set("Elite Hunter Progress : " .. Progress)
       end
     end)
-    Toggle(ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false)
+  Toggle(ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false)
 end
 
 if World2 or World3 then
@@ -225,7 +229,7 @@ if World1 or World2 or World3 then
   ItemQuest:AddSection({"- [ Observation ] -"})
   local StatusObs = ItemQuest:AddSection({"Total: None"})
   task.spawn(function()
-    while task.wait(1) do
+    while task.wait(2) do
       StatusObs:Set({"Total: ".. Player.VisionRadius.Value})
     end
   end)
@@ -240,7 +244,7 @@ if World2 or World3 then
   local FindKitsune = SeaEvent:AddSection({"Status"})
   local StatsAzure = SeaEvent:AddSection({"Status"})
   task.spawn(function()
-    while task.wait(1) do
+    while task.wait(2) do
       if getgenv().VerifyIsland("Kitsune Island Path") then
         FindKitsune:Set("Kitsune Island : Spawned")
       else
@@ -249,7 +253,7 @@ if World2 or World3 then
     end
   end)
   task.spawn(function()
-    while task.wait(1) do
+    while task.wait(2) do
       StatsAzure:Set("Total Azura Ember : "..VerifyMaterial("Azure Ember"))
     end
   end)
@@ -274,7 +278,7 @@ if World2 or World3 then
   SeaEvent:AddSection({"- [ Leviathan ] -"})
   local StatusFrozen = SeaEvent:AddSection({"Status"})
   task.spawn(function()
-    while task.wait(1) do
+    while task.wait(2) do
       if getgenv().VerifyIsland("Frozen Dimension Path") then
         StatusFrozen:Set("Frozen Dimension : Spawned")
       else
@@ -307,6 +311,7 @@ if World2 or World3 then
   SeaEvent:AddSection({"- [ Sea Event Skill ] -"})
   Toggle(SeaEvent, "Skill Z (Sea)", "", true)Toggle(SeaEvent, "Skill X (Sea)", "", true)Toggle(SeaEvent, "Skill C (Sea)", "", true)Toggle(SeaEvent, "Skill V (Sea)", "", true)Toggle(SeaEvent, "Skill F (Sea)", "", true)
 end
+
 local Stats = Window:MakeTab({"Stats", "plus-circle"})
 Silder(Stats, "Set Point", 0, 100, 2)
 Toggle(Stats, "Melee", "", false)
@@ -314,6 +319,7 @@ Toggle(Stats, "Defense", "", false)
 Toggle(Stats, "Sword", "", false)
 Toggle(Stats, "Gun", "", false)
 Toggle(Stats, "Devil Fruit", "", false)
+
 local Maps = Window:MakeTab({"Maps", "rbxassetid://6035190846"})
 Dropdown(Maps, "Select Island", "", getgenv().IslandList, "")
 Toggle(Maps, "Tween To Island", "", false)
@@ -324,6 +330,7 @@ Maps:AddButton({Name = "Third World",Callback = function()getgenv().Server("Trav
 Maps:AddSection({"- [ NPCs ] -"})
 Dropdown(Maps, "Select NPCs", "", getgenv().TableNPCs, "")
 Toggle(Maps, "Tween To NPCs", "", false)
+
 local Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"})
 Shop:AddSection({"- [ Other ] -"})
 Toggle(Shop, "Auto Buy Legendary Sword", "", false)
@@ -336,6 +343,7 @@ DevilFruit:AddSection({"- [ Fruit ] -"})
 Toggle(DevilFruit, "Auto Store Fruit", "", false)
 Toggle(DevilFruit, "Auto Random Fruit", "", false)
 Toggle(DevilFruit, "Auto Find Fruit", "", false)
+
 local PvP = Window:MakeTab({"PvP", "rbxassetid://16053202595"})
 PvP:AddSection({"- [ Config PvP ] -"})
 Dropdown(PvP, "Choose PvP", "", {"Neareast", "Select Player"}, "Neareast")
@@ -343,6 +351,7 @@ Dropdown(PvP, "Choose Kill", "", {"Skill", "Click"}, "Click")
 Dropdown(PvP, "Choose Skill Equip", "", {"Melee","Sword","Blox Fruit","Gun", "Random Equip"}, "Blox Fruit")
 local Update1 = Dropdown(PvP, "Select Player", "", getgenv().TablePlayer, "")
 PvP:AddButton({Name = "Refersh Player", Description = "", Callback = function()
+  Update1:Remove(getgenv().TablePlayer)
   Update1:Set(getgenv().TablePlayer)
 end})
 PvP:AddSection({"- [ Farming PvP ] -"})
@@ -354,10 +363,14 @@ PvP:AddSection({"- [ Settings Skill PvP ] -"})
 Toggle(PvP, "Skill Z (PvP)", "", true)Toggle(PvP, "Skill X (PvP)", "", true)Toggle(PvP, "Skill C (PvP)", "", true)Toggle(PvP, "Skill V (PvP)", "", true)Toggle(PvP, "Skill F (PvP)", "", true)
 PvP:AddSection({"- [ Aim ] -"})
 Toggle(PvP, "Silent Aim", "", false)
+Toggle(PvP, "Aimlock", "", false)
 Toggle(PvP, "Silent Aim (Gun)", "", false)
+PvP:AddSection({"- [ Gun ] -"})
+Toggle(PvP, "Auto Shoot Player (Gun)", "", false)
 PvP:AddSection({"- [ Misc ] -"})
 Toggle(PvP, "Auto Enable PvP", "", false)
 Toggle(PvP, "Auto Use Ken", "", false)
+
 if World2 or World3 then
   local Raid = Window:MakeTab({"Raid", "rbxassetid://11446957539"})
   Dropdown(Raid, "Select Chips", "", getgenv().ListChips, "")
@@ -370,7 +383,7 @@ if World2 or World3 then
   local SetUpdateMoon = RaceV4:AddSection({"Status"})
   getgenv().CheckMoon(SetUpdateMoon)
   task.spawn(function()
-    while task.wait(1) do
+    while task.wait(2) do
       if getgenv().VerifyIsland("Mirage Island Path") then
         FindMirage:Set("Mirage Island : Spawned ")
       else
@@ -379,7 +392,7 @@ if World2 or World3 then
     end
   end)
   task.spawn(function()
-    while task.wait(1) do
+    while task.wait(2) do
       if CommF_:InvokeServer("CheckTempleDoor") then
         FindMiragePuzzle:Set("Mirage Puzzle : Spawned ")
       else
@@ -406,6 +419,7 @@ if World2 or World3 then
   Dropdown(RaceV4, "Select Tween Race", "", {"Top Great Tree","Timple Of Time","Lever Pull", "Acient One", "Cyborg Door", "Fish Door", "Ghoul Door", "Human Door", "Mink Door", "Sky Door"}, "Timple Of Time")
   Toggle(RaceV4, "Tween On Select Tween Race", "", false)
 end
+
 local ESP = Window:MakeTab({"ESP", "mountain-snow"})
 Toggle(ESP, "ESP Player", "", false)
 Toggle(ESP, "ESP Chest", "", false)
@@ -416,6 +430,7 @@ elseif World3 then
   Toggle(ESP, "ESP Mirage Island", "", false)
   Toggle(ESP, "ESP Kitsune Island", "", false)
 end
+
 local Misc = Window:MakeTab({"Miscellaneous", "rbxassetid://11447063791"})
 Misc:AddSection({"- [ Server ] -"})
 Misc:AddButton({Name = "Server Hop",Callback = function()getgenv().Server("Hop")end})
@@ -428,12 +443,14 @@ Misc:AddSection({"- [ Menu UI ] -"})
 Misc:AddButton({Name = "Devil Fruit Shop",Callback = function()CommF_:InvokeServer("GetFruits")Player.PlayerGui.Main.FruitShop.Visible = true end})
 Misc:AddButton({Name = "Titles",Callback = function()CommF_:InvokeServer("getTitles")Player.PlayerGui.Main.Titles.Visible = true end})
 Misc:AddButton({Name = "Haki Color",Callback = function()Player.PlayerGui.Main.Colors.Visible = true end})
+
 Misc:AddSection({"Codes"})
 Misc:AddButton({Name = "Redeem Codes",Callback = function()
   for _, CodeFunc in pairs({"NEWTROLL","KITT_RESET","Sub2Fer999","Magicbus","kittgaming","SECRET_ADMIN","EXP_5B","CONTROL","UPDATE11","XMASEXP","1BILLION","ShutDownFix2","UPD14","STRAWHATMAINE","TantaiGaming","Colosseum","Axiore","Sub2Daigrock","Sky Island 3","Sub2OfficialNoobie","SUB2NOOBMASTER123","THEGREATACE","Fountain City","BIGNEWS","FUDD10","SUB2GAMERROBOT_EXP1","UPD15","2BILLION","UPD16","3BVISITS","Starcodeheo","Bluxxy","DRAGONABUSE","Sub2CaptainMaui","DEVSCOOKING","Enyu_is_Pro","JCWK","Starcodeheo","Bluxxy","fudd10_v2","SUB2GAMERROBOT_EXP1","Sub2NoobMaster123","Sub2UncleKizaru","Sub2Daigrock","Axiore","TantaiGaming","StrawHatMaine"}) do
     Remotes.Redeem:InvokeServer(CodeFunc)
   end
 end})
+
 Misc:AddSection({"- [ Remove ] -"})
 Toggle(Misc, "Remove Damage", "", false)
 Toggle(Misc, "Remove Notifications", "", false)
