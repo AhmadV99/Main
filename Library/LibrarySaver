@@ -1,0 +1,54 @@
+local SPD = {}
+
+local HttpService = game:GetService("HttpService")
+
+SPD.ReadData = function(foldername, filename)
+    local fullPath = foldername.."/"..filename..".json"
+    if isfolder(foldername) and isfile(fullPath) then
+        return HttpService:JSONDecode(readfile(fullPath))
+    end
+    return false
+end
+
+SPD.Save = function(foldername, filename, filecontent)
+    local fullPath = foldername.."/"..filename..".json"
+    local jsonContent = HttpService:JSONEncode(filecontent)
+    if not isfolder(foldername) then
+        makefolder(foldername)
+    end
+    writefile(fullPath, jsonContent)
+end
+
+SPD.Load = function(foldername, filename, tabs)
+    local UIConfig = SPD.ReadData(foldername, filename)
+    if UIConfig then
+        for NameTab, TabFunc in pairs(tabs) do
+            local tabConfig = UIConfig[NameTab]
+            if tabConfig then
+                for NameItem, Item in pairs(TabFunc) do
+                    local itemConfig = tabConfig[NameItem]
+                    if type(Item) == "table" and itemConfig and Item.Type == itemConfig.Type then
+                        if Item.Type == "Dropdown" then
+                            Item:Refresh(itemConfig.Options, itemConfig.Value)
+                        elseif Item.Type ~= "Button" and itemConfig.Value ~= Item.Value then
+                            Item:Set(itemConfig.Value)
+                        end
+                        local settings = Item["Setting Item"]
+                        if settings then
+                            for i, v in pairs(settings) do
+                                local settingConfig = itemConfig["Setting Item"]
+                                if settingConfig and settingConfig[i] and settingConfig[i] ~= v.Value then
+                                    v:Set(settingConfig[i].Value)
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    else
+        SPD.Save(foldername, filename, tabs)
+    end
+end
+
+return SPD
