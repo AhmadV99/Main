@@ -92,3 +92,5 @@ local _home = Window:MakeTab("Home") do
     Funcs:AddTextbox(_tweenconfig, "Tween Speed", "", false)
   end
 end
+
+return SpeedHubX
