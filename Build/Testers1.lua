@@ -21,7 +21,9 @@ local Funcs = {} do
       ["Title"] = Name,
       ["Content"] = Content,
       ["Default"] = Default,
-      ["Callback"] = SpeedHubX[Name]["Callback"],
+      ["Callback"] = function(Value)
+        SpeedHubX[Name] = Value
+      end,
       ["Flag"] = "SPD/Toggle/" .. tostring(Name)
     })
   end
@@ -34,7 +36,7 @@ local Funcs = {} do
       ["Default"] = Default,
       ["PlaceHolderText"] = "Select Options",
       ["Callback"] = function(Value)
-        SpeedHubX[Name]["Dropdown"] = Value
+        SpeedHubX[Name] = Value
       end
     })
   end
@@ -47,7 +49,9 @@ local Funcs = {} do
       ["Max"] = Max,
       ["Increment"] = Increment,
       ["Default"] = Default,
-      ["Callback"] = SpeedHubX[Name]["Callback"]
+      ["Callback"] = function(Value)
+        SpeedHubX[Name] = Value
+      end
     })
   end
 
@@ -57,7 +61,9 @@ local Funcs = {} do
       ["Content"] = Content,
       ["PlaceHolderText"] = "Enter your text here...",
       ["ClearTextOnFocus"] = ClearText,
-      ["Callback"] = SpeedHubX[Name]["Callback"]
+      ["Callback"] = function(Value)
+        SpeedHubX[Name] = Value
+      end
     })
   end
 
@@ -65,7 +71,7 @@ local Funcs = {} do
     return Section:Button({
       ["Title"] = Name,
       ["Content"] = Content,
-      ["Callback"] = Callback or SpeedHubX[Name]["Callback"]
+      ["Callback"] = Callback
     })  
   end
 end
