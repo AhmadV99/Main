@@ -81,19 +81,24 @@ local _home = Window:MakeTab("Home") do
     Funcs:AddButton(_info, "Discord Invite", "Click to copy invite server", function()
       _setclipboard(Discord)
     end)
+
+    _info:Seperator("Status")
+
+    local _timeServer = _info:Paragraph({["Title"] = "Time Server", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        _timeServer:Set({
+          ["Title"] = "Time Server",
+          ["Content"] = tostring(Lighting.TimeOfDay)
+        })
+      end
+    end)
   end
 
-  _info:Seperator("Status")
-
-  local _timeServer = _info:Paragraph({["Title"] = "Time Server", ["Content"] = "" })
-  task.spawn(function()
-    while task.wait(2) do
-      _timeServer:Set({
-        ["Title"] = "Time Server",
-        ["Content"] = tostring(Lighting.TimeOfDay)
-      })
-    end
-  end)
+  local _localplayer = _home:Section({["Title"] = "LocalPlayer", ["Content"] = ""}) do
+    Funcs:AddSlider(_localplayer, "Set WalkSpeed", "", 0, 500, 0, 300)
+    Funcs:AddTextbox(_localplayer, "Enable WalkSpeed", "", false)
+  end
 
   local _tweenconfig = _home:Section({["Title"] = "Tween Config", ["Content"] = ""}) do
     Funcs:AddDropdown(_tweenconfig, "Choose Tween Mode", false, {"Smooth", "Normal"}, {"Smooth"})
