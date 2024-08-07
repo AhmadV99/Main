@@ -2,9 +2,10 @@ local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
+local HttpService = game:GetService("HttpService")
 
 local CoreGui = game:GetService("CoreGui") or gethui() or (function()
-    return clonerf(game:GetService("CoreGui")) or game:GetService("CoreGui"):Clone()
+    return clonerf and clonerf(game:GetService("CoreGui")) or game:GetService("CoreGui"):Clone()
 end)()
 
 local function MakeDraggable(topbarobject, object)
@@ -456,6 +457,39 @@ function SpeedHubLib:Start(GuiConfig)
 	GuiConfig["Tab Width"] = GuiConfig["Tab Width"] or 135
 	GuiConfig["Color"] = GuiConfig["Color"] or Color3.fromRGB(224, 7, 43)
 	GuiConfig["CloseCallBack"] = GuiConfig["CloseCallBack"] or function() end
+    GuiConfig["SaveFolder"] = GuiConfig["SaveFolder"] or false
+    local Flags = SpeedHubLib and SpeedHubLib.Flags or {}
+
+    if GuiConfig["SaveFolder"] and type(GuiConfig["SaveFolder"]) == "string" then GuiConfig["SaveFolder"] = string.gsub(GuiConfig["SaveFolder"], "/", "|")end
+
+    local function SaveFile(Name, Value)
+        if writefile then
+            if GuiConfig["SaveFolder"] and type(GuiConfig["SaveFolder"]) == "string" then
+                Flags[Name] = Value
+            
+                local encode = HttpService:JSONEncode(Flags)
+            
+                pcall(writefile, GuiConfig["SaveFolder"], encode)
+            end
+        end
+    end
+
+    local function LoadFile()
+        if GuiConfig["SaveFolder"] and type(GuiConfig["SaveFolder"]) == "string" then
+            if readfile and isfile and isfile(GuiConfig["SaveFolder"]) then
+                local success, Src = pcall(readfile, GuiConfig["SaveFolder"])
+            
+                if success and type(Src) == "string" then
+                    Src = HttpService:JSONDecode(Src)
+              
+                    if type(Src) == "table" then
+                        Flags = Src
+                    end
+                end
+            end
+        end
+    end;LoadFile()
+
     --// Gui
     local SpeedGui = Instance.new("ScreenGui");
     local Main = Instance.new("Frame");
@@ -467,10 +501,17 @@ function SpeedHubLib:Start(GuiConfig)
     local CloseImage = Instance.new("ImageLabel");
     local DropShadowHolder = Instance.new("Frame");
     local DropShadow = Instance.new("ImageLabel");
+    local MinimizeButton = Instance.new("ImageButton")
+    local UICornerMinimize = Instance.new("UICorner")
 
     SpeedGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     SpeedGui.Name = "SpeedGui"
     SpeedGui.Parent = CoreGui
+
+    local ScreenFind = CoreGui:FindFirstChild(SpeedGui.Name)
+    if ScreenFind and ScreenFind ~= SpeedGui then
+        ScreenFind:Destroy()  
+    end
 
     Main.AnchorPoint = Vector2.new(0, 0)
     Main.BackgroundColor3 = Color3.fromRGB(45.00000111758709, 45.00000111758709, 45.00000111758709)
@@ -569,28 +610,6 @@ function SpeedHubLib:Start(GuiConfig)
 
     MakeDraggable(Top, Main)
 
-    -- // Toggle Ui
-    local MinimizeButton = Instance.new("ImageButton")
-    local UICorner = Instance.new("UICorner")
-
-    MinimizeButton.Size = UDim2.fromOffset(35, 35)
-    MinimizeButton.Position = UDim2.fromScale(0.17, 0.15)
-    MinimizeButton.BackgroundTransparency = 1
-    MinimizeButton.Image = "rbxassetid://16022917595"
-    MinimizeButton.BackgroundColor3 = GuiConfig["Color"]
-    MinimizeButton.AutoButtonColor = false
-    MinimizeButton.Draggable = true
-    MinimizeButton.Active = true
-    MinimizeButton.Selectable = true
-    MinimizeButton.Parent = SpeedGui
-
-    MinimizeButton.MouseButton1:Connect(function()
-        Main.Visible = not Main.Visible
-    end)
-
-    UICorner.CornerRadius = UDim.new(0, 5)
-    UICorner.Parent = MinimizeButton
-
     function SpeedHubLib:ToggleUI()
         Main.Visible = not Main.Visible
     end
@@ -604,6 +623,22 @@ function SpeedHubLib:Start(GuiConfig)
         SpeedHubLib:CloseUI()
         GuiConfig.CloseCallBack()
     end)
+    
+    MinimizeButton.Size = UDim2.fromOffset(35, 35)
+    MinimizeButton.Position = UDim2.fromScale(0.17, 0.15)
+    MinimizeButton.BackgroundTransparency = 1
+    MinimizeButton.Image = "rbxassetid://16022917595"
+    MinimizeButton.BackgroundColor3 = GuiConfig["Color"]
+    MinimizeButton.AutoButtonColor = false
+    MinimizeButton.Draggable = true
+    MinimizeButton.Active = true
+    MinimizeButton.Selectable = true
+    MinimizeButton.Parent = SpeedGui
+
+    UICornerMinimize.CornerRadius = UDim.new(0, 5)
+    UICornerMinimize.Parent = MinimizeButton  
+    
+    --MinimizeButton.MouseButton1:Connect(SpeedHubLib.ToggleUI)
 
     --// Tab
     local LayersTab = Instance.new("Frame");
@@ -1634,6 +1669,7 @@ function SpeedHubLib:Start(GuiConfig)
                 ToggleConfig.Content = ToggleConfig.Content or ""
                 ToggleConfig.Default = ToggleConfig.Default or false
                 ToggleConfig.Callback = ToggleConfig.Callback or function() end
+                ToggleConfig.Flag = ToggleConfig.Flag or false
                 local ToggleFunc = {Value = ToggleConfig.Default}
 
                 local Toggle = Instance.new("Frame");
@@ -1789,10 +1825,16 @@ function SpeedHubLib:Start(GuiConfig)
                     ToggleFunc.Value = Value
                     ToggleConfig.Callback(Value)
                 end
+                if ToggleConfig.Flag and type(ToggleConfig.Flag) == "string" and Flags and rawget(Flags, ToggleConfig.Flag) then
+                    ToggleFunc:Set(Flags[ToggleConfig.Flag])
+                end
                 EnterMouse(Toggle)
                 ToggleButton.Activated:Connect(function()
                     ToggleFunc.Value = not ToggleFunc.Value
                     ToggleFunc:Set(ToggleFunc.Value)
+                    if ToggleConfig.Flag and typeof(ToggleConfig.Flag) == "string" then
+                        SaveFile(ToggleConfig.Flag, ToggleFunc.Value)
+                    end
                 end)
                 ToggleFunc:Set(ToggleFunc.Value)
                 CountItem = CountItem + 1    
@@ -1972,10 +2014,10 @@ function SpeedHubLib:Start(GuiConfig)
 				DropdownConfig.Multi = DropdownConfig.Multi or false
 				DropdownConfig.Options = DropdownConfig.Options or {}
 				DropdownConfig.Default = DropdownConfig.Default or {}
-                DropdownConfig["Place Holder Text"] = DropdownConfig["Place Holder Text"] or "Select Options"
+                DropdownConfig["Place Holder Text"] = DropdownConfig["Place Holder Text"] or ""
 				DropdownConfig.Callback = DropdownConfig.Callback or function() end
 				local DropdownFunc = {Value = DropdownConfig.Default, Options = DropdownConfig.Options}
-                
+
                 local Dropdown = Instance.new("Frame");
                 local UICorner18 = Instance.new("UICorner");
                 local DropdownTitle = Instance.new("TextLabel");
@@ -2001,6 +2043,7 @@ function SpeedHubLib:Start(GuiConfig)
                 Dropdown:GetPropertyChangedSignal("Size"):Connect(function()
                     UpSize(ScrollLayer1)
                 end)
+
                 UICorner18.CornerRadius = UDim.new(0, 3)
                 UICorner18.Parent = Dropdown
 
