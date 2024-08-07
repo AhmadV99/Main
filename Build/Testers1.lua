@@ -17,27 +17,30 @@ local SpeedHubX = {}
 
 local Funcs = {} do
   function Funcs:AddToggle(Section, Name, Content, Default)
+    if not SpeedHubX[Name] then SpeedHubX[Name] = {["Callback"] = function() end} end
     return Section:Toggle({
-      ["Title"]= Name,
+      ["Title"] = Name,
       ["Content"] = Content,
       ["Default"] = Default,
-      ["Callback"] = SpeedHubX[Name].Callback,
+      ["Callback"] = SpeedHubX[Name]["Callback"],
       ["Flag"] = "SPD/Toggle/" .. tostring(Name)
     })
   end
 
   function Funcs:AddDropdown(Section, Name, Multi, Options, Default)
+    if not SpeedHubX[Name] then SpeedHubX[Name] = {["Callback"] = function() end} end
     return Section:Dropdown({
       ["Title"] = Name,
       ["Multi"] = Multi,
       ["Options"] = Options,
       ["Default"] = Default,
       ["PlaceHolderText"] = "Select Options",
-      ["Callback"] = SpeedHubX[Name].Callback
+      ["Callback"] = SpeedHubX[Name]["Callback"]
     })
   end
 
   function Funcs:AddSlider(Section, Name, Content, Min, Max, Increment, Default)
+    if not SpeedHubX[Name] then SpeedHubX[Name] = {["Callback"] = function() end} end
     return Section:Slider({
       ["Title"] = Name,
       ["Content"] = Content,
@@ -45,25 +48,27 @@ local Funcs = {} do
       ["Max"] = Max,
       ["Increment"] = Increment,
       ["Default"] = Default,
-      ["Callback"] = SpeedHubX[Name].Callback
+      ["Callback"] = SpeedHubX[Name]["Callback"]
     })
   end
 
   function Funcs:AddTextbox(Section, Name, Content, ClearText)
+    if not SpeedHubX[Name] then SpeedHubX[Name] = {["Callback"] = function() end} end
     return Section:TextInput({
       ["Title"] = Name,
       ["Content"] = Content,
       ["PlaceHolderText"] = "Enter your text here...",
       ["ClearTextOnFocus"] = ClearText,
-      ["Callback"] = SpeedHubX[Name].Callback
+      ["Callback"] = SpeedHubX[Name]["Callback"]
     })
   end
 
   function Funcs:AddButton(Section, Name, Content, Callback)
+    if not SpeedHubX[Name] then SpeedHubX[Name] = {["Callback"] = function() end} end
     return Section:Button({
       ["Title"] = Name,
       ["Content"] = Content,
-      ["Callback"] = Callback or SpeedHubX[Name].Callback
+      ["Callback"] = Callback or SpeedHubX[Name]["Callback"]
     })  
   end
 end
