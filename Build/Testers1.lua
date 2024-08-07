@@ -98,6 +98,9 @@ local _home = Window:MakeTab("Home") do
   local _localplayer = _home:Section({["Title"] = "LocalPlayer", ["Content"] = ""}) do
     Funcs:AddTextbox(_localplayer, "Set WalkSpeed", "", false)
     Funcs:AddToggle(_localplayer, "Enable WalkSpeed", "", false)
+    Funcs:AddToggle(_localplayer, "Anti-Knockback", "", false)
+    Funcs:AddToggle(_localplayer, "Anti-Busy", "", true)
+    Funcs:AddToggle(_localplayer, "No Clip", "", false)
   end
 
   local _tweenconfig = _home:Section({["Title"] = "Tween Config", ["Content"] = ""}) do
