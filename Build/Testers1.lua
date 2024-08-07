@@ -103,17 +103,12 @@ local _home = Window:MakeTab("Home") do
     Funcs:AddToggle(_localplayer, "Enable WalkSpeed", "", false)
     Funcs:AddToggle(_localplayer, "Anti-Knockback", "", false)
     Funcs:AddToggle(_localplayer, "Anti-Busy", "", true)
-    Funcs:AddToggle(_localplayer, "No Clip", "", false)
-  end
-
-  local _tweenconfig = _home:Section({["Title"] = "Tween Config", ["Content"] = ""}) do
-    Funcs:AddDropdown(_tweenconfig, "Choose Tween Mode", false, {"Smooth", "Normal"}, {"Smooth"})
-    Funcs:AddTextbox(_tweenconfig, "Tween Speed", "", 200, false)
   end
 
   local _config = _home:Section({["Title"] = "Config", ["Content"] = ""}) do
     Funcs:AddDropdown(_config, "Weapon Tool", false, {"Melee","Sword","Blox Fruit","Gun"}, {"Melee"})
     Funcs:AddTextbox(_config, "Farm Distance", "", 40, false)
+    Funcs:AddTextbox(_config, "Tween Speed", "", 200, false)
     Funcs:AddToggle(_config, "Bring Mob", "", true)
     Funcs:AddTextbox(_config, "Bring Mob Radius", "", 40, false)
     Funcs:AddToggle(_config, "Fast Attack", "", true)
