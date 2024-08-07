@@ -96,8 +96,8 @@ local _home = Window:MakeTab("Home") do
   end
 
   local _localplayer = _home:Section({["Title"] = "LocalPlayer", ["Content"] = ""}) do
-    Funcs:AddSlider(_localplayer, "Set WalkSpeed", "", 0, 500, 0, 300)
-    Funcs:AddTextbox(_localplayer, "Enable WalkSpeed", "", false)
+    Funcs:AddTextbox(_localplayer, "Set WalkSpeed", "", false)
+    Funcs:AddToggle(_localplayer, "Enable WalkSpeed", "", false)
   end
 
   local _tweenconfig = _home:Section({["Title"] = "Tween Config", ["Content"] = ""}) do
