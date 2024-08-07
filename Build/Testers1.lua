@@ -17,7 +17,6 @@ local SpeedHubX = {}
 
 local Funcs = {} do
   function Funcs:AddToggle(Section, Name, Content, Default)
-    if not SpeedHubX[Name] then SpeedHubX[Name] = {["Callback"] = function() end} end
     return Section:Toggle({
       ["Title"] = Name,
       ["Content"] = Content,
@@ -28,19 +27,19 @@ local Funcs = {} do
   end
 
   function Funcs:AddDropdown(Section, Name, Multi, Options, Default)
-    if not SpeedHubX[Name] then SpeedHubX[Name] = {["Callback"] = function() end} end
     return Section:Dropdown({
       ["Title"] = Name,
       ["Multi"] = Multi,
       ["Options"] = Options,
       ["Default"] = Default,
       ["PlaceHolderText"] = "Select Options",
-      ["Callback"] = SpeedHubX[Name]["Callback"]
+      ["Callback"] = function(Value)
+        SpeedHubX[Name]["Dropdown"] = Value
+      end
     })
   end
 
   function Funcs:AddSlider(Section, Name, Content, Min, Max, Increment, Default)
-    if not SpeedHubX[Name] then SpeedHubX[Name] = {["Callback"] = function() end} end
     return Section:Slider({
       ["Title"] = Name,
       ["Content"] = Content,
@@ -53,7 +52,6 @@ local Funcs = {} do
   end
 
   function Funcs:AddTextbox(Section, Name, Content, ClearText)
-    if not SpeedHubX[Name] then SpeedHubX[Name] = {["Callback"] = function() end} end
     return Section:TextInput({
       ["Title"] = Name,
       ["Content"] = Content,
@@ -64,7 +62,6 @@ local Funcs = {} do
   end
 
   function Funcs:AddButton(Section, Name, Content, Callback)
-    if not SpeedHubX[Name] then SpeedHubX[Name] = {["Callback"] = function() end} end
     return Section:Button({
       ["Title"] = Name,
       ["Content"] = Content,
@@ -93,7 +90,7 @@ local _home = Window:MakeTab("Home") do
   end)
 
   local _tweenconfig = _home:Section({["Title"] = "Tween Config", ["Content"] = ""}) do
-    Funcs:AddDropdown(_tweenconfig, "Choose Tween Mode", false, {"Smooth", "Normal"}, "Smooth")
+    Funcs:AddDropdown(_tweenconfig, "Choose Tween Mode", true, {"Smooth", "Normal"}, "Smooth")
     Funcs:AddTextbox(_tweenconfig, "Tween Speed", "", false)
   end
 end
