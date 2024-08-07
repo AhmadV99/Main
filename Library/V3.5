@@ -625,7 +625,7 @@ function SpeedHubLib:Start(GuiConfig)
     end)
     
     MinimizeButton.Size = UDim2.fromOffset(35, 35)
-    MinimizeButton.Position = UDim2.fromScale(0.17, 0.15)
+    MinimizeButton.Position = UDim2.fromScale(0.15, 0.20)
     MinimizeButton.BackgroundTransparency = 1
     MinimizeButton.Image = "rbxassetid://16022917595"
     MinimizeButton.BackgroundColor3 = GuiConfig["Color"]
@@ -638,7 +638,7 @@ function SpeedHubLib:Start(GuiConfig)
     UICornerMinimize.CornerRadius = UDim.new(0, 5)
     UICornerMinimize.Parent = MinimizeButton  
     
-    --MinimizeButton.MouseButton1:Connect(SpeedHubLib.ToggleUI)
+    MinimizeButton.MouseButton1Click:Connect(SpeedHubLib.ToggleUI)
 
     --// Tab
     local LayersTab = Instance.new("Frame");
