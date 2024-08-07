@@ -74,7 +74,7 @@ local Funcs = {} do
     return Section:Button({
       ["Title"] = Name,
       ["Content"] = Content,
-      ["Callback"] = Callback or SpeedHubX[Name]
+      ["Callback"] = Callback
     })  
   end
 end
