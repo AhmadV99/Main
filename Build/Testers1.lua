@@ -90,7 +90,7 @@ local _home = Window:MakeTab("Home") do
   end)
 
   local _tweenconfig = _home:Section({["Title"] = "Tween Config", ["Content"] = ""}) do
-    Funcs:AddDropdown(_tweenconfig, "Choose Tween Mode", true, {"Smooth", "Normal"}, "Smooth")
+    Funcs:AddDropdown(_tweenconfig, "Choose Tween Mode", false, {"Smooth", "Normal"}, {"Smooth"})
     Funcs:AddTextbox(_tweenconfig, "Tween Speed", "", false)
   end
 end
