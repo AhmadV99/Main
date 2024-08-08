@@ -16,6 +16,8 @@ local Player = Players.LocalPlayer
 local Enemies = Workspace:WaitForChild("Enemies")
 
 local _setclipboard = setclipboard or function() end
+local _hookfunction = hookfunction or hookfunc or function() end
+local _require = require or function() end
 local _env = getgenv and getgenv() or {}
 
 local Sea = {
@@ -23,6 +25,20 @@ local Sea = {
   [2] = game.PlaceId == 4442272183,
   [3] = game.PlaceId == 7449423635
 }
+
+task.spawn(function()
+  local Container = ReplicatedStorage:WaitForChild("Effect"):WaitForChild("Container")
+
+  local CameraShaker = _require(ReplicatedStorage.Util.CameraShaker)
+  local Death = _require(Container:FindFirstChild("Death"))
+  local Respawn = _require(Container:FindFirstChild("Respawn"))
+  local DisplayNPC = _require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
+
+  _hookfunction(Death, function()return nil end)
+  _hookfunction(Respawn, function()return nil end)
+  _hookfunction(DisplayNPC, function()return nil end)
+  CameraShaker:Stop()
+end)
 
 local BossTable = {}
   
@@ -45,7 +61,6 @@ elseif Sea[2] then
 elseif Sea[3] then
   _env.MaterialList = {"Leather + Scrap Metal", "Fish Tail", "Gunpowder", "Mini Tusk", "Conjured Cocoa", "Dragon Scale"}
 end
-
 
 local SpeedHubX = {}
 
@@ -70,7 +85,11 @@ local Funcs = {} do
       ["Default"] = Default,
       ["PlaceHolderText"] = "Select Options",
       ["Callback"] = function(Value)
-        SpeedHubX[Name] = Value
+        if type(Value) == "table" then
+          for _, v in pairs(Value) do
+            SpeedHubX[Name] = v
+          end
+        end
       end
     })
   end
@@ -234,5 +253,3 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
   end
 end
-
-return SpeedHubX
