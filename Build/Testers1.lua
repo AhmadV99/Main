@@ -10,9 +10,10 @@ local Players = game:GetService("Players")
 local Lighting = game:GetService("Lighting")
 local TeleportService = game:GetService("TeleportService")
 local Workspace = game:GetService("Workspace")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Player = Players.LocalPlayer
-local Enemies = Workspace.Enemies
+local Enemies = Workspace:WaitForChild("Enemies")
 
 local _setclipboard = setclipboard or function() end
 local _env = getgenv and getgenv() or {}
