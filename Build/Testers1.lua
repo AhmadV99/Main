@@ -253,3 +253,5 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
   end
 end
+
+return SpeedHubX
