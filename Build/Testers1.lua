@@ -219,7 +219,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_farmingboss, "No Quest Boss", "", false)
     Funcs:AddToggle(_farmingboss, "Take Quest Boss", "", false)
     local BossList = Funcs:AddDropdown(_farmingboss, "Select Boss", false, BossTable, {""})
-    Funcs:AddButton(_server, "Refresh Boss", "", function()
+    Funcs:AddButton(_farmingboss, "Refresh Boss", "", function()
       BossList:Clear()
       BossList:Set(BossTable)
     end)
