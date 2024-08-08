@@ -4,9 +4,7 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
 
-local CoreGui = game:GetService("CoreGui") or gethui() or (function()
-    return clonerf and clonerf(game:GetService("CoreGui")) or game:GetService("CoreGui"):Clone()
-end)()
+local CoreGui = (game:GetService("RunService"):IsStudio() and LocalPlayer.PlayerGui) or (gethui() or game:GetService("CoreGui"):Clone())
 
 local function MakeDraggable(topbarobject, object)
 	local function CustomPos(topbarobject, object)
