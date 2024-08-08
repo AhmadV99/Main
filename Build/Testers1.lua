@@ -99,7 +99,7 @@ local _home = Window:MakeTab("Home") do
   end
 
   local _localplayer = _home:Section({["Title"] = "LocalPlayer", ["Content"] = ""}) do
-    Funcs:AddTextbox(_localplayer, "Set WalkSpeed", "", 300, false)
+    Funcs:AddDropdown(_localplayer, "Set WalkSpeed", false, {"100", "200", "300", "400", "500"}, {"300"})
     Funcs:AddToggle(_localplayer, "Enable WalkSpeed", "", false)
     Funcs:AddToggle(_localplayer, "Anti-Knockback", "", false)
     Funcs:AddToggle(_localplayer, "Anti-Busy", "", true)
@@ -107,12 +107,12 @@ local _home = Window:MakeTab("Home") do
 
   local _config = _home:Section({["Title"] = "Config", ["Content"] = ""}) do
     Funcs:AddDropdown(_config, "Weapon Tool", false, {"Melee","Sword","Blox Fruit","Gun"}, {"Melee"})
-    Funcs:AddTextbox(_config, "Farm Distance", "", 40, false)
-    Funcs:AddTextbox(_config, "Tween Speed", "", 200, false)
+    Funcs:AddDropdown(_config, "Farm Distance", false, {"10", "20", "30", "40", "50", "60"}, {"40"})
+    Funcs:AddDropdown(_config, "Tween Speed", false, {"100", "200", "300", "400", "500"}, {"200"})
     Funcs:AddToggle(_config, "Bring Mob", "", true)
-    Funcs:AddTextbox(_config, "Bring Mob Radius", "", 200, false)
+    Funcs:AddDropdown(_config, "Bring Mob Radius", false, {"100", "200", "300", "400", "500"}, {"200"})
     Funcs:AddToggle(_config, "Fast Attack", "", true)
-    Funcs:AddTextbox(_config, "Fast Attack Delay", "", 0, false)
+    Funcs:AddDropdown(_config, "Fast Attack Delay", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     Funcs:AddToggle(_config, "Hop if Admin or Staff", "", true)
     Funcs:AddToggle(_config, "Auto Dodge Skill", "", false)
     _config:Seperator("Active Race")
@@ -121,7 +121,7 @@ local _home = Window:MakeTab("Home") do
   end
 
   local _server = _home:Section({["Title"] = "Server Games", ["Content"] = ""}) do
-    Funcs:AddDropdown(_server, "Count Player", false, {"1","2","3 4","5","6","7","8","9","10","11","12"}, {"10"})
+    Funcs:AddDropdown(_server, "Count Player", false, {"1","2","3","4","5","6","7","8","9","10","11","12"}, {"5"})
     Funcs:AddButton(_server, "Hop Server On Count Player", "", function()
       _env.ServerHop("Singapore", tonumber(SpeedHubX["Count Player"]))
     end)
