@@ -9,9 +9,10 @@ local Window = Library:Start({
 local Players = game:GetService("Players")
 local Lighting = game:GetService("Lighting")
 local TeleportService = game:GetService("TeleportService")
+local Workspace = game:GetService("Workspace")
 
 local Player = Players.LocalPlayer
-local Enemies = workspace:WaitForChild("Enemies")
+local Enemies = Workspace.Enemies
 
 local _setclipboard = setclipboard or function() end
 local _env = getgenv and getgenv() or {}
