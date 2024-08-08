@@ -221,7 +221,7 @@ local _main = Window:MakeTab("Main") do
     local BossList = Funcs:AddDropdown(_farmingboss, "Select Boss", false, BossTable, {""})
     Funcs:AddButton(_farmingboss, "Refresh Boss", "", function()
       BossList:Clear()
-      BossList:Set(BossTable)
+      BossList:Refresh(BossTable, {""})
     end)
     _farmingboss:Seperator("Farming Boss")
     Funcs:AddToggle(_farmingboss, "Auto Attack Boss", "", false)
@@ -229,7 +229,7 @@ local _main = Window:MakeTab("Main") do
   end
   local _farmingmaterial = _main:Section({["Title"] = "Farming Material", ["Content"] = ""}) do
     _farmingmaterial:Seperator("Config Material")
-    Funcs:AddDropdown(_farmingmaterial, "Select Material", false, {_env.MaterialList}, {""})
+    Funcs:AddDropdown(_farmingmaterial, "Select Material", false, _env.MaterialList, {""})
     _farmingmaterial:Seperator("Farming Material")
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
   end
