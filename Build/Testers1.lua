@@ -161,6 +161,7 @@ local _home = Window:MakeTab("Home") do
     Funcs:AddDropdown(_config, "Weapon Tool", false, {"Melee","Sword","Blox Fruit","Gun"}, {"Melee"})
     _config:Seperator("Tween/Distance")
     Funcs:AddDropdown(_config, "Farm Distance", false, {"10", "20", "30", "40", "50", "60"}, {"40"})
+    Funcs:AddDropdown(_config, "Choose Tween Mode", false, {"Smooth", "Normal"}, {"Smooth"})
     Funcs:AddDropdown(_config, "Tween Speed", false, {"100", "200", "300", "400", "500"}, {"200"})
     _config:Seperator("Bring Mob")
     Funcs:AddToggle(_config, "Bring Mob", "", true)
@@ -253,5 +254,3 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
   end
 end
-
-return SpeedHubX
