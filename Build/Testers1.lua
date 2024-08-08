@@ -11,6 +11,7 @@ local Lighting = game:GetService("Lighting")
 local TeleportService = game:GetService("TeleportService")
 
 local Player = Players.LocalPlayer
+local Enemies = workspace:WaitForChild("Enemies")
 
 local _setclipboard = setclipboard or function() end
 local _env = getgenv and getgenv() or {}
@@ -191,12 +192,12 @@ local _main = Window:MakeTab("Main") do
     _farmingnear:Seperator("Config Neareast")
     Funcs:AddDropdown(_farmingnear, "Neareast Range", false, {"1000","2000","3000","infinite"}, {"2000"})
     _farmingnear:Seperator("Farming")
-    Funcs:AddToggle(_farminglv, "Auto Farm Neareast", "", false)
+    Funcs:AddToggle(_farmingnear, "Auto Farm Neareast", "", false)
   end
   local _farmingmastery = _main:Section({["Title"] = "Farming Mastery", ["Content"] = ""}) do
     _farmingmastery:Seperator("Config Mastery")
     Funcs:AddDropdown(_farmingmastery, "Choose Mastery Mode", false, {"Level","Bone","Cake Prince","Nearest"}, {"Level"})
-    Funcs:AddDropdown(_farmingmastery, "Choose Mastery Tool", false, {"Blox Fruit", "Sword", "Gun"}, {"Level"})
+    Funcs:AddDropdown(_farmingmastery, "Choose Mastery Tool", false, {"Blox Fruit", "Sword", "Gun"}, {"Blox Fruit"})
     Funcs:AddDropdown(_farmingmastery, "Mastery Health", false, {"10", "20", "25", "30", "45", "50", "60", "70", "75", "85", "95"}, {"45"})
     Funcs:AddDropdown(_farmingmastery, "Skill", true, {"Z", "X", "C", "V", "F"}, {"Z", "X", "C", "V"})
     _farmingmastery:Seperator("Farming")
@@ -205,7 +206,7 @@ local _main = Window:MakeTab("Main") do
   local _farmingC = _main:Section({["Title"] = "Farming/Collect Chest", ["Content"] = ""}) do
     _farmingC:Seperator("Config Chest")
     Funcs:AddDropdown(_farmingC, "Choose Chest Area", false, {"Mirage Island", "Island Other"}, {"Island Other"})
-    Funcs:AddToggle(_farmingC, "Auto Hop if Chest doesn't spawned", "", true)
+    Funcs:AddToggle(_farmingC, "Auto Hop if Chest doesn't Spawned", "", true)
     _farmingC:Seperator("Collect Chest")
     Funcs:AddToggle(_farmingC, "Auto Collect Chest", "", false)
     _farmingC:Seperator("Farming Other")
