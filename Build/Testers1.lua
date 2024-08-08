@@ -15,6 +15,39 @@ local Player = Players.LocalPlayer
 local _setclipboard = setclipboard or function() end
 local _env = getgenv and getgenv() or {}
 
+local Sea = {
+  [1] = game.PlaceId == 2753915549,
+  [2] = game.PlaceId == 4442272183,
+  [3] = game.PlaceId == 7449423635
+}
+
+_env.TableBosses = function()
+  local BossTable = {}
+  
+  local function GetBoss(Objects)
+    for _, Boss in ipairs(Objects) do
+      local Humanoid = Boss:FindFirstChildOfClass("Humanoid")
+      if Humanoid and Humanoid.DisplayName:find("Boss") then
+        table.insert(BossTable, Boss.Name)
+      end
+    end
+  end
+
+  GetBoss(ReplicatedStorage:GetDescendants())
+  GetBoss(Enemies:GetDescendants())
+
+  return BossTable
+end
+
+if Sea[1] then
+  _env.MaterialList = {"Angel Wings", "Leather + Scrap Metal", "Magma Ore", "Fish Tail"}
+elseif Sea[2] then
+  _env.MaterialList = {"Leather + Scrap Metal", "Magma Ore", "Mystic Droplet", "Radioactive Material", "Vampire Fang"}
+elseif Sea[3] then
+  _env.MaterialList = {"Leather + Scrap Metal", "Fish Tail", "Gunpowder", "Mini Tusk", "Conjured Cocoa", "Dragon Scale"}
+end
+
+
 local SpeedHubX = {}
 
 local Funcs = {} do
@@ -106,13 +139,18 @@ local _home = Window:MakeTab("Home") do
   end
 
   local _config = _home:Section({["Title"] = "Config", ["Content"] = ""}) do
+    _config:Seperator("Weapon")
     Funcs:AddDropdown(_config, "Weapon Tool", false, {"Melee","Sword","Blox Fruit","Gun"}, {"Melee"})
+    _config:Seperator("Tween/Distance")
     Funcs:AddDropdown(_config, "Farm Distance", false, {"10", "20", "30", "40", "50", "60"}, {"40"})
     Funcs:AddDropdown(_config, "Tween Speed", false, {"100", "200", "300", "400", "500"}, {"200"})
+    _config:Seperator("Bring Mob")
     Funcs:AddToggle(_config, "Bring Mob", "", true)
     Funcs:AddDropdown(_config, "Bring Mob Radius", false, {"100", "200", "300", "400", "500"}, {"200"})
+    _config:Seperator("Fast Attack")
     Funcs:AddToggle(_config, "Fast Attack", "", true)
     Funcs:AddDropdown(_config, "Fast Attack Delay", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _config:Seperator("Other")
     Funcs:AddToggle(_config, "Hop if Admin or Staff", "", true)
     Funcs:AddToggle(_config, "Auto Dodge Skill", "", false)
     _config:Seperator("Active Race")
@@ -143,7 +181,54 @@ end
 
 local _main = Window:MakeTab("Main") do
   local _farminglv = _main:Section({["Title"] = "Farming Level", ["Content"] = ""}) do
-
+    _farminglv:Seperator("Config Quest")
+    Funcs:AddToggle(_farminglv, "No Quest", "", false)
+    Funcs:AddToggle(_farminglv, "Take Quest", "", false)
+    _farminglv:Seperator("Farming")
+    Funcs:AddToggle(_farminglv, "Auto Farm Level", "", false)
+  end
+  local _farmingnear = _main:Section({["Title"] = "Farming Neareast Mob", ["Content"] = ""}) do
+    _farmingnear:Seperator("Config Neareast")
+    Funcs:AddDropdown(_farmingnear, "Neareast Range", false, {"1000","2000","3000","infinite"}, {"2000"})
+    _farmingnear:Seperator("Farming")
+    Funcs:AddToggle(_farminglv, "Auto Farm Neareast", "", false)
+  end
+  local _farmingmastery = _main:Section({["Title"] = "Farming Mastery", ["Content"] = ""}) do
+    _farmingmastery:Seperator("Config Mastery")
+    Funcs:AddDropdown(_farmingmastery, "Choose Mastery Mode", false, {"Level","Bone","Cake Prince","Nearest"}, {"Level"})
+    Funcs:AddDropdown(_farmingmastery, "Choose Mastery Tool", false, {"Blox Fruit", "Sword", "Gun"}, {"Level"})
+    Funcs:AddDropdown(_farmingmastery, "Mastery Health", false, {"10", "20", "25", "30", "45", "50", "60", "70", "75", "85", "95"}, {"45"})
+    Funcs:AddDropdown(_farmingmastery, "Skill", true, {"Z", "X", "C", "V", "F"}, {"Z", "X", "C", "V"})
+    _farmingmastery:Seperator("Farming")
+    Funcs:AddToggle(_farmingmastery, "Auto Farm Mastery", "", false)
+  end
+  local _farmingC = _main:Section({["Title"] = "Farming/Collect Chest", ["Content"] = ""}) do
+    _farmingC:Seperator("Config Chest")
+    Funcs:AddDropdown(_farmingC, "Choose Chest Area", false, {"Mirage Island", "Island Other"}, {"Island Other"})
+    Funcs:AddToggle(_farmingC, "Auto Hop if Chest doesn't spawned", "", true)
+    _farmingC:Seperator("Collect Chest")
+    Funcs:AddToggle(_farmingC, "Auto Collect Chest", "", false)
+    _farmingC:Seperator("Farming Other")
+    if Sea[2] then
+      Funcs:AddToggle(_farmingC, "Auto Factory", "", false)
+    elseif Sea[3] then
+      Funcs:AddToggle(_farmingC, "Auto Pirates Sea", "", false)
+    end
+  end
+  local _farmingboss = _main:Section({["Title"] = "Farming Bosses", ["Content"] = ""}) do
+    _farmingboss:Seperator("Config Boss")
+    Funcs:AddToggle(_farmingboss, "No Quest Boss", "", false)
+    Funcs:AddToggle(_farmingboss, "Take Quest Boss", "", false)
+    Funcs:AddDropdown(_farmingboss, "Select Boss", false, {_env.TableBosses()}, {""})
+    _farmingboss:Seperator("Farming Boss")
+    Funcs:AddToggle(_farmingboss, "Auto Attack Boss", "", false)
+    Funcs:AddToggle(_farmingboss, "Auto Attack Boss All", "", false)
+  end
+  local _farmingmaterial = _main:Section({["Title"] = "Farming Material", ["Content"] = ""}) do
+    _farmingmaterial:Seperator("Config Material")
+    Funcs:AddDropdown(_farmingmaterial, "Select Material", false, {_env.MaterialList}, {""})
+    _farmingmaterial:Seperator("Farming Material")
+    Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
   end
 end
 
