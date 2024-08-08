@@ -110,7 +110,7 @@ local _home = Window:MakeTab("Home") do
     Funcs:AddTextbox(_config, "Farm Distance", "", 40, false)
     Funcs:AddTextbox(_config, "Tween Speed", "", 200, false)
     Funcs:AddToggle(_config, "Bring Mob", "", true)
-    Funcs:AddTextbox(_config, "Bring Mob Radius", "", 40, false)
+    Funcs:AddTextbox(_config, "Bring Mob Radius", "", 200, false)
     Funcs:AddToggle(_config, "Fast Attack", "", true)
     Funcs:AddTextbox(_config, "Fast Attack Delay", "", 0, false)
     Funcs:AddToggle(_config, "Hop if Admin or Staff", "", true)
@@ -138,6 +138,12 @@ local _home = Window:MakeTab("Home") do
         })
       end
     end)
+  end
+end
+
+local _main = Window:MakeTab("Main") do
+  local _farminglv = _main:Section({["Title"] = "Farming Level", ["Content"] = ""}) do
+
   end
 end
 
