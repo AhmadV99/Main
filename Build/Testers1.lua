@@ -15,9 +15,11 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Player = Players.LocalPlayer
 local Enemies = Workspace:WaitForChild("Enemies")
 
-local _setclipboard = setclipboard or function() end
-local _hookfunction = hookfunction or hookfunc or function() end
-local _require = require or function() end
+local _setclipboard = setclipboard or function()end
+local _hookfunction = hookfunction or hookfunc or function()end
+local _require = require or function()end
+local _newcclosure = newcclosure or protect_function or function()end
+
 local _env = getgenv and getgenv() or {}
 
 local Sea = {
@@ -34,9 +36,9 @@ task.spawn(function()
   local Respawn = _require(Container:FindFirstChild("Respawn"))
   local DisplayNPC = _require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
 
-  _hookfunction(Death, function()return nil end)
-  _hookfunction(Respawn, function()return nil end)
-  _hookfunction(DisplayNPC, function()return nil end)
+  _hookfunction(Death, _newcclosure(function()return nil end))
+  _hookfunction(Respawn, _newcclosure(function()return nil end))
+  _hookfunction(DisplayNPC, _newcclosure(function()return nil end))
   CameraShaker:Stop()
 end)
 
