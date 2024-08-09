@@ -235,8 +235,6 @@ local _main = Window:MakeTab("Main") do
   end
   local _farmingboss = _main:Section({["Title"] = "Farming Bosses", ["Content"] = ""}) do
     _farmingboss:Seperator("Config Boss")
-    Funcs:AddToggle(_farmingboss, "No Quest Boss", "", false)
-    Funcs:AddToggle(_farmingboss, "Take Quest Boss", "", false)
     local BossList = Funcs:AddDropdown(_farmingboss, "Select Boss", false, BossTable, {""})
     Funcs:AddButton(_farmingboss, "Refresh Boss", "", function()
       BossList:Clear()
