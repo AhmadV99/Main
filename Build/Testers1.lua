@@ -42,19 +42,22 @@ task.spawn(function()
   CameraShaker:Stop()
 end)
 
-local BossTable = {}
+_env.BossesList = function()
+  local BossTable = {}
   
-local function GetBoss(Objects)
-  for _, Boss in ipairs(Objects) do
-    local Humanoid = Boss:FindFirstChildOfClass("Humanoid")
-    if Humanoid and Humanoid.DisplayName:find("Boss") then
-      table.insert(BossTable, Boss.Name)
+  local function GetBoss(Objects)
+    for _, Boss in ipairs(Objects) do
+      local Humanoid = Boss:FindFirstChildOfClass("Humanoid")
+      if Humanoid and Humanoid.DisplayName:find("Boss") then
+        table.insert(BossTable, Boss.Name)
+      end
     end
   end
-end
 
-GetBoss(ReplicatedStorage:GetDescendants())
-GetBoss(Enemies:GetDescendants())
+  GetBoss(ReplicatedStorage:GetDescendants())
+  GetBoss(Enemies:GetDescendants())
+  return BossTable
+end
 
 if Sea[1] then
   _env.MaterialList = {"Angel Wings", "Leather + Scrap Metal", "Magma Ore", "Fish Tail"}
@@ -237,10 +240,10 @@ local _main = Window:MakeTab("Main") do
   end
   local _farmingboss = _main:Section({["Title"] = "Farming Bosses", ["Content"] = ""}) do
     _farmingboss:Seperator("Config Boss")
-    local BossList = Funcs:AddDropdown(_farmingboss, "Select Boss", false, BossTable, {""})
+    local BossList = Funcs:AddDropdown(_farmingboss, "Select Boss", false, _env.BossesList(), {""})
     Funcs:AddButton(_farmingboss, "Refresh Boss", "", function()
       BossList:Clear()
-      BossList:Refresh(BossTable, {""})
+      BossList:Refresh(_env.BossesList(), {""})
     end)
     _farmingboss:Seperator("Farming Boss")
     Funcs:AddToggle(_farmingboss, "Auto Attack Boss", "", false)
