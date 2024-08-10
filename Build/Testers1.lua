@@ -256,4 +256,52 @@ local _main = Window:MakeTab("Main") do
   end
 end
 
+local _questitem = Window:MakeTab("Item/Quest") do
+  local _firstworld = _questitem:Section({["Title"] = "First World", ["Content"] = ""}) do
+    _firstworld:Seperator("Farming Second World")
+    Funcs:AddToggle(_firstworld, "Auto Second World", "Only Get Level 700 if Auto Sea Second!", false)
+    _firstworld:AddSection("- [ Item ] -")
+    Funcs:AddToggle(_firstworld, "Auto Unlock Saber", "Only Get Level 200 if Auto Unlock Saber!", false)
+    Funcs:AddToggle(_firstworld, "Auto Pole", "This Can Get Pole Item!", false)
+  end
+  local _secondworld = _questitem:Section({["Title"] = "Second World", ["Content"] = ""}) do
+    _secondworld:Seperator("Farming Third World")
+    Funcs:AddToggle(_secondworld, "Auto Third World", "This Can Get Sea Third then Travel Third World!", false)
+    _secondworld:Seperator("Get Sword Item")
+    Funcs:AddDropdown(_secondworld, "Select Sword", false, {"Dragon Trident", "Gravity Cane", "Jitte", "Longsword", "Koko", "Midnight blade", "Rengoku"}, {""})
+    Funcs:AddToggle(_secondworld, "Auto Get Sword On Select Sword", "", false)
+    _secondworld:Seperator("Ectoplasm")
+    Funcs:AddToggle(_secondworld, "Auto Ectoplasm", "", false)
+    _secondworld:Seperator("Bartilo Quest")
+    Funcs:AddToggle(_secondworld, "Auto Bartilo Quest", "", false)
+    _secondworld:Seperator("Dark Beard")
+    Funcs:AddToggle(_secondworld, "Auto Dark Beard", "", false)
+    _secondworld:Seperator("Cursed Captain")
+    Funcs:AddToggle(_secondworld, "Auto Cursed Captain", "", false)
+    _secondworld:Seperator("Law")
+    Funcs:AddToggle(_secondworld, "Auto Order Law", "", false)
+  end
+  local _thirdworld = _questitem:Section({["Title"] = "Third World", ["Content"] = ""}) do
+    _thirdworld:Seperator("Get Sword Item")
+    Funcs:AddDropdown(_thirdworld, "Select Sword ", false, {"Twin Hooks", "Buddy Sword", "Canvander", "Dark Dagger", "Fox Lamp", "Spikey Trident", "Yama", "Tushita", "Cursed Dual Katana", "Hallow Scythe"}, {""})
+    Funcs:AddToggle(_thirdworld, "Auto Get Sword On Select Sword ", "", false)
+    _thirdworld:Seperator("Get Gun Item")
+    Funcs:AddDropdown(_thirdworld, "Select Gun", false, {"Serpent Bow", "Soul Guitar"}, {""})
+    Funcs:AddToggle(_thirdworld, "Auto Get Gun On Select Gun", "", false)
+    _thirdworld:Seperator("Farming Bones")
+    local _BonesCount = _server:Paragraph({["Title"] = "Bones Total", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        _BonesCount:Set({
+          ["Title"] = "Bones Total",
+          ["Content"] = tostring(_env.MaterialCount("Bones"))
+        })
+      end
+    end)
+    Funcs:AddToggle(_thirdworld, "Auto Farm Bones", "", false)
+    Funcs:AddToggle(_thirdworld, "Auto Trade Bones", "", false)
+    _thirdworld:Seperator("Cake Prince")
+  end
+end
+
 return SpeedHubX
