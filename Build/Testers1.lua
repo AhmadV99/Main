@@ -260,7 +260,7 @@ local _questitem = Window:MakeTab("Item/Quest") do
   local _firstworld = _questitem:Section({["Title"] = "First World", ["Content"] = ""}) do
     _firstworld:Seperator("Farming Second World")
     Funcs:AddToggle(_firstworld, "Auto Second World", "Only Get Level 700 if Auto Sea Second!", false)
-    _firstworld:AddSection("- [ Item ] -")
+    _firstworld:Seperator("Item")
     Funcs:AddToggle(_firstworld, "Auto Unlock Saber", "Only Get Level 200 if Auto Unlock Saber!", false)
     Funcs:AddToggle(_firstworld, "Auto Pole", "This Can Get Pole Item!", false)
   end
