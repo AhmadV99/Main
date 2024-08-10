@@ -289,7 +289,7 @@ local _questitem = Window:MakeTab("Item/Quest") do
     Funcs:AddDropdown(_thirdworld, "Select Gun", false, {"Serpent Bow", "Soul Guitar"}, {""})
     Funcs:AddToggle(_thirdworld, "Auto Get Gun On Select Gun", "", false)
     _thirdworld:Seperator("Farming Bones")
-    local _BonesCount = _server:Paragraph({["Title"] = "Bones Total", ["Content"] = "" })
+    local _BonesCount = _thirdworld:Paragraph({["Title"] = "Bones Total", ["Content"] = "" })
     task.spawn(function()
       while task.wait(2) do
         _BonesCount:Set({
