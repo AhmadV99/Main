@@ -324,7 +324,7 @@ local _questitem = Window:MakeTab("Item/Quest") do
       while task.wait(2) do
         _BonesCount:Set({
           ["Title"] = "Bones Total",
-          ["Content"] = _env.MaterialCount("Bones")
+          ["Content"] = _env.VerifyMaterial("Bones")
         })
       end
     end)
