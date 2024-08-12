@@ -58,6 +58,42 @@ _env.BossesList = function()
   return BossTable
 end
 
+_env.MaterialCount = function(Name)
+  local inv = CommF_:InvokeServer("getInventory")
+  for _, item in pairs(inv) do
+    if item.Type == "Material" and item.Name == Name then
+      return item.Count
+    end
+  end
+  return 0
+end
+
+_env.CheckMob = function(Value)
+  local Boolen = false
+
+  local function GetMob(Object)
+    for _, Mob in ipairs(Object) do
+      if table.find(Value, Mob.Name) then
+        local HD = Mob:FindFirstChild("Humanoid")
+        if HD and HD.Health > 0 then
+          Boolen = true
+          break 
+        end
+      end
+    end
+  end
+
+  local children = ReplicatedStorage:GetChildren()
+  if not Boolen then
+    GetMob(children)
+  end
+  if not Boolen then
+    children = Enemies:GetChildren()
+    GetMob(children)
+  end
+  return Boolen
+end
+
 if Sea[1] then
   _env.MaterialList = {"Angel Wings", "Leather + Scrap Metal", "Magma Ore", "Fish Tail"}
 elseif Sea[2] then
@@ -301,6 +337,78 @@ local _questitem = Window:MakeTab("Item/Quest") do
     Funcs:AddToggle(_thirdworld, "Auto Farm Bones", "", false)
     Funcs:AddToggle(_thirdworld, "Auto Trade Bones", "", false)
     _thirdworld:Seperator("Cake Prince")
+    local _statusCKP = _thirdworld:Paragraph({["Title"] = "Cake Prince Status", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        if _env.CheckMob({"Dough King"}) then
+          _statusCKP:Set({
+            ["Title"] = "Cake Prince Status",
+            ["Content"] = "Dough King is Spawned"
+          })
+        elseif _env.CheckMob({"Cake Prince"}) then
+          _statusCKP:Set({
+            ["Title"] = "Cake Prince Status",
+            ["Content"] = "Cake Prince is Spawned"
+          })
+        else
+          _statusCKP:Set({
+            ["Title"] = "Cake Prince Status",
+            ["Content"] = string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", "")
+          })
+        end
+      end
+    end)
+    Funcs:AddToggle(_thirdworld, "Auto Cake Prince", "", false)
+    Funcs:AddToggle(_thirdworld, "Auto Dough King", "", false)
+    _thirdworld:Seperator("Rip Indra")
+    Funcs:AddToggle(_thirdworld, "Auto Rip Indra", "", false)
+    _thirdworld:Seperator("Elite Hunter")
+    local _statusELH = _thirdworld:Paragraph({["Title"] = "Elite Hunter Status", ["Content"] = "" })
+    local _statusELHP = _thirdworld:Paragraph({["Title"] = "Elite Hunter Progress", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        if _env.CheckMob({"Diablo","Deandre","Urban"}) then
+          _statusELH:Set({
+            ["Title"] = "Elite Hunter Status",
+            ["Content"] = "Elite Hunter is Spawned"
+          })
+        else
+          _statusELH:Set({
+            ["Title"] = "Elite Hunter Status",
+            ["Content"] = "Elite Hunter is not Spawned"
+          })
+        end
+      end
+    end)
+    task.spawn(function()
+      while task.wait(2) do
+        _statusELHP:Set({
+          ["Title"] = "Elite Hunter Progress",
+          ["Content"] = tostring(CommF_:InvokeServer("EliteHunter", "Progress"))
+        })
+      end
+    end)
+    Funcs:AddToggle(_thirdworld, "Auto Elite Hunter", "", false)
+    _thirdworld:Seperator("Haki Color")
+    Funcs:AddToggle(_thirdworld, "Auto Buy Haki Color", "", false)
+    Funcs:AddToggle(_thirdworld, "Auto Rainbow Haki", "", false)
+  end
+  local _FightSyt = _questitem:Section({["Title"] = "Fighting Style", ["Content"] = ""}) do
+    Funcs:AddToggle(_FightSyt, "Auto Dark Step", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Electric", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Water Kung Fu", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Dragon Breath", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Superhuman", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Death Step", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Sharkman Karate", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Electric Claw", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Dragon Talon", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto God Human", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Sanguine Art", "", false)
+  end
+  local _obsv = _questitem:Section({["Title"] = "Observation", ["Content"] = ""}) do
+    Funcs:AddToggle(_obsv, "Auto Observation", "", false)
+    Funcs:AddToggle(_obsv, "Auto Observation V2", "", false)
   end
 end
 
