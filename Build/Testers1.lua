@@ -14,10 +14,12 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Player = Players.LocalPlayer
 local Enemies = Workspace:WaitForChild("Enemies")
+local Remotes = ReplicatedStorage:WaitForChild("Remotes")
+local CommF_ = Remotes:WaitForChild("CommF_")
 
-local _setclipboard = setclipboard or function()end
-local _hookfunction = hookfunction or hookfunc or function()end
-local _require = require or function()end
+local _setclipboard = setclipboard or (function()end)
+local _hookfunction = hookfunction or hookfunc or (function()end)
+local _require = require or (function()end)
 
 local _env = getgenv and getgenv() or {}
 
@@ -320,7 +322,7 @@ local _questitem = Window:MakeTab("Item/Quest") do
       while task.wait(2) do
         _BonesCount:Set({
           ["Title"] = "Bones Total",
-          ["Content"] = tostring(_env.MaterialCount("Bones"))
+          ["Content"] = _env.MaterialCount("Bones")
         })
       end
     end)
@@ -384,15 +386,11 @@ local _questitem = Window:MakeTab("Item/Quest") do
     Funcs:AddToggle(_thirdworld, "Auto Rainbow Haki", "", false)
   end
   local _FightSyt = _questitem:Section({["Title"] = "Fighting Style", ["Content"] = ""}) do
-    Funcs:AddToggle(_FightSyt, "Auto Dark Step", "", false)
-    Funcs:AddToggle(_FightSyt, "Auto Electric", "", false)
-    Funcs:AddToggle(_FightSyt, "Auto Water Kung Fu", "", false)
-    Funcs:AddToggle(_FightSyt, "Auto Dragon Breath", "", false)
-    Funcs:AddToggle(_FightSyt, "Auto Superhuman", "", false)
     Funcs:AddToggle(_FightSyt, "Auto Death Step", "", false)
-    Funcs:AddToggle(_FightSyt, "Auto Sharkman Karate", "", false)
     Funcs:AddToggle(_FightSyt, "Auto Electric Claw", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Sharkman Karate", "", false)
     Funcs:AddToggle(_FightSyt, "Auto Dragon Talon", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Superhuman", "", false)
     Funcs:AddToggle(_FightSyt, "Auto God Human", "", false)
     Funcs:AddToggle(_FightSyt, "Auto Sanguine Art", "", false)
   end
