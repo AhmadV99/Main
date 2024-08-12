@@ -58,16 +58,6 @@ _env.BossesList = function()
   return BossTable
 end
 
-_env.MaterialCount = function(Name)
-  local inv = CommF_:InvokeServer("getInventory")
-  for _, item in pairs(inv) do
-    if item.Type == "Material" and item.Name == Name then
-      return item.Count
-    end
-  end
-  return 0
-end
-
 _env.CheckMob = function(Value)
   local Boolen = false
 
