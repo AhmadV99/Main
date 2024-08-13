@@ -507,8 +507,11 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_farmlevi, "Tween to Frozen Dimension", "", false)
     _farmlevi:Seperator("Leviathan")
     Funcs:AddToggle(_farmlevi, "Auto Find Leviathan", "", false)
+    Funcs:AddToggle(_farmlevi, "Auto Attack Leviathan", "", false)
     Funcs:AddToggle(_farmlevi, "Auto Attack Leviathan Segment", "", false)
     Funcs:AddToggle(_farmlevi, "Auto Attack Leviathan Tail", "", false)
+    _farmlevi:Seperator("Heart Leviathan")
+    Funcs:AddToggle(_farmlevi, "Tween To Heart Leviathan [BOAT TWEEN]", "", false)
     _farmlevi:Seperator("Skill")
     for _, v in next, {"Z", "X", "C", "V", "F"} do
       Funcs:AddToggle(_farmlevi, v .. "  ", "", true)
