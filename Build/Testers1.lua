@@ -439,7 +439,6 @@ local _seaevent = Window:MakeTab("Sea Event") do
         })
       end
     end)
-    Funcs:AddToggle(_kitsune, "Auto Summon Kitsune Island", "", false)
     Funcs:AddToggle(_kitsune, "Tween to Kitsune Island", "", false)
     Funcs:AddToggle(_kitsune, "Auto Collect Azure Ember", "", false)
     Funcs:AddToggle(_kitsune, "Auto Trade Azure Ember", "", false)
@@ -460,6 +459,7 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill", "", true)
     _farmsea:Seperator("Sea beast")
     Funcs:AddToggle(_farmsea, "Attack Sea beast", "", true)
+    Funcs:AddToggle(_farmsea, "Dodge Sea Beasts Skill", "", true)
     _farmsea:Seperator("Boat")
     Funcs:AddToggle(_farmsea, "Attack Ghost Ship", "", true)
     _farmsea:Seperator("Other")
