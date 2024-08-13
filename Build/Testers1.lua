@@ -271,9 +271,12 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_farmingmastery, "Choose Mastery Mode", false, {"Level","Bone","Cake Prince","Nearest"}, {"Level"})
     Funcs:AddDropdown(_farmingmastery, "Choose Mastery Tool", false, {"Blox Fruit", "Sword", "Gun"}, {"Blox Fruit"})
     Funcs:AddDropdown(_farmingmastery, "Mastery Health", false, {"10", "20", "25", "30", "45", "50", "60", "70", "75", "85", "95"}, {"45"})
-    Funcs:AddDropdown(_farmingmastery, "Skill", true, {"Z", "X", "C", "V", "F"}, {"Z", "X", "C", "V"})
     _farmingmastery:Seperator("Farming")
     Funcs:AddToggle(_farmingmastery, "Auto Farm Mastery", "", false)
+    _farmingmastery:Seperator("Skill")
+    for _, v in next, {"Z", "X", "C", "V", "F"} do
+      Funcs:AddToggle(_farmingmastery, v .. "   ", "", true)
+    end
   end
   local _farmingC = _main:Section({["Title"] = "Farming/Collect Chest", ["Content"] = ""}) do
     _farmingC:Seperator("Config Chest")
@@ -459,7 +462,6 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddDropdown(_farmsea, "Select Level Danger", false, {"1", "2", "3", "4", "5", "6", "infinite"}, {"6"})
     Funcs:AddDropdown(_farmsea, "Select Buy Boat", false, {"PirateBrigade", "PirateGrandBrigade", "Beast Hunter", "MarineBrigade", "MarineGrandBrigade"}, {"PirateBrigade"})
     Funcs:AddDropdown(_farmsea, "Choose Equip ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
-    Funcs:AddDropdown(_farmsea, "Skill ", true, {"Z", "X", "C", "V", "F"}, {"Z", "X", "C", "V"})
     Funcs:AddToggle(_farmsea, "Auto Dodge Rough Sea", "", true)
     Funcs:AddToggle(_farmsea, "Protect Boat", "", true)
     Funcs:AddToggle(_farmsea, "No Fog", "", false)
@@ -477,11 +479,14 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_farmsea, "Attack Piranha", "", true)
     Funcs:AddToggle(_farmsea, "Attack Shark", "", true)
     Funcs:AddToggle(_farmsea, "Attack Fish Crew Member", "", true)
+    _farmsea:Seperator("Skill")
+    for _, v in next, {"Z", "X", "C", "V", "F"} do
+      Funcs:AddToggle(_farmsea, v .. " ", "", true)
+    end
   end
   local _farmlevi = _seaevent:Section({["Title"] = "Farming Leviathan", ["Content"] = ""}) do
     _farmlevi:Seperator("Config")
     Funcs:AddDropdown(_farmlevi, "Choose Equip  ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
-    Funcs:AddDropdown(_farmlevi, "Skill  ", true, {"Z", "X", "C", "V", "F"}, {"Z", "X", "C", "V"})
     _farmlevi:Seperator("Frozen Dimension")
     local _statisFD = _farmlevi:Paragraph({["Title"] = "Status Frozen Dimension", ["Content"] = "" })
     task.spawn(function()
@@ -504,13 +509,20 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_farmlevi, "Auto Find Leviathan", "", false)
     Funcs:AddToggle(_farmlevi, "Auto Attack Leviathan Segment", "", false)
     Funcs:AddToggle(_farmlevi, "Auto Attack Leviathan Tail", "", false)
+    _farmlevi:Seperator("Skill")
+    for _, v in next, {"Z", "X", "C", "V", "F"} do
+      Funcs:AddToggle(_farmlevi, v .. "  ", "", true)
+    end
   end
   local _farmwoods = _seaevent:Section({["Title"] = "Farming Wood Planks", ["Content"] = ""}) do 
     _farmwoods:Seperator("Config")
     Funcs:AddDropdown(_farmwoods, "Choose Equip   ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
-    Funcs:AddDropdown(_farmwoods, "Skill   ", true, {"Z", "X", "C", "V", "F"}, {"Z", "X", "C", "V"})
     _farmwoods:Seperator("Farming Woods")
     Funcs:AddToggle(_farmwoods, "Auto Wood Planks", "", false)
+    _farmwoods:Seperator("Skill")
+    for _, v in next, {"Z", "X", "C", "V", "F"} do
+      Funcs:AddToggle(_farmwoods, v .. "   ", "", true)
+    end
   end
   local _farmitem = _seaevent:Section({["Title"] = "Get Item", ["Content"] = ""}) do 
     Funcs:AddToggle(_farmitem, "Auto Shark Anchor", "", false)
