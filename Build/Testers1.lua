@@ -88,6 +88,17 @@ _env.CheckMob = function(Value)
   return Boolen
 end
 
+_env.VerifyMaterial = function(NameC)
+  for _, Item in pairs(CommF_:InvokeServer("getInventory")) do
+    if Item.Type == "Material" then
+      if Item.Name == NameC then
+        return Item.Count
+      end
+    end
+  end
+  return 0
+end
+
 if Sea[1] then
   _env.MaterialList = {"Angel Wings", "Leather + Scrap Metal", "Magma Ore", "Fish Tail"}
 elseif Sea[2] then
