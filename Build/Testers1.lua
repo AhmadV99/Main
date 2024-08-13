@@ -247,8 +247,9 @@ local _home = Window:MakeTab("Home") do
     _stats:Seperator("Config")
     Funcs:AddDropdown(_stats, "Point Stats", false, {"1", "5", "10", "15", "20", "25", "30", "35", "40", "50"}, {"1"})
     _stats:Seperator("Stats")
-    Funcs:AddDropdown(_stats, "Choose Stats", true, {"Melee", "Defense", "Sword", "Gun", "Demon Fruit"}, {"Melee", "Defense", "Sword", "Gun"})
-    Funcs:AddToggle(_stats, "Auto Stats On Choose Stats", "", false)
+    for _, v in next, {"Melee", "Defense", "Sword", "Gun", "Demon Fruit"} do
+      Funcs:AddToggle(_stats, v, "", false)
+    end
   end
 end
 
