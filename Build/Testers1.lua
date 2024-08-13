@@ -16,6 +16,8 @@ local Player = Players.LocalPlayer
 local Enemies = Workspace:WaitForChild("Enemies")
 local Remotes = ReplicatedStorage:WaitForChild("Remotes")
 local CommF_ = Remotes:WaitForChild("CommF_")
+local Map = Workspace:WaitForChild("Map")
+local WorldOrigin = Workspace:WaitForChild("_WorldOrigin")
 
 local _setclipboard = setclipboard or (function()end)
 local _hookfunction = hookfunction or hookfunc or (function()end)
@@ -229,6 +231,14 @@ local _home = Window:MakeTab("Home") do
       end
     end)
   end
+
+  local _stats = _home:Section({["Title"] = "Get Stats", ["Content"] = ""}) do
+    _stats:Seperator("Config")
+    Funcs:AddDropdown(_stats, "Point Stats", false, {"1", "5", "10", "15", "20", "25", "30", "35", "40", "50"}, {"1"})
+    _stats:Seperator("Stats")
+    Funcs:AddDropdown(_stats, "Choose Stats", true, {"Melee", "Defense", "Sword", "Gun", "Demon Fruit"}, {"Melee", "Defense", "Sword", "Gun"})
+    Funcs:AddToggle(_stats, "Auto Stats On Choose Stats", "", false)
+  end
 end
 
 local _main = Window:MakeTab("Main") do
@@ -399,6 +409,103 @@ local _questitem = Window:MakeTab("Item/Quest") do
   local _obsv = _questitem:Section({["Title"] = "Observation", ["Content"] = ""}) do
     Funcs:AddToggle(_obsv, "Auto Observation", "", false)
     Funcs:AddToggle(_obsv, "Auto Observation V2", "", false)
+  end
+end
+
+local _seaevent = Window:MakeTab("Sea Event") do
+  local _kitsune = _seaevent:Section({["Title"] = "Kitsune Island", ["Content"] = ""}) do 
+    local _statusKIT = _kitsune:Paragraph({["Title"] = "Status Kitsune Island", ["Content"] = "" })
+    local _statusNumAZ = _kitsune:Paragraph({["Title"] = "Total Azura Ember", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        if Map:FindFirstChild("KitsuneIsland") then
+          _statusKIT:Set({
+            ["Title"] = "Status Kitsune Island",
+            ["Content"] = "Kitsune Island Is Spawned"
+          })
+        else
+          _statusKIT:Set({
+            ["Title"] = "Status Kitsune Island",
+            ["Content"] = "Kitsune Island Is not Spawned"
+          })
+        end
+      end
+    end)
+    task.spawn(function()
+      while task.wait(2) do
+        _statusNumAZ:Set({
+          ["Title"] = "Total Azura Ember",
+          ["Content"] = _env.VerifyMaterial("Azure Ember")
+        })
+      end
+    end)
+    Funcs:AddToggle(_kitsune, "Auto Summon Kitsune Island", "", false)
+    Funcs:AddToggle(_kitsune, "Tween to Kitsune Island", "", false)
+    Funcs:AddToggle(_kitsune, "Auto Collect Azure Ember", "", false)
+    Funcs:AddToggle(_kitsune, "Auto Trade Azure Ember", "", false)
+  end
+  local _farmsea = _seaevent:Section({["Title"] = "Farming Sea", ["Content"] = ""}) do 
+    _farmsea:Seperator("Config")
+    Funcs:AddDropdown(_farmsea, "Select Level Danger", false, {"1", "2", "3", "4", "5", "6", "infinite"}, {"6"})
+    Funcs:AddDropdown(_farmsea, "Select Buy Boat", false, {"PirateBrigade", "PirateGrandBrigade", "Beast Hunter", "MarineBrigade", "MarineGrandBrigade"}, {"PirateBrigade"})
+    Funcs:AddDropdown(_farmsea, "Choose Equip ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
+    Funcs:AddDropdown(_farmsea, "Skill ", true, {"Z", "X", "C", "V", "F"}, {"Z", "X", "C", "V"})
+    Funcs:AddToggle(_farmsea, "Auto Dodge Rough Sea", "", true)
+    Funcs:AddToggle(_farmsea, "Protect Boat", "", true)
+    Funcs:AddToggle(_farmsea, "No Fog", "", false)
+    _farmsea:Seperator("Farm Sea")
+    Funcs:AddToggle(_farmsea, "Auto Drive Boat To Sea", "", false)
+    _farmsea:Seperator("Terror Shark")
+    Funcs:AddToggle(_farmsea, "Terror Shark", "", true)
+    Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill", "", true)
+    _farmsea:Seperator("Sea beast")
+    Funcs:AddToggle(_farmsea, "Attack Sea beast", "", true)
+    _farmsea:Seperator("Boat")
+    Funcs:AddToggle(_farmsea, "Attack Ghost Ship", "", true)
+    _farmsea:Seperator("Other")
+    Funcs:AddToggle(_farmsea, "Attack Piranha", "", true)
+    Funcs:AddToggle(_farmsea, "Attack Shark", "", true)
+    Funcs:AddToggle(_farmsea, "Attack Fish Crew Member", "", true)
+  end
+  local _farmlevi = _seaevent:Section({["Title"] = "Farming Leviathan", ["Content"] = ""}) do
+    _farmlevi:Seperator("Config")
+    Funcs:AddDropdown(_farmlevi, "Choose Equip  ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
+    Funcs:AddDropdown(_farmlevi, "Skill  ", true, {"Z", "X", "C", "V", "F"}, {"Z", "X", "C", "V"})
+    _farmlevi:Seperator("Frozen Dimension")
+    local _statisFD = _farmlevi:Paragraph({["Title"] = "Status Frozen Dimension", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        if WorldOrigin.Locations:FindFirstChild("Frozen Dimension") then
+          _statisFD:Set({
+            ["Title"] = "Status Frozen Dimension",
+            ["Content"] = "Frozen Dimension is Spawned"
+          })
+        else
+          _statisFD:Set({
+            ["Title"] = "Status Frozen Dimension",
+            ["Content"] = "Frozen Dimension is not Spawned"
+          })
+        end
+      end
+    end)
+    Funcs:AddToggle(_farmlevi, "Tween to Frozen Dimension", "", false)
+    _farmlevi:Seperator("Leviathan")
+    Funcs:AddToggle(_farmlevi, "Auto Find Leviathan", "", false)
+    Funcs:AddToggle(_farmlevi, "Auto Attack Leviathan Segment", "", false)
+    Funcs:AddToggle(_farmlevi, "Auto Attack Leviathan Tail", "", false)
+  end
+  local _farmwoods = _seaevent:Section({["Title"] = "Farming Wood Planks", ["Content"] = ""}) do 
+    _farmwoods:Seperator("Config")
+    Funcs:AddDropdown(_farmwoods, "Choose Equip   ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
+    Funcs:AddDropdown(_farmwoods, "Skill   ", true, {"Z", "X", "C", "V", "F"}, {"Z", "X", "C", "V"})
+    _farmwoods:Seperator("Farming Woods")
+    Funcs:AddToggle(_farmwoods, "Auto Wood Planks", "", false)
+  end
+  local _farmitem = _seaevent:Section({["Title"] = "Get Item", ["Content"] = ""}) do 
+    Funcs:AddToggle(_farmitem, "Auto Shark Anchor", "", false)
+    Funcs:AddToggle(_farmitem, "Auto Monster Magnet", "", false)
+    Funcs:AddToggle(_farmitem, "Auto Terror Jaw", "", false)
+    Funcs:AddToggle(_farmitem, "Auto Shark Tooth Necklace", "", false)
   end
 end
 
