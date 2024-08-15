@@ -18,10 +18,12 @@ local Remotes = ReplicatedStorage:WaitForChild("Remotes")
 local CommF_ = Remotes:WaitForChild("CommF_")
 local Map = Workspace:WaitForChild("Map")
 local WorldOrigin = Workspace:WaitForChild("_WorldOrigin")
+local NPCs = Workspace:WaitForChild("NPCs")
 
 local _setclipboard = setclipboard or (function()end)
 local _hookfunction = hookfunction or hookfunc or (function()end)
 local _require = require or (function()end)
+local _getnilinstances = getnilinstances or (function()end)
 
 local _env = getgenv and getgenv() or {}
 
@@ -99,6 +101,49 @@ _env.VerifyMaterial = function(NameC)
   return 0
 end
 
+_env.IslandList = function()
+  local ListName = {}
+  local CheckName = {}
+  local Sky = {"Sky 2","Sky 3"}
+
+  for _, part in next, WorldOrigin.Locations:GetChildren() do
+    if part and not CheckName[part.name] then
+      table.insert(ListName, part.name)CheckName[part.name]=true
+    end
+  end
+  
+  if Sea[1] then
+    for _, part in next, Sky do
+      table.insert(ListName, part)
+    end
+  end
+
+  return ListName
+end
+
+_env.NPCList = function(NPCs)
+  local ListNPC = {}
+  local CheckName = {}
+
+  local function CreateNPC(NPCGroup)
+    for _, part in next, NPCGroup do
+      local Head = part:FindFirstChild("Head")
+      if Head then
+        local QuestBBG = Head:FindFirstChild("QuestBBG")
+        if QuestBBG and QuestBBG:FindFirstChild("Title") and not CheckName[part.Name] then
+          table.insert(ListNPC, part.Name)CheckName[part.Name]=true
+        end
+      end
+    end
+  end
+
+  CreateNPC(NPCs:GetChildren())
+  CreateNPC(_getnilinstances())
+
+  return ListNPC
+end
+
+
 if Sea[1] then
   _env.MaterialList = {"Angel Wings", "Leather + Scrap Metal", "Magma Ore", "Fish Tail"}
 elseif Sea[2] then
@@ -106,6 +151,61 @@ elseif Sea[2] then
 elseif Sea[3] then
   _env.MaterialList = {"Leather + Scrap Metal", "Fish Tail", "Gunpowder", "Mini Tusk", "Conjured Cocoa", "Dragon Scale"}
 end
+
+local ShopTable = {
+  {"Frags", {
+    {"Race Rerol", {"BlackbeardReward", "Reroll", "2"}},
+    {"Reset Stats", {"BlackbeardReward", "Refund", "2"}}
+  }},
+  {"Fighting Style", {
+    {"Buy Black Leg", {"BuyBlackLeg"}},
+    {"Buy Electro", {"BuyElectro"}},
+    {"Buy Fishman Karate", {"BuyFishmanKarate"}},
+    {"Buy Dragon Claw", {"BlackbeardReward", "DragonClaw", "2"}},
+    {"Buy Superhuman", {"BuySuperhuman"}},
+    {"Buy Death Step", {"BuyDeathStep"}},
+    {"Buy Sharkman Karate", {"BuySharkmanKarate"}},
+    {"Buy Electric Claw", {"BuyElectricClaw"}},
+    {"Buy Dragon Talon", {"BuyDragonTalon"}},
+    {"Buy GodHuman", {"BuyGodhuman"}},
+    {"Buy Sanguine Art", {"BuySanguineArt"}}
+  }},
+  {"Ability Teacher", {
+    {"Buy Geppo", {"BuyHaki", "Geppo"}},
+    {"Buy Buso", {"BuyHaki", "Buso"}},
+    {"Buy Soru", {"BuyHaki", "Soru"}},
+    {"Buy Ken", {"KenTalk", "Buy"}}
+  }},
+  {"Sword", {
+    {"Buy Katana", {"BuyItem", "Katana"}},
+    {"Buy Cutlass", {"BuyItem", "Cutlass"}},
+    {"Buy Dual Katana", {"BuyItem", "Dual Katana"}},
+    {"Buy Iron Mace", {"BuyItem", "Iron Mace"}},
+    {"Buy Triple Katana", {"BuyItem", "Triple Katana"}},
+    {"Buy Pipe", {"BuyItem", "Pipe"}},
+    {"Buy Dual-Headed Blade", {"BuyItem", "Dual-Headed Blade"}},
+    {"Buy Soul Cane", {"BuyItem", "Soul Cane"}},
+    {"Buy Bisento", {"BuyItem", "Bisento"}}
+  }},
+  {"Gun", {
+    {"Buy Musket", {"BuyItem", "Musket"}},
+    {"Buy Slingshot", {"BuyItem", "Slingshot"}},
+    {"Buy Flintlock", {"BuyItem", "Flintlock"}},
+    {"Buy Refined Slingshot", {"BuyItem", "Refined Slingshot"}},
+    {"Buy Refined Flintlock", {"BuyItem", "Refined Flintlock"}},
+    {"Buy Cannon", {"BuyItem", "Cannon"}},
+    {"Buy Kabucha", {"BlackbeardReward", "Slingshot", "2"}}
+  }},
+  {"Accessories", {
+    {"Buy Black Cape", {"BuyItem", "Black Cape"}},
+    {"Buy Swordsman Hat", {"BuyItem", "Swordsman Hat"}},
+    {"Buy Tomoe Ring", {"BuyItem", "Tomoe Ring"}}
+  }},
+  {"Race", {
+    {"Ghoul Race", {"Ectoplasm", "Change", 4}},
+    {"Cyborg Race", {"CyborgTrainer", "Buy"}}
+  }}
+}
 
 local SpeedHubX = {}
 
@@ -533,6 +633,42 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_farmitem, "Auto Monster Magnet", "", false)
     Funcs:AddToggle(_farmitem, "Auto Terror Jaw", "", false)
     Funcs:AddToggle(_farmitem, "Auto Shark Tooth Necklace", "", false)
+  end
+end
+
+local _shopMaps = Window:MakeTab("Shop / Maps") do
+  local _Maps = _shopMaps:Section({["Title"] = "Maps", ["Content"] = ""}) do
+    _Maps:Seperator("Island")
+    Funcs:AddDropdown(_Maps, "Select Island", false, _env.IslandList(), {""})
+    Funcs:AddToggle(_Maps, "Tween To Island", "", false)
+    _Maps:Seperator("NPCs")
+    Funcs:AddDropdown(_Maps, "Select NPCs", false, _env.NPCList(), {""})
+    Funcs:AddToggle(_Maps, "Tween To NPCs", "", false)
+    _Maps:Seperator("World")
+    Funcs:AddButton(_Maps, "First World", "", function()
+      CommF_:InvokeServer("TravelMain")
+    end)
+    Funcs:AddButton(_Maps, "Second World", "", function()
+      CommF_:InvokeServer("TravelDressrosa")
+    end)
+    Funcs:AddButton(_Maps, "Third World", "", function()
+      CommF_:InvokeServer("TravelZou")
+    end)
+  end
+
+  local _shop = _shopMaps:Section({["Title"] = "Shop", ["Content"] = ""}) do
+    _shop:Seperator({"Other"})
+    Funcs:AddToggle(_shop, "Auto Buy Legendary Sword", "", false)
+    Funcs:AddToggle(_shop, "Auto Buy True Triple Katana", "", false)
+    for _, Category in ipairs(ShopTable) do
+      local name, items = Category[1], Category[2]
+      _shop:Seperator({name})
+      for _, item in ipairs(items) do
+        local NameShop, Params = item[1], item[2]
+        local buyfunc = type(Params) == "table" and function()CommF_:InvokeServer(unpack(Params))end or Params
+        Funcs:AddButton(_shop, NameShop, "", buyfunc)
+      end
+    end
   end
 end
 
