@@ -34,17 +34,19 @@ local Sea = {
 }
 
 task.spawn(function()
-  local Container = ReplicatedStorage:WaitForChild("Effect"):WaitForChild("Container")
+  loadstring([[
+    local Container = ReplicatedStorage:WaitForChild("Effect"):WaitForChild("Container")
 
-  local CameraShaker = _require(ReplicatedStorage.Util.CameraShaker)
-  local Death = _require(Container:FindFirstChild("Death"))
-  local Respawn = _require(Container:FindFirstChild("Respawn"))
-  local DisplayNPC = _require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
+    local CameraShaker = _require(ReplicatedStorage.Util.CameraShaker)
+    local Death = _require(Container:FindFirstChild("Death"))
+    local Respawn = _require(Container:FindFirstChild("Respawn"))
+    local DisplayNPC = _require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
 
-  _hookfunction(Death, function()return nil end)
-  _hookfunction(Respawn, function()return nil end)
-  _hookfunction(DisplayNPC, function()return nil end)
-  CameraShaker:Stop()
+    _hookfunction(Death, function()return nil end)
+    _hookfunction(Respawn, function()return nil end)
+    _hookfunction(DisplayNPC, function()return nil end)
+    CameraShaker:Stop()
+  ]])()
 end)
 
 _env.BossesList = function()
@@ -206,6 +208,16 @@ local ShopTable = {
     {"Cyborg Race", {"CyborgTrainer", "Buy"}}
   }}
 }
+
+_env.FruitList = function()
+  local ListName = {}
+
+  for _, Fruit in next, CommF_:InvokeServer("GetFruits") do
+    table.insert(ListName, Fruit.Name)
+  end
+
+  return ListName
+end
 
 local SpeedHubX = {}
 
@@ -636,7 +648,7 @@ local _seaevent = Window:MakeTab("Sea Event") do
   end
 end
 
-local _shopMaps = Window:MakeTab("Shop / Maps") do
+local _shopMaps = Window:MakeTab("Shop / Maps / Fruit") do
   local _Maps = _shopMaps:Section({["Title"] = "Maps", ["Content"] = ""}) do
     _Maps:Seperator("Island")
     Funcs:AddDropdown(_Maps, "Select Island", false, _env.IslandList(), {""})
@@ -669,6 +681,18 @@ local _shopMaps = Window:MakeTab("Shop / Maps") do
         Funcs:AddButton(_shop, NameShop, "", buyfunc)
       end
     end
+  end
+
+  local _fruit = _shopMaps:Section({["Title"] = "Fruit", ["Content"] = ""}) do
+    _fruit:Seperator("Fruit Sniper")
+    Funcs:AddDropdown(_fruit, "Select Fruit Sniper", false, _env.FruitList(), {""})
+    Funcs:AddToggle(_fruit, "Auto Buy Fruit Sniper", "", false)
+    _fruit:Seperator("Fruit")
+    Funcs:AddToggle(_fruit, "Auto Store Fruit", "", false)
+    Funcs:AddToggle(_fruit, "Auto Drop Fruit", "", false)
+    Funcs:AddToggle(_fruit, "Auto Eat Fruit", "", false)
+    Funcs:AddToggle(_fruit, "Auto Random Fruit", "", false)
+    Funcs:AddToggle(_fruit, "Auto Find Fruit", "", false)
   end
 end
 
