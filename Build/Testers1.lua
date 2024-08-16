@@ -121,7 +121,7 @@ _env.IslandList = function()
   return ListName
 end
 
-_env.NPCList = function(NPCs)
+_env.NPCList = function()
   local ListNPC = {}
   local CheckName = {}
 
