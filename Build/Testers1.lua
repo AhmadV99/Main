@@ -657,12 +657,12 @@ local _shopMaps = Window:MakeTab("Shop / Maps") do
   end
 
   local _shop = _shopMaps:Section({["Title"] = "Shop", ["Content"] = ""}) do
-    _shop:Seperator({"Other"})
+    _shop:Seperator("Other")
     Funcs:AddToggle(_shop, "Auto Buy Legendary Sword", "", false)
     Funcs:AddToggle(_shop, "Auto Buy True Triple Katana", "", false)
     for _, Category in ipairs(ShopTable) do
       local name, items = Category[1], Category[2]
-      _shop:Seperator({name})
+      _shop:Seperator(name)
       for _, item in ipairs(items) do
         local NameShop, Params = item[1], item[2]
         local buyfunc = type(Params) == "table" and function()CommF_:InvokeServer(unpack(Params))end or Params
