@@ -803,7 +803,6 @@ local _pvp = Window:MakeTab("PvP") do
 
   local _farmbounty = _pvp:Section({["Title"] = "Farm Bounty", ["Content"] = ""}) do
     _farmbounty:Seperator("Config")
-    Funcs:AddDropdown(_farmbounty, "Choose Player Bounty", false, {"High", "Low"}, {"Low"})
     Funcs:AddDropdown(_farmbounty, "Choose Equip       ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
     Funcs:AddToggle(_farmbounty, "Auto Hop", "", false)
     _farmbounty:Seperator("Farming Bounty")
