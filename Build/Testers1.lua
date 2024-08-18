@@ -870,9 +870,9 @@ local _raidesp = Window:MakeTab("Raid / ESP") do
     Funcs:AddToggle(_raid, "Kill Aura", "", false)
   end
 
-  local _esp = _raidesp:Section({["Title"] = "Raid", ["Content"] = ""}) do
+  local _esp = _raidesp:Section({["Title"] = "ESP", ["Content"] = ""}) do
     for _, esp in next, {"Player","Chest", "Flower","Devil Fruit","Island","Mirage Island","Kitsune Island"} do
-      Funcs:AddToggle(esp, "ESP " .. esp, "", false)
+      Funcs:AddToggle(_esp, "ESP " .. esp, "", false)
     end
   end
 end
@@ -883,6 +883,5 @@ game.StarterGui:SetCore("SendNotification", {
   Icon = "rbxassetid://0", 
   Duration = 2
 })
-
 
 return SpeedHubX
