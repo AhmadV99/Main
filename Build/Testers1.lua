@@ -168,6 +168,16 @@ _env.ChipsList = function()
   return ListName
 end
 
+_env.PlayerList = function()
+  local ListName = {}
+
+  for _, v in next, Players:GetChildren() do
+    table.insert(ListName, v.Name)
+  end
+
+  return ListName
+end
+
 if Sea[1] then
   _env.MaterialList = {"Angel Wings", "Leather + Scrap Metal", "Magma Ore", "Fish Tail"}
 elseif Sea[2] then
@@ -771,10 +781,10 @@ local _pvp = Window:MakeTab("PvP") do
   local _PlayPvP = _pvp:Section({["Title"] = "Play PvP", ["Content"] = ""}) do
     _PlayPvP:Seperator("Config Player")
     Funcs:AddDropdown(_PlayPvP, "Choose Neareast Or Select (Player)", false, {"Neareast", "Select"}, {"Neareast"})
-    local plrList = Funcs:AddDropdown(_PlayPvP, "Select Player ( if only choose Select (Player) )", false, {Players:GetPlayers()}, {""})
+    local plrList = Funcs:AddDropdown(_PlayPvP, "Select Player ( if only choose Select (Player) )", false, _env.PlayerList(), {""})
     Funcs:AddButton(_PlayPvP, "Refersh Player", "", function()
       plrList:Clear()
-      plrList:Refresh({Players:GetPlayers()}, {""})
+      plrList:Refresh(_env.PlayerList(), {""})
     end)
     _PlayPvP:Seperator("Config Aim")
     Funcs:AddDropdown(_PlayPvP, "Choose Aim Part", false, {"Head", "Torso", "HumanoidRootPart", "PrimaryPart"}, {"HumanoidRootPart"})
