@@ -864,7 +864,7 @@ end
 
 local _raidesp = Window:MakeTab("Raid / ESP") do
   local _raid = _raidesp:Section({["Title"] = "Raid", ["Content"] = ""}) do
-    Funcs:AddDropdown(_raid, "Select Chips", false, {_env.ChipsList()}, {""})
+    Funcs:AddDropdown(_raid, "Select Chips", false, _env.ChipsList(), {""})
     Funcs:AddToggle(_raid, "Auto Buy Chips", "", false)
     Funcs:AddToggle(_raid, "Auto Farm Raid", "", false)
     Funcs:AddToggle(_raid, "Kill Aura", "", false)
