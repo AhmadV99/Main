@@ -428,7 +428,6 @@ local _home = Window:MakeTab("Home") do
     end)
     _misc:Seperator("Water")
     Funcs:AddToggle(_misc, "Walk On Water", "", true)
-    Funcs:AddToggle(_misc, "Anti-Death In Water", "", true)
     _misc:Seperator("Remove UI")
     Funcs:AddToggle(_misc, "Remove Damage", "", false)
     Funcs:AddToggle(_misc, "Remove Notifications", "", false)
