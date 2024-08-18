@@ -24,6 +24,10 @@ local _setclipboard = setclipboard or (function()end)
 local _hookfunction = hookfunction or hookfunc or (function()end)
 local _require = require or (function()end)
 local _getnilinstances = getnilinstances or (function()end)
+local _isfile = isfile or (function()end)
+local _delfile = delfile or (function()end)
+
+local Raids = _require(ReplicatedStorage.Raids)
 
 local _env = getgenv and getgenv() or {}
 
@@ -35,7 +39,7 @@ local Sea = {
 
 task.spawn(function()
   loadstring([[
-    local Container = ReplicatedStorage:WaitForChild("Effect"):WaitForChild("Container")
+    local Container = ReplicatedStorage.Effect.Container
 
     local CameraShaker = _require(ReplicatedStorage.Util.CameraShaker)
     local Death = _require(Container:FindFirstChild("Death"))
@@ -48,6 +52,8 @@ task.spawn(function()
     CameraShaker:Stop()
   ]])()
 end)
+
+_env.CodesRedeem = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Codes_BloxFruit"))()
 
 _env.BossesList = function()
   local BossTable = {}
@@ -145,6 +151,18 @@ _env.NPCList = function()
   return ListNPC
 end
 
+_env.ChipsList = function()
+  local ListName = {}
+
+  for _, Raids in next, Raids.raids do
+    table.insert(ListName, Raids)
+  end
+  for _, Raids in next, Raids.advancedRaids do
+    table.insert(ListName, Raids)
+  end
+
+  return ListName
+end
 
 if Sea[1] then
   _env.MaterialList = {"Angel Wings", "Leather + Scrap Metal", "Magma Ore", "Fish Tail"}
@@ -362,6 +380,55 @@ local _home = Window:MakeTab("Home") do
     for _, v in next, {"Melee", "Defense", "Sword", "Gun", "Demon Fruit"} do
       Funcs:AddToggle(_stats, v, "", false)
     end
+  end
+
+  local _misc = _home:Section({["Title"] = "Misc", ["Content"] = ""}) do
+    _misc:Seperator("Team")
+    Funcs:AddButton(_misc, "Join Pirates Team", "", function()
+      CommF_:InvokeServer("SetTeam", "Pirates")
+    end)
+    Funcs:AddButton(_misc, "Join Marines Team", "", function()
+      CommF_:InvokeServer("SetTeam", "Marines")
+    end)
+    _misc:Seperator("Menu UI")
+    Funcs:AddButton(_misc, "Devil Fruit Shop", "", function()
+      CommF_:InvokeServer("GetFruits")Player.PlayerGui.Main.FruitShop.Visible = true
+    end)
+    Funcs:AddButton(_misc, "Titles", "", function()
+      CommF_:InvokeServer("getTitles")Player.PlayerGui.Main.Titles.Visible = true
+    end)
+    Funcs:AddButton(_misc, "Haki Color", "", function()
+      Player.PlayerGui.Main.Colors.Visible = true
+    end)
+    _misc:Seperator("Redeem")
+    Funcs:AddButton(_misc, "Redeem Code", "", function()
+      for _, code in next, _env.CodesRedeem do
+        Remotes.Redeem:InvokeServer((function()
+          if type(code) == "string" then
+            return code
+          else
+            return tostring(code)
+          end
+        end)())
+      end
+    end)
+    _misc:Seperator("Water")
+    Funcs:AddToggle(_misc, "Walk On Water", "", true)
+    Funcs:AddToggle(_misc, "Anti-Death In Water", "", true)
+    _misc:Seperator("Remove UI")
+    Funcs:AddToggle(_misc, "Remove Damage", "", false)
+    Funcs:AddToggle(_misc, "Remove Notifications", "", false)
+    _misc:Seperator("Other")
+    Funcs:AddToggle(_misc, "Auto Haki", "", true)
+    Funcs:AddToggle(_misc, "Auto Ken", "", false)
+  end
+
+  local _settings = _home:Section({["Title"] = "Settings", ["Content"] = ""}) do
+    Funcs:AddButton(_settings, "Reset Script Saver", "", function()
+      if _isfile("Speed Hub X") then
+        _delfile("Speed Hub X")
+      end
+    end)
   end
 end
 
@@ -693,6 +760,106 @@ local _shopMaps = Window:MakeTab("Shop / Maps / Fruit") do
     Funcs:AddToggle(_fruit, "Auto Eat Fruit", "", false)
     Funcs:AddToggle(_fruit, "Auto Random Fruit", "", false)
     Funcs:AddToggle(_fruit, "Auto Find Fruit", "", false)
+  end
+end
+
+local _pvp = Window:MakeTab("PvP") do
+  local _PlayPvP = _pvp:Section({["Title"] = "Play PvP", ["Content"] = ""}) do
+    _PlayPvP:Seperator("Config Player")
+    Funcs:AddDropdown(_PlayPvP, "Choose Neareast Or Select (Player)", false, {"Neareast", "Select"}, {"Neareast"})
+    local plrList = Funcs:AddDropdown(_PlayPvP, "Select Player ( if only choose Select (Player) )", false, Players:GetPlayers(), {""})
+    Funcs:AddButton(_PlayPvP, "Refersh Player", "", function()
+      plrList:Clear()
+      plrList:Refresh(Players:GetPlayers(), {""})
+    end)
+    _PlayPvP:Seperator("Config Aim")
+    Funcs:AddDropdown(_PlayPvP, "Choose Aim Part", false, {"Head", "Torso", "HumanoidRootPart", "PrimaryPart"}, {"HumanoidRootPart"})
+    _PlayPvP:Seperator("Play Aim Bot")
+    Funcs:AddToggle(_PlayPvP, "Aimbot", "", false)
+    Funcs:AddToggle(_PlayPvP, "Aimbot Gun", "", false)
+    _PlayPvP:Seperator("Play Aim Lock")
+    Funcs:AddToggle(_PlayPvP, "AimLock", "", false)
+    _PlayPvP:Seperator("Other")
+    Funcs:AddToggle(_PlayPvP, "Use Aim (GUI)", "", false)
+    Funcs:AddDropdown(_PlayPvP, "FOV Range", false, {"10", "20", "30", "40", "50", "60", "70", "80", "90", "100"}, {"40"})
+    Funcs:AddToggle(_PlayPvP, "Use FOV", "", false)
+    _PlayPvP:Seperator("Misc PvP")
+    Funcs:AddToggle(_PlayPvP, "Auto Enable PvP", "", false)
+  end
+
+  local _farmbounty = _pvp:Section({["Title"] = "Farm Bounty", ["Content"] = ""}) do
+    _farmbounty:Seperator("Config")
+    Funcs:AddDropdown(_farmbounty, "Choose Player Bounty", false, {"High", "Low"}, {"Low"})
+    Funcs:AddDropdown(_farmbounty, "Choose Equip       ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
+    Funcs:AddToggle(_farmbounty, "Auto Hop", "", false)
+    _farmbounty:Seperator("Farming Bounty")
+    Funcs:AddToggle(_farmbounty, "Auto Farm Bounty", "", false)
+    _farmbounty:Seperator("Skill")
+    for _, v in next, {"Z", "X", "C", "V", "F"} do
+      Funcs:AddToggle(_farmbounty, v .. "          ", "", true)
+    end
+  end
+end
+
+local _racemirage = Window:MakeTab("Race / Mirage") do
+  local _mirage = _racemirage:Section({["Title"] = "Mirage Island", ["Content"] = ""}) do
+    local _statisMI = _mirage:Paragraph({["Title"] = "Status Mirage Island", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        if WorldOrigin.Locations:FindFirstChild("Mirage Island") then
+          _statisMI:Set({
+            ["Title"] = "Status Mirage Island",
+            ["Content"] = "Mirage Island is Spawned"
+          })
+        else
+          _statisMI:Set({
+            ["Title"] = "Status Mirage Island",
+            ["Content"] = "Mirage Island is not Spawned"
+          })
+        end
+      end
+    end)
+    Funcs:AddToggle(_mirage, "Auto Summon Mirage Island", "", false)
+    Funcs:AddToggle(_mirage, "Tween To Mirage Island", "", false)
+    Funcs:AddToggle(_mirage, "Tween To Gear", "", false)
+    Funcs:AddToggle(_mirage, "Tween To Blue Gear", "", false)
+    Funcs:AddToggle(_mirage, "Tween To Highest Point", "", false)
+    Funcs:AddToggle(_mirage, "Tween To Advanced Dealer", "", false)
+  end
+
+  local _getrace = _racemirage:Section({["Title"] = "Get Race", ["Content"] = ""}) do
+    Funcs:AddToggle(_getrace, "Auto Get Cyborg", "", false)
+    Funcs:AddToggle(_getrace, "Auto Get Ghoul", "", false)
+  end
+
+  local _getvrace = _racemirage:Section({["Title"] = "Get Race Version", ["Content"] = ""}) do
+    Funcs:AddToggle(_getvrace, "Auto Get Race V1", "", false)
+    Funcs:AddToggle(_getvrace, "Auto Get Race V2", "", false)
+    Funcs:AddToggle(_getvrace, "Auto Get Race V3", "", false)
+  end
+
+  local _racev4 = _racemirage:Section({["Title"] = "Race V4", ["Content"] = ""}) do
+    Funcs:AddToggle(_racev4, "Auto Complete Trial", "", false)
+    Funcs:AddToggle(_racev4, "Auto Kill Player In Trial", "", false)
+    Funcs:AddToggle(_racev4, "Auto Awakening One Quest", "", false)
+    _racev4:Seperator("Tween Race V4")
+    Funcs:AddDropdown(_racev4, "Select Tween Race", false, {"Top Great Tree","Timple Of Time","Lever Pull", "Acient One", "Cyborg Door", "Fish Door", "Ghoul Door", "Human Door", "Mink Door", "Sky Door"}, {"Timple Of Time"})
+    Funcs:AddToggle(_racev4, "Tween On Select Tween Race", "", false)
+  end
+end
+
+local _raidesp = Window:MakeTab("Raid / ESP") do
+  local _raid = _raidesp:Section({["Title"] = "Raid", ["Content"] = ""}) do
+    Funcs:AddDropdown(_raid, "Select Chips", false, {_env.ChipsList()}, {""})
+    Funcs:AddToggle(_raid, "Auto Buy Chips", "", false)
+    Funcs:AddToggle(_raid, "Auto Farm Raid", "", false)
+    Funcs:AddToggle(_raid, "Kill Aura", "", false)
+  end
+
+  local _esp = _raidesp:Section({["Title"] = "Raid", ["Content"] = ""}) do
+    for _, esp in next, {"Player","Chest", "Flower","Devil Fruit","Island","Mirage Island","Kitsune Island"} do
+      Funcs:AddToggle(esp, "ESP " .. esp, "", false)
+    end
   end
 end
 
