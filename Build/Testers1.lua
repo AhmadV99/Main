@@ -38,19 +38,16 @@ local Sea = {
 }
 
 task.spawn(function()
-  loadstring([[
-    local Container = ReplicatedStorage.Effect.Container
+  local Container = ReplicatedStorage.Effect.Container
+  local CameraShaker = _require(ReplicatedStorage.Util.CameraShaker)
+  local Death = _require(Container:FindFirstChild("Death"))
+  local Respawn = _require(Container:FindFirstChild("Respawn"))
+  local DisplayNPC = _require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
 
-    local CameraShaker = _require(ReplicatedStorage.Util.CameraShaker)
-    local Death = _require(Container:FindFirstChild("Death"))
-    local Respawn = _require(Container:FindFirstChild("Respawn"))
-    local DisplayNPC = _require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
-
-    _hookfunction(Death, function()return nil end)
-    _hookfunction(Respawn, function()return nil end)
-    _hookfunction(DisplayNPC, function()return nil end)
-    CameraShaker:Stop()
-  ]])()
+  _hookfunction(Death, function()return nil end)
+  _hookfunction(Respawn, function()return nil end)
+  _hookfunction(DisplayNPC, function()return nil end)
+  CameraShaker:Stop()
 end)
 
 _env.CodesRedeem = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Codes_BloxFruit"))()
@@ -767,10 +764,10 @@ local _pvp = Window:MakeTab("PvP") do
   local _PlayPvP = _pvp:Section({["Title"] = "Play PvP", ["Content"] = ""}) do
     _PlayPvP:Seperator("Config Player")
     Funcs:AddDropdown(_PlayPvP, "Choose Neareast Or Select (Player)", false, {"Neareast", "Select"}, {"Neareast"})
-    local plrList = Funcs:AddDropdown(_PlayPvP, "Select Player ( if only choose Select (Player) )", false, Players:GetPlayers(), {""})
+    local plrList = Funcs:AddDropdown(_PlayPvP, "Select Player ( if only choose Select (Player) )", false, {Players:GetPlayers()}, {""})
     Funcs:AddButton(_PlayPvP, "Refersh Player", "", function()
       plrList:Clear()
-      plrList:Refresh(Players:GetPlayers(), {""})
+      plrList:Refresh({Players:GetPlayers()}, {""})
     end)
     _PlayPvP:Seperator("Config Aim")
     Funcs:AddDropdown(_PlayPvP, "Choose Aim Part", false, {"Head", "Torso", "HumanoidRootPart", "PrimaryPart"}, {"HumanoidRootPart"})
