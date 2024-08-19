@@ -2,7 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Ahmad
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Settings.lua"))()
 
 local Window = Library:Start({
-  ["Name"] = "Speed Hub X | " .. Version .. "(BETA)",
+  ["Name"] = "Speed Hub X | " .. Version .. " (BETA)",
   ["SaveFolder"] = "Speed Hub X"
 })
 
