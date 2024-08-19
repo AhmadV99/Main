@@ -6,13 +6,6 @@ local Window = Library:Start({
   ["SaveFolder"] = "Speed Hub X"
 })
 
-game.StarterGui:SetCore("SendNotification", {
-  Title = "Speed Hub X Loader", 
-  Text = "Loading...", 
-  Icon = "rbxassetid://0", 
-  Duration = 5
-})
-
 local Players = game:GetService("Players")
 local Lighting = game:GetService("Lighting")
 local TeleportService = game:GetService("TeleportService")
@@ -874,12 +867,5 @@ local _raidesp = Window:MakeTab("Raid / ESP") do
     end
   end
 end
-
-game.StarterGui:SetCore("SendNotification", {
-  Title = "Speed Hub X Loader", 
-  Text = "Loaded", 
-  Icon = "rbxassetid://0", 
-  Duration = 2
-})
 
 return SpeedHubX
