@@ -1,472 +1,871 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/V3.5"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Settings.lua"))()
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/V3.lua"))()
-local World1, World2, World3 = game.PlaceId == 2753915549, game.PlaceId == 4442272183, game.PlaceId == 7449423635
+
+local Window = Library:Start({
+  ["Name"] = "Speed Hub X | " .. Version .. "(BETA)",
+  ["SaveFolder"] = "Speed Hub X"
+})
+
 local Players = game:GetService("Players")
+local Lighting = game:GetService("Lighting")
+local TeleportService = game:GetService("TeleportService")
+local Workspace = game:GetService("Workspace")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Player = Players.LocalPlayer
-local Remotes = ReplicatedStorage.Remotes
-local CommF_ = Remotes.CommF_
+local Enemies = Workspace:WaitForChild("Enemies")
+local Remotes = ReplicatedStorage:WaitForChild("Remotes")
+local CommF_ = Remotes:WaitForChild("CommF_")
+local Map = Workspace:WaitForChild("Map")
+local WorldOrigin = Workspace:WaitForChild("_WorldOrigin")
+local NPCs = Workspace:WaitForChild("NPCs")
 
-task.spawn(function() -- Remove Effect
-  local _hookfunc1 = hookfunction or hookfunc or (function(...)return...end)
-  local _require1 = require or (function(...)return...end)
+local _setclipboard = setclipboard or (function()end)
+local _hookfunction = hookfunction or hookfunc or (function()end)
+local _require = require or (function()end)
+local _getnilinstances = getnilinstances or (function()end)
+local _isfile = isfile or (function()end)
+local _delfile = delfile or (function()end)
+
+local Raids = _require(ReplicatedStorage.Raids)
+
+local _env = getgenv and getgenv() or {}
+
+local Sea = {
+  [1] = game.PlaceId == 2753915549,
+  [2] = game.PlaceId == 4442272183,
+  [3] = game.PlaceId == 7449423635
+}
+
+task.spawn(function()
   local Container = ReplicatedStorage.Effect.Container
-  local CameraShaker = _require1(ReplicatedStorage.Util.CameraShaker)
-  local Death = _require1(Container:FindFirstChild("Death"))
-  local Respawn = _require1(Container:FindFirstChild("Respawn"))
-  local DisplayNPC = _require1(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
-  _hookfunc1(Death, function()return nil end)
-  _hookfunc1(Respawn, function()return nil end)
-  _hookfunc1(DisplayNPC, function()return nil end)
+  local CameraShaker = _require(ReplicatedStorage.Util.CameraShaker)
+  local Death = _require(Container:FindFirstChild("Death"))
+  local Respawn = _require(Container:FindFirstChild("Respawn"))
+  local DisplayNPC = _require(ReplicatedStorage:FindFirstChild("GuideModule")).ChangeDisplayedNPC
+
+  _hookfunction(Death, function()return nil end)
+  _hookfunction(Respawn, function()return nil end)
+  _hookfunction(DisplayNPC, function()return nil end)
   CameraShaker:Stop()
 end)
 
-local Window = Library:MakeWindow({
-    Title = "Speed Hub X | " .. Version,
-    SaveFolder = "Speed Hub X"
-});Window:AddMinimizeButton({
-    Button = {Image = "rbxassetid://16022917595"},
-    Corner = {CornerRadius = UDim.new(0, 5)}
-})
-local Home = Window:MakeTab({"Home", "scan-face"})
-Home:AddDiscordInvite({
-    Name = "Speed Hub X | Official Server",
-    Logo = "rbxassetid://16022917595",
-    Invite = Discord
-})
-local SpeedHubX = {}
-local function Toggle(Tab, Name, Desc, Default)
-  local Ver = Tab:AddToggle({
-    Name = Name,Description = Desc or "",Default = Default,
-    Callback = function(Value)
-      SpeedHubX[Name] = Value
-    end, Flag = "SpeedHubX/Toggle/" .. Name})
-    return Ver
-end
-local function Dropdown(Tab, Name, Desc, Option, Default)
-  local Ver = Tab:AddDropdown({
-    Name = Name,Description = Desc or "",Options = Option,Default = Default,
-    Callback = function(Value)
-      SpeedHubX[Name] = Value
-    end, Flag = "SpeedHubX/Dropdown/" .. Name})
-    return Ver
-end
-local function Silder(Tab, Name, Min, Max, Default)
-  local Ver = Tab:AddSlider({
-    Name = Name,Min = Min,Max = Max,Default = Default,
-    Callback = function(Value)
-      SpeedHubX[Name] = Value
-    end, Flag = "SpeedHubX/Slider/" .. Name})
-    return Ver
-end
+_env.CodesRedeem = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Codes_BloxFruit"))()
 
-Home:AddSection({"- [ Local Player ] -"})
-Silder(Home, "Set WalkSpeed", 0, 500, 300)
-Toggle(Home, "Enable WalkSpeed", "This Can Set Walk Speed!", false)
-local Config = Window:MakeTab({"Config", "rbxassetid://18361516966"})
-
-Dropdown(Config, "Weapon Tool", "Weapon + Equip = Equiped Weapon", {"Melee","Sword","Blox Fruit","Gun"}, "Melee")
-Silder(Config, "Tween Speed", 0, 500, 200)
-Silder(Config, "Farm Distance", 0, 100, 40)
-Silder(Config, "Bring Mob Radius", 0, 500, 200)
-Toggle(Config, "Bring Mob", "This Can Bring Mob 5+ or 6+ Each", true)
-Toggle(Config, "Fast Attack", "This Fast Attack Can Attack a Mob in Fast", true)
-Silder(Config, "Fast Attack Delay", 0, 20, 0)
-Toggle(Config, "Hop if Admin or Staff", "", true)
-Toggle(Config, "Auto Dodge Skill", "This is BETA", false)
-Config:AddSection("- [ Race ] -")
-Toggle(Config, "Auto Use Race V3", "", false)
-Toggle(Config, "Auto Use Race V4", "", false)
-Config:AddSection("- [ Body ] -")
-Toggle(Config, "Anti-Knockback", "", false)
-
-local Main = Window:MakeTab({"Main", "home"})
-
-Main:AddSection("- [ Farming ] -")
-Toggle(Main, "Auto Farm Level", "This Can Farm Level!", false)
-Toggle(Main, "Auto Farm Nearest", "This Can Attack Nearest Mob!", false)
-
-if World3 then
-  Toggle(Main, "Auto Pirates Sea", "This Can Attack Rip Indra Or Something!", false)
-elseif World2 then
-  Toggle(Main, "Auto Factory", "This Can Attack Core!", false)
-end
-
-Main:AddSection("- [ Farming Mastery ] -")
-Dropdown(Main, "Choose Mastery Mode", "", {"Level","Bone","Cake Prince","Nearest"}, "Level")
-Dropdown(Main, "Choose Mastery Tool", "", {"Blox Fruit","Sword","Gun"}, "Blox Fruit")
-Toggle(Main, "Farm Mastery", "", false)
-Silder(Main, "Mastery Health", 0, 100, 25)
-Main:AddSection("- [ Skill Mastery ] -")
-Toggle(Main, "Skill Z", "", true)Toggle(Main, "Skill X", "", true)Toggle(Main, "Skill C", "", true)Toggle(Main, "Skill V", "", true)Toggle(Main, "Skill F", "", true)
-Main:AddSection("- [ Farming Chest ] -")
-Dropdown(Main, "Choose Chest Area", "", {"Mirage Island", "Island Other"}, "Island Other")
-Toggle(Main, "Auto Collect Chest", "Stop Collect Chest if Get God's Chalice or Fist of Darkness", false)
-Toggle(Main, "Auto Hop", "Hop if No Found Chest", false)
-Main:AddSection("- [ Bosses ] -")
-local BossList = Dropdown(Main, "Choose Boss", "", getgenv().TableBoss, "")
-Main:AddButton({Name = "Refersh Boss", Description = "", Callback = function()
-  BossList:Remove(getgenv().TableBoss)
-  BossList:Set(getgenv().TableBoss)
-end})
-Toggle(Main, "Auto Attack Boss", "This Can Attack a Mob Bosses!", false)
-Toggle(Main, "Auto Attack Boss All", "This Can Attack a Mob Bosses All!", false)
-Main:AddButton({Name = "Hop Server", Description = "", Callback = function()getgenv().Server("Hop1")end})
-Main:AddSection("- [ Material ] -")
-Dropdown(Main, "Choose Material", "", getgenv().MaterialList, "")
-Toggle(Main, "Auto Farm Material", "This Can Farm Material Item!", false)
-
-local ItemQuest = Window:MakeTab({"Item/Quest", "swords"})
-if World1 then
-  Toggle(ItemQuest, "Auto Sea Second", "Only Get Level 700 if Auto Sea Second!", false)
-  ItemQuest:AddSection("- [ Item ] -")
-  Toggle(ItemQuest, "Auto Unlock Saber", "Only Get Level 200 if Auto Unlock Saber!", false)
-  Toggle(ItemQuest, "Auto Pole", "This Can Get Pole Item!", false)
-elseif World2 then
-  ItemQuest:AddSection("- [ Sea ] -")
-  Toggle(ItemQuest, "Auto Sea Third", "This Can Get Sea Third then Travel Third World!", false)
-  ItemQuest:AddSection("- [ Item Sword ] -")
-  Toggle(ItemQuest, "Auto Dragon Trident", "", false)
-  Toggle(ItemQuest, "Auto Gravity Cane", "", false)
-  Toggle(ItemQuest, "Auto Jitte", "", false)
-  Toggle(ItemQuest, "Auto Longsword", "", false)
-  Toggle(ItemQuest, "Auto Koko", "", false)
-  Toggle(ItemQuest, "Auto Midnight blade", "", false)
-  Toggle(ItemQuest, "Auto Rengoku", "", false)
-  ItemQuest:AddSection({"- [ Ectoplasm ] -"})
-  Toggle(ItemQuest, "Auto Ectoplasm", "This Can Farm Ectoplasm in Item!", false)
-  Toggle(ItemQuest, "Auto Bartilo Quest", "This Can Farm Bartilo Quest!", false)
-  ItemQuest:AddSection({"- [ Don Swan ] -"})
-  Toggle(ItemQuest, "Auto Don Swan", "This Can Attack Boss Called (Don Swan)", false)
-  ItemQuest:AddSection({"- [ Race Evo ] -"})
-  Toggle(ItemQuest, "Auto Race Evo", "This Get Race Evo!", false)
-  ItemQuest:AddSection({"- [ Dark Beard ] -"})
-  Toggle(ItemQuest, "Auto Dark Beard", "This Get Dark Beard item!", false)
-  ItemQuest:AddSection({"- [ Cursed Captain ] -"})
-  Toggle(ItemQuest, "Auto Cursed Captain", "This Attack Boss Cursed Captain!", false)
-  ItemQuest:AddSection({"- [ Law ] -"})
-  Toggle(ItemQuest, "Auto Order Law", "This Attack Law Order!", false)
-elseif World3 then
-  ItemQuest:AddSection("- [ Sword Item ] -")
-  Toggle(ItemQuest, "Auto Twin Hooks", "", false)
-  Toggle(ItemQuest, "Auto Buddy Sword", "", false)
-  Toggle(ItemQuest, "Auto Canvander", "", false)
-  Toggle(ItemQuest, "Auto Dark Dagger", "", false)
-  Toggle(ItemQuest, "Auto Fox Lamp", "", false)
-  Toggle(ItemQuest, "Auto Spikey Trident", "", false)
-  Toggle(ItemQuest, "Auto Collect Yama", "", false)
-  Toggle(ItemQuest, "Auto Tushita", "", false)
-  Toggle(ItemQuest, "Auto CDK [Loading Update]", "", false)
-  Toggle(ItemQuest, "Auto Hallow Scythe", "", false)
-  ItemQuest:AddSection({"- [ Gun Item ] -"})
-  Toggle(ItemQuest, "Auto Serpent Bow", "", false)
-  Toggle(ItemQuest, "Auto Soul Guitar", "", false)
-  ItemQuest:AddSection({"- [ Bones ] -"})
-  local StatusBone = ItemQuest:AddParagraph({"Bones Status", "Bones Total:"})
-  task.spawn(function()
-    while task.wait(1) do 
-      local Bones = VerifyMaterial("Bones")
-      StatusBone:Set("Bones Status", "Bones Total: ".. Bones) 
-    end 
-  end)
-  Toggle(ItemQuest, "Auto Farm Bones", "This Farm Bone x4 or x5 or x3 Each", false)
-  Toggle(ItemQuest, "Auto Trade Bones", "Trade Bones 50 (Bone >= 50)", false)
-  ItemQuest:AddSection({"- [ Cake Prince ] -"})
-  local StatusC = ItemQuest:AddParagraph({"Status Cake Prince"})
-  task.spawn(function()
-    while task.wait(1) do
-      if getgenv().CheckMob({"Dough King"}) then
-        StatusC:Set("Dough King : Spawned")
-      elseif getgenv().CheckMob({"Cake Prince"}) then
-        StatusC:Set("Cake Prince : Spawned")
-      else
-        StatusC:Set("Status Cake Prince", "Status : " .. getgenv().CheckMob("CakePrinceSpawner"))
+_env.BossesList = function()
+  local BossTable = {}
+  
+  local function GetBoss(Objects)
+    for _, Boss in ipairs(Objects) do
+      local Humanoid = Boss:FindFirstChildOfClass("Humanoid")
+      if Humanoid and Humanoid.DisplayName:find("Boss") then
+        table.insert(BossTable, Boss.Name)
       end
     end
-  end)
-  Toggle(ItemQuest, "Auto Cake Prince", "This Can Attack Mob Cake Prince or Something", false)
-  Toggle(ItemQuest, "Auto Dough King", "This Attack Raid Boss Dough King", false)
-  ItemQuest:AddSection({"- [ Rip Indra ] -"})
-  Toggle(ItemQuest, "Auto Active Haki Color", "This Get Haki Color", false)
-  Toggle(ItemQuest, "Auto Rip Indra", "This Attack Raid Boss Rip Indra", false)
-  ItemQuest:AddSection({"- [ Elite Hunter ] -"})
-  local StatusE = ItemQuest:AddSection({"Status"})
-  local GetNumE = ItemQuest:AddSection({"Status"})
-  task.spawn(function()
-    while task.wait(2) do
-      if getgenv().CheckMob({"Diablo","Deandre","Urban"}) then
-        StatusE:Set("Elite Hunter : Spawned")
-      else
-        StatusE:Set("Elite Hunter : Not Spawn")
-       end
+  end
+
+  GetBoss(ReplicatedStorage:GetDescendants())
+  GetBoss(Enemies:GetDescendants())
+  return BossTable
+end
+
+_env.CheckMob = function(Value)
+  local Boolen = false
+
+  local function GetMob(Object)
+    for _, Mob in ipairs(Object) do
+      if table.find(Value, Mob.Name) then
+        local HD = Mob:FindFirstChild("Humanoid")
+        if HD and HD.Health > 0 then
+          Boolen = true
+          break 
+        end
+      end
     end
-  end)
-  task.spawn(function()
-    while task.wait(2) do
-      local Progress = CommF_:InvokeServer("EliteHunter", "Progress")
-      GetNumE:Set("Elite Hunter Progress : " .. Progress)
+  end
+
+  local children = ReplicatedStorage:GetChildren()
+  if not Boolen then
+    GetMob(children)
+  end
+  if not Boolen then
+    children = Enemies:GetChildren()
+    GetMob(children)
+  end
+  return Boolen
+end
+
+_env.VerifyMaterial = function(NameC)
+  for _, Item in pairs(CommF_:InvokeServer("getInventory")) do
+    if Item.Type == "Material" then
+      if Item.Name == NameC then
+        return Item.Count
+      end
+    end
+  end
+  return 0
+end
+
+_env.IslandList = function()
+  local ListName = {}
+  local CheckName = {}
+  local Sky = {"Sky 2","Sky 3"}
+
+  for _, part in next, WorldOrigin.Locations:GetChildren() do
+    if part and not CheckName[part.name] then
+      table.insert(ListName, part.name)CheckName[part.name]=true
+    end
+  end
+  
+  if Sea[1] then
+    for _, part in next, Sky do
+      table.insert(ListName, part)
+    end
+  end
+
+  return ListName
+end
+
+_env.NPCList = function()
+  local ListNPC = {}
+  local CheckName = {}
+
+  local function CreateNPC(NPCGroup)
+    for _, part in next, NPCGroup do
+      local Head = part:FindFirstChild("Head")
+      if Head then
+        local QuestBBG = Head:FindFirstChild("QuestBBG")
+        if QuestBBG and QuestBBG:FindFirstChild("Title") and not CheckName[part.Name] then
+          table.insert(ListNPC, part.Name)CheckName[part.Name]=true
+        end
+      end
+    end
+  end
+
+  CreateNPC(NPCs:GetChildren())
+  CreateNPC(_getnilinstances())
+
+  return ListNPC
+end
+
+_env.ChipsList = function()
+  local ListName = {}
+
+  for _, Raids in next, Raids.raids do
+    table.insert(ListName, Raids)
+  end
+  for _, Raids in next, Raids.advancedRaids do
+    table.insert(ListName, Raids)
+  end
+
+  return ListName
+end
+
+_env.PlayerList = function()
+  local ListName = {}
+
+  for _, v in next, Players:GetChildren() do
+    table.insert(ListName, v.Name)
+  end
+
+  return ListName
+end
+
+if Sea[1] then
+  _env.MaterialList = {"Angel Wings", "Leather + Scrap Metal", "Magma Ore", "Fish Tail"}
+elseif Sea[2] then
+  _env.MaterialList = {"Leather + Scrap Metal", "Magma Ore", "Mystic Droplet", "Radioactive Material", "Vampire Fang"}
+elseif Sea[3] then
+  _env.MaterialList = {"Leather + Scrap Metal", "Fish Tail", "Gunpowder", "Mini Tusk", "Conjured Cocoa", "Dragon Scale"}
+end
+
+local ShopTable = {
+  {"Frags", {
+    {"Race Rerol", {"BlackbeardReward", "Reroll", "2"}},
+    {"Reset Stats", {"BlackbeardReward", "Refund", "2"}}
+  }},
+  {"Fighting Style", {
+    {"Buy Black Leg", {"BuyBlackLeg"}},
+    {"Buy Electro", {"BuyElectro"}},
+    {"Buy Fishman Karate", {"BuyFishmanKarate"}},
+    {"Buy Dragon Claw", {"BlackbeardReward", "DragonClaw", "2"}},
+    {"Buy Superhuman", {"BuySuperhuman"}},
+    {"Buy Death Step", {"BuyDeathStep"}},
+    {"Buy Sharkman Karate", {"BuySharkmanKarate"}},
+    {"Buy Electric Claw", {"BuyElectricClaw"}},
+    {"Buy Dragon Talon", {"BuyDragonTalon"}},
+    {"Buy GodHuman", {"BuyGodhuman"}},
+    {"Buy Sanguine Art", {"BuySanguineArt"}}
+  }},
+  {"Ability Teacher", {
+    {"Buy Geppo", {"BuyHaki", "Geppo"}},
+    {"Buy Buso", {"BuyHaki", "Buso"}},
+    {"Buy Soru", {"BuyHaki", "Soru"}},
+    {"Buy Ken", {"KenTalk", "Buy"}}
+  }},
+  {"Sword", {
+    {"Buy Katana", {"BuyItem", "Katana"}},
+    {"Buy Cutlass", {"BuyItem", "Cutlass"}},
+    {"Buy Dual Katana", {"BuyItem", "Dual Katana"}},
+    {"Buy Iron Mace", {"BuyItem", "Iron Mace"}},
+    {"Buy Triple Katana", {"BuyItem", "Triple Katana"}},
+    {"Buy Pipe", {"BuyItem", "Pipe"}},
+    {"Buy Dual-Headed Blade", {"BuyItem", "Dual-Headed Blade"}},
+    {"Buy Soul Cane", {"BuyItem", "Soul Cane"}},
+    {"Buy Bisento", {"BuyItem", "Bisento"}}
+  }},
+  {"Gun", {
+    {"Buy Musket", {"BuyItem", "Musket"}},
+    {"Buy Slingshot", {"BuyItem", "Slingshot"}},
+    {"Buy Flintlock", {"BuyItem", "Flintlock"}},
+    {"Buy Refined Slingshot", {"BuyItem", "Refined Slingshot"}},
+    {"Buy Refined Flintlock", {"BuyItem", "Refined Flintlock"}},
+    {"Buy Cannon", {"BuyItem", "Cannon"}},
+    {"Buy Kabucha", {"BlackbeardReward", "Slingshot", "2"}}
+  }},
+  {"Accessories", {
+    {"Buy Black Cape", {"BuyItem", "Black Cape"}},
+    {"Buy Swordsman Hat", {"BuyItem", "Swordsman Hat"}},
+    {"Buy Tomoe Ring", {"BuyItem", "Tomoe Ring"}}
+  }},
+  {"Race", {
+    {"Ghoul Race", {"Ectoplasm", "Change", 4}},
+    {"Cyborg Race", {"CyborgTrainer", "Buy"}}
+  }}
+}
+
+_env.FruitList = function()
+  local ListName = {}
+
+  for _, Fruit in next, CommF_:InvokeServer("GetFruits") do
+    table.insert(ListName, Fruit.Name)
+  end
+
+  return ListName
+end
+
+local SpeedHubX = {}
+
+local Funcs = {} do
+  function Funcs:AddToggle(Section, Name, Content, Default)
+    return Section:Toggle({
+      ["Title"] = Name,
+      ["Content"] = Content,
+      ["Default"] = Default,
+      ["Callback"] = function(Value)
+        SpeedHubX[Name] = Value
+      end,
+      ["Flag"] = "SPD/Toggle/" .. tostring(Name)
+    })
+  end
+
+  function Funcs:AddDropdown(Section, Name, Multi, Options, Default)
+    return Section:Dropdown({
+      ["Title"] = Name,
+      ["Multi"] = Multi,
+      ["Options"] = Options,
+      ["Default"] = Default,
+      ["PlaceHolderText"] = "Select Options",
+      ["Callback"] = function(Value)
+        if type(Value) == "table" then
+          for _, v in pairs(Value) do
+            SpeedHubX[Name] = v
+          end
+        end
+      end
+    })
+  end
+
+  function Funcs:AddSlider(Section, Name, Content, Min, Max, Increment, Default)
+    return Section:Slider({
+      ["Title"] = Name,
+      ["Content"] = Content,
+      ["Min"] = Min,
+      ["Max"] = Max,
+      ["Increment"] = Increment,
+      ["Default"] = Default,
+      ["Callback"] = function(Value)
+        SpeedHubX[Name] = Value
+      end
+    })
+  end
+
+  function Funcs:AddTextbox(Section, Name, Content, Default, ClearText)
+    return Section:TextInput({
+      ["Title"] = Name,
+      ["Content"] = Content,
+      ["PlaceHolderText"] = "Enter your text here...",
+      ["ClearTextOnFocus"] = ClearText,
+      ["Default"] = Default,
+      ["Callback"] = function(Value)
+        SpeedHubX[Name] = Value
+      end
+    })
+  end
+
+  function Funcs:AddButton(Section, Name, Content, Callback)
+    return Section:Button({
+      ["Title"] = Name,
+      ["Content"] = Content,
+      ["Callback"] = Callback
+    })  
+  end
+end
+
+local _home = Window:MakeTab("Home") do
+  local _info = _home:Section({["Title"] = "Information", ["Content"] = ""}) do
+    Funcs:AddButton(_info, "Discord Invite", "Click to copy invite server", function()
+      _setclipboard(Discord)
+    end)
+
+    _info:Seperator("Status")
+
+    local _timeServer = _info:Paragraph({["Title"] = "Time Server", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        _timeServer:Set({
+          ["Title"] = "Time Server",
+          ["Content"] = tostring(Lighting.TimeOfDay)
+        })
       end
     end)
-  Toggle(ItemQuest, "Auto Elite Hunter", "This Attack Urban / Deandre / Diablo", false)
-end
-
-if World2 or World3 then
-  ItemQuest:AddSection({"- [ Fighting Style ] -"})
-  Toggle(ItemQuest, "Auto Death Step", "", false)
-  Toggle(ItemQuest, "Auto Electric Claw", "", false)
-  Toggle(ItemQuest, "Auto Sharkman Karate", "", false)
-  Toggle(ItemQuest, "Auto Dragon Talon", "", false)
-  Toggle(ItemQuest, "Auto Superhuman", "", false)
-  Toggle(ItemQuest, "Auto God Human", "", false)
-  Toggle(ItemQuest, "Auto Sanguine Art", "", false)
-  ItemQuest:AddSection({"- [ Haki Color ] -"})
-  Toggle(ItemQuest, "Auto Buy Haki Color", "", false)
-  Toggle(ItemQuest, "Auto Rainbow Haki", "", false)
-end
-
-if World1 or World2 or World3 then
-  ItemQuest:AddSection({"- [ Observation ] -"})
-  local StatusObs = ItemQuest:AddSection({"Total: None"})
-  task.spawn(function()
-    while task.wait(2) do
-      StatusObs:Set({"Total: ".. Player.VisionRadius.Value})
-    end
-  end)
-  Toggle(ItemQuest, "Auto Observation", "", false)
-  Toggle(ItemQuest, "Auto Observation V2", "", false)
-  Toggle(ItemQuest, "Observation Hop", "Hop For Find Materials", false)
-end
-
-if World2 or World3 then
-  local SeaEvent = Window:MakeTab({"Sea Event", "rbxassetid://16175025368"})
-  SeaEvent:AddSection({"- [ Kitsune Island ] -"})
-  local FindKitsune = SeaEvent:AddSection({"Status"})
-  local StatsAzure = SeaEvent:AddSection({"Status"})
-  task.spawn(function()
-    while task.wait(2) do
-      if getgenv().VerifyIsland("Kitsune Island Path") then
-        FindKitsune:Set("Kitsune Island : Spawned")
-      else
-        FindKitsune:Set("Kitsune Island : Not Spawn")
-      end
-    end
-  end)
-  task.spawn(function()
-    while task.wait(2) do
-      StatsAzure:Set("Total Azura Ember : "..VerifyMaterial("Azure Ember"))
-    end
-  end)
-  Toggle(SeaEvent, "Tween To Kitsune Island", "Tween to Kitsune If Spawn Kitsune", false)
-  Toggle(SeaEvent, "Auto Collect Azure Ember", "Collect Azure Ember", false)
-  Toggle(SeaEvent, "Auto Trade Azure Ember", "", false)
-  SeaEvent:AddSection({"- [ Wood ] -"})
-  Toggle(SeaEvent, "Auto Wood Planks", "Farm Get Wood Planks", false)
-  SeaEvent:AddSection({"- [ Sea Event ] -"})
-  Toggle(SeaEvent, "Auto Farm Sea", "Farm Sea / Attack Mob In Sea Event", false)
-  SeaEvent:AddSection({"- [ Terrorshark ] -"})
-  Toggle(SeaEvent, "Terrorshark", "Attack Raid Boss Terrorshark", true)
-  Toggle(SeaEvent, "Auto Dodge Terrorshark Skill", "Dodge Skill Sea", true)
-  SeaEvent:AddSection({"- [ Sea Mob ] -"})
-  Toggle(SeaEvent, "Piranha", "Attack Piranha Mob in Sea Event", true)
-  Toggle(SeaEvent, "Shark", "Attack Shark Mob in Sea Event", true)
-  Toggle(SeaEvent, "Fish Crew Member", "Attack Fish Crew Member Mob in Sea Event", true)
-  SeaEvent:AddSection({"- [ Attack Boat ] -"})
-  Toggle(SeaEvent, "Ghost Ship", "Attack Ghost Ship in Sea Event", true)
-  SeaEvent:AddSection({"- [ Attack Sea Beast ] -"})
-  Toggle(SeaEvent, "Sea Beast", "Attack Sea Beast in Sea Event", true)
-  SeaEvent:AddSection({"- [ Leviathan ] -"})
-  local StatusFrozen = SeaEvent:AddSection({"Status"})
-  task.spawn(function()
-    while task.wait(2) do
-      if getgenv().VerifyIsland("Frozen Dimension Path") then
-        StatusFrozen:Set("Frozen Dimension : Spawned")
-      else
-        StatusFrozen:Set("Frozen Dimension : Not Spawn")
-      end
-    end
-  end)
-  Toggle(SeaEvent, "Tween To Frozen Dimension", "Spawned Frozen Dimension if Tween to", false)
-  Toggle(SeaEvent, "Auto Summon Leviathan", "Only Buy Beast Hunter and Need Player 5+", false)
-  Toggle(SeaEvent, "Auto Attack Leviathan", "Must Spawn First", false)
-  Toggle(SeaEvent, "Auto Attack Leviathan Segment", "", false)
-  Toggle(SeaEvent, "Auto Attack Leviathan Tail", "", false)
-  Toggle(SeaEvent, "Tween To Heart Leviathan [BOAT TWEEN]", "", false)
-  SeaEvent:AddSection({"- [ Item ] -"})
-  Toggle(SeaEvent, "Auto Shark Anchor", "", false)
-  Toggle(SeaEvent, "Auto Monster Magnet", "", false)
-  Toggle(SeaEvent, "Auto Terror Jaw", "", false)
-  Toggle(SeaEvent, "Auto Shark Tooth Necklace", "", false)
-  SeaEvent:AddSection({"- [ Misc ] -"})
-  Toggle(SeaEvent, "No Clip Rock", "", false)
-  SeaEvent:AddButton({Name = "No Fog", Description = "", Callback = function()
-    getgenv().NoFog()
-  end})
-  Toggle(SeaEvent, "Auto Dodge Sea Rough", "", true)
-  Toggle(SeaEvent, "Protect Boat", "", true)
-  SeaEvent:AddSection({"- [ Settings Sea Event ] -"})
-  Dropdown(SeaEvent, "Select Level Danger", "", {"1","2","3","4","5","6","infinity"}, "6")
-  Dropdown(SeaEvent, "Select Boat", "", {"Pirate Brigade", "Pirate Grand Brigade", "Beast Hunter"}, "Pirate Brigade")
-  Silder(SeaEvent, "Tween Boat Speed", 0, 500, 300)
-  SeaEvent:AddSection({"- [ Sea Event Skill ] -"})
-  Toggle(SeaEvent, "Skill Z (Sea)", "", true)Toggle(SeaEvent, "Skill X (Sea)", "", true)Toggle(SeaEvent, "Skill C (Sea)", "", true)Toggle(SeaEvent, "Skill V (Sea)", "", true)Toggle(SeaEvent, "Skill F (Sea)", "", true)
-end
-
-local Stats = Window:MakeTab({"Stats", "plus-circle"})
-Silder(Stats, "Set Point", 0, 100, 2)
-Toggle(Stats, "Melee", "", false)
-Toggle(Stats, "Defense", "", false)
-Toggle(Stats, "Sword", "", false)
-Toggle(Stats, "Gun", "", false)
-Toggle(Stats, "Devil Fruit", "", false)
-
-local Maps = Window:MakeTab({"Maps", "rbxassetid://6035190846"})
-Dropdown(Maps, "Select Island", "", getgenv().IslandList, "")
-Toggle(Maps, "Tween To Island", "", false)
-Maps:AddSection({"- [ World ] -"})
-Maps:AddButton({Name = "First World",Callback = function()getgenv().Server("TravelMain")end})
-Maps:AddButton({Name = "Second World",Callback = function()getgenv().Server("TravelDressrosa")end})
-Maps:AddButton({Name = "Third World",Callback = function()getgenv().Server("TravelZou")end})
-Maps:AddSection({"- [ NPCs ] -"})
-Dropdown(Maps, "Select NPCs", "", getgenv().TableNPCs, "")
-Toggle(Maps, "Tween To NPCs", "", false)
-
-local Shop = Window:MakeTab({"Shop", "rbxassetid://6031265976"})
-Shop:AddSection({"- [ Other ] -"})
-Toggle(Shop, "Auto Buy Legendary Sword", "", false)
-Toggle(Shop, "Auto Buy True Triple Katana", "", false)
-getgenv().AddShop(Shop)
-local DevilFruit = Window:MakeTab({"Devil Fruit", "apple"})
-Dropdown(DevilFruit, "Select Fruit Sniper", "", getgenv().TableFruit, "")
-Toggle(DevilFruit, "Auto Buy Fruit Sniper", "", false)
-DevilFruit:AddSection({"- [ Fruit ] -"})
-Toggle(DevilFruit, "Auto Store Fruit", "", false)
-Toggle(DevilFruit, "Auto Random Fruit", "", false)
-Toggle(DevilFruit, "Auto Find Fruit", "", false)
-
-local PvP = Window:MakeTab({"PvP", "rbxassetid://16053202595"})
-PvP:AddSection({"- [ Config PvP ] -"})
-Dropdown(PvP, "Choose PvP", "", {"Neareast", "Select Player"}, "Neareast")
-Dropdown(PvP, "Choose Kill", "", {"Skill", "Click"}, "Click")
-Dropdown(PvP, "Choose Skill Equip", "", {"Melee","Sword","Blox Fruit","Gun", "Random Equip"}, "Blox Fruit")
-local Update1 = Dropdown(PvP, "Select Player", "", getgenv().TablePlayer, "")
-PvP:AddButton({Name = "Refersh Player", Description = "", Callback = function()
-  Update1:Remove(getgenv().TablePlayer)
-  Update1:Set(getgenv().TablePlayer)
-end})
-PvP:AddSection({"- [ Farming PvP ] -"})
-Toggle(PvP, "Auto Farm PvP", "This Farm PvP Meaning Attack Player In PvP", false)
-PvP:AddSection({"- [ Misc PvP ] -"})
-Toggle(PvP, "Spectate Player", "", false)
-Toggle(PvP, "Teleport Player", "", false)
-PvP:AddSection({"- [ Settings Skill PvP ] -"})
-Toggle(PvP, "Skill Z (PvP)", "", true)Toggle(PvP, "Skill X (PvP)", "", true)Toggle(PvP, "Skill C (PvP)", "", true)Toggle(PvP, "Skill V (PvP)", "", true)Toggle(PvP, "Skill F (PvP)", "", true)
-PvP:AddSection({"- [ Aim ] -"})
-Toggle(PvP, "Silent Aim", "", false)
-Toggle(PvP, "Aimlock", "", false)
-Toggle(PvP, "Silent Aim (Gun)", "", false)
-PvP:AddSection({"- [ Gun ] -"})
-Toggle(PvP, "Auto Shoot Player (Gun)", "", false)
-PvP:AddSection({"- [ Misc ] -"})
-Toggle(PvP, "Auto Enable PvP", "", false)
-Toggle(PvP, "Auto Use Ken", "", false)
-
-if World2 or World3 then
-  local Raid = Window:MakeTab({"Raid", "rbxassetid://11446957539"})
-  Dropdown(Raid, "Select Chips", "", getgenv().ListChips, "")
-  Toggle(Raid, "Auto Buy Chips", "", false)
-  Toggle(Raid, "Auto Farm Raid", "", false)
-  Toggle(Raid, "Kill Aura", "", false)
-  local RaceV4 = Window:MakeTab({"Race V4", "rbxassetid://11446900930"})
-  local FindMirage = RaceV4:AddSection({"Status"})
-  local FindMiragePuzzle = RaceV4:AddSection({"Status"})
-  local SetUpdateMoon = RaceV4:AddSection({"Status"})
-  getgenv().CheckMoon(SetUpdateMoon)
-  task.spawn(function()
-    while task.wait(2) do
-      if getgenv().VerifyIsland("Mirage Island Path") then
-        FindMirage:Set("Mirage Island : Spawned ")
-      else
-        FindMirage:Set("Mirage Island : Not Spawn")
-      end
-    end
-  end)
-  task.spawn(function()
-    while task.wait(2) do
-      if CommF_:InvokeServer("CheckTempleDoor") then
-        FindMiragePuzzle:Set("Mirage Puzzle : Spawned ")
-      else
-        FindMiragePuzzle:Set("Mirage Puzzle : Not Spawn ")
-      end
-    end
-  end)
-  Toggle(RaceV4, "Auto Summon Mirage Island", "This Summon, When Spawn Mirage At Chance ???%", false)
-  Toggle(RaceV4, "Tween To Mirage Island", "Spawn Mirage if Tween to Mirage", false)
-  Toggle(RaceV4, "Tween To Gear", "", false)
-  Toggle(RaceV4, "Tween To Gear Blue", "", false)
-  Toggle(RaceV4, "Tween To Highest Point", "This Mean Highest Mountain In Mirage Island", false)
-  Toggle(RaceV4, "Tween To Advanced Dealer", "Shop Fruit Advanced", false)
-  RaceV4:AddSection({"- [ Race ] -"})
-  Toggle(RaceV4, "Auto Complete Trial", "Finish All Trial", false)
-  Toggle(RaceV4, "Auto Mirage Puzzle", "Get Mirage Puzzle", false)
-  Toggle(RaceV4, "Auto Kill Player In Trial", "Kill Player After Trial", false)
-  Toggle(RaceV4, "Auto Buy Gear", "", false)
-  Toggle(RaceV4, "Auto Awakening One Quest", "", false)
-  RaceV4:AddSection({"- [ Active Race ] -"})
-  Toggle(RaceV4, "Auto Use Race V3", "", false)
-  Toggle(RaceV4, "Auto Use Race V4", "", false)
-  RaceV4:AddSection({"- [ Tween Race ] -"})
-  Dropdown(RaceV4, "Select Tween Race", "", {"Top Great Tree","Timple Of Time","Lever Pull", "Acient One", "Cyborg Door", "Fish Door", "Ghoul Door", "Human Door", "Mink Door", "Sky Door"}, "Timple Of Time")
-  Toggle(RaceV4, "Tween On Select Tween Race", "", false)
-end
-
-local ESP = Window:MakeTab({"ESP", "mountain-snow"})
-Toggle(ESP, "ESP Player", "", false)
-Toggle(ESP, "ESP Chest", "", false)
-Toggle(ESP, "ESP Fruit", "", false)
-if World2 then
-  Toggle(ESP, "ESP Flower", "", false)
-elseif World3 then
-  Toggle(ESP, "ESP Mirage Island", "", false)
-  Toggle(ESP, "ESP Kitsune Island", "", false)
-end
-
-local Misc = Window:MakeTab({"Miscellaneous", "rbxassetid://11447063791"})
-Misc:AddSection({"- [ Server ] -"})
-Misc:AddButton({Name = "Server Hop",Callback = function()getgenv().Server("Hop")end})
-Misc:AddButton({Name = "Server Hop [Low Player]",Callback = function()getgenv().Server("Hop1")end})
-Misc:AddButton({Name = "Rejoin",Callback = function()getgenv().Server("Rejoin")end})
-Misc:AddSection({"- [ Team ] -"})
-Misc:AddButton({Name = "Join Pirates Team",Callback = function()CommF_:InvokeServer("SetTeam", "Pirates")end})
-Misc:AddButton({Name = "Join Marines Team",Callback = function()CommF_:InvokeServer("SetTeam", "Marines")end})
-Misc:AddSection({"- [ Menu UI ] -"})
-Misc:AddButton({Name = "Devil Fruit Shop",Callback = function()CommF_:InvokeServer("GetFruits")Player.PlayerGui.Main.FruitShop.Visible = true end})
-Misc:AddButton({Name = "Titles",Callback = function()CommF_:InvokeServer("getTitles")Player.PlayerGui.Main.Titles.Visible = true end})
-Misc:AddButton({Name = "Haki Color",Callback = function()Player.PlayerGui.Main.Colors.Visible = true end})
-
-Misc:AddSection({"Codes"})
-Misc:AddButton({Name = "Redeem Codes",Callback = function()
-  for _, CodeFunc in pairs({"NEWTROLL","KITT_RESET","Sub2Fer999","Magicbus","kittgaming","SECRET_ADMIN","EXP_5B","CONTROL","UPDATE11","XMASEXP","1BILLION","ShutDownFix2","UPD14","STRAWHATMAINE","TantaiGaming","Colosseum","Axiore","Sub2Daigrock","Sky Island 3","Sub2OfficialNoobie","SUB2NOOBMASTER123","THEGREATACE","Fountain City","BIGNEWS","FUDD10","SUB2GAMERROBOT_EXP1","UPD15","2BILLION","UPD16","3BVISITS","Starcodeheo","Bluxxy","DRAGONABUSE","Sub2CaptainMaui","DEVSCOOKING","Enyu_is_Pro","JCWK","Starcodeheo","Bluxxy","fudd10_v2","SUB2GAMERROBOT_EXP1","Sub2NoobMaster123","Sub2UncleKizaru","Sub2Daigrock","Axiore","TantaiGaming","StrawHatMaine"}) do
-    Remotes.Redeem:InvokeServer(CodeFunc)
   end
-end})
 
-Misc:AddSection({"- [ Remove ] -"})
-Toggle(Misc, "Remove Damage", "", false)
-Toggle(Misc, "Remove Notifications", "", false)
-Misc:AddSection({"- [ Reduce Lag ] -"})
-Misc:AddButton({Name = "Anti-Crash",Callback = function()FixLag(1)end})
-Misc:AddButton({Name = "Reduce Lag",Callback = function()FixLag(2)end})
-Misc:AddSection({"- [ Other ] -"})
-Toggle(Misc, "Walk On Water", "", true)
-local Settings = Window:MakeTab({"Settings", "settings"})
-Toggle(Settings, "Auto Haki", "", true)
-Toggle(Settings, "Auto Ken", "", false)
-Settings:AddSection({"- [ System Script ] -"})
-Settings:AddButton({Name = "Reset Script / Save Config",Callback = function()
-  if isfile("Speed Hub X") then
-    delfile("Speed Hub X")
+  local _localplayer = _home:Section({["Title"] = "LocalPlayer", ["Content"] = ""}) do
+    Funcs:AddDropdown(_localplayer, "Set WalkSpeed", false, {"100", "200", "300", "400", "500"}, {"300"})
+    Funcs:AddToggle(_localplayer, "Enable WalkSpeed", "", false)
+    Funcs:AddToggle(_localplayer, "Anti-Knockback", "", false)
+    Funcs:AddToggle(_localplayer, "Anti-Busy", "", true)
   end
-end})
-Window:SelectTab(2)
+
+  local _config = _home:Section({["Title"] = "Config", ["Content"] = ""}) do
+    _config:Seperator("Weapon")
+    Funcs:AddDropdown(_config, "Weapon Tool", false, {"Melee","Sword","Blox Fruit","Gun"}, {"Melee"})
+    _config:Seperator("Tween/Distance")
+    Funcs:AddDropdown(_config, "Farm Distance", false, {"10", "20", "30", "40", "50", "60"}, {"40"})
+    Funcs:AddDropdown(_config, "Tween Mode", false, {"Smooth","Normal"}, {"Smooth"})
+    Funcs:AddDropdown(_config, "Tween Speed", false, {"100", "200", "300", "400", "500"}, {"200"})
+    _config:Seperator("Bring Mob")
+    Funcs:AddDropdown(_config, "Bring Mob Mode", false, {"Smooth","Extreme"}, {"Smooth"})
+    Funcs:AddToggle(_config, "Bring Mob", "", true)
+    Funcs:AddDropdown(_config, "Bring Mob Radius", false, {"100", "200", "300", "400", "500"}, {"200"})
+    _config:Seperator("Fast Attack")
+    Funcs:AddToggle(_config, "Fast Attack", "", true)
+    Funcs:AddDropdown(_config, "Fast Attack Delay", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _config:Seperator("Other")
+    Funcs:AddToggle(_config, "Hop if Admin or Staff", "", true)
+    Funcs:AddToggle(_config, "Auto Dodge Skill", "", false)
+    _config:Seperator("Active Race")
+    Funcs:AddToggle(_config, "Auto Use Race V3", "", false)
+    Funcs:AddToggle(_config, "Auto Use Race V4", "", false)
+  end
+
+  local _server = _home:Section({["Title"] = "Server Games", ["Content"] = ""}) do
+    Funcs:AddDropdown(_server, "Count Player", false, {"1","2","3","4","5","6","7","8","9","10","11","12"}, {"5"})
+    Funcs:AddButton(_server, "Hop Server On Count Player", "", function()
+      _env.ServerHop("Singapore", tonumber(SpeedHubX["Count Player"]))
+    end)
+    Funcs:AddButton(_server, "Rejoin", "", function()
+      TeleportService:Teleport(game.PlaceId, Player)
+    end)
+    _server:Seperator("Status Server")
+    local _ServerCount = _server:Paragraph({["Title"] = "Server Count", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        _ServerCount:Set({
+          ["Title"] = "Server Count",
+          ["Content"] = tostring(#Players:GetPlayers()) .. "/12"
+        })
+      end
+    end)
+  end
+
+  local _stats = _home:Section({["Title"] = "Get Stats", ["Content"] = ""}) do
+    _stats:Seperator("Config")
+    Funcs:AddDropdown(_stats, "Point Stats", false, {"1", "5", "10", "15", "20", "25", "30", "35", "40", "50"}, {"1"})
+    _stats:Seperator("Stats")
+    for _, v in next, {"Melee", "Defense", "Sword", "Gun", "Demon Fruit"} do
+      Funcs:AddToggle(_stats, v, "", false)
+    end
+  end
+
+  local _misc = _home:Section({["Title"] = "Misc", ["Content"] = ""}) do
+    _misc:Seperator("Team")
+    Funcs:AddButton(_misc, "Join Pirates Team", "", function()
+      CommF_:InvokeServer("SetTeam", "Pirates")
+    end)
+    Funcs:AddButton(_misc, "Join Marines Team", "", function()
+      CommF_:InvokeServer("SetTeam", "Marines")
+    end)
+    _misc:Seperator("Menu UI")
+    Funcs:AddButton(_misc, "Devil Fruit Shop", "", function()
+      CommF_:InvokeServer("GetFruits")Player.PlayerGui.Main.FruitShop.Visible = true
+    end)
+    Funcs:AddButton(_misc, "Titles", "", function()
+      CommF_:InvokeServer("getTitles")Player.PlayerGui.Main.Titles.Visible = true
+    end)
+    Funcs:AddButton(_misc, "Haki Color", "", function()
+      Player.PlayerGui.Main.Colors.Visible = true
+    end)
+    _misc:Seperator("Redeem")
+    Funcs:AddButton(_misc, "Redeem Code", "", function()
+      for _, code in next, _env.CodesRedeem do
+        Remotes.Redeem:InvokeServer((function()
+          if type(code) == "string" then
+            return code
+          else
+            return tostring(code)
+          end
+        end)())
+      end
+    end)
+    _misc:Seperator("Water")
+    Funcs:AddToggle(_misc, "Walk On Water", "", true)
+    _misc:Seperator("Remove UI")
+    Funcs:AddToggle(_misc, "Remove Damage", "", false)
+    Funcs:AddToggle(_misc, "Remove Notifications", "", false)
+    _misc:Seperator("Other")
+    Funcs:AddToggle(_misc, "Auto Haki", "", true)
+    Funcs:AddToggle(_misc, "Auto Ken", "", false)
+  end
+
+  local _settings = _home:Section({["Title"] = "Settings", ["Content"] = ""}) do
+    Funcs:AddButton(_settings, "Reset Script Saver", "", function()
+      if _isfile("Speed Hub X") then
+        _delfile("Speed Hub X")
+      end
+    end)
+  end
+end
+
+local _main = Window:MakeTab("Main") do
+  local _farminglv = _main:Section({["Title"] = "Farming Level", ["Content"] = ""}) do
+    _farminglv:Seperator("Config Quest")
+    Funcs:AddToggle(_farminglv, "No Quest", "", false)
+    Funcs:AddToggle(_farminglv, "Take Quest", "", false)
+    _farminglv:Seperator("Farming")
+    Funcs:AddToggle(_farminglv, "Auto Farm Level", "", false)
+  end
+  local _farmingnear = _main:Section({["Title"] = "Farming Neareast Mob", ["Content"] = ""}) do
+    _farmingnear:Seperator("Config Neareast")
+    Funcs:AddDropdown(_farmingnear, "Neareast Range", false, {"1000","2000","3000","infinite"}, {"2000"})
+    _farmingnear:Seperator("Farming")
+    Funcs:AddToggle(_farmingnear, "Auto Farm Neareast", "", false)
+  end
+  local _farmingmastery = _main:Section({["Title"] = "Farming Mastery", ["Content"] = ""}) do
+    _farmingmastery:Seperator("Config Mastery")
+    Funcs:AddDropdown(_farmingmastery, "Choose Mastery Mode", false, {"Level","Bone","Cake Prince","Nearest"}, {"Level"})
+    Funcs:AddDropdown(_farmingmastery, "Choose Mastery Tool", false, {"Blox Fruit", "Sword", "Gun"}, {"Blox Fruit"})
+    Funcs:AddDropdown(_farmingmastery, "Mastery Health", false, {"10", "20", "25", "30", "45", "50", "60", "70", "75", "85", "95"}, {"45"})
+    _farmingmastery:Seperator("Farming")
+    Funcs:AddToggle(_farmingmastery, "Auto Farm Mastery", "", false)
+    _farmingmastery:Seperator("Skill")
+    for _, v in next, {"Z", "X", "C", "V", "F"} do
+      Funcs:AddToggle(_farmingmastery, v .. "   ", "", true)
+    end
+  end
+  local _farmingC = _main:Section({["Title"] = "Farming/Collect Chest", ["Content"] = ""}) do
+    _farmingC:Seperator("Config Chest")
+    Funcs:AddDropdown(_farmingC, "Choose Chest Area", false, {"Mirage Island", "Island Other"}, {"Island Other"})
+    Funcs:AddToggle(_farmingC, "Auto Hop if Chest doesn't Spawned", "", true)
+    _farmingC:Seperator("Collect Chest")
+    Funcs:AddToggle(_farmingC, "Auto Collect Chest", "", false)
+    _farmingC:Seperator("Farming Other")
+    if Sea[2] then
+      Funcs:AddToggle(_farmingC, "Auto Factory", "", false)
+    elseif Sea[3] then
+      Funcs:AddToggle(_farmingC, "Auto Pirates Sea", "", false)
+    end
+  end
+  local _farmingboss = _main:Section({["Title"] = "Farming Bosses", ["Content"] = ""}) do
+    _farmingboss:Seperator("Config Boss")
+    local BossList = Funcs:AddDropdown(_farmingboss, "Select Boss", false, _env.BossesList(), {""})
+    Funcs:AddButton(_farmingboss, "Refresh Boss", "", function()
+      BossList:Clear()
+      BossList:Refresh(_env.BossesList(), {""})
+    end)
+    _farmingboss:Seperator("Farming Boss")
+    Funcs:AddToggle(_farmingboss, "Auto Attack Boss", "", false)
+    Funcs:AddToggle(_farmingboss, "Auto Attack Boss All", "", false)
+  end
+  local _farmingmaterial = _main:Section({["Title"] = "Farming Material", ["Content"] = ""}) do
+    _farmingmaterial:Seperator("Config Material")
+    Funcs:AddDropdown(_farmingmaterial, "Select Material", false, _env.MaterialList, {""})
+    _farmingmaterial:Seperator("Farming Material")
+    Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
+  end
+end
+
+local _questitem = Window:MakeTab("Item/Quest") do
+  local _firstworld = _questitem:Section({["Title"] = "First World", ["Content"] = ""}) do
+    _firstworld:Seperator("Farming Second World")
+    Funcs:AddToggle(_firstworld, "Auto Second World", "Only Get Level 700 if Auto Sea Second!", false)
+    _firstworld:Seperator("Item")
+    Funcs:AddToggle(_firstworld, "Auto Unlock Saber", "Only Get Level 200 if Auto Unlock Saber!", false)
+    Funcs:AddToggle(_firstworld, "Auto Pole", "This Can Get Pole Item!", false)
+  end
+  local _secondworld = _questitem:Section({["Title"] = "Second World", ["Content"] = ""}) do
+    _secondworld:Seperator("Farming Third World")
+    Funcs:AddToggle(_secondworld, "Auto Third World", "This Can Get Sea Third then Travel Third World!", false)
+    _secondworld:Seperator("Get Sword Item")
+    Funcs:AddDropdown(_secondworld, "Select Sword", false, {"Dragon Trident", "Gravity Cane", "Jitte", "Longsword", "Koko", "Midnight blade", "Rengoku"}, {""})
+    Funcs:AddToggle(_secondworld, "Auto Get Sword On Select Sword", "", false)
+    _secondworld:Seperator("Ectoplasm")
+    Funcs:AddToggle(_secondworld, "Auto Ectoplasm", "", false)
+    _secondworld:Seperator("Bartilo Quest")
+    Funcs:AddToggle(_secondworld, "Auto Bartilo Quest", "", false)
+    _secondworld:Seperator("Dark Beard")
+    Funcs:AddToggle(_secondworld, "Auto Dark Beard", "", false)
+    _secondworld:Seperator("Cursed Captain")
+    Funcs:AddToggle(_secondworld, "Auto Cursed Captain", "", false)
+    _secondworld:Seperator("Law")
+    Funcs:AddToggle(_secondworld, "Auto Order Law", "", false)
+  end
+  local _thirdworld = _questitem:Section({["Title"] = "Third World", ["Content"] = ""}) do
+    _thirdworld:Seperator("Get Sword Item")
+    Funcs:AddDropdown(_thirdworld, "Select Sword ", false, {"Twin Hooks", "Buddy Sword", "Canvander", "Dark Dagger", "Fox Lamp", "Spikey Trident", "Yama", "Tushita", "Cursed Dual Katana", "Hallow Scythe"}, {""})
+    Funcs:AddToggle(_thirdworld, "Auto Get Sword On Select Sword ", "", false)
+    _thirdworld:Seperator("Get Gun Item")
+    Funcs:AddDropdown(_thirdworld, "Select Gun", false, {"Serpent Bow", "Soul Guitar"}, {""})
+    Funcs:AddToggle(_thirdworld, "Auto Get Gun On Select Gun", "", false)
+    _thirdworld:Seperator("Farming Bones")
+    local _BonesCount = _thirdworld:Paragraph({["Title"] = "Bones Total", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        _BonesCount:Set({
+          ["Title"] = "Bones Total",
+          ["Content"] = _env.VerifyMaterial("Bones")
+        })
+      end
+    end)
+    Funcs:AddToggle(_thirdworld, "Auto Farm Bones", "", false)
+    Funcs:AddToggle(_thirdworld, "Auto Trade Bones", "", false)
+    _thirdworld:Seperator("Cake Prince")
+    local _statusCKP = _thirdworld:Paragraph({["Title"] = "Cake Prince Status", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        if _env.CheckMob({"Dough King"}) then
+          _statusCKP:Set({
+            ["Title"] = "Cake Prince Status",
+            ["Content"] = "Dough King is Spawned"
+          })
+        elseif _env.CheckMob({"Cake Prince"}) then
+          _statusCKP:Set({
+            ["Title"] = "Cake Prince Status",
+            ["Content"] = "Cake Prince is Spawned"
+          })
+        else
+          _statusCKP:Set({
+            ["Title"] = "Cake Prince Status",
+            ["Content"] = string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", "")
+          })
+        end
+      end
+    end)
+    Funcs:AddToggle(_thirdworld, "Auto Cake Prince", "", false)
+    Funcs:AddToggle(_thirdworld, "Auto Dough King", "", false)
+    _thirdworld:Seperator("Rip Indra")
+    Funcs:AddToggle(_thirdworld, "Auto Rip Indra", "", false)
+    _thirdworld:Seperator("Elite Hunter")
+    local _statusELH = _thirdworld:Paragraph({["Title"] = "Elite Hunter Status", ["Content"] = "" })
+    local _statusELHP = _thirdworld:Paragraph({["Title"] = "Elite Hunter Progress", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        if _env.CheckMob({"Diablo","Deandre","Urban"}) then
+          _statusELH:Set({
+            ["Title"] = "Elite Hunter Status",
+            ["Content"] = "Elite Hunter is Spawned"
+          })
+        else
+          _statusELH:Set({
+            ["Title"] = "Elite Hunter Status",
+            ["Content"] = "Elite Hunter is not Spawned"
+          })
+        end
+      end
+    end)
+    task.spawn(function()
+      while task.wait(2) do
+        _statusELHP:Set({
+          ["Title"] = "Elite Hunter Progress",
+          ["Content"] = tostring(CommF_:InvokeServer("EliteHunter", "Progress"))
+        })
+      end
+    end)
+    Funcs:AddToggle(_thirdworld, "Auto Elite Hunter", "", false)
+    _thirdworld:Seperator("Haki Color")
+    Funcs:AddToggle(_thirdworld, "Auto Buy Haki Color", "", false)
+    Funcs:AddToggle(_thirdworld, "Auto Rainbow Haki", "", false)
+  end
+  local _FightSyt = _questitem:Section({["Title"] = "Fighting Style", ["Content"] = ""}) do
+    Funcs:AddToggle(_FightSyt, "Auto Death Step", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Electric Claw", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Sharkman Karate", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Dragon Talon", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Superhuman", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto God Human", "", false)
+    Funcs:AddToggle(_FightSyt, "Auto Sanguine Art", "", false)
+  end
+  local _obsv = _questitem:Section({["Title"] = "Observation", ["Content"] = ""}) do
+    Funcs:AddToggle(_obsv, "Auto Observation", "", false)
+    Funcs:AddToggle(_obsv, "Auto Observation V2", "", false)
+  end
+end
+
+local _seaevent = Window:MakeTab("Sea Event") do
+  local _kitsune = _seaevent:Section({["Title"] = "Kitsune Island", ["Content"] = ""}) do 
+    local _statusKIT = _kitsune:Paragraph({["Title"] = "Status Kitsune Island", ["Content"] = "" })
+    local _statusNumAZ = _kitsune:Paragraph({["Title"] = "Total Azura Ember", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        if Map:FindFirstChild("KitsuneIsland") then
+          _statusKIT:Set({
+            ["Title"] = "Status Kitsune Island",
+            ["Content"] = "Kitsune Island Is Spawned"
+          })
+        else
+          _statusKIT:Set({
+            ["Title"] = "Status Kitsune Island",
+            ["Content"] = "Kitsune Island Is not Spawned"
+          })
+        end
+      end
+    end)
+    task.spawn(function()
+      while task.wait(2) do
+        _statusNumAZ:Set({
+          ["Title"] = "Total Azura Ember",
+          ["Content"] = _env.VerifyMaterial("Azure Ember")
+        })
+      end
+    end)
+    Funcs:AddToggle(_kitsune, "Tween to Kitsune Island", "", false)
+    Funcs:AddToggle(_kitsune, "Auto Collect Azure Ember", "", false)
+    Funcs:AddToggle(_kitsune, "Auto Trade Azure Ember", "", false)
+  end
+  local _farmsea = _seaevent:Section({["Title"] = "Farming Sea", ["Content"] = ""}) do 
+    _farmsea:Seperator("Config")
+    Funcs:AddDropdown(_farmsea, "Select Level Danger", false, {"1", "2", "3", "4", "5", "6", "infinite"}, {"6"})
+    Funcs:AddDropdown(_farmsea, "Select Buy Boat", false, {"PirateBrigade", "PirateGrandBrigade", "Beast Hunter", "MarineBrigade", "MarineGrandBrigade"}, {"PirateBrigade"})
+    Funcs:AddDropdown(_farmsea, "Choose Equip ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
+    Funcs:AddToggle(_farmsea, "Auto Dodge Rough Sea", "", true)
+    Funcs:AddToggle(_farmsea, "Protect Boat", "", true)
+    Funcs:AddToggle(_farmsea, "No Fog", "", false)
+    _farmsea:Seperator("Farm Sea")
+    Funcs:AddToggle(_farmsea, "Auto Drive Boat To Sea", "", false)
+    _farmsea:Seperator("Terror Shark")
+    Funcs:AddToggle(_farmsea, "Terror Shark", "", true)
+    Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill", "", true)
+    _farmsea:Seperator("Sea beast")
+    Funcs:AddToggle(_farmsea, "Attack Sea beast", "", true)
+    Funcs:AddToggle(_farmsea, "Dodge Sea Beasts Skill", "", true)
+    _farmsea:Seperator("Boat")
+    Funcs:AddToggle(_farmsea, "Attack Ghost Ship", "", true)
+    _farmsea:Seperator("Other")
+    Funcs:AddToggle(_farmsea, "Attack Piranha", "", true)
+    Funcs:AddToggle(_farmsea, "Attack Shark", "", true)
+    Funcs:AddToggle(_farmsea, "Attack Fish Crew Member", "", true)
+    _farmsea:Seperator("Skill")
+    for _, v in next, {"Z", "X", "C", "V", "F"} do
+      Funcs:AddToggle(_farmsea, v .. " ", "", true)
+    end
+  end
+  local _farmlevi = _seaevent:Section({["Title"] = "Farming Leviathan", ["Content"] = ""}) do
+    _farmlevi:Seperator("Config")
+    Funcs:AddDropdown(_farmlevi, "Choose Equip  ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
+    _farmlevi:Seperator("Frozen Dimension")
+    local _statisFD = _farmlevi:Paragraph({["Title"] = "Status Frozen Dimension", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        if WorldOrigin.Locations:FindFirstChild("Frozen Dimension") then
+          _statisFD:Set({
+            ["Title"] = "Status Frozen Dimension",
+            ["Content"] = "Frozen Dimension is Spawned"
+          })
+        else
+          _statisFD:Set({
+            ["Title"] = "Status Frozen Dimension",
+            ["Content"] = "Frozen Dimension is not Spawned"
+          })
+        end
+      end
+    end)
+    Funcs:AddToggle(_farmlevi, "Tween to Frozen Dimension", "", false)
+    _farmlevi:Seperator("Leviathan")
+    Funcs:AddToggle(_farmlevi, "Auto Find Leviathan", "", false)
+    Funcs:AddToggle(_farmlevi, "Auto Attack Leviathan", "", false)
+    Funcs:AddToggle(_farmlevi, "Auto Attack Leviathan Segment", "", false)
+    Funcs:AddToggle(_farmlevi, "Auto Attack Leviathan Tail", "", false)
+    _farmlevi:Seperator("Heart Leviathan")
+    Funcs:AddToggle(_farmlevi, "Tween To Heart Leviathan [BOAT TWEEN]", "", false)
+    _farmlevi:Seperator("Skill")
+    for _, v in next, {"Z", "X", "C", "V", "F"} do
+      Funcs:AddToggle(_farmlevi, v .. "  ", "", true)
+    end
+  end
+  local _farmwoods = _seaevent:Section({["Title"] = "Farming Wood Planks", ["Content"] = ""}) do 
+    _farmwoods:Seperator("Config")
+    Funcs:AddDropdown(_farmwoods, "Choose Equip   ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
+    _farmwoods:Seperator("Farming Woods")
+    Funcs:AddToggle(_farmwoods, "Auto Wood Planks", "", false)
+    _farmwoods:Seperator("Skill")
+    for _, v in next, {"Z", "X", "C", "V", "F"} do
+      Funcs:AddToggle(_farmwoods, v .. "   ", "", true)
+    end
+  end
+  local _farmitem = _seaevent:Section({["Title"] = "Get Item", ["Content"] = ""}) do 
+    Funcs:AddToggle(_farmitem, "Auto Shark Anchor", "", false)
+    Funcs:AddToggle(_farmitem, "Auto Monster Magnet", "", false)
+    Funcs:AddToggle(_farmitem, "Auto Terror Jaw", "", false)
+    Funcs:AddToggle(_farmitem, "Auto Shark Tooth Necklace", "", false)
+  end
+end
+
+local _shopMaps = Window:MakeTab("Shop / Maps / Fruit") do
+  local _Maps = _shopMaps:Section({["Title"] = "Maps", ["Content"] = ""}) do
+    _Maps:Seperator("Island")
+    Funcs:AddDropdown(_Maps, "Select Island", false, _env.IslandList(), {""})
+    Funcs:AddToggle(_Maps, "Tween To Island", "", false)
+    _Maps:Seperator("NPCs")
+    Funcs:AddDropdown(_Maps, "Select NPCs", false, _env.NPCList(), {""})
+    Funcs:AddToggle(_Maps, "Tween To NPCs", "", false)
+    _Maps:Seperator("World")
+    Funcs:AddButton(_Maps, "First World", "", function()
+      CommF_:InvokeServer("TravelMain")
+    end)
+    Funcs:AddButton(_Maps, "Second World", "", function()
+      CommF_:InvokeServer("TravelDressrosa")
+    end)
+    Funcs:AddButton(_Maps, "Third World", "", function()
+      CommF_:InvokeServer("TravelZou")
+    end)
+  end
+
+  local _shop = _shopMaps:Section({["Title"] = "Shop", ["Content"] = ""}) do
+    _shop:Seperator("Other")
+    Funcs:AddToggle(_shop, "Auto Buy Legendary Sword", "", false)
+    Funcs:AddToggle(_shop, "Auto Buy True Triple Katana", "", false)
+    for _, Category in ipairs(ShopTable) do
+      local name, items = Category[1], Category[2]
+      _shop:Seperator(name)
+      for _, item in ipairs(items) do
+        local NameShop, Params = item[1], item[2]
+        local buyfunc = type(Params) == "table" and function()CommF_:InvokeServer(unpack(Params))end or Params
+        Funcs:AddButton(_shop, NameShop, "", buyfunc)
+      end
+    end
+  end
+
+  local _fruit = _shopMaps:Section({["Title"] = "Fruit", ["Content"] = ""}) do
+    _fruit:Seperator("Fruit Sniper")
+    Funcs:AddDropdown(_fruit, "Select Fruit Sniper", false, _env.FruitList(), {""})
+    Funcs:AddToggle(_fruit, "Auto Buy Fruit Sniper", "", false)
+    _fruit:Seperator("Fruit")
+    Funcs:AddToggle(_fruit, "Auto Store Fruit", "", false)
+    Funcs:AddToggle(_fruit, "Auto Drop Fruit", "", false)
+    Funcs:AddToggle(_fruit, "Auto Eat Fruit", "", false)
+    Funcs:AddToggle(_fruit, "Auto Random Fruit", "", false)
+    Funcs:AddToggle(_fruit, "Auto Find Fruit", "", false)
+  end
+end
+
+local _pvp = Window:MakeTab("PvP") do
+  local _PlayPvP = _pvp:Section({["Title"] = "Play PvP", ["Content"] = ""}) do
+    _PlayPvP:Seperator("Config Player")
+    Funcs:AddDropdown(_PlayPvP, "Choose Neareast Or Select (Player)", false, {"Neareast", "Select"}, {"Neareast"})
+    local plrList = Funcs:AddDropdown(_PlayPvP, "Select Player ( if only choose Select (Player) )", false, _env.PlayerList(), {""})
+    Funcs:AddButton(_PlayPvP, "Refersh Player", "", function()
+      plrList:Clear()
+      plrList:Refresh(_env.PlayerList(), {""})
+    end)
+    _PlayPvP:Seperator("Config Aim")
+    Funcs:AddDropdown(_PlayPvP, "Choose Aim Part", false, {"Head", "Torso", "HumanoidRootPart", "PrimaryPart"}, {"HumanoidRootPart"})
+    _PlayPvP:Seperator("Play Aim Bot")
+    Funcs:AddToggle(_PlayPvP, "Aimbot", "", false)
+    Funcs:AddToggle(_PlayPvP, "Aimbot Gun", "", false)
+    _PlayPvP:Seperator("Play Aim Lock")
+    Funcs:AddToggle(_PlayPvP, "AimLock", "", false)
+    _PlayPvP:Seperator("Other")
+    Funcs:AddToggle(_PlayPvP, "Use Aim (GUI)", "", false)
+    Funcs:AddDropdown(_PlayPvP, "FOV Range", false, {"10", "20", "30", "40", "50", "60", "70", "80", "90", "100"}, {"40"})
+    Funcs:AddToggle(_PlayPvP, "Use FOV", "", false)
+    _PlayPvP:Seperator("Misc PvP")
+    Funcs:AddToggle(_PlayPvP, "Auto Enable PvP", "", false)
+  end
+
+  local _farmbounty = _pvp:Section({["Title"] = "Farm Bounty", ["Content"] = ""}) do
+    _farmbounty:Seperator("Config")
+    Funcs:AddDropdown(_farmbounty, "Choose Equip       ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
+    Funcs:AddToggle(_farmbounty, "Auto Hop At 20 Delay", "", false)
+    _farmbounty:Seperator("Farming Bounty")
+    Funcs:AddToggle(_farmbounty, "Auto Farm Bounty", "", false)
+    _farmbounty:Seperator("Skill")
+    for _, v in next, {"Z", "X", "C", "V", "F"} do
+      Funcs:AddToggle(_farmbounty, v .. "          ", "", true)
+    end
+  end
+end
+
+local _racemirage = Window:MakeTab("Race / Mirage") do
+  local _mirage = _racemirage:Section({["Title"] = "Mirage Island", ["Content"] = ""}) do
+    local _statisMI = _mirage:Paragraph({["Title"] = "Status Mirage Island", ["Content"] = "" })
+    task.spawn(function()
+      while task.wait(2) do
+        if WorldOrigin.Locations:FindFirstChild("Mirage Island") then
+          _statisMI:Set({
+            ["Title"] = "Status Mirage Island",
+            ["Content"] = "Mirage Island is Spawned"
+          })
+        else
+          _statisMI:Set({
+            ["Title"] = "Status Mirage Island",
+            ["Content"] = "Mirage Island is not Spawned"
+          })
+        end
+      end
+    end)
+    Funcs:AddToggle(_mirage, "Auto Summon Mirage Island", "", false)
+    Funcs:AddToggle(_mirage, "Tween To Mirage Island", "", false)
+    Funcs:AddToggle(_mirage, "Tween To Gear", "", false)
+    Funcs:AddToggle(_mirage, "Tween To Blue Gear", "", false)
+    Funcs:AddToggle(_mirage, "Tween To Highest Point", "", false)
+    Funcs:AddToggle(_mirage, "Tween To Advanced Dealer", "", false)
+  end
+
+  local _getrace = _racemirage:Section({["Title"] = "Get Race", ["Content"] = ""}) do
+    Funcs:AddToggle(_getrace, "Auto Get Cyborg", "", false)
+    Funcs:AddToggle(_getrace, "Auto Get Ghoul", "", false)
+  end
+
+  local _getvrace = _racemirage:Section({["Title"] = "Get Race Version", ["Content"] = ""}) do
+    Funcs:AddToggle(_getvrace, "Auto Get Race V1", "", false)
+    Funcs:AddToggle(_getvrace, "Auto Get Race V2", "", false)
+    Funcs:AddToggle(_getvrace, "Auto Get Race V3", "", false)
+  end
+
+  local _racev4 = _racemirage:Section({["Title"] = "Race V4", ["Content"] = ""}) do
+    Funcs:AddToggle(_racev4, "Auto Complete Trial", "", false)
+    Funcs:AddToggle(_racev4, "Auto Kill Player In Trial", "", false)
+    Funcs:AddToggle(_racev4, "Auto Awakening One Quest", "", false)
+    _racev4:Seperator("Tween Race V4")
+    Funcs:AddDropdown(_racev4, "Select Tween Race", false, {"Top Great Tree","Timple Of Time","Lever Pull", "Acient One", "Cyborg Door", "Fish Door", "Ghoul Door", "Human Door", "Mink Door", "Sky Door"}, {"Timple Of Time"})
+    Funcs:AddToggle(_racev4, "Tween On Select Tween Race", "", false)
+  end
+end
+
+local _raidesp = Window:MakeTab("Raid / ESP") do
+  local _raid = _raidesp:Section({["Title"] = "Raid", ["Content"] = ""}) do
+    Funcs:AddDropdown(_raid, "Select Chips", false, _env.ChipsList(), {""})
+    Funcs:AddToggle(_raid, "Auto Buy Chips", "", false)
+    Funcs:AddToggle(_raid, "Auto Farm Raid", "", false)
+    Funcs:AddToggle(_raid, "Kill Aura", "", false)
+  end
+
+  local _esp = _raidesp:Section({["Title"] = "ESP", ["Content"] = ""}) do
+    for _, esp in next, {"Player","Chest", "Flower","Devil Fruit","Island","Mirage Island","Kitsune Island"} do
+      Funcs:AddToggle(_esp, "ESP " .. esp, "", false)
+    end
+  end
+end
+
 return SpeedHubX
