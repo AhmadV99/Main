@@ -343,7 +343,6 @@ local _home = Window:MakeTab("Home") do
     Funcs:AddDropdown(_config, "Weapon Tool", false, {"Melee","Sword","Blox Fruit","Gun"}, {"Melee"})
     _config:Seperator("Tween/Distance")
     Funcs:AddDropdown(_config, "Farm Distance", false, {"10", "20", "30", "40", "50", "60"}, {"40"})
-    Funcs:AddDropdown(_config, "Tween Mode", false, {"Smooth","Normal"}, {"Smooth"})
     Funcs:AddDropdown(_config, "Tween Speed", false, {"100", "200", "300", "400", "500"}, {"200"})
     _config:Seperator("Bring Mob")
     Funcs:AddDropdown(_config, "Bring Mob Mode", false, {"Smooth","Extreme"}, {"Smooth"})
@@ -610,6 +609,41 @@ local _questitem = Window:MakeTab("Item/Quest") do
     Funcs:AddToggle(_obsv, "Auto Observation", "", false)
     Funcs:AddToggle(_obsv, "Auto Observation V2", "", false)
   end
+  local _CitizenQuest = _questitem:Section({["Title"] = "Citizen Quest", ["Content"] = ""}) do
+    Funcs:AddToggle(_CitizenQuest, "Auto Citizen Quest", "", false)
+  end
+  local _Blacksmith = _questitem:Section({["Title"] = "Blacksmith [BETA]", ["Content"] = ""}) do
+    _Blacksmith:Seperator("Config ToolTip")
+    Funcs:AddDropdown(_Blacksmith, "Choose ToolTip", false, {"Sword", "Gun"}, {"Sword"})
+    _Blacksmith:Seperator("Upgrade Item")
+    local UpdateItem = Funcs:AddDropdown(_Blacksmith, "Select Item", false, {""}, {""})
+
+    task.spawn(function()
+      while task.wait(2) do
+        if SpeedHubX["Choose ToolTip"] == "Sword" then
+          if Sea[1] then
+            _env.ItemListUpgrade = {"Cutlass", "Dual Katana", "Katana", "Iron Mace", "Shark Saw", "Triple Katana", "Dual-Headed Blade", "Pipe", "Soul Cane", "Trident", "Wardens Sword", "Bisento", "Pole (1st Form)", "Saber"}
+          elseif Sea[2] then
+            _env.ItemListUpgrade = {"Dragon Trident", "Gravity Cane", "Jitte", "Longsword", "Koko", "Midnight Blade", "Pole (2nd Form)", "Rengoku", "Saddi", "Shisui", "Wando", "True Triple Katana"}
+          elseif Sea[3] then
+            _env.ItemListUpgrade = {"Twin Hooks", "Buddy Sword", "Canvander", "Dark Dagger", "Fox Lamp", "Shark Anchor", "Spikey Trident", "Tushita", "Yama", "Cursed Dual Katana", "Hallow Scythe"}
+          end
+        elseif SpeedHubX["Choose ToolTip"] == "Gun" then
+          if Sea[1] then
+            _env.ItemListUpgrade = {"Slingshot", "Flintlock", "Musket", "Cannon", "Refined Flintlock", "Refined Musket", "Refined Slingshot", "Bazooka"}
+          elseif Sea[2] then
+            _env.ItemListUpgrade = {"Acidum Rifle", "Bizarre Rifle", "Kabucha"}
+          elseif Sea[3] then
+            _env.ItemListUpgrade = {"Serpent Bow", "Soul Guitar"}
+          end
+        end
+
+        UpdateItem:Refresh(_env.ItemListUpgrade, {""})
+      end
+    end)
+
+    Funcs:AddToggle(_Blacksmith, "Auto Upgrade On Select Item", "", false)
+  end
 end
 
 local _seaevent = Window:MakeTab("Sea Event") do
@@ -639,6 +673,7 @@ local _seaevent = Window:MakeTab("Sea Event") do
         })
       end
     end)
+    Funcs:AddToggle(_kitsune, "Auto Summon Kitsune Island", "", false)
     Funcs:AddToggle(_kitsune, "Tween to Kitsune Island", "", false)
     Funcs:AddToggle(_kitsune, "Auto Collect Azure Ember", "", false)
     Funcs:AddToggle(_kitsune, "Auto Trade Azure Ember", "", false)
@@ -655,7 +690,7 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_farmsea, "Auto Drive Boat To Sea", "", false)
     _farmsea:Seperator("Terror Shark")
     Funcs:AddToggle(_farmsea, "Terror Shark", "", true)
-    Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill", "", true)
+    Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill [Loading Fix]", "", true)
     _farmsea:Seperator("Sea beast")
     Funcs:AddToggle(_farmsea, "Attack Sea beast", "", true)
     Funcs:AddToggle(_farmsea, "Dodge Sea Beasts Skill", "", true)
@@ -835,6 +870,8 @@ local _racemirage = Window:MakeTab("Race / Mirage") do
   local _getrace = _racemirage:Section({["Title"] = "Get Race", ["Content"] = ""}) do
     Funcs:AddToggle(_getrace, "Auto Get Cyborg", "", false)
     Funcs:AddToggle(_getrace, "Auto Get Ghoul", "", false)
+    _getrace:Seperator("Hop")
+    Funcs:AddToggle(_getrace, "Hop For Get Boss Ghoul", "", false)
   end
 
   local _getvrace = _racemirage:Section({["Title"] = "Get Race Version", ["Content"] = ""}) do
@@ -847,6 +884,13 @@ local _racemirage = Window:MakeTab("Race / Mirage") do
     Funcs:AddToggle(_racev4, "Auto Complete Trial", "", false)
     Funcs:AddToggle(_racev4, "Auto Kill Player In Trial", "", false)
     Funcs:AddToggle(_racev4, "Auto Awakening One Quest", "", false)
+    _racev4:Seperator("Gear")
+    Funcs:AddToggle(_racev4, "Auto Buy Gear", "", false)
+    Funcs:AddToggle(_racev4, "Auto Choose Gear", "", false)
+    Funcs:AddToggle(_racev4, "Auto Collect Blue Gear", "", false)
+    _racev4:Seperator("Pull Lever")
+    Funcs:AddToggle(_racev4, "Auto Pull Lever", "", false)
+    Funcs:AddToggle(_racev4, "Hop For Pull Lever", "", false)
     _racev4:Seperator("Tween Race V4")
     Funcs:AddDropdown(_racev4, "Select Tween Race", false, {"Top Great Tree","Timple Of Time","Lever Pull", "Acient One", "Cyborg Door", "Fish Door", "Ghoul Door", "Human Door", "Mink Door", "Sky Door"}, {"Timple Of Time"})
     Funcs:AddToggle(_racev4, "Tween On Select Tween Race", "", false)
