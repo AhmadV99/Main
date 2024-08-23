@@ -179,6 +179,14 @@ elseif Sea[3] then
   _env.MaterialList = {"Leather + Scrap Metal", "Fish Tail", "Gunpowder", "Mini Tusk", "Conjured Cocoa", "Dragon Scale"}
 end
 
+if Sea[1] then
+  _env.ItemListUpgrade = {"Cutlass", "Dual Katana", "Katana", "Iron Mace", "Shark Saw", "Triple Katana", "Dual-Headed Blade", "Pipe", "Soul Cane", "Trident", "Wardens Sword", "Bisento", "Pole (1st Form)", "Saber", "Slingshot", "Flintlock", "Musket", "Cannon", "Refined Flintlock", "Refined Musket", "Refined Slingshot", "Bazooka"}
+elseif Sea[2] then
+  _env.ItemListUpgrade = {"Dragon Trident", "Gravity Cane", "Jitte", "Longsword", "Koko", "Midnight Blade", "Pole (2nd Form)", "Rengoku", "Saddi", "Shisui", "Wando", "True Triple Katana", "Acidum Rifle", "Bizarre Rifle", "Kabucha"}
+elseif Sea[3] then
+  _env.ItemListUpgrade = {"Twin Hooks", "Buddy Sword", "Canvander", "Dark Dagger", "Fox Lamp", "Shark Anchor", "Spikey Trident", "Tushita", "Yama", "Cursed Dual Katana", "Hallow Scythe", "Serpent Bow", "Soul Guitar"}
+end
+
 local ShopTable = {
   {"Frags", {
     {"Race Rerol", {"BlackbeardReward", "Reroll", "2"}},
@@ -613,35 +621,8 @@ local _questitem = Window:MakeTab("Item/Quest") do
     Funcs:AddToggle(_CitizenQuest, "Auto Citizen Quest", "", false)
   end
   local _Blacksmith = _questitem:Section({["Title"] = "Blacksmith [BETA]", ["Content"] = ""}) do
-    _Blacksmith:Seperator("Config ToolTip")
-    Funcs:AddDropdown(_Blacksmith, "Choose ToolTip", false, {"Sword", "Gun"}, {"Sword"})
     _Blacksmith:Seperator("Upgrade Item")
-    local UpdateItem = Funcs:AddDropdown(_Blacksmith, "Select Item", false, {""}, {""})
-
-    task.spawn(function()
-      while task.wait(2) do
-        if SpeedHubX["Choose ToolTip"] == "Sword" then
-          if Sea[1] then
-            _env.ItemListUpgrade = {"Cutlass", "Dual Katana", "Katana", "Iron Mace", "Shark Saw", "Triple Katana", "Dual-Headed Blade", "Pipe", "Soul Cane", "Trident", "Wardens Sword", "Bisento", "Pole (1st Form)", "Saber"}
-          elseif Sea[2] then
-            _env.ItemListUpgrade = {"Dragon Trident", "Gravity Cane", "Jitte", "Longsword", "Koko", "Midnight Blade", "Pole (2nd Form)", "Rengoku", "Saddi", "Shisui", "Wando", "True Triple Katana"}
-          elseif Sea[3] then
-            _env.ItemListUpgrade = {"Twin Hooks", "Buddy Sword", "Canvander", "Dark Dagger", "Fox Lamp", "Shark Anchor", "Spikey Trident", "Tushita", "Yama", "Cursed Dual Katana", "Hallow Scythe"}
-          end
-        elseif SpeedHubX["Choose ToolTip"] == "Gun" then
-          if Sea[1] then
-            _env.ItemListUpgrade = {"Slingshot", "Flintlock", "Musket", "Cannon", "Refined Flintlock", "Refined Musket", "Refined Slingshot", "Bazooka"}
-          elseif Sea[2] then
-            _env.ItemListUpgrade = {"Acidum Rifle", "Bizarre Rifle", "Kabucha"}
-          elseif Sea[3] then
-            _env.ItemListUpgrade = {"Serpent Bow", "Soul Guitar"}
-          end
-        end
-
-        UpdateItem:Refresh(_env.ItemListUpgrade, {""})
-      end
-    end)
-
+    Funcs:AddDropdown(_Blacksmith, "Select Item", false, _env.ItemListUpgrade, {""})
     Funcs:AddToggle(_Blacksmith, "Auto Upgrade On Select Item", "", false)
   end
 end
