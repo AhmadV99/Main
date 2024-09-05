@@ -160,6 +160,8 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_collector, "Auto Collect Key", "", false)
     _collector:Seperator("Other")
     Funcs:AddToggle(_collector, "Anti-Screech", "", false)
+    Funcs:AddToggle(_collector, "Anti-A90", "", false)
+    Funcs:AddToggle(_collector, "Anti-Eyes", "", false)
     Funcs:AddToggle(_collector, "Auto Get Win Heartbeat", "", false)
     Funcs:AddToggle(_collector, "Auto Dodge Monster", "", false)
     Funcs:AddToggle(_collector, "Sending Notification if Monster Is Spawned", "", false)
