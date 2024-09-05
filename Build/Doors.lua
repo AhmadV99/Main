@@ -1,188 +1,540 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/V3.5"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Settings.lua"))()
 
-local Window = Library:Start({
-  ["Name"] = "Speed Hub X | " .. Version,
-  ["SaveFolder"] = "Speed Hub X"
-})
+local SPD = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Build/Testers1.lua"))()
 
-local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Lighting = game:GetService("Lighting")
-local TeleportService = game:GetService("TeleportService")
+local VirtualUser = game:GetService("VirtualUser")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local Workspace = game:GetService("Workspace")
+local ProximityPromptService = game:GetService("ProximityPromptService")
+local StarterGui = game:GetService("StarterGui")
+local CoreGui = game:GetService("CoreGui")
+local CorePackages = game:GetService("CorePackages")
 
+local Camera = Workspace.CurrentCamera
 local Player = Players.LocalPlayer
 
-local _isfile = isfile or function(f)return f end
-local _isfolder = isfolder or function(f)return f end
-local _delfolder = delfolder or function(f)return f end
-local _delfile = delfile or function(f)return f end
+local GameData = ReplicatedStorage:WaitForChild("GameData")
+local Floor = GameData:WaitForChild("Floor")
+local LatestRoom = GameData:WaitForChild("LatestRoom")
 
-local SpeedHubX = {}
+local isBackdoor = Floor.Value == "Backdoor"
 
-local Funcs = {} do
-  function Funcs:AddToggle(Section, Name, Content, Default)
-    return Section:Toggle({
-      ["Title"] = Name,
-      ["Content"] = Content,
-      ["Default"] = Default,
-      ["Callback"] = function(Value)
-        SpeedHubX[Name] = Value
-      end,
-      ["Flag"] = "SPD/Toggle/" .. tostring(Name)
-    })
+local _fireproximityprompt = fireproximityprompt or function(k, f) return k, f end
+local _hookmetamethod = hookmetamethod or (debug and debug.hookmetamethod) or function(...) return ... end
+local _newcclosure = newcclosure or protect_function or (debug and debug.newcclosure) or function(...) return ... end
+local _hookfunction = hookfunction or hookfunc or (debug and debug.hookfunction) or function(...) return ... end
+local _require = require or (debug and debug.require) or function(...) return ... end
+
+local _env = getgenv and getgenv() or {}
+
+if not LPH_OBFUSCATED then
+  _env.LPH_JIT_MAX = function(...) return ... end
+	_env.LPH_NO_VIRTUALIZE = function(...) return ... end
+	_env.LPH_NO_UPVALUES = function(...) return ... end
+end
+
+local EntityModules = ReplicatedStorage:WaitForChild("ClientModules"):WaitForChild("EntityModules")
+
+task.spawn(function()
+  RunService.Heartbeat:Connect(LPH_NO_VIRTUALIZE(function()
+    pcall(function()
+      local CurrentRooms = workspace.CurrentRooms[tostring(LatestRoom.Value)]
+
+      CurrentRooms.StarterElevator.DoorHitbox:Destroy()
+      Player.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Disabled = true
+    end)
+  end))
+end)
+
+local Module = {} do
+  function Module:Status_Checker(Val, Val1)
+    if not Val then
+      if Players:FindFirstChild("zhrgrijrvrhr") or Players:FindFirstChild("blacjacqv") then
+        game.StarterGui:SetCore("SendNotification", {Title = "Status", Text = Val1, Icon = "rbxassetid://0", Duration = 3})
+      end
+    end
   end
 
-  function Funcs:AddDropdown(Section, Name, Multi, Options, Default)
-    return Section:Dropdown({
-      ["Title"] = Name,
-      ["Multi"] = Multi,
-      ["Options"] = Options,
-      ["Default"] = Default,
-      ["PlaceHolderText"] = "Select Options",
-      ["Callback"] = function(Value)
-        if type(Value) == "table" then
-          for _, v in pairs(Value) do
-            SpeedHubX[Name] = v
+  function Module:Run_Loop(Name, Funcs)
+    task.spawn(function()
+      while task.wait() do
+        if SPD[Name] then
+          local success, error = pcall(Funcs)
+          Module:Status_Checker(success, error)
+        end
+      end
+    end)
+  end
+
+  function Module:CheckKeyTool()
+    for _, item in next, Player.Backpack:GetChildren() do
+      if item.Name == "Key" then
+        return true
+      end
+    end
+
+    for _, item in next, Player.Character:GetChildren() do
+      if item.Name == "Key" then
+        return true
+      end
+    end
+
+    return false
+  end
+
+  function Module:GetKeyPart()
+    local CurrentDoor = workspace.CurrentRooms[tostring(LatestRoom.Value)]:WaitForChild("Door")
+    
+    for _, Key in ipairs(CurrentDoor.Parent:GetDescendants()) do
+      if Key.Name == "KeyObtain" then
+        return Key
+      end
+    end
+
+    return false
+  end
+
+  function Module:GetMagnitude(Value)
+    local Char = Player.Character
+    if not Char or not Char.PrimaryPart then return nil end
+    local Position = Char.PrimaryPart.Position
+    if typeof(Value) == "CFrame" then
+      return (Position - Value.Position).Magnitude
+    elseif typeof(Value) == "Vector3" then
+      return (Player.Character.PrimaryPart.Position - Value).Magnitude
+    end
+    return nil
+  end
+
+  function Module:IsEyesSpawned()
+    return workspace:FindFirstChild(isBackdoor and "Lookman" or "Eyes") ~= nil
+  end
+end
+
+local ESPFuncs = {} do
+  function ESPFuncs:CreateESP(Part, ESPColor)
+    if not Part or Part:FindFirstChild("SpeedHubX_ESP") then return end
+
+    local Folder = Instance.new("Folder")
+    Folder.Name = "SpeedHubX_ESP"
+    Folder.Parent = Part
+  
+    local BoxHandleAdornment = Instance.new("BoxHandleAdornment")
+    BoxHandleAdornment.Size = Vector3.new(1, 0, 1)
+    BoxHandleAdornment.Name = "SpeedHubX_ESP"
+    BoxHandleAdornment.AlwaysOnTop = true
+    BoxHandleAdornment.ZIndex = 10
+    BoxHandleAdornment.Transparency = 0
+    BoxHandleAdornment.Parent = Folder
+  
+    local BillboardGui = Instance.new("BillboardGui")
+    BillboardGui.Adornee = Part
+    BillboardGui.Size = UDim2.new(0, 100, 0, 150)
+    BillboardGui.StudsOffset = Vector3.new(0, 1, 0)
+    BillboardGui.AlwaysOnTop = true
+    BillboardGui.Parent = BoxHandleAdornment
+  
+    local TextLabel = Instance.new("TextLabel")
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Position = UDim2.new(0, 0, 0, -50)
+    TextLabel.Size = UDim2.new(0, 100, 0, 100)
+    TextLabel.TextSize = 10
+    TextLabel.TextColor3 = ESPColor or Color3.fromRGB(255, 255, 255)
+    TextLabel.TextStrokeTransparency = 0
+    TextLabel.Font = Enum.Font.GothamBold
+    TextLabel.TextYAlignment = Enum.TextYAlignment.Bottom
+    TextLabel.Text = ""
+    TextLabel.ZIndex = 15
+    TextLabel.Parent = BillboardGui
+  
+    local RootPart = Player.Character and Player.Character:FindFirstChild("HumanoidRootPart")
+    RunService.Heartbeat:Connect(LPH_NO_VIRTUALIZE(function()
+      if not RootPart then return end
+      pcall(function()
+        local distance = math.floor((RootPart.Position - Part.Position).Magnitude / 3)
+        local HD = (Part.Parent:FindFirstChild("Humanoid") or Part.Parent:FindFirstChild("Humanoid_SPD"))
+        if Part.Name == "HumanoidRootPart" and HD then
+          local Health = math.floor(HD.Health)
+          TextLabel.Text = " [ Name : " .. Part.Parent.Name .. " ] \n [ HP : " .. tostring(Health) .. " ] \n [ Location : " .. tostring(distance) .. " ] "
+        elseif Part.Name == "Handle" then
+          TextLabel.Text = " [ " .. Part.Parent.Name .. " ] \n [ " .. tostring(distance) .. " ] "
+        else
+          TextLabel.Text = " [ " .. Part.Name .. " ] \n [ " .. tostring(distance) .. " ] "
+        end
+      end)
+    end))
+  end
+
+  function ESPFuncs:RemoveESP(Part)
+    if Part and Part:FindFirstChild("SpeedHubX_ESP") then
+      Part.SpeedHubX_ESP:Destroy()
+    end
+  end
+end
+
+task.spawn(function()
+  local PlayerHD = (Player.Character:FindFirstChild("Humanoid") or Player.Character:FindFirstChild("Humanoid_SPD"))
+
+  local OldHook; OldHook = _hookmetamethod(PlayerHD, "__newindex", LPH_NO_VIRTUALIZE(function(self, index, value)
+    if index == "WalkSpeed" then
+      return OldHook(self, index, _env.BypassSpeed or value)
+    end
+    return OldHook(self, index, value)
+  end))
+
+  Module:Run_Loop("Enable Walk Speed", function()
+    repeat task.wait()
+      _env.BypassSpeed = (type(SPD["Set Walk Speed"]) == "number" and SPD["Set Walk Speed"] or tonumber(SPD["Set Walk Speed"]))
+    until not SPD["Enable Walk Speed"]
+    _env.BypassSpeed = 40
+  end)
+end)
+
+
+task.spawn(function()
+  local ActiveTick = tick()
+  local PlrChar = Player.Character or Player.CharacterAdded:Wait()
+  local Part = PlrChar:WaitForChild("HumanoidRootPart")
+  
+  local function GetTo(Pos)
+    local TweenPos = CFrame.new(Pos)
+    PlrChar:SetPrimaryPartCFrame(TweenPos)
+  end
+
+  Module:Run_Loop("Auto Skip Doors Level", function()
+    local CurrentRooms = workspace.CurrentRooms[tostring(LatestRoom.Value)]:WaitForChild("Door")
+    local KeyPart = Module:GetKeyPart()
+    _env.PlaySkipDoors = true
+
+    if LatestRoom.Value == 50 then
+      CurrentRooms = workspace.CurrentRooms[tostring(LatestRoom.Value + 1)]:WaitForChild("Door")
+    end
+
+    if _env.PlaySkipDoors then
+      if LatestRoom.Value < 200 then
+        if Module:CheckKeyTool() then
+          if Module:GetMagnitude(CFrame.new(CurrentRooms.Door.Position)) <= 6 then
+            pcall(function() _fireproximityprompt(CurrentRooms.Lock.UnlockPrompt) end)
+          else
+            GetTo(CurrentRooms.Door.Position)
+          end
+        elseif KeyPart then
+          if Module:GetMagnitude(CFrame.new(KeyPart.Hitbox.Position)) <= 6 then
+            pcall(function() 
+              if KeyPart.ModulePrompt then
+                _fireproximityprompt(KeyPart.ModulePrompt)
+              end
+            end)
+          else
+            GetTo(KeyPart.Hitbox.Position)
+          end
+        else
+          if Module:GetMagnitude(CFrame.new(CurrentRooms.Door.Position)) <= 6 then
+            pcall(function() CurrentRooms.ClientOpen:FireServer() end)
+          else
+            GetTo(CurrentRooms.Door.Position)
           end
         end
       end
-    })
-  end
+    end
 
-  function Funcs:AddSlider(Section, Name, Content, Min, Max, Increment, Default)
-    return Section:Slider({
-      ["Title"] = Name,
-      ["Content"] = Content,
-      ["Min"] = Min,
-      ["Max"] = Max,
-      ["Increment"] = Increment,
-      ["Default"] = Default,
-      ["Callback"] = function(Value)
-        SpeedHubX[Name] = Value
+    --[[if tick() - ActiveTick > 4 then 
+      _env.PlaySkipDoors = false
+      wait(4)
+      _env.PlaySkipDoors = true
+      ActiveTick = tick()
+    end]]
+  end)
+end)
+
+task.spawn(function()
+  Module:Run_Loop("Auto Play To Skip Doors Level", function()
+    local CurrentRooms = workspace.CurrentRooms[tostring(LatestRoom.Value)]:WaitForChild("Door")
+    local KeyPart = Module:GetKeyPart()
+
+    if LatestRoom.Value == 50 then
+      CurrentRooms = workspace.CurrentRooms[tostring(LatestRoom.Value + 1)]:WaitForChild("Door")
+    end
+
+    if LatestRoom.Value < 200 then
+      if Module:CheckKeyTool() then
+        if Module:GetMagnitude(CurrentRooms.Door.Position) <= 6 then
+          pcall(function() _fireproximityprompt(CurrentRooms.Lock.UnlockPrompt) end)
+        else
+          Player.Character.Humanoid:MoveTo(CurrentRooms.Door.Position)
+        end
+      elseif KeyPart then
+        if Module:GetMagnitude(KeyPart.Hitbox.Position) <= 6 then
+          pcall(function() _fireproximityprompt(KeyPart.ModulePrompt) end)
+        else
+          Player.Character.Humanoid:MoveTo(KeyPart.Hitbox.Position)
+        end
+      else
+        if Module:GetMagnitude(CurrentRooms.Door.Position) <= 6 then
+          pcall(function() CurrentRooms.ClientOpen:FireServer() end)
+        else
+          Player.Character.Humanoid:MoveTo(CurrentRooms.Door.Position)
+        end
       end
-    })
-  end
+    end
+  end)
+end)
 
-  function Funcs:AddTextbox(Section, Name, Content, Default, ClearText)
-    return Section:TextInput({
-      ["Title"] = Name,
-      ["Content"] = Content,
-      ["PlaceHolderText"] = "Enter your text here...",
-      ["ClearTextOnFocus"] = ClearText,
-      ["Default"] = Default,
-      ["Callback"] = function(Value)
-        SpeedHubX[Name] = Value
-      end
-    })
-  end
 
-  function Funcs:AddButton(Section, Name, Content, Callback)
-    return Section:Button({
-      ["Title"] = Name,
-      ["Content"] = Content,
-      ["Callback"] = Callback
-    })  
-  end
-end
+task.spawn(function()
+  Module:Run_Loop("Auto Open Doors Level", function()
+    local CurrentDoor = workspace.CurrentRooms[tostring(LatestRoom.Value)]:WaitForChild("Door")
 
-local _home = Window:MakeTab("Home") do
-  local _info = _home:Section({["Title"] = "Information", ["Content"] = ""}) do
-    Funcs:AddButton(_info, "Discord Invite", "Click to copy invite server", function()
-      _setclipboard(Discord)
-    end)
+    local Distance = (CurrentDoor.Door.Position - Player.Character.HumanoidRootPart.Position).magnitude
 
-    _info:Seperator("Status")
-
-    local _timeServer = _info:Paragraph({["Title"] = "Time Server", ["Content"] = "" })
-    task.spawn(function()
-      while task.wait(2) do
-        _timeServer:Set({
-          ["Title"] = "Time Server",
-          ["Content"] = tostring(Lighting.TimeOfDay)
-        })
-      end
-    end)
-  end
-
-  local _localplayer = _home:Section({["Title"] = "LocalPlayer", ["Content"] = ""}) do
-    Funcs:AddDropdown(_localplayer, "Set Walk Speed", false, {"100", "200", "300", "400", "500"}, {"300"})
-    Funcs:AddToggle(_localplayer, "Enable Walk Speed", "", false)
-    Funcs:AddButton(_localplayer, "Destroy JumpScare", "", function()
-      local JS = ReplicatedStorage:WaitForChild("Bricks"):WaitForChild("Jumpscare")
-      if JS then
-        JS:Destroy()
-      end
-    end)
-    Funcs:AddButton(_localplayer, "Full Brightness", "", function()
-      Lighting.Ambient = Color3.new(1, 1, 1)
-      Lighting.ColorShift_Bottom = Color3.new(1, 1, 1)
-      Lighting.ColorShift_Top = Color3.new(1, 1, 1)
-      Lighting.LightingChanged:Connect(function()
-        Lighting.Ambient = Color3.new(1, 1, 1)
-        Lighting.ColorShift_Bottom = Color3.new(1, 1, 1)
-        Lighting.ColorShift_Top = Color3.new(1, 1, 1)
+    if Distance and Distance <= 25 then
+      pcall(function() 
+        _fireproximityprompt(CurrentRooms.Lock.UnlockPrompt) 
+        CurrentDoor.ClientOpen:FireServer() 
       end)
-    end)
-  end
+    end
+  end)
+end)
 
-  local _settings = _home:Section({["Title"] = "Settings", ["Content"] = ""}) do
-    Funcs:AddButton(_settings, "Reset Script Saver", "", function()
-      if _isfile("Speed Hub X") then
-        _delfile("Speed Hub X")
+task.spawn(function()
+  ProximityPromptService.PromptButtonHoldBegan:Connect(function(v)
+    if SPD["Get Faster Interact"] then
+      _fireproximityprompt(v)
+    end
+  end)
+end)
+
+task.spawn(function()
+  LPH_NO_VIRTUALIZE(function()
+    local OldHooks = _hookmetamethod(game, "__namecall", _newcclosure(function(self, ...)
+      local args = {...}
+      local method = getnamecallmethod()
+      local Name = (type(self) == "string" and self or self.Name)
+      
+      if Name == "Screech" and method == "FireServer" and SPD["Anti-Screech"] then
+        args[1] = true; OldHooks(self, unpack(args))
       end
-    end)
-    Funcs:AddButton(_settings, "Rejoin", "", function()
-      TeleportService:Teleport(game.PlaceId, Player)
-    end)
-  end
-end
+      if Name == "ClutchHeartbeat" and method == "FireServer" and SPD["Auto Get Win Heartbeat"] then
+        args[2] = true; OldHooks(self, unpack(args))
+      end 
+      if Name == "A90" and method == "FireServer" and SPD["Anti-A90"] then
+        args[3] = true; OldHooks(self, unpack(args))
+      end
+      if Name == "MotorReplication" and SPD["Anti-Eyes"] and Module:IsEyesSpawned() then
+        args[4] = -89; OldHooks(self, unpack(args))
+      end
 
-local _main = Window:MakeTab("Main") do
-  local _farmingdoors = _main:Section({["Title"] = "Farming Doors", ["Content"] = ""}) do
-    Funcs:AddToggle(_farmingdoors, "Auto Skip Doors Level", "", false)
-    Funcs:AddToggle(_farmingdoors, "Auto Play To Skip Doors Level", "", false)
-    Funcs:AddToggle(_farmingdoors, "Auto Open Doors", "", false)
-  end
-  local _configdoors = _main:Section({["Title"] = "Doors Config", ["Content"] = ""}) do
-    Funcs:AddToggle(_configdoors, "Get Faster Interact", "", false)
-    Funcs:AddButton(_configdoors, "Destroy Doors / Fake Doors", "", function()
-      for _, part in next, game:GetDescendants() do
-        if part.Name == "Door" then
-          part:Destroy()
-        elseif part.Name == "FakeDoor" then
-          part:Destroy()
+      return OldHooks(self, unpack(args))
+    end))
+
+    local OldGlitch; OldGlitch = _hookfunction(_require(EntityModules.Glitch).stuff, _newcclosure(function(...)
+      if SPD["Anti-Glitch"] then return nil end
+      return OldGlitch(...)
+    end))
+  
+    local OldShade; OldShade = _hookfunction(_require(EntityModules.Shade).stuff, _newcclosure(function(...)
+      if SPD["Anti-Halt"] then return nil end
+      return OldShade(...)
+    end))
+
+    local OldVoid; OldVoid = _hookfunction(_require(EntityModules.Void).stuff, _newcclosure(function(...)
+      if SPD["Anti-Void"] then return nil end
+      return OldVoid(...)
+    end))
+
+    Module:Run_Loop("Anti-Dupe", function()
+      for _, room in pairs(workspace.CurrentRooms:GetChildren()) do
+        for _, closet in pairs(room:GetChildren()) do
+          if closet:FindFirstChild("DoorFake") and closet.Name:match("Closet") then
+            local doorFake = closet.DoorFake
+            if doorFake then
+              local hidden = doorFake:WaitForChild("Hidden", 5)
+              hidden.CanTouch = not SPD["Anti-Dupe"]
+  
+              local lock = doorFake:FindFirstChild("LockPart")
+              if lock then
+                local unlockPrompt = lock:FindFirstChild("UnlockPrompt")
+                if unlockPrompt then
+                  unlockPrompt.Enabled = not SPD["Anti-Dupe"]
+                end
+              end
+            end
+          end
         end
       end
     end)
-  end
-  local _collector = _main:Section({["Title"] = "Collecter / Other", ["Content"] = ""}) do
-    Funcs:AddToggle(_collector, "Auto Collect Key", "", false)
-    _collector:Seperator("Anti")
-    Funcs:AddToggle(_collector, "Anti-Screech", "", false)
-    Funcs:AddToggle(_collector, "Anti-A90", "", false)
-    Funcs:AddToggle(_collector, "Anti-Eyes", "", false)
-    Funcs:AddToggle(_collector, "Anti-Dupe", "", false)
-    Funcs:AddToggle(_collector, "Anti-Glitch", "", false)
-    Funcs:AddToggle(_collector, "Anti-Seek", "", false)
-    Funcs:AddToggle(_collector, "Anti-Halt", "", false)
-    Funcs:AddToggle(_collector, "Anti-Snare", "", false)
-    Funcs:AddToggle(_collector, "Anti-Obstructions", "", false)
-    _collector:Seperator("Heartbeat")
-    Funcs:AddToggle(_collector, "Auto Get Win Heartbeat", "", false)
-    _collector:Seperator("Monster")
-    Funcs:AddToggle(_collector, "Auto Dodge Monster", "", false)
-    Funcs:AddToggle(_collector, "Sending Notification if Monster Is Spawned", "", false)
-  end
 
-  local _esp = _main:Section({["Title"] = "ESP", ["Content"] = ""}) do
-    Funcs:AddToggle(_esp, "ESP Doors", false)
-    Funcs:AddToggle(_esp, "ESP Lever", false)
-    Funcs:AddToggle(_esp, "ESP Key", false)
-    Funcs:AddToggle(_esp, "ESP Fuse", false)
-    Funcs:AddToggle(_esp, "ESP Chest", false)
-    Funcs:AddToggle(_esp, "ESP Locker", false)
-  end
-end
+    Module:Run_Loop("Anti-Seek", function()
+      for _, room in pairs(workspace.CurrentRooms:GetChildren()) do
+        if room:FindFirstChild("TriggerEventCollision") then
+          for _, part in pairs(room.TriggerEventCollision:GetChildren()) do
+            part.CanTouch = not SPD["Anti-Seek"]
+          end
+        end
+      end
+    end)
+    Module:Run_Loop("Anti-Obstructions", function()
+      for _, v in pairs(workspace.CurrentRooms:GetDescendants()) do
+        if v.Name == "HurtPart" then
+          v.CanTouch = not SPD["Anti-Obstructions"]
+        elseif v.Name == "AnimatorPart" then
+          v.CanTouch = not SPD["Anti-Obstructions"]
+        end
+      end
+    end)
+  end)
+end)
 
-return SpeedHubX
+task.spawn(function()
+  Workspace.ChildAdded:Connect(function(Monster)
+    if Monster.Name:find("Rush") or Monster.Name == "AmbushMoving" or Monster.Name == "A60" or Monster.Name == "A120" or Monster.Name == "SeekMoving" or Monster.Name == "JeffTheKiller" then
+      if SPD["Auto Dodge Monster"] then
+        local OldPos = Player.Character.HumanoidRootPart.Position
+        local Connect; Connect = RunService.Heartbeat:Connect(LPH_NO_VIRTUALIZE(function()
+          Player.Character:MoveTo(OldPos + Vector3.new(0, 20, 0))
+        end))
+        Monster.Destroying:Wait()
+        Connect:Disconnect()
+        Player.Character:MoveTo(OldPos)
+      else
+        Connect:Disconnect()
+        Player.Character:MoveTo(OldPos)
+      end
+    end
+  end)
+end)
+
+task.spawn(function()
+  Workspace.ChildAdded:Connect(function(Monster)
+    if Monster.Name:find("Rush") or Monster.Name == "AmbushMoving" or Monster.Name == "A60" or Monster.Name == "A120" or Monster.Name == "Eyes" or Monster.Name == "SeekMoving" or Monster.Name == "JeffTheKiller" or Monster.Name:find("Void") then
+      if SPD["Sending Notification if Monster Is Spawned"] then
+        game.StarterGui:SetCore("SendNotification", {Title = "Status", Text = Monster.Name .. " Is Spawned! Go hide", Icon = "rbxassetid://0", Duration = 5})
+      end
+    end
+  end)
+end)
+
+task.spawn(function()
+  Module:Run_Loop("Auto Collect Key", function()
+    local KeyPart = Module:GetKeyPart()
+
+    if not Module:CheckKeyTool() then
+      if KeyPart then
+        if Module:GetMagnitude(CFrame.new(KeyPart.Hitbox.Position)) <= 6 then
+          pcall(function() 
+            if KeyPart.ModulePrompt then
+              _fireproximityprompt(KeyPart.ModulePrompt)
+            end
+          end)
+        else
+          Player.Character:SetPrimaryPartCFrame(CFrame.new(KeyPart.Hitbox.Position))
+        end
+      end
+    end
+  end)
+end)
+
+task.spawn(function()
+  local Blacklist_Doors = {}
+  Module:Run_Loop("ESP Doors", function()
+    repeat wait(1)
+      for _, part in ipairs(Workspace:GetDescendants()) do
+        if part.Name == "Door" and not Blacklist_Doors[part] then
+          Blacklist_Doors[part] = true; ESPFuncs:CreateESP(part, Color3.fromRGB(191, 60, 4))
+        end
+      end
+    until not SPD["ESP Doors"]
+    for _, part in ipairs(Workspace:GetDescendants()) do
+      if part.Name == "Door" then
+        Blacklist_Doors[part] = {}; ESPFuncs:RemoveESP(part)
+      end
+    end
+  end)
+end)
+
+task.spawn(function()
+  Module:Run_Loop("ESP Key", function()
+    local KeyPart = Module:GetKeyPart()
+    repeat wait()
+      if KeyPart then
+        ESPFuncs:CreateESP(KeyPart, Color3.fromRGB(237, 237, 19))
+      else
+        ESPFuncs:RemoveESP(KeyPart)
+      end
+    until not SPD["ESP Key"]
+    ESPFuncs:RemoveESP(KeyPart)
+  end)
+end)
+
+task.spawn(function()
+  Module:Run_Loop("ESP Chest", function()
+    repeat wait()
+      for _, v in pairs(workspace.CurrentRooms:GetChildren()) do
+        if v:FindFirstChild("Assets") then
+          if v:IsA("Model") and v.Name == "ChestBox" then
+            ESPFuncs:CreateESP(v, Color3.fromRGB(2, 43, 54))
+          elseif v:IsA("Model") and v.Name == "ChestBoxLocked" then
+            ESPFuncs:CreateESP(v, Color3.fromRGB(3, 202, 252))
+          end
+        end
+      end
+    until not SPD["ESP Chest"]
+    for _, v in pairs(workspace.CurrentRooms:GetChildren()) do
+      if v:FindFirstChild("Assets") then
+        if v:IsA("Model") and v.Name == "ChestBox" then
+          ESPFuncs:RemoveESP(v)
+        elseif v:IsA("Model") and v.Name == "ChestBoxLocked" then
+          ESPFuncs:RemoveESP(v)
+        end
+      end
+    end
+  end)
+end)
+
+task.spawn(function()
+  Module:Run_Loop("ESP Locker", function()
+    repeat wait()
+      for _, v in pairs(workspace.CurrentRooms:GetChildren()) do
+        if v:FindFirstChild("Assets") then
+          if v:IsA("Model") and v.Name == "Wardrobe" then
+            ESPFuncs:CreateESP(v, Color3.fromRGB(4, 23, 143))
+          elseif v:IsA("Model") and v.Name == "Rooms_Locker" then
+            ESPFuncs:CreateESP(v, Color3.fromRGB(15, 1, 74))
+          end
+        end
+      end
+    until not SPD["ESP Locker"]
+    for _, v in pairs(workspace.CurrentRooms:GetChildren()) do
+      if v:FindFirstChild("Assets") then
+        if v:IsA("Model") and v.Name == "Wardrobe" then
+          ESPFuncs:RemoveESP(v)
+        elseif v:IsA("Model") and v.Name == "Rooms_Locker" then
+          ESPFuncs:RemoveESP(v)
+        end
+      end
+    end
+  end)
+end)
+
+task.spawn(function()
+  Module:Run_Loop("ESP Lever", function()
+    repeat wait()
+      for _, v in pairs(workspace.CurrentRooms:GetChildren()) do
+        if v:FindFirstChild("Assets") then
+          if v:IsA("Model") and v.Name == "LeverForGate" then
+            ESPFuncs:CreateESP(v, Color3.fromRGB(50, 168, 82))
+          end
+        end
+      end
+    until not SPD["ESP Lever"]
+    for _, v in pairs(workspace.CurrentRooms:GetChildren()) do
+      if v:FindFirstChild("Assets") then
+        if v:IsA("Model") and v.Name == "LeverForGate" then
+          ESPFuncs:RemoveESP(v)
+        end
+      end
+    end
+  end)
+end)
