@@ -158,11 +158,19 @@ local _main = Window:MakeTab("Main") do
   end
   local _collector = _main:Section({["Title"] = "Collecter / Other", ["Content"] = ""}) do
     Funcs:AddToggle(_collector, "Auto Collect Key", "", false)
-    _collector:Seperator("Other")
+    _collector:Seperator("Anti")
     Funcs:AddToggle(_collector, "Anti-Screech", "", false)
     Funcs:AddToggle(_collector, "Anti-A90", "", false)
     Funcs:AddToggle(_collector, "Anti-Eyes", "", false)
+    Funcs:AddToggle(_collector, "Anti-Dupe", "", false)
+    Funcs:AddToggle(_collector, "Anti-Glitch", "", false)
+    Funcs:AddToggle(_collector, "Anti-Seek", "", false)
+    Funcs:AddToggle(_collector, "Anti-Halt", "", false)
+    Funcs:AddToggle(_collector, "Anti-Snare", "", false)
+    Funcs:AddToggle(_collector, "Anti-Obstructions", "", false)
+    _collector:Seperator("Heartbeat")
     Funcs:AddToggle(_collector, "Auto Get Win Heartbeat", "", false)
+    _collector:Seperator("Monster")
     Funcs:AddToggle(_collector, "Auto Dodge Monster", "", false)
     Funcs:AddToggle(_collector, "Sending Notification if Monster Is Spawned", "", false)
   end
