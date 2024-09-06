@@ -1,4 +1,4 @@
-local SPD = getgenv() or getfenv() or {}
+local SPD = getgenv and getgenv() or getfenv and getfenv() or {}
 
 SPD.Hooking = function(Type, ...)
   local _hookfunc = hookfunction or hookfunc or (debug and debug.hookfunction) or (function() end)
