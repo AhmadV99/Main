@@ -1,4 +1,4 @@
-local SPD = getgenv and getgenv() or getfenv and getfenv() or {}
+local SPD = getgenv and getgenv() or {}
 
 SPD.Hooking = function(Type, ...)
   local _hookfunc = hookfunction or hookfunc or (debug and debug.hookfunction) or (function() end)
@@ -106,4 +106,10 @@ SPD.Environment = function(Type, ...)
   end
 end
 
-return (function()if not getgenv or not getfenv then return SPD end end)
+SPD.Require = function(...)
+  local _require = require or (debug and debug.require) or (function() end)
+
+  return require(...)
+end
+
+return SPD
