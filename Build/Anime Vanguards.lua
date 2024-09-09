@@ -11,7 +11,14 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Lighting = game:GetService("Lighting")
 local TeleportService = game:GetService("TeleportService")
 
+local Networking = ReplicatedStorage:WaitForChild("Networking")
+
 local Player = Players.LocalPlayer
+
+local CodeList = {
+  "DELAY",
+  "RELEASE"
+}
 
 local _isfile = isfile or function(f)return f end
 local _isfolder = isfolder or function(f)return f end
@@ -142,6 +149,13 @@ local _main = Window:MakeTab("Main") do
   local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
     Funcs:AddToggle(_Summon, "Auto Click Summon X1", "", false)
     Funcs:AddToggle(_Summon, "Auto Click Summon X10", "", false)
+  end
+  local _RCode = _main:Section({["Title"] = "Redeem Code", ["Content"] = ""}) do
+    Funcs:AddButton(_RCode, "Redeem Code", "", function()
+      for _, Code in next, CodeList do
+        Networking.CodesEvent:FireServer(Code)
+      end
+    end)
   end
 end
 
