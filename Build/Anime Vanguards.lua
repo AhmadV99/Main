@@ -137,7 +137,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
   end
-  local _FarmingPlay = _main:Section({["Title"] = "Farming / Unit", ["Content"] = ""}) do
+  local _FarmingPlay = _main:Section({["Title"] = "Wave / Unit", ["Content"] = ""}) do
     _FarmingPlay:Seperator("Unit")
     Funcs:AddToggle(_FarmingPlay, "Auto Upgrade Unit", "", false)
     Funcs:AddToggle(_FarmingPlay, "Auto Sell Unit", "", false)
