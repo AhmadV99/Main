@@ -149,3 +149,5 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Summon, "Auto Click Summon X10", "", false)
   end
 end
+
+return SpeedHubX
