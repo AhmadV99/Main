@@ -123,28 +123,28 @@ local _home = Window:MakeTab("Home") do
 end
 
 local _main = Window:MakeTab("Main") do
-  local _Maps = _home:Section({["Title"] = "Maps", ["Content"] = ""}) do
+  local _Maps = _main:Section({["Title"] = "Maps", ["Content"] = ""}) do
     _Maps:Seperator("Config")
     Funcs:AddDropdown(_Maps, "Choose Map", false, {"Planet Namak", "Send Village", "Double Dungean"}, {"Planet Namak"})
-    Funcs:AddDropdown(_Maps, "Choose Act Number", false, {"1","2", "3", "4", "5", "6", "Infinite"}, {"1"})
-    Funcs:AddDropdown(_Maps, "Choose Mode", false, {"Normal","Nightmare"}, {"Normal"})
+    Funcs:AddDropdown(_Maps, "Choose Act Number", false, {"1", "2", "3", "4", "5", "6", "Infinite"}, {"1"})
+    Funcs:AddDropdown(_Maps, "Choose Mode", false, {"Normal", "Nightmare"}, {"Normal"})
     Funcs:AddToggle(_Maps, "Allow Friends", "", false)
     _Maps:Seperator("Join")
     Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
   end
-  local _Game = _home:Section({["Title"] = "Game", ["Content"] = ""}) do
+  local _Game = _main:Section({["Title"] = "Game", ["Content"] = ""}) do
     Funcs:AddToggle(_Game, "Auto Return To Lobby", "", false)
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
   end
-  local _FarmingPlay = _home:Section({["Title"] = "Farming Play", ["Content"] = ""}) do
+  local _FarmingPlay = _main:Section({["Title"] = "Farming / Unit", ["Content"] = ""}) do
     _FarmingPlay:Seperator("Unit")
     Funcs:AddToggle(_FarmingPlay, "Auto Upgrade Unit", "", false)
     Funcs:AddToggle(_FarmingPlay, "Auto Sell Unit", "", false)
     _FarmingPlay:Seperator("Wave")
     Funcs:AddToggle(_FarmingPlay, "Auto Click Skip Wave", "", false)
   end
-  local _Summon = _home:Section({["Title"] = "Summon", ["Content"] = ""}) do
+  local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
     Funcs:AddToggle(_Summon, "Auto Click Summon X1", "", false)
     Funcs:AddToggle(_Summon, "Auto Click Summon X10", "", false)
   end
