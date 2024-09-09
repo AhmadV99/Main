@@ -105,11 +105,6 @@ local _home = Window:MakeTab("Home") do
     end)
   end
 
-  local _localplayer = _home:Section({["Title"] = "LocalPlayer", ["Content"] = ""}) do
-    Funcs:AddDropdown(_localplayer, "Set Walk Speed", false, {"100", "200", "300", "400", "500"}, {"300"})
-    Funcs:AddToggle(_localplayer, "Enable Walk Speed", "", false)
-  end
-
   local _settings = _home:Section({["Title"] = "Settings", ["Content"] = ""}) do
     Funcs:AddButton(_settings, "Reset Script Saver", "", function()
       if _isfile("Speed Hub X | Anime Van") then
