@@ -125,12 +125,12 @@ end
 local _main = Window:MakeTab("Main") do
   local _Maps = _home:Section({["Title"] = "Maps", ["Content"] = ""}) do
     _Maps:Seperator("Config")
-    Funcs:AddDropdown(_main, "Choose Map", false, {"Planet Namak", "Send Village", "Double Dungean"}, {"Planet Namak"})
-    Funcs:AddDropdown(_main, "Choose Act Number", false, {"1","2", "3", "4", "5", "6", "Infinite"}, {"1"})
-    Funcs:AddDropdown(_main, "Choose Mode", false, {"Normal","Nightmare"}, {"Normal"})
-    Funcs:AddToggle(_main, "Allow Friends", "", false)
+    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Planet Namak", "Send Village", "Double Dungean"}, {"Planet Namak"})
+    Funcs:AddDropdown(_Maps, "Choose Act Number", false, {"1","2", "3", "4", "5", "6", "Infinite"}, {"1"})
+    Funcs:AddDropdown(_Maps, "Choose Mode", false, {"Normal","Nightmare"}, {"Normal"})
+    Funcs:AddToggle(_Maps, "Allow Friends", "", false)
     _Maps:Seperator("Join")
-    Funcs:AddToggle(_main, "Auto Join Maps", "", false)
+    Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
   end
   local _Game = _home:Section({["Title"] = "Game", ["Content"] = ""}) do
     Funcs:AddToggle(_Game, "Auto Return To Lobby", "", false)
