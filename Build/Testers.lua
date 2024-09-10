@@ -25,6 +25,19 @@ local _isfolder = isfolder or function(f)return f end
 local _delfolder = delfolder or function(f)return f end
 local _delfile = delfile or function(f)return f end
 
+local function GetCountUnits()
+  local ListCount = {"All"}
+  local UnitsFolder = workspace:FindFirstChild("Units")
+
+  if UnitsFolder then
+    for Count, Unit in pairs(UnitsFolder:GetChildren()) do
+      table.insert(ListCount, Count)
+    end
+  end
+
+  return ListCount
+end
+
 local SpeedHubX = {}
 
 local Funcs = {} do
@@ -141,12 +154,12 @@ local _main = Window:MakeTab("Main") do
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
-    local UpdateCount = Funcs:AddDropdown(_Unit, "Select Unit Count", false, {#Workspace:FindFirstChild("Units"):GetChildren(), "All"}, {"1"})
+    local UpdateCount = Funcs:AddDropdown(_Unit, "Select Unit Count", false, GetCountUnits(), {"1"})
     Funcs:AddButton(_Unit, "Refersh Select Unit Count", "", function()
-      UpdateCount:Clear()UpdateCount:Refresh({#Workspace:FindFirstChild("Units"):GetChildren(), "All"}, {"1"})
-      Funcs:AddDropdown(_Unit, "Choose Upgrade Or Sell", false, {"Upgrade", "Sell"}, {"Sell"})
-      Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+      UpdateCount:Clear()UpdateCount:Refresh(GetCountUnits(), {"1"})
     end)
+    Funcs:AddDropdown(_Unit, "Choose Upgrade Or Sell", false, {"Upgrade", "Sell"}, {"Sell"})
+    Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _Unit:Seperator("Unit")
     Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
   end
