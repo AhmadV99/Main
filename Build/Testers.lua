@@ -130,6 +130,44 @@ local _home = Window:MakeTab("Home") do
     end)
   end
 
+  local _MoreFPS = _home:Section({["Title"] = "More FPS", ["Content"] = ""}) do
+    Funcs:AddButton(_MoreFPS, "Anti-Crash", "", function()
+      local function reduce(v)
+        if v:IsA("Part") then
+          v.Material = Enum.Material.Plastic
+        elseif v:IsA("Light") or v:IsA("Effect") then
+          v:Destroy()
+        elseif v:IsA("Texture") then
+          v:Destroy()
+        end
+      end
+      local Descendants = function(v)
+        for _, v in pairs(v:GetDescendants()) do
+          reduce(v)
+        end
+        container.DescendantAdded:Connect(reduce)
+      end
+      Descendants(Lighting)Descendants(workspace)
+    end)
+    Funcs:AddButton(_MoreFPS, "Reduce Lag", "", function()
+      local function reduce(v)
+        if v:IsA("Part") then
+          v.Material = Enum.Material.Plastic
+        elseif v:IsA("Light") or v:IsA("Effect") then
+          v:Destroy()
+        elseif v:IsA("Texture") then
+          v:Destroy()
+        end
+      end
+      for _, v in pairs(workspace:GetDescendants()) do
+        if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
+          v.Material = Enum.Material.SmoothPlastic
+          reduce(v)
+        end
+      end
+    end)
+  end
+
   local _settings = _home:Section({["Title"] = "Settings", ["Content"] = ""}) do
     Funcs:AddButton(_settings, "Reset Script Saver", "", function()
       if _isfile("Speed Hub X | Anime Van") then
