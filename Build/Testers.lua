@@ -195,10 +195,13 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
   end
   local _Webhook _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
-    _Wave:Seperator("Config")
+    _Webhook:Seperator("Config")
     Funcs:AddTextbox(_Webhook, "Webhook URL", "", "", true)
-    _Wave:Seperator("Webhook")
+    Funcs:AddToggle(_Webhook, "Allow Ping", "", false)
+    _Webhook:Seperator("Webhook Stage Finished")
     Funcs:AddToggle(_Webhook, "Send Webhook If Stage Finished", "", false)
+    _Webhook:Seperator("Webhook Summon")
+    Funcs:AddDropdown(_Webhook, "Select WhiteList Rarity", true, {"Mythic", "Legendary", "Secret"}, {"Mythic"})
     Funcs:AddToggle(_Webhook, "Send Webhook If Summoned Unit", "", false)
   end
   local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
