@@ -139,7 +139,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
   end
-  local _Unit = _main:Section({["Title"] = "Unit", ["Content"] = ""}) do
+  local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
     local UpdateCount = Funcs:AddDropdown(_Unit, "Select Unit Count", false, {#Workspace:FindFirstChild("Units"):GetChildren(), "All"}, {"1"})
     Funcs:AddButton(_Unit, "Refersh Select Unit Count", "", function()
@@ -148,7 +148,13 @@ local _main = Window:MakeTab("Main") do
       Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     end)
     _Unit:Seperator("Unit")
-    Funcs:AddToggle(_Game, "Auto Click Unit", "", false)
+    Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
+  end
+  local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
+    _Wave:Seperator("Config")
+    Funcs:AddDropdown(_Wave, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _Wave:Seperator("Wave")
+    Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
   end
   local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
     Funcs:AddToggle(_Summon, "Auto Click Summon X1", "", false)
