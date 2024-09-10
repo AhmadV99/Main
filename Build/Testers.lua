@@ -192,7 +192,7 @@ local _farming = Window:MakeTab("Farming Play") do
     end)
     _Macros:Seperator("File Config")
     local UpdateFile = Funcs:AddDropdown(_Macros, "Select File ", false, FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards", "json"), {""})
-    Funcs:AddButton(_Unit, "Refersh Select File", "", function()
+    Funcs:AddButton(_Macros, "Refersh Select File", "", function()
       UpdateFile:Clear()UpdateFile:Refresh(FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards", "json"), {""})
     end)
     Funcs:AddButton(_Macros, "Delete On Select File", "", function()
