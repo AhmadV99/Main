@@ -184,7 +184,7 @@ local _main = Window:MakeTab("Main") do
 end
 
 local _farming = Window:MakeTab("Farming Play") do
-  local _Macros = _main:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
+  local _Macros = _farming:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
     _Macros:Seperator("Create File Config")
     Funcs:AddTextbox(_Macros, "File Name", "", "", true)
     Funcs:AddButton(_Macros, "Create On File Name", "", function()
