@@ -18,7 +18,11 @@ local Player = Players.LocalPlayer
 
 local CodeList = {
   "DELAY",
-  "RELEASE"
+  "RELEASE",
+  "10KLIKES", 
+  "100KLIKES",
+  "200KLIKES",
+  "300KLIKES"
 }
 
 local _isfile = isfile or function(f)return f end
@@ -195,6 +199,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddTextbox(_Webhook, "Webhook URL", "", "", true)
     _Wave:Seperator("Webhook")
     Funcs:AddToggle(_Webhook, "Send Webhook If Stage Finished", "", false)
+    Funcs:AddToggle(_Webhook, "Send Webhook If Summoned Unit", "", false)
   end
   local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
     Funcs:AddToggle(_Summon, "Auto Click Summon X1", "", false)
