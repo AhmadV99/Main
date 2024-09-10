@@ -152,7 +152,7 @@ local _main = Window:MakeTab("Main") do
   end
   local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
     _Wave:Seperator("Config")
-    Funcs:AddDropdown(_Wave, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    Funcs:AddDropdown(_Wave, "Delay To Click ", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _Wave:Seperator("Wave")
     Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
   end
