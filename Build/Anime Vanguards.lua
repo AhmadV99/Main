@@ -25,6 +25,19 @@ local _isfolder = isfolder or function(f)return f end
 local _delfolder = delfolder or function(f)return f end
 local _delfile = delfile or function(f)return f end
 
+local function GetCountUnits()
+  local ListCount = {"All"}
+  local UnitsFolder = workspace:FindFirstChild("Units")
+
+  if UnitsFolder then
+    for Count, Unit in pairs(UnitsFolder:GetChildren()) do
+      table.insert(ListCount, Count)
+    end
+  end
+
+  return ListCount
+end
+
 local SpeedHubX = {}
 
 local Funcs = {} do
@@ -139,12 +152,22 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
   end
-  local _FarmingPlay = _main:Section({["Title"] = "Wave / Unit", ["Content"] = ""}) do
-    _FarmingPlay:Seperator("Unit")
-    Funcs:AddToggle(_FarmingPlay, "Auto Upgrade Unit", "", false)
-    Funcs:AddToggle(_FarmingPlay, "Auto Sell Unit", "", false)
-    _FarmingPlay:Seperator("Wave")
-    Funcs:AddToggle(_FarmingPlay, "Auto Click Skip Wave", "", false)
+  local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
+    _Unit:Seperator("Config")
+    local UpdateCount = Funcs:AddDropdown(_Unit, "Select Unit Count", false, GetCountUnits(), {"1"})
+    Funcs:AddButton(_Unit, "Refersh Select Unit Count", "", function()
+      UpdateCount:Clear()UpdateCount:Refresh(GetCountUnits(), {"1"})
+    end)
+    Funcs:AddDropdown(_Unit, "Choose Upgrade Or Sell", false, {"Upgrade", "Sell"}, {"Upgrade"})
+    Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _Unit:Seperator("Unit")
+    Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
+  end
+  local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
+    _Wave:Seperator("Config")
+    Funcs:AddDropdown(_Wave, "Delay To Click ", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _Wave:Seperator("Wave")
+    Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
   end
   local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
     Funcs:AddToggle(_Summon, "Auto Click Summon X1", "", false)
@@ -158,5 +181,4 @@ local _main = Window:MakeTab("Main") do
     end)
   end
 end
-
 return SpeedHubX
