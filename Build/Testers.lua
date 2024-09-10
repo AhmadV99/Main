@@ -159,7 +159,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddButton(_Unit, "Refersh Select Unit Count", "", function()
       UpdateCount:Clear()UpdateCount:Refresh(GetCountUnits(), {"1"})
     end)
-    Funcs:AddDropdown(_Unit, "Choose Upgrade Or Sell", false, {"Upgrade", "Sell"}, {"Sell"})
+    Funcs:AddDropdown(_Unit, "Choose Upgrade Or Sell", false, {"Upgrade", "Sell"}, {"Upgrade"})
     Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _Unit:Seperator("Unit")
     Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
