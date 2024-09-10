@@ -1,54 +1,91 @@
-local SPD = {}
+local _readfile = readfile or (debug and debug.readfile) or (function() end)
+local _listfiles = listfiles or (debug and debug.listfiles) or (function() end)
+local _writefile = writefile or (debug and debug.writefile) or (function() end)
+local _makefolder = makefolder or (debug and debug.makefolder) or (function() end)
+local _appendfile = appendfile or (debug and debug.appendfile) or (function() end)
+local _isfolder = isfolder or (debug and debug.isfolder) or (function() end)
+local _delfolder = delfolder or (debug and debug.delfolder) or (function() end)
+local _delfile = delfile or (debug and debug.delfile) or (function() end)
+local _loadfile = loadfile or (debug and debug.loadfile) or (function() end)
+local _dofile = dofile or (debug and debug.dofile) or (function() end)
+local _isfile = isfile or (debug and debug.isfile) or (function() end)
 
 local HttpService = game:GetService("HttpService")
 
-SPD.ReadData = function(foldername, filename)
-    local fullPath = foldername.."/"..filename..".json"
-    if isfolder(foldername) and isfile(fullPath) then
-        return HttpService:JSONDecode(readfile(fullPath))
-    end
-    return false
-end
+local FileManager = {} do
+  function FileManager:GetFolder(VAL)
+    if not VAL then return end
 
-SPD.Save = function(foldername, filename, filecontent)
-    local fullPath = foldername.."/"..filename..".json"
-    local jsonContent = HttpService:JSONEncode(filecontent)
-    if not isfolder(foldername) then
-        makefolder(foldername)
+    if not _isfolder(VAL) then
+      _makefolder(VAL)
     end
-    writefile(fullPath, jsonContent)
-end
+  end
 
-SPD.Load = function(foldername, filename, tabs)
-    local UIConfig = SPD.ReadData(foldername, filename)
-    if UIConfig then
-        for NameTab, TabFunc in pairs(tabs) do
-            local tabConfig = UIConfig[NameTab]
-            if tabConfig then
-                for NameItem, Item in pairs(TabFunc) do
-                    local itemConfig = tabConfig[NameItem]
-                    if type(Item) == "table" and itemConfig and Item.Type == itemConfig.Type then
-                        if Item.Type == "Dropdown" then
-                            Item:Refresh(itemConfig.Options, itemConfig.Value)
-                        elseif Item.Type ~= "Button" and itemConfig.Value ~= Item.Value then
-                            Item:Set(itemConfig.Value)
-                        end
-                        local settings = Item["Setting Item"]
-                        if settings then
-                            for i, v in pairs(settings) do
-                                local settingConfig = itemConfig["Setting Item"]
-                                if settingConfig and settingConfig[i] and settingConfig[i] ~= v.Value then
-                                    v:Set(settingConfig[i].Value)
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-        end
+  function FileManager:DeleteFolder(VAL)
+    if not VAL then return end
+
+    if _isfolder(VAL) then
+      _delfolder(VAL)
+    end
+  end
+
+  function FileManager:GetFile(VAL, data)
+    if not VAL then return end
+
+    if not isfile(VAL) then
+      if type(data) == "table" then
+        _writefile(VAL, HttpService:JSONEncode(data))
+      else
+        _writefile(VAL, data or "")
+      end
+    end
+  end
+
+  function FileManager:WriteFile(VAL, data)
+    if not VAL then return end
+
+    if type(data) == "table" then
+      _writefile(VAL, HttpService:JSONEncode(data))
     else
-        SPD.Save(foldername, filename, tabs)
+      _writefile(VAL, data or "")
     end
+  end
+
+  function FileManager:DeleteFile(VAL)
+    if not VAL then return end
+
+    if _isfile(VAL) then
+      _delfile(VAL)
+    end
+  end
+
+  function FileManager:ReadFile(VAL, format)
+    if not VAL then return end
+
+    if _isfile(VAL) then
+      if format == "table" then
+        return HttpService:JSONDecode(_readfile(VAL))
+      else
+        return _readfile(VAL)
+      end
+    end
+  end
+
+  function FileManager:ListFiles(VAL, format)
+    if not VAL then return end
+
+    local fileList = {}
+    for _, filePath in ipairs(listfiles(VAL)) do
+      local name = filePath:match("[^/\\]+$")
+      if format == "json" and name:match("%.json$") then
+        name = name:sub(1, -6)
+      elseif format == "lua" and name:match("%.lua$") then
+        name = name:sub(1, -5)
+      end
+      table.insert(fileList, name or filePath)
+    end
+    return fileList
+  end
 end
 
-return SPD
+return FileManager
