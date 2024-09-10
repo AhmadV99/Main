@@ -1,4 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/V3.5"))()
+local FileSys = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/File_System.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Settings.lua"))()
 
 local Window = Library:Start({
@@ -17,7 +18,11 @@ local Player = Players.LocalPlayer
 
 local CodeList = {
   "DELAY",
-  "RELEASE"
+  "RELEASE",
+  "10KLIKES", 
+  "100KLIKES",
+  "200KLIKES",
+  "300KLIKES"
 }
 
 local _isfile = isfile or function(f)return f end
@@ -125,6 +130,44 @@ local _home = Window:MakeTab("Home") do
     end)
   end
 
+  local _MoreFPS = _home:Section({["Title"] = "More FPS", ["Content"] = ""}) do
+    Funcs:AddButton(_MoreFPS, "Anti-Crash", "", function()
+      local function reduce(v)
+        if v:IsA("Part") then
+          v.Material = Enum.Material.Plastic
+        elseif v:IsA("Light") or v:IsA("Effect") then
+          v:Destroy()
+        elseif v:IsA("Texture") then
+          v:Destroy()
+        end
+      end
+      local Descendants = function(v)
+        for _, v in pairs(v:GetDescendants()) do
+          reduce(v)
+        end
+        container.DescendantAdded:Connect(reduce)
+      end
+      Descendants(Lighting)Descendants(workspace)
+    end)
+    Funcs:AddButton(_MoreFPS, "Reduce Lag", "", function()
+      local function reduce(v)
+        if v:IsA("Part") then
+          v.Material = Enum.Material.Plastic
+        elseif v:IsA("Light") or v:IsA("Effect") then
+          v:Destroy()
+        elseif v:IsA("Texture") then
+          v:Destroy()
+        end
+      end
+      for _, v in pairs(workspace:GetDescendants()) do
+        if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
+          v.Material = Enum.Material.SmoothPlastic
+          reduce(v)
+        end
+      end
+    end)
+  end
+
   local _settings = _home:Section({["Title"] = "Settings", ["Content"] = ""}) do
     Funcs:AddButton(_settings, "Reset Script Saver", "", function()
       if _isfile("Speed Hub X | Anime Van") then
@@ -148,9 +191,29 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
   end
   local _Game = _main:Section({["Title"] = "Game", ["Content"] = ""}) do
-    Funcs:AddToggle(_Game, "Auto Return To Lobby", "", false)
+    Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
+  end
+  local _Macros = _main:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
+    _Macros:Seperator("Create File Config")
+    Funcs:AddTextbox(_Macros, "File Name", "", "", true)
+    Funcs:AddButton(_Macros, "Create On File Name", "", function()
+      FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["File Name"] .. ".json", {})
+    end)
+    _Macros:Seperator("File Config")
+    local UpdateFile = Funcs:AddDropdown(_Macros, "Select File", false, FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards", "json"), {""})
+    Funcs:AddButton(_Macros, "Refersh Select File", "", function()
+      UpdateFile:Clear()UpdateFile:Refresh(FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards", "json"), {""})
+    end)
+    Funcs:AddButton(_Macros, "Delete On Select File", "", function()
+      FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json")
+    end)
+    _Macros:Seperator("Macros")
+    Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
+    _Macros:Seperator("Play")
+    Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
@@ -169,6 +232,16 @@ local _main = Window:MakeTab("Main") do
     _Wave:Seperator("Wave")
     Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
   end
+  local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
+    _Webhook:Seperator("Config")
+    Funcs:AddTextbox(_Webhook, "Webhook URL", "", "", true)
+    Funcs:AddToggle(_Webhook, "Allow Ping", "", false)
+    _Webhook:Seperator("Webhook Stage Finished")
+    Funcs:AddToggle(_Webhook, "Send Webhook If Stage Finished", "", false)
+    _Webhook:Seperator("Webhook Summon")
+    Funcs:AddDropdown(_Webhook, "Select WhiteList Rarity", true, {"Mythic", "Legendary", "Secret"}, {"Mythic"})
+    Funcs:AddToggle(_Webhook, "Send Webhook If Summoned Unit", "", false)
+  end
   local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
     Funcs:AddToggle(_Summon, "Auto Click Summon X1", "", false)
     Funcs:AddToggle(_Summon, "Auto Click Summon X10", "", false)
@@ -181,4 +254,5 @@ local _main = Window:MakeTab("Main") do
     end)
   end
 end
+
 return SpeedHubX
