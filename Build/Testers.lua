@@ -153,38 +153,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
   end
-  local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
-    _Unit:Seperator("Config")
-    local UpdateCount = Funcs:AddDropdown(_Unit, "Select Unit Count", false, GetCountUnits(), {"1"})
-    Funcs:AddButton(_Unit, "Refersh Select Unit Count", "", function()
-      UpdateCount:Clear()UpdateCount:Refresh(GetCountUnits(), {"1"})
-    end)
-    Funcs:AddDropdown(_Unit, "Choose Upgrade Or Sell", false, {"Upgrade", "Sell"}, {"Upgrade"})
-    Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
-    _Unit:Seperator("Unit")
-    Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
-  end
-  local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
-    _Wave:Seperator("Config")
-    Funcs:AddDropdown(_Wave, "Delay To Click ", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
-    _Wave:Seperator("Wave")
-    Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
-  end
-  local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
-    Funcs:AddToggle(_Summon, "Auto Click Summon X1", "", false)
-    Funcs:AddToggle(_Summon, "Auto Click Summon X10", "", false)
-  end
-  local _RCode = _main:Section({["Title"] = "Redeem Code", ["Content"] = ""}) do
-    Funcs:AddButton(_RCode, "Redeem Code", "", function()
-      for _, Code in next, CodeList do
-        Networking.CodesEvent:FireServer(Code)
-      end
-    end)
-  end
-end
-
-local _farming = Window:MakeTab("Farming Play") do
-  local _Macros = _farming:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
+  local _Macros = _main:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
     _Macros:Seperator("Create File Config")
     Funcs:AddTextbox(_Macros, "File Name", "", "", true)
     Funcs:AddButton(_Macros, "Create On File Name", "", function()
@@ -203,6 +172,40 @@ local _farming = Window:MakeTab("Farming Play") do
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play")
     Funcs:AddToggle(_Macros, "Start Play", "", false)
+  end
+  local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
+    _Unit:Seperator("Config")
+    local UpdateCount = Funcs:AddDropdown(_Unit, "Select Unit Count", false, GetCountUnits(), {"1"})
+    Funcs:AddButton(_Unit, "Refersh Select Unit Count", "", function()
+      UpdateCount:Clear()UpdateCount:Refresh(GetCountUnits(), {"1"})
+    end)
+    Funcs:AddDropdown(_Unit, "Choose Upgrade Or Sell", false, {"Upgrade", "Sell"}, {"Upgrade"})
+    Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _Unit:Seperator("Unit")
+    Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
+  end
+  local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
+    _Wave:Seperator("Config")
+    Funcs:AddDropdown(_Wave, "Delay To Click ", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _Wave:Seperator("Wave")
+    Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
+  end
+  local _Webhook _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
+    _Wave:Seperator("Config")
+    Funcs:AddTextbox(_Webhook, "Webhook URL", "", "", true)
+    _Wave:Seperator("Webhook")
+    Funcs:AddToggle(_Webhook, "Send Webhook If Stage Finished", "", false)
+  end
+  local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
+    Funcs:AddToggle(_Summon, "Auto Click Summon X1", "", false)
+    Funcs:AddToggle(_Summon, "Auto Click Summon X10", "", false)
+  end
+  local _RCode = _main:Section({["Title"] = "Redeem Code", ["Content"] = ""}) do
+    Funcs:AddButton(_RCode, "Redeem Code", "", function()
+      for _, Code in next, CodeList do
+        Networking.CodesEvent:FireServer(Code)
+      end
+    end)
   end
 end
 
