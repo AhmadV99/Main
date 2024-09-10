@@ -194,7 +194,7 @@ local _main = Window:MakeTab("Main") do
     _Wave:Seperator("Wave")
     Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
   end
-  local _Webhook _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
+  local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
     Funcs:AddTextbox(_Webhook, "Webhook URL", "", "", true)
     Funcs:AddToggle(_Webhook, "Allow Ping", "", false)
