@@ -1,4 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/V3.5"))()
+local FileSys = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/File_System.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Settings.lua"))()
 
 local Window = Library:Start({
@@ -179,6 +180,28 @@ local _main = Window:MakeTab("Main") do
         Networking.CodesEvent:FireServer(Code)
       end
     end)
+  end
+end
+
+local _farming = Window:MakeTab("Farming Play") do
+  local _Macros = _main:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
+    _Macros:Seperator("Create File Config")
+    Funcs:AddTextbox(_Macros, "File Name", "", "", true)
+    Funcs:AddButton(_Macros, "Create On File Name", "", function()
+      FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/" .. SPD["File Name"], {})
+    end)
+    _Macros:Seperator("File Config")
+    local UpdateFile = Funcs:AddDropdown(_Macros, "Select File ", false, FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards", "json"), {""})
+    Funcs:AddButton(_Unit, "Refersh Select File", "", function()
+      UpdateFile:Clear()UpdateFile:Refresh(FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards", "json"), {""})
+    end)
+    Funcs:AddButton(_Macros, "Delete On Select File", "", function()
+      FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/" .. SPD["Select File"])
+    end)
+    _Macros:Seperator("Macros")
+    Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
+    _Macros:Seperator("Play")
+    Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
 end
 
