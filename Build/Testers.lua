@@ -25,7 +25,9 @@ local CodeList = {
   "300KLIKES",
   "10MVISITS",
   "400KLIKES",
-  "25MVISITS"
+  "25MVISITS",
+  "AV50MIL",
+  "AV500KLIKES",
 }
 
 local _isfile = isfile or function(f)return f end
@@ -199,6 +201,17 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
   end
+  local _Misc = _main:Section({["Title"] = "Miscellaneous", ["Content"] = ""}) do
+    _Misc:Seperator("Speed")
+    Funcs:AddDropdown(_Misc, "Set WalkSpeed", false, {"100", "200", "300", "400", "500"}, {"300"})
+    Funcs:AddToggle(_Misc, "Enable WalkSpeed", "", false)
+
+    _Misc:Seperator("Teleport")
+    Funcs:AddToggle(_Misc, "CTRL + Click to Teleport", "", false)
+    _Misc:Seperator("Other")
+    Funcs:AddToggle(_Misc, "No Clip", "", false)
+    Funcs:AddToggle(_Misc, "Infinite Jump", "", false)
+  end
   local _Macros = _main:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
     _Macros:Seperator("Create File Config")
     Funcs:AddTextbox(_Macros, "File Name", "", "", true)
@@ -235,6 +248,10 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Wave, "Delay To Click ", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _Wave:Seperator("Wave")
     Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
+  end
+  local _Claim = _main:Section({["Title"] = "Claim", ["Content"] = ""}) do
+    Funcs:AddToggle(_Claim, "Auto Click Claim Daily Reward", "", false)
+    Funcs:AddToggle(_Claim, "Auto Click Claim Quest", "", false)
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
