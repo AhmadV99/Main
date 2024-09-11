@@ -205,11 +205,9 @@ local _main = Window:MakeTab("Main") do
     _Misc:Seperator("Speed")
     Funcs:AddDropdown(_Misc, "Set WalkSpeed", false, {"100", "200", "300", "400", "500"}, {"300"})
     Funcs:AddToggle(_Misc, "Enable WalkSpeed", "", false)
-
     _Misc:Seperator("Teleport")
     Funcs:AddToggle(_Misc, "CTRL + Click to Teleport", "", false)
     _Misc:Seperator("Other")
-    Funcs:AddToggle(_Misc, "No Clip", "", false)
     Funcs:AddToggle(_Misc, "Infinite Jump", "", false)
   end
   local _Macros = _main:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
@@ -252,6 +250,8 @@ local _main = Window:MakeTab("Main") do
   local _Claim = _main:Section({["Title"] = "Claim", ["Content"] = ""}) do
     Funcs:AddToggle(_Claim, "Auto Click Claim Daily Reward", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Quest", "", false)
+    Funcs:AddToggle(_Claim, "Auto Click Claim Achievements", "", false)
+    Funcs:AddToggle(_Claim, "Auto Click Claim BattlePass", "", false)
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
