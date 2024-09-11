@@ -183,7 +183,8 @@ end
 local _main = Window:MakeTab("Main") do
   local _Maps = _main:Section({["Title"] = "Maps", ["Content"] = ""}) do
     _Maps:Seperator("Config")
-    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Planet Namak", "Send Village", "Double Dungean"}, {"Planet Namak"})
+    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Story", "Legeng Stage"}, {"Story"})
+    Funcs:AddDropdown(_Maps, "Choose Stage", false, {"1", "2","3"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Act Number", false, {"1", "2", "3", "4", "5", "6", "Infinite"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Mode", false, {"Normal", "Nightmare"}, {"Normal"})
     Funcs:AddToggle(_Maps, "Allow Friends", "", false)
