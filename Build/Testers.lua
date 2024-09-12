@@ -52,16 +52,16 @@ local function GetCountUnits()
   return ListCount
 end
 
-local SpeedHubX = {}
-
-local Funcs = {} do
+local Funcs, SpeedHubX = {}, {} do
   function Funcs:AddToggle(Section, Name, Content, Default)
+    SpeedHubX[Name] = Instance.new("BoolValue")
+
     return Section:Toggle({
       ["Title"] = Name,
       ["Content"] = Content,
       ["Default"] = Default,
       ["Callback"] = function(Value)
-        SpeedHubX[Name] = Value
+        SpeedHubX[Name].Value = Value
       end,
       ["Flag"] = "SPD/Toggle/" .. tostring(Name)
     })
@@ -119,6 +119,7 @@ local Funcs = {} do
     })  
   end
 end
+
 
 local _home = Window:MakeTab("Home") do
   local _info = _home:Section({["Title"] = "Information", ["Content"] = ""}) do
@@ -232,7 +233,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play")
-    _env.CreatePlayFunc(_Macros)
+    Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
