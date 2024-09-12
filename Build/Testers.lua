@@ -37,6 +37,8 @@ local _isfolder = isfolder or function(f)return f end
 local _delfolder = delfolder or function(f)return f end
 local _delfile = delfile or function(f)return f end
 
+local _env = getgenv and getgenv() or {}
+
 local function GetCountUnits()
   local ListCount = {"All"}
   local UnitsFolder = workspace:FindFirstChild("Units")
@@ -230,7 +232,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play")
-    Funcs:AddToggle(_Macros, "Start Play", "", false)
+    _env.CreatePlayFunc(_Macros)
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
