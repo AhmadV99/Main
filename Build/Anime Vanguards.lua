@@ -32,6 +32,11 @@ local CodeList = {
   "AV500KLIKES",
 }
 
+do
+  FileSys:GetFolder("Speed Hub X - Macros")
+  FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards")
+end
+
 local _isfile = isfile or function(f)return f end
 local _isfolder = isfolder or function(f)return f end
 local _delfolder = delfolder or function(f)return f end
