@@ -28,8 +28,10 @@ local CodeList = {
   "10MVISITS",
   "400KLIKES",
   "25MVISITS",
-  "AV50MIL",
   "AV500KLIKES",
+  "AV50MIL",
+  "600KLIKES",
+  "70MVISITS"
 }
 
 do
