@@ -43,6 +43,7 @@ local _isfile = isfile or function(f)return f end
 local _isfolder = isfolder or function(f)return f end
 local _delfolder = delfolder or function(f)return f end
 local _delfile = delfile or function(f)return f end
+local _setclipboard = setclipboard or function()end
 
 local function GetCountUnits()
   local ListCount = {"All"}
