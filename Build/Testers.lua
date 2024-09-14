@@ -198,7 +198,7 @@ end
 local _main = Window:MakeTab("Main") do
   local _Maps = _main:Section({["Title"] = "Maps", ["Content"] = ""}) do
     _Maps:Seperator("Config")
-    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Story", "Legened Stage"}, {"Story"})
+    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Story", "LegendStage"}, {"Story"})
     Funcs:AddDropdown(_Maps, "Choose Stage", false, {"1", "2","3"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Act Number", false, {"1", "2", "3", "4", "5", "6", "Infinite"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Mode", false, {"Normal", "Nightmare"}, {"Normal"})
@@ -262,6 +262,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Claim, "Auto Click Claim Quest", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim BattlePass", "", false)
 	Funcs:AddToggle(_Claim, "Auto Click Claim Achievement", "", false)
+	Funcs:AddToggle(_Claim, "Auto Click Claim Collection Units", "", false)
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
