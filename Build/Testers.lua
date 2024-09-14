@@ -64,11 +64,11 @@ local function GetChallengeRewards()
   local Data = ReplicatedStorage.Modules.Data.ItemsData
 
   for _, v in next, _require(Data.EssenceStones) do
-    table.insert(List, v)
+    table.insert(List, tostring(v))
   end
 
   for _, v in next, _require(Data.MiscItems) do
-    table.insert(List, v)
+    table.insert(List, tostring(v))
   end
 
   return List
