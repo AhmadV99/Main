@@ -39,11 +39,12 @@ do
   FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards")
 end
 
-local _isfile = isfile or function(f)return f end
-local _isfolder = isfolder or function(f)return f end
-local _delfolder = delfolder or function(f)return f end
-local _delfile = delfile or function(f)return f end
+local _isfile = isfile or function()end
+local _isfolder = isfolder or function()end
+local _delfolder = delfolder or function()end
+local _delfile = delfile or function()end
 local _setclipboard = setclipboard or function()end
+local _require = require or function()end
 
 local function GetCountUnits()
   local ListCount = {"All"}
@@ -56,6 +57,32 @@ local function GetCountUnits()
   end
 
   return ListCount
+end
+
+local function GetChallengeRewards()
+	local List = {}
+
+	local Data = ReplicatedStorage.Modules.Data.ItemsData
+
+  for _, v in pairs(_require(Data.EssenceStones)) do
+    table.insert(List, v)
+  end
+
+  for _, v in pairs(_require(Data.MiscItems)) do
+    table.insert(List, v)
+  end
+
+  return List
+end
+
+local function GetNumber(Number)
+  local List = {}
+
+  for i = 1, Number do
+    table.insert(List, tostring(i))
+  end
+
+  return List
 end
 
 local SpeedHubX = {}
@@ -205,6 +232,9 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Maps, "Allow Friends", "", false)
     _Maps:Seperator("Join")
     Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
+    _Maps:Seperator("Challenge Config")
+    Funcs:AddDropdown(_Maps, "Ignore Challegne Rewards", false, GetChallengeRewards(), {""})
+    Funcs:AddToggle(_Maps, "Auto Join Challegne", "", false)
   end
   local _Game = _main:Section({["Title"] = "Game", ["Content"] = ""}) do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
@@ -235,7 +265,7 @@ local _main = Window:MakeTab("Main") do
       FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json")
     end)
     _Macros:Seperator("Macros")
-    Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play")
     Funcs:AddToggle(_Macros, "Start Play", "", false)
@@ -256,13 +286,16 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Wave, "Delay To Click ", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _Wave:Seperator("Wave")
     Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
+    _Wave:Seperator("Leave Wave")
+    Funcs:AddDropdown(_Wave, "Choose Wave Number ", false, GetNumber(300), {"1"})
+    Funcs:AddToggle(_Wave, "Auto Leave On Choose Wave Number", "", false)
   end
   local _Claim = _main:Section({["Title"] = "Claim", ["Content"] = ""}) do
     Funcs:AddToggle(_Claim, "Auto Click Claim Daily Reward", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Quest", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim BattlePass", "", false)
-	Funcs:AddToggle(_Claim, "Auto Click Claim Achievement", "", false)
-	Funcs:AddToggle(_Claim, "Auto Click Claim Collection Units", "", false)
+    Funcs:AddToggle(_Claim, "Auto Click Claim Achievement", "", false)
+    Funcs:AddToggle(_Claim, "Auto Click Claim Collection Units", "", false)
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
@@ -272,6 +305,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Webhook, "Send Webhook If Stage Finished", "", false)
     _Webhook:Seperator("Webhook Summon")
     Funcs:AddDropdown(_Webhook, "Select WhiteList Rarity", true, {"Mythic", "Legendary", "Secret"}, {"Mythic"})
+    Funcs:AddToggle(_Webhook, "Send Webhook If Summoned Unit On WhiteListed Rarity", "", false)
     Funcs:AddToggle(_Webhook, "Send Webhook If Summoned Unit", "", false)
   end
   local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
