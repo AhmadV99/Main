@@ -276,7 +276,7 @@ local _main = Window:MakeTab("Main") do
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
     Funcs:AddTextbox(_Webhook, "Webhook URL", "", "", true)
-    Funcs:AddTextbox(_Webhook, "Ping Message/ID", "", "@everyone", false)
+    Funcs:AddTextbox(_Webhook, "Ping Message/ID", "", "", false)
     Funcs:AddToggle(_Webhook, "Allow Ping On Ping Message/ID", "", false)
     _Webhook:Seperator("Webhook Stage Finished")
     Funcs:AddToggle(_Webhook, "Send Webhook If Stage Finished", "", false)
