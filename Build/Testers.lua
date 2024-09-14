@@ -263,8 +263,14 @@ local _main = Window:MakeTab("Main") do
     _Wave:Seperator("Wave")
     Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
     _Wave:Seperator("Leave Wave")
-    Funcs:AddTextbox(_Wave, "Choose Wave Number", "", "", true)
-    Funcs:AddToggle(_Wave, "Auto Leave On Choose Wave Number", "", false)
+    Funcs:AddTextbox(_Wave, "Choose Leave Wave Number", "", "", true)
+    Funcs:AddToggle(_Wave, "Auto Leave On Wave", "", false)
+    _Wave:Seperator("Upgrade Wave")
+    Funcs:AddTextbox(_Wave, "Choose Upgrade Wave Number", "", "", true)
+    Funcs:AddToggle(_Wave, "Auto Upgrade On Wave", "", false)
+    _Wave:Seperator("Sell Wave")
+    Funcs:AddTextbox(_Wave, "Choose Sell Wave Number", "", "", true)
+    Funcs:AddToggle(_Wave, "Auto Sell On Wave", "", false)
   end
   local _Claim = _main:Section({["Title"] = "Claim", ["Content"] = ""}) do
     Funcs:AddToggle(_Claim, "Auto Click Claim Daily Reward", "", false)
