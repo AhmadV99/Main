@@ -13,6 +13,11 @@ Home:AddDiscordInvite({
     Logo = "rbxassetid://16022917595",
     Invite = Discord
 })
+task.spawn(function()
+    if game.Workspace:FindFirstChild("RobloxForwardPortals") then
+        game.Workspace.RobloxForwardPortals:Destroy()
+    end
+end)
 local SpeedHubX = {}
 local function Toggle(Tab, Name, Desc, Default)
   local Ver = Tab:AddToggle({
