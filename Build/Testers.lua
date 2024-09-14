@@ -59,29 +59,6 @@ local function GetCountUnits()
   return ListCount
 end
 
-local function GetChallengeRewards()
-  local List = {}
-  local Data = ReplicatedStorage.Modules.Data.ItemsData
-
-  for _, v in next, _require(Data.EssenceStones) do
-    if type(v) == "table" then
-      for _, Table in v do
-        table.insert(List, tostring(Table))
-      end
-    end
-  end
-
-  for _, v in next, _require(Data.MiscItems) do
-    if type(v) == "table" then
-      for _, Table in v do
-        table.insert(List, tostring(Table))
-      end
-    end
-  end
-
-  return List or {""}
-end
-
 local SpeedHubX = {}
 
 local Funcs = {} do
@@ -229,8 +206,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Maps, "Allow Friends", "", false)
     _Maps:Seperator("Join")
     Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
-    _Maps:Seperator("Challenge Config")
-    Funcs:AddDropdown(_Maps, "Ignore Challenge Rewards", false, GetChallengeRewards(), {""})
+    _Maps:Seperator("Challenge")
     Funcs:AddToggle(_Maps, "Auto Join Challenge", "", false)
   end
   local _Game = _main:Section({["Title"] = "Game", ["Content"] = ""}) do
