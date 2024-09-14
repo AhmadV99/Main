@@ -43,6 +43,7 @@ local _isfile = isfile or function(f)return f end
 local _isfolder = isfolder or function(f)return f end
 local _delfolder = delfolder or function(f)return f end
 local _delfile = delfile or function(f)return f end
+local _setclipboard = setclipboard or function()end
 
 local function GetCountUnits()
   local ListCount = {"All"}
@@ -260,6 +261,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Claim, "Auto Click Claim Daily Reward", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Quest", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim BattlePass", "", false)
+	Funcs:AddToggle(_Claim, "Auto Click Claim Achievement", "", false)
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
