@@ -66,7 +66,7 @@ local function GetChallengeRewards()
   for _, v in next, _require(Data.EssenceStones) do
     if type(v) == "table" then
       for _, Table in v do
-        table.insert(List, Table)
+        table.insert(List, tostring(Table))
       end
     end
   end
@@ -74,7 +74,7 @@ local function GetChallengeRewards()
   for _, v in next, _require(Data.MiscItems) do
     if type(v) == "table" then
       for _, Table in v do
-        table.insert(List, Table)
+        table.insert(List, tostring(Table))
       end
     end
   end
