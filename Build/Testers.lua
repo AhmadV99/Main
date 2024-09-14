@@ -1,4 +1,4 @@
-repeat task.wait() until game:IsLoaded()
+repeat task.wait() until game:IsLoaded() and not game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("LoadingScreen") and not game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("LobbyLoadingScreen")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/V3.5"))()
 local FileSys = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/File_System.lua"))()
@@ -31,7 +31,10 @@ local CodeList = {
   "AV500KLIKES",
   "AV50MIL",
   "600KLIKES",
-  "70MVISITS"
+  "70MVISITS",
+  "800KLIKES",
+  "100MVISITS",
+  "300KPLAYERS"
 }
 
 do
@@ -273,7 +276,8 @@ local _main = Window:MakeTab("Main") do
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
     Funcs:AddTextbox(_Webhook, "Webhook URL", "", "", true)
-    Funcs:AddToggle(_Webhook, "Allow Ping", "", false)
+    Funcs:AddTextbox(_Webhook, "Ping Message/ID", "", "@everyone", false)
+    Funcs:AddToggle(_Webhook, "Allow Ping On Ping Message/ID", "", false)
     _Webhook:Seperator("Webhook Stage Finished")
     Funcs:AddToggle(_Webhook, "Send Webhook If Stage Finished", "", false)
     _Webhook:Seperator("Webhook Summon")
