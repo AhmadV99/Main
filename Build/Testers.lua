@@ -28,16 +28,21 @@ local CodeList = {
   "10MVISITS",
   "400KLIKES",
   "25MVISITS",
-  "AV50MIL",
   "AV500KLIKES",
+  "AV50MIL",
+  "600KLIKES",
+  "70MVISITS"
 }
+
+do
+  FileSys:GetFolder("Speed Hub X - Macros")
+  FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards")
+end
 
 local _isfile = isfile or function(f)return f end
 local _isfolder = isfolder or function(f)return f end
 local _delfolder = delfolder or function(f)return f end
 local _delfile = delfile or function(f)return f end
-
-local _env = getgenv and getgenv() or {}
 
 local function GetCountUnits()
   local ListCount = {"All"}
@@ -52,16 +57,16 @@ local function GetCountUnits()
   return ListCount
 end
 
-local Funcs, SpeedHubX = {}, {} do
-  function Funcs:AddToggle(Section, Name, Content, Default)
-    SpeedHubX[Name] = Instance.new("BoolValue")
+local SpeedHubX = {}
 
+local Funcs = {} do
+  function Funcs:AddToggle(Section, Name, Content, Default)
     return Section:Toggle({
       ["Title"] = Name,
       ["Content"] = Content,
       ["Default"] = Default,
       ["Callback"] = function(Value)
-        SpeedHubX[Name].Value = Value
+        SpeedHubX[Name] = Value
       end,
       ["Flag"] = "SPD/Toggle/" .. tostring(Name)
     })
@@ -119,7 +124,6 @@ local Funcs, SpeedHubX = {}, {} do
     })  
   end
 end
-
 
 local _home = Window:MakeTab("Home") do
   local _info = _home:Section({["Title"] = "Information", ["Content"] = ""}) do
@@ -255,7 +259,6 @@ local _main = Window:MakeTab("Main") do
   local _Claim = _main:Section({["Title"] = "Claim", ["Content"] = ""}) do
     Funcs:AddToggle(_Claim, "Auto Click Claim Daily Reward", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Quest", "", false)
-    Funcs:AddToggle(_Claim, "Auto Click Claim Achievements", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim BattlePass", "", false)
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
