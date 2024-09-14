@@ -1,4 +1,4 @@
-repeat task.wait() until game:IsLoaded()
+repeat task.wait() until game:IsLoaded() and not game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("LoadingScreen") and not game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("LobbyLoadingScreen")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/V3.5"))()
 local FileSys = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/File_System.lua"))()
@@ -31,7 +31,10 @@ local CodeList = {
   "AV500KLIKES",
   "AV50MIL",
   "600KLIKES",
-  "70MVISITS"
+  "70MVISITS",
+  "800KLIKES",
+  "100MVISITS",
+  "300KPLAYERS"
 }
 
 do
@@ -39,11 +42,12 @@ do
   FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards")
 end
 
-local _isfile = isfile or function(f)return f end
-local _isfolder = isfolder or function(f)return f end
-local _delfolder = delfolder or function(f)return f end
-local _delfile = delfile or function(f)return f end
+local _isfile = isfile or function()end
+local _isfolder = isfolder or function()end
+local _delfolder = delfolder or function()end
+local _delfile = delfile or function()end
 local _setclipboard = setclipboard or function()end
+local _require = require or function()end
 
 local function GetCountUnits()
   local ListCount = {"All"}
@@ -198,13 +202,15 @@ end
 local _main = Window:MakeTab("Main") do
   local _Maps = _main:Section({["Title"] = "Maps", ["Content"] = ""}) do
     _Maps:Seperator("Config")
-    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Story", "Legened Stage"}, {"Story"})
+    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Story", "LegendStage"}, {"Story"})
     Funcs:AddDropdown(_Maps, "Choose Stage", false, {"1", "2","3"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Act Number", false, {"1", "2", "3", "4", "5", "6", "Infinite"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Mode", false, {"Normal", "Nightmare"}, {"Normal"})
     Funcs:AddToggle(_Maps, "Allow Friends", "", false)
     _Maps:Seperator("Join")
     Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
+    _Maps:Seperator("Challenge")
+    Funcs:AddToggle(_Maps, "Auto Join Challenge", "", false)
   end
   local _Game = _main:Section({["Title"] = "Game", ["Content"] = ""}) do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
@@ -235,7 +241,7 @@ local _main = Window:MakeTab("Main") do
       FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json")
     end)
     _Macros:Seperator("Macros")
-    Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play")
     Funcs:AddToggle(_Macros, "Start Play", "", false)
@@ -256,20 +262,33 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Wave, "Delay To Click ", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _Wave:Seperator("Wave")
     Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
+    _Wave:Seperator("Leave Wave")
+    Funcs:AddTextbox(_Wave, "Choose Leave Wave Number", "", "", true)
+    Funcs:AddToggle(_Wave, "Auto Leave On Wave", "", false)
+    _Wave:Seperator("Upgrade Wave")
+    Funcs:AddTextbox(_Wave, "Choose Upgrade Wave Number", "", "", true)
+    Funcs:AddToggle(_Wave, "Auto Upgrade On Wave", "", false)
+    _Wave:Seperator("Sell Wave")
+    Funcs:AddTextbox(_Wave, "Choose Sell Wave Number", "", "", true)
+    Funcs:AddToggle(_Wave, "Auto Sell On Wave", "", false)
   end
   local _Claim = _main:Section({["Title"] = "Claim", ["Content"] = ""}) do
     Funcs:AddToggle(_Claim, "Auto Click Claim Daily Reward", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Quest", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim BattlePass", "", false)
+    Funcs:AddToggle(_Claim, "Auto Click Claim Achievement", "", false)
+    Funcs:AddToggle(_Claim, "Auto Click Claim Collection Units", "", false)
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
     Funcs:AddTextbox(_Webhook, "Webhook URL", "", "", true)
-    Funcs:AddToggle(_Webhook, "Allow Ping", "", false)
+    Funcs:AddTextbox(_Webhook, "Ping Message/ID", "", "", false)
+    Funcs:AddToggle(_Webhook, "Allow Ping On Ping Message/ID", "", false)
     _Webhook:Seperator("Webhook Stage Finished")
     Funcs:AddToggle(_Webhook, "Send Webhook If Stage Finished", "", false)
     _Webhook:Seperator("Webhook Summon")
     Funcs:AddDropdown(_Webhook, "Select WhiteList Rarity", true, {"Mythic", "Legendary", "Secret"}, {"Mythic"})
+    Funcs:AddToggle(_Webhook, "Send Webhook If Summoned Unit Rarity", "", false)
     Funcs:AddToggle(_Webhook, "Send Webhook If Summoned Unit", "", false)
   end
   local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
