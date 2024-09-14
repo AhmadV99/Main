@@ -233,8 +233,8 @@ local _main = Window:MakeTab("Main") do
     _Maps:Seperator("Join")
     Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
     _Maps:Seperator("Challenge Config")
-    Funcs:AddDropdown(_Maps, "Ignore Challegne Rewards", false, GetChallengeRewards(), {""})
-    Funcs:AddToggle(_Maps, "Auto Join Challegne", "", false)
+    Funcs:AddDropdown(_Maps, "Ignore Challenge Rewards", false, GetChallengeRewards(), {""})
+    Funcs:AddToggle(_Maps, "Auto Join Challenge", "", false)
   end
   local _Game = _main:Section({["Title"] = "Game", ["Content"] = ""}) do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
