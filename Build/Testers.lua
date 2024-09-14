@@ -64,24 +64,22 @@ local function GetChallengeRewards()
   local Data = ReplicatedStorage.Modules.Data.ItemsData
 
   for _, v in next, _require(Data.EssenceStones) do
-    table.insert(List, tostring(v))
+    if type(v) == "table" then
+      for _, Table in v do
+        table.insert(List, Table)
+      end
+    end
   end
 
   for _, v in next, _require(Data.MiscItems) do
-    table.insert(List, tostring(v))
+    if type(v) == "table" then
+      for _, Table in v do
+        table.insert(List, Table)
+      end
+    end
   end
 
-  return List
-end
-
-local function GetNumber(Number)
-  local List = {}
-
-  for i = 1, Number do
-    table.insert(List, tostring(i))
-  end
-
-  return List
+  return List or {""}
 end
 
 local SpeedHubX = {}
@@ -286,7 +284,7 @@ local _main = Window:MakeTab("Main") do
     _Wave:Seperator("Wave")
     Funcs:AddToggle(_Wave, "Auto Click Skip Wave", "", false)
     _Wave:Seperator("Leave Wave")
-    Funcs:AddDropdown(_Wave, "Choose Wave Number ", false, GetNumber(300), {"1"})
+    Funcs:AddTextbox(_Wave, "Choose Wave Number", "", "", true)
     Funcs:AddToggle(_Wave, "Auto Leave On Choose Wave Number", "", false)
   end
   local _Claim = _main:Section({["Title"] = "Claim", ["Content"] = ""}) do
@@ -304,7 +302,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Webhook, "Send Webhook If Stage Finished", "", false)
     _Webhook:Seperator("Webhook Summon")
     Funcs:AddDropdown(_Webhook, "Select WhiteList Rarity", true, {"Mythic", "Legendary", "Secret"}, {"Mythic"})
-    Funcs:AddToggle(_Webhook, "Send Webhook If Summoned Unit On WhiteListed Rarity", "", false)
+    Funcs:AddToggle(_Webhook, "Send Webhook If Summoned Unit Rarity", "", false)
     Funcs:AddToggle(_Webhook, "Send Webhook If Summoned Unit", "", false)
   end
   local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
