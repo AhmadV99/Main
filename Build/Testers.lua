@@ -60,15 +60,14 @@ local function GetCountUnits()
 end
 
 local function GetChallengeRewards()
-	local List = {}
+  local List = {}
+  local Data = ReplicatedStorage.Modules.Data.ItemsData
 
-	local Data = ReplicatedStorage.Modules.Data.ItemsData
-
-  for _, v in pairs(_require(Data.EssenceStones)) do
+  for _, v in next, _require(Data.EssenceStones) do
     table.insert(List, v)
   end
 
-  for _, v in pairs(_require(Data.MiscItems)) do
+  for _, v in next, _require(Data.MiscItems) do
     table.insert(List, v)
   end
 
