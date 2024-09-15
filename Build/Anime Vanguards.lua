@@ -218,8 +218,8 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
-    _Game:Seperator("Reward")
-    Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
+    --_Game:Seperator("Reward")
+    --Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
   end
   local _Misc = _main:Section({["Title"] = "Miscellaneous", ["Content"] = ""}) do
     _Misc:Seperator("Speed")
