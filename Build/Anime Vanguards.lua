@@ -245,7 +245,7 @@ local _main = Window:MakeTab("Main") do
       FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json")
     end)
     Funcs:AddButton(_Macros, "Copy Macro Data", "", function()
-      _setclipboard(HttpService:JSONDecode(_readfile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json")))
+      _setclipboard(_readfile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json"))
     end)
     _Macros:Seperator("Macros")
     Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
