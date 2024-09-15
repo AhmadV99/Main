@@ -285,9 +285,6 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Claim, "Auto Click Claim BattlePass", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Achievement", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Collection Units", "", false)
-    if game.Players:FindFirstChild("fanoffgteev999") then
-      Funcs:AddToggle(_Claim, "Auto Click Claim Level Milestones", "", false)
-    end
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
