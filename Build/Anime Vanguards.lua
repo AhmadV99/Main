@@ -13,6 +13,7 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Lighting = game:GetService("Lighting")
 local TeleportService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
 
 local Networking = ReplicatedStorage:WaitForChild("Networking")
 
@@ -48,6 +49,7 @@ local _delfolder = delfolder or function()end
 local _delfile = delfile or function()end
 local _setclipboard = setclipboard or function()end
 local _require = require or function()end
+local _readfile = readfile or function()end
 
 local function GetCountUnits()
   local ListCount = {"All"}
@@ -241,6 +243,9 @@ local _main = Window:MakeTab("Main") do
     end)
     Funcs:AddButton(_Macros, "Delete On Select File", "", function()
       FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json")
+    end)
+    Funcs:AddButton(_Macros, "Copy Macro Data", "", function()
+      _setclipboard(HttpService:JSONDecode(_readfile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json")))
     end)
     _Macros:Seperator("Macros")
     Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
