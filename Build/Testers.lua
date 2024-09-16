@@ -129,7 +129,7 @@ local Funcs = {} do
     return Section:Button({
       ["Title"] = Name,
       ["Content"] = Content,
-      ["Callback"] = Callback
+      ["Callback"] = (not Callback and SpeedHubX[Name] or Callback)
     })  
   end
 end
@@ -311,7 +311,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Play, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _env.LoopPlayMacro = Funcs:AddToggle(_Play, "Start Play", "", false)
     _Play:Seperator("Other")
-    Funcs:AddToggle(_Play, "Auto Equip Units Macro", "", false)
+    Funcs:AddButton(_Play, "Equip Units In Macro", "")
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
