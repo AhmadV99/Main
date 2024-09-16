@@ -19,6 +19,8 @@ local Networking = ReplicatedStorage:WaitForChild("Networking")
 
 local Player = Players.LocalPlayer
 
+local _env = getgenv and getgenv() or {}
+
 local CodeList = {
   "DELAY",
   "RELEASE",
@@ -218,8 +220,8 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
-    --_Game:Seperator("Reward")
-    --Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
+    _Game:Seperator("Reward")
+    Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
   end
   local _Misc = _main:Section({["Title"] = "Miscellaneous", ["Content"] = ""}) do
     _Misc:Seperator("Speed")
@@ -247,11 +249,13 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddButton(_Macros, "Copy Macro Data", "", function()
       _setclipboard(_readfile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json"))
     end)
+    --_Macros:Seperator("Export/Import Macro")
+
     _Macros:Seperator("Macros")
-    Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play")
-    Funcs:AddToggle(_Macros, "Start Play", "", false)
+    Funcs:AddDropdown(_Macros, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _env.LoopPlayMacro = Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
