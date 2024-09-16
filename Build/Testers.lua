@@ -361,8 +361,8 @@ local _main = Window:MakeTab("Main") do
   local _Summon = _main:Section({["Title"] = "Summon", ["Content"] = ""}) do
     Funcs:AddToggle(_Summon, "Auto Click Summon X1", "", false)
     Funcs:AddToggle(_Summon, "Auto Click Summon X10", "", false)
-    Summon:Separator("Whitelist Summon Rarity")
-    Funcs:AddDropdown(_Webhook, "Select Whitelist Rarity", false, {"Mythic", "Legendary", "Secret"}, {"Mythic"})
+    _Summon:Separator("Whitelist Summon Rarity")
+    Funcs:AddDropdown(_Summon, "Select Whitelist Rarity", false, {"Mythic", "Legendary", "Secret"}, {"Mythic"})
     Funcs:AddToggle(_Summon, "Auto Summon", "Automatically Summon From the whitelist. If the rarity is not on the whitelist, the units will be deleted.", false)    
   end
   local _RCode = _main:Section({["Title"] = "Redeem Code", ["Content"] = ""}) do
