@@ -13,10 +13,13 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Lighting = game:GetService("Lighting")
 local TeleportService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
 
 local Networking = ReplicatedStorage:WaitForChild("Networking")
 
 local Player = Players.LocalPlayer
+
+local _env = getgenv and getgenv() or {}
 
 local CodeList = {
   "DELAY",
@@ -48,6 +51,7 @@ local _delfolder = delfolder or function()end
 local _delfile = delfile or function()end
 local _setclipboard = setclipboard or function()end
 local _require = require or function()end
+local _readfile = readfile or function()end
 
 local function GetCountUnits()
   local ListCount = {"All"}
@@ -216,6 +220,8 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
+    _Game:Seperator("Reward")
+    Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
   end
   local _Misc = _main:Section({["Title"] = "Miscellaneous", ["Content"] = ""}) do
     _Misc:Seperator("Speed")
@@ -240,11 +246,17 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddButton(_Macros, "Delete On Select File", "", function()
       FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json")
     end)
+    Funcs:AddButton(_Macros, "Copy Macro JSON String", "", function()
+      _setclipboard(_readfile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json"))
+    end)
+    _Macros:Seperator("Import")
+    Funcs:AddTextbox(_Macros, "Import Macro", "Input URL RAW Or Macro String JSON", "", true)
+    Funcs:AddToggle(_Macros, "Allow Only Import Macro (Not Use Select File)", "", false)
     _Macros:Seperator("Macros")
-    Funcs:AddDropdown(_Macros, "Delay To Macro", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
-    _Macros:Seperator("Play")
-    Funcs:AddToggle(_Macros, "Start Play", "", false)
+    _Macros:Seperator("Play Macros")
+    Funcs:AddDropdown(_Macros, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _env.LoopPlayMacro = Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
