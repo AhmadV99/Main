@@ -189,6 +189,8 @@ local _home = Window:MakeTab("Home") do
         end
       end
     end)
+
+    Funcs:AddToggle(_MoreFPS, "Remove Map", "", false)
   end
 
   local _settings = _home:Section({["Title"] = "Settings", ["Content"] = ""}) do
@@ -272,6 +274,7 @@ local _main = Window:MakeTab("Main") do
   
       if Success then
         game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X", Text = "Successfully Imported Macro : " .. SpeedHubX["Import Macro Name"] .. ".json",Icon = "rbxassetid://0",Duration = 3})
+        ImportMacroName:Set("")ImportMacroURL:Set("")
       else
         game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = Message,Icon = "rbxassetid://0",Duration = 3})
       end
