@@ -37,7 +37,7 @@ local CodeList = {
   "70MVISITS",
   "800KLIKES",
   "100MVISITS",
-  "300KPLAYERS"
+  "300KPLAYERS",
 }
 
 do
@@ -57,7 +57,7 @@ local function GetCountUnits()
   local ListCount = {"All"}
   local UnitsFolder = workspace:FindFirstChild("Units")
 
-  if UnitsFolder then
+  if UnitsFolder and #UnitsFolder:GetChildren() > 0 then
     for Count, Unit in pairs(UnitsFolder:GetChildren()) do
       table.insert(ListCount, Count)
     end
@@ -129,7 +129,7 @@ local Funcs = {} do
     return Section:Button({
       ["Title"] = Name,
       ["Content"] = Content,
-      ["Callback"] = Callback
+      ["Callback"] = (not Callback and SpeedHubX[Name] or Callback)
     })  
   end
 end
@@ -189,6 +189,8 @@ local _home = Window:MakeTab("Home") do
         end
       end
     end)
+
+    Funcs:AddToggle(_MoreFPS, "Remove Map", "", false)
   end
 
   local _settings = _home:Section({["Title"] = "Settings", ["Content"] = ""}) do
@@ -220,8 +222,8 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
-    -- _Game:Seperator("Reward")
-    -- Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
+    _Game:Seperator("Reward")
+    Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
   end
   local _Misc = _main:Section({["Title"] = "Miscellaneous", ["Content"] = ""}) do
     _Misc:Seperator("Speed")
@@ -246,14 +248,59 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddButton(_Macros, "Delete On Select File", "", function()
       FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json")
     end)
-    Funcs:AddButton(_Macros, "Copy Macro Data", "", function()
-      _setclipboard(_readfile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Select File"] .. ".json"))
-    end)
-    --_Macros:Seperator("Export/Import Macro")
+    _Macros:Seperator("Import")
+    _env.ImportMacroName = Funcs:AddTextbox(_Macros, "Import Macro Name", "", "", true)
+    _env.ImportMacroURL = Funcs:AddTextbox(_Macros, "Import Macro URL", "Only Url Raw Or Discord Link", "", true)
+    Funcs:AddButton(_Macros, "Create Import Macro", "", function()
+      local Success, Message = pcall(function()
+        local ImportUrl = SpeedHubX["Import Macro URL"]
+        local ImportContent = nil
+  
+        if not (string.find(ImportUrl, "^https://github.com/") or string.find(ImportUrl, "^https://cdn.discordapp.com/attachments/")) then
+          game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Invalid URL! Please use a valid GitHub or Discord URL.",Icon = "rbxassetid://0",Duration = 3})
+          return 
+        end
+  
+        if string.find(ImportUrl, "^https://raw.githubusercontent.com/") or string.find(ImportUrl, "^https://cdn.discordapp.com/attachments/") then
+          ImportContent = game:HttpGet(ImportUrl)
+        end
 
+        if ImportContent then
+          FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Import Macro Name"] .. ".json", ImportContent)
+        else
+          game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Failed to import macro content.",Icon = "rbxassetid://0",Duration = 3})
+        end
+      end)
+  
+      if Success then
+        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X", Text = "Successfully Imported Macro : " .. SpeedHubX["Import Macro Name"] .. ".json",Icon = "rbxassetid://0",Duration = 3})
+        ImportMacroName:Set("")ImportMacroURL:Set("")
+      else
+        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = Message,Icon = "rbxassetid://0",Duration = 3})
+      end
+    end)
+    _Macros:Seperator("Export Macros")
+    Funcs:AddButton(_Macros, "Export Macro", "", function()
+      local Success, Message = pcall(function()
+        local MacroName = SpeedHubX["Select File"]
+        local FilePath = "Speed Hub X - Macros/Anime Vanguards/" .. MacroName .. ".json"
+  
+        if FilePath and _readfile(FilePath) then
+          _setclipboard(_readfile(FilePath))
+        else
+          game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "File not found: " .. MacroName .. ".json",Icon = "rbxassetid://0",Duration = 3})
+        end
+      end)
+  
+      if Success then
+        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Successfully exported macro: " .. SpeedHubX["Select File"] .. ".json. Copied to your clipboard!",Icon = "rbxassetid://0",Duration = 3})
+      else
+        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = Message,Icon = "rbxassetid://0",Duration = 3})
+      end
+    end)
     _Macros:Seperator("Macros")
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
-    _Macros:Seperator("Play")
+    _Macros:Seperator("Play Macros")
     Funcs:AddDropdown(_Macros, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _env.LoopPlayMacro = Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
