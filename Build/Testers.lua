@@ -300,16 +300,9 @@ local _main = Window:MakeTab("Main") do
     end)
     _Macros:Seperator("Macros")
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
-  end
-  local _Play = _main:Section({["Title"] = "Play On Macro", ["Content"] = ""}) do
-    _Play:Seperator("Config")
-    local UpdateFile1 = Funcs:AddDropdown(_Play, "Select File", false, FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards", "json"), {""})
-    Funcs:AddButton(_Play, "Refersh Select File", "", function()
-      UpdateFile1:Clear()UpdateFile1:Refresh(FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards", "json"), {""})
-    end)
-    _Play:Seperator("Play Macros")
-    Funcs:AddDropdown(_Play, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
-    _env.LoopPlayMacro = Funcs:AddToggle(_Play, "Start Play", "", false)
+    _Macros:Seperator("Play Macros")
+    Funcs:AddDropdown(_Macros, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _env.LoopPlayMacro = Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
