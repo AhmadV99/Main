@@ -38,6 +38,7 @@ local CodeList = {
   "800KLIKES",
   "100MVISITS",
   "300KPLAYERS",
+  "THXFOR1MLIKES",
 }
 
 do
