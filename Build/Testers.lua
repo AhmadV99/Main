@@ -314,6 +314,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _Unit:Seperator("Unit")
     Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
+    Funcs:AddButton(_Unit, "Equip Unit Macro", "", _env.MacroEquipUnit)
   end
   local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
     _Wave:Seperator("Config")
