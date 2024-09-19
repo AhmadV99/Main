@@ -222,7 +222,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
-    _Game:Seperator("Reward")
+    Game:Seperator("Reward")
     Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
   end
   local _Misc = _main:Section({["Title"] = "Miscellaneous", ["Content"] = ""}) do
@@ -234,7 +234,7 @@ local _main = Window:MakeTab("Main") do
     _Misc:Seperator("Other")
     Funcs:AddToggle(_Misc, "Infinite Jump", "", false)
   end
-  local _Macros = _main:Section({["Title"] = "Macros", ["Content"] = ""}) do
+  local _Macros = _main:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
     _Macros:Seperator("Create File Config")
     Funcs:AddTextbox(_Macros, "File Name", "", "", true)
     Funcs:AddButton(_Macros, "Create On File Name", "", function()
@@ -256,12 +256,12 @@ local _main = Window:MakeTab("Main") do
         local ImportUrl = SpeedHubX["Import Macro URL"]
         local ImportContent = nil
   
-        if not (string.match(ImportUrl, "^https://github.com/") or string.match(ImportUrl, "^https://cdn.discordapp.com/attachments/")) then
+        if not (string.find(ImportUrl, "https://github.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/")) then
           game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Invalid URL! Please use a valid GitHub or Discord URL.",Icon = "rbxassetid://0",Duration = 3})
           return 
         end
   
-        if string.match(ImportUrl, "^https://raw.githubusercontent.com/") or string.match(ImportUrl, "^https://cdn.discordapp.com/attachments/") then
+        if string.find(ImportUrl, "https://raw.githubusercontent.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/") then
           ImportContent = game:HttpGet(ImportUrl)
         end
 
