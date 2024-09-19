@@ -38,6 +38,7 @@ local CodeList = {
   "800KLIKES",
   "100MVISITS",
   "300KPLAYERS",
+  "THXFOR1MLIKES",
 }
 
 do
@@ -190,7 +191,7 @@ local _home = Window:MakeTab("Home") do
       end
     end)
 
-    --Funcs:AddToggle(_MoreFPS, "Remove Map", "", false)
+    Funcs:AddToggle(_MoreFPS, "Remove Map", "", false)
   end
 
   local _settings = _home:Section({["Title"] = "Settings", ["Content"] = ""}) do
@@ -222,8 +223,8 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
-   -- _Game:Seperator("Reward")
-   -- Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
+    _Game:Seperator("Reward")
+    _env.AutoClickReward = Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
   end
   local _Misc = _main:Section({["Title"] = "Miscellaneous", ["Content"] = ""}) do
     _Misc:Seperator("Speed")
