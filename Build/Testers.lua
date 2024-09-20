@@ -234,6 +234,7 @@ local _main = Window:MakeTab("Main") do
     _Misc:Seperator("Other")
     Funcs:AddToggle(_Misc, "Infinite Jump", "", false)
     Funcs:AddToggle(_Misc, "Enable Screen Black / Stats", "", false)
+    Funcs:AddToggle(_Misc, "Enable Screen White / Stats", "", false)
   end
   local _Macros = _main:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
     _Macros:Seperator("Create File Config")
