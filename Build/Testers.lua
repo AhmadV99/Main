@@ -214,6 +214,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Maps, "Choose Act Number", false, {"1", "2", "3", "4", "5", "6", "Infinite"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Mode", false, {"Normal", "Nightmare"}, {"Normal"})
     Funcs:AddToggle(_Maps, "Allow Friends", "", false)
+    Funcs:AddToggle(_Maps, "Auto Click Start", "", true)
     _Maps:Seperator("Join")
     Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
     _Maps:Seperator("Challenge")
