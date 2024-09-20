@@ -257,11 +257,6 @@ local _main = Window:MakeTab("Main") do
         local ImportUrl = SpeedHubX["Import Macro URL"]
         local ImportContent = nil
   
-        if not (string.find(ImportUrl, "https://github.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/")) then
-          game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Invalid URL! Please use a valid GitHub or Discord URL.",Icon = "rbxassetid://0",Duration = 3})
-          return 
-        end
-  
         if string.find(ImportUrl, "https://raw.githubusercontent.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/") or string.find(ImportUrl, "https://pastebin.com/raw/") then
           ImportContent = game:HttpGet(ImportUrl)
         end
