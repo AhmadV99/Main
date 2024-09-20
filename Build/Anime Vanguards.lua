@@ -191,7 +191,7 @@ local _home = Window:MakeTab("Home") do
       end
     end)
 
-    -- Funcs:AddToggle(_MoreFPS, "Remove Map", "", false)
+    Funcs:AddToggle(_MoreFPS, "Remove Map", "", false)
   end
 
   local _settings = _home:Section({["Title"] = "Settings", ["Content"] = ""}) do
@@ -214,6 +214,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Maps, "Choose Act Number", false, {"1", "2", "3", "4", "5", "6", "Infinite"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Mode", false, {"Normal", "Nightmare"}, {"Normal"})
     Funcs:AddToggle(_Maps, "Allow Friends", "", false)
+    Funcs:AddToggle(_Maps, "Auto Click Start", "", true)
     _Maps:Seperator("Join")
     Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
     _Maps:Seperator("Challenge")
@@ -223,8 +224,6 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
     Funcs:AddToggle(_Game, "Auto Click Next", "", false)
     Funcs:AddToggle(_Game, "Auto Click Retry", "", false)
-    --_Game:Seperator("Reward")
-    -- _env.AutoClickReward = Funcs:AddToggle(_Game, "Auto Click Reward In Stage Finished", "", false)
   end
   local _Misc = _main:Section({["Title"] = "Miscellaneous", ["Content"] = ""}) do
     _Misc:Seperator("Speed")
@@ -234,6 +233,8 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Misc, "CTRL + Click to Teleport", "", false)
     _Misc:Seperator("Other")
     Funcs:AddToggle(_Misc, "Infinite Jump", "", false)
+    Funcs:AddToggle(_Misc, "Enable Screen Black / Stats", "", false)
+    Funcs:AddToggle(_Misc, "Enable Screen White / Stats", "", false)
   end
   local _Macros = _main:Section({["Title"] = "Macros / Play", ["Content"] = ""}) do
     _Macros:Seperator("Create File Config")
@@ -253,31 +254,19 @@ local _main = Window:MakeTab("Main") do
     _env.ImportMacroName = Funcs:AddTextbox(_Macros, "Import Macro Name", "", "", true)
     _env.ImportMacroURL = Funcs:AddTextbox(_Macros, "Import Macro URL", "Only Url Raw Or Discord Link", "", true)
     Funcs:AddButton(_Macros, "Create Import Macro", "", function()
-      local Success, Message = pcall(function()
-        local ImportUrl = SpeedHubX["Import Macro URL"]
-        local ImportContent = nil
-  
-        if not (string.find(ImportUrl, "https://github.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/")) then
-          game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Invalid URL! Please use a valid GitHub or Discord URL.",Icon = "rbxassetid://0",Duration = 3})
-          return 
-        end
-  
-        if string.find(ImportUrl, "https://raw.githubusercontent.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/") then
-          ImportContent = game:HttpGet(ImportUrl)
-        end
+      local ImportUrl = SpeedHubX["Import Macro URL"]
+      local ImportContent = nil
 
-        if ImportContent then
-          FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Import Macro Name"] .. ".json", ImportContent)
-        else
-          game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Failed to import macro content.",Icon = "rbxassetid://0",Duration = 3})
-        end
-      end)
-  
-      if Success then
+      if string.find(ImportUrl, "https://raw.githubusercontent.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/") or string.find(ImportUrl, "https://pastebin.com/raw/") then
+        ImportContent = game:HttpGet(ImportUrl)
+      end
+
+      if ImportContent then
+        FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Import Macro Name"] .. ".json", ImportContent)
         game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X", Text = "Successfully Imported Macro : " .. SpeedHubX["Import Macro Name"] .. ".json",Icon = "rbxassetid://0",Duration = 3})
         ImportMacroName:Set("")ImportMacroURL:Set("")
       else
-        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = Message,Icon = "rbxassetid://0",Duration = 3})
+        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Failed to import macro content.",Icon = "rbxassetid://0",Duration = 3})
       end
     end)
     _Macros:Seperator("Export Macros")
@@ -302,7 +291,6 @@ local _main = Window:MakeTab("Main") do
     _Macros:Seperator("Macros")
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play Macros")
-    Funcs:AddDropdown(_Macros, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _env.LoopPlayMacro = Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
