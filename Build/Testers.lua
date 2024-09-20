@@ -314,8 +314,30 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _Unit:Seperator("Unit")
     Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
-    Funcs:AddButton(_Unit, "Equip Unit Macro", "", _env.MacroEquipUnit)
+    Funcs:AddButton(_Unit, "Equip Unit Macro", "", function()
+      local MacroName = SpeedHubX["Select File"]
+      local FilePath = "Speed Hub X - Macros/Anime Vanguards/" .. MacroName .. ".json"
+  
+      local success, Data = pcall(function()
+        return HttpService:JSONDecode(_readfile(FilePath))
+      end)
+  
+      if not success then return end
+  
+      for _, _Data in next, Data do
+        if _Data and _Data.Unit then
+          Networking.Units.EquipEvent:FireServer("UnequipAll")
+          task.wait()
+          for _, v in next, Player.PlayerGui.Windows.Units.Holder.Main.Units:GetChildren() do
+            if v:IsA("Frame") and v.Holder.Main.UnitName.Text == _Data.Unit then
+              Networking.Units.EquipEvent:FireServer("Equip", v.Name)
+            end
+          end
+        end
+      end
+    end)
   end
+  
   local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
     _Wave:Seperator("Config")
     Funcs:AddDropdown(_Wave, "Delay To Click ", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
