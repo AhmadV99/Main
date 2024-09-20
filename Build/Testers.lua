@@ -253,26 +253,19 @@ local _main = Window:MakeTab("Main") do
     _env.ImportMacroName = Funcs:AddTextbox(_Macros, "Import Macro Name", "", "", true)
     _env.ImportMacroURL = Funcs:AddTextbox(_Macros, "Import Macro URL", "Only Url Raw Or Discord Link", "", true)
     Funcs:AddButton(_Macros, "Create Import Macro", "", function()
-      local Success, Message = pcall(function()
-        local ImportUrl = SpeedHubX["Import Macro URL"]
-        local ImportContent = nil
-  
-        if string.find(ImportUrl, "https://raw.githubusercontent.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/") or string.find(ImportUrl, "https://pastebin.com/raw/") then
-          ImportContent = game:HttpGet(ImportUrl)
-        end
+      local ImportUrl = SpeedHubX["Import Macro URL"]
+      local ImportContent = nil
 
-        if ImportContent then
-          FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Import Macro Name"] .. ".json", ImportContent)
-        else
-          game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Failed to import macro content.",Icon = "rbxassetid://0",Duration = 3})
-        end
-      end)
-  
-      if Success then
+      if string.find(ImportUrl, "https://raw.githubusercontent.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/") or string.find(ImportUrl, "https://pastebin.com/raw/") then
+        ImportContent = game:HttpGet(ImportUrl)
+      end
+
+      if ImportContent then
+        FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/" .. SpeedHubX["Import Macro Name"] .. ".json", ImportContent)
         game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X", Text = "Successfully Imported Macro : " .. SpeedHubX["Import Macro Name"] .. ".json",Icon = "rbxassetid://0",Duration = 3})
         ImportMacroName:Set("")ImportMacroURL:Set("")
       else
-        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = Message,Icon = "rbxassetid://0",Duration = 3})
+        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Failed to import macro content.",Icon = "rbxassetid://0",Duration = 3})
       end
     end)
     _Macros:Seperator("Export Macros")
