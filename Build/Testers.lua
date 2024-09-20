@@ -262,7 +262,7 @@ local _main = Window:MakeTab("Main") do
           return 
         end
   
-        if string.find(ImportUrl, "https://raw.githubusercontent.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/") then
+        if string.find(ImportUrl, "https://raw.githubusercontent.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/") or string.find(ImportUrl, "https://pastebin.com/raw/") then
           ImportContent = game:HttpGet(ImportUrl)
         end
 
