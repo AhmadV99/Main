@@ -305,7 +305,20 @@ local _main = Window:MakeTab("Main") do
     _Unit:Seperator("Unit")
     Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
   end
-  
+  local _Status = _main:Section({["Title"] = "Status", ["Content"] = ""}) do
+    _env.StatusSystem = _Status:Paragraph({
+      ["Title"] = "N/A",
+      ["Content"] = "N/A"
+    })
+    _env.StatusSystemEarn = _Status:Paragraph({
+      ["Title"] = "N/A",
+      ["Content"] = "N/A"
+    })
+    if game.PlaceId == 16146832113 then 
+      _env.StatusSystem:Set({["Title"] = "This game is Not Supported, Please Go Play"})
+      _env.StatusSystemEarn:Set({["Title"] = "This game is Not Supported, Please Go Play"})
+    end
+  end
   local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
     _Wave:Seperator("Config")
     Funcs:AddDropdown(_Wave, "Delay To Click ", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
