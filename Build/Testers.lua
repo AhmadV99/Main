@@ -306,17 +306,21 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
   end
   local _Status = _main:Section({["Title"] = "Status", ["Content"] = ""}) do
-    _env.StatusSystem = _Status:Paragraph({
-      ["Title"] = "N/A",
-      ["Content"] = "N/A"
-    })
-    _env.StatusSystemEarn = _Status:Paragraph({
-      ["Title"] = "N/A",
-      ["Content"] = "N/A"
-    })
-    if game.PlaceId == 16146832113 then 
-      _env.StatusSystem:Set({["Title"] = "This game is Not Supported, Please Go Play"})
-      _env.StatusSystemEarn:Set({["Title"] = "This game is Not Supported, Please Go Play"})
+    if not game.PlaceId == 16146832113 then
+      _Status:Seperator("Status")
+      _env.LevelStatus = _Status:Paragraph({["Title"] = "Level"})
+      _env.GoldStatus = _Status:Paragraph({["Title"] = "Gold"})
+      _env.GemsStatus = _Status:Paragraph({["Title"] = "Gems"})
+      _env.MoneyStatus = _Status:Paragraph({["Title"] = "Money"})
+      _env.WaveStatus = _Status:Paragraph({["Title"] = "Wave"})
+      _env.ExperienceStatus = _Status:Paragraph({["Title"] = "Experience"})
+      _env.TimeEStatus = _Status:Paragraph({["Title"] = "Time Elapsed"})
+      _Status:Seperator("Status Earned")
+      _env.GoldStatusEarned = _Status:Paragraph({["Title"] = "Earned Gold"})
+      _env.GemsStatusEarned = _Status:Paragraph({["Title"] = "Earned Gems"})
+      _env.MoneyStatusEarned = _Status:Paragraph({["Title"] = "Earned Money"})
+    else
+      _Status:Paragraph({["Title"] = "This game is Not Supported, Please Go Play"})
     end
   end
   local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
