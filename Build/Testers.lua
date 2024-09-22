@@ -318,9 +318,7 @@ local _main = Window:MakeTab("Main") do
       _env.ExperienceStatus = _Status:Paragraph({["Title"] = "Experience"})
       _env.TimeEStatus = _Status:Paragraph({["Title"] = "Time Elapsed"})
       _Status:Seperator("Status Earned")
-      _env.GoldStatusEarned = _Status:Paragraph({["Title"] = "Earned Gold"})
       _env.GemsStatusEarned = _Status:Paragraph({["Title"] = "Earned Gems"})
-      _env.MoneyStatusEarned = _Status:Paragraph({["Title"] = "Earned Money"})
     end
   end
   local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
