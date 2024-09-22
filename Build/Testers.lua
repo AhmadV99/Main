@@ -306,7 +306,9 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
   end
   local _Status = _main:Section({["Title"] = "Status", ["Content"] = ""}) do
-    if not game.PlaceId == 16146832113 then
+    if game.PlaceId == 16146832113 then
+      _Status:Paragraph({["Title"] = "This game is Not Supported, Please Go Play"})
+    else
       _Status:Seperator("Status")
       _env.LevelStatus = _Status:Paragraph({["Title"] = "Level"})
       _env.GoldStatus = _Status:Paragraph({["Title"] = "Gold"})
@@ -319,8 +321,6 @@ local _main = Window:MakeTab("Main") do
       _env.GoldStatusEarned = _Status:Paragraph({["Title"] = "Earned Gold"})
       _env.GemsStatusEarned = _Status:Paragraph({["Title"] = "Earned Gems"})
       _env.MoneyStatusEarned = _Status:Paragraph({["Title"] = "Earned Money"})
-    else
-      _Status:Paragraph({["Title"] = "This game is Not Supported, Please Go Play"})
     end
   end
   local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
