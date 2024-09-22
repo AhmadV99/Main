@@ -291,7 +291,25 @@ local _main = Window:MakeTab("Main") do
     _Macros:Seperator("Macros")
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play Macros")
+    Funcs:AddDropdown(_Macros, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _env.LoopPlayMacro = Funcs:AddToggle(_Macros, "Start Play", "", false)
+  end
+  local _Status = _main:Section({["Title"] = "Status", ["Content"] = ""}) do
+    if game.PlaceId == 16146832113 then
+      _Status:Paragraph({["Title"] = "This game is Not Supported, Please Go Play"})
+    else
+      _Status:Seperator("Status")
+      _env.LevelStatus = _Status:Paragraph({["Title"] = "Level"})
+      _env.GoldStatus = _Status:Paragraph({["Title"] = "Gold"})
+      _env.GemsStatus = _Status:Paragraph({["Title"] = "Gems"})
+      _env.MoneyStatus = _Status:Paragraph({["Title"] = "Money"})
+      _env.WaveStatus = _Status:Paragraph({["Title"] = "Wave"})
+      _env.ExperienceStatus = _Status:Paragraph({["Title"] = "Experience"})
+      _env.TimeEStatus = _Status:Paragraph({["Title"] = "Time Elapsed"})
+      _Status:Seperator("Status Earned")
+      _env.GoldStatusEarned = _Status:Paragraph({["Title"] = "Earned Gold"})
+      _env.GemsStatusEarned = _Status:Paragraph({["Title"] = "Earned Gems"})
+    end
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
