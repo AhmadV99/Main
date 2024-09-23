@@ -345,6 +345,8 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddButton(_Ability, "Delete On Select File  ", "", function()
       FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/Ability" .. SpeedHubX["Select File  "] .. ".json")
     end)
+    _Ability:Seperator("Ability Macro")
+    Funcs:AddToggle(_Ability, "Start Ability Record", "", false)
     _Ability:Seperator("Ability")
     Funcs:AddToggle(_Ability, "Auto Use Ability Macros", "", false)
   end
