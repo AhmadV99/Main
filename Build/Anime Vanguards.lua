@@ -350,6 +350,44 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddButton(_Ability, "Delete On Select File  ", "", function()
       FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/Ability/" .. tostring(SpeedHubX["Select File  "]) .. ".json")
     end)
+    _Ability:Seperator("Import")
+    _env.ImportMacroName1 = Funcs:AddTextbox(_Ability, "Import Macro Name  ", "", "", true)
+    _env.ImportMacroURL1 = Funcs:AddTextbox(_Ability, "Import Macro URL  ", "Only Url Raw Or Discord Link", "", true)
+    Funcs:AddButton(_Ability, "Create Import Macro  ", "", function()
+      local ImportUrl = SpeedHubX["Import Macro URL  "]
+      local ImportContent = nil
+
+      if string.find(ImportUrl, "https://raw.githubusercontent.com/") or string.find(ImportUrl, "https://cdn.discordapp.com/attachments/") or string.find(ImportUrl, "https://pastebin.com/raw/") then
+        ImportContent = game:HttpGet(ImportUrl)
+      end
+
+      if ImportContent then
+        FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/Ability/" .. SpeedHubX["Import Macro Name  "] .. ".json", ImportContent)
+        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X", Text = "Successfully Imported Ability Macro : " .. SpeedHubX["Import Macro Name  "] .. ".json",Icon = "rbxassetid://0",Duration = 3})
+        ImportMacroName1:Set("")ImportMacroURL1:Set("")
+      else
+        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Failed to import macro content.",Icon = "rbxassetid://0",Duration = 3})
+      end
+    end)
+    _Ability:Seperator("Export Macros")
+    Funcs:AddButton(_Ability, "Export Macro", "", function()
+      local Success, Message = pcall(function()
+        local MacroName = SpeedHubX["Select File  "]
+        local FilePath = "Speed Hub X - Macros/Anime Vanguards/Ability/" .. MacroName .. ".json"
+  
+        if FilePath and _readfile(FilePath) then
+          _setclipboard(_readfile(FilePath))
+        else
+          game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "File not found: " .. MacroName .. ".json",Icon = "rbxassetid://0",Duration = 3})
+        end
+      end)
+  
+      if Success then
+        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = "Successfully exported macro: " .. SpeedHubX["Select File  "] .. ".json. Copied to your clipboard!",Icon = "rbxassetid://0",Duration = 3})
+      else
+        game.StarterGui:SetCore("SendNotification", {Title = "Speed Hub X",Text = Message,Icon = "rbxassetid://0",Duration = 3})
+      end
+    end)
     _Ability:Seperator("Ability Macro")
     Funcs:AddToggle(_Ability, "Start Ability Record", "", false)
     _Ability:Seperator("Ability")
