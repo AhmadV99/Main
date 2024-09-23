@@ -206,6 +206,10 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
     _Maps:Seperator("Challenge")
     Funcs:AddToggle(_Maps, "Auto Join Challenge", "", false)
+    _Maps:Seperator("Raids")
+    Funcs:AddToggle(_Maps, "Auto Join Raids", "", false)
+    _Maps:Seperator("Boss Event")
+    Funcs:AddToggle(_Maps, "Auto Join Boss Event", "", false)
   end
   local _Game = _main:Section({["Title"] = "Game", ["Content"] = ""}) do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
@@ -330,6 +334,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Claim, "Auto Click Claim BattlePass", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Achievement", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Collection Units", "", false)
+    Funcs:AddToggle(_Claim, "Auto Click Claim Enemy Index", "", false)
   end
   local _Ability = _main:Section({["Title"] = "Ability Macro", ["Content"] = ""}) do
     _Ability:Seperator("Create File Config")
