@@ -12,6 +12,7 @@ LocalPlayer.Idled:connect(function()
 end)
 
 local CoreGui = (game:GetService("RunService"):IsStudio() and LocalPlayer.PlayerGui) or (gethui() or game:GetService("CoreGui"):Clone())
+local ProtectGui = protectgui or (syn and syn.protect_gui) or function() end
 
 local function MakeDraggable(topbarobject, object)
 	local function CustomPos(topbarobject, object)
@@ -513,11 +514,13 @@ function SpeedHubLib:Start(GuiConfig)
     SpeedGui.Name = "SpeedGui"
     SpeedGui.Parent = CoreGui
 
+    ProtectGui(SpeedGui)
+
     local ScreenFind = CoreGui:FindFirstChild(SpeedGui.Name)
     if ScreenFind and ScreenFind ~= SpeedGui then
         ScreenFind:Destroy()  
     end
-
+    
     Main.AnchorPoint = Vector2.new(0, 0)
     Main.BackgroundColor3 = Color3.fromRGB(45.00000111758709, 45.00000111758709, 45.00000111758709)
     Main.BackgroundTransparency = 0
