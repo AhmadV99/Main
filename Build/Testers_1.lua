@@ -340,7 +340,7 @@ local _main = Window:MakeTab("Main") do
     _Ability:Seperator("Create File Config")
     Funcs:AddTextbox(_Ability, "File Name  ", "", "", true)
     Funcs:AddButton(_Ability, "Create On File Name  ", "", function()
-      FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/Ability/" .. SpeedHubX["File Name"] .. ".json", {})
+      FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/Ability/" .. SpeedHubX["File Name  "] .. ".json", {})
     end)
     _Ability:Seperator("File Config")
     local UpdateFile = Funcs:AddDropdown(_Ability, "Select File  ", false, FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards/Ability", "json"), {""})
