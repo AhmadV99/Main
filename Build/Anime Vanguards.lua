@@ -22,28 +22,15 @@ local Player = Players.LocalPlayer
 local _env = getgenv and getgenv() or {}
 
 local CodeList = {
-  "DELAY",
-  "RELEASE",
-  "10KLIKES", 
-  "100KLIKES",
-  "200KLIKES",
-  "300KLIKES",
-  "10MVISITS",
-  "400KLIKES",
-  "25MVISITS",
-  "AV500KLIKES",
-  "AV50MIL",
-  "600KLIKES",
-  "70MVISITS",
-  "800KLIKES",
-  "100MVISITS",
-  "300KPLAYERS",
-  "THXFOR1MLIKES",
+  "SLAYER",
+  "LATEUPDATESORRY",
+  "THXFOR1MLIKES"
 }
 
 do
   FileSys:GetFolder("Speed Hub X - Macros")
   FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards")
+  FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards/Ability")
 end
 
 local _isfile = isfile or function()end
@@ -219,6 +206,10 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Maps, "Auto Join Maps", "", false)
     _Maps:Seperator("Challenge")
     Funcs:AddToggle(_Maps, "Auto Join Challenge", "", false)
+    _Maps:Seperator("Raids")
+    Funcs:AddToggle(_Maps, "Auto Join Raids", "", false)
+    _Maps:Seperator("Boss Event")
+    Funcs:AddToggle(_Maps, "Auto Join Boss Event", "", false)
   end
   local _Game = _main:Section({["Title"] = "Game", ["Content"] = ""}) do
     Funcs:AddToggle(_Game, "Auto Click Leave", "", false)
@@ -294,6 +285,17 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_Macros, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _env.LoopPlayMacro = Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
+  local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
+    _Unit:Seperator("Config")
+    local UpdateCount = Funcs:AddDropdown(_Unit, "Select Unit Count", false, GetCountUnits(), {"1"})
+    Funcs:AddButton(_Unit, "Refersh Select Unit Count", "", function()
+      UpdateCount:Clear()UpdateCount:Refresh(GetCountUnits(), {"1"})
+    end)
+    Funcs:AddDropdown(_Unit, "Choose Upgrade Or Sell", false, {"Upgrade", "Sell"}, {"Upgrade"})
+    Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
+    _Unit:Seperator("Unit")
+    Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
+  end
   local _Status = _main:Section({["Title"] = "Status", ["Content"] = ""}) do
     if game.PlaceId == 16146832113 then
       _Status:Paragraph({["Title"] = "This game is Not Supported, Please Go Play"})
@@ -310,17 +312,6 @@ local _main = Window:MakeTab("Main") do
       _env.GoldStatusEarned = _Status:Paragraph({["Title"] = "Earned Gold"})
       _env.GemsStatusEarned = _Status:Paragraph({["Title"] = "Earned Gems"})
     end
-  end
-  local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
-    _Unit:Seperator("Config")
-    local UpdateCount = Funcs:AddDropdown(_Unit, "Select Unit Count", false, GetCountUnits(), {"1"})
-    Funcs:AddButton(_Unit, "Refersh Select Unit Count", "", function()
-      UpdateCount:Clear()UpdateCount:Refresh(GetCountUnits(), {"1"})
-    end)
-    Funcs:AddDropdown(_Unit, "Choose Upgrade Or Sell", false, {"Upgrade", "Sell"}, {"Upgrade"})
-    Funcs:AddDropdown(_Unit, "Delay To Click", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
-    _Unit:Seperator("Unit")
-    Funcs:AddToggle(_Unit, "Auto Click Unit", "", false)
   end
   local _Wave = _main:Section({["Title"] = "Wave", ["Content"] = ""}) do
     _Wave:Seperator("Config")
@@ -343,6 +334,26 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Claim, "Auto Click Claim BattlePass", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Achievement", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Collection Units", "", false)
+    Funcs:AddToggle(_Claim, "Auto Click Claim Enemy Index", "", false)
+  end
+  local _Ability = _main:Section({["Title"] = "Ability Macro", ["Content"] = ""}) do
+    _Ability:Seperator("Create File Config")
+    Funcs:AddTextbox(_Ability, "File Name  ", "", "", true)
+    Funcs:AddButton(_Ability, "Create On File Name  ", "", function()
+      FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/Ability/" .. tostring(SpeedHubX["File Name  "]) .. ".json", {})
+    end)
+    _Ability:Seperator("File Config")
+    local UpdateFile1 = Funcs:AddDropdown(_Ability, "Select File  ", false, FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards/Ability", "json"), {""})
+    Funcs:AddButton(_Ability, "Refersh Select File  ", "", function()
+      UpdateFile1:Clear()UpdateFile1:Refresh(FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards/Ability", "json"), {""})
+    end)
+    Funcs:AddButton(_Ability, "Delete On Select File  ", "", function()
+      FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/Ability/" .. tostring(SpeedHubX["Select File  "]) .. ".json")
+    end)
+    _Ability:Seperator("Ability Macro")
+    Funcs:AddToggle(_Ability, "Start Ability Record", "", false)
+    _Ability:Seperator("Ability")
+    Funcs:AddToggle(_Ability, "Auto Use Ability Macros", "", false)
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
