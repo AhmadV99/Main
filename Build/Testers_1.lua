@@ -22,28 +22,15 @@ local Player = Players.LocalPlayer
 local _env = getgenv and getgenv() or {}
 
 local CodeList = {
-  "DELAY",
-  "RELEASE",
-  "10KLIKES", 
-  "100KLIKES",
-  "200KLIKES",
-  "300KLIKES",
-  "10MVISITS",
-  "400KLIKES",
-  "25MVISITS",
-  "AV500KLIKES",
-  "AV50MIL",
-  "600KLIKES",
-  "70MVISITS",
-  "800KLIKES",
-  "100MVISITS",
-  "300KPLAYERS",
-  "THXFOR1MLIKES",
+  "SLAYER",
+  "LATEUPDATESORRY",
+  "THXFOR1MLIKES"
 }
 
 do
   FileSys:GetFolder("Speed Hub X - Macros")
   FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards")
+  FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards/Ability")
 end
 
 local _isfile = isfile or function()end
@@ -343,6 +330,23 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Claim, "Auto Click Claim BattlePass", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Achievement", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Collection Units", "", false)
+  end
+  local _Ability = _main:Section({["Title"] = "Ability Macro", ["Content"] = ""}) do
+    _Ability:Seperator("Create File Config")
+    Funcs:AddTextbox(_Ability, "File Name  ", "", "", true)
+    Funcs:AddButton(_Ability, "Create On File Name  ", "", function()
+      FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/Ability" .. SpeedHubX["File Name"] .. ".json", {})
+    end)
+    _Ability:Seperator("File Config")
+    local UpdateFile = Funcs:AddDropdown(_Ability, "Select File", false, FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards", "json"), {""})
+    Funcs:AddButton(_Ability, "Refersh Select File  ", "", function()
+      UpdateFile:Clear()UpdateFile:Refresh(FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards/Ability", "json"), {""})
+    end)
+    Funcs:AddButton(_Ability, "Delete On Select File  ", "", function()
+      FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/Ability" .. SpeedHubX["Select File"] .. ".json")
+    end)
+    _Ability:Seperator("Ability")
+    Funcs:AddToggle(_Ability, "Auto Use Ability Macros", "", false)
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
