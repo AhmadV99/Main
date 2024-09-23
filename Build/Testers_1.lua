@@ -343,7 +343,7 @@ local _main = Window:MakeTab("Main") do
       FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/Ability/" .. SpeedHubX["File Name"] .. ".json", {})
     end)
     _Ability:Seperator("File Config")
-    local UpdateFile = Funcs:AddDropdown(_Ability, "Select File  ", false, FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards", "json"), {""})
+    local UpdateFile = Funcs:AddDropdown(_Ability, "Select File  ", false, FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards/Ability", "json"), {""})
     Funcs:AddButton(_Ability, "Refersh Select File  ", "", function()
       UpdateFile:Clear()UpdateFile:Refresh(FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards/Ability", "json"), {""})
     end)
