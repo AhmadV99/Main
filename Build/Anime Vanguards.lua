@@ -24,7 +24,8 @@ local _env = getgenv and getgenv() or {}
 local CodeList = {
   "SLAYER",
   "LATEUPDATESORRY",
-  "THXFOR1MLIKES"
+  "THXFOR1MLIKES",
+  "ROST10K"
 }
 
 do
@@ -196,7 +197,7 @@ end
 local _main = Window:MakeTab("Main") do
   local _Maps = _main:Section({["Title"] = "Maps", ["Content"] = ""}) do
     _Maps:Seperator("Config")
-    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Story", "LegendStage"}, {"Story"})
+    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Story", "LegendStage", "Raid"}, {"Story"})
     Funcs:AddDropdown(_Maps, "Choose Stage", false, {"1", "2","3"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Act Number", false, {"1", "2", "3", "4", "5", "6", "Infinite"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Mode", false, {"Normal", "Nightmare"}, {"Normal"})
@@ -282,7 +283,6 @@ local _main = Window:MakeTab("Main") do
     _Macros:Seperator("Macros")
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play Macros")
-    Funcs:AddDropdown(_Macros, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _env.LoopPlayMacro = Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
