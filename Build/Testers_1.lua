@@ -48,6 +48,27 @@ local function GetCountUnits()
   return ListCount
 end
 
+local function GetNameUnits()
+  local ListName = {}
+
+  if #Player.PlayerGui.Windows.Units.Holder.Main.Units:GetChildren() > 0 then
+    for _, Unit in pairs(Player.PlayerGui.Windows.Units.Holder.Main.Units:GetChildren()) do
+      if Unit:IsA("Frame") then
+        local Holder = Unit:FindFirstChild("Holder")
+        local Main = Holder:FindFirstChild("Main")
+  
+        local UnitName = Main:FindFirstChild("UnitName")
+  
+        if UnitName then
+          table.insert(UnitName.Text, ListName)
+        end
+      end
+    end
+  end
+
+  return ListName
+end
+
 local SpeedHubX = {}
 
 local Funcs = {} do
@@ -328,6 +349,14 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_Claim, "Auto Click Claim Achievement", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Collection Units", "", false)
     Funcs:AddToggle(_Claim, "Auto Click Claim Enemy Index", "", false)
+  end
+  local _Traits = _main:Section({["Title"] = "Traits", ["Content"] = ""}) do
+    _Traits:Seperator("Config")
+    Funcs:AddDropdown(_Traits, "Choose WhiteList Traits", false, {"Range", "Range I", "Range II", "Range III", "Swift", "Swift I", "Swift II", "Swift III", "Vigor", "Vigor I", "Vigor II", "Vigor III", "Scholar", "Marksman", "Fortune", "Blitz", "Solar", "Deadeye", "Ethereal", "Monarch"}, {""})
+    Funcs:AddDropdown(_Traits, "Choose Units", false, GetNameUnits(), {""})
+    _Traits:Seperator("Traits")
+    _env.ChancesTraits = _Traits:Paragraph({["Title"] = "You have Chance : N/A"})
+    Funcs:AddToggle(_Claim, "Auto Reroll Units", "If WhiteListed Traits, Will be Stopping Auto Reroll Units", false)
   end
   local _Ability = _main:Section({["Title"] = "Ability Macro", ["Content"] = ""}) do
     _Ability:Seperator("Create File Config")
