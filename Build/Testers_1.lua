@@ -50,17 +50,20 @@ end
 
 local function GetNameUnits()
   local ListName = {}
+  local UnitsFolder = Player.PlayerGui.Windows.Units.Holder.Main.Units
 
-  if #Player.PlayerGui.Windows.Units.Holder.Main.Units:GetChildren() > 0 then
-    for _, Unit in pairs(Player.PlayerGui.Windows.Units.Holder.Main.Units:GetChildren()) do
+  if UnitsFolder and #UnitsFolder:GetChildren() > 0 then
+    for _, Unit in pairs(UnitsFolder:GetChildren()) do
       if Unit:IsA("Frame") then
         local Holder = Unit:FindFirstChild("Holder")
-        local Main = Holder:FindFirstChild("Main")
-  
-        local UnitName = Main:FindFirstChild("UnitName")
-  
-        if UnitName then
-          table.insert(UnitName.Text, ListName)
+        if Holder then
+          local Main = Holder:FindFirstChild("Main")
+          if Main then
+            local UnitName = Main:FindFirstChild("UnitName")
+            if UnitName then
+              table.insert(ListName, UnitName.Text)
+            end
+          end
         end
       end
     end
