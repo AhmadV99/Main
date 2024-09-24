@@ -21,6 +21,13 @@ local Player = Players.LocalPlayer
 
 local _env = getgenv and getgenv() or {}
 
+local CodeList = {
+  "SLAYER",
+  "LATEUPDATESORRY",
+  "THXFOR1MLIKES",
+  "ROST10K"
+}
+
 do
   FileSys:GetFolder("Speed Hub X - Macros")
   FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards")
@@ -357,9 +364,12 @@ local _main = Window:MakeTab("Main") do
     _Traits:Seperator("Config")
     Funcs:AddDropdown(_Traits, "Choose WhiteList Traits", false, {"Range", "Range I", "Range II", "Range III", "Swift", "Swift I", "Swift II", "Swift III", "Vigor", "Vigor I", "Vigor II", "Vigor III", "Scholar", "Marksman", "Fortune", "Blitz", "Solar", "Deadeye", "Ethereal", "Monarch"}, {""})
     Funcs:AddDropdown(_Traits, "Choose Units", false, GetNameUnits(), {""})
+    local UpdateUnit = Funcs:AddButton(_Unit, "Refersh Choose Units", "", function()
+      UpdateUnit:Clear()UpdateUnit:Refresh(GetNameUnits(), {""})
+    end)
     _Traits:Seperator("Traits")
     _env.ChancesTraits = _Traits:Paragraph({["Title"] = "You have Chance : N/A"})
-    Funcs:AddToggle(_Claim, "Auto Reroll Units", "If WhiteListed Traits, Will be Stopping Auto Reroll Units", false)
+    Funcs:AddToggle(_Traits, "Auto Reroll Units", "If WhiteListed Traits, Will be Stopping Auto Reroll Units", false)
   end
   local _Ability = _main:Section({["Title"] = "Ability Macro", ["Content"] = ""}) do
     _Ability:Seperator("Create File Config")
@@ -398,14 +408,8 @@ local _main = Window:MakeTab("Main") do
   end
   local _RCode = _main:Section({["Title"] = "Redeem Code", ["Content"] = ""}) do
     Funcs:AddButton(_RCode, "Redeem Code", "", function()
-      local Response = game:HttpGet("https://beebom.com/anime-vanguards-codes/")
-      local Codes = {}
-      for v in string.gmatch(string.sub(Response, string.find(Response, "All New Anime Vanguards Codes"), string.find(Response, "Expired Anime Vanguards Codes")), "<strong>([^<]+)</strong>") do
-        table.insert(Codes, v:gsub("%s+", ""))
-      end
-      for _, Code in ipairs(Codes) do
+      for _, Code in next, CodeList do
         Networking.CodesEvent:FireServer(Code)
-        task.wait(0.325)
       end
     end)
   end
