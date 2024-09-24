@@ -21,12 +21,6 @@ local Player = Players.LocalPlayer
 
 local _env = getgenv and getgenv() or {}
 
-local CodeList = {
-  "SLAYER",
-  "LATEUPDATESORRY",
-  "THXFOR1MLIKES"
-}
-
 do
   FileSys:GetFolder("Speed Hub X - Macros")
   FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards")
@@ -196,7 +190,7 @@ end
 local _main = Window:MakeTab("Main") do
   local _Maps = _main:Section({["Title"] = "Maps", ["Content"] = ""}) do
     _Maps:Seperator("Config")
-    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Story", "LegendStage"}, {"Story"})
+    Funcs:AddDropdown(_Maps, "Choose Map", false, {"Story", "LegendStage", "Raid"}, {"Story"})
     Funcs:AddDropdown(_Maps, "Choose Stage", false, {"1", "2","3"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Act Number", false, {"1", "2", "3", "4", "5", "6", "Infinite"}, {"1"})
     Funcs:AddDropdown(_Maps, "Choose Mode", false, {"Normal", "Nightmare"}, {"Normal"})
@@ -282,7 +276,6 @@ local _main = Window:MakeTab("Main") do
     _Macros:Seperator("Macros")
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play Macros")
-    Funcs:AddDropdown(_Macros, "Step Delay", false, {"1", "2", "3", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _env.LoopPlayMacro = Funcs:AddToggle(_Macros, "Start Play", "", false)
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
@@ -373,8 +366,14 @@ local _main = Window:MakeTab("Main") do
   end
   local _RCode = _main:Section({["Title"] = "Redeem Code", ["Content"] = ""}) do
     Funcs:AddButton(_RCode, "Redeem Code", "", function()
-      for _, Code in next, CodeList do
+      local Response = game:HttpGet("https://beebom.com/anime-vanguards-codes/")
+      local Codes = {}
+      for v in string.gmatch(string.sub(Response, string.find(Response, "All New Anime Vanguards Codes"), string.find(Response, "Expired Anime Vanguards Codes")), "<strong>([^<]+)</strong>") do
+        table.insert(Codes, v:gsub("%s+", ""))
+      end
+      for _, Code in ipairs(Codes) do
         Networking.CodesEvent:FireServer(Code)
+        task.wait(0.325)
       end
     end)
   end
