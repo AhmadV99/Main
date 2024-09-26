@@ -25,7 +25,8 @@ local CodeList = {
   "SLAYER",
   "LATEUPDATESORRY",
   "THXFOR1MLIKES",
-  "ROST10K"
+  "ROST10K",
+  "TIKTOK50K"
 }
 
 do
