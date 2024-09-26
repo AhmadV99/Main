@@ -31,7 +31,7 @@ local CodeList = {
 do
   FileSys:GetFolder("Speed Hub X - Macros")
   FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards")
-  FileSys:GetFolder("Speed Hub X - Macros/Anime Vanguards/Ability")
+  FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/Ability")
 end
 
 local _isfile = isfile or function()end
@@ -309,9 +309,11 @@ local _main = Window:MakeTab("Main") do
       end
     end)
     _Macros:Seperator("Macros")
+    Funcs:AddToggle(_Macros, "Allow Ability In Start Record Macro", "", true)
     Funcs:AddToggle(_Macros, "Start Record Macro", "", false)
     _Macros:Seperator("Play Macros")
     _env.LoopPlayMacro = Funcs:AddToggle(_Macros, "Start Play", "", false)
+    Funcs:AddToggle(_Macros, "Auto Use Ability In Macros", "", false)
   end
   local _Unit = _main:Section({["Title"] = "Units", ["Content"] = ""}) do
     _Unit:Seperator("Config")
@@ -374,25 +376,6 @@ local _main = Window:MakeTab("Main") do
     _Traits:Seperator("Traits")
     _env.ChancesTraits = _Traits:Paragraph({["Title"] = "You have Chance : N/A"})
     Funcs:AddToggle(_Traits, "Auto Reroll Units", "If WhiteListed Traits, Will be Stopping Auto Reroll Units", false)
-  end
-  local _Ability = _main:Section({["Title"] = "Ability Macro", ["Content"] = ""}) do
-    _Ability:Seperator("Create File Config")
-    Funcs:AddTextbox(_Ability, "File Name  ", "", "", true)
-    Funcs:AddButton(_Ability, "Create On File Name  ", "", function()
-      FileSys:GetFile("Speed Hub X - Macros/Anime Vanguards/Ability/" .. tostring(SpeedHubX["File Name  "]) .. ".json", {})
-    end)
-    _Ability:Seperator("File Config")
-    local UpdateFile1 = Funcs:AddDropdown(_Ability, "Select File  ", false, FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards/Ability", "json"), {""})
-    Funcs:AddButton(_Ability, "Refersh Select File  ", "", function()
-      UpdateFile1:Clear()UpdateFile1:Refresh(FileSys:ListFiles("Speed Hub X - Macros/Anime Vanguards/Ability", "json"), {""})
-    end)
-    Funcs:AddButton(_Ability, "Delete On Select File  ", "", function()
-      FileSys:DeleteFile("Speed Hub X - Macros/Anime Vanguards/Ability/" .. tostring(SpeedHubX["Select File  "]) .. ".json")
-    end)
-    _Ability:Seperator("Ability Macro")
-    Funcs:AddToggle(_Ability, "Start Ability Record", "", false)
-    _Ability:Seperator("Ability")
-    Funcs:AddToggle(_Ability, "Auto Use Ability Macros", "", false)
   end
   local _Webhook = _main:Section({["Title"] = "Webhook", ["Content"] = ""}) do
     _Webhook:Seperator("Config")
