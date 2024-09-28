@@ -4,7 +4,7 @@ local Funcs = {} do
     Default = type(Default) == "boolean" and Default or false
     Func = type(Func) == "function" and Func or function() end
 
-    return Tab:AddToggle("MyToggle_" .. Name, {Title = Name, Default = Default, Callback = Func})
+    return Tab:AddToggle(Name, {Title = Name, Default = Default, Callback = Func})
   end
 
   function Funcs:Dropdown(Tab, Name, Values, Multi, Default, Func)
@@ -13,7 +13,7 @@ local Funcs = {} do
     Multi = type(Multi) == "boolean" and Multi or false
     Func = type(Func) == "function" and Func or function() end
 
-    return Tab:AddDropdown("Dropdown_" .. Name, {
+    return Tab:AddDropdown(Name, {
       Title = Name,
       Values = Values,
       Multi = Multi,
@@ -31,7 +31,7 @@ local Funcs = {} do
     Rounding = type(Rounding) == "number" and Rounding or type(Rounding) == "string" and tonumber(Rounding) or 0
     Func = type(Func) == "function" and Func or function() end
 
-    return Tab:AddSlider("Slider_" .. Name, {
+    return Tab:AddSlider(Name, {
       Title = Name,
       Description = Description,
       Default = Default,
@@ -61,7 +61,7 @@ local Funcs = {} do
     Numeric = type(Numeric) == "boolean" and Numeric or false
     Func = type(Func) == "function" and Func or function() end
 
-    return Tab:AddInput("MyTextbox_" .. Name, {
+    return Tab:AddInput(Name, {
       Title = Name,
       Default = Default,
       Placeholder = Placeholder,
