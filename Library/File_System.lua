@@ -75,7 +75,7 @@ local FileManager = {} do
     if not VAL then return end
 
     local fileList = {}
-    for _, filePath in ipairs(_listfiles(VAL)) do
+    for _, filePath in next, _listfiles(VAL) do
       local name = filePath:match("[^/\\]+$")
       if format == "json" and name:match("%.json$") then
         name = name:sub(1, -6)
