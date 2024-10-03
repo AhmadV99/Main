@@ -1,14 +1,14 @@
-local _readfile = readfile or (debug and debug.readfile) or (function() end)
-local _listfiles = listfiles or (debug and debug.listfiles) or (function() end)
-local _writefile = writefile or (debug and debug.writefile) or (function() end)
-local _makefolder = makefolder or (debug and debug.makefolder) or (function() end)
-local _appendfile = appendfile or (debug and debug.appendfile) or (function() end)
-local _isfolder = isfolder or (debug and debug.isfolder) or (function() end)
-local _delfolder = delfolder or (debug and debug.delfolder) or (function() end)
-local _delfile = delfile or (debug and debug.delfile) or (function() end)
-local _loadfile = loadfile or (debug and debug.loadfile) or (function() end)
-local _dofile = dofile or (debug and debug.dofile) or (function() end)
-local _isfile = isfile or (debug and debug.isfile) or (function() end)
+local _readfile = readfile or (debug and debug.readfile) or function() end
+local _listfiles = listfiles or (debug and debug.listfiles) or function() end
+local _writefile = writefile or (debug and debug.writefile) or function() end
+local _makefolder = makefolder or (debug and debug.makefolder) or function() end
+local _appendfile = appendfile or (debug and debug.appendfile) or function() end
+local _isfolder = isfolder or (debug and debug.isfolder) or function() end
+local _delfolder = delfolder or (debug and debug.delfolder) or function() end
+local _delfile = delfile or (debug and debug.delfile) or function() end
+local _loadfile = loadfile or (debug and debug.loadfile) or function() end
+local _dofile = dofile or (debug and debug.dofile) or function() end
+local _isfile = isfile or (debug and debug.isfile) or function() end
 
 local HttpService = game:GetService("HttpService")
 
@@ -75,7 +75,7 @@ local FileManager = {} do
     if not VAL then return end
 
     local fileList = {}
-    for _, filePath in ipairs(listfiles(VAL)) do
+    for _, filePath in ipairs(_listfiles(VAL)) do
       local name = filePath:match("[^/\\]+$")
       if format == "json" and name:match("%.json$") then
         name = name:sub(1, -6)
