@@ -14,24 +14,18 @@ local HttpService = game:GetService("HttpService")
 
 local FileManager = {} do
   function FileManager:GetFolder(VAL)
-    if not VAL then return end
-
     if not _isfolder(VAL) then
       _makefolder(VAL)
     end
   end
 
   function FileManager:DeleteFolder(VAL)
-    if not VAL then return end
-
     if _isfolder(VAL) then
       _delfolder(VAL)
     end
   end
 
   function FileManager:GetFile(VAL, data)
-    if not VAL then return end
-
     if not isfile(VAL) then
       if type(data) == "table" then
         _writefile(VAL, HttpService:JSONEncode(data))
@@ -42,8 +36,6 @@ local FileManager = {} do
   end
 
   function FileManager:WriteFile(VAL, data)
-    if not VAL then return end
-
     if type(data) == "table" then
       _writefile(VAL, HttpService:JSONEncode(data))
     else
@@ -52,16 +44,12 @@ local FileManager = {} do
   end
 
   function FileManager:DeleteFile(VAL)
-    if not VAL then return end
-
     if _isfile(VAL) then
       _delfile(VAL)
     end
   end
 
   function FileManager:ReadFile(VAL, format)
-    if not VAL then return end
-
     if _isfile(VAL) then
       if format == "table" then
         return HttpService:JSONDecode(_readfile(VAL))
@@ -72,8 +60,6 @@ local FileManager = {} do
   end
 
   function FileManager:ListFiles(VAL, format)
-    if not VAL then return end
-
     local fileList = {}
     for _, filePath in next, _listfiles(VAL) do
       local name = filePath:match("[^/\\]+$")
