@@ -10,11 +10,13 @@ local VirtualUser = game:GetService("VirtualUser")
 
 local RenderStepped = RunService.RenderStepped
 
-LocalPlayer.Idled:connect(function()
-	VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-	wait(1)
-	VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-end)
+if not RunService:IsStudio() then
+	LocalPlayer.Idled:connect(function()
+		VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+		wait(1)
+		VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+	end)
+end
 
 local ProtectGui = protectgui or (syn and syn.protect_gui) or function(f) end
 
@@ -22,53 +24,53 @@ local Themes = {
 	Names = {
 		"SpeedHubX"
 	},
-    SpeedHubX = {
-        Name = "SpeedHubX",
-        Accent = Color3.fromRGB(255, 0, 0),
-    
-        AcrylicMain = Color3.fromRGB(30, 0, 0),
-        AcrylicBorder = Color3.fromRGB(20, 20, 20),
-        AcrylicGradient = ColorSequence.new(Color3.fromRGB(5, 0, 0), Color3.fromRGB(5, 0, 0)),
-        AcrylicNoise = 0.5,
-    
-        TitleBarLine = Color3.fromRGB(70, 0, 0),
-        Tab = Color3.fromRGB(180, 0, 0),
-    
-        Element = Color3.fromRGB(255, 0, 0),
-        ElementBorder = Color3.fromRGB(0, 0, 0),
-        InElementBorder = Color3.fromRGB(50, 0, 0),
-        ElementTransparency = 0.85,
-    
-        ToggleSlider = Color3.fromRGB(255, 50, 50),
-        ToggleToggled = Color3.fromRGB(0, 0, 0),
-    
-        SliderRail = Color3.fromRGB(40, 0, 0),
-    
-        DropdownFrame = Color3.fromRGB(15, 15, 15),
-        DropdownHolder = Color3.fromRGB(25, 25, 25),
-        DropdownBorder = Color3.fromRGB(255, 0, 0),
-        DropdownOption = Color3.fromRGB(200, 0, 0),
-    
-        Keybind = Color3.fromRGB(200, 0, 0),
-    
-        Input = Color3.fromRGB(25, 25, 25),
-        InputFocused = Color3.fromRGB(255, 0, 0),
-        InputIndicator = Color3.fromRGB(255, 0, 0),
-    
-        Dialog = Color3.fromRGB(10, 10, 10),
-        DialogHolder = Color3.fromRGB(20, 20, 20),
-        DialogHolderLine = Color3.fromRGB(255, 0, 0),
-        DialogButton = Color3.fromRGB(10, 10, 10),
-        DialogButtonBorder = Color3.fromRGB(255, 0, 0),
-        DialogBorder = Color3.fromRGB(30, 0, 0),
-        DialogInput = Color3.fromRGB(25, 25, 25),
-        DialogInputLine = Color3.fromRGB(255, 0, 0),
-    
-        Text = Color3.fromRGB(200, 200, 200),
-        SubText = Color3.fromRGB(200, 200, 200),
-        Hover = Color3.fromRGB(220, 0, 0),
-        HoverChange = 0.1,
-    }    
+	SpeedHubX = {
+		Name = "SpeedHubX",
+		Accent = Color3.fromRGB(255, 0, 0),
+
+		AcrylicMain = Color3.fromRGB(30, 0, 0),
+		AcrylicBorder = Color3.fromRGB(20, 20, 20),
+		AcrylicGradient = ColorSequence.new(Color3.fromRGB(5, 0, 0), Color3.fromRGB(5, 0, 0)),
+		AcrylicNoise = 0.5,
+
+		TitleBarLine = Color3.fromRGB(70, 0, 0),
+		Tab = Color3.fromRGB(180, 0, 0),
+
+		Element = Color3.fromRGB(255, 0, 0),
+		ElementBorder = Color3.fromRGB(0, 0, 0),
+		InElementBorder = Color3.fromRGB(50, 0, 0),
+		ElementTransparency = 0.85,
+
+		ToggleSlider = Color3.fromRGB(255, 50, 50),
+		ToggleToggled = Color3.fromRGB(0, 0, 0),
+
+		SliderRail = Color3.fromRGB(40, 0, 0),
+
+		DropdownFrame = Color3.fromRGB(15, 15, 15),
+		DropdownHolder = Color3.fromRGB(25, 25, 25),
+		DropdownBorder = Color3.fromRGB(255, 0, 0),
+		DropdownOption = Color3.fromRGB(200, 0, 0),
+
+		Keybind = Color3.fromRGB(200, 0, 0),
+
+		Input = Color3.fromRGB(25, 25, 25),
+		InputFocused = Color3.fromRGB(255, 0, 0),
+		InputIndicator = Color3.fromRGB(255, 0, 0),
+
+		Dialog = Color3.fromRGB(10, 10, 10),
+		DialogHolder = Color3.fromRGB(20, 20, 20),
+		DialogHolderLine = Color3.fromRGB(255, 0, 0),
+		DialogButton = Color3.fromRGB(10, 10, 10),
+		DialogButtonBorder = Color3.fromRGB(255, 0, 0),
+		DialogBorder = Color3.fromRGB(30, 0, 0),
+		DialogInput = Color3.fromRGB(25, 25, 25),
+		DialogInputLine = Color3.fromRGB(255, 0, 0),
+
+		Text = Color3.fromRGB(200, 200, 200),
+		SubText = Color3.fromRGB(200, 200, 200),
+		Hover = Color3.fromRGB(220, 0, 0),
+		HoverChange = 0.1,
+	}    
 }
 
 local Library = {
@@ -95,72 +97,72 @@ local Library = {
 do 
 	local GUI = game:GetService("CoreGui"):FindFirstChild("OpenClose")
 	if GUI then 
-        GUI:Destroy()
-    end
+		GUI:Destroy()
+	end
 
 	local GUI1 = game:GetService("CoreGui"):FindFirstChild("Speed_Hub_X_ScreenGui")
 	if GUI1 then 
-        GUI1:Destroy()
-    end
+		GUI1:Destroy()
+	end
 end
 
 local function CloseOpen()
-    local UIStroke = Instance.new("UIStroke")
-    local UICorner = Instance.new("UICorner")
-    
-    local ScreenGui = Instance.new("ScreenGui")
-    local Close_ImageButton = Instance.new("ImageButton")
+	local UIStroke = Instance.new("UIStroke")
+	local UICorner = Instance.new("UICorner")
+
+	local ScreenGui = Instance.new("ScreenGui")
+	local Close_ImageButton = Instance.new("ImageButton")
 
 	do
 		ProtectGui(ScreenGui)
 	end
-    
-    ScreenGui.Name = "OpenClose"
-    ScreenGui.Parent = RunService:IsStudio() and LocalPlayer.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui"))
-    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-    Close_ImageButton.Parent = ScreenGui
-    Close_ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-    Close_ImageButton.BorderColor3 = Color3.fromRGB(255, 0, 0)
-    Close_ImageButton.Position = UDim2.new(0.1021, 0, 0.0743, 0)
-    Close_ImageButton.Size = UDim2.new(0, 59, 0, 49)
-    Close_ImageButton.Image = "rbxassetid://82140212012109"
-    Close_ImageButton.Visible = false
+	ScreenGui.Name = "OpenClose"
+	ScreenGui.Parent = RunService:IsStudio() and LocalPlayer.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui"))
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-    UICorner.Name = "MainCorner"
-    UICorner.CornerRadius = UDim.new(0, 9)
-    UICorner.Parent = Close_ImageButton
-    
-    local dragging = false
-    local dragStart = nil
-    local startPos = nil
+	Close_ImageButton.Parent = ScreenGui
+	Close_ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Close_ImageButton.BorderColor3 = Color3.fromRGB(255, 0, 0)
+	Close_ImageButton.Position = UDim2.new(0.1021, 0, 0.0743, 0)
+	Close_ImageButton.Size = UDim2.new(0, 59, 0, 49)
+	Close_ImageButton.Image = "rbxassetid://82140212012109"
+	Close_ImageButton.Visible = false
 
-    local function update(input)
-        local delta = input.Position - dragStart
-        Close_ImageButton.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-    end
+	UICorner.Name = "MainCorner"
+	UICorner.CornerRadius = UDim.new(0, 9)
+	UICorner.Parent = Close_ImageButton
 
-    Close_ImageButton.InputBegan:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
-            dragging = true
-            dragStart = input.Position
-            startPos = Close_ImageButton.Position
-            
-            input.Changed:Connect(function()
-                if input.UserInputState == Enum.UserInputState.End then
-                    dragging = false
-                end
-            end)
-        end
-    end)
+	local dragging = false
+	local dragStart = nil
+	local startPos = nil
 
-    Close_ImageButton.InputChanged:Connect(function(input)
-        if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
-            update(input)
-        end
-    end)
+	local function update(input)
+		local delta = input.Position - dragStart
+		Close_ImageButton.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
 
-    return Close_ImageButton
+	Close_ImageButton.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = Close_ImageButton.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	Close_ImageButton.InputChanged:Connect(function(input)
+		if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			update(input)
+		end
+	end)
+
+	return Close_ImageButton
 end
 
 local Close_ImageButton = CloseOpen()
@@ -5066,19 +5068,19 @@ local Icons = {
 	["lucide-webhook"] = "rbxassetid://17320556264",
 }
 function Library:GetIcon(Name)
-    if Name ~= nil then
-        if string.find(Name, "rbxassetid://") then
-            return Name
-        end
-        local AssetId = tonumber(Name)
-        if AssetId then
-            return "rbxassetid://" .. AssetId
-        end
-        if Icons["lucide-" .. Name] then
-            return Icons["lucide-" .. Name]
-        end
-    end
-    return nil
+	if Name ~= nil then
+		if string.find(Name, "rbxassetid://") then
+			return Name
+		end
+		local AssetId = tonumber(Name)
+		if AssetId then
+			return "rbxassetid://" .. AssetId
+		end
+		if Icons["lucide-" .. Name] then
+			return Icons["lucide-" .. Name]
+		end
+	end
+	return nil
 end
 
 local Elements = {}
@@ -5609,6 +5611,12 @@ end
 
 function Library:Notify(Config)
 	return NotificationModule:New(Config)
+end
+
+if getgenv then
+	getgenv().Fluent = Library
+else
+	Fluent = Library
 end
 
 return Library, SaveManager, InterfaceManager
