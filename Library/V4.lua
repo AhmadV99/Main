@@ -1273,16 +1273,11 @@ Components.Element = (function()
 			Element.Frame.Visible = Bool
 		end
 
-		function Element:SetDesc(Set)
-			if Set == nil then
-				Set = ""
-			end
-			if Set == "" then
-				Element.DescLabel.Visible = false
-			else
-				Element.DescLabel.Visible = true
-			end
-			Element.DescLabel.Text = Set
+		function Element:SetDesc(set)
+			set = set or ""
+		
+			Element.DescLabel.Visible = (set ~= "")
+			Element.DescLabel.Text = set
 		end
 
 		function Element:GetTitle()
