@@ -28,48 +28,48 @@ local Themes = {
 		Name = "SpeedHubX",
 		Accent = Color3.fromRGB(255, 0, 0),
 
-		AcrylicMain = Color3.fromRGB(30, 0, 0),
-		AcrylicBorder = Color3.fromRGB(20, 20, 20),
-		AcrylicGradient = ColorSequence.new(Color3.fromRGB(5, 0, 0), Color3.fromRGB(5, 0, 0)),
-		AcrylicNoise = 0.5,
-
-		TitleBarLine = Color3.fromRGB(70, 0, 0),
+		AcrylicMain = Color3.fromRGB(20, 20, 20),
+		AcrylicBorder = Color3.fromRGB(40, 40, 40), 
+		AcrylicGradient = ColorSequence.new(Color3.fromRGB(30, 30, 30), Color3.fromRGB(10, 10, 10)),
+		AcrylicNoise = 0.8,
+	
+		TitleBarLine = Color3.fromRGB(90, 90, 90),
 		Tab = Color3.fromRGB(180, 0, 0),
-
-		Element = Color3.fromRGB(255, 0, 0),
-		ElementBorder = Color3.fromRGB(0, 0, 0),
-		InElementBorder = Color3.fromRGB(50, 0, 0),
-		ElementTransparency = 0.85,
-
-		ToggleSlider = Color3.fromRGB(255, 50, 50),
-		ToggleToggled = Color3.fromRGB(0, 0, 0),
-
-		SliderRail = Color3.fromRGB(40, 0, 0),
-
-		DropdownFrame = Color3.fromRGB(15, 15, 15),
-		DropdownHolder = Color3.fromRGB(25, 25, 25),
-		DropdownBorder = Color3.fromRGB(255, 0, 0),
-		DropdownOption = Color3.fromRGB(200, 0, 0),
-
-		Keybind = Color3.fromRGB(200, 0, 0),
-
-		Input = Color3.fromRGB(25, 25, 25),
-		InputFocused = Color3.fromRGB(255, 0, 0),
-		InputIndicator = Color3.fromRGB(255, 0, 0),
-
-		Dialog = Color3.fromRGB(10, 10, 10),
-		DialogHolder = Color3.fromRGB(20, 20, 20),
-		DialogHolderLine = Color3.fromRGB(255, 0, 0),
-		DialogButton = Color3.fromRGB(10, 10, 10),
+	
+		Element = Color3.fromRGB(180, 0, 0),
+		ElementBorder = Color3.fromRGB(50, 50, 50),
+		InElementBorder = Color3.fromRGB(80, 80, 80),
+		ElementTransparency = 0.75,
+	
+		ToggleSlider = Color3.fromRGB(200, 0, 0),
+		ToggleToggled = Color3.fromRGB(255, 255, 255),
+	
+		SliderRail = Color3.fromRGB(160, 160, 160),
+	
+		DropdownFrame = Color3.fromRGB(30, 30, 30),
+		DropdownHolder = Color3.fromRGB(50, 50, 50),
+		DropdownBorder = Color3.fromRGB(180, 0, 0),
+		DropdownOption = Color3.fromRGB(220, 0, 0),
+	
+		Keybind = Color3.fromRGB(160, 0, 0),
+	
+		Input = Color3.fromRGB(180, 180, 180),
+		InputFocused = Color3.fromRGB(0, 0, 0),
+		InputIndicator = Color3.fromRGB(255, 50, 50),
+	
+		Dialog = Color3.fromRGB(30, 30, 30),
+		DialogHolder = Color3.fromRGB(45, 45, 45),
+		DialogHolderLine = Color3.fromRGB(180, 0, 0),
+		DialogButton = Color3.fromRGB(30, 30, 30),
 		DialogButtonBorder = Color3.fromRGB(255, 0, 0),
-		DialogBorder = Color3.fromRGB(30, 0, 0),
-		DialogInput = Color3.fromRGB(25, 25, 25),
-		DialogInputLine = Color3.fromRGB(255, 0, 0),
-
-		Text = Color3.fromRGB(200, 200, 200),
-		SubText = Color3.fromRGB(200, 200, 200),
+		DialogBorder = Color3.fromRGB(70, 70, 70),
+		DialogInput = Color3.fromRGB(40, 40, 40),
+		DialogInputLine = Color3.fromRGB(220, 0, 0),
+	
+		Text = Color3.fromRGB(255, 255, 255),
+		SubText = Color3.fromRGB(170, 170, 170),
 		Hover = Color3.fromRGB(220, 0, 0),
-		HoverChange = 0.1,
+		HoverChange = 0.08,
 	}    
 }
 
