@@ -18,6 +18,16 @@ if not RunService:IsStudio() then
 	end)
 end
 
+task.spawn(function()
+	pcall(function()
+		if game.PlaceId == 3623096087 then
+			if game.Workspace:FindFirstChild("RobloxForwardPortals") then
+				game.Workspace.RobloxForwardPortals:Destroy()
+			end
+		end
+	end)
+end)
+
 local ProtectGui = protectgui or (syn and syn.protect_gui) or function(f) end
 
 local Themes = {
