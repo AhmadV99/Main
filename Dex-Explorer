@@ -483,8 +483,7 @@ local function main()
 			{5,"Frame",{BackgroundColor3=Color3.new(1,1,1),BorderSizePixel=0,Name="Line",Parent={1},Position=UDim2.new(1,-1,0,0),Size=UDim2.new(0,1,1,0),ZIndex=2,}},
 		})
 		dragOutline.Parent = treeFrame
-
-
+		
 		local mouse = Main.Mouse or service.Players.LocalPlayer:GetMouse()
 		local function move()
 			local posX = mouse.X - offX
@@ -568,7 +567,7 @@ local function main()
 		end)
 
 		newEntry.MouseButton1Up:Connect(function()
-
+		  
 		end)
 
 		newEntry.InputBegan:Connect(function(input)
@@ -599,12 +598,13 @@ local function main()
 							releaseEvent:Disconnect()
 							mouseEvent:Disconnect()
 							isRenaming = false
-							Explorer.StartDrag(listOffsetX,listOffsetY)
+							Explorer.StartDrag(listOffsetX, listOffsetY)
 						end
 					end
 				end)
 			end
 		end)
+
 
 		newEntry.MouseButton2Down:Connect(function()
 
@@ -659,14 +659,9 @@ local function main()
 				entry.Indent.Size = UDim2.new(1,-depth,1,0)
 
 				entry.Indent.EntryName.TextTruncate = (Settings.Explorer.UseNameWidth and Enum.TextTruncate.None or Enum.TextTruncate.AtEnd)
-
-				if (isa(obj,"LocalScript") or isa(obj,"Script")) and obj.Disabled then
-					Explorer.MiscIcons:DisplayByKey(entry.Indent.Icon, isa(obj,"LocalScript") and "LocalScript_Disabled" or "Script_Disabled")
-				else
-					local rmdEntry = RMD.Classes[obj.ClassName]
-					Explorer.ClassIcons:Display(entry.Indent.Icon, rmdEntry and rmdEntry.ExplorerImageIndex or 0)
-				end
-
+				
+				Explorer.MiscIcons:DisplayExplorerIcons(entry.Indent.Icon, obj.ClassName)
+				
 				if selection.Map[node] then
 					entry.Indent.BackgroundColor3 = Settings.Theme.ListSelection
 					entry.Indent.BorderSizePixel = 0
@@ -1310,7 +1305,7 @@ local function main()
 		context:Register("HIDE_NIL",{Name = "Hide Nil Instances", OnClick = function()
 			Explorer.HideNilInstances()
 		end})
-
+		
 		Explorer.RightClickContext = context
 	end
 
@@ -1534,7 +1529,7 @@ local function main()
 
 				return {
 					Headers = {"local isa = game.IsA"},
-					Predicate = "isa(obj,'"..className.."')"
+					Predicate = "isa(obj,'" .. className .. "')"
 				}
 			end,
 			["remotes"] = function(argString)
@@ -1812,7 +1807,7 @@ return search]==]
 			local tostring = tostring
 
 			local lowerQuery = lower(query)
-
+		  
 			local function defaultSearch(root)
 				local expandedpar = false
 				for i = 1,#root do
@@ -1976,7 +1971,7 @@ return search]==]
 
 			Explorer.Refresh()
 		end)
-
+		
 		sys.OnRelease:Connect(function(item,combo,button)
 			local ind = table.find(listEntries,item)
 			if not ind then return end
@@ -1990,7 +1985,7 @@ return search]==]
 					selection.Piviot = node
 					Explorer.Refresh()
 				end
-
+				
 				local id = sys.ClickId
 				Lib.FastWait(sys.ComboTime)
 				if combo == 1 and id == sys.ClickId and sys.IsRenaming and selection.Map[node] then
@@ -2119,16 +2114,16 @@ return search]==]
 	end
 
 	Explorer.Init = function()
-		Explorer.ClassIcons = Lib.IconMap.newLinear("rbxasset://textures/ClassImages.png",16,16)
+		Explorer.ClassIcons = Lib.IconMap.newLinear("rbxasset://textures/ClassImages.png", 16, 16)
 		Explorer.MiscIcons = Main.MiscIcons
-
+		
 		clipboard = {}
-
+		
 		selection = Lib.Set.new()
 		selection.ShiftSet = {}
 		selection.Changed:Connect(Properties.ShowExplorerProps)
 		Explorer.Selection = selection
-
+		
 		Explorer.InitRightClick()
 		Explorer.InitInsertObject()
 		Explorer.SetSortingEnabled(Settings.Explorer.Sorting)
@@ -2858,7 +2853,7 @@ local function main()
 			result[2] = makeSubProp(prop,".Y",{Name = "bool"})
 			result[3] = makeSubProp(prop,".Z",{Name = "bool"})
 		end
-
+		
 		if prop.Name == "SoundId" and prop.Class == "Sound" then
 			result[1] = Properties.SoundPreviewProp
 		end
@@ -3027,7 +3022,7 @@ local function main()
 		valueFrame.ValueBox.MouseButton1Down:Connect(function()
 			local prop = viewList[index + Properties.Index]
 			if not prop then return end
-
+			
 			Properties.SetInputProp(prop,index)
 		end)
 
@@ -3312,7 +3307,7 @@ local function main()
 
 		return typeName ~= "bool" and typeData.Category ~= "Enum" and typeData.Category ~= "Class" and typeName ~= "BrickColor"
 	end
-
+	
 	Properties.DisplayEnumDropdown = function(entryIndex)
 		local context = Properties.EnumContext
 		if not context then
@@ -3626,7 +3621,7 @@ local function main()
 			valueBox.Visible = true
 			checkbox.Visible = false
 			soundPreview.Visible = false
-
+			
 			if propVal ~= nil then
 				if typeName == "Color3" then
 					valueBox.Text = "["..Lib.ColorToBytes(propVal).."]"
@@ -4212,23 +4207,23 @@ local function main()
 	ScriptViewer.ViewScript = function(scr)
 		local success, source = pcall(env.decompile or function() end, scr)
 		if not success or not source then source, PreviousScr = "-- DEX - Source failed to decompile", nil else PreviousScr = scr end
-		codeFrame:SetText(source:gsub("\0", "\\0")) -- Fix stupid breaking script viewer
+		codeFrame:SetText(source:gsub("\0", "\\0"))
 		window:Show()
 	end
 
 	ScriptViewer.Init = function()
 		window = Lib.Window.new()
 		window:SetTitle("Script Viewer")
-		window:Resize(500,400)
+		window:Resize(500, 400)
 		ScriptViewer.Window = window
-
+		
 		codeFrame = Lib.CodeFrame.new()
 		codeFrame.Frame.Position = UDim2.new(0,0,0,20)
 		codeFrame.Frame.Size = UDim2.new(1,0,1,-20)
 		codeFrame.Frame.Parent = window.GuiElems.Content
-
+		
 		-- TODO: REMOVE AND MAKE BETTER
-		local copy = Instance.new("TextButton",window.GuiElems.Content)
+		local copy = Instance.new("TextButton", window.GuiElems.Content)
 		copy.BackgroundTransparency = 1
 		copy.Size = UDim2.new(0.5,0,0,20)
 		copy.Text = "Copy to Clipboard"
@@ -4262,7 +4257,7 @@ local function main()
 		dumpbtn.Size = UDim2.new(0.3,0,0,20)
 		dumpbtn.Text = "Dump Functions"
 		dumpbtn.TextColor3 = Color3.new(1,1,1)
-
+		
 		dumpbtn.MouseButton1Click:Connect(function()
 			if PreviousScr ~= nil then
 				pcall(function()
@@ -4775,17 +4770,17 @@ local function main()
 	end
 
 	Lib.ProtectedGuis = {}
-
-    Lib.ShowGui = function(gui)
-        if env.gethui then
-            gui.Parent = env.gethui()
-        elseif env.protectgui then
-            env.protectgui(gui)
-            gui.Parent = Main.GuiHolder
-        else
-            gui.Parent = Main.GuiHolder
-        end
-    end
+	
+	Lib.ShowGui = function(gui)
+	  if env.gethui then
+	    gui.Parent = env.gethui()
+	  elseif env.protectgui then
+	    env.protectgui(gui)
+	    gui.Parent = Main.GuiHolder
+	  else
+	    gui.Parent = Main.GuiHolder
+	  end
+	end
 
 	Lib.ColorToBytes = function(col)
 		local round = math.round
@@ -4962,7 +4957,215 @@ local function main()
 
 	Lib.IconMap = (function()
 		local funcs = {}
-
+		local _MapId, _Icons = (483448923), {
+    	["Accessory"] = 32;
+    	["Accoutrement"] = 32;
+    	["AdService"] = 73;
+    	["Animation"] = 60;
+    	["AnimationController"] = 60;
+    	["AnimationTrack"] = 60;
+    	["Animator"] = 60;
+    	["ArcHandles"] = 56;
+    	["AssetService"] = 72;
+    	["Attachment"] = 34;
+    	["Backpack"] = 20;
+    	["BadgeService"] = 75;
+    	["BallSocketConstraint"] = 89;
+    	["BillboardGui"] = 64;
+    	["BinaryStringValue"] = 4;
+    	["BindableEvent"] = 67;
+    	["BindableFunction"] = 66;
+    	["BlockMesh"] = 8;
+    	["BloomEffect"] = 90;
+    	["BlurEffect"] = 90;
+    	["BodyAngularVelocity"] = 14;
+    	["BodyForce"] = 14;
+    	["BodyGyro"] = 14;
+    	["BodyPosition"] = 14;
+    	["BodyThrust"] = 14;
+    	["BodyVelocity"] = 14;
+    	["BoolValue"] = 4;
+    	["BoxHandleAdornment"] = 54;
+    	["BrickColorValue"] = 4;
+    	["Camera"] = 5;
+    	["CFrameValue"] = 4;
+    	["CharacterMesh"] = 60;
+    	["Chat"] = 33;
+    	["ClickDetector"] = 41;
+    	["CollectionService"] = 30;
+    	["Color3Value"] = 4;
+    	["ColorCorrectionEffect"] = 90;
+    	["ConeHandleAdornment"] = 54;
+    	["Configuration"] = 58;
+    	["ContentProvider"] = 72;
+    	["ContextActionService"] = 41;
+    	["CoreGui"] = 46;
+    	["CoreScript"] = 18;
+    	["CornerWedgePart"] = 1;
+    	["CustomEvent"] = 4;
+    	["CustomEventReceiver"] = 4;
+    	["CylinderHandleAdornment"] = 54;
+    	["CylinderMesh"] = 8;
+    	["CylindricalConstraint"] = 89;
+    	["Debris"] = 30;
+    	["Decal"] = 7;
+    	["Dialog"] = 62;
+    	["DialogChoice"] = 63;
+    	["DoubleConstrainedValue"] = 4;
+    	["Explosion"] = 36;
+    	["FileMesh"] = 8;
+    	["Fire"] = 61;
+    	["Flag"] = 38;
+    	["FlagStand"] = 39;
+    	["FloorWire"] = 4;
+    	["Folder"] = 70;
+    	["ForceField"] = 37;
+    	["Frame"] = 48;
+    	["GamePassService"] = 19;
+    	["Glue"] = 34;
+    	["GuiButton"] = 52;
+    	["GuiMain"] = 47;
+    	["GuiService"] = 47;
+    	["Handles"] = 53;
+    	["HapticService"] = 84;
+    	["Hat"] = 45;
+    	["HingeConstraint"] = 89;
+    	["Hint"] = 33;
+    	["HopperBin"] = 22;
+    	["HttpService"] = 76;
+    	["Humanoid"] = 9;
+    	["ImageButton"] = 52;
+    	["ImageLabel"] = 49;
+    	["InsertService"] = 72;
+    	["IntConstrainedValue"] = 4;
+    	["IntValue"] = 4;
+    	["JointInstance"] = 34;
+    	["JointsService"] = 34;
+    	["Keyframe"] = 60;
+    	["KeyframeSequence"] = 60;
+    	["KeyframeSequenceProvider"] = 60;
+    	["Lighting"] = 13;
+    	["LineHandleAdornment"] = 54;
+    	["LocalScript"] = 18;
+    	["LogService"] = 87;
+    	["MarketplaceService"] = 46;
+    	["Message"] = 33;
+    	["Model"] = 2;
+    	["ModuleScript"] = 71;
+    	["Motor"] = 34;
+    	["Motor6D"] = 34;
+    	["MoveToConstraint"] = 89;
+    	["NegateOperation"] = 78;
+    	["NetworkClient"] = 16;
+    	["NetworkReplicator"] = 29;
+    	["NetworkServer"] = 15;
+    	["NumberValue"] = 4;
+    	["ObjectValue"] = 4;
+    	["Pants"] = 44;
+    	["ParallelRampPart"] = 1;
+    	["Part"] = 1;
+    	["ParticleEmitter"] = 69;
+    	["PartPairLasso"] = 57;
+    	["PathfindingService"] = 37;
+    	["Platform"] = 35;
+    	["Player"] = 12;
+    	["PlayerGui"] = 46;
+    	["Players"] = 21;
+    	["PlayerScripts"] = 82;
+    	["PointLight"] = 13;
+    	["PointsService"] = 83;
+    	["Pose"] = 60;
+    	["PrismaticConstraint"] = 89;
+    	["PrismPart"] = 1;
+    	["PyramidPart"] = 1;
+    	["RayValue"] = 4;
+    	["ReflectionMetadata"] = 86;
+    	["ReflectionMetadataCallbacks"] = 86;
+    	["ReflectionMetadataClass"] = 86;
+    	["ReflectionMetadataClasses"] = 86;
+    	["ReflectionMetadataEnum"] = 86;
+    	["ReflectionMetadataEnumItem"] = 86;
+    	["ReflectionMetadataEnums"] = 86;
+    	["ReflectionMetadataEvents"] = 86;
+    	["ReflectionMetadataFunctions"] = 86;
+    	["ReflectionMetadataMember"] = 86;
+    	["ReflectionMetadataProperties"] = 86;
+    	["ReflectionMetadataYieldFunctions"] = 86;
+    	["RemoteEvent"] = 80;
+    	["RemoteFunction"] = 79;
+    	["ReplicatedFirst"] = 72;
+    	["ReplicatedStorage"] = 72;
+    	["RightAngleRampPart"] = 1;
+    	["RocketPropulsion"] = 14;
+    	["RodConstraint"] = 89;
+    	["RopeConstraint"] = 89;
+    	["Rotate"] = 34;
+    	["RotateP"] = 34;
+    	["RotateV"] = 34;
+    	["RunService"] = 66;
+    	["ScreenGui"] = 47;
+    	["Script"] = 6;
+    	["ScrollingFrame"] = 48;
+    	["Seat"] = 35;
+    	["Selection"] = 55;
+    	["SelectionBox"] = 54;
+    	["SelectionPartLasso"] = 57;
+    	["SelectionPointLasso"] = 57;
+    	["SelectionSphere"] = 54;
+    	["ServerScriptService"] = 0;
+    	["ServerStorage"] = 74;
+    	["Shirt"] = 43;
+    	["ShirtGraphic"] = 40;
+    	["SkateboardPlatform"] = 35;
+    	["Sky"] = 28;
+    	["SlidingBallConstraint"] = 89;
+    	["Smoke"] = 59;
+    	["Snap"] = 34;
+    	["Sound"] = 11;
+    	["SoundService"] = 31;
+    	["Sparkles"] = 42;
+    	["SpawnLocation"] = 25;
+    	["SpecialMesh"] = 8;
+    	["SphereHandleAdornment"] = 54;
+    	["SpotLight"] = 13;
+    	["SpringConstraint"] = 89;
+    	["StarterCharacterScripts"] = 82;
+    	["StarterGear"] = 20;
+    	["StarterGui"] = 46;
+    	["StarterPack"] = 20;
+    	["StarterPlayer"] = 88;
+    	["StarterPlayerScripts"] = 82;
+    	["Status"] = 2;
+    	["StringValue"] = 4;
+    	["SunRaysEffect"] = 90;
+    	["SurfaceGui"] = 64;
+    	["SurfaceLight"] = 13;
+    	["SurfaceSelection"] = 55;
+    	["Team"] = 24;
+    	["Teams"] = 23;
+    	["TeleportService"] = 81;
+    	["Terrain"] = 65;
+    	["TerrainRegion"] = 65;
+    	["TestService"] = 68;
+    	["TextBox"] = 51;
+    	["TextButton"] = 51;
+    	["TextLabel"] = 50;
+    	["Texture"] = 10;
+    	["TextureTrail"] = 4;
+    	["Tool"] = 17;
+    	["TouchTransmitter"] = 37;
+    	["TrussPart"] = 1;
+    	["UnionOperation"] = 77;
+    	["UserInputService"] = 84;
+    	["Vector3Value"] = 4;
+    	["VehicleSeat"] = 35;
+    	["VelocityMotor"] = 34;
+    	["WedgePart"] = 1;
+    	["Weld"] = 34;
+    	["Workspace"] = 19;
+		
+		}
+		
 		funcs.GetLabel = function(self)
 			local label = Instance.new("ImageLabel")
 			self:SetupLabel(label)
@@ -4971,10 +5174,10 @@ local function main()
 
 		funcs.SetupLabel = function(self,obj)
 			obj.BackgroundTransparency = 1
-			obj.ImageRectOffset = Vector2.new(0,0)
-			obj.ImageRectSize = Vector2.new(self.IconSizeX,self.IconSizeY)
+			obj.ImageRectOffset = Vector2.new(0, 0)
+			obj.ImageRectSize = Vector2.new(self.IconSizeX, self.IconSizeY)
 			obj.ScaleType = Enum.ScaleType.Crop
-			obj.Size = UDim2.new(0,self.IconSizeX,0,self.IconSizeY)
+			obj.Size = UDim2.new(0, self.IconSizeX, 0, self.IconSizeY)
 		end
 
 		funcs.Display = function(self,obj,index)
@@ -4982,20 +5185,52 @@ local function main()
 			if not self.NumX then
 				obj.ImageRectOffset = Vector2.new(self.IconSizeX*index, 0)
 			else
-				obj.ImageRectOffset = Vector2.new(self.IconSizeX*(index % self.NumX), self.IconSizeY*math.floor(index / self.NumX))	
+				obj.ImageRectOffset = Vector2.new(self.IconSizeX*(index % self.NumX), self.IconSizeY*math.floor(index / self.NumX))
 			end
 		end
 
 		funcs.DisplayByKey = function(self,obj,key)
 			if self.IndexDict[key] then
-				self:Display(obj,self.IndexDict[key])
+				self:Display(obj, self.IndexDict[key])
+      else
+        local rmdEntry = RMD.Classes[obj.ClassName]
+        Explorer.ClassIcons:Display(obj, rmdEntry and rmdEntry.ExplorerImageIndex or 0)
 			end
+		end
+		
+		funcs.IconDehash = function(self, _id)
+		  return math.floor(_id / 14 % 14), math.floor(_id % 14)
+		end
+		
+		funcs.GetExplorerIcon = function(self, obj, index)
+		  index = (_Icons[index] or 0)
+      local row, col = self:IconDehash(index)
+      local MapSize = Vector2.new(256, 256)
+      local pad, border = 2, 1
+      local IconSize = 16
+      
+      obj.Position = UDim2.new(-col - (pad * (col + 1) + border) / IconSize, 0, -row - (pad * (row + 1) + border) / IconSize, 0)
+			obj.Size = UDim2.new(MapSize.X / IconSize, 0, MapSize.Y / IconSize, 0)
+		end
+		
+    funcs.DisplayExplorerIcons = function(self, Frame, index)
+      if Frame:FindFirstChild("IconMap") then
+        self:GetExplorerIcon(Frame.IconMap, index)
+      else
+        Frame.ClipsDescendants = true
+        
+        local obj = Instance.new("ImageLabel", Frame)
+        obj.BackgroundTransparency = 1
+        obj.Image = ("http://www.roblox.com/asset/?id=" .. _MapId)
+        obj.Name = "IconMap"
+        self:GetExplorerIcon(obj, index)
+      end
 		end
 
 		funcs.SetDict = function(self,dict)
 			self.IndexDict = dict
 		end
-
+		
 		local mt = {}
 		mt.__index = funcs
 
@@ -5008,7 +5243,7 @@ local function main()
 				IconSizeY = iconSizeY,
 				NumX = mapSizeX/iconSizeX,
 				IndexDict = {}
-			},mt)
+			}, mt)
 			return obj
 		end
 
@@ -5066,8 +5301,7 @@ local function main()
 
 		local function createFrame(self)
 			local newFrame = createSimple("Frame",{Style=0,Active=true,AnchorPoint=Vector2.new(0,0),BackgroundColor3=Color3.new(0.35294118523598,0.35294118523598,0.35294118523598),BackgroundTransparency=0,BorderColor3=Color3.new(0.10588236153126,0.16470588743687,0.20784315466881),BorderSizePixel=0,ClipsDescendants=false,Draggable=false,Position=UDim2.new(1,-16,0,0),Rotation=0,Selectable=false,Size=UDim2.new(0,16,1,0),SizeConstraint=0,Visible=true,ZIndex=1,Name="ScrollBar",})
-			local button1 = nil
-			local button2 = nil
+			local button1, button2
 
 			if self.Horizontal then
 				newFrame.Size = UDim2.new(1,0,0,16)
@@ -5113,7 +5347,7 @@ local function main()
 				createArrow(16,4,"down").Parent = button2
 			end
 
-			local scrollThumbFrame = createSimple("Frame",{
+			local scrollThumbFrame = createSimple("ImageButton", {
 				BackgroundTransparency = 1,
 				Parent = newFrame
 			})
@@ -5124,14 +5358,14 @@ local function main()
 				scrollThumbFrame.Position = UDim2.new(0,0,0,16)
 				scrollThumbFrame.Size = UDim2.new(1,0,1,-32)
 			end
-
-			local scrollThumb = createSimple("Frame",{
+			
+			local scrollThumb = createSimple("Frame", {
 				BackgroundColor3 = Color3.new(120/255,120/255,120/255),
 				BorderSizePixel = 0,
 				Parent = scrollThumbFrame
 			})
-
-			local markerFrame = createSimple("Frame",{
+			
+			local markerFrame = createSimple("Frame", {
 				BackgroundTransparency = 1,
 				Name = "Markers",
 				Size = UDim2.new(1,0,1,0),
@@ -5141,148 +5375,91 @@ local function main()
 			local buttonPress = false
 			local thumbPress = false
 			local thumbFramePress = false
-
-			--local thumbColor = Color3.new(120/255,120/255,120/255)
-			--local thumbSelectColor = Color3.new(140/255,140/255,140/255)
-			button1.InputBegan:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseMovement and not buttonPress and self:CanScrollUp() then button1.BackgroundTransparency = 0.8 end
-				if input.UserInputType ~= Enum.UserInputType.MouseButton1 or not self:CanScrollUp() then return end
-				buttonPress = true
-				button1.BackgroundTransparency = 0.5
-				if self:CanScrollUp() then self:ScrollUp() self.Scrolled:Fire() end
-				local buttonTick = tick()
-				local releaseEvent
-				releaseEvent = user.InputEnded:Connect(function(input)
-					if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
-					releaseEvent:Disconnect()
-					if checkMouseInGui(button1) and self:CanScrollUp() then button1.BackgroundTransparency = 0.8 else button1.BackgroundTransparency = 1 end
-					buttonPress = false
-				end)
-				while buttonPress do
-					if tick() - buttonTick >= 0.3 and self:CanScrollUp() then
-						self:ScrollUp()
-						self.Scrolled:Fire()
-					end
-					wait()
+			
+      button1.MouseButton1Down:Connect(function()
+        if self:CanScrollUp() then
+          self:ScrollUp()self.Scrolled:Fire()
+          
+          self.Button1Down = tick()
+          local Connection = button1.MouseButton1Up:Connect(function()
+            self.Button1Down = false
+          end)
+          
+          while self.Button1Down do task.wait(0.3)
+            if self.Button1Down then
+              self:ScrollUp()self.Scrolled:Fire()
+            end
+          end
+          
+          Connection:Disconnect()
+        end
+      end)
+      
+      button2.MouseButton1Down:Connect(function()
+        if self:CanScrollDown() then
+          self:ScrollDown()self.Scrolled:Fire()
+          
+          self.Button2Down = tick()
+          local Connection = button2.MouseButton1Up:Connect(function()
+            self.Button2Down = false
+          end)
+          
+          while self.Button2Down do task.wait(0.3)
+            if self.Button2Down then
+              self:ScrollDown()self.Scrolled:Fire()
+            end
+          end
+          
+          Connection:Disconnect()
+        end
+      end)
+      
+      --[[scrollThumb.MouseButton1Down:Connect(function()
+        local Direction = ((self.Horizontal and "X") or "Y")
+        self.ScrollBDown = tick()
+        
+        local Connection = scrollThumb.MouseButton1Up:Connect(function()
+          self.ScrollBDown = false
+        end)
+        
+        while self.ScrollBDown do task.wait()
+          if (tick() - self.ScrollBDown) >= 0.5 then
+            self:ScrollTo(math.floor(mouse[Direction]))
+          end
+        end
+        
+        Connection:Disconnect()
+      end)]]
+      
+      scrollThumbFrame.MouseButton1Down:Connect(function()
+        local dir, ScrollDirection = self.Horizontal and "X" or "Y", 0
+        
+				if mouse[dir] >= (scrollThumb.AbsolutePosition[dir] + scrollThumb.AbsoluteSize[dir]) then
+					ScrollDirection = 1
 				end
-			end)
-			button1.InputEnded:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseMovement and not buttonPress then button1.BackgroundTransparency = 1 end
-			end)
-			button2.InputBegan:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseMovement and not buttonPress and self:CanScrollDown() then button2.BackgroundTransparency = 0.8 end
-				if input.UserInputType ~= Enum.UserInputType.MouseButton1 or not self:CanScrollDown() then return end
-				buttonPress = true
-				button2.BackgroundTransparency = 0.5
-				if self:CanScrollDown() then self:ScrollDown() self.Scrolled:Fire() end
-				local buttonTick = tick()
-				local releaseEvent
-				releaseEvent = user.InputEnded:Connect(function(input)
-					if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
-					releaseEvent:Disconnect()
-					if checkMouseInGui(button2) and self:CanScrollDown() then button2.BackgroundTransparency = 0.8 else button2.BackgroundTransparency = 1 end
-					buttonPress = false
-				end)
-				while buttonPress do
-					if tick() - buttonTick >= 0.3 and self:CanScrollDown() then
-						self:ScrollDown()
-						self.Scrolled:Fire()
-					end
-					wait()
-				end
-			end)
-			button2.InputEnded:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseMovement and not buttonPress then button2.BackgroundTransparency = 1 end
-			end)
-
-			scrollThumb.InputBegan:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseMovement and not thumbPress then scrollThumb.BackgroundTransparency = 0.2 scrollThumb.BackgroundColor3 = self.ThumbSelectColor end
-				if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
-
-				local dir = self.Horizontal and "X" or "Y"
-				local lastThumbPos = nil
-
-				buttonPress = false
-				thumbFramePress = false			
-				thumbPress = true
-				scrollThumb.BackgroundTransparency = 0
-				local mouseOffset = mouse[dir] - scrollThumb.AbsolutePosition[dir]
-				local mouseStart = mouse[dir]
-				local releaseEvent
-				local mouseEvent
-				releaseEvent = user.InputEnded:Connect(function(input)
-					if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
-					releaseEvent:Disconnect()
-					if mouseEvent then mouseEvent:Disconnect() end
-					if checkMouseInGui(scrollThumb) then scrollThumb.BackgroundTransparency = 0.2 else scrollThumb.BackgroundTransparency = 0 scrollThumb.BackgroundColor3 = self.ThumbColor end
-					thumbPress = false
-				end)
-				self:Update()
-
-				mouseEvent = user.InputChanged:Connect(function(input)
-					if input.UserInputType == Enum.UserInputType.MouseMovement and thumbPress and releaseEvent.Connected then
-						local thumbFrameSize = scrollThumbFrame.AbsoluteSize[dir]-scrollThumb.AbsoluteSize[dir]
-						local pos = mouse[dir] - scrollThumbFrame.AbsolutePosition[dir] - mouseOffset
-						if pos > thumbFrameSize then
-							pos = thumbFrameSize
-						elseif pos < 0 then
-							pos = 0
-						end
-						if lastThumbPos ~= pos then
-							lastThumbPos = pos
-							self:ScrollTo(math.floor(0.5+pos/thumbFrameSize*(self.TotalSpace-self.VisibleSpace)))
-						end
-						wait()
-					end
-				end)
-			end)
-			scrollThumb.InputEnded:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseMovement and not thumbPress then scrollThumb.BackgroundTransparency = 0 scrollThumb.BackgroundColor3 = self.ThumbColor end
-			end)
-			scrollThumbFrame.InputBegan:Connect(function(input)
-				if input.UserInputType ~= Enum.UserInputType.MouseButton1 or checkMouseInGui(scrollThumb) then return end
-
-				local dir = self.Horizontal and "X" or "Y"
-				local scrollDir = 0
-				if mouse[dir] >= scrollThumb.AbsolutePosition[dir] + scrollThumb.AbsoluteSize[dir] then
-					scrollDir = 1
-				end
-
+				
 				local function doTick()
 					local scrollSize = self.VisibleSpace - 1
-					if scrollDir == 0 and mouse[dir] < scrollThumb.AbsolutePosition[dir] then
-						self:ScrollTo(self.Index - scrollSize)
-					elseif scrollDir == 1 and mouse[dir] >= scrollThumb.AbsolutePosition[dir] + scrollThumb.AbsoluteSize[dir] then
-						self:ScrollTo(self.Index + scrollSize)
+					if ScrollDirection == 0 and mouse[dir] < scrollThumb.AbsolutePosition[dir] then
+						self:ScrollTo(self.Index - (self.Increment * 5))
+					elseif ScrollDirection == 1 and mouse[dir] >= scrollThumb.AbsolutePosition[dir] + scrollThumb.AbsoluteSize[dir] then
+						self:ScrollTo(self.Index + (self.Increment * 5))
 					end
 				end
-
-				thumbPress = false			
-				thumbFramePress = true
+				
 				doTick()
-				local thumbFrameTick = tick()
-				local releaseEvent
-				releaseEvent = user.InputEnded:Connect(function(input)
-					if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
-					releaseEvent:Disconnect()
-					thumbFramePress = false
+				local Connecion = scrollThumbFrame.MouseButton1Up:Connect(function()
+				  self.ScrollBDown = false
 				end)
-				while thumbFramePress do
-					if tick() - thumbFrameTick >= 0.3 and checkMouseInGui(scrollThumbFrame) then
-						doTick()
-					end
-					wait()
-				end
-			end)
-
-			newFrame.MouseWheelForward:Connect(function()
-				self:ScrollTo(self.Index - self.WheelIncrement)
-			end)
-
-			newFrame.MouseWheelBackward:Connect(function()
-				self:ScrollTo(self.Index + self.WheelIncrement)
-			end)
-
+				
+				self.ScrollBDown = tick()
+        while self.ScrollBDown do task.wait()
+          if (tick() - self.ScrollBDown) >= 0.3 then doTick() end
+        end
+        
+        Connecion:Disconnect()
+      end)
+			
 			self.GuiElems.ScrollThumb = scrollThumb
 			self.GuiElems.ScrollThumbFrame = scrollThumbFrame
 			self.GuiElems.Button1 = button1
@@ -5299,8 +5476,8 @@ local function main()
 			local button1 = self.GuiElems.Button1
 			local button2 = self.GuiElems.Button2
 
-			self.Index = math.clamp(self.Index,0,math.max(0,total-visible))
-
+			self.Index = math.clamp(self.Index, 0, math.max(0, total - visible))
+			
 			if self.LastTotalSpace ~= self.TotalSpace then
 				self.LastTotalSpace = self.TotalSpace
 				self:UpdateMarkers()
@@ -5336,7 +5513,7 @@ local function main()
 
 			for i,v in pairs(self.Markers) do
 				if i < self.TotalSpace then
-					createSimple("Frame",{
+					createSimple("Frame", {
 						BackgroundTransparency = 0,
 						BackgroundColor3 = v,
 						BorderSizePixel = 0,
@@ -5352,7 +5529,7 @@ local function main()
 		funcs.AddMarker = function(self,ind,color)
 			self.Markers[ind] = color or Color3.new(0,0,0)
 		end
-		funcs.ScrollTo = function(self,ind,nocallback)
+		funcs.ScrollTo = function(self, ind, nocallback)
 			self.Index = ind
 			self:Update()
 			if not nocallback then
@@ -5437,11 +5614,11 @@ local function main()
 		local funcs = {}
 		local static = {MinWidth = 200, FreeWidth = 200}
 		local mouse = plr:GetMouse()
-		local sidesGui,alignIndicator
+		local sidesGui, alignIndicator
 		local visibleWindows = {}
 		local leftSide = {Width = 300, Windows = {}, ResizeCons = {}, Hidden = true}
 		local rightSide = {Width = 300, Windows = {}, ResizeCons = {}, Hidden = true}
-
+		
 		local displayOrderStart
 		local sideDisplayOrder
 		local sideTweenInfo = TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out)
@@ -5453,7 +5630,7 @@ local function main()
 			MainColor2 = Color3.fromRGB(45,45,45),
 			Button = Color3.fromRGB(60,60,60)
 		}
-
+		
 		local function stopTweens()
 			for i = 1,#tweens do
 				tweens[i]:Cancel()
@@ -5599,11 +5776,11 @@ local function main()
 				{21,"TextButton",{AutoButtonColor=false,BackgroundColor3=Color3.new(0.27450981736183,0.27450981736183,0.27450981736183),BackgroundTransparency=1,BorderSizePixel=0,Font=3,Name="NorthWest",Parent={14},Size=UDim2.new(0,5,0,5),Text="",TextColor3=Color3.new(0,0,0),TextSize=14,}},
 				{22,"TextButton",{AutoButtonColor=false,BackgroundColor3=Color3.new(0.27450981736183,0.27450981736183,0.27450981736183),BackgroundTransparency=1,BorderSizePixel=0,Font=3,Name="SouthWest",Parent={14},Position=UDim2.new(0,0,1,-5),Size=UDim2.new(0,5,0,5),Text="",TextColor3=Color3.new(0,0,0),TextSize=14,}},
 			})
-
+			
 			local guiMain = gui.Main
 			local guiTopBar = guiMain.TopBar
 			local guiResizeControls = guiMain.ResizeControls
-
+			
 			self.GuiElems.Main = guiMain
 			self.GuiElems.TopBar = guiMain.TopBar
 			self.GuiElems.Content = guiMain.Content
@@ -6215,7 +6392,7 @@ local function main()
 				end
 				return
 			end
-
+			
 			window.Closed = false
 			window.LastClose = tick()
 			window.GuiElems.Title.TextTransparency = 0
@@ -8069,7 +8246,7 @@ local function main()
 
 		local function initGui(self,frame)
 			local checkbox = frame or create({
-				{1,"Frame",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,BorderSizePixel=0,Name="Checkbox",Position=UDim2.new(0,3,0,3),Size=UDim2.new(0,16,0,16),}},
+				{1,"ImageButton",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,BorderSizePixel=0,Name="Checkbox",Position=UDim2.new(0,3,0,3),Size=UDim2.new(0,16,0,16),}},
 				{2,"Frame",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,BorderSizePixel=0,Name="ripples",Parent={1},Size=UDim2.new(1,0,1,0),}},
 				{3,"Frame",{BackgroundColor3=Color3.new(0.10196078568697,0.10196078568697,0.10196078568697),BorderSizePixel=0,Name="outline",Parent={1},Size=UDim2.new(0,16,0,16),}},
 				{4,"Frame",{BackgroundColor3=Color3.new(0.14117647707462,0.14117647707462,0.14117647707462),BorderSizePixel=0,Name="filler",Parent={3},Position=UDim2.new(0,1,0,1),Size=UDim2.new(0,14,0,14),}},
@@ -8103,8 +8280,25 @@ local function main()
 				Checkmark2 = filler.checkmark2,
 				Middle = filler.middle
 			}
-
-			checkbox.InputBegan:Connect(function(i)
+			
+			checkbox.Activated:Connect(function()
+			  if Lib.CheckMouseInGui(checkbox) then
+			    if self.Style == 0 then
+			      ripple(ripples_container, self.Disabled and self.Colors.Disabled or self.Colors.Primary)
+			    end
+			    
+			    if not self.Disabled then
+			      self:SetState(not self.Toggled,true)
+			    else
+			      self:Paint()
+			    end
+			    
+			    self.OnInput:Fire()
+			  end
+			end)
+			
+			-- Old:
+			--[[checkbox.InputBegan:Connect(function(i)
 				if i.UserInputType == Enum.UserInputType.MouseButton1 then
 					local release
 					release = service.UserInputService.InputEnded:Connect(function(input)
@@ -8121,14 +8315,14 @@ local function main()
 								else
 									self:Paint()
 								end
-
+								
 								self.OnInput:Fire()
 							end
 						end
 					end)
 				end
-			end)
-
+			end)]]
+			
 			self:Paint()
 		end
 
@@ -8423,7 +8617,7 @@ local function main()
 				OnCancel = Lib.Signal.new(),
 				OnMoreColors = Lib.Signal.new(),
 				PrevColor = Color3.new(0,0,0)
-			},mt)
+			}, mt)
 			createGui(obj)
 			return obj
 		end
@@ -9900,11 +10094,11 @@ local function main()
 			local obj = initObj(props,mt)
 			obj.Gui = b
 			obj.Anim = Lib.ButtonAnim(b,{Mode = 2, StartColor = Settings.Theme.Button, HoverColor = Settings.Theme.ButtonHover, PressColor = Settings.Theme.ButtonPress, OutlineColor = Settings.Theme.Outline2})
-
+			
 			b.MouseButton1Click:Connect(function() obj:Trigger("Click",1) end)
 			b.MouseButton1Down:Connect(function() obj:Trigger("Down",1) end)
 			b.MouseButton1Up:Connect(function() obj:Trigger("Up",1) end)
-
+			
 			b.MouseButton2Click:Connect(function() obj:Trigger("Click",2) end)
 			b.MouseButton2Down:Connect(function() obj:Trigger("Down",2) end)
 			b.MouseButton2Up:Connect(function() obj:Trigger("Up",2) end)
@@ -10041,27 +10235,50 @@ local function main()
 			local pos = table.find(con.Signal.Connections,con)
 			if pos then table.remove(con.Signal.Connections,pos) end
 		end
-
-		funcs.Trigger = function(self,item,button)
-			if table.find(self.AllowedButtons,button) then
+		
+		funcs.Trigger = function(self, item, button)
+			if table.find(self.AllowedButtons, button) then
 				if self.LastButton ~= button or self.LastItem ~= item or self.Combo == self.MaxCombo or tick() - self.ClickId > self.ComboTime then
 					self.Combo = 0
 					self.LastButton = button
 					self.LastItem = item
 				end
-				self.Combo = self.Combo + 1
-				self.ClickId = tick()
-
+				
+        self.Combo = self.Combo + 1
+        self.ClickId = tick()
+        
+        task.spawn(function()
+          if self.InputDown then
+            self.InputDown = false
+          else
+            self.InputDown = tick()
+            
+            local Connection = item.MouseButton1Up:Connect(function()
+  				    self.InputDown = false
+  				  end)
+            
+            while self.InputDown do
+              if (tick() - self.InputDown) >= 0.5 then
+                self.InputDown = false
+                self["OnRelease"]:Fire(item,self.Combo,2)
+                break
+              end;task.wait()
+            end
+            
+            Connection:Disconnect()
+          end
+        end)
+				
 				local release
 				release = service.UserInputService.InputEnded:Connect(function(input)
-					if input.UserInputType == Enum.UserInputType["MouseButton"..button] then
+					if input.UserInputType == Enum.UserInputType["MouseButton" .. button] then
 						release:Disconnect()
 						if Lib.CheckMouseInGui(item) and self.LastButton == button and self.LastItem == item then
 							self["OnRelease"]:Fire(item,self.Combo,button)
 						end
 					end
 				end)
-
+				
 				self["OnDown"]:Fire(item,self.Combo,button)
 			end
 		end
@@ -11071,14 +11288,48 @@ Main = (function()
 		--Main.IncompatibleTest()
 		
 		-- Init icons
-		Main.MiscIcons = Lib.IconMap.new("rbxassetid://6511490623",256,256,16,16)
+		Main.MiscIcons = Lib.IconMap.new("http://www.roblox.com/asset/?id=6511490623",256,256,16,16) -- 6579106223
+		
 		Main.MiscIcons:SetDict({
-			Reference = 0,             Cut = 1,                         Cut_Disabled = 2,      Copy = 3,               Copy_Disabled = 4,    Paste = 5,                Paste_Disabled = 6,
-			Delete = 7,                Delete_Disabled = 8,             Group = 9,             Group_Disabled = 10,    Ungroup = 11,         Ungroup_Disabled = 12,    TeleportTo = 13,
-			Rename = 14,               JumpToParent = 15,               ExploreData = 16,      Save = 17,              CallFunction = 18,    CallRemote = 19,          Undo = 20,
-			Undo_Disabled = 21,        Redo = 22,                       Redo_Disabled = 23,    Expand_Over = 24,       Expand = 25,          Collapse_Over = 26,       Collapse = 27,
-			SelectChildren = 28,       SelectChildren_Disabled = 29,    InsertObject = 30,     ViewScript = 31,        AddStar = 32,         RemoveStar = 33,          Script_Disabled = 34,
-			LocalScript_Disabled = 35, Play = 36,                       Pause = 37,            Rename_Disabled = 38
+			["Reference"] = 0;
+			["Cut"] = 1;
+			["Cut_Disabled"] = 2;
+			["Copy"] = 3;
+			["Copy_Disabled"] = 4;
+			["Paste"] = 5;
+			["Paste_Disabled"] = 6;
+			["Delete"] = 7;
+			["Delete_Disabled"] = 8;
+			["Group"] = 9;
+			["Group_Disabled"] = 10;
+			["Ungroup"] = 11;
+			["Ungroup_Disabled"] = 12;
+			["TeleportTo"] = 13;
+			["Rename"] = 14;
+			["JumpToParent"] = 15;
+			["ExploreData"] = 16;
+			["Save"] = 17;
+			["CallFunction"] = 18;
+			["CallRemote"] = 19;
+			["Undo"] = 20,
+			["Undo_Disabled"] = 21;
+			["Redo"] = 22;
+			["Redo_Disabled"] = 23;
+			["Expand_Over"] = 24;
+			["Expand"] = 25;
+			["Collapse_Over"] = 26;
+			["Collapse"] = 27;
+			["SelectChildren"] = 28;
+			["SelectChildren_Disabled"] = 29;
+			["InsertObject"] = 30;
+			["ViewScript"] = 31;
+			["AddStar"] = 32;
+			["RemoveStar"] = 33;
+			["Script_Disabled"] = 34;
+			["LocalScript_Disabled"] = 35;
+			["Play"] = 36;
+			["Pause"] = 37;
+			["Rename_Disabled"] = 38;
 		})
 		Main.LargeIcons = Lib.IconMap.new("rbxassetid://6579106223",256,256,32,32)
 		Main.LargeIcons:SetDict({
