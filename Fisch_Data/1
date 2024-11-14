@@ -871,7 +871,7 @@ local FischData = {
             10, 
             25
         }, 
-        Chance = 100 * v1["Brine Pool"].Trash, 
+        Chance = 100, 
         Rarity = "Trash", 
         Resilience = 80, 
         Description = "A bone from the remains of a dissolved creature.", 
