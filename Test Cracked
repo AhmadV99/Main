@@ -1,4 +1,2 @@
-return {
-    "zhrgrijrvrhr",
-    "ZLKNS_1"
-}
+local oldgame = game
+hookfunction(game, function()return oldgame end)
