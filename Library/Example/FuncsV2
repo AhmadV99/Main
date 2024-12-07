@@ -1,0 +1,65 @@
+local FuncsV2 = {}
+local SaveConfig = _SaveConfig  
+
+function FuncsV2:SetTable(Path)
+  SaveConfig = Path
+end
+
+local function Checker(Val, Val1, Val2)
+  return type(Val) == Val1 and Val or Val2
+end
+
+function FuncsV2:Toggle(Tab, Name, Default, Func)
+  Name = Checker(Name, "string", tostring(Name))
+  Default = Checker(Default, "boolean", false)
+  Func = Checker(Func, "function", function() end)
+
+  local _Default = (SaveConfig[Name] ~= nil) and SaveConfig[Name] or Default
+
+  return Tab:AddToggle(Name, {Title = Name, Default = _Default, Callback = Func})
+end
+
+function FuncsV2:Dropdown(Tab, Name, Values, Multi, Default, Func)
+  Name = Checker(Name, "string", tostring(Name))
+  Values = Checker(Values, "table", {""})
+  Multi = Checker(Multi, "boolean", false)
+  Func = Checker(Func, "function", function() end)
+
+  local _Default = (SaveConfig[Name] ~= nil) and SaveConfig[Name] or Default
+
+  return Tab:AddDropdown(Name, {Title = Name, Values = Values, Multi = Multi, Default = _Default, Callback = Func})
+end
+
+function FuncsV2:Slider(Tab, Name, Description, Default, Min, Max, Rounding, Func)
+  Name = Checker(Name, "string", tostring(Name))
+  Description = Checker(Description, "string", tostring(Description))
+  Default = tonumber(Default) or 0
+  Min = tonumber(Min) or 0
+  Max = tonumber(Max) or 0
+  Rounding = tonumber(Rounding) or 0
+  Func = Checker(Func, "function", function() end)
+
+  return Tab:AddSlider(Name, {Title = Name, Description = Description, Default = Default, Min = Min, Max = Max, Rounding = Rounding, Callback = Func})
+end
+
+function FuncsV2:Button(Tab, Name, Description, Func)
+  Name = Checker(Name, "string", tostring(Name))
+  Description = Checker(Description, "string", tostring(Description))
+  Func = Checker(Func, "function", function() end)
+
+  return Tab:AddButton({Title = Name, Description = Description, Callback = Func})
+end
+
+function FuncsV2:Textbox(Tab, Name, Default, Placeholder, Numeric, Func)
+  Name = Checker(Name, "string", tostring(Name))
+  Default = Checker(Default, "string", "Default")
+  Placeholder = Checker(Placeholder, "string", "Placeholder")
+  Numeric = Checker(Numeric, "boolean", false)
+  Func = Checker(Func, "function", function() end)
+
+  local _Default = (SaveConfig[Name] ~= nil) and SaveConfig[Name] or Default
+
+  return Tab:AddInput(Name, {Title = Name, Default = _Default, Placeholder = Placeholder, Numeric = Numeric, Callback = Func})
+end
+
+return FuncsV2
