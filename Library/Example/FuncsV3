@@ -51,7 +51,7 @@ function FuncsV3:Dropdown(Tab, Name, Content, Multi, Options, Default, Funcs)
   if Default == "Save" then
     Default = SaveConfig[Name] or Checker(Default, "table", {""})
   else
-    Default = Checker(Default, "boolean", false)
+    Default = Checker(Default, "table", {""})
   end
 
   return Tab:AddDropdown({
