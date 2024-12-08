@@ -1040,8 +1040,10 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 		--// Section 
 		local Sections = {}
 		local CountSection = 0
-		function Sections:AddSection(Title)
+		function Sections:AddSection(Title, OpenSection)
 			local Title = Title or "Title"
+			local OpenSection = OpenSection or false
+
 			local Section = Instance.new("Frame");
 			local SectionDecideFrame = Instance.new("Frame");
 			local UICorner1 = Instance.new("UICorner");
@@ -1170,7 +1172,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 			UIListLayout2.Padding = UDim.new(0, 3)
 			UIListLayout2.SortOrder = Enum.SortOrder.LayoutOrder
 			UIListLayout2.Parent = SectionAdd
-			local OpenSection = true
+
 			local function UpdateSizeScroll()
 				local OffsetY = 0
 				for _, child in ScrolLayers:GetChildren() do
