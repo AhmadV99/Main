@@ -72,7 +72,6 @@ end
 local Close_ImageButton = CloseOpen()
 
 local function MakeDraggable(topbarobject, object)
-
 	local function CustomPos(topbarobject, object)
 		local Dragging = nil
 		local DragInput = nil
@@ -82,8 +81,7 @@ local function MakeDraggable(topbarobject, object)
 		local function UpdatePos(input)
 			local Delta = input.Position - DragStart
 			local pos = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + Delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + Delta.Y)
-			local Tween = TweenService:Create(object, TweenInfo.new(0.05), {Position = pos})
-			Tween:Play()
+			object.Position = pos
 		end
 
 		topbarobject.InputBegan:Connect(function(input)
@@ -746,12 +744,12 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 			ImageLabel.Image = "rbxassetid://9886659001"
 			OldPos = DropShadowHolder.Position
 			OldSize = DropShadowHolder.Size
-			TweenService:Create(DropShadowHolder, TweenInfo.new(0.05), {Position = UDim2.new(0, 0, 0, 0)}):Play()
-			TweenService:Create(DropShadowHolder, TweenInfo.new(0.05), {Size = UDim2.new(1, 0, 1, 0)}):Play()
+			TweenService:Create(DropShadowHolder, TweenInfo.new(0.3), {Position = UDim2.new(0, 0, 0, 0)}):Play()
+			TweenService:Create(DropShadowHolder, TweenInfo.new(0.3), {Size = UDim2.new(1, 0, 1, 0)}):Play()
 		else
 			ImageLabel.Image = "rbxassetid://9886659406"
-			TweenService:Create(DropShadowHolder, TweenInfo.new(0.05), {Position = OldPos}):Play()
-			TweenService:Create(DropShadowHolder, TweenInfo.new(0.05), {Size = OldSize}):Play()
+			TweenService:Create(DropShadowHolder, TweenInfo.new(0.3), {Position = OldPos}):Play()
+			TweenService:Create(DropShadowHolder, TweenInfo.new(0.3), {Size = OldSize}):Play()
 		end
 	end)
 
@@ -849,9 +847,9 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 
 	ConnectButton.Activated:Connect(function()
 		if MoreBlur.Visible then
-			TweenService:Create(MoreBlur, TweenInfo.new(0.05), {BackgroundTransparency = 0.999}):Play()
-			TweenService:Create(DropdownSelect, TweenInfo.new(0.05), {Position = UDim2.new(1, 172, 0.5, 0)}):Play()
-			task.wait(0.05)
+			TweenService:Create(MoreBlur, TweenInfo.new(0.3), {BackgroundTransparency = 0.999}):Play()
+			TweenService:Create(DropdownSelect, TweenInfo.new(0.3), {Position = UDim2.new(1, 172, 0.5, 0)}):Play()
+			task.wait(0.3)
 			MoreBlur.Visible = false
 		end
 	end)
@@ -1191,22 +1189,22 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 							SectionSizeYWitdh = SectionSizeYWitdh + v.Size.Y.Offset + 3
 						end
 					end
-					TweenService:Create(FeatureFrame, TweenInfo.new(0.05), {Rotation = 90}):Play()
-					TweenService:Create(Section, TweenInfo.new(0.05), {Size = UDim2.new(1, 1, 0, SectionSizeYWitdh)}):Play()
-					TweenService:Create(SectionAdd, TweenInfo.new(0.05), {Size = UDim2.new(1, 0, 0, SectionSizeYWitdh - 38)}):Play()
-					TweenService:Create(SectionDecideFrame, TweenInfo.new(0.05), {Size = UDim2.new(1, 0, 0, 2)}):Play()
-					task.wait(0.05)
+					TweenService:Create(FeatureFrame, TweenInfo.new(0.5), {Rotation = 90}):Play()
+					TweenService:Create(Section, TweenInfo.new(0.5), {Size = UDim2.new(1, 1, 0, SectionSizeYWitdh)}):Play()
+					TweenService:Create(SectionAdd, TweenInfo.new(0.5), {Size = UDim2.new(1, 0, 0, SectionSizeYWitdh - 38)}):Play()
+					TweenService:Create(SectionDecideFrame, TweenInfo.new(0.5), {Size = UDim2.new(1, 0, 0, 2)}):Play()
+					task.wait(0.5)
 					UpdateSizeScroll()
 				end
 			end
 			SectionButton.Activated:Connect(function()
 				CircleClick(SectionButton, Mouse.X, Mouse.Y)
 				if OpenSection then
-					TweenService:Create(FeatureFrame, TweenInfo.new(0.05), {Rotation = 0}):Play()
-					TweenService:Create(Section, TweenInfo.new(0.05), {Size = UDim2.new(1, 1, 0, 30)}):Play()
-					TweenService:Create(SectionDecideFrame, TweenInfo.new(0.05), {Size = UDim2.new(0, 0, 0, 2)}):Play()
+					TweenService:Create(FeatureFrame, TweenInfo.new(0.5), {Rotation = 0}):Play()
+					TweenService:Create(Section, TweenInfo.new(0.5), {Size = UDim2.new(1, 1, 0, 30)}):Play()
+					TweenService:Create(SectionDecideFrame, TweenInfo.new(0.5), {Size = UDim2.new(0, 0, 0, 2)}):Play()
 					OpenSection = false
-					task.wait(0.05)
+					task.wait(0.5)
 					UpdateSizeScroll()
 				else
 					OpenSection = true
@@ -2003,8 +2001,8 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 					if not MoreBlur.Visible then
 						MoreBlur.Visible = true 
 						DropPageLayout:JumpToIndex(SelectOptionsFrame.LayoutOrder)
-						TweenService:Create(MoreBlur, TweenInfo.new(0.05), {BackgroundTransparency = 0.7}):Play()
-						TweenService:Create(DropdownSelect, TweenInfo.new(0.05), {Position = UDim2.new(1, -11, 0.5, 0)}):Play()
+						TweenService:Create(MoreBlur, TweenInfo.new(0.3), {BackgroundTransparency = 0.7}):Play()
+						TweenService:Create(DropdownSelect, TweenInfo.new(0.3), {Position = UDim2.new(1, -11, 0.5, 0)}):Play()
 					end
 				end)
 
