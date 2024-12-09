@@ -78,6 +78,7 @@ function FuncsV3:Textbox(Tab, Name, Content, Default, Funcs)
   return Tab:AddInput({
     ["Title"] = Name,
     ["Content"] = Content,
+    ["Default"] = Default,
     ["Callback"] = Funcs
   })
 end
