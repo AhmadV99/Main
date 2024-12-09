@@ -64,10 +64,16 @@ function FuncsV3:Dropdown(Tab, Name, Content, Multi, Options, Default, Funcs)
   })
 end
 
-function FuncsV3:Textbox(Tab, Name, Content, Funcs)
+function FuncsV3:Textbox(Tab, Name, Content, Default, Funcs)
   Name = Checker(Name, "string", tostring(Name))
   Content = Checker(Content, "string", tostring(Content))
   Funcs = Checker(Funcs, "function", function() end)
+
+  if Default == "Save" then
+    Default = SaveConfig[Name] or Checker(Default, "table", {""})
+  else
+    Default = Checker(Default, "table", {""})
+  end
 
   return Tab:AddInput({
     ["Title"] = Name,
