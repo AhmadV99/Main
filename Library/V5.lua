@@ -1785,8 +1785,9 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 				local InputConfig = InputConfig or {}
 				InputConfig.Title = InputConfig.Title or ""
 				InputConfig.Content = InputConfig.Content or ""
+				InputConfig.Default = InputConfig.Default or ""
 				InputConfig.Callback = InputConfig.Callback or function() end
-				local InputFunc = {Value = ""}
+				local InputFunc = {Value = InputConfig.Default}
 
 				local Input = Instance.new("Frame");
 				local UICorner12 = Instance.new("UICorner");
