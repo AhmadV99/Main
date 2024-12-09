@@ -70,9 +70,9 @@ function FuncsV3:Textbox(Tab, Name, Content, Default, Funcs)
   Funcs = Checker(Funcs, "function", function() end)
 
   if Default == "Save" then
-    Default = SaveConfig[Name] or Checker(Default, "table", {""})
+    Default = SaveConfig[Name] or Checker(Default, "string", "")
   else
-    Default = Checker(Default, "table", {""})
+    Default = Checker(Default, "string", "")
   end
 
   return Tab:AddInput({
