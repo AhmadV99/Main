@@ -1892,6 +1892,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 				InputTextBox.FocusLost:Connect(function()
 					InputFunc:Set(InputTextBox.Text)
 				end)
+				InputFunc:Set(InputConfig.Default)
 				CountItem = CountItem + 1
 				return InputFunc
 			end
