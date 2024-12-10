@@ -49,7 +49,7 @@ function FuncsV3:Dropdown(Tab, Name, Content, Multi, Options, Default, Funcs)
   Funcs = Checker(Funcs, "function", function() end)
 
   if Default == "Save" then
-    Default = {SaveConfig[Name]} or Checker(Default, "table", {""})
+    Default = (typeof(SaveConfig[Name]) == "table" and SaveConfig[Name] or {SaveConfig[Name]}) or Checker(Default, "table", {""})
   else
     Default = Checker(Default, "table", {""})
   end
