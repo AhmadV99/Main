@@ -708,7 +708,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 	ScrollTab.BackgroundTransparency = 0.9990000128746033
 	ScrollTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	ScrollTab.BorderSizePixel = 0
-	ScrollTab.Size = UDim2.new(1, 0, 1, -58)
+	ScrollTab.Size = UDim2.new(0, 0, 1, -59)
 	ScrollTab.Name = "ScrollTab"
 	ScrollTab.Parent = LayersTab
 
