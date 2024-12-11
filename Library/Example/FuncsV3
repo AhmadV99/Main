@@ -15,15 +15,15 @@ function FuncsV3:Toggle(Tab, Name, Content, Default, Funcs)
   Funcs = Checker(Funcs, "function", function() end)
 
   if Default == "Save" then
-    Default = SaveConfig[Name] or Checker(false, "boolean", false)
+    _Default = SaveConfig[Name] or Checker(false, "boolean", false)
   else
-    Default = Checker(Default, "boolean", false)
+    _Default = Checker(Default, "boolean", false)
   end
 
   return Tab:AddToggle({
     ["Title"] = Name,
     ["Content"] = Content,
-    ["Default"] = Default,
+    ["Default"] = _Default,
     ["Callback"] = Funcs
   })
 end
@@ -49,9 +49,9 @@ function FuncsV3:Dropdown(Tab, Name, Content, Multi, Options, Default, Funcs)
   Funcs = Checker(Funcs, "function", function() end)
 
   if Default == "Save" then
-    Default = (typeof(SaveConfig[Name]) == "table" and SaveConfig[Name] or {SaveConfig[Name]}) or Checker(Default, "table", {""})
+    _Default = (typeof(SaveConfig[Name]) == "table" and SaveConfig[Name] or {SaveConfig[Name]}) or Checker(Default, "table", {""})
   else
-    Default = Checker(Default, "table", {""})
+    _Default = Checker(Default, "table", {""})
   end
 
   return Tab:AddDropdown({
@@ -59,7 +59,7 @@ function FuncsV3:Dropdown(Tab, Name, Content, Multi, Options, Default, Funcs)
     ["Content"] = Content,
     ["Multi"] = Multi,
     ["Options"] = Options,
-    ["Default"] = Default,
+    ["Default"] = _Default,
     ["Callback"] = Funcs
   })
 end
@@ -70,15 +70,15 @@ function FuncsV3:Textbox(Tab, Name, Content, Default, Funcs)
   Funcs = Checker(Funcs, "function", function() end)
 
   if Default == "Save" then
-    Default = SaveConfig[Name] or Checker(Default, "string", "")
+    _Default = SaveConfig[Name] or ""
   else
-    Default = Checker(Default, "string", "")
+    _Default = Checker(Default, "string", "")
   end
 
   return Tab:AddInput({
     ["Title"] = Name,
     ["Content"] = Content,
-    ["Default"] = Default,
+    ["Default"] = _Default,
     ["Callback"] = Funcs
   })
 end
