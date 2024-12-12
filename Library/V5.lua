@@ -1,14 +1,13 @@
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
-local Mouse = LocalPlayer:GetMouse()
 local RunService = game:GetService("RunService")
 local VirtualUser = game:GetService("VirtualUser")
 
-LocalPlayer.Idled:connect(function()
-	VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-	wait(1)
-	VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+LocalPlayer.Idled:Connect(function()
+    VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+    task.wait(1)
+    VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
 end)
 
 local function CloseOpen()
@@ -69,6 +68,7 @@ end
 local Close_ImageButton = CloseOpen()
 
 local function MakeDraggable(topbarobject, object)
+
 	local function CustomPos(topbarobject, object)
 		local Dragging = nil
 		local DragInput = nil
@@ -107,9 +107,6 @@ local function MakeDraggable(topbarobject, object)
 			end
 		end)
 	end
-
-	local UserInputService = game:GetService("UserInputService")
-	local TweenService = game:GetService("TweenService")
 	
 	local function CustomSize(object)
 		local Dragging = false
@@ -727,7 +724,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 	ScrollTab.ChildRemoved:Connect(UpdateSize1)
 
 	function GuiFunc:DestroyGui()
-		if game:GetService("CoreGui"):FindFirstChild("SpeedHubXGui") then 
+		if SpeedHubXGui then 
 			SpeedHubXGui:Destroy()
 		end
 	end
@@ -736,7 +733,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 	local OldSize = DropShadowHolder.Size
 
 	MaxRestore.Activated:Connect(function()
-		CircleClick(MaxRestore, Mouse.X, Mouse.Y)
+		CircleClick(MaxRestore, LocalPlayer:GetMouse().X, LocalPlayer:GetMouse().Y)
 		if ImageLabel.Image == "rbxassetid://9886659406" then
 			ImageLabel.Image = "rbxassetid://9886659001"
 			OldPos = DropShadowHolder.Position
@@ -751,7 +748,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 	end)
 
 	Min.Activated:Connect(function()
-		CircleClick(Min, Mouse.X, Mouse.Y)
+		CircleClick(Min, LocalPlayer:GetMouse().X, LocalPlayer:GetMouse().Y)
 		DropShadowHolder.Visible = false
 		if not Close_ImageButton.Visible then Close_ImageButton.Visible = true end
 	end)
@@ -762,7 +759,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 	end)
 
 	Close.Activated:Connect(function()
-		CircleClick(Close, Mouse.X, Mouse.Y)
+		CircleClick(Close, LocalPlayer:GetMouse().X, LocalPlayer:GetMouse().Y)
 		GuiFunc:DestroyGui()
 		if not SpeedHubXLib.Unloaded then SpeedHubXLib.Unloaded = true end
 	end)
@@ -987,7 +984,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 			UICorner4.Parent = ChooseFrame
 		end
 		TabButton.Activated:Connect(function()
-			CircleClick(TabButton, Mouse.X, Mouse.Y)
+			CircleClick(TabButton, LocalPlayer:GetMouse().X, LocalPlayer:GetMouse().Y)
 			local FrameChoose
 			for a, s in ScrollTab:GetChildren() do
 				for i, v in s:GetChildren() do
@@ -1195,7 +1192,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 				end
 			end
 			SectionButton.Activated:Connect(function()
-				CircleClick(SectionButton, Mouse.X, Mouse.Y)
+				CircleClick(SectionButton, LocalPlayer:GetMouse().X, LocalPlayer:GetMouse().Y)
 				if OpenSection then
 					TweenService:Create(FeatureFrame, TweenInfo.new(0.2), {Rotation = 0}):Play()
 					TweenService:Create(Section, TweenInfo.new(0.2), {Size = UDim2.new(1, 1, 0, 30)}):Play()
@@ -1399,7 +1396,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 				FeatureImg3.Parent = FeatureFrame1
 
 				ButtonButton.Activated:Connect(function()
-					CircleClick(ButtonButton, Mouse.X, Mouse.Y)
+					CircleClick(ButtonButton, LocalPlayer:GetMouse().X, LocalPlayer:GetMouse().Y)
 					ButtonConfig.Callback()
 				end)
 				CountItem = CountItem + 1
@@ -1524,7 +1521,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 				UICorner23.Parent = ToggleCircle
 				
 				ToggleButton.Activated:Connect(function()
-					CircleClick(ToggleButton, Mouse.X, Mouse.Y) 
+					CircleClick(ToggleButton, LocalPlayer:GetMouse().X, LocalPlayer:GetMouse().Y) 
 					ToggleFunc.Value = not ToggleFunc.Value
 					ToggleFunc:Set(ToggleFunc.Value)
 				end)
@@ -2177,7 +2174,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 					UICorner38.Parent = ChooseFrame
 					
 					OptionButton.Activated:Connect(function()
-						CircleClick(OptionButton, Mouse.X, Mouse.Y) 
+						CircleClick(OptionButton, LocalPlayer:GetMouse().X, LocalPlayer:GetMouse().Y) 
 						if DropdownConfig.Multi then
 							if Option.BackgroundTransparency > 0.95 then
 								table.insert(DropdownFunc.Value, OptionName)
