@@ -1,13 +1,15 @@
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
 local RunService = game:GetService("RunService")
 local VirtualUser = game:GetService("VirtualUser")
+local CoreGui = game:GetService("CoreGui")
 
-LocalPlayer.Idled:Connect(function()
-    VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-    task.wait(1)
-    VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+LocalPlayer.Idled:connect(function()
+	VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+	wait(1)
+	VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
 end)
 
 local function CloseOpen()
@@ -68,7 +70,6 @@ end
 local Close_ImageButton = CloseOpen()
 
 local function MakeDraggable(topbarobject, object)
-
 	local function CustomPos(topbarobject, object)
 		local Dragging = nil
 		local DragInput = nil
@@ -107,6 +108,9 @@ local function MakeDraggable(topbarobject, object)
 			end
 		end)
 	end
+
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
 	
 	local function CustomSize(object)
 		local Dragging = false
@@ -217,13 +221,13 @@ function SpeedHubXLib:MakeNotify(NotifyConfig)
 	NotifyConfig.Delay = NotifyConfig.Delay or 5
 	local NotifyFunction = {}
 	spawn(function()
-		if not game:GetService("CoreGui"):FindFirstChild("NotifyGui") then
+		if not CoreGui:FindFirstChild("NotifyGui") then
 			local NotifyGui = Instance.new("ScreenGui");
 			NotifyGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 			NotifyGui.Name = "NotifyGui"
-			NotifyGui.Parent = game:GetService("CoreGui")
+			NotifyGui.Parent = CoreGui
 		end
-		if not game:GetService("CoreGui").NotifyGui:FindFirstChild("NotifyLayout") then
+		if not CoreGui.NotifyGui:FindFirstChild("NotifyLayout") then
 			local NotifyLayout = Instance.new("Frame");
 			NotifyLayout.AnchorPoint = Vector2.new(1, 1)
 			NotifyLayout.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -233,11 +237,11 @@ function SpeedHubXLib:MakeNotify(NotifyConfig)
 			NotifyLayout.Position = UDim2.new(1, -30, 1, -30)
 			NotifyLayout.Size = UDim2.new(0, 320, 1, 0)
 			NotifyLayout.Name = "NotifyLayout"
-			NotifyLayout.Parent = game:GetService("CoreGui").NotifyGui
+			NotifyLayout.Parent = CoreGui.NotifyGui
 			local Count = 0
-			game:GetService("CoreGui").NotifyGui.NotifyLayout.ChildRemoved:Connect(function()
+			CoreGui.NotifyGui.NotifyLayout.ChildRemoved:Connect(function()
 				Count = 0
-				for i, v in game:GetService("CoreGui").NotifyGui.NotifyLayout:GetChildren() do
+				for i, v in CoreGui.NotifyGui.NotifyLayout:GetChildren() do
 					TweenService:Create(
 						v,
 						TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),
@@ -248,7 +252,7 @@ function SpeedHubXLib:MakeNotify(NotifyConfig)
 			end)
 		end
 		local NotifyPosHeigh = 0
-		for i, v in game:GetService("CoreGui").NotifyGui.NotifyLayout:GetChildren() do
+		for i, v in CoreGui.NotifyGui.NotifyLayout:GetChildren() do
 			NotifyPosHeigh = -(v.Position.Y.Offset) + v.Size.Y.Offset + 12
 		end
 		local NotifyFrame = Instance.new("Frame");
@@ -272,7 +276,7 @@ function SpeedHubXLib:MakeNotify(NotifyConfig)
 		NotifyFrame.Size = UDim2.new(1, 0, 0, 150)
 		NotifyFrame.Name = "NotifyFrame"
 		NotifyFrame.BackgroundTransparency = 1
-		NotifyFrame.Parent = game:GetService("CoreGui").NotifyGui.NotifyLayout
+		NotifyFrame.Parent = CoreGui.NotifyGui.NotifyLayout
 		NotifyFrame.AnchorPoint = Vector2.new(0, 1)
 		NotifyFrame.Position = UDim2.new(0, 0, 1, -(NotifyPosHeigh))
 
@@ -724,7 +728,7 @@ function SpeedHubXLib:MakeGui(GuiConfig)
 	ScrollTab.ChildRemoved:Connect(UpdateSize1)
 
 	function GuiFunc:DestroyGui()
-		if SpeedHubXGui then 
+		if CoreGui:FindFirstChild("SpeedHubXGui") then 
 			SpeedHubXGui:Destroy()
 		end
 	end
