@@ -40,15 +40,25 @@ function FuncsV3:Button(Tab, Name, Content, Callback)
 end
 
 function FuncsV3:Dropdown(Tab, Name, Content, multi, options, Default, Callback)
-    Name = Checker(Name, "string", tostring(Name))
-    Content = Checker(Content, "string", tostring(Content))
-    multi = Checker(multi, "boolean", false)
-    options = Checker(options, "table", { "" })
-    Callback = Checker(Callback, "function", function() end)
+  Name = Checker(Name, "string", tostring(Name))
+  Content = Checker(Content, "string", tostring(Content))
+  multi = Checker(multi, "boolean", false)
+  options = Checker(options, "table", { "" })
+  Callback = Checker(Callback, "function", function() end)
 
-    local _default = Default == "Save" 
-    and (typeof(SaveConfig[Name]) == "table" and SaveConfig[Name] or { SaveConfig[Name] }) 
-    or Checker(Default, "table", { "" })
+  local _default
+
+  if Default == "Save" then
+    if typeof(SaveConfig[Name]) == "table" then
+      _default = SaveConfig[Name] or {""}
+    elseif SaveConfig[Name] ~= nil then
+      _default = {SaveConfig[Name] or ""}
+    else
+      _default = {""}
+    end
+  else
+    _default = Checker(Default, "table", {""})
+  end
 
     return Tab:AddDropdown({
       Title = Name,
