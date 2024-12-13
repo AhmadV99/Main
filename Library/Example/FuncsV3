@@ -1,85 +1,79 @@
 local FuncsV3 = {}
-local SaveConfig = _SaveConfig  
-
-function FuncsV3:SetTable(Path)
-  SaveConfig = Path
-end
+local SaveConfig = nil  
 
 local function Checker(Val, Val1, Val2)
-  return type(Val) == Val1 and Val or Val2
+  return typeof(Val) == Val1 and Val or Val2
 end
 
-function FuncsV3:Toggle(Tab, Name, Content, Default, Funcs)
+function FuncsV3:SetTable(path)
+  SaveConfig = path
+end
+
+function FuncsV3:Toggle(Tab, Name, Content, Default, Callback)
   Name = Checker(Name, "string", tostring(Name))
   Content = Checker(Content, "string", tostring(Content))
-  Funcs = Checker(Funcs, "function", function() end)
+  Callback = Checker(Callback, "function", function() end)
 
-  if Default == "Save" then
-    _Default = SaveConfig[Name] or Checker(false, "boolean", false)
-  else
-    _Default = Checker(Default, "boolean", false)
-  end
+  local _default = Default == "Save" 
+  and Checker(SaveConfig[Name], "boolean", false)
+  or Checker(Default, "boolean", false)
 
   return Tab:AddToggle({
-    ["Title"] = Name,
-    ["Content"] = Content,
-    ["Default"] = _Default,
-    ["Callback"] = Funcs
+    Title = Name,
+    Content = Content,
+    Default = _default,
+    Callback = Callback
   })
 end
 
-function FuncsV3:Button(Tab, Name, Content, Funcs)
+function FuncsV3:Button(Tab, Name, Content, Callback)
   Name = Checker(Name, "string", tostring(Name))
   Content = Checker(Content, "string", tostring(Content))
-  Funcs = Checker(Funcs, "function", function() end)
+  Callback = Checker(Callback, "function", function() end)
 
   return Tab:AddButton({
-    ["Title"] = Name,
-    ["Content"] = Content,
-    ["Icon"] = "rbxassetid://16932740082",
-    ["Callback"] = Funcs
+    Title = Name,
+    Content = Content,
+    Icon = "rbxassetid://16932740082",
+    Callback = Callback
   })
 end
 
-function FuncsV3:Dropdown(Tab, Name, Content, Multi, Options, Default, Funcs)
-  Name = Checker(Name, "string", tostring(Name))
-  Content = Checker(Content, "string", tostring(Content))
-  Multi = Checker(Multi, "boolean", false)
-  Options = Checker(Options, "table", {""})
-  Funcs = Checker(Funcs, "function", function() end)
+function FuncsV3:Dropdown(Tab, Name, Content, multi, options, Default, Callback)
+    Name = Checker(Name, "string", tostring(Name))
+    Content = Checker(Content, "string", tostring(Content))
+    multi = Checker(multi, "boolean", false)
+    options = Checker(options, "table", { "" })
+    Callback = Checker(Callback, "function", function() end)
 
-  if Default == "Save" then
-    _Default = (typeof(SaveConfig[Name]) == "table" and SaveConfig[Name] or {SaveConfig[Name]}) or Checker(Default, "table", {""})
-  else
-    _Default = Checker(Default, "table", {""})
-  end
+    local _default = Default == "Save" 
+    and (typeof(SaveConfig[Name]) == "table" and SaveConfig[Name] or { SaveConfig[Name] }) 
+    or Checker(Default, "table", { "" })
 
-  return Tab:AddDropdown({
-    ["Title"] = Name,
-    ["Content"] = Content,
-    ["Multi"] = Multi,
-    ["Options"] = Options,
-    ["Default"] = _Default,
-    ["Callback"] = Funcs
-  })
+    return Tab:AddDropdown({
+      Title = Name,
+      Content = Content,
+      Multi = multi,
+      Options = options,
+      Default = _default,
+      Callback = Callback
+    })
 end
 
-function FuncsV3:Textbox(Tab, Name, Content, Default, Funcs)
+function FuncsV3:Textbox(Tab, Name, Content, Default, Callback)
   Name = Checker(Name, "string", tostring(Name))
   Content = Checker(Content, "string", tostring(Content))
-  Funcs = Checker(Funcs, "function", function() end)
+  Callback = Checker(Callback, "function", function() end)
 
-  if Default == "Save" then
-    _Default = SaveConfig[Name] or ""
-  else
-    _Default = Checker(Default, "string", "")
-  end
+  local _default = Default == "Save" 
+  and Checker(SaveConfig[Name], "string", "")
+  or Checker(Default, "string", "")
 
   return Tab:AddInput({
-    ["Title"] = Name,
-    ["Content"] = Content,
-    ["Default"] = _Default,
-    ["Callback"] = Funcs
+    Title = Name,
+    Content = Content,
+    Default = _default,
+    Callback = Callback
   })
 end
 
