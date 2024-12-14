@@ -52,10 +52,10 @@ function FuncsV3:Dropdown(Tab, Name, Content, multi, options, Default, Callback)
     if type(SaveConfig[Name]) == "table" then
       _default = SaveConfig[Name]
     else
-      _default = {SaveConfig[Name] or ""}
+      _default = {SaveConfig[Name]} or {""}
     end
   else
-    _default = Checker(Default, "table", {""}) or {""}
+    _default = Default or {""}
   end
 
   return Tab:AddDropdown({
