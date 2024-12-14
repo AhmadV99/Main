@@ -49,11 +49,7 @@ function FuncsV3:Dropdown(Tab, Name, Content, multi, options, Default, Callback)
   local _default
 
   if Default == "Save" then
-    if type(SaveConfig[Name]) == "table" then
-      _default = SaveConfig[Name]
-    else
-      _default = {SaveConfig[Name]} or {""}
-    end
+    _default = {""}
   else
     _default = Default or {""}
   end
