@@ -673,7 +673,7 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_farmsea, "Auto Drive Boat To Sea", "", false)
     _farmsea:Seperator("Terror Shark")
     Funcs:AddToggle(_farmsea, "Terror Shark", "", true)
-    Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill [Loading Fix]", "", true)
+    Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill", "", true)
     _farmsea:Seperator("Sea beast")
     Funcs:AddToggle(_farmsea, "Attack Sea beast", "", true)
     Funcs:AddToggle(_farmsea, "Dodge Sea Beasts Skill", "", true)
