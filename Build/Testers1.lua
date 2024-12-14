@@ -6,6 +6,76 @@ local Window = Library:Start({
   ["SaveFolder"] = "Speed Hub X"
 })
 
+local SpeedHubX = {}
+
+local Funcs = {} do
+  function Funcs:AddToggle(Section, Name, Content, Default)
+    return Section:Toggle({
+      ["Title"] = Name,
+      ["Content"] = Content,
+      ["Default"] = Default,
+      ["Callback"] = function(Value)
+        SpeedHubX[Name] = Value
+      end,
+      ["Flag"] = "SPD/Toggle/" .. tostring(Name)
+    })
+  end
+
+  function Funcs:AddDropdown(Section, Name, Multi, Options, Default)
+    return Section:Dropdown({
+      ["Title"] = Name,
+      ["Multi"] = Multi,
+      ["Options"] = Options,
+      ["Default"] = Default,
+      ["PlaceHolderText"] = "Select Options",
+      ["Callback"] = function(Value)
+        if type(Value) == "table" then
+          for _, v in next, Value do
+            SpeedHubX[Name] = v
+          end
+        else
+          SpeedHubX[Name] = Value
+        end
+      end
+    })
+  end
+
+  function Funcs:AddSlider(Section, Name, Content, Min, Max, Increment, Default)
+    return Section:Slider({
+      ["Title"] = Name,
+      ["Content"] = Content,
+      ["Min"] = Min,
+      ["Max"] = Max,
+      ["Increment"] = Increment,
+      ["Default"] = Default,
+      ["Callback"] = function(Value)
+        SpeedHubX[Name] = Value
+      end
+    })
+  end
+
+  function Funcs:AddTextbox(Section, Name, Content, Default, ClearText)
+    return Section:TextInput({
+      ["Title"] = Name,
+      ["Content"] = Content,
+      ["PlaceHolderText"] = "Enter your text here...",
+      ["ClearTextOnFocus"] = ClearText,
+      ["Default"] = Default,
+      ["Callback"] = function(Value)
+        SpeedHubX[Name] = Value
+      end
+    })
+  end
+
+  function Funcs:AddButton(Section, Name, Content, Callback)
+    return Section:Button({
+      ["Title"] = Name,
+      ["Content"] = Content,
+      ["Callback"] = Callback
+    })  
+  end
+end
+
 local Players = game:GetService("Players")
 local Lighting = game:GetService("Lighting")
 local TeleportService = game:GetService("TeleportService")
@@ -250,74 +320,6 @@ _env.FruitList = function()
   end
 
   return ListName
-end
-
-local SpeedHubX = {}
-
-local Funcs = {} do
-  function Funcs:AddToggle(Section, Name, Content, Default)
-    return Section:Toggle({
-      ["Title"] = Name,
-      ["Content"] = Content,
-      ["Default"] = Default,
-      ["Callback"] = function(Value)
-        SpeedHubX[Name] = Value
-      end,
-      ["Flag"] = "SPD/Toggle/" .. tostring(Name)
-    })
-  end
-
-  function Funcs:AddDropdown(Section, Name, Multi, Options, Default)
-    return Section:Dropdown({
-      ["Title"] = Name,
-      ["Multi"] = Multi,
-      ["Options"] = Options,
-      ["Default"] = Default,
-      ["PlaceHolderText"] = "Select Options",
-      ["Callback"] = function(Value)
-        if type(Value) == "table" then
-          for _, v in pairs(Value) do
-            SpeedHubX[Name] = v
-          end
-        end
-      end
-    })
-  end
-
-  function Funcs:AddSlider(Section, Name, Content, Min, Max, Increment, Default)
-    return Section:Slider({
-      ["Title"] = Name,
-      ["Content"] = Content,
-      ["Min"] = Min,
-      ["Max"] = Max,
-      ["Increment"] = Increment,
-      ["Default"] = Default,
-      ["Callback"] = function(Value)
-        SpeedHubX[Name] = Value
-      end
-    })
-  end
-
-  function Funcs:AddTextbox(Section, Name, Content, Default, ClearText)
-    return Section:TextInput({
-      ["Title"] = Name,
-      ["Content"] = Content,
-      ["PlaceHolderText"] = "Enter your text here...",
-      ["ClearTextOnFocus"] = ClearText,
-      ["Default"] = Default,
-      ["Callback"] = function(Value)
-        SpeedHubX[Name] = Value
-      end
-    })
-  end
-
-  function Funcs:AddButton(Section, Name, Content, Callback)
-    return Section:Button({
-      ["Title"] = Name,
-      ["Content"] = Content,
-      ["Callback"] = Callback
-    })  
-  end
 end
 
 local _home = Window:MakeTab("Home") do
