@@ -49,25 +49,23 @@ function FuncsV3:Dropdown(Tab, Name, Content, multi, options, Default, Callback)
   local _default
 
   if Default == "Save" then
-    if typeof(SaveConfig[Name]) == "table" then
-      _default = SaveConfig[Name] or {""}
-    elseif SaveConfig[Name] ~= nil then
-      _default = {SaveConfig[Name] or ""}
+    if type(SaveConfig[Name]) == "table" then
+      _default = SaveConfig[Name]
     else
-      _default = {""}
+      _default = {SaveConfig[Name] or ""}
     end
   else
-    _default = Checker(Default, "table", {""})
+    _default = Checker(Default, "table", {""}) or {""}
   end
 
-    return Tab:AddDropdown({
-      Title = Name,
-      Content = Content,
-      Multi = multi,
-      Options = options,
-      Default = _default,
-      Callback = Callback
-    })
+  return Tab:AddDropdown({
+    Title = Name,
+    Content = Content,
+    Multi = multi,
+    Options = options,
+    Default = _default,
+    Callback = Callback
+  })
 end
 
 function FuncsV3:Textbox(Tab, Name, Content, Default, Callback)
