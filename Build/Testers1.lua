@@ -6,6 +6,8 @@ local Window = Library:Start({
   ["SaveFolder"] = "Speed Hub X"
 })
 
+game.StarterGui:SetCore("SendNotification", {Title = "Script Status", Text = "Loading...", Icon = "rbxassetid://0", Duration = 10})
+
 local SpeedHubX = {}
 
 local Funcs = {} do
