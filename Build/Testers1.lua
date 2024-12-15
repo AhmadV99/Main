@@ -466,7 +466,7 @@ local _main = Window:MakeTab("Main") do
   local _farmingmastery = _main:Section({["Title"] = "Farming Mastery", ["Content"] = ""}) do
     _farmingmastery:Seperator("Config Mastery")
     Funcs:AddDropdown(_farmingmastery, "Choose Mastery Mode", false, {"Level","Bone","Cake Prince","Nearest"}, {"Level"})
-    Funcs:AddDropdown(_farmingmastery, "Choose Mastery Tool", false, {"Blox Fruit", "Sword", "Gun"}, {"Blox Fruit"})
+    Funcs:AddDropdown(_farmingmastery, "Choose Mastery Tool", false, {"Blox Fruit", "Sword", "Gun", "Melee"}, {"Blox Fruit"})
     Funcs:AddDropdown(_farmingmastery, "Mastery Health", false, {"10", "20", "25", "30", "45", "50", "60", "70", "75", "85", "95"}, {"45"})
     _farmingmastery:Seperator("Farming")
     Funcs:AddToggle(_farmingmastery, "Auto Farm Mastery", "", false)
@@ -742,6 +742,10 @@ local _seaevent = Window:MakeTab("Sea Event") do
     for _, v in next, {"Z", "X", "C", "V", "F"} do
       Funcs:AddToggle(_farmwoods, v .. "   ", "", true)
     end
+  end
+  local _PrehistoricIsland = _seaevent:Section({["Title"] = "Prehistoric Island", ["Content"] = ""}) do 
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Summon Prehistoric Island", "", false)
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Find Prehistoric Island", "", false)
   end
   local _farmitem = _seaevent:Section({["Title"] = "Get Item", ["Content"] = ""}) do 
     Funcs:AddToggle(_farmitem, "Auto Shark Anchor", "", false)
