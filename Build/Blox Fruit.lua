@@ -6,6 +6,8 @@ local Window = Library:Start({
   ["SaveFolder"] = "Speed Hub X"
 })
 
+game.StarterGui:SetCore("SendNotification", {Title = "Script Status", Text = "Loading...", Icon = "rbxassetid://0", Duration = 10})
+
 local SpeedHubX = {}
 
 local Funcs = {} do
@@ -503,6 +505,15 @@ local _main = Window:MakeTab("Main") do
     _farmingmaterial:Seperator("Farming Material")
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
   end
+
+  local _FarmingDragon = _main:Section({["Title"] = "Dragon Event", ["Content"] = ""}) do
+    _FarmingDragon:Seperator("Dojo Quests")
+    Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "BETA (Not Fully)", false)
+    --_FarmingDragon:Seperator("Volcanic Magnet")
+    --Funcs:AddToggle(_FarmingDragon, "Auto Volcanic Magnet", "", false)
+    _FarmingDragon:Seperator("Blaze Ember")
+    Funcs:AddToggle(_FarmingDragon, "Auto Blaze Ember", "", false)
+  end
 end
 
 local _questitem = Window:MakeTab("Item/Quest") do
@@ -673,7 +684,7 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_farmsea, "Auto Drive Boat To Sea", "", false)
     _farmsea:Seperator("Terror Shark")
     Funcs:AddToggle(_farmsea, "Terror Shark", "", true)
-    Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill", "", true)
+    Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill [Loading Fix]", "", true)
     _farmsea:Seperator("Sea beast")
     Funcs:AddToggle(_farmsea, "Attack Sea beast", "", true)
     Funcs:AddToggle(_farmsea, "Dodge Sea Beasts Skill", "", true)
