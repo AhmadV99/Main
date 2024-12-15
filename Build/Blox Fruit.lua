@@ -506,12 +506,13 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
   end
 
-  local _FarmingDragon = _main:Section({["Title"] = "Dragon Event", ["Content"] = ""}) do
-    _FarmingDragon:Seperator("Dojo Quests")
+  local _FarmingDragon = _main:Section({["Title"] = "Dragon Events", ["Content"] = ""}) do
+    _FarmingDragon:Seperator("Quests")
     Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "BETA (Not Fully)", false)
+    Funcs:AddToggle(_FarmingDragon, "Auto Dragon Hunter Quests", "Require: White And Yellow Belt", false)
     --_FarmingDragon:Seperator("Volcanic Magnet")
     --Funcs:AddToggle(_FarmingDragon, "Auto Volcanic Magnet", "", false)
-    _FarmingDragon:Seperator("Blaze Ember")
+    _FarmingDragon:Seperator("Material")
     Funcs:AddToggle(_FarmingDragon, "Auto Blaze Ember", "", false)
   end
 end
@@ -684,7 +685,7 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_farmsea, "Auto Drive Boat To Sea", "", false)
     _farmsea:Seperator("Terror Shark")
     Funcs:AddToggle(_farmsea, "Terror Shark", "", true)
-    Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill [Loading Fix]", "", true)
+    Funcs:AddToggle(_farmsea, "Dodge Terror Shark Skill", "", true)
     _farmsea:Seperator("Sea beast")
     Funcs:AddToggle(_farmsea, "Attack Sea beast", "", true)
     Funcs:AddToggle(_farmsea, "Dodge Sea Beasts Skill", "", true)
