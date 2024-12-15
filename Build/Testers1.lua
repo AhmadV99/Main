@@ -504,8 +504,11 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
   end
 
-  local _FarmingDragon = _main:Section({["Title"] = "Farming Dragon Event", ["Content"] = ""}) do
+  local _FarmingDragon = _main:Section({["Title"] = "Dragon Event", ["Content"] = ""}) do
+    _FarmingDragon:Seperator("Dojo Quests")
     Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "", false)
+    _FarmingDragon:Seperator("Blaze Ember")
+    Funcs:AddToggle(_FarmingDragon, "Auto Blaze Ember", "", false)
   end
 end
 
