@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Library/Test.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/V3.5"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Settings.lua"))()
 
 local Window = Library:Start({
@@ -502,6 +502,10 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddDropdown(_farmingmaterial, "Select Material", false, _env.MaterialList, {""})
     _farmingmaterial:Seperator("Farming Material")
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
+  end
+
+  local _FarmingDragon = _main:Section({["Title"] = "Farming Dragon Event", ["Content"] = ""}) do
+    Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "", false)
   end
 end
 
