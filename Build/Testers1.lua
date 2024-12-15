@@ -500,7 +500,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_farmingboss, "Auto Attack Boss All", "", false)
   end
   local _farmingmaterial = _main:Section({["Title"] = "Farming Material", ["Content"] = ""}) do
-    _farmingmaterial:Seperator("Config Material")
+    _farmingmaterial:Seperator("Concs i756trgfdvcx fig Material")
     Funcs:AddDropdown(_farmingmaterial, "Select Material", false, _env.MaterialList, {""})
     _farmingmaterial:Seperator("Farming Material")
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
