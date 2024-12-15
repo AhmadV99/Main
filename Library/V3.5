@@ -181,18 +181,22 @@ end)
 
 local function UpSize(Scroll)
     local OffsetY = 0
-    for _, child in Scroll:GetChildren() do
-        if child.Name ~= "UIListLayout" then
-            OffsetY = OffsetY + Scroll.UIListLayout.Padding.Offset + child.Size.Y.Offset
+    local UIListLayout = Scroll:FindFirstChild("UIListLayout")
+    if UIListLayout then
+        for _, child in Scroll:GetChildren() do
+            if child:IsA("GuiObject") and child ~= UIListLayout then
+                OffsetY = OffsetY + UIListLayout.Padding.Offset + child.Size.Y.Offset
+            end
         end
+        Scroll.CanvasSize = UDim2.new(0, 0, 0, OffsetY)
     end
-    Scroll.CanvasSize = UDim2.new(0, 0, 0, OffsetY)
 end
 
 local function AutoUp(Scroll)
     Scroll.ChildAdded:Connect(function()
         UpSize(Scroll)
     end)
+
     Scroll.ChildRemoved:Connect(function()
         UpSize(Scroll)
     end)
@@ -1026,27 +1030,28 @@ function SpeedHubLib:Start(GuiConfig)
 	--// Tabs
 	local Tabs = {}
 	local CountTab = 0
+    
     function Tabs:MakeTab(NameTab)
         local NameTab = NameTab or ""
-        local ScrollLayer = Instance.new("ScrollingFrame");
-        local UIListLayout1 = Instance.new("UIListLayout");
-
-        ScrollLayer.ScrollBarImageColor3 = Color3.fromRGB(55.00000052154064, 55.00000052154064, 55.00000052154064)
+        local ScrollLayer = Instance.new("ScrollingFrame")
+        local UIListLayout1 = Instance.new("UIListLayout")
+        
+        ScrollLayer.ScrollBarImageColor3 = Color3.fromRGB(55, 55, 55)
         ScrollLayer.ScrollBarThickness = 3
         ScrollLayer.Active = true
         ScrollLayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        ScrollLayer.BackgroundTransparency = 0.9990000128746033
+        ScrollLayer.BackgroundTransparency = 0.999
         ScrollLayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
         ScrollLayer.BorderSizePixel = 0
         ScrollLayer.Size = UDim2.new(1, 0, 1, 0)
         ScrollLayer.Name = "ScrollLayer"
         ScrollLayer.LayoutOrder = CountTab
         ScrollLayer.Parent = LayersFolder
-
+        
         UIListLayout1.Padding = UDim.new(0, 4)
         UIListLayout1.SortOrder = Enum.SortOrder.LayoutOrder
         UIListLayout1.Parent = ScrollLayer
-
+        
         AutoUp(ScrollLayer)
 
         local Tab = Instance.new("Frame");
