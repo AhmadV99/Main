@@ -511,7 +511,6 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "BETA (Not Fully)", false)
     Funcs:AddToggle(_FarmingDragon, "Auto Dragon Hunter Quests", "Require: White And Yellow Belt", false)
     _FarmingDragon:Seperator("Material")
-    Funcs:AddToggle(_FarmingDragon, "Auto Blaze Ember", "", false)
     Funcs:AddToggle(_FarmingDragon, "Auto Volcanic Magnet", "", false)
   end
 end
