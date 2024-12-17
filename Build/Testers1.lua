@@ -475,12 +475,14 @@ local _main = Window:MakeTab("Main") do
       Funcs:AddToggle(_farmingmastery, v .. "   ", "", true)
     end
   end
-  local _farmingC = _main:Section({["Title"] = "Farming/Collect Chest", ["Content"] = ""}) do
+  local _farmingC = _main:Section({["Title"] = "Farming/Collect Chest/Berry", ["Content"] = ""}) do
     _farmingC:Seperator("Config Chest")
     Funcs:AddDropdown(_farmingC, "Choose Chest Area", false, {"Mirage Island", "Island Other"}, {"Island Other"})
     Funcs:AddToggle(_farmingC, "Auto Hop if Chest doesn't Spawned", "", true)
     _farmingC:Seperator("Collect Chest")
     Funcs:AddToggle(_farmingC, "Auto Collect Chest", "", false)
+    _farmingC:Seperator("Collect Berry")
+    Funcs:AddToggle(_farmingC, "Auto Collect Berry", "", false)
     _farmingC:Seperator("Farming Other")
     if Sea[2] then
       Funcs:AddToggle(_farmingC, "Auto Factory", "", false)
@@ -508,10 +510,12 @@ local _main = Window:MakeTab("Main") do
 
   local _FarmingDragon = _main:Section({["Title"] = "Dragon Events", ["Content"] = ""}) do
     _FarmingDragon:Seperator("Quests")
-    Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "BETA (Not Fully)", false)
-    Funcs:AddToggle(_FarmingDragon, "Auto Dragon Hunter Quests", "Require: White And Yellow Belt", false)
-    _FarmingDragon:Seperator("Material")
+    Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "Get Belt:\n White \n Yellow", false)
+    Funcs:AddToggle(_FarmingDragon, "Auto Dragon Hunter Quests", "Required: White And Yellow Belt", false)
+    _FarmingDragon:Seperator("Craft")
     Funcs:AddToggle(_FarmingDragon, "Auto Volcanic Magnet", "", false)
+    Funcs:AddToggle(_FarmingDragon, "Auto Dragonheart", "", false)
+    Funcs:AddToggle(_FarmingDragon, "Auto Dragonstorm", "", false)
   end
 end
 
@@ -742,8 +746,13 @@ local _seaevent = Window:MakeTab("Sea Event") do
     end
   end
   local _PrehistoricIsland = _seaevent:Section({["Title"] = "Prehistoric Island", ["Content"] = ""}) do 
+    _PrehistoricIsland:Seperator("Prehistoric Island")
     Funcs:AddToggle(_PrehistoricIsland, "Auto Summon Prehistoric Island", "", false)
     Funcs:AddToggle(_PrehistoricIsland, "Auto Find Prehistoric Island", "", false)
+    _PrehistoricIsland:Seperator("Farming On Prehistoric Island")
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Kill Golem / Teleport Dinosaur Bones", "", false)
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Collect Dinosaur Bones", "", false)
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Collect Dragon Egg", "", false)
   end
   local _farmitem = _seaevent:Section({["Title"] = "Get Item", ["Content"] = ""}) do 
     Funcs:AddToggle(_farmitem, "Auto Shark Anchor", "", false)
@@ -798,6 +807,8 @@ local _shopMaps = Window:MakeTab("Shop / Maps / Fruit") do
     Funcs:AddToggle(_fruit, "Auto Eat Fruit", "", false)
     Funcs:AddToggle(_fruit, "Auto Random Fruit", "", false)
     Funcs:AddToggle(_fruit, "Auto Find Fruit", "", false)
+    _fruit:Seperator("Spawn Fruit Sniper")
+    Funcs:AddDropdown(_fruit, "Select Fruit Sniper", false, _env.FruitList(), {""})
   end
 end
 
@@ -889,7 +900,7 @@ local _racemirage = Window:MakeTab("Race / Mirage") do
     Funcs:AddToggle(_racev4, "Auto Pull Lever", "", false)
     Funcs:AddToggle(_racev4, "Hop For Pull Lever", "", false)
     _racev4:Seperator("Tween Race V4")
-    Funcs:AddDropdown(_racev4, "Select Tween Race", false, {"Top Great Tree","Timple Of Time","Lever Pull", "Acient One", "Cyborg Door", "Fish Door", "Ghoul Door", "Human Door", "Mink Door", "Sky Door"}, {"Timple Of Time"})
+    Funcs:AddDropdown(_racev4, "Select Tween Race", false, {"Top Great Tree","Temple Of Time","Lever Pull", "Acient One", "Cyborg Door", "Fish Door", "Ghoul Door", "Human Door", "Mink Door", "Sky Door"}, {"Timple Of Time"})
     Funcs:AddToggle(_racev4, "Tween On Select Tween Race", "", false)
   end
 end
