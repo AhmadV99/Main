@@ -31,7 +31,7 @@ local Funcs = {} do
       ["Default"] = Default,
       ["PlaceHolderText"] = "Select Options",
       ["Callback"] = function(Value)
-        if type(Value) == "table" then
+        if not Multi and type(Value) == "table" then
           for _, v in next, Value do
             SpeedHubX[Name] = v
           end
@@ -107,6 +107,49 @@ local Sea = {
   [1] = game.PlaceId == 2753915549,
   [2] = game.PlaceId == 4442272183,
   [3] = game.PlaceId == 7449423635
+}
+local FruitTable = {
+  "Rocket Fruit",
+  "Spin Fruit",
+  "Chop Fruit",
+  "Spring Fruit",
+  "Bomb Fruit",
+  "Smoke Fruit",
+  "Spike Fruit",
+  "Flame Fruit",
+  "Falcon Fruit",
+  "Ice Fruit",
+  "Sand Fruit",
+  "Dark Fruit",
+  "Ghost Fruit",
+  "Diamond Fruit",
+  "Light Fruit",
+  "Rubber Fruit",
+  "Barrier Fruit",
+  "Magma Fruit",
+  "Quake Fruit",
+  "Buddha Fruit",
+  "Love Fruit",
+  "Spider Fruit",
+  "Sound Fruit",
+  "Phoenix Fruit",
+  "Portal Fruit",
+  "Rumble Fruit",
+  "Pain Fruit",
+  "Blizzard Fruit",
+  "Gravity Fruit",
+  "Mammoth Fruit",
+  "T-Rex Fruit",
+  "Dough Fruit",
+  "Shadow Fruit",
+  "Venom Fruit",
+  "Control Fruit",
+  "Spirit Fruit",
+  "Dragon Fruit",
+  "Leopard Fruit",
+  "Kitsune Fruit",
+  "Gas Fruit",
+  "Blade Fruit",
 }
 
 task.spawn(function()
@@ -357,11 +400,12 @@ local _home = Window:MakeTab("Home") do
     Funcs:AddDropdown(_config, "Farm Distance", false, {"10", "20", "30", "40", "50", "60"}, {"40"})
     Funcs:AddDropdown(_config, "Tween Speed", false, {"100", "200", "300", "400", "500"}, {"200"})
     _config:Seperator("Bring Mob")
-    Funcs:AddDropdown(_config, "Bring Mob Mode", false, {"Smooth","Extreme"}, {"Smooth"})
     Funcs:AddToggle(_config, "Bring Mob", "", true)
     Funcs:AddDropdown(_config, "Bring Mob Radius", false, {"100", "200", "300", "400", "500"}, {"200"})
-    _config:Seperator("Fast Attack")
+    _config:Seperator("Fast Attack / Shoot")
     Funcs:AddToggle(_config, "Fast Attack", "", true)
+    --Funcs:AddToggle(_config, "Fast Shoot", "", false)
+    --Funcs:AddDropdown(_config, "Multi Attack", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"3"})
     Funcs:AddDropdown(_config, "Fast Attack Delay", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _config:Seperator("Other")
     Funcs:AddToggle(_config, "Hop if Admin or Staff", "", true)
@@ -481,6 +525,8 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_farmingC, "Auto Hop if Chest doesn't Spawned", "", true)
     _farmingC:Seperator("Collect Chest")
     Funcs:AddToggle(_farmingC, "Auto Collect Chest", "", false)
+    --[[_farmingC:Seperator("Collect Berry")
+    Funcs:AddToggle(_farmingC, "Auto Collect Berry", "", false)]]
     _farmingC:Seperator("Farming Other")
     if Sea[2] then
       Funcs:AddToggle(_farmingC, "Auto Factory", "", false)
@@ -500,7 +546,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_farmingboss, "Auto Attack Boss All", "", false)
   end
   local _farmingmaterial = _main:Section({["Title"] = "Farming Material", ["Content"] = ""}) do
-    _farmingmaterial:Seperator("Concs i756trgfdvcx fig Material")
+    _farmingmaterial:Seperator("Material")
     Funcs:AddDropdown(_farmingmaterial, "Select Material", false, _env.MaterialList, {""})
     _farmingmaterial:Seperator("Farming Material")
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
@@ -508,10 +554,12 @@ local _main = Window:MakeTab("Main") do
 
   local _FarmingDragon = _main:Section({["Title"] = "Dragon Events", ["Content"] = ""}) do
     _FarmingDragon:Seperator("Quests")
-    Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "BETA (Not Fully)", false)
-    Funcs:AddToggle(_FarmingDragon, "Auto Dragon Hunter Quests", "Require: White And Yellow Belt", false)
-    _FarmingDragon:Seperator("Material")
+    Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "Get Belt: White, Yellow", false)
+    Funcs:AddToggle(_FarmingDragon, "Auto Dragon Hunter Quests", "Required: White And Yellow Belt", false)
+    _FarmingDragon:Seperator("Craft")
     Funcs:AddToggle(_FarmingDragon, "Auto Volcanic Magnet", "", false)
+    --Funcs:AddToggle(_FarmingDragon, "Auto Dragonheart", "", false)
+    --Funcs:AddToggle(_FarmingDragon, "Auto Dragonstorm", "", false)
   end
 end
 
@@ -742,8 +790,14 @@ local _seaevent = Window:MakeTab("Sea Event") do
     end
   end
   local _PrehistoricIsland = _seaevent:Section({["Title"] = "Prehistoric Island", ["Content"] = ""}) do 
+    _PrehistoricIsland:Seperator("Prehistoric Island")
     Funcs:AddToggle(_PrehistoricIsland, "Auto Summon Prehistoric Island", "", false)
     Funcs:AddToggle(_PrehistoricIsland, "Auto Find Prehistoric Island", "", false)
+    _PrehistoricIsland:Seperator("Farming On Prehistoric Island")
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Prehistoric (Fully)", "Summon Prehistoric Island, Kill Golem, Collect Bones, Collect Dragon Eggs", false)
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Kill Golem", "", false)
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Collect Dinosaur Bones", "", false)
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Collect Dragon Egg", "", false)
   end
   local _farmitem = _seaevent:Section({["Title"] = "Get Item", ["Content"] = ""}) do 
     Funcs:AddToggle(_farmitem, "Auto Shark Anchor", "", false)
@@ -798,6 +852,9 @@ local _shopMaps = Window:MakeTab("Shop / Maps / Fruit") do
     Funcs:AddToggle(_fruit, "Auto Eat Fruit", "", false)
     Funcs:AddToggle(_fruit, "Auto Random Fruit", "", false)
     Funcs:AddToggle(_fruit, "Auto Find Fruit", "", false)
+    _fruit:Seperator("Spawner Fruit")
+    Funcs:AddDropdown(_fruit, "Select Fruit Spawner", true, FruitTable, {""})
+    Funcs:AddToggle(_fruit, "Auto Gets Fruit Spawner", "When Fruit Is Spawned Then Stop Farm And Will Tween Fruits, Then Enable Farm", false)
   end
 end
 
@@ -889,7 +946,7 @@ local _racemirage = Window:MakeTab("Race / Mirage") do
     Funcs:AddToggle(_racev4, "Auto Pull Lever", "", false)
     Funcs:AddToggle(_racev4, "Hop For Pull Lever", "", false)
     _racev4:Seperator("Tween Race V4")
-    Funcs:AddDropdown(_racev4, "Select Tween Race", false, {"Top Great Tree","Timple Of Time","Lever Pull", "Acient One", "Cyborg Door", "Fish Door", "Ghoul Door", "Human Door", "Mink Door", "Sky Door"}, {"Timple Of Time"})
+    Funcs:AddDropdown(_racev4, "Select Tween Race", false, {"Top Great Tree","Temple Of Time","Lever Pull", "Acient One", "Cyborg Door", "Fish Door", "Ghoul Door", "Human Door", "Mink Door", "Sky Door"}, {"Timple Of Time"})
     Funcs:AddToggle(_racev4, "Tween On Select Tween Race", "", false)
   end
 end
