@@ -31,7 +31,7 @@ local Funcs = {} do
       ["Default"] = Default,
       ["PlaceHolderText"] = "Select Options",
       ["Callback"] = function(Value)
-        if type(Value) == "table" then
+        if not Multi and type(Value) == "table" then
           for _, v in next, Value do
             SpeedHubX[Name] = v
           end
@@ -107,6 +107,49 @@ local Sea = {
   [1] = game.PlaceId == 2753915549,
   [2] = game.PlaceId == 4442272183,
   [3] = game.PlaceId == 7449423635
+}
+local FruitTable = {
+  "Rocket Fruit",
+  "Spin Fruit",
+  "Chop Fruit",
+  "Spring Fruit",
+  "Bomb Fruit",
+  "Smoke Fruit",
+  "Spike Fruit",
+  "Flame Fruit",
+  "Falcon Fruit",
+  "Ice Fruit",
+  "Sand Fruit",
+  "Dark Fruit",
+  "Ghost Fruit",
+  "Diamond Fruit",
+  "Light Fruit",
+  "Rubber Fruit",
+  "Barrier Fruit",
+  "Magma Fruit",
+  "Quake Fruit",
+  "Buddha Fruit",
+  "Love Fruit",
+  "Spider Fruit",
+  "Sound Fruit",
+  "Phoenix Fruit",
+  "Portal Fruit",
+  "Rumble Fruit",
+  "Pain Fruit",
+  "Blizzard Fruit",
+  "Gravity Fruit",
+  "Mammoth Fruit",
+  "T-Rex Fruit",
+  "Dough Fruit",
+  "Shadow Fruit",
+  "Venom Fruit",
+  "Control Fruit",
+  "Spirit Fruit",
+  "Dragon Fruit",
+  "Leopard Fruit",
+  "Kitsune Fruit",
+  "Gas Fruit",
+  "Blade Fruit",
 }
 
 task.spawn(function()
@@ -809,8 +852,10 @@ local _shopMaps = Window:MakeTab("Shop / Maps / Fruit") do
     Funcs:AddToggle(_fruit, "Auto Eat Fruit", "", false)
     Funcs:AddToggle(_fruit, "Auto Random Fruit", "", false)
     Funcs:AddToggle(_fruit, "Auto Find Fruit", "", false)
-    _fruit:Seperator("Spawn Fruit Sniper")
-    Funcs:AddDropdown(_fruit, "Select Fruit Sniper", false, _env.FruitList(), {""})
+    _fruit:Seperator("Spawner Fruit")
+    
+    Funcs:AddDropdown(_fruit, "Select Fruit Spawner", true, FruitTable, {""})
+    Funcs:AddToggle(_fruit, "Auto Gets Fruit Spawner", "When Fruit Is Spawned Then Stop Farm And Will Tween Fruits, Then Enable Farm", false)
   end
 end
 
