@@ -404,8 +404,8 @@ local _home = Window:MakeTab("Home") do
     Funcs:AddDropdown(_config, "Bring Mob Radius", false, {"100", "200", "300", "400", "500"}, {"200"})
     _config:Seperator("Fast Attack / Shoot")
     Funcs:AddToggle(_config, "Fast Attack", "", true)
-    Funcs:AddToggle(_config, "Fast Shoot", "", false)
-    Funcs:AddDropdown(_config, "Multi Attack", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"3"})
+    --Funcs:AddToggle(_config, "Fast Shoot", "", false)
+    --Funcs:AddDropdown(_config, "Multi Attack", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"3"})
     Funcs:AddDropdown(_config, "Fast Attack Delay", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _config:Seperator("Other")
     Funcs:AddToggle(_config, "Hop if Admin or Staff", "", true)
@@ -519,14 +519,14 @@ local _main = Window:MakeTab("Main") do
       Funcs:AddToggle(_farmingmastery, v .. "   ", "", true)
     end
   end
-  local _farmingC = _main:Section({["Title"] = "Farming/Collect Chest/Berry", ["Content"] = ""}) do
+  local _farmingC = _main:Section({["Title"] = "Farming/Collect Chest", ["Content"] = ""}) do
     _farmingC:Seperator("Config Chest")
     Funcs:AddDropdown(_farmingC, "Choose Chest Area", false, {"Mirage Island", "Island Other"}, {"Island Other"})
     Funcs:AddToggle(_farmingC, "Auto Hop if Chest doesn't Spawned", "", true)
     _farmingC:Seperator("Collect Chest")
     Funcs:AddToggle(_farmingC, "Auto Collect Chest", "", false)
-    _farmingC:Seperator("Collect Berry")
-    Funcs:AddToggle(_farmingC, "Auto Collect Berry", "", false)
+    --[[_farmingC:Seperator("Collect Berry")
+    Funcs:AddToggle(_farmingC, "Auto Collect Berry", "", false)]]
     _farmingC:Seperator("Farming Other")
     if Sea[2] then
       Funcs:AddToggle(_farmingC, "Auto Factory", "", false)
@@ -546,7 +546,7 @@ local _main = Window:MakeTab("Main") do
     Funcs:AddToggle(_farmingboss, "Auto Attack Boss All", "", false)
   end
   local _farmingmaterial = _main:Section({["Title"] = "Farming Material", ["Content"] = ""}) do
-    _farmingmaterial:Seperator("Concs i756trgfdvcx fig Material")
+    _farmingmaterial:Seperator("Material")
     Funcs:AddDropdown(_farmingmaterial, "Select Material", false, _env.MaterialList, {""})
     _farmingmaterial:Seperator("Farming Material")
     Funcs:AddToggle(_farmingmaterial, "Auto Attack Material", "", false)
@@ -554,12 +554,12 @@ local _main = Window:MakeTab("Main") do
 
   local _FarmingDragon = _main:Section({["Title"] = "Dragon Events", ["Content"] = ""}) do
     _FarmingDragon:Seperator("Quests")
-    Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "Get Belt:\n White \n Yellow", false)
+    Funcs:AddToggle(_FarmingDragon, "Auto Dojo Quests", "Get Belt: White, Yellow", false)
     Funcs:AddToggle(_FarmingDragon, "Auto Dragon Hunter Quests", "Required: White And Yellow Belt", false)
     _FarmingDragon:Seperator("Craft")
     Funcs:AddToggle(_FarmingDragon, "Auto Volcanic Magnet", "", false)
-    Funcs:AddToggle(_FarmingDragon, "Auto Dragonheart", "", false)
-    Funcs:AddToggle(_FarmingDragon, "Auto Dragonstorm", "", false)
+    --Funcs:AddToggle(_FarmingDragon, "Auto Dragonheart", "", false)
+    --Funcs:AddToggle(_FarmingDragon, "Auto Dragonstorm", "", false)
   end
 end
 
@@ -624,7 +624,7 @@ local _questitem = Window:MakeTab("Item/Quest") do
         else
           _statusCKP:Set({
             ["Title"] = "Cake Prince Status",
-            ["Content"] = string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", "")
+            ["Content"] = Sea[3] and string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", "") or "N/A"
           })
         end
       end
@@ -655,7 +655,7 @@ local _questitem = Window:MakeTab("Item/Quest") do
       while task.wait(2) do
         _statusELHP:Set({
           ["Title"] = "Elite Hunter Progress",
-          ["Content"] = tostring(CommF_:InvokeServer("EliteHunter", "Progress"))
+          ["Content"] = Sea[3] and tostring(CommF_:InvokeServer("EliteHunter", "Progress")) or "N/A"
         })
       end
     end)
@@ -853,7 +853,6 @@ local _shopMaps = Window:MakeTab("Shop / Maps / Fruit") do
     Funcs:AddToggle(_fruit, "Auto Random Fruit", "", false)
     Funcs:AddToggle(_fruit, "Auto Find Fruit", "", false)
     _fruit:Seperator("Spawner Fruit")
-    
     Funcs:AddDropdown(_fruit, "Select Fruit Spawner", true, FruitTable, {""})
     Funcs:AddToggle(_fruit, "Auto Gets Fruit Spawner", "When Fruit Is Spawned Then Stop Farm And Will Tween Fruits, Then Enable Farm", false)
   end
