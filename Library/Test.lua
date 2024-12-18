@@ -28,6 +28,11 @@ local function OpenClose()
     ZIndexBehavior = Enum.ZIndexBehavior.Sibling
   }, RunService:IsStudio() and Player.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui")))
 
+  local ScreenFind = game:GetService("CoreGui"):FindFirstChild(ScreenGui.Name)
+  if ScreenFind and ScreenFind ~= ScreenGui then
+    ScreenFind:Destroy()
+  end
+
   local Close_ImageButton = Custom:Create("ImageButton", {
     BackgroundColor3 = Color3.fromRGB(0, 0, 0),
     BorderColor3 = Color3.fromRGB(255, 0, 0),
@@ -443,6 +448,11 @@ function Speed_Library:CreateWindow(Config)
     ZIndexBehavior = Enum.ZIndexBehavior.Sibling
   }, RunService:IsStudio() and LocalPlayer.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui")))
     
+  local ScreenFind = game:GetService("CoreGui"):FindFirstChild(SpeedHubXGui.Name)
+  if ScreenFind and ScreenFind ~= SpeedHubXGui then
+    ScreenFind:Destroy()
+  end
+
   local DropShadowHolder = Custom:Create("Frame", {
     BackgroundTransparency = 1,
     BorderSizePixel = 0,
@@ -722,12 +732,12 @@ function Speed_Library:CreateWindow(Config)
   local MoreBlur = Custom:Create("Frame", {
     AnchorPoint = Vector2.new(1, 1),
     BackgroundColor3 = Color3.fromRGB(0, 0, 0),
-    BackgroundTransparency = 0.999,
+    BackgroundTransparency = 1,
     BorderColor3 = Color3.fromRGB(0, 0, 0),
     BorderSizePixel = 0,
     ClipsDescendants = true,
     Position = UDim2.new(1, 8, 1, 8),
-    Size = UDim2.new(1, -154, 1, -54),
+    Size = UDim2.new(1, 154, 1, 54),
     Visible = false,
     Name = "MoreBlur"
   }, Layers)
@@ -1945,10 +1955,10 @@ function Speed_Library:CreateWindow(Config)
           if not MoreBlur.Visible then
             MoreBlur.Visible = true
               
-            DropPageLayout:JumpToIndex(SelectOptionsFrame.LayoutOrder)
-              
             local tweenInfo = TweenInfo.new(0.1)
-              
+
+            DropPageLayout:JumpToIndex(SelectOptionsFrame.LayoutOrder)
+                            
             local BlurTween = TweenService:Create(MoreBlur, tweenInfo, {BackgroundTransparency = 0.7})
             local DropdownTween = TweenService:Create(DropdownSelect, tweenInfo, {Position = UDim2.new(1, -11, 0.5, 0)})
               
@@ -2025,21 +2035,16 @@ function Speed_Library:CreateWindow(Config)
 
           for _, Drop in pairs(ScrollSelect:GetChildren()) do
             if Drop.Name ~= "UIListLayout" then
-              local SizeTween, TransparencyTween, BackgroundTween
-        
-              if table.find(Funcs_Dropdown.Value, Drop.OptionText.Text) then
-                SizeTween = TweenService:Create(Drop.ChooseFrame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 1, 0, 12)})
-                TransparencyTween = TweenService:Create(Drop.ChooseFrame.UIStroke, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Transparency = 0})
-                BackgroundTween = TweenService:Create(Drop, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.935})
-              else
-                SizeTween = TweenService:Create(Drop.ChooseFrame, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 0, 0, 0)})
-                TransparencyTween = TweenService:Create(Drop.ChooseFrame.UIStroke, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Transparency = 0.999})
-                BackgroundTween = TweenService:Create(Drop, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.999})
-              end
-        
-              SizeTween:Play()
-              TransparencyTween:Play()
-              BackgroundTween:Play()
+              local isTextFound = table.find(Funcs_Dropdown.Value, Drop.OptionText.Text)
+              local tweenInfoInOut = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
+
+              local Size = isTextFound and UDim2.new(0, 1, 0, 12) or UDim2.new(0, 0, 0, 0)
+              local BackgroundTransparency = isTextFound and 0.935 or 0.999
+              local Transparency = isTextFound and 0 or 0.999
+          
+              TweenService:Create(Drop.ChooseFrame, tweenInfoInOut, {Size = Size}):Play()
+              TweenService:Create(Drop.ChooseFrame.UIStroke, tweenInfoInOut, {Transparency = Transparency}):Play()
+              TweenService:Create(Drop, tweenInfoInOut, {BackgroundTransparency = BackgroundTransparency}):Play()
             end
           end
         
