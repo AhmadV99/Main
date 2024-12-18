@@ -86,86 +86,33 @@ end
 local Open_Close = OpenClose()
 
 local function MakeDraggable(topbarobject, object)
+  local dragging, dragStart, startPos = false, nil, nil
 
-  local function CustomPos(topbarobject, object)
-    local dragging, dragStart, startPos = false, nil, nil
+  local function UpdatePos(input)
+    local delta = input.Position - dragStart
+    local newPos = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    object.Position = newPos
+  end
 
-    local function UpdatePos(input)
-      local delta = input.Position - dragStart
-      local newPos = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-      object.Position = newPos
-		end
+  topbarobject.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+      dragging = true
+      dragStart = input.Position
+      startPos = object.Position
 
-		topbarobject.InputBegan:Connect(function(input)
-			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-				dragging = true
-				dragStart = input.Position
-				startPos = object.Position
+      input.Changed:Connect(function()
+        if input.UserInputState == Enum.UserInputState.End then
+          dragging = false
+        end
+      end)
+    end
+  end)
 
-				input.Changed:Connect(function()
-					if input.UserInputState == Enum.UserInputState.End then
-						dragging = false
-					end
-				end)
-			end
-		end)
-
-		topbarobject.InputChanged:Connect(function(input)
-			if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
-				UpdatePos(input)
-			end
-		end)
-	end
-	
-	local function CustomSize(object)
-		local dragging, dragStart, startSize = false, nil, nil
-		local maxSizeX = math.max(object.Size.X.Offset, 399)
-		local maxSizeY = maxSizeX - 100
-		object.Size = UDim2.new(0, maxSizeX, 0, maxSizeY)
-
-    local ResizeButton = Custom:Create("Frame", {
-      AnchorPoint = Vector2.new(1, 1),
-      BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-      BackgroundTransparency = 0.999,
-      BorderSizePixel = 0,
-      Position = UDim2.new(1, 20, 1, 20),
-      Size = UDim2.new(0, 40, 0, 40),
-      Name = "ResizeButton",
-
-    }, object)
-
-		local function UpdateSize(input)
-      local delta = input.Position - dragStart
-      local NewWidth = math.max(startSize.X.Offset + delta.X, maxSizeX)
-			local NewHeight = math.max(startSize.Y.Offset + delta.Y, maxSizeY)
-			local Tween = TweenService:Create(object, TweenInfo.new(0.2), {Size = UDim2.new(0, NewWidth, 0, NewHeight)})
-
-			Tween:Play()
-		end
-
-		ResizeButton.InputBegan:Connect(function(input)
-			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-				dragging = true
-				dragStart = input.Position
-				startSize = object.Size
-
-				input.Changed:Connect(function()
-					if input.UserInputState == Enum.UserInputState.End then
-						dragging = false
-					end
-				end)
-			end
-		end)
-
-		ResizeButton.InputChanged:Connect(function(input)
-			if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
-				UpdateSize(input)
-			end
-		end)
-	end
-
-	CustomPos(topbarobject, object)
-	CustomSize(object)
+  topbarobject.InputChanged:Connect(function(input)
+    if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+      UpdatePos(input)
+    end
+  end)
 end
 
 function CircleClick(Button, X, Y)
@@ -242,8 +189,8 @@ function Speed_Library:SetNotification(Config)
     local tweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
     
     for _, v in ipairs(NotificationLayout:GetChildren()) do
-      local newPosition = UDim2.new(0, 0, 1, -((v.Size.Y.Offset + 12) * Count))
-      local tween = TweenService:Create(v, tweenInfo, {Position = newPosition})
+      local NewPOS = UDim2.new(0, 0, 1, -((v.Size.Y.Offset + 12) * Count))
+      local tween = TweenService:Create(v, tweenInfo, {Position = NewPOS})
       tween:Play()
       Count = Count + 1
     end
@@ -671,7 +618,7 @@ function Speed_Library:CreateWindow(Config)
   }, LayersFolder)
 
   local ScrollTab = Custom:Create("ScrollingFrame", {
-    CanvasSize = UDim2.new(0, 0, 1.10000002, 0),
+    CanvasSize = UDim2.new(0, 0, 2.10000002, 0),
     ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0),
     ScrollBarThickness = 0,
     Active = true,
@@ -684,16 +631,16 @@ function Speed_Library:CreateWindow(Config)
   }, LayersTab)
 
   local UIListLayout = Custom:Create("UIListLayout", {
-    Padding = UDim.new(0, 3),
+    Padding = UDim.new(0, 0),
     SortOrder = Enum.SortOrder.LayoutOrder
   }, ScrollTab)
 
   local function UpdateSize()
     local _Total = 0
 
-		for _, child in pairs(ScrollTab:GetChildren()) do
-			if child.Name ~= "UIListLayout" then
-				_Total = _Total + 3 + child.Size.Y.Offset
+		for _, v in pairs(ScrollTab:GetChildren()) do
+			if v.Name ~= "UIListLayout" then
+				_Total = _Total + 3 + v.Size.Y.Offset
 			end
 		end
 
@@ -847,7 +794,8 @@ function Speed_Library:CreateWindow(Config)
 
   -- /// Create Tab
 
-  local Tabs, CountTab = {}, 0
+  local Tabs = {}
+  local CountTab = 0
   local CountDropdown = 0
   function Tabs:CreateTab(Config)
     local _Name = Config[1] or Config.Name or "" 
