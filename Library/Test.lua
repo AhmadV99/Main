@@ -797,7 +797,6 @@ function Speed_Library:CreateWindow(Config)
     end
   end)
 
-
   Custom:Create("UICorner", {
     CornerRadius = UDim.new(0, 3),
     Parent = DropdownSelect
@@ -2026,12 +2025,11 @@ function Speed_Library:CreateWindow(Config)
 
           for _, Drop in pairs(ScrollSelect:GetChildren()) do
             if Drop.Name ~= "UIListLayout" then
-              local isSelected = table.find(Funcs_Dropdown.Value, Drop.OptionText.Text)
               local SizeTween, TransparencyTween, BackgroundTween
         
-              if isSelected then
+              if table.find(Funcs_Dropdown.Value, Drop.OptionText.Text) then
                 SizeTween = TweenService:Create(Drop.ChooseFrame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 1, 0, 12)})
-                TransparencyTween = TweenService:Create(Drop.ChooseFrame.UIStroke, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Transparency = 0.999})
+                TransparencyTween = TweenService:Create(Drop.ChooseFrame.UIStroke, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Transparency = 0})
                 BackgroundTween = TweenService:Create(Drop, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.935})
               else
                 SizeTween = TweenService:Create(Drop.ChooseFrame, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 0, 0, 0)})
