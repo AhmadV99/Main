@@ -726,6 +726,7 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddDropdown(_farmsea, "Choose Equip ", false, {"Melee", "Blox Fruit", "Gun", "Sword", "Random"}, {"Random"})
     Funcs:AddToggle(_farmsea, "Auto Dodge Rough Sea", "", true)
     Funcs:AddToggle(_farmsea, "Protect Boat", "", true)
+    Funcs:AddToggle(_farmsea, "No Clip Rock", "", true)
     Funcs:AddToggle(_farmsea, "No Fog", "", false)
     _farmsea:Seperator("Farm Sea")
     Funcs:AddToggle(_farmsea, "Auto Drive Boat To Sea", "", false)
