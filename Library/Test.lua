@@ -3,6 +3,7 @@ local Player = Players.LocalPlayer
 local RunService = game:GetService("RunService")
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
+local VirtualUser = game:GetService("VirtualUser")
 
 local Custom = {} do
   Custom.ColorRGB = Color3.fromRGB(250, 7, 7)
@@ -20,18 +21,23 @@ local Custom = {} do
 
     return _instance
   end
+
+  function Custom:EnabledAFK()
+    Player.Idled:Connect(function()
+      VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+      task.wait(1)
+      VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+    end)
+  end
 end
+
+Custom:EnabledAFK()
 
 local function OpenClose()
   local ScreenGui = Custom:Create("ScreenGui", {
     Name = "OpenClose",
     ZIndexBehavior = Enum.ZIndexBehavior.Sibling
   }, RunService:IsStudio() and Player.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui")))
-
-  local ScreenFind = game:GetService("CoreGui"):FindFirstChild(ScreenGui.Name)
-  if ScreenFind and ScreenFind ~= ScreenGui then
-    ScreenFind:Destroy()
-  end
 
   local Close_ImageButton = Custom:Create("ImageButton", {
     BackgroundColor3 = Color3.fromRGB(0, 0, 0),
@@ -81,13 +87,13 @@ local Open_Close = OpenClose()
 
 local function MakeDraggable(topbarobject, object)
 
-	local function CustomPos(topbarobject, object)
-		local dragging, dragStart, startPos = false, nil, nil
+  local function CustomPos(topbarobject, object)
+    local dragging, dragStart, startPos = false, nil, nil
 
-		local function UpdatePos(input)
-			local delta = input.Position - dragStart
-			local newPos = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-			object.Position = newPos
+    local function UpdatePos(input)
+      local delta = input.Position - dragStart
+      local newPos = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+      object.Position = newPos
 		end
 
 		topbarobject.InputBegan:Connect(function(input)
@@ -447,11 +453,6 @@ function Speed_Library:CreateWindow(Config)
     Name = "SpeedHubXGui",
     ZIndexBehavior = Enum.ZIndexBehavior.Sibling
   }, RunService:IsStudio() and LocalPlayer.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui")))
-    
-  local ScreenFind = game:GetService("CoreGui"):FindFirstChild(SpeedHubXGui.Name)
-  if ScreenFind and ScreenFind ~= SpeedHubXGui then
-    ScreenFind:Destroy()
-  end
 
   local DropShadowHolder = Custom:Create("Frame", {
     BackgroundTransparency = 1,
@@ -850,8 +851,6 @@ function Speed_Library:CreateWindow(Config)
   -- /// Create Tab
 
   local Tabs, CountTab = {}, 0
-  local CountDropdown = 0
-
   function Tabs:CreateTab(Config)
     local _Name = Config[1] or Config.Name or "" 
     local Icon = Config[2] or Config.Icon or ""
@@ -971,12 +970,12 @@ function Speed_Library:CreateWindow(Config)
       if FrameChoose and Tab.LayoutOrder ~= LayersPageLayout.CurrentPage.LayoutOrder then
         for _, TabFrame in pairs(ScrollTab:GetChildren()) do
           if TabFrame.Name == "Tab" then
-            TweenService:Create(TabFrame, TweenInfo.new(0.1, Enum.EasingStyle.Back, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.999}):Play()
+            TweenService:Create(TabFrame, TweenInfo.new(0.2, Enum.EasingStyle.Back, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.999}):Play()
           end
         end
   
-        local _TabT = TweenService:Create(Tab, TweenInfo.new(0.1, Enum.EasingStyle.Back, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.92})
-        local _FTween = TweenService:Create(FrameChoose, TweenInfo.new(0.12, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Position = UDim2.new(0, 2, 0, 9 + (33 * Tab.LayoutOrder))})
+        local _TabT = TweenService:Create(Tab, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.92})
+        local _FTween = TweenService:Create(FrameChoose, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Position = UDim2.new(0, 2, 0, 9 + (33 * Tab.LayoutOrder))})
   
         _TabT:Play()
         _FTween:Play()
@@ -986,10 +985,10 @@ function Speed_Library:CreateWindow(Config)
         task.wait(0.05)
         NameTab.Text = _Name
   
-        TweenService:Create(FrameChoose, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 1, 0, 20)}):Play()
+        TweenService:Create(FrameChoose, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 1, 0, 20)}):Play()
   
-        task.wait(0.1)
-        TweenService:Create(FrameChoose, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 1, 0, 12)}):Play()
+        task.wait(0.2)
+        TweenService:Create(FrameChoose, TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 1, 0, 12)}):Play()
       end
     end)
 
@@ -1847,6 +1846,8 @@ function Speed_Library:CreateWindow(Config)
 				return Funcs_Input
       end
 
+      local CountDropdown = 0
+
       function Item:AddDropdown(Config)
         local Title = Config[1] or Config.Title or ""
         local Content = Config[2] or Config.Content or ""
@@ -2187,7 +2188,7 @@ function Speed_Library:CreateWindow(Config)
     end
 
     CountTab += 1
-    return Sections 
+    return Sections
   end
 
   return Tabs
