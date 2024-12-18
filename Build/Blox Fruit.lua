@@ -624,7 +624,7 @@ local _questitem = Window:MakeTab("Item/Quest") do
         else
           _statusCKP:Set({
             ["Title"] = "Cake Prince Status",
-            ["Content"] = string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", "")
+            ["Content"] = Sea[3] and string.gsub(tostring(CommF_:InvokeServer("CakePrinceSpawner", true)), "%D", "") or "N/A"
           })
         end
       end
@@ -655,7 +655,7 @@ local _questitem = Window:MakeTab("Item/Quest") do
       while task.wait(2) do
         _statusELHP:Set({
           ["Title"] = "Elite Hunter Progress",
-          ["Content"] = tostring(CommF_:InvokeServer("EliteHunter", "Progress"))
+          ["Content"] = Sea[3] and tostring(CommF_:InvokeServer("EliteHunter", "Progress")) or "N/A"
         })
       end
     end)
