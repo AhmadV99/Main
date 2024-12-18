@@ -851,6 +851,7 @@ function Speed_Library:CreateWindow(Config)
   -- /// Create Tab
 
   local Tabs, CountTab = {}, 0
+  local CountDropdown = 0
   function Tabs:CreateTab(Config)
     local _Name = Config[1] or Config.Name or "" 
     local Icon = Config[2] or Config.Icon or ""
@@ -1845,8 +1846,6 @@ function Speed_Library:CreateWindow(Config)
         ItemCount += 1
 				return Funcs_Input
       end
-
-      local CountDropdown = 0
 
       function Item:AddDropdown(Config)
         local Title = Config[1] or Config.Title or ""
