@@ -751,7 +751,8 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_PrehistoricIsland, "Auto Summon Prehistoric Island", "", false)
     Funcs:AddToggle(_PrehistoricIsland, "Auto Find Prehistoric Island", "", false)
     _PrehistoricIsland:Seperator("Farming On Prehistoric Island")
-    Funcs:AddToggle(_PrehistoricIsland, "Auto Kill Golem / Teleport Dinosaur Bones", "", false)
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Prehistoric (Fully)", "Summon Prehistoric Island, Kill Golem, Collect Bones, Collect Dragon Eggs", false)
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Kill Golem", "", false)
     Funcs:AddToggle(_PrehistoricIsland, "Auto Collect Dinosaur Bones", "", false)
     Funcs:AddToggle(_PrehistoricIsland, "Auto Collect Dragon Egg", "", false)
   end
