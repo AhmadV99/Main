@@ -691,16 +691,13 @@ function Speed_Library:CreateWindow(Config)
   local function UpdateSize()
     local _Total = 0
 
-    for _, child in pairs(ScrollTab:GetChildren()) do
-      if child:IsA("Frame") or child:IsA("TextButton") or child:IsA("TextLabel") then
-        _Total = _Total + child.Size.Y.Offset + 3
-      end
-    end
+		for _, child in pairs(ScrollTab:GetChildren()) do
+			if child.Name ~= "UIListLayout" then
+				_Total = _Total + 3 + child.Size.Y.Offset
+			end
+		end
 
-    local NewCanvasSize = UDim2.new(0, 0, 0, _Total)
-    if ScrollTab.CanvasSize.Y.Offset ~= NewCanvasSize.Y.Offset then
-      ScrollTab.CanvasSize = NewCanvasSize
-    end
+		ScrollTab.CanvasSize = UDim2.new(0, 0, 0, _Total)
   end
 
   ScrollTab.ChildAdded:Connect(UpdateSize)
