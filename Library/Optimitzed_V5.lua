@@ -1134,7 +1134,7 @@ function Speed_Library:CreateWindow(Config)
           BorderColor3 = Color3.fromRGB(0, 0, 0),
           BorderSizePixel = 0,
           LayoutOrder = ItemCount,
-          Size = UDim2.new(1, 0, 0, 46),
+          Size = UDim2.new(1, 0, 0, 35),
           Name = "Paragraph",
         }, SectionAdd)
       
@@ -1291,7 +1291,7 @@ function Speed_Library:CreateWindow(Config)
 					BackgroundTransparency = 0.935,
 					BorderSizePixel = 0,
 					LayoutOrder = ItemCount,
-					Size = UDim2.new(1, 0, 0, 46)
+					Size = UDim2.new(1, 0, 0, 35)
 				}, SectionAdd)
 
         Custom:Create("UICorner", {
@@ -1403,7 +1403,7 @@ function Speed_Library:CreateWindow(Config)
 					BackgroundTransparency = 0.935,
 					BorderSizePixel = 0,
 					LayoutOrder = ItemCount,
-					Size = UDim2.new(1, 0, 0, 46)
+					Size = UDim2.new(1, 0, 0, 35)
 				}, SectionAdd)
 
         Custom:Create("UICorner", {
@@ -1551,7 +1551,7 @@ function Speed_Library:CreateWindow(Config)
 					BorderColor3 = Color3.fromRGB(0, 0, 0),
 					BorderSizePixel = 0,
 					LayoutOrder = ItemCount,
-					Size = UDim2.new(1, 0, 0, 46),
+					Size = UDim2.new(1, 0, 0, 35),
 					Name = "Slider",
 				}, SectionAdd)
 
@@ -1759,7 +1759,7 @@ function Speed_Library:CreateWindow(Config)
           BorderColor3 = Color3.fromRGB(0, 0, 0),
           BorderSizePixel = 0,
           LayoutOrder = ItemCount,
-          Size = UDim2.new(1, 0, 0, 46),
+          Size = UDim2.new(1, 0, 0, 35),
           Name = "Input",
         }, SectionAdd)
 
@@ -1887,7 +1887,7 @@ function Speed_Library:CreateWindow(Config)
           BorderColor3 = Color3.fromRGB(0, 0, 0),
           BorderSizePixel = 0,
           LayoutOrder = ItemCount,
-          Size = UDim2.new(1, 0, 0, 46),
+          Size = UDim2.new(1, 0, 0, 35),
           Name = "Dropdown"
         }, SectionAdd)
 
