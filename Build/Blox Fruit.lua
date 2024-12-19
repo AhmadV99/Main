@@ -407,7 +407,6 @@ local _home = Window:MakeTab("Home") do
     Funcs:AddToggle(_config, "Fast Shoot", "", false)
     Funcs:AddDropdown(_config, "Fast Attack Delay", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _config:Seperator("Other")
-    Funcs:AddToggle(_config, "Auto Shoot Gun", "", false)
     Funcs:AddToggle(_config, "Hop if Admin or Staff", "", true)
     Funcs:AddToggle(_config, "Auto Dodge Skill", "", false)
     _config:Seperator("Active Race")
