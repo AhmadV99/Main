@@ -1187,8 +1187,8 @@ function Speed_Library:CreateWindow(Config)
         ParagraphContent:GetPropertyChangedSignal("AbsoluteSize"):Connect(UpdateParagraphSize)
 
         function SettingFuncs:Set(Config)
-        local Title = Config[1] or Config.Title or ""
-        local Content = Config[2] or Config.Content or ""
+          local Title = Config[1] or Config.Title or ""
+          local Content = Config[2] or Config.Content or ""
 
           ParagraphTitle.Text = Title
           ParagraphContent.Text = Content
@@ -1198,6 +1198,85 @@ function Speed_Library:CreateWindow(Config)
 
         return SettingFuncs
       end
+
+      function Item:AddSeperator(Config)
+        local Title = Config[1] or Config.Title or ""
+        local Sep_Funcs = {}
+
+        local Seperator = Custom:Create("Frame", {
+          BackgroundColor3 = Color3.fromRGB(70, 70, 70),
+          BackgroundTransparency = 0.1,
+          BorderColor3 = Color3.fromRGB(0, 0, 0),
+          BorderSizePixel = 1,
+          LayoutOrder = ItemCount,
+          Size = UDim2.new(1, 0, 0, 30),
+          Name = "Seperator",
+        }, SectionAdd)
+      
+        local SeperatorTitle = Custom:Create("TextLabel", {
+          Font = Enum.Font.GothamBold,
+          Text = Title,
+          TextColor3 = Color3.fromRGB(231, 231, 231),
+          TextStrokeColor3 = Color3.fromRGB(0, 0, 0),
+          TextStrokeTransparency = 0.8,
+          TextSize = 14,
+          TextXAlignment = Enum.TextXAlignment.Left,
+          TextYAlignment = Enum.TextYAlignment.Center,
+          BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+          BackgroundTransparency = 1,
+          BorderSizePixel = 0,
+          Position = UDim2.new(0, 12, 0, 0),
+          Size = UDim2.new(1, -16, 1, 0),
+          Name = "SeperatorTitle",
+        }, Seperator)
+        
+        Custom:Create("UICorner", {
+          CornerRadius = UDim.new(0, 6),
+        }, Seperator)
+        
+        local Gradient = Custom:Create("UIGradient", {
+          Color = ColorSequence.new{
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(120, 120, 120)),
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 120, 120))
+          },
+          Rotation = 90,
+        }, Seperator)
+  
+        function Sep_Funcs:Set(Config)
+          local Title = Config[1] or Config.Title or ""
+
+          SeperatorTitle.Text = Title
+        end
+
+        ItemCount += 1
+        return Sep_Funcs
+      end
+
+      function Item:AddLine()
+        local LineFuncs = {}
+    
+        local Line = Custom:Create("Frame", {
+          BackgroundColor3 = Color3.fromRGB(90, 90, 90),
+          BackgroundTransparency = 0.2,
+          BorderSizePixel = 0,
+          LayoutOrder = ItemCount,
+          Size = UDim2.new(1, 0, 0, 7),
+          Name = "Line",
+        }, SectionAdd)
+    
+        Custom:Create("UICorner", {CornerRadius = UDim.new(0, 3)}, Line)
+    
+        Custom:Create("UIGradient", {
+          Color = ColorSequence.new{
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(80, 80, 80)),
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(80, 80, 80))
+          },
+          Rotation = 0,
+        }, Line)
+    
+        ItemCount += 1
+        return LineFuncs
+     end
 
       function Item:AddButton(Config)
         local Title = Config[1] or Config.Title or ""
