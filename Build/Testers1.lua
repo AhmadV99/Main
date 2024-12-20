@@ -402,9 +402,8 @@ local _home = Window:MakeTab("Home") do
     _config:Seperator("Bring Mob")
     Funcs:AddToggle(_config, "Bring Mob", "", true)
     Funcs:AddDropdown(_config, "Bring Mob Radius", false, {"100", "200", "300", "400", "500"}, {"200"})
-    _config:Seperator("Fast Attack / Shoot")
+    _config:Seperator("Fast Attack")
     Funcs:AddToggle(_config, "Fast Attack", "", true)
-    Funcs:AddToggle(_config, "Fast Shoot", "", false)
     Funcs:AddDropdown(_config, "Fast Attack Delay", false, {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}, {"0"})
     _config:Seperator("Other")
     Funcs:AddToggle(_config, "Hop if Admin or Staff", "", true)
@@ -416,9 +415,11 @@ local _home = Window:MakeTab("Home") do
 
   local _server = _home:Section({["Title"] = "Server Games", ["Content"] = ""}) do
     Funcs:AddDropdown(_server, "Count Player", false, {"1","2","3","4","5","6","7","8","9","10","11","12"}, {"5"})
+
     Funcs:AddButton(_server, "Hop Server On Count Player", "", function()
       _env.ServerHop("Singapore", tonumber(SpeedHubX["Count Player"]))
     end)
+    
     Funcs:AddButton(_server, "Rejoin", "", function()
       TeleportService:Teleport(game.PlaceId, Player)
     end)
@@ -518,14 +519,14 @@ local _main = Window:MakeTab("Main") do
       Funcs:AddToggle(_farmingmastery, v .. "   ", "", true)
     end
   end
-  local _farmingC = _main:Section({["Title"] = "Farming/Collect Chest", ["Content"] = ""}) do
+  local _farmingC = _main:Section({["Title"] = "Farming/Collect Chest/Berry", ["Content"] = ""}) do
     _farmingC:Seperator("Config Chest")
     Funcs:AddDropdown(_farmingC, "Choose Chest Area", false, {"Mirage Island", "Island Other"}, {"Island Other"})
     Funcs:AddToggle(_farmingC, "Auto Hop if Chest doesn't Spawned", "", true)
     _farmingC:Seperator("Collect Chest")
     Funcs:AddToggle(_farmingC, "Auto Collect Chest", "", false)
-    --[[_farmingC:Seperator("Collect Berry")
-    Funcs:AddToggle(_farmingC, "Auto Collect Berry", "", false)]]
+    _farmingC:Seperator("Collect Berry")
+    Funcs:AddToggle(_farmingC, "Auto Collect Berry", "", false)
     _farmingC:Seperator("Farming Other")
     if Sea[2] then
       Funcs:AddToggle(_farmingC, "Auto Factory", "", false)
@@ -795,6 +796,7 @@ local _seaevent = Window:MakeTab("Sea Event") do
     Funcs:AddToggle(_PrehistoricIsland, "Auto Find Prehistoric Island", "", false)
     _PrehistoricIsland:Seperator("Farming On Prehistoric Island")
     Funcs:AddToggle(_PrehistoricIsland, "Auto Prehistoric (Fully)", "Summon Prehistoric Island, Kill Golem, Collect Bones, Collect Dragon Eggs", false)
+    Funcs:AddToggle(_PrehistoricIsland, "Auto Attack Pressure Rock", "", false)
     Funcs:AddToggle(_PrehistoricIsland, "Auto Kill Golem", "", false)
     Funcs:AddToggle(_PrehistoricIsland, "Auto Collect Dinosaur Bones", "", false)
     Funcs:AddToggle(_PrehistoricIsland, "Auto Collect Dragon Egg", "", false)
@@ -960,7 +962,7 @@ local _raidesp = Window:MakeTab("Raid / ESP") do
   end
 
   local _esp = _raidesp:Section({["Title"] = "ESP", ["Content"] = ""}) do
-    for _, esp in next, {"Player","Chest", "Flower","Devil Fruit","Island","Mirage Island","Kitsune Island"} do
+    for _, esp in next, {"Player","Chest", "Flower","Devil Fruit","Island","Mirage Island", "Kitsune Island", "Berry"} do
       Funcs:AddToggle(_esp, "ESP " .. esp, "", false)
     end
   end
