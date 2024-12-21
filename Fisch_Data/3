@@ -1,6 +1,6 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local _ReplicatedStorage = ReplicatedStorage:WaitForChild("Link") or ReplicatedStorage
+local _ReplicatedStorage = ReplicatedStorage.Link or ReplicatedStorage
 
 local fish = _ReplicatedStorage:WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish")
 
