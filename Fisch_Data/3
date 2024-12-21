@@ -1,14 +1,4 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
-local _ReplicatedStorage
-
-if ReplicatedStorage and ReplicatedStorage:FindFirstChild("Link") then
-  _ReplicatedStorage = ReplicatedStorage.Link
-else
-  _ReplicatedStorage = ReplicatedStorage
-end
-
-local fish = _ReplicatedStorage:WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish")
+local fish = game:GetService("ReplicatedStorage"):WaitForChild("Link"):WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish")
 
 local module = {
 	Basic = {"Cookie", "Cookie", "Glass of Milk", "Glass of Milk", "Candy Cane Carp", "Santa Salmon", "Ornament Fish"};
