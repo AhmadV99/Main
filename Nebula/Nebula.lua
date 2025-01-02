@@ -2,7 +2,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memej
 
 local window = library:AddWindow("Nebula", {
 	main_color = Color3.fromRGB(41, 74, 122),
-	min_size = Vector2.new(300, 250), 
+	min_size = Vector2.new(250, 300), 
 	can_resize = true,
 })
 
