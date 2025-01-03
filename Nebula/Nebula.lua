@@ -52,7 +52,7 @@ else
   
     _Main:AddButton("Get Key", function()
       local Succ = pcall(function()
-        setclipboard(Config:ReturnKey_Link())
+        Config:CopyKey_Link()
       end)
       if Succ then
         StatusKey:Set(AddSpace("Copied Key Link"))
