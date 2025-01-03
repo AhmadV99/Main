@@ -2,7 +2,7 @@ local a=2^32;local b=a-1;local function c(d,e)local f,g=0,1;while d~=0 or e~=0 d
 local lEncode, lDecode, lDigest = a3, aw, Z;
 
 local Config = {} do
-  Config.API = "https://api.platoboost.com"
+  Config.API = "https://api.platoboost.net"
   Config.service = 11
   Config.secret = "NONE"
   Config.useNonce = false
@@ -20,14 +20,11 @@ local Config = {} do
   local fMathFloor = math.floor
   local fGetHwid = gethwid or function() return game:GetService("Players").LocalPlayer.UserId end
 
-  local cachedLink = ""
-  local cachedTime = 0
-
-  local _ResHost = fRequest({Url = Config.API .. "/public/connectivity", Method = "GET"})
-  if _ResHost.StatusCode ~= 200 or _ResHost.StatusCode ~= 429 then Config.API = "https://api.platoboost.net" end
+  local CachedLink = ""
+  local CachedTime = 0
 
   function Config:CachLink()
-    if cachedTime + (10*60) < fOsTime() then
+    if CachedTime + (10*60) < fOsTime() then
       local _Res = fRequest({
         Url = Config.API .. "/public/start",
         Method = "POST",
@@ -42,9 +39,9 @@ local Config = {} do
         local decoded = lDecode(_Res.Body)
 
         if decoded.success == true then
-          cachedLink = decoded.data.url
-          cachedTime = fOsTime()
-          return true, cachedLink
+          CachedLink = decoded.data.url
+          CachedTime = fOsTime()
+          return true, CachedLink
         else
           Config:Messages(decoded.message)
           return false, decoded.message
@@ -57,9 +54,9 @@ local Config = {} do
       Config:Messages("Failed to cache link.")
       return false, "Failed to cache link."
     else
-      return true, cachedLink
+      return true, CachedLink
     end
-  end Config:CachLink()
+  end; Config:CachLink()
 
   function Config:GenRandom()
     local Str = {}
