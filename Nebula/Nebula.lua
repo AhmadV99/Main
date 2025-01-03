@@ -1,32 +1,62 @@
-repeat wait() until game:IsLoaded()
+local APIJSON = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Nebula/JSON.json"))
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
+if not APIJSON.Keysystem then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula_UI.lua"))()
+else
+  local Config = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Library/Key%20System/Platoboost_API.lua"))()
+  Config.service = 11
+  Config.secret = "NONE"
+  Config.useNonce = false
 
-local window = library:AddWindow("Nebula", {
-	main_color = Color3.fromRGB(41, 74, 122),
-	min_size = Vector2.new(270, 270), 
-	can_resize = true,
-})
+  if isfile("Nebula_Key.txt") and Config:Verify_Key(readfile("Nebula_Key.txt")) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula_UI.lua"))()
+  else
+    local KeySystemUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/KeySystemV1"))()
 
-local Script = window:AddTab("Script Editor")
-
-local Console = Script:AddConsole({
-    ["y"] = 100,
-    ["source"] = "Lua",
-})
-
-Console:Set("print('Hello World')")
-
-Script:AddButton("Execute", function()
-    loadstring(Console:Get())()
-end)
-
-Script:AddButton("Clear", function()
-    Console:Set("")
-end)
-
-Script:AddButton("Execute clipboard", function()
-    loadstring(getclipboard())()
-end)
-
-Script:Show()
+    local _Ket = KeySystemUI:AddWindow("Nebula | Key System")
+  
+    local _Main = _Ket:AddTab("Main", "0")
+  
+    local function AddSpace(args)
+      return "Status : " .. args
+    end
+  
+    local StatusKey = _Main:AddLabel(AddSpace("Waitting..."))
+  
+    StatusKey:Set(AddSpace("Nebula"))
+  
+    _Main:AddTextbox("Input Key", "", false ,function(Value)
+      _G.Key_Input = Value
+    end)
+  
+    _Main:AddButton("Submit Key", function()
+      if _G.Key_Input == "" or _G.Key_Input == nil then
+        StatusKey:Set(AddSpace("Key Is Not Vaild!"))
+        wait(1)
+        StatusKey:Set(AddSpace("Nebula"))
+      else
+        if Config:Verify_Key(_G.Key_Input) then
+          StatusKey:Set(AddSpace("Key Vaild!"))
+          writefile("Nebula_Key.txt", _G.Key_Input)
+          task.wait(2)
+          game.CoreGui:FindFirstChild("SpeedLibKey"):Destroy()
+          task.wait(1)
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula_UI.lua"))()
+        else
+          StatusKey:Set(AddSpace("Key Is Not Vaild!"))
+          wait(1)
+          StatusKey:Set(AddSpace("Nebula"))
+        end
+      end
+    end)
+  
+    _Main:AddButton("Get Key", function()
+      local Succ = pcall(function()
+        setclipboard(Config:ReturnKey_Link())
+      end)
+      if Succ then
+        StatusKey:Set(AddSpace("Copied Key Link"))
+      end
+    end)
+  end
+end
