@@ -11,7 +11,7 @@ local Config = {} do
 
   local requestSending = false
   local fSetClipboard = setclipboard or toclipboard
-  local fRequest = request or http_request or syn_request
+  local fRequest = request or (syn and syn.request) or (http and http.request) or http_request or syn_request
   local fStringChar = string.char
   local fToString = tostring
   local fStringSub = string.sub
@@ -25,7 +25,8 @@ local Config = {} do
 
   function Config:CachLink()
     if CachedTime + (10*60) < fOsTime() then
-      local _Res = fRequest({
+
+      local Respond = fRequest({
         Url = Config.API .. "/public/start",
         Method = "POST",
         Body = lEncode({
@@ -35,24 +36,24 @@ local Config = {} do
         Headers = {["Content-Type"] = "application/json"}
       })
 
-      if _Res.StatusCode == 200 then
-        local decoded = lDecode(_Res.Body)
+      if Respond.StatusCode == 200 then
+        local decoded = lDecode(Respond.Body)
 
         if decoded.success == true then
           CachedLink = decoded.data.url
           CachedTime = fOsTime()
           return true, CachedLink
         else
-          Config:Messages(decoded.message)
+          Config:Messages("[1]: " .. decoded.message)
           return false, decoded.message
         end
-      elseif _Res.StatusCode == 429 then
-        Config:Messages("you are being rate limited, please wait 20 seconds and try again.")
-        return false, "you are being rate limited, please wait 20 seconds and try again."
+      elseif Respond.StatusCode == 429 then
+        Config:Messages("[2]: you are being rate limited, please wait 20 seconds and try again.")
+        return false, "[2]: you are being rate limited, please wait 20 seconds and try again."
       end
 
-      Config:Messages("Failed to cache link.")
-      return false, "Failed to cache link."
+      Config:Messages("[3]: Failed to cache link.")
+      return false, "[3]: Failed to cache link."
     else
       return true, CachedLink
     end
@@ -70,9 +71,9 @@ local Config = {} do
     local Old = Config:GenRandom()
     task.wait(0.2)
     if Config:GenRandom() == Old then
-      Config:Messages("platoboost nonce error.")
+      Config:Messages("[4]: platoboost nonce error.")
     end
-  end Config:SetNonce()
+  end; Config:SetNonce()
 
   function Config:CopyKey_Link()
     local s, r = Config:CachLink()
@@ -108,37 +109,37 @@ local Config = {} do
             if DECODED.data.hash == lDigest("true" .. "-" .. _Nonce .. "-" .. Config.secret) then
               return true
             else
-              Config:Messages("failed to verify integrity.")
+              Config:Messages("[5]: failed to verify integrity.")
               return false
             end    
           else
             return true
           end
         else
-          Config:Messages("key is invalid.")
+          Config:Messages("[6]: key is invalid.")
           return false
         end
       else
         if fStringSub(DECODED.message, 1, 27) == "unique constraint violation" then
-          Config:Messages("you already have an active key, please wait for it to expire before redeeming it.")
+          Config:Messages("[7]: you already have an active key, please wait for it to expire before redeeming it.")
           return false
         else
-          Config:Messages(DECODED.message)
+          Config:Messages("[8]: " .. DECODED.message)
           return false
         end
       end
     elseif _Res.StatusCode == 429 then
-      Config:Messages("you are being rate limited, please wait 20 seconds and try again.")
+      Config:Messages("[9]: you are being rate limited, please wait 20 seconds and try again.")
       return false
     else
-      Config:Messages("server returned an invalid status code, please try again later.")
+      Config:Messages("[10]: server returned an invalid status code, please try again later.")
       return false
     end
   end
 
   function Config:Verify_Key(Val)
     if requestSending == true then
-      Config:Messages("a request is already being sent, please slow down.")
+      Config:Messages("[11]: a request is already being sent, please slow down.")
       return false
     else
       requestSending = true
@@ -166,7 +167,7 @@ local Config = {} do
             if DECODED.data.hash == lDigest("true" .. "-" .. _Nonce .. "-" .. Config.secret) then
               return true
             else
-              Config:Messages("failed to verify integrity.")
+              Config:Messages("[12]: failed to verify integrity.")
               return false
             end
           else
@@ -176,7 +177,7 @@ local Config = {} do
           if fStringSub(Val, 1, 4) == "KEY_" then
             return Config:Redeem_Key(Val)
           else
-            Config:Messages("key is invalid.")
+            Config:Messages("[13]: key is invalid.")
             return false
           end
         end
@@ -185,10 +186,10 @@ local Config = {} do
         return false
       end
     elseif response.StatusCode == 429 then
-      Config:Messages("you are being rate limited, please wait 20 seconds and try again.")
+      Config:Messages("[14]: you are being rate limited, please wait 20 seconds and try again.")
       return false
     else
-      Config:Messages("server returned an invalid status code, please try again later.")
+      Config:Messages("[15]: server returned an invalid status code, please try again later.")
       return false
     end
   end
@@ -215,14 +216,14 @@ local Config = {} do
           if DECODED.data.hash == lDigest(fToString(DECODED.data.value) .. "-" .. _Nonce .. "-" .. Config.secret) then
             return DECODED.data.value
           else
-            Config:Messages("failed to verify integrity.")
+            Config:Messages("[16]: failed to verify integrity.")
             return nil
           end
         else
           return DECODED.data.value
         end
       else
-        Config:Messages(DECODED.message)
+        Config:Messages("[17]: " .. DECODED.message)
         return nil
       end
     else
