@@ -39,7 +39,7 @@ function library:AddWindow(text,keybind)
     DropdownStroke.Name = "UIStroke"
     DropdownStroke.Parent = Main
     DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    DropdownStroke.Color = Color3.fromRGB(225,0,0)
+    DropdownStroke.Color = Color3.fromRGB(245, 245, 245)
     DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
     DropdownStroke.Thickness = 0.7
     DropdownStroke.Transparency = 0.10
@@ -256,7 +256,7 @@ function library:AddWindow(text,keybind)
           local ButtonStroke = Instance.new("UIStroke")
           ButtonStroke.Parent = Button
           ButtonStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-          ButtonStroke.Color = Color3.fromRGB(255, 0, 0)
+          ButtonStroke.Color = Color3.fromRGB(245, 245, 245)
           ButtonStroke.LineJoinMode = Enum.LineJoinMode.Round
           ButtonStroke.Thickness = 0.7
           ButtonStroke.Transparency = 0.1
@@ -305,7 +305,7 @@ function library:AddWindow(text,keybind)
           DropdownStroke.Name = "UIStroke"
           DropdownStroke.Parent = Textboxx
           DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-          DropdownStroke.Color = Color3.fromRGB(255,0,0)
+          DropdownStroke.Color = Color3.fromRGB(245, 245, 245)
           DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
           DropdownStroke.Thickness = 0.7
           DropdownStroke.Transparency = 0.10
