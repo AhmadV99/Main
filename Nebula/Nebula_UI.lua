@@ -18,7 +18,7 @@ local Console = Script:AddConsole({
 Console:Set("print('Hello World')")
 
 Script:AddButton("Execute", function()
-    loadstring(Console:Get())()
+    dtc.schedule(Console:Get())
 end)
 
 Script:AddButton("Clear", function()
@@ -26,7 +26,7 @@ Script:AddButton("Clear", function()
 end)
 
 Script:AddButton("Execute clipboard", function()
-    loadstring(getclipboard())()
+    dtc.schedule(getclipboard())
 end)
 
 Script:Show()
