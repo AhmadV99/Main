@@ -1,6 +1,45 @@
-local APIJSON = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Nebula/JSON.json"))
+pcall(function()
+  repeat task.wait() until getgenv().dtc.memmy
 
-if not APIJSON.Keysystem then
+  if not memorystats then
+    memorystats = {cache = function(_) end,restore = function(_) end,freezegc = function() end,thawgc = function() end,}
+  end
+  
+  for _, v in pairs({
+    "Internal", "HttpCache", "Instances", "Signals", "Script", 
+    "PhysicsCollision", "PhysicsParts", "GraphicsSolidModels", 
+    "GraphicsMeshParts", "GraphicsParticles", "GraphicsParts", 
+    "GraphicsSpatialHash", "GraphicsTerrain", "GraphicsTexture", 
+    "GraphicsTextureCharacter", "Sounds", "StreamingSounds", 
+    "TerrainVoxels", "Gui", "Animation", "Navigation", "GeometryCSG"
+  }) do
+    memorystats.cache(v)
+  end
+  
+  memorystats.freezegc()
+  
+  for _, v in pairs({
+    "Internal", "HttpCache", "Instances", "Signals", "Script", 
+    "PhysicsCollision", "PhysicsParts", "GraphicsSolidModels", 
+    "GraphicsMeshParts", "GraphicsParticles", "GraphicsParts", 
+    "GraphicsSpatialHash", "GraphicsTerrain", "GraphicsTexture", 
+    "GraphicsTextureCharacter", "Sounds", "StreamingSounds", 
+    "TerrainVoxels", "Gui", "Animation", "Navigation", "GeometryCSG"
+  }) do
+    memorystats.restore(v)
+  end
+  
+  memorystats.thawgc()
+end)
+
+local HttpService = game:GetService("HttpService")
+local URL = game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Nebula/JSON.json")
+local Decoded = HttpService:JSONDecode(URL)
+
+local pautoexe = clonefunction(dtc.pushautoexec)
+
+if not Decoded.Keysystem then
+  clonefunction(dtc.pushautoexec)()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula_UI.lua"))()
 else
   local Config = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Library/Key%20System/Platoboost_API.lua"))()
@@ -43,6 +82,7 @@ else
           game.CoreGui:FindFirstChild("SpeedLibKey"):Destroy()
           task.wait(1)
           loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula_UI.lua"))()
+          pautoexe()
         else
           StatusKey:Set(AddSpace("Key Is Not Vaild!"))
           wait(1)
