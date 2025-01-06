@@ -9,6 +9,7 @@ else
   Config.useNonce = false
 
   if isfile("Nebula_Key.txt") and Config:Verify_Key(readfile("Nebula_Key.txt")) then
+    clonefunction(dtc.pushautoexec)()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula_UI.lua"))()
   else
     local KeySystemUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/KeySystemV1"))()
