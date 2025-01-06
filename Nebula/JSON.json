@@ -4,6 +4,9 @@
   "script": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula.lua\"))()",
   "versionName": "1.0.0",
   "Keysystem": false,
-  "ApkLink": "",
+  "ApkLink": {
+    "32": "",
+    "64": ""
+  },
   "invite_discord": "https://discord.gg/HrCN6p9MDG"
 }
