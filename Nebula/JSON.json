@@ -3,7 +3,7 @@
   "rbxhttp": false,
   "script": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula.lua\"))()",
   "versionName": "1.0.0",
-  "Keysystem": false,
+  "Keysystem": true,
   "ApkLink": {
     "32": "",
     "64": "https://www.mediafire.com/file/qw4d8zdev9p6fhs/Nebula_654.apk/file"
