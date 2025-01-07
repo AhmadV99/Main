@@ -1,6 +1,6 @@
 {
-  "moduleName": "Cubix",
-  "rbxhttp": false,
+  "moduleName": "Seliware",
+  "rbxhttp": true,
   "script": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula.lua\"))()",
   "versionName": "1.0.0",
   "Keysystem": false,
