@@ -6623,3 +6623,4 @@ local module_upvr = {
 		Gemstone = Color3.fromRGB(172, 57, 255);
 	};
 }
+return module_upvr
