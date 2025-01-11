@@ -1,4 +1,4 @@
-local DataZone = {
+local Data = {
 	["The Depths - Serpent"] = {
 		Pool = {"Destroyed Fossil", "Scrap Metal", "Deep-sea Dragonfish", "Deep-sea Hatchetfish", "Frilled Shark", "Depth Octopus", "Three-eyed Fish", "Luminescent Minnow", "Goblin Shark", "Black Dragon Fish", "Spider Crab", "Nautilus", "Small Spine Chimera", "Ancient Eel", "Mutated Shark", "Barreleye Fish", "Sea Snake", "Ancient Depth Serpent", "Enchant Relic"};
 		Priority = 2;
@@ -19,6 +19,10 @@ local DataZone = {
 		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Mackerel", "Cod", "Amberjack", "Sardine", "Halibut", "Salmon", "Mullet", "Bluefin Tuna", "Yellowfin Tuna", "Barracuda", "Sea Bass", "Chinook Salmon", "Sea Pickle", "Swordfish", "Anglerfish", "Coelacanth", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Dolphin", "Flying Fish", "Colossal Squid", "Oarfish", "Crown Bass", "Mythic Fish"};
 		Priority = 1;
 	};
+	["Grand Reef"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Reef Minnow", "Reef Goby", "Coral Chromis", "Coral Guard", "Crystal Wrasse", "Reef Parrotfish", "Coral Emperor", "Grand Reef Guardian"};
+		Priority = 3;
+	};
 	["Forsaken Shores"] = {
 		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Corsair Grouper", "Scurvy Sailfish", "Cutlass Fish", "Reefrunner Snapper"};
 		Priority = 1;
@@ -36,7 +40,7 @@ local DataZone = {
 		Priority = 1;
 	};
 	["Moosewood Ocean Mythical"] = {
-		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Trout", "Barracuda", "Flounder", "Yellowfin Tuna", "Sockeye Salmon", "Red Snapper", "Anchovy", "Eel", "Whisker Bill"};
+		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Trout", "Barracuda", "Flounder", "Yellowfin Tuna", "Sockeye Salmon", "Red Snapper", "Anchovy", "Eel", "Whisker Bill", "Treble Bass"};
 		Priority = 4;
 	};
 	["Moosewood Docks"] = {
@@ -69,7 +73,7 @@ local DataZone = {
 	};
 	["Roslit Bay Clam"] = {
 		Pool = {"Driftwood", "Log", "Cod", "Clam", "Squid", "Flying Fish", "Mythic Fish"};
-		Priority = 10;
+		Priority = 10000;
 	};
 	["Desolate Deep"] = {
 		Pool = {"Log", "Rock", "Common Crate", "Stalactite", "Coral Geode", "Slate Tuna", "Phantom Ray", "Rockstar Hermit Crab", "Horseshoe Crab", "Banditfish", "Cockatoo Squid", "Midnight Axolotl", "Barbed Shark", "Emperor Jellyfish"};
@@ -153,6 +157,11 @@ local DataZone = {
 		Priority = 10;
 		CantBeWhormholed = true;
 	};
+	ExaltedRelics = {
+		Pool = {"Exalted Relic"};
+		Priority = 10;
+		CantBeWhormholed = true;
+	};
 	["Megalodon Default"] = {
 		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Mackerel", "Cod", "Amberjack", "Sardine", "Halibut", "Salmon", "Mullet", "Bluefin Tuna", "Yellowfin Tuna", "Barracuda", "Sea Bass", "Chinook Salmon", "Sea Pickle", "Swordfish", "Anglerfish", "Coelacanth", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Dolphin", "Flying Fish", "Colossal Squid", "Oarfish", "Crown Bass", "Mythic Fish", "Megalodon", "Ancient Megalodon"};
 		CantBeWhormholed = true;
@@ -196,11 +205,11 @@ local DataZone = {
 		CantBeWhormholed = true;
 	};
 	["Overgrowth Caves"] = {
-		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Ice Anchovy", "Icy Salmon", "Icy Carp", "Frigid Carp", "Icy Tuna", "Icy Goldfish", "Frozen Antlers", "Frozen Walnut", "Glass Diamond"};
+		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Ice Anchovy", "Icy Salmon", "Icy Carp", "Frigid Crab", "Icy Tuna", "Icy Goldfish", "Frigid Antlers", "Frozen Walnut", "Glass Diamond"};
 		Priority = 2;
 	};
 	["Frigid Cavern"] = {
-		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Ice Eel", "Frigid Shrimp", "Ice Jellyfish", "Ice Octopus", "Frozen Taco", "Snowfish", "Polar Alligator", "Frozen Mammoth Tusk", "Glass Diamond"};
+		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Ice Eel", "Frigid Shrimp", "Ice Jellyfish", "Ice Octopus", "Frigid Taco", "Snowfish", "Polar Alligator", "Frigid Mammoth Tusk", "Glass Diamond"};
 		Priority = 2;
 	};
 	["Cryogenic Canal"] = {
@@ -215,6 +224,26 @@ local DataZone = {
 		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Mackerel", "Cod", "Amberjack", "Nurse Shark", "Porgy", "Sardine", "Halibut", "Mullet", "Salmon", "Yellowfin Tuna", "Sea Bass", "Chinook Salmon", "Haddock", "Barracuda", "Sea Pickle", "Pufferfish", "Swordfish", "Bluefin Tuna", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Crown Bass", "Dolphin", "Flying Fish", "Mythic Fish", "Glass Diamond"};
 		Priority = 2;
 	};
+	["Forsaken Algae Pool"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Mackerel", "Cod", "Amberjack", "Sardine", "Halibut", "Salmon", "Mullet", "Bluefin Tuna", "Yellowfin Tuna", "Barracuda", "Sea Bass", "Chinook Salmon", "Sea Pickle", "Swordfish", "Anglerfish", "Coelacanth", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Dolphin", "Flying Fish", "Colossal Squid", "Oarfish", "Crown Bass", "Mythic Fish", "Forsaken Algae"};
+		Priority = 100;
+	};
+	["Ancient Algae Pool"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Mackerel", "Cod", "Amberjack", "Sardine", "Halibut", "Salmon", "Mullet", "Bluefin Tuna", "Yellowfin Tuna", "Barracuda", "Sea Bass", "Chinook Salmon", "Sea Pickle", "Swordfish", "Anglerfish", "Coelacanth", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Dolphin", "Flying Fish", "Colossal Squid", "Oarfish", "Crown Bass", "Mythic Fish", "Ancient Algae"};
+		Priority = 100;
+	};
+	["Mushgrove Algae Pool"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Mackerel", "Cod", "Amberjack", "Sardine", "Halibut", "Salmon", "Mullet", "Bluefin Tuna", "Yellowfin Tuna", "Barracuda", "Sea Bass", "Chinook Salmon", "Sea Pickle", "Swordfish", "Anglerfish", "Coelacanth", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Dolphin", "Flying Fish", "Colossal Squid", "Oarfish", "Crown Bass", "Mythic Fish", "Mushgrove Algae"};
+		Priority = 100;
+	};
+	["Snowcap Algae Pool"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Mackerel", "Cod", "Amberjack", "Sardine", "Halibut", "Salmon", "Mullet", "Bluefin Tuna", "Yellowfin Tuna", "Barracuda", "Sea Bass", "Chinook Salmon", "Sea Pickle", "Swordfish", "Anglerfish", "Coelacanth", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Dolphin", "Flying Fish", "Colossal Squid", "Oarfish", "Crown Bass", "Mythic Fish", "Snowcap Algae"};
+		Priority = 100;
+	};
+	["Golden Tide"] = {
+		Pool = {"Confetti Shark", "Countdown Perch", "Eternal Frostwhale", "Hourglass Bass", "Tidal Pike", "Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Mackerel", "Cod", "Amberjack", "Sardine", "Halibut", "Salmon", "Bluefin Tuna", "Yellowfin Tuna", "Barracuda", "Sea Bass", "Chinook Salmon", "Sea Pickle", "Swordfish", "Anglerfish", "Coelacanth", "Sailfish", "Stingray"};
+		Priority = 102;
+		CantBeWhormholed = true;
+	};
 }
-
-return DataZone
+return Data
