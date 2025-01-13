@@ -4,7 +4,6 @@
   "script": "dtc.schedule(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula.lua\"))",
   "versionName": "1.0.0",
   "Keysystem": true,
-  "UseKeyGuardian": true,
   "ApkLink": {
     "32": "",
     "64": "https://www.mediafire.com/file/9bb8r42lm8gfb0h/Nebula.apk/file"
