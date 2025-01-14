@@ -5,6 +5,17 @@ local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
 local VirtualUser = game:GetService("VirtualUser")
 
+task.spawn(function()
+	pcall(function()
+		if game.PlaceId == 3623096087 then
+			if game.Workspace:FindFirstChild("RobloxForwardPortals") then
+				game.Workspace.RobloxForwardPortals:Destroy()
+			end
+		end
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/GUI_ADS.lua"))()
+	end)
+end)
+
 local Custom = {} do
   Custom.ColorRGB = Color3.fromRGB(250, 7, 7)
 
