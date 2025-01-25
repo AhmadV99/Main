@@ -1,4 +1,8 @@
-local Data = {
+local DataPool = {
+	["Atlantean Storm"] = {
+		Pool = {"Void Angler", "Tempest Ray", "Abyss Snapper", "Whirlpool Marlin", "Vortex Barracuda", "Typhoon Tuna", "Cyclone Mako", "Maelstorm Shark"};
+		Priority = 4;
+	};
 	["The Depths - Serpent"] = {
 		Pool = {"Destroyed Fossil", "Scrap Metal", "Deep-sea Dragonfish", "Deep-sea Hatchetfish", "Frilled Shark", "Depth Octopus", "Three-eyed Fish", "Luminescent Minnow", "Goblin Shark", "Black Dragon Fish", "Spider Crab", "Nautilus", "Small Spine Chimera", "Ancient Eel", "Mutated Shark", "Barreleye Fish", "Sea Snake", "Ancient Depth Serpent", "Enchant Relic"};
 		Priority = 2;
@@ -8,15 +12,19 @@ local Data = {
 		Priority = 1;
 	};
 	["Ocean Greedy"] = {
-		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Mackerel", "Cod", "Amberjack", "Nurse Shark", "Porgy", "Sardine", "Halibut", "Mullet", "Salmon", "Yellowfin Tuna", "Sea Bass", "Chinook Salmon", "Haddock", "Barracuda", "Sea Pickle", "Pufferfish", "Swordfish", "Bluefin Tuna", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Crown Bass", "Dolphin", "Flying Fish", "Mythic Fish"};
+		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Mackerel", "Cod", "Amberjack", "Nurse Shark", "Porgy", "Sardine", "Halibut", "Mullet", "Salmon", "Yellowfin Tuna", "Sea Bass", "Chinook Salmon", "Haddock", "Barracuda", "Sea Pickle", "Pufferfish", "Swordfish", "Bluefin Tuna", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Crown Bass", "Dolphin", "Flying Fish", "Mythic Fish", "Long Pike", "Mustard"};
 		Priority = 4;
 	};
 	Ocean = {
-		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Mackerel", "Cod", "Amberjack", "Nurse Shark", "Porgy", "Sardine", "Halibut", "Mullet", "Salmon", "Yellowfin Tuna", "Sea Bass", "Chinook Salmon", "Haddock", "Barracuda", "Sea Pickle", "Pufferfish", "Swordfish", "Bluefin Tuna", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Crown Bass", "Dolphin", "Flying Fish", "Mythic Fish"};
+		Pool = {"Tire", "Boot", "Common Crate", "Bait Crate", "Fish Barrel", "Seaweed", "Mackerel", "Cod", "Amberjack", "Nurse Shark", "Porgy", "Sardine", "Halibut", "Mullet", "Salmon", "Yellowfin Tuna", "Sea Bass", "Chinook Salmon", "Haddock", "Barracuda", "Sea Pickle", "Pufferfish", "Swordfish", "Bluefin Tuna", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Crown Bass", "Dolphin", "Flying Fish", "Mythic Fish", "Long Pike", "Mustard"};
 		Priority = 0;
 	};
 	["Deep Ocean"] = {
-		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Mackerel", "Cod", "Amberjack", "Sardine", "Halibut", "Salmon", "Mullet", "Bluefin Tuna", "Yellowfin Tuna", "Barracuda", "Sea Bass", "Chinook Salmon", "Sea Pickle", "Swordfish", "Anglerfish", "Coelacanth", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Dolphin", "Flying Fish", "Colossal Squid", "Oarfish", "Crown Bass", "Mythic Fish"};
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Mackerel", "Cod", "Amberjack", "Sardine", "Halibut", "Salmon", "Mullet", "Bluefin Tuna", "Yellowfin Tuna", "Barracuda", "Sea Bass", "Chinook Salmon", "Sea Pickle", "Swordfish", "Anglerfish", "Coelacanth", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Dolphin", "Flying Fish", "Colossal Squid", "Oarfish", "Crown Bass", "Mythic Fish", "Long Pike", "Mustard"};
+		Priority = 1;
+	};
+	["Atlantis Ocean"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Mackerel", "Cod", "Amberjack", "Sardine", "Halibut", "Salmon", "Mullet", "Bluefin Tuna", "Yellowfin Tuna", "Barracuda", "Sea Bass", "Chinook Salmon", "Sea Pickle", "Swordfish", "Anglerfish", "Coelacanth", "Sailfish", "Stingray", "Sawfish", "Moonfish", "Dolphin", "Flying Fish", "Colossal Squid", "Oarfish", "Crown Bass", "Mythic Fish", "Long Pike", "Mustard"};
 		Priority = 1;
 	};
 	["Grand Reef"] = {
@@ -84,15 +92,15 @@ local Data = {
 		Priority = 2;
 	};
 	["Ancient Isle Ocean"] = {
-		Pool = {"Tire", "Carbon Crate", "Common Crate", "Bait Crate", "Fish Barrel", "Cod", "Sardine", "Sea Bass", "Mullet", "Piranha", "Anomalocaris", "Starfish", "Onychodus", "Acanthodii", "Xiphactinus", "Hyneria", "Cobia", "Ginsu Shark", "Dunkleosteus", "Colossal Squid", "Helicoprion", "Mosasaurus", "Ancient Fragment", "Meg's Fang", "Meg's Spine"};
+		Pool = {"Tire", "Carbon Crate", "Common Crate", "Bait Crate", "Fish Barrel", "Cod", "Sardine", "Sea Bass", "Mullet", "Piranha", "Anomalocaris", "Starfish", "Onychodus", "Acanthodii", "Xiphactinus", "Hyneria", "Cobia", "Ginsu Shark", "Dunkleosteus", "Colossal Squid", "Helicoprion", "Mosasaurus", "Banana", "Ancient Fragment", "Meg's Fang", "Meg's Spine"};
 		Priority = 2;
 	};
 	["Ancient Isle Pond"] = {
-		Pool = {"Log", "Piranha", "Cladoselache", "Anomalocaris", "Xiphactinus", "Hyneria", "Hallucigenia", "Floppy"};
+		Pool = {"Log", "Piranha", "Cladoselache", "Anomalocaris", "Xiphactinus", "Hyneria", "Hallucigenia", "Floppy", "Banana"};
 		Priority = 3;
 	};
 	["Ancient Isle Waterfall"] = {
-		Pool = {"Log", "Piranha", "Cladoselache", "Anomalocaris", "Xiphactinus", "Hyneria", "Hallucigenia", "Palaeoniscus", "Leedsichthys"};
+		Pool = {"Log", "Piranha", "Cladoselache", "Anomalocaris", "Xiphactinus", "Hyneria", "Hallucigenia", "Palaeoniscus", "Leedsichthys", "Banana"};
 		Priority = 4;
 	};
 	["Ancient Archives"] = {
@@ -108,7 +116,7 @@ local Data = {
 		Priority = 3;
 	};
 	["Mushgrove Water"] = {
-		Pool = {"Carbon Crate", "Common Crate", "Bait Crate", "Log", "Driftwood", "Swamp Bass", "Grey Carp", "Bowfin", "White Perch", "Fungal Cluster", "Marsh Gar", "Catfish", "Alligator", "Handfish"};
+		Pool = {"Carbon Crate", "Common Crate", "Bait Crate", "Log", "Driftwood", "Resin", "Swamp Bass", "Grey Carp", "Bowfin", "White Perch", "Fungal Cluster", "Marsh Gar", "Catfish", "Alligator", "Handfish"};
 		Priority = 2;
 	};
 	Vertigo = {
@@ -245,5 +253,34 @@ local Data = {
 		Priority = 102;
 		CantBeWhormholed = true;
 	};
+	["Zeus Pool"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Lightning Minnow", "Voltfin Carp", "Sparkfin Tetra", "Static Ray", "Lightning Pike", "Stormcloud Angelfish", "Thunder Bass", "Storm Eel", "Thunder Serpent", "Zeus' Herald"};
+		Priority = 1;
+	};
+	["Poseidon Pool"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Colossal Carp", "Titan Tuna", "Giant Manta", "Leviathan Bass", "Massive Marlin", "Titanic Sturgeon", "Titanfang Grouper", "Deep Emperor", "Deep Behemoth", "Abyssal Goliath"};
+		Priority = 1;
+	};
+	["Sunken's Depth"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Sunken Silverscale", "Atlantean Anchovy", "Oracle Minnow", "Poseidon's Perch", "Marble Maiden", "Crystal Chorus", "Helios Ray", "Philosopher's Fish", "Atlantean Guardian", "Triton's Herald", "Twilight Glowfish", "Atlantean Alchemist", "Deep Crownfish", "Celestial Koi"};
+		Priority = 1;
+	};
+	["Ethereal Abyss"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Column Crawler", "Atlantean Sardine", "Neptune's Nibbler", "Aqua Scribe", "Temple Drifter", "Mosaic Swimmer", "Echo Fisher", "Oracle's Eye", "Siren Singer", "Chronos Deep Swimmer", "Voidscale Guppy", "Starlit Weaver", "Mage Marlin", "King Jellyfish"};
+		Priority = 1;
+	};
+	["Kraken Pool"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Shadowfang Snapper", "Tentacled Horror", "Tentacle Eel", "Deep One", "Eldritch Horror", "Kraken's Herald", "Abyssal King", "Void Emperor", "Abyssal Devourer"};
+		Priority = 1;
+	};
+	["The Kraken Pool"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Shadowfang Snapper", "Tentacled Horror", "Tentacle Eel", "Deep One", "Eldritch Horror", "Kraken's Herald", "Abyssal King", "Void Emperor", "Abyssal Devourer", "The Kraken"};
+		Priority = 1;
+	};
+	["Ancient Kraken Pool"] = {
+		Pool = {"Tire", "Boot", "Common Crate", "Seaweed", "Carbon Crate", "Quality Bait Crate", "Common Crate", "Bait Crate", "Shadowfang Snapper", "Tentacled Horror", "Tentacle Eel", "Deep One", "Eldritch Horror", "Kraken's Herald", "Abyssal King", "Void Emperor", "Abyssal Devourer", "The Kraken", "Ancient Kraken"};
+		Priority = 1;
+	};
 }
-return Data
+
+return DataPool
