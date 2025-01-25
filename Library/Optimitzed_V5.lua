@@ -2046,6 +2046,31 @@ function Speed_Library:CreateWindow(Config)
           Size = UDim2.new(1, 0, 1, 0),
           Name = "ScrollSelect",
         }, DropdownFolder)
+        
+        local SearchBar = Custom:Create("TextBox", {
+          Font = Enum.Font.GothamBold,
+          PlaceholderText = "Search",
+          PlaceholderColor3 = Color3.fromRGB(120, 120, 120),
+          Text = "",
+          TextColor3 = Color3.fromRGB(255, 255, 255),
+          TextSize = 12,
+          BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+          BackgroundTransparency = 0.9,
+          BorderColor3 = Color3.fromRGB(255, 0, 0),
+          BorderSizePixel = 1,
+          Size = UDim2.new(1, 0, 0, 20),
+          Parent = ScrollSelect
+        })
+
+        SearchBar:GetPropertyChangedSignal("Text"):Connect(function()
+          for _, v in pairs(ScrollSelect:GetChildren()) do
+            if v:IsA("Frame") and v.Name == "Option" then
+              local _OptionText = v.OptionText.Text:lower()
+
+              v.Visible = _OptionText:find(SearchBar.Text:lower()) ~= nil
+            end
+          end
+        end)
 
         Custom:Create("UIListLayout", {
           Padding = UDim.new(0, 3),
