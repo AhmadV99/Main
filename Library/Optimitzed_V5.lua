@@ -5,17 +5,6 @@ local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
 local VirtualUser = game:GetService("VirtualUser")
 
-task.spawn(function()
-	pcall(function()
-		if game.PlaceId == 3623096087 then
-			if game.Workspace:FindFirstChild("RobloxForwardPortals") then
-				game.Workspace.RobloxForwardPortals:Destroy()
-			end
-		end
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/GUI_ADS.lua"))()
-	end)
-end)
-
 local Custom = {} do
   Custom.ColorRGB = Color3.fromRGB(250, 7, 7)
 
@@ -40,13 +29,22 @@ local Custom = {} do
       VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
     end)
   end
+
+  function Custom:GenNumber(Num)
+    local List = {}
+
+    for _ = 1, Num do
+        table.insert(List, math.random(0, 9))
+    end
+
+    return table.concat(List)
+  end
 end
 
 Custom:EnabledAFK()
 
 local function OpenClose()
   local ScreenGui = Custom:Create("ScreenGui", {
-    Name = "OpenClose",
     ZIndexBehavior = Enum.ZIndexBehavior.Sibling
   }, RunService:IsStudio() and Player.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui")))
 
@@ -179,8 +177,7 @@ function Speed_Library:SetNotification(Config)
 
   local NotificationGui = Custom:Create("ScreenGui", {
     ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
-    Name = "NotificationGui"
-  }, game:GetService("CoreGui"))
+  }, RunService:IsStudio() and Player.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui")))
 
   local NotificationLayout = Custom:Create("Frame", {
     AnchorPoint = Vector2.new(1, 1),
@@ -408,9 +405,8 @@ function Speed_Library:CreateWindow(Config)
   local Funcs = {}
 
   local SpeedHubXGui = Custom:Create("ScreenGui", {
-    Name = "SpeedHubXGui",
     ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-  }, RunService:IsStudio() and LocalPlayer.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui")))
+  }, RunService:IsStudio() and Player.PlayerGui or (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui")))
 
   local DropShadowHolder = Custom:Create("Frame", {
     BackgroundTransparency = 1,
@@ -2227,5 +2223,4 @@ function Speed_Library:CreateWindow(Config)
 
   return Tabs
 end
-
 return Speed_Library
