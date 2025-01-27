@@ -1,2 +1,1 @@
-local oldgame = game
-hookfunction(game, function()return oldgame end)
+return true
