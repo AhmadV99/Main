@@ -39,6 +39,15 @@ local Custom = {} do
 
     return table.concat(List)
   end
+
+  function Custom:GetLogo()
+    if getcustomasset and writefile then
+      writefile("SpeedLogo.png", game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Library/Logo.png"))
+      return getcustomasset("SpeedLogo.png")
+    else
+      return ""
+    end
+  end
 end
 
 Custom:EnabledAFK()
@@ -53,7 +62,7 @@ local function OpenClose()
     BorderColor3 = Color3.fromRGB(255, 0, 0),
     Position = UDim2.new(0.1021, 0, 0.0743, 0),
     Size = UDim2.new(0, 59, 0, 49),
-    Image = "rbxassetid://82140212012109",
+    Image = Custom:GetLogo(),
     Visible = false
   }, ScreenGui)
 
