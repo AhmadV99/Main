@@ -48,6 +48,18 @@ local Custom = {} do
       return ""
     end
   end
+
+  function Custom:Decryption(Enc)
+    local List = {}
+
+    for num in string.gmatch(Enc, "[^,]+") do
+      local Ori = tonumber(num) - 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9 + 9e9
+
+      table.insert(List, Ori)
+    end
+
+    return tonumber(table.concat(List))
+  end
 end
 
 Custom:EnabledAFK()
@@ -138,7 +150,7 @@ function CircleClick(Button, X, Y)
 		Button.ClipsDescendants = true
 		
 		local Circle = Instance.new("ImageLabel")
-		Circle.Image = "rbxassetid://266543268"
+		Circle.Image = "rbxassetid://" .. tostring(Custom:Decryption("216000000002,216000000006,216000000006,216000000005,216000000004,216000000003,216000000002,216000000006,216000000008"))
 		Circle.ImageColor3 = Color3.fromRGB(80, 80, 80)
 		Circle.ImageTransparency = 0.8999999761581421
 		Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -252,7 +264,7 @@ function Speed_Library:SetNotification(Config)
   })
 
   local DropShadow = Custom:Create("ImageLabel", {
-    Image = "rbxassetid://6015897843",
+    Image = "",
     ImageColor3 = Color3.fromRGB(0, 0, 0),
     ImageTransparency = 0.5,
     ScaleType = Enum.ScaleType.Slice,
@@ -326,9 +338,9 @@ function Speed_Library:SetNotification(Config)
 
   local Close = Custom:Create("TextButton", {
     Font = Enum.Font.SourceSans,
-    Text = "",
-    TextColor3 = Color3.fromRGB(0, 0, 0),
-    TextSize = 14,
+    Text = "X",
+    TextColor3 = Color3.fromRGB(255, 255, 255),
+    TextSize = 18,
     AnchorPoint = Vector2.new(1, 0.5),
     BackgroundColor3 = Color3.fromRGB(255, 255, 255),
     BackgroundTransparency = 0.999,
@@ -338,18 +350,6 @@ function Speed_Library:SetNotification(Config)
     Size = UDim2.new(0, 25, 0, 25),
     Name = "Close",
     Parent = Top
-  })
-
-  local ImageLabel = Custom:Create("ImageLabel", {
-    Image = "rbxassetid://9886659671",
-    AnchorPoint = Vector2.new(0.5, 0.5),
-    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-    BackgroundTransparency = 0.999,
-    BorderColor3 = Color3.fromRGB(0, 0, 0),
-    BorderSizePixel = 0,
-    Position = UDim2.new(0.49, 0, 0.5, 0),
-    Size = UDim2.new(1, -8, 1, -8),
-    Parent = Close
   })
 
   local TextLabel2 = Custom:Create("TextLabel", {
@@ -427,7 +427,7 @@ function Speed_Library:CreateWindow(Config)
   }, SpeedHubXGui)
 
   local DropShadow = Custom:Create("ImageLabel", {
-    Image = "rbxassetid://6015897843",
+    Image = "",
     ImageColor3 = Color3.fromRGB(15, 15, 15),
     ImageTransparency = 0.5,
     ScaleType = Enum.ScaleType.Slice,
@@ -505,9 +505,9 @@ function Speed_Library:CreateWindow(Config)
 
   local Close = Custom:Create("TextButton", {
     Font = Enum.Font.SourceSans,
-    Text = "",
-    TextColor3 = Color3.fromRGB(0, 0, 0),
-    TextSize = 14,
+    Text = "X",
+    TextColor3 = Color3.fromRGB(255, 255, 255),
+    TextSize = 18,
     AnchorPoint = Vector2.new(1, 0.5),
     BackgroundColor3 = Color3.fromRGB(255, 255, 255),
     BackgroundTransparency = 0.9990000128746033,
@@ -518,22 +518,11 @@ function Speed_Library:CreateWindow(Config)
     Name = "Close"
   }, Top)
 
-  local ImageLabel1 = Custom:Create("ImageLabel", {
-    Image = "rbxassetid://9886659671",
-    AnchorPoint = Vector2.new(0.5, 0.5),
-    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-    BackgroundTransparency = 0.9990000128746033,
-    BorderColor3 = Color3.fromRGB(0, 0, 0),
-    BorderSizePixel = 0,
-    Position = UDim2.new(0.49, 0, 0.5, 0),
-    Size = UDim2.new(1, -8, 1, -8)
-  }, Close)
-
   local Min = Custom:Create("TextButton", {
     Font = Enum.Font.SourceSans,
-    Text = "",
-    TextColor3 = Color3.fromRGB(0, 0, 0),
-    TextSize = 14,
+    Text = "-", 
+    TextColor3 = Color3.fromRGB(255, 255, 255),
+    TextSize = 18,
     AnchorPoint = Vector2.new(1, 0.5),
     BackgroundColor3 = Color3.fromRGB(255, 255, 255),
     BackgroundTransparency = 0.9990000128746033,
@@ -542,18 +531,7 @@ function Speed_Library:CreateWindow(Config)
     Position = UDim2.new(1, -42, 0.5, 0),
     Size = UDim2.new(0, 25, 0, 25),
     Name = "Min"
-  }, Top)
-
-  Custom:Create("ImageLabel", {
-    Image = "rbxassetid://9886659276",
-    AnchorPoint = Vector2.new(0.5, 0.5),
-    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-    BackgroundTransparency = 1,
-    BorderColor3 = Color3.fromRGB(0, 0, 0),
-    BorderSizePixel = 0,
-    Position = UDim2.new(0.5, 0, 0.5, 0),
-    Size = UDim2.new(1, -8, 1, -8)
-  }, Min)
+}, Top)
 
   local LayersTab = Custom:Create("Frame", {
     BackgroundColor3 = Color3.fromRGB(255, 255, 255),
@@ -712,7 +690,7 @@ function Speed_Library:CreateWindow(Config)
   }, MoreBlur)
 
   local DropShadow1 = Custom:Create("ImageLabel", {
-    Image = "rbxassetid://6015897843",
+    Image = "",
     ImageColor3 = Color3.fromRGB(0, 0, 0),
     ImageTransparency = 0.5,
     ScaleType = Enum.ScaleType.Slice,
@@ -1014,7 +992,7 @@ function Speed_Library:CreateWindow(Config)
       }, SectionReal)
   
       local FeatureImg = Custom:Create("ImageLabel", {
-        Image = "rbxassetid://16851841101",
+        Image = "rbxassetid://" .. tostring(Custom:Decryption("216000000001,216000000006,216000000008,216000000005,216000000001,216000000008,216000000004,216000000001,216000000001,216000000000,216000000001")),
         AnchorPoint = Vector2.new(0.5, 0.5),
         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
         BackgroundTransparency = 0.9990000128746033,
@@ -1297,7 +1275,7 @@ function Speed_Library:CreateWindow(Config)
       function Item:AddButton(Config)
         local Title = Config[1] or Config.Title or ""
         local Content = Config[2] or Config.Content or ""
-        local Icon = Config[3] or Config.Icon or "rbxassetid://16932740082"
+        local Icon = Config[3] or Config.Icon or "rbxassetid://" .. tostring(Custom:Decryption("216000000001,216000000006,216000000009,216000000003,216000000002,216000000007,216000000004,216000000000,216000000000,216000000008,216000000002"))
         local Callback = Config[4] or Config.Callback or function() end
         local Funcs_Button = {}
 
@@ -2026,7 +2004,7 @@ function Speed_Library:CreateWindow(Config)
         }, SelectOptionsFrame)
 
         local OptionImg = Custom:Create("ImageLabel", {
-          Image = "rbxassetid://16851841101",
+          Image = "rbxassetid://" .. tostring(Custom:Decryption("216000000001,216000000006,216000000008,216000000005,216000000001,216000000008,216000000004,216000000001,216000000001,216000000000,216000000001")),
           ImageColor3 = Color3.fromRGB(231, 231, 231),
           AnchorPoint = Vector2.new(1, 0.5),
           BackgroundColor3 = Color3.fromRGB(255, 255, 255),
