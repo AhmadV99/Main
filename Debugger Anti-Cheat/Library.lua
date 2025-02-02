@@ -1,6 +1,5 @@
-
 local HttpService = cloneref(game:GetService("HttpService")) :: HttpService
-local Repr = loadstring(game:HttpGet("https://github.com/Ozzypig/repr/raw/refs/heads/master/repr.lua"))()
+local Repr = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Debugger%20Anti-Cheat/repr.lua"))()
 
 local ReplayAttack = {
 	MetaMethodsCaptured = {
