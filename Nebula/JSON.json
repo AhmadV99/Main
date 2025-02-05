@@ -2,7 +2,7 @@
   "moduleName": "Nebula",
   "rbxhttp": false,
   "script": "dtc.schedule(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula.lua\"))",
-  "versionName": "1.1.0",
+  "versionName": "1.1.2",
   "Keysystem": true,
   "ApkLink": {
     "32": "",
