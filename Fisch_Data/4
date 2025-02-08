@@ -83,7 +83,6 @@ local l_presents_0 = {
         "Enchant Relic"
     }
 };
-
 local v2 = {
     ["Desolate Deep"] = {
         Trash = 22, 
@@ -101,6 +100,379 @@ local v2 = {
     }
 };
 local v5 = {
+    ["Ashen Snapper"] = {
+        WeightPool = {
+            50, 
+            90
+        }, 
+        Chance = 100, 
+        Rarity = "Limited", 
+        Resilience = 100, 
+        Description = "With scales covered in volcanic ash, the Ashen Snapper is a threat to be reckoned with.", 
+        Hint = "Only can be caught during Ashfall.", 
+        FavouriteBait = "Bagel", 
+        FavouriteTime = nil, 
+        Price = 250, 
+        XP = 120, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "Woah! An Ashen Snapper!", 
+            "Still hot!", 
+            "A hand warmer!"
+        }, 
+        SparkleColor = Color3.fromRGB(154, 218, 143), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Ashfall", 
+        IsLimitedBestiary = true
+    }, 
+    ["Ember Catfish"] = {
+        WeightPool = {
+            130, 
+            200
+        }, 
+        Chance = 90, 
+        Rarity = "Limited", 
+        Resilience = 85, 
+        Description = "A faintly glowing body with whiskers that spark indefinitely, the Ember Catfish is a peculiar fish.", 
+        Hint = "Only can be caught during Ashfall.", 
+        FavouriteBait = "Bagel", 
+        FavouriteTime = nil, 
+        Price = 275, 
+        XP = 130, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "Woah, an Ember Catfish!", 
+            "Why isn't it purring?", 
+            "Smoldering!", 
+            "A little fire hazard!"
+        }, 
+        SparkleColor = Color3.fromRGB(154, 218, 143), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Ashfall", 
+        IsLimitedBestiary = true
+    }, 
+    ["Blistered Eel"] = {
+        WeightPool = {
+            115, 
+            190
+        }, 
+        Chance = 80, 
+        Rarity = "Limited", 
+        Resilience = 45, 
+        Description = "Despite blistering skin, the Blistered Eel is capable of withstanding extreme temperatures.", 
+        Hint = "Only can be caught during Ashfall.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = nil, 
+        Price = 300, 
+        XP = 140, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "Woah, a Blistered Eel!", 
+            "It comes cooked!", 
+            "It's well done!", 
+            "Could use skin care..."
+        }, 
+        SparkleColor = Color3.fromRGB(154, 218, 143), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Ashfall", 
+        IsLimitedBestiary = true
+    }, 
+    ["Lava Lamprey"] = {
+        WeightPool = {
+            450, 
+            750
+        }, 
+        Chance = 75, 
+        Rarity = "Limited", 
+        Resilience = 90, 
+        Description = "With a resemblance to a lava lamp, the Lava Lamprey has a stylish color scheme. Don't look too close...", 
+        Hint = "Only can be caught during Ashfall.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 350, 
+        XP = 170, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "Woah. a Lava Lamprey!", 
+            "Pretty!", 
+            "Straight out of the '60s!", 
+            "Trippy!"
+        }, 
+        SparkleColor = Color3.fromRGB(154, 218, 143), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Ashfall", 
+        IsLimitedBestiary = true
+    }, 
+    ["Molten Minnow"] = {
+        WeightPool = {
+            4, 
+            7
+        }, 
+        Chance = 70, 
+        Rarity = "Limited", 
+        Resilience = 80, 
+        Description = "Leaving behind a trail of glowing embers, the Molten Minnow proves to be threatening.", 
+        Hint = "Only can be caught during Ashfall.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = nil, 
+        Price = 400, 
+        XP = 180, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "Woah, a Molten Minnow!", 
+            "Searing hot!", 
+            "My hands!"
+        }, 
+        SparkleColor = Color3.fromRGB(154, 218, 143), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        FromLimited = "Ashfall", 
+        IsLimitedBestiary = true
+    }, 
+    ["Pyro Pike"] = {
+        WeightPool = {
+            25, 
+            45
+        }, 
+        Chance = 30, 
+        Rarity = "Limited", 
+        Resilience = 50, 
+        Description = "A small fish with a strong glow, the Pyro Pike shows unmatched aggression towards its prey.", 
+        Hint = "Only can be caught during Ashfall.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = nil, 
+        Price = 500, 
+        XP = 240, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "Woah, a Pyro Pike!", 
+            "It melted my bobber!", 
+            "It lunged at me!", 
+            "Sizzling!"
+        }, 
+        SparkleColor = Color3.fromRGB(154, 218, 143), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        FromLimited = "Ashfall", 
+        IsLimitedBestiary = true
+    }, 
+    ["Cinder Carp"] = {
+        WeightPool = {
+            50, 
+            80
+        }, 
+        Chance = 5.0E-4, 
+        Rarity = "Limited", 
+        Resilience = 60, 
+        Description = "Despite its small size, the Cinder Carp packs incomprehensible heat.", 
+        Hint = "Only can be caught during Ashfall.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = nil, 
+        Price = 600, 
+        XP = 275, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "Woah, a Cinder Carp!", 
+            "I think it's still smoking?", 
+            "It's glowing!", 
+            "Everlasting heat!"
+        }, 
+        SparkleColor = Color3.fromRGB(154, 218, 143), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Ashfall", 
+        IsLimitedBestiary = true
+    }, 
+    ["Sooty Salmon"] = {
+        WeightPool = {
+            70, 
+            130
+        }, 
+        Chance = 0.005, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "Coated in fine soot, the Sooty Salmon exhibits extreme volcanic tolerance.", 
+        Hint = "Only can be caught during Ashfall.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 750, 
+        XP = 350, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "Woah, a Sooty Salmon!", 
+            "Toasted!", 
+            "Could use a rinse."
+        }, 
+        SparkleColor = Color3.fromRGB(154, 218, 143), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Ashfall", 
+        IsLimitedBestiary = true
+    }, 
+    ["Burnt Betta"] = {
+        WeightPool = {
+            11000, 
+            16000
+        }, 
+        Chance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.7, 
+        Description = "With fierce intent, the Burnt Betta thrives in molten lava.", 
+        Hint = "Only can be caught during Ashfall.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = nil, 
+        Price = 3000, 
+        XP = 1500, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "Woah, a Burnt Betta!", 
+            "How can it survive?", 
+            "Crispy!"
+        }, 
+        SparkleColor = Color3.fromRGB(154, 218, 143), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        FromLimited = "Ashfall", 
+        IsLimitedBestiary = true
+    }, 
+    ["Ashcloud Archerfish"] = {
+        WeightPool = {
+            100000, 
+            160000
+        }, 
+        Chance = 1, 
+        Rarity = "Limited", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.1, 
+        Description = "The guardian of Ashfall, wreathing in plumes of smoke and flickering embers. With masterful precision, the Ashcloud Archerfish shoots scorching lava at its targets with ferocious intent. Nothing is left behind...", 
+        Hint = "Only can be caught during Ashfall.", 
+        FavouriteBait = "Coal", 
+        FavouriteTime = nil, 
+        Price = 24000, 
+        XP = 6000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "HOT HOT HOT!!!", 
+            "IT'S HUGE!", 
+            "STILL DRIPPING LAVA!", 
+            "WHAT IS IT AIMING FOR!?", 
+            "THE ASHCLOUD ARCHERFISH?!?", 
+            "THE LEGEND IS TRUE!"
+        }, 
+        SparkleColor = Color3.fromRGB(154, 218, 143), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        FromLimited = "Ashfall", 
+        IsLimitedBestiary = true
+    }, 
+    ["Lovestorm Eel"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            35000, 
+            70000
+        }, 
+        Chance = 1.0E-4, 
+        Rarity = "Limited", 
+        Resilience = 3, 
+        ProgressEfficiency = 0.1, 
+        Description = "A lovely yet dangerous creature, striking with unpredictable ruthlessness. It thrives in a rare storm, leaving chaos behind it as it travels through the waters.", 
+        Hint = "When the storm rages, the passion approaches.", 
+        FavouriteBait = "Chocolate Fish", 
+        FavouriteTime = nil, 
+        Price = 15000, 
+        XP = 10000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "THE LOVE EEL?", 
+            "ELECTRIC LOVE!", 
+            "A KISS OF THUNDER!", 
+            "SHOCKINGLY SWEET!"
+        }, 
+        SparkleColor = Color3.fromRGB(254, 222, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        FromLimited = "Love"
+    }, 
+    ["Lovestorm Eel Supercharged"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            60000, 
+            105000
+        }, 
+        Chance = 0.001, 
+        Rarity = "Limited", 
+        Resilience = 1, 
+        ProgressEfficiency = 0.05, 
+        Description = "A Love Eel infused with fury of the tempest, with power beyond comprehension.", 
+        FavouriteBait = "Chocolate Fish", 
+        FavouriteTime = nil, 
+        Price = 25000, 
+        XP = 20000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "SUPERCHARGED?", 
+            "UNSTOPPABLE LOVE!", 
+            "INCARNATE OF THUNDER!", 
+            "DESTRUCTIVE LOVE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 214, 212), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        FromLimited = "Love"
+    }, 
     ["Tempest Ray"] = {
         WeightPool = {
             5, 
@@ -2392,6 +2764,7 @@ local v5 = {
         From = "Ancient Isle"
     }, 
     ["Forsaken Algae"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             25, 
             50
@@ -2420,6 +2793,7 @@ local v5 = {
         HideInBestiary = true
     }, 
     ["Ancient Algae"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             25, 
             50
@@ -2448,6 +2822,7 @@ local v5 = {
         HideInBestiary = true
     }, 
     ["Mushgrove Algae"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             25, 
             50
@@ -2476,6 +2851,7 @@ local v5 = {
         HideInBestiary = true
     }, 
     ["Snowcap Algae"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             25, 
             50
@@ -2750,6 +3126,7 @@ local v5 = {
         FromLimited = "Archeological Site"
     }, 
     Resin = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             30, 
             80
@@ -4304,6 +4681,7 @@ local v5 = {
         From = "Ancient Isle"
     }, 
     Banana = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             4, 
             10
@@ -5569,15 +5947,15 @@ local v5 = {
             2000, 
             3250
         }, 
-        Chance = 0.1, 
+        Chance = 1, 
         Rarity = "Mythical", 
         Resilience = 200, 
         Description = "An inactive naval sea mine that has somehow made its way down here. Caught in crab cages in the Desolate Deep.", 
         Hint = "Caught with crab cages in the Desolate Deep.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 4000, 
-        XP = 2000, 
+        Price = 3000, 
+        XP = 1000, 
         Seasons = {
             "None"
         }, 
@@ -7945,6 +8323,7 @@ local v5 = {
         Shark = true
     }, 
     ["Long Pike"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             12, 
             35
@@ -7978,6 +8357,7 @@ local v5 = {
         From = "Ocean"
     }, 
     Mustard = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             10, 
             40
@@ -10621,6 +11001,7 @@ local v5 = {
         FromLimited = "FischFright"
     }, 
     Nessie = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             20000, 
             40000
@@ -13046,7 +13427,7 @@ local v5 = {
             100000, 
             200000
         }, 
-        Chance = 0.0025, 
+        Chance = 1.0E-6, 
         Rarity = "Secret", 
         Resilience = 1, 
         ProgressEfficiency = 0.05, 
@@ -13078,7 +13459,7 @@ local v5 = {
             15000
         }, 
         Chance = 10, 
-        Rarity = "Legendary", 
+        Rarity = "Exotic", 
         Resilience = 4, 
         Description = "Orcas tend to migrate from time to time.", 
         Hint = "Search the ocean for migrating orcas", 
@@ -13106,9 +13487,10 @@ local v5 = {
         }
     }, 
     ["Ancient Orca"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
-            10000, 
-            15000
+            20000, 
+            25000
         }, 
         Chance = 2, 
         Rarity = "Secret", 
@@ -13117,8 +13499,8 @@ local v5 = {
         Hint = "Search the ocean for migrating orcas", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = nil, 
-        Price = 12000, 
-        XP = 8000, 
+        Price = 15000, 
+        XP = 10000, 
         Seasons = {
             "None"
         }, 
@@ -13169,6 +13551,6 @@ local v5 = {
         Relic = Color3.fromRGB(120, 255, 183), 
         Fragment = Color3.fromRGB(255, 63, 5), 
         Gemstone = Color3.fromRGB(172, 57, 255)
-    },
+    }, 
 };
 return v5;
