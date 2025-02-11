@@ -3,7 +3,7 @@
   "rbxhttp": false,
   "script": "dtc.schedule(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula.lua\"))",
   "versionName": "1.1.2",
-  "Keysystem": false,
+  "Keysystem": true,
   "ApkLink": {
     "32": "",
     "64": "https://www.mediafire.com/file/u6735z8cw885mm1/Nebula.apk/file"
