@@ -6,5 +6,4 @@ return {
   "Great Hammerhead Shark",
   "Whale Shark",
   "Ancient Orcas Pool",
-  "The Depths - Serpent",
 }
