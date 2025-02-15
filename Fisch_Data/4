@@ -100,37 +100,8 @@ local v2 = {
     }
 };
 local v5 = {
-    ["Ashen Snapper"] = {
-        WeightPool = {
-            50, 
-            90
-        }, 
-        Chance = 100, 
-        Rarity = "Limited", 
-        Resilience = 100, 
-        Description = "With scales covered in volcanic ash, the Ashen Snapper is a threat to be reckoned with.", 
-        Hint = "Only can be caught during Ashfall.", 
-        FavouriteBait = "Bagel", 
-        FavouriteTime = nil, 
-        Price = 250, 
-        XP = 120, 
-        Seasons = {
-            "None"
-        }, 
-        Weather = {
-            "Rain"
-        }, 
-        Quips = {
-            "Woah! An Ashen Snapper!", 
-            "Still hot!", 
-            "A hand warmer!"
-        }, 
-        SparkleColor = Color3.fromRGB(154, 218, 143), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        FromLimited = "Ashfall", 
-        IsLimitedBestiary = true
-    }, 
     ["Ember Catfish"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             130, 
             200
@@ -162,6 +133,7 @@ local v5 = {
         IsLimitedBestiary = true
     }, 
     ["Blistered Eel"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             115, 
             190
@@ -193,6 +165,7 @@ local v5 = {
         IsLimitedBestiary = true
     }, 
     ["Lava Lamprey"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             450, 
             750
@@ -224,6 +197,7 @@ local v5 = {
         IsLimitedBestiary = true
     }, 
     ["Molten Minnow"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             4, 
             7
@@ -254,6 +228,7 @@ local v5 = {
         IsLimitedBestiary = true
     }, 
     ["Pyro Pike"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             25, 
             45
@@ -280,11 +255,12 @@ local v5 = {
             "Sizzling!"
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
-        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true
     }, 
     ["Cinder Carp"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             50, 
             80
@@ -315,7 +291,8 @@ local v5 = {
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true
     }, 
-    ["Sooty Salmon"] = {
+    ["Scooty Salmon"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             70, 
             130
@@ -323,7 +300,7 @@ local v5 = {
         Chance = 0.005, 
         Rarity = "Limited", 
         Resilience = 70, 
-        Description = "Coated in fine soot, the Sooty Salmon exhibits extreme volcanic tolerance.", 
+        Description = "Coated in fine soot, the Scooty Salmon exhibits extreme volcanic tolerance.", 
         Hint = "Only can be caught during Ashfall.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
@@ -336,7 +313,7 @@ local v5 = {
             "Windy"
         }, 
         Quips = {
-            "Woah, a Sooty Salmon!", 
+            "Woah, a Scooty Salmon!", 
             "Toasted!", 
             "Could use a rinse."
         }, 
@@ -346,9 +323,10 @@ local v5 = {
         IsLimitedBestiary = true
     }, 
     ["Burnt Betta"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
-            11000, 
-            16000
+            2000, 
+            8000
         }, 
         Chance = 0.05, 
         Rarity = "Limited", 
@@ -372,14 +350,15 @@ local v5 = {
             "Crispy!"
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true
     }, 
     ["Ashcloud Archerfish"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
-            100000, 
-            160000
+            10000, 
+            16000
         }, 
         Chance = 1, 
         Rarity = "Limited", 
@@ -417,7 +396,7 @@ local v5 = {
             70000
         }, 
         Chance = 1.0E-4, 
-        Rarity = "Limited", 
+        Rarity = "Secret", 
         Resilience = 3, 
         ProgressEfficiency = 0.1, 
         Description = "A lovely yet dangerous creature, striking with unpredictable ruthlessness. It thrives in a rare storm, leaving chaos behind it as it travels through the waters.", 
@@ -449,7 +428,7 @@ local v5 = {
             105000
         }, 
         Chance = 0.001, 
-        Rarity = "Limited", 
+        Rarity = "Secret", 
         Resilience = 1, 
         ProgressEfficiency = 0.05, 
         Description = "A Love Eel infused with fury of the tempest, with power beyond comprehension.", 
@@ -1345,7 +1324,7 @@ local v5 = {
             "What a catch!"
         }, 
         SparkleColor = Color3.fromRGB(149, 241, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Overgrowth Caves"
     }, 
     ["Icy Goldfish"] = {
@@ -1374,7 +1353,7 @@ local v5 = {
             "Like frozen gold!"
         }, 
         SparkleColor = Color3.fromRGB(135, 239, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Overgrowth Caves"
     }, 
     ["Frigid Antlers"] = {
@@ -1404,7 +1383,7 @@ local v5 = {
             "INCREDIBLE!"
         }, 
         SparkleColor = Color3.fromRGB(255, 237, 137), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("crate"), 
         From = "Overgrowth Caves"
     }, 
     ["Frozen Walnut"] = {
@@ -1434,7 +1413,7 @@ local v5 = {
             "PREHISTORIC TREASURE!"
         }, 
         SparkleColor = Color3.fromRGB(255, 237, 137), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Overgrowth Caves"
     }, 
     ["Ice Eel"] = {
@@ -1579,7 +1558,7 @@ local v5 = {
             "Ancient takeout!"
         }, 
         SparkleColor = Color3.fromRGB(255, 237, 137), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Frigid Cavern"
     }, 
     Snowfish = {
@@ -2164,7 +2143,7 @@ local v5 = {
             "What power!"
         }, 
         SparkleColor = Color3.fromRGB(128, 249, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         From = "Glacial Grotto"
     }, 
     ["Icefang Barracuda"] = {
@@ -2194,7 +2173,7 @@ local v5 = {
             "Ice cold hunter!"
         }, 
         SparkleColor = Color3.fromRGB(176, 211, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         From = "Glacial Grotto"
     }, 
     ["Borealis Snapper"] = {
