@@ -1,4 +1,20 @@
-local DataPool = {
+return {
+    ["Ashfall Pool"] = {
+        Pool = {
+            "Ember Catfish", 
+            "Blistered Eel", 
+            "Lava Lamprey", 
+            "Molten Minnow", 
+            "Pyro Pike", 
+            "Cinder Carp", 
+            "Coelacanth", 
+            "Scooty Salmon", 
+            "Burnt Betta", 
+            "Ashcloud Archerfish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 1
+    }, 
     ["Ancient Orcas Pool"] = {
         Pool = {
             "Ancient Orca", 
@@ -1740,5 +1756,3 @@ local DataPool = {
         Priority = 1
     }
 };
-
-return DataPool
