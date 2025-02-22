@@ -100,6 +100,169 @@ local v2 = {
     }
 };
 local v5 = {
+    ["Magma Leviathan"] = {
+        BlockPassiveCapture = true, 
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            60000, 
+            140000
+        }, 
+        Chance = 0.1, 
+        Rarity = "Secret", 
+        Resilience = 3, 
+        ProgressEfficiency = 0.1, 
+        Description = "A behemoth of the volcanic depths, its scales radiate intense heat, turning the water around it into steam. Some say it sleeps for centuries, only waking during great eruptions.", 
+        Hint = "Surfaces in thick fog, as if the volcano itself breathes it to life.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Day", 
+        Price = 25000, 
+        XP = 12000, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "THE MAGMA LEVIATHAN!?!", 
+            "A TITAN OF FLAME AND FURY!", 
+            "SCORCHING KRAKEN!?"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 102, 46), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Volcanic Vents"
+    }, 
+    ["Anglers Lantern"] = {
+        Icon = "rbxassetid://127503265905341", 
+        WeightPool = {
+            2000, 
+            2200
+        }, 
+        Chance = 0.1, 
+        Rarity = "Exotic", 
+        Resilience = 3, 
+        ProgressEfficiency = 0.05, 
+        Description = "A glowing anglerfish lantern with eerie deep-sea bioluminescence and sharp teeth.", 
+        Hint = "Can be collected by feeding a baby anglerfish", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 1200, 
+        XP = 350, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A baby angler fish lantern", 
+            "I love angler fish", 
+            "SPOOKY!"
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "None"
+    }, 
+    ["Crowned Anglerfish"] = {
+        BlockPassiveCapture = true, 
+        Icon = "rbxassetid://126962069215447", 
+        WeightPool = {
+            80000, 
+            180000
+        }, 
+        Chance = 0.1, 
+        Rarity = "Secret", 
+        Resilience = 3, 
+        ProgressEfficiency = 0.05, 
+        Description = "A monstrous kraken-like anglerfish, with a crown shaped lure and teeth as sharper than excalibur. It is said to be the ruler of the abyss.", 
+        Hint = "Appears during the darkest nights, when the ocean is still.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Night", 
+        Price = 22000, 
+        XP = 16000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "THE CROWNED ANGLERFISH!?!", 
+            "THE ABYSSAL KING!", 
+            "SPOOKY KRAKEN!?"
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Abyssal Zenith"
+    }, 
+    ["Crystallized Seadragon"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            500000, 
+            1200000
+        }, 
+        Chance = 0.1, 
+        Rarity = "Secret", 
+        Resilience = 1, 
+        ProgressEfficiency = 0.05, 
+        Description = "A majestic, dragon-like creature with crystal scales that shimmer in the light. It is said to be the guardian of the Calm Zone.", 
+        Hint = "Appears during the calmest days, when the wind is strong.", 
+        FavouriteBait = "Shark Head", 
+        FavouriteTime = nil, 
+        Price = 35000, 
+        XP = 40000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "THE CRYSTALLIZED SEADRAGON!?!", 
+            "PRETTY COLORS!", 
+            "CRYSTAL KRAKEN!?"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 250, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Calm Zone"
+    }, 
+    Scylla = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            2000000, 
+            5000000
+        }, 
+        Chance = 0.1, 
+        Rarity = "Secret", 
+        Resilience = 1, 
+        Description = "A mythological, multi-headed being said to lurk in the ocean\226\128\153s deepest abyss. Its serpent-like heads move independently, striking prey with razor-toothed maws, and some believe they regenerate when severed. A myth to most, it is feared as an immortal guardian of the sea, appearing only in the deadliest storms to drag the unwary into the depths.", 
+        Hint = "???", 
+        FavouriteBait = "Shark Head", 
+        FavouriteTime = nil, 
+        Price = 200000, 
+        XP = 500000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "SCYLLA ITSELF!?!", 
+            "IT'S REAL!?!?!?!", 
+            "IT'S MASSIVE!!!", 
+            "GET THE CAMERA!!!", 
+            "THE LEGEND WAS TRUE!!!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Veil of the Forsaken", 
+        CustomProgressEfficiency = {
+            {
+                Value = 0.05
+            }
+        }
+    }, 
     ["Ember Catfish"] = {
         BlockPassiveCapture = true, 
         WeightPool = {
@@ -1558,7 +1721,7 @@ local v5 = {
             "Ancient takeout!"
         }, 
         SparkleColor = Color3.fromRGB(255, 237, 137), 
-        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Frigid Cavern"
     }, 
     Snowfish = {
@@ -11686,6 +11849,295 @@ local v5 = {
             }
         }
     }, 
+    Cryoskin = {
+        Icon = "rbxassetid://96530556200239", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            30, 
+            80
+        }, 
+        Chance = 10, 
+        Rarity = "Common", 
+        Resilience = 100, 
+        ProgressEfficiency = 0.8, 
+        Description = "Cyroskin... Used to craft something?", 
+        Hint = "Its pretty", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 50, 
+        XP = 250, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Thats pretty"
+        }, 
+        SparkleColor = Color3.fromRGB(170, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Challenger's Deep"
+    }, 
+    ["Frostscale Fangtooth"] = {
+        WeightPool = {
+            30, 
+            70
+        }, 
+        Chance = 60, 
+        Rarity = "Common", 
+        Resilience = 90, 
+        Description = "A small, sharp-toothed fish with icy blue scales that shimmer in the dark.", 
+        Hint = "Found in the coldest parts of the deep, especially under direct light.", 
+        FavouriteBait = "Bagel", 
+        FavouriteTime = "Day", 
+        Price = 30, 
+        XP = 50, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Frostscale Fangtooth!", 
+            "Cold and sharp!"
+        }, 
+        SparkleColor = Color3.fromRGB(102, 178, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Challenger's Deep"
+    }, 
+    ["Subzero Stargazer"] = {
+        WeightPool = {
+            20, 
+            45
+        }, 
+        Chance = 50, 
+        Rarity = "Uncommon", 
+        Resilience = 80, 
+        Description = "A unique fish with glowing eyes that stare into the abyss. Its body is covered in frost.", 
+        Hint = "Lurks near the surface of freezing waters, seeking light.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Day", 
+        Price = 100, 
+        XP = 110, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Subzero Stargazer!", 
+            "Rollin', Rollin', Rollin'..."
+        }, 
+        SparkleColor = Color3.fromRGB(102, 178, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Challenger's Deep"
+    }, 
+    ["Chillshadow Chub"] = {
+        WeightPool = {
+            6, 
+            16
+        }, 
+        Chance = 45, 
+        Rarity = "Uncommon", 
+        Resilience = 70, 
+        Description = "A small fish that blends into the icy shadows of the deep.", 
+        Hint = "Found in areas with heavy ice cover, especially under clear skies.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Day", 
+        Price = 100, 
+        XP = 100, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Chillshadow Chub!", 
+            "Slippery little guy!"
+        }, 
+        SparkleColor = Color3.fromRGB(102, 178, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Challenger's Deep"
+    }, 
+    ["Deep Freeze Devilfish"] = {
+        WeightPool = {
+            90, 
+            190
+        }, 
+        Chance = 20, 
+        Rarity = "Unusual", 
+        Resilience = 65, 
+        Description = "A devilish fish with icy spines that can freeze anything it touches.", 
+        Hint = "Prefers cold waters, especially during storms.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = nil, 
+        Price = 300, 
+        XP = 250, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Deep Freeze Devilfish!", 
+            "Hypothermic!"
+        }, 
+        SparkleColor = Color3.fromRGB(102, 178, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Challenger's Deep"
+    }, 
+    ["Iceberg Isopod"] = {
+        WeightPool = {
+            95, 
+            240
+        }, 
+        Chance = 15, 
+        Rarity = "Rare", 
+        Resilience = 50, 
+        Description = "An armored isopod that thrives in the freezing depths.", 
+        Hint = "Found near underwater ice formations in the dark, especially during windy weather.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 400, 
+        XP = 350, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "An Iceberg Isopod!", 
+            "It's like a living iceberg!"
+        }, 
+        SparkleColor = Color3.fromRGB(102, 178, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Challenger's Deep"
+    }, 
+    ["Cryo Coelacanth"] = {
+        WeightPool = {
+            70, 
+            210
+        }, 
+        Chance = 11, 
+        Rarity = "Rare", 
+        Resilience = 30, 
+        Description = "A prehistoric fish with icy blue fins that glow faintly in the dark.", 
+        Hint = "Appears during the coldest nights, when the moon is full.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = nil, 
+        Price = 500, 
+        XP = 650, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Cryo Coelacanth!", 
+            "It froze my hook..."
+        }, 
+        SparkleColor = Color3.fromRGB(102, 178, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Challenger's Deep"
+    }, 
+    ["Polar Prowler"] = {
+        Icon = "rbxassetid://106979038247843", 
+        WeightPool = {
+            9000, 
+            23000
+        }, 
+        Chance = 10, 
+        Rarity = "Legendary", 
+        Resilience = 12, 
+        ProgressEfficiency = 0.8, 
+        Description = "A sleek, predatory fish that hunts in the freezing cold with unmatched speed.", 
+        Hint = "Found in the deepest of trenches, most notably when the stars are present.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Night", 
+        Price = 1500, 
+        XP = 2000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A POLAR PROWLER!?", 
+            "IT'S QUICK!"
+        }, 
+        SparkleColor = Color3.fromRGB(102, 178, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Challenger's Deep"
+    }, 
+    ["Chillfin Chimaera"] = {
+        WeightPool = {
+            9000, 
+            26000
+        }, 
+        Chance = 8, 
+        Rarity = "Mythical", 
+        Resilience = 8, 
+        ProgressEfficiency = 0.5, 
+        Description = "A ghostly fish with glowing fins and a long, whip-like frosty tail.", 
+        Hint = "Appears in the deepest, coldest waters, especially in the dark.", 
+        FavouriteBait = "Fish Head", 
+        FavouriteTime = "Night", 
+        Price = 4000, 
+        XP = 2800, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A CHILLFIN CHIMAERA!?", 
+            "SPOOKY!", 
+            "CHILLING!"
+        }, 
+        SparkleColor = Color3.fromRGB(102, 178, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Challenger's Deep"
+    }, 
+    ["Frozen Leviathan"] = {
+        Icon = "rbxassetid://81152570606021", 
+        WeightPool = {
+            60000, 
+            140000
+        }, 
+        Chance = 0.1, 
+        Rarity = "Secret", 
+        Resilience = 3, 
+        ProgressEfficiency = 0.1, 
+        Description = "A chilling creature with icy tentacles that can freeze anything it touches. Legends say it guards the deepest parts of the ocean.", 
+        Hint = "Appears during the coldest nights, when the moon is full.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Night", 
+        Price = 18000, 
+        XP = 20000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "THE FROZEN LEVIATHAN!?!", 
+            "ABSOLUTE ZERO!", 
+            "FREEZING KRAKEN!?"
+        }, 
+        SparkleColor = Color3.fromRGB(102, 178, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Challenger's Deep"
+    }, 
     ["Lightning Minnow"] = {
         WeightPool = {
             5, 
@@ -11773,7 +12225,7 @@ local v5 = {
             "Kwijts Electric Guitar!"
         }, 
         SparkleColor = Color3.fromRGB(189, 178, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Atlantis"
     }, 
     ["Storm Eel"] = {
@@ -11833,7 +12285,7 @@ local v5 = {
             "zeus carp!"
         }, 
         SparkleColor = Color3.fromRGB(255, 238, 147), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Atlantis"
     }, 
     ["Thunder Serpent"] = {
@@ -11923,7 +12375,7 @@ local v5 = {
             "Lightning in miniature!"
         }, 
         SparkleColor = Color3.fromRGB(255, 243, 148), 
-        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Atlantis"
     }, 
     ["Stormcloud Angelfish"] = {
@@ -11953,7 +12405,7 @@ local v5 = {
             "Magnificent!"
         }, 
         SparkleColor = Color3.fromRGB(161, 196, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Atlantis"
     }, 
     ["Zeus' Herald"] = {
@@ -12013,7 +12465,7 @@ local v5 = {
             "ENORMOUS!"
         }, 
         SparkleColor = Color3.fromRGB(134, 180, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Atlantis"
     }, 
     ["Titan Tuna"] = {
@@ -12073,7 +12525,7 @@ local v5 = {
             "MAJESTIC GIANT!"
         }, 
         SparkleColor = Color3.fromRGB(86, 154, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Atlantis"
     }, 
     ["Leviathan Bass"] = {
@@ -12224,7 +12676,7 @@ local v5 = {
             "POSEIDON'S CHOSEN!"
         }, 
         SparkleColor = Color3.fromRGB(76, 143, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         From = "Atlantis"
     }, 
     ["Deep Behemoth"] = {
@@ -12490,7 +12942,7 @@ local v5 = {
             "Sun beneath the waves!"
         }, 
         SparkleColor = Color3.fromRGB(255, 182, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Atlantis"
     }, 
     ["Philosopher's Fish"] = {
@@ -12775,7 +13227,7 @@ local v5 = {
             "A Neptune's Nibbler!"
         }, 
         SparkleColor = Color3.fromRGB(86, 190, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Atlantis"
     }, 
     ["Aqua Scribe"] = {
@@ -12915,7 +13367,7 @@ local v5 = {
             "The future swims!"
         }, 
         SparkleColor = Color3.fromRGB(186, 141, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Atlantis"
     }, 
     ["Siren Singer"] = {
@@ -13089,7 +13541,7 @@ local v5 = {
             "LIVING ETHEREAL!"
         }, 
         SparkleColor = Color3.fromRGB(158, 0, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Atlantis"
     }, 
     ["Shadowfang Snapper"] = {
@@ -13119,7 +13571,7 @@ local v5 = {
             "SHADOW HUNTER!"
         }, 
         SparkleColor = Color3.fromRGB(66, 28, 82), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Atlantis"
     }, 
     ["Tentacled Horror"] = {
@@ -13149,7 +13601,7 @@ local v5 = {
             "THE DARKNESS MOVES!"
         }, 
         SparkleColor = Color3.fromRGB(82, 45, 104), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Atlantis"
     }, 
     ["Tentacle Eel"] = {
@@ -13209,7 +13661,7 @@ local v5 = {
             "PRIMORDIAL BEING!"
         }, 
         SparkleColor = Color3.fromRGB(114, 78, 136), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Atlantis"
     }, 
     ["Eldritch Horror"] = {
@@ -13239,7 +13691,7 @@ local v5 = {
             "MY EYES!"
         }, 
         SparkleColor = Color3.fromRGB(130, 95, 152), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Atlantis"
     }, 
     ["Kraken's Herald"] = {
@@ -13270,7 +13722,7 @@ local v5 = {
             "DARKNESS COMES!"
         }, 
         SparkleColor = Color3.fromRGB(146, 111, 168), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Atlantis"
     }, 
     ["Abyssal King"] = {
@@ -13499,6 +13951,990 @@ local v5 = {
             }
         }
     }, 
+    ["Titanic Black Seadevil"] = {
+        WeightPool = {
+            55, 
+            105
+        }, 
+        Chance = 80, 
+        Rarity = "Common", 
+        Resilience = 95, 
+        Description = "An all black anglerfish with a glowing lure that can be seen from miles away.", 
+        Hint = "Commonly swims around shallow trenches, typically during storms.", 
+        FavouriteBait = "Bagel", 
+        FavouriteTime = "None", 
+        Price = 45, 
+        XP = 20, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Titanic Black Seadevil!", 
+            "Glowy!"
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Abyssal Zenith"
+    }, 
+    ["Leviathan Humpback Anglerfish"] = {
+        WeightPool = {
+            35, 
+            80
+        }, 
+        Chance = 70, 
+        Rarity = "Common", 
+        Resilience = 90, 
+        Description = "An anglerfish with a humpback and a glowing lure that pulses like a heartbeat.", 
+        Hint = "Noticed within the warmer parts of the abyss, especially during rainfall.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "None", 
+        Price = 40, 
+        XP = 25, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Leviathan Humpback Anglerfish!", 
+            "Like a lantern!"
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Abyssal Zenith"
+    }, 
+    ["Abyssal Bearded Seadevil"] = {
+        Icon = "rbxassetid://124054246093053", 
+        WeightPool = {
+            180, 
+            400
+        }, 
+        Chance = 60, 
+        Rarity = "Uncommon", 
+        Resilience = 85, 
+        Description = "A terrifying fish with a glowing beard-like lure and razor-sharp teeth.", 
+        Hint = "Located in the coldest parts of the trench, typically found in groups.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "None", 
+        Price = 120, 
+        XP = 95, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "An Abyssal Bearded Seadevil!", 
+            "Horrifying!", 
+            "Could use a shave..."
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Abyssal Zenith"
+    }, 
+    ["Colossal Saccopharynx"] = {
+        WeightPool = {
+            800, 
+            2000
+        }, 
+        Chance = 55, 
+        Rarity = "Uncommon", 
+        Resilience = 70, 
+        Description = "A large, eel-like fish with a jaw that can unhinge to swallow prey whole.", 
+        Hint = "Discovered in the deepest ends of the abyss, especially during gusty weather.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "None", 
+        Price = 100, 
+        XP = 90, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Colossal Saccopharynx!", 
+            "It's like a living nightmare!!"
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Abyssal Zenith"
+    }, 
+    ["Radiant Triplewart Seadevil"] = {
+        WeightPool = {
+            100, 
+            210
+        }, 
+        Chance = 35, 
+        Rarity = "Unusual", 
+        Resilience = 55, 
+        Description = "A bizarre fish with three glowing lures and a body covered in bioluminescent spots.", 
+        Hint = "Prefers cool, still waters with empty skies.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = nil, 
+        Price = 600, 
+        XP = 200, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Radiant Triplewart Seadevil!", 
+            "Greater than immortal!"
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Abyssal Zenith"
+    }, 
+    ["Deeplight Footballfish"] = {
+        WeightPool = {
+            175, 
+            400
+        }, 
+        Chance = 20, 
+        Rarity = "Rare", 
+        Resilience = 65, 
+        Description = "A large footballfish with a circular shape, it can light up the entire abyss.", 
+        Hint = "Typically away from groups, it prefers uncrowded skies.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 1000, 
+        XP = 325, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Deeplight Footballfish!", 
+            "Goal!", 
+            "Not a typical football..."
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Abyssal Zenith"
+    }, 
+    ["Voidglow Ghostfish"] = {
+        Icon = "rbxassetid://87185870245453", 
+        WeightPool = {
+            8000, 
+            23000
+        }, 
+        Chance = 15, 
+        Rarity = "Legendary", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.4, 
+        Description = "A ghostly fish with a glowing body that seems to phase in and out of existence.", 
+        Hint = "Haunting the deepest parts of the trench, particularly under vast amounts of shade and deep fog.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = nil, 
+        Price = 7500, 
+        XP = 2800, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Voidglow Ghostfish!", 
+            "It isn't even Halloween!", 
+            "Spooky!"
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Abyssal Zenith"
+    }, 
+    ["Infant Giant Seadevil"] = {
+        WeightPool = {
+            6000, 
+            17000
+        }, 
+        Chance = 0.005, 
+        Rarity = "Legendary", 
+        Resilience = 12, 
+        ProgressEfficiency = 0.45, 
+        Description = "A juvenile version of the Giant Seadevil, with a bright lure and razor-sharp teeth.", 
+        Hint = "Found in the deeper parts of the trench, especially within cool temperatures.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = nil, 
+        Price = 5000, 
+        XP = 2600, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "AN INFANT GIANT SEADEVIL!?", 
+            "YOUNG YET DANGEROUS!"
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Abyssal Zenith"
+    }, 
+    ["Giant Seadevil"] = {
+        WeightPool = {
+            20000, 
+            50000
+        }, 
+        Chance = 0.01, 
+        Rarity = "Mythical", 
+        Resilience = 8, 
+        ProgressEfficiency = 0.2, 
+        Description = "A massive, terrifying fish with a glowing lure and teeth as sharp as the finest of blades.", 
+        Hint = "Swims in the deepest parts of the trench, especially under clear skies.", 
+        FavouriteBait = "Fish Head", 
+        FavouriteTime = nil, 
+        Price = 9000, 
+        XP = 3800, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A GIANT SEADEVIL!?", 
+            "MONSTER!", 
+            "IT GREW UP!"
+        }, 
+        SparkleColor = Color3.fromRGB(29, 30, 77), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Abyssal Zenith"
+    }, 
+    ["Quartzfin Queenfish"] = {
+        WeightPool = {
+            180, 
+            400
+        }, 
+        Chance = 65, 
+        Rarity = "Common", 
+        Resilience = 100, 
+        Description = "A small, shimmering fish with quartz-like fins that sparkle in the light.", 
+        Hint = "Found in shallow, clear waters, especially on warm days.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Day", 
+        Price = 300, 
+        XP = 50, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Quartzfin Queenfish!", 
+            "From the Nether!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 250, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Calm Zone"
+    }, 
+    ["Diamond Discus"] = {
+        WeightPool = {
+            800, 
+            1750
+        }, 
+        Chance = 55, 
+        Rarity = "Uncommon", 
+        Resilience = 85, 
+        Description = "A flat, disc-shaped fish with diamond-like scales that reflect light beautifully.", 
+        Hint = "Glistening in freezing waters, notably when the sky is clear.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Day", 
+        Price = 1200, 
+        XP = 110, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Diamond Discus!", 
+            "Not moissanite!", 
+            "Mining away!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 250, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Calm Zone"
+    }, 
+    ["Emerald Elephantnose"] = {
+        WeightPool = {
+            600, 
+            1600
+        }, 
+        Chance = 45, 
+        Rarity = "Uncommon", 
+        Resilience = 90, 
+        Description = "A small fish with an elongated nose and emerald-green scales.", 
+        Hint = "Located in clear waters with a glistening green shine, typically during the day.", 
+        FavouriteBait = "Bagel", 
+        FavouriteTime = "Day", 
+        Price = 1000, 
+        XP = 100, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "An Emerald Elephantnose!", 
+            "Perfect for trading!", 
+            "Not quite elephant-sized..."
+        }, 
+        SparkleColor = Color3.fromRGB(85, 250, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Calm Zone"
+    }, 
+    ["Sapphire Stargazer"] = {
+        WeightPool = {
+            500, 
+            1400
+        }, 
+        Chance = 25, 
+        Rarity = "Unusual", 
+        Resilience = 85, 
+        Description = "A flat fish with sapphire-blue scales and glowing eyes that stare into the light.", 
+        Hint = "Located in clear waters with a glistening deep blue shine.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 1300, 
+        XP = 250, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Sapphire Stargazer!", 
+            "Rollin', Rollin', Rollin'..."
+        }, 
+        SparkleColor = Color3.fromRGB(85, 250, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Calm Zone"
+    }, 
+    ["Ruby Rasbora"] = {
+        WeightPool = {
+            395, 
+            1000
+        }, 
+        Chance = 20, 
+        Rarity = "Rare", 
+        Resilience = 70, 
+        Description = "A small, red fish with ruby-like scales that shimmer in the light.", 
+        Hint = "Located in clear waters with a glistening red shine, typically during cold nights.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 1400, 
+        XP = 350, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Ruby Rasbora!", 
+            "Red like a rose!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 250, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Calm Zone"
+    }, 
+    ["Prismatic Parrotfish"] = {
+        WeightPool = {
+            80, 
+            240
+        }, 
+        Chance = 10, 
+        Rarity = "Rare", 
+        Resilience = 40, 
+        Description = "A colorful fish with scales that reflect every color of the rainbow.", 
+        Hint = "Located in clear waters with a glistening rainbow shine.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = nil, 
+        Price = 1500, 
+        XP = 650, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Prismatic Parrotfish!", 
+            "It isn't talking back!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 250, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Calm Zone"
+    }, 
+    ["Crystal Corydoras"] = {
+        WeightPool = {
+            1500, 
+            4000
+        }, 
+        Chance = 5, 
+        Rarity = "Legendary", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.9, 
+        Description = "An armored fish with crystal-like scales that shimmer in the light.", 
+        Hint = "Located in clear waters with a wide variation of shining colors, frequently providing light to the darkness.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Night", 
+        Price = 3000, 
+        XP = 2000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A CRYSTAL CORYDORAS!?", 
+            "SO SHINY!", 
+            "PRETTY COLORS!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 250, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Calm Zone"
+    }, 
+    ["Shimmering Silverside"] = {
+        WeightPool = {
+            250, 
+            700
+        }, 
+        Chance = 3, 
+        Rarity = "Mythical", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.8, 
+        Description = "A sleek, silver fish with scales that shimmer like liquid metal.", 
+        Hint = "Located in clear waters with a unique indescribable shine, rarely spotted within the darkness.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Night", 
+        Price = 7800, 
+        XP = 2400, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A SHIMMERING SILVERSIDE!?", 
+            "UNMATCHED BEAUTY!", 
+            "ONE OF A KIND!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 250, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Calm Zone"
+    }, 
+    ["Inferno Hide"] = {
+        Icon = "rbxassetid://114499683111142", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            30, 
+            80
+        }, 
+        Chance = 20, 
+        Rarity = "Common", 
+        Resilience = 100, 
+        ProgressEfficiency = 0.8, 
+        Description = "Inferno Hide.. Used to craft something?", 
+        Hint = "Its pretty", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 50, 
+        XP = 250, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Thats pretty"
+        }, 
+        SparkleColor = Color3.fromRGB(170, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Volcanic Vents"
+    }, 
+    ["Hellfire Haddock"] = {
+        WeightPool = {
+            25, 
+            60
+        }, 
+        Chance = 70, 
+        Rarity = "Common", 
+        Resilience = 95, 
+        Description = "A small, scorching fish that flickers like a dying flame.", 
+        Hint = "Common within the dark, especially after rainfall.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Night", 
+        Price = 50, 
+        XP = 20, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Hellfire Haddock!", 
+            "Scorching!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 102, 46), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Volcanic Vents"
+    }, 
+    ["Embertail Eel"] = {
+        WeightPool = {
+            18, 
+            40
+        }, 
+        Chance = 60, 
+        Rarity = "Uncommon", 
+        Resilience = 90, 
+        Description = "A small eel with molten stripes that shimmer in the dark. It glows faintly at night.", 
+        Hint = "A small yet dangerous fish, not a fan of direct light.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Night", 
+        Price = 130, 
+        XP = 90, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "An Embertail Eel!", 
+            "Not much meat, but lots of heat!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 102, 46), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Volcanic Vents"
+    }, 
+    ["Infernal Iguanafish"] = {
+        Icon = "rbxassetid://95002653693710", 
+        WeightPool = {
+            8, 
+            20
+        }, 
+        Chance = 55, 
+        Rarity = "Uncommon", 
+        Resilience = 80, 
+        Description = "A fearsome, lizard-like fish with jagged scales that glow like molten rock.", 
+        Hint = "Not quite a lizard, typically found when under star-lit skies.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Night", 
+        Price = 120, 
+        XP = 80, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "An Infernal Iguanafish!", 
+            "That's not a reptile!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 102, 46), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Volcanic Vents"
+    }, 
+    ["Smoldering Stingray"] = {
+        WeightPool = {
+            80, 
+            170
+        }, 
+        Chance = 35, 
+        Rarity = "Unusual", 
+        Resilience = 75, 
+        Description = "A broad stingray with glowing magma veins running along its wings.", 
+        Hint = "Prefers warm, still waters under the cover of night.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = "Night", 
+        Price = 900, 
+        XP = 150, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Smoldering Stingray!", 
+            "Ouch!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 102, 46), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Volcanic Vents"
+    }, 
+    ["Pyrite Pufferfish"] = {
+        WeightPool = {
+            75, 
+            190
+        }, 
+        Chance = 20, 
+        Rarity = "Rare", 
+        Resilience = 60, 
+        Description = "A round, spiky fish with a flaming sheen. Its body hardens when threatened.", 
+        Hint = "Found absent from the crowd, it prefers to avoid direct sunlight.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Night", 
+        Price = 1100, 
+        XP = 250, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Pyrite Pufferfish!", 
+            "It seems angered..."
+        }, 
+        SparkleColor = Color3.fromRGB(255, 102, 46), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Volcanic Vents"
+    }, 
+    ["Molten Moray"] = {
+        WeightPool = {
+            80, 
+            230
+        }, 
+        Chance = 15, 
+        Rarity = "Rare", 
+        Resilience = 35, 
+        Description = "A long, slender fish with dark, heat-resistant scales. Hot to the touch.", 
+        Hint = "Small yet blindingly bright. When it rains, it hunts.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = nil, 
+        Price = 1300, 
+        XP = 450, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Molten Moray!", 
+            "It melted my hook!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 102, 46), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Volcanic Vents"
+    }, 
+    ["Scalding Swordfish"] = {
+        WeightPool = {
+            10000, 
+            25000
+        }, 
+        Chance = 0.005, 
+        Rarity = "Legendary", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.4, 
+        Description = "A sharp fish with glowing red eyes and a body wreathed in smoky tendrils, rumored to be a spirit of the lava itself.", 
+        Hint = "With a razor-sharp edge, it is said to appear when the sun blazes overhead.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Day", 
+        Price = 4000, 
+        XP = 1100, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A SCALDING SWORDFISH!?", 
+            "FROM THE UNDERWORLD!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 102, 46), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Volcanic Vents"
+    }, 
+    ["Blisterback Blenny"] = {
+        Icon = "rbxassetid://110086622505618", 
+        WeightPool = {
+            10000, 
+            28000
+        }, 
+        Chance = 0.01, 
+        Rarity = "Mythical", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.35, 
+        Description = "A colossal fish with jagged, obsidian fins and an inner fire that lights up its body. It is said to be faster than a tsunami.", 
+        Hint = "If the skies are clear and the air is hot, be ready.", 
+        FavouriteBait = "Fish Head", 
+        FavouriteTime = "Day", 
+        Price = 6300, 
+        XP = 1500, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A BLISTERBACK BLENNY!?", 
+            "THE MOLTEN HUNTER!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 102, 46), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Volcanic Vents"
+    }, 
+    ["Hydra Haddock"] = {
+        WeightPool = {
+            210, 
+            470
+        }, 
+        Chance = 65, 
+        Rarity = "Common", 
+        Resilience = 90, 
+        Description = "A small, hydra-type fish with dark scales and glowing eyes.", 
+        Hint = "A steady fish, commonly spotted during windy conditions.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 400, 
+        XP = 160, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Hydra Haddock!", 
+            "Fierce!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Veil of the Forsaken"
+    }, 
+    ["Serpent Surgeonfish"] = {
+        WeightPool = {
+            850, 
+            2100
+        }, 
+        Chance = 55, 
+        Rarity = "Uncommon", 
+        Resilience = 75, 
+        ProgressEfficiency = 0.95, 
+        Description = "A long, snake-like fish with sharp fins and glowing eyes.", 
+        Hint = "A swift fish that is typically difficult to spot due to foggy conditions.", 
+        FavouriteBait = "Bagel", 
+        FavouriteTime = nil, 
+        Price = 1250, 
+        XP = 220, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Serpent Surgeonfish!", 
+            "That's no doctor!", 
+            "Where did it get a scalpel..."
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Veil of the Forsaken"
+    }, 
+    ["Kraken Koi"] = {
+        WeightPool = {
+            1000, 
+            2800
+        }, 
+        Chance = 45, 
+        Rarity = "Uncommon", 
+        Resilience = 70, 
+        ProgressEfficiency = 0.85, 
+        Description = "A dark, ominous koi with glowing eyes and tentacle-like fins.", 
+        Hint = "Located in deeper waters, typically when the weather is still.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = nil, 
+        Price = 1100, 
+        XP = 330, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Kraken Koi!", 
+            "A KRAKE- Nevermind...", 
+            "Cute!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Veil of the Forsaken"
+    }, 
+    ["Gorgon Grouper"] = {
+        WeightPool = {
+            600, 
+            1650
+        }, 
+        Chance = 25, 
+        Rarity = "Unusual", 
+        Resilience = 55, 
+        ProgressEfficiency = 0.8, 
+        Description = "A stone-like fish with glowing eyes and a body covered in moss.", 
+        Hint = "Prefers to swim in groups, where conditions are clear.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = nil, 
+        Price = 1500, 
+        XP = 1350, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Gorgon Grouper!", 
+            "Doesn't look like a monster to me!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Veil of the Forsaken"
+    }, 
+    ["Cyclone Scorpionfish"] = {
+        WeightPool = {
+            460, 
+            1200
+        }, 
+        Chance = 20, 
+        Rarity = "Rare", 
+        Resilience = 40, 
+        ProgressEfficiency = 0.6, 
+        Description = "A spiky fish with glowing eyes and a body that spins like a cyclone.", 
+        Hint = "Usually found in shallow water, where rain is prevalent.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 1800, 
+        XP = 1150, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Cyclone Scorpionfish!", 
+            "A disaster fish!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Veil of the Forsaken"
+    }, 
+    ["Siren Sculpin"] = {
+        WeightPool = {
+            900, 
+            2500
+        }, 
+        Chance = 10, 
+        Rarity = "Rare", 
+        Resilience = 30, 
+        ProgressEfficiency = 0.5, 
+        Description = "A small, glowing fish with a hypnotic pattern on its scales.", 
+        Hint = "Typically found alone, where wind is fierce.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = nil, 
+        Price = 4000, 
+        XP = 1450, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Siren Sculpin!", 
+            "It's so mesmerizing!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Veil of the Forsaken"
+    }, 
+    ["Typhoon Tailfin"] = {
+        WeightPool = {
+            12000, 
+            34000
+        }, 
+        Chance = 5, 
+        Rarity = "Legendary", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.2, 
+        Description = "A large fish with the power of a typhoon.", 
+        Hint = "Occasionally located in stormy weather conditions.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = nil, 
+        Price = 9000, 
+        XP = 2800, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A TYPHOON TAILFIN!?", 
+            "INCREDIBLE POWER!", 
+            "DANGER!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Veil of the Forsaken"
+    }, 
+    ["Twilight Tentaclefish"] = {
+        WeightPool = {
+            2800, 
+            7500
+        }, 
+        Chance = 3, 
+        Rarity = "Mythical", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.15, 
+        Description = "A long, tentacle-like fish with glowing eyes and a body that shimmers in the dark.", 
+        Hint = "Rarely spotted in dark, murky waters", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = nil, 
+        Price = 13000, 
+        XP = 3400, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A TWILIGHT TENTACLEFISH!?", 
+            "OCTOPUS THING!", 
+            "TWILIGHT!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Veil of the Forsaken"
+    }, 
     Rarities = {
         [1] = "Trash", 
         [2] = "Common", 
@@ -13530,6 +14966,6 @@ local v5 = {
         Relic = Color3.fromRGB(120, 255, 183), 
         Fragment = Color3.fromRGB(255, 63, 5), 
         Gemstone = Color3.fromRGB(172, 57, 255)
-    }, 
+    },
 };
 return v5;
