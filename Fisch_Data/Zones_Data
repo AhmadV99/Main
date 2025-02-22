@@ -1754,5 +1754,97 @@ return {
         }, 
         CantBeWhormholed = true, 
         Priority = 1
+    }, 
+    ["Volcanic Vents"] = {
+        Pool = {
+            "Inferno Hide", 
+            "Hellfire Haddock", 
+            "Embertail Eel", 
+            "Infernal Iguanafish", 
+            "Smoldering Stingray", 
+            "Pyrite Pufferfish", 
+            "Molten Moray", 
+            "Scalding Swordfish", 
+            "Blisterback Blenny", 
+            "Magma Leviathan"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
+    ["Challengers Deep"] = {
+        Pool = {
+            "Frozen Leviathan", 
+            "Frostscale Fangtooth", 
+            "Subzero Stargazer", 
+            "Chillshadow Chub", 
+            "Deep Freeze Devilfish", 
+            "Iceberg Isopod", 
+            "Polar Prowler", 
+            "Chillfin Chimaera", 
+            "Cryoskin", 
+            "Cryo Coelacanth"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
+    ["Abyssal Zenith"] = {
+        Pool = {
+            "Titanic Black Seadevil", 
+            "Leviathan Humpback Anglerfish", 
+            "Abyssal Bearded Seadevil", 
+            "Colossal Saccopharynx", 
+            "Radiant Triplewart Seadevil", 
+            "Deeplight Footballfish", 
+            "Voidglow Ghostfish", 
+            "Infant Giant Seadevil", 
+            "Giant Seadevil", 
+            "Crowned Anglerfish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
+    ["Calm Zone"] = {
+        Pool = {
+            "Quartzfin Queenfish", 
+            "Diamond Discus", 
+            "Emerald Elephantnose", 
+            "Sapphire Stargazer", 
+            "Ruby Rasbora", 
+            "Prismatic Parrotfish", 
+            "Crystal Corydoras", 
+            "Shimmering Silverside", 
+            "Crystallized Seadragon"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
+    ["Forsaken Veil"] = {
+        Pool = {
+            "Hydra Haddock", 
+            "Serpent Surgeonfish", 
+            "Kraken Koi", 
+            "Gorgon Grouper", 
+            "Cyclone Scorpionfish", 
+            "Siren Sculpin", 
+            "Typhoon Tailfin", 
+            "Twilight Tentaclefish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
+    ["Forsaken Veil - Scylla"] = {
+        Pool = {
+            "Hydra Haddock", 
+            "Serpent Surgeonfish", 
+            "Kraken Koi", 
+            "Gorgon Grouper", 
+            "Cyclone Scorpionfish", 
+            "Siren Sculpin", 
+            "Typhoon Tailfin", 
+            "Twilight Tentaclefish", 
+            "Scylla"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 4
     }
 };
