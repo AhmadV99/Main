@@ -83,6 +83,7 @@ local l_presents_0 = {
         "Enchant Relic"
     }
 };
+
 local v2 = {
     ["Desolate Deep"] = {
         Trash = 22, 
@@ -135,8 +136,8 @@ local v5 = {
     ["Anglers Lantern"] = {
         Icon = "rbxassetid://127503265905341", 
         WeightPool = {
-            2000, 
-            2200
+            20, 
+            20
         }, 
         Chance = 0.1, 
         Rarity = "Exotic", 
@@ -259,7 +260,7 @@ local v5 = {
         From = "Veil of the Forsaken", 
         CustomProgressEfficiency = {
             {
-                Value = 0.05
+                Value = -0.95
             }
         }
     }, 
@@ -3324,7 +3325,7 @@ local v5 = {
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         FromLimited = "Archeological Site"
     }, 
-    Palaeoniscus = {
+    Palaeoniscum = {
         WeightPool = {
             25, 
             700
@@ -3332,7 +3333,7 @@ local v5 = {
         Chance = 40, 
         Rarity = "Unusual", 
         Resilience = 70, 
-        Description = "Palaeoniscus is an ancient ray-finned fish from the Early Permian period, approximately 290 million years ago. Known for its robust ganoid scales and streamlined body, it represents early actinopterygian evolution, the ancestor of most modern fish.", 
+        Description = "Palaeoniscum is an ancient ray-finned fish from the Early Permian period, approximately 290 million years ago. Known for its robust ganoid scales and streamlined body, it represents early actinopterygian evolution, the ancestor of most modern fish.", 
         Hint = "Found within the Ancient Isle's waterfall.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
@@ -3346,9 +3347,9 @@ local v5 = {
             "Clear"
         }, 
         Quips = {
-            "A Palaeoniscus!", 
-            "OMG A Palaeoniscus!", 
-            "I can't believe I caught a Palaeoniscus!"
+            "A Palaeoniscum!", 
+            "OMG A Palaeoniscum!", 
+            "I can't believe I caught a Palaeoniscum!"
         }, 
         SparkleColor = Color3.fromRGB(33, 106, 122), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
@@ -5328,7 +5329,7 @@ local v5 = {
             "Insect", 
             "Fish Head", 
             "Rapid Catcher", 
-            "instant Catcher", 
+            "Instant Catcher", 
             "Super Flakes", 
             "Maggot"
         }
@@ -5371,7 +5372,7 @@ local v5 = {
         BaitContents = {
             "Fish Head", 
             "Rapid Catcher", 
-            "instant Catcher", 
+            "Instant Catcher", 
             "Seaweed", 
             "Seaweed", 
             "Squid", 
@@ -5431,6 +5432,37 @@ local v5 = {
         FavouriteTime = nil, 
         Price = 12000, 
         XP = 2500, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "I feel it's power..", 
+            "Woah.. An Exalted Relic??", 
+            "An Exalted Relic!!", 
+            "I caught an Exalted Relic!"
+        }, 
+        SparkleColor = Color3.fromRGB(228, 160, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "None"
+    }, 
+    ["Song of the Deep"] = {
+        WeightPool = {
+            210, 
+            210
+        }, 
+        Chance = 0.02, 
+        Rarity = "Relic", 
+        Resilience = 35, 
+        ProgressEfficiency = 0.8, 
+        Description = "An immortal stone filled with the essence of a Divine Lantern Keeper.. Returning it to it's throne under the Statue of Sovereignty will result in your currently equipped rod being blessed with its immense power.", 
+        Hint = "???", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 1200, 
+        XP = 250, 
         Seasons = {
             "None"
         }, 
@@ -5773,7 +5805,7 @@ local v5 = {
             "Deep Coral", 
             "Night Shrimp", 
             "Rapid Catcher", 
-            "instant Catcher", 
+            "Instant Catcher", 
             "Super Flakes", 
             "Night Shrimp", 
             "Rapid Catcher", 
@@ -9337,7 +9369,7 @@ local v5 = {
             "Coal", 
             "Night Shrimp", 
             "Rapid Catcher", 
-            "instant Catcher", 
+            "Instant Catcher", 
             "Super Flakes", 
             "Night Shrimp", 
             "Rapid Catcher", 
@@ -11842,7 +11874,7 @@ local v5 = {
         CustomProgressEfficiency = {
             {
                 Rod = "Firework Rod", 
-                Value = 0.4
+                Value = -0.6
             }, 
             {
                 Value = 0.2
@@ -11876,7 +11908,7 @@ local v5 = {
             "Thats pretty"
         }, 
         SparkleColor = Color3.fromRGB(170, 255, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Challenger's Deep"
     }, 
     ["Frostscale Fangtooth"] = {
@@ -11960,7 +11992,7 @@ local v5 = {
             "Slippery little guy!"
         }, 
         SparkleColor = Color3.fromRGB(102, 178, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Challenger's Deep"
     }, 
     ["Deep Freeze Devilfish"] = {
@@ -12016,7 +12048,7 @@ local v5 = {
             "It's like a living iceberg!"
         }, 
         SparkleColor = Color3.fromRGB(102, 178, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Challenger's Deep"
     }, 
     ["Cryo Coelacanth"] = {
@@ -12074,7 +12106,7 @@ local v5 = {
             "IT'S QUICK!"
         }, 
         SparkleColor = Color3.fromRGB(102, 178, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Challenger's Deep"
     }, 
     ["Chillfin Chimaera"] = {
@@ -12104,10 +12136,11 @@ local v5 = {
             "CHILLING!"
         }, 
         SparkleColor = Color3.fromRGB(102, 178, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavybasic"), 
         From = "Challenger's Deep"
     }, 
     ["Frozen Leviathan"] = {
+        BlockPassiveCapture = true, 
         Icon = "rbxassetid://81152570606021", 
         WeightPool = {
             60000, 
@@ -13913,7 +13946,7 @@ local v5 = {
         From = "Ocean", 
         CustomProgressEfficiency = {
             {
-                Value = 0.2
+                Value = -0.8
             }
         }
     }, 
@@ -13923,9 +13956,10 @@ local v5 = {
             20000, 
             25000
         }, 
-        Chance = 2, 
+        Chance = 1.0E-8, 
         Rarity = "Secret", 
         Resilience = 5, 
+        ProgressEfficiency = 0.2, 
         Description = "A rare orca, tend to migrate from time to time.", 
         Hint = "Search the ocean for migrating orcas", 
         FavouriteBait = "Shark Head", 
@@ -13944,12 +13978,72 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(85, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        From = "Ocean", 
-        CustomProgressEfficiency = {
-            {
-                Value = 0.2
-            }
-        }
+        From = "Ocean"
+    }, 
+    ["Blue Whale"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            1300000, 
+            3000000
+        }, 
+        Chance = 5, 
+        Rarity = "Exotic", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.1, 
+        Description = "A massive whale, often seen in cold waters during feeding season.", 
+        Hint = "Known for its rarity and immense size, only the keenest eyes will spot it.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = nil, 
+        Price = 30000, 
+        XP = 25000, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "BLUE WHALE!", 
+            "PRETTY BLUE!", 
+            "I'll need a line replacement!", 
+            "Extra large!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Ocean"
+    }, 
+    Moby = {
+        HideFishModel = true, 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            900000, 
+            2000000
+        }, 
+        Chance = 6.0E-4, 
+        Rarity = "Secret", 
+        Resilience = 1, 
+        ProgressEfficiency = 0.05, 
+        Description = "A monstrous whale with a fearsome reputation, known to attack those who dare cross its path", 
+        Hint = "???", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = nil, 
+        Price = 75000, 
+        XP = 60000, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Moby?! IMPOSSIBLE!", 
+            "BIG FOREHEAD!", 
+            "UNMATCHED STRENGTH!", 
+            "IT DIDN'T DESTROY MY BOAT!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Ocean"
     }, 
     ["Titanic Black Seadevil"] = {
         WeightPool = {
@@ -13976,7 +14070,7 @@ local v5 = {
             "Glowy!"
         }, 
         SparkleColor = Color3.fromRGB(29, 30, 77), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Abyssal Zenith"
     }, 
     ["Leviathan Humpback Anglerfish"] = {
@@ -14004,7 +14098,7 @@ local v5 = {
             "Like a lantern!"
         }, 
         SparkleColor = Color3.fromRGB(29, 30, 77), 
-        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Abyssal Zenith"
     }, 
     ["Abyssal Bearded Seadevil"] = {
@@ -14034,7 +14128,7 @@ local v5 = {
             "Could use a shave..."
         }, 
         SparkleColor = Color3.fromRGB(29, 30, 77), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Abyssal Zenith"
     }, 
     ["Colossal Saccopharynx"] = {
@@ -14090,7 +14184,7 @@ local v5 = {
             "Greater than immortal!"
         }, 
         SparkleColor = Color3.fromRGB(29, 30, 77), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Abyssal Zenith"
     }, 
     ["Deeplight Footballfish"] = {
@@ -14119,7 +14213,7 @@ local v5 = {
             "Not a typical football..."
         }, 
         SparkleColor = Color3.fromRGB(29, 30, 77), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Abyssal Zenith"
     }, 
     ["Voidglow Ghostfish"] = {
@@ -14179,7 +14273,7 @@ local v5 = {
             "YOUNG YET DANGEROUS!"
         }, 
         SparkleColor = Color3.fromRGB(29, 30, 77), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Abyssal Zenith"
     }, 
     ["Giant Seadevil"] = {
@@ -14237,7 +14331,7 @@ local v5 = {
             "From the Nether!"
         }, 
         SparkleColor = Color3.fromRGB(85, 250, 220), 
-        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Calm Zone"
     }, 
     ["Diamond Discus"] = {
@@ -14295,7 +14389,7 @@ local v5 = {
             "Not quite elephant-sized..."
         }, 
         SparkleColor = Color3.fromRGB(85, 250, 220), 
-        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Calm Zone"
     }, 
     ["Sapphire Stargazer"] = {
@@ -14351,7 +14445,7 @@ local v5 = {
             "Red like a rose!"
         }, 
         SparkleColor = Color3.fromRGB(85, 250, 220), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Calm Zone"
     }, 
     ["Prismatic Parrotfish"] = {
@@ -14379,7 +14473,7 @@ local v5 = {
             "It isn't talking back!"
         }, 
         SparkleColor = Color3.fromRGB(85, 250, 220), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Calm Zone"
     }, 
     ["Crystal Corydoras"] = {
@@ -14469,7 +14563,7 @@ local v5 = {
             "Thats pretty"
         }, 
         SparkleColor = Color3.fromRGB(170, 255, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Volcanic Vents"
     }, 
     ["Hellfire Haddock"] = {
@@ -14497,7 +14591,7 @@ local v5 = {
             "Scorching!"
         }, 
         SparkleColor = Color3.fromRGB(255, 102, 46), 
-        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Volcanic Vents"
     }, 
     ["Embertail Eel"] = {
@@ -14525,7 +14619,7 @@ local v5 = {
             "Not much meat, but lots of heat!"
         }, 
         SparkleColor = Color3.fromRGB(255, 102, 46), 
-        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         From = "Volcanic Vents"
     }, 
     ["Infernal Iguanafish"] = {
@@ -14554,7 +14648,7 @@ local v5 = {
             "That's not a reptile!"
         }, 
         SparkleColor = Color3.fromRGB(255, 102, 46), 
-        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Volcanic Vents"
     }, 
     ["Smoldering Stingray"] = {
@@ -14582,7 +14676,7 @@ local v5 = {
             "Ouch!"
         }, 
         SparkleColor = Color3.fromRGB(255, 102, 46), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Volcanic Vents"
     }, 
     ["Pyrite Pufferfish"] = {
@@ -14610,7 +14704,7 @@ local v5 = {
             "It seems angered..."
         }, 
         SparkleColor = Color3.fromRGB(255, 102, 46), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Volcanic Vents"
     }, 
     ["Molten Moray"] = {
@@ -14638,7 +14732,7 @@ local v5 = {
             "It melted my hook!"
         }, 
         SparkleColor = Color3.fromRGB(255, 102, 46), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         From = "Volcanic Vents"
     }, 
     ["Scalding Swordfish"] = {
@@ -14725,7 +14819,7 @@ local v5 = {
             "Fierce!"
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Veil of the Forsaken"
     }, 
     ["Serpent Surgeonfish"] = {
@@ -14755,7 +14849,7 @@ local v5 = {
             "Where did it get a scalpel..."
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Veil of the Forsaken"
     }, 
     ["Kraken Koi"] = {
@@ -14785,7 +14879,7 @@ local v5 = {
             "Cute!"
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Veil of the Forsaken"
     }, 
     ["Gorgon Grouper"] = {
@@ -14935,6 +15029,34 @@ local v5 = {
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Veil of the Forsaken"
     }, 
+    ["Baby Pond Emperor"] = {
+        WeightPool = {
+            5, 
+            20
+        }, 
+        Chance = 12, 
+        Rarity = "Mythical", 
+        Resilience = 65, 
+        Description = "It's a mini Pond Emperor!", 
+        Hint = "Found in reefs and deepwaters.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 230, 
+        XP = 100, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Baby Pond Emperor!", 
+            "A Baby Pond Emperor..?"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 227, 15), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Ocean"
+    }, 
     Rarities = {
         [1] = "Trash", 
         [2] = "Common", 
@@ -14966,6 +15088,6 @@ local v5 = {
         Relic = Color3.fromRGB(120, 255, 183), 
         Fragment = Color3.fromRGB(255, 63, 5), 
         Gemstone = Color3.fromRGB(172, 57, 255)
-    },
+    }, 
 };
 return v5;
