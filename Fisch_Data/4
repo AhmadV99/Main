@@ -100,6 +100,161 @@ local v2 = {
     }
 };
 local v5 = {
+    ["Sunny O'Coin"] = {
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            900, 
+            2100
+        }, 
+        Chance = 2, 
+        Rarity = "Limited", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.25, 
+        Description = "A bright yellow fish with a fitting eyepatch, it basks where gold is prevalent. A sunny St. Patrick's treasure!", 
+        Hint = "Appears randomly in Lucky Event pools, lured by a rainbow glow.", 
+        FavouriteBait = "Lucky", 
+        FavouriteTime = nil, 
+        Price = 6500, 
+        XP = 2500, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "SUNNY O'COIN!", 
+            "GOLDEN GLIMMER!", 
+            "LEPRECHAUN'S SHINY CATCH!"
+        }, 
+        SparkleColor = Color3.fromRGB(38, 252, 95), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lucky Event"
+    }, 
+    ["Rowdy McCharm"] = {
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            600, 
+            1500
+        }, 
+        Chance = 1, 
+        Rarity = "Limited", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.15, 
+        Description = "A lively red fish with eyes that glow like embers, it darts through waters with St. Patrick's playful charm!", 
+        Hint = "Appears randomly in Lucky Event pools, lured by a rainbow glow.", 
+        FavouriteBait = "Lucky", 
+        FavouriteTime = nil, 
+        Price = 10000, 
+        XP = 5000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "ROWDY MCCHARM!", 
+            "LUCKY LITTLE DANCER!", 
+            "CHARMED AND READY!"
+        }, 
+        SparkleColor = Color3.fromRGB(38, 252, 95), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lucky Event"
+    }, 
+    ["Plumrick O'Luck"] = {
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            1200, 
+            3000
+        }, 
+        Chance = 4, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.45, 
+        Description = "A hefty purple fish with stylish shades, it glides through pools where St. Patrick's luck runs deep!", 
+        Hint = "Appears randomly in Lucky Event pools, lured by a rainbow glow.", 
+        FavouriteBait = "Lucky", 
+        FavouriteTime = nil, 
+        Price = 5000, 
+        XP = 1900, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "PLUMRICK O'LUCK!", 
+            "PURPLE CHASER!", 
+            "LUCKY DISGUISE!"
+        }, 
+        SparkleColor = Color3.fromRGB(38, 252, 95), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lucky Event"
+    }, 
+    ["O'Mango Goldgrin"] = {
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            800, 
+            2400
+        }, 
+        Chance = 5, 
+        Rarity = "Limited", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.5, 
+        Description = "An orange fish sporting circular glasses, it grins through warm waters with a St. Patrick's golden glow!", 
+        Hint = "Appears randomly in Lucky Event pools, lured by a rainbow glow.", 
+        FavouriteBait = "Lucky", 
+        FavouriteTime = nil, 
+        Price = 4500, 
+        XP = 1700, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "O'MANGO GOLDGRIN!", 
+            "DOES IT TASTE LIKE A MANGO?", 
+            "GOLDEN GIGGLER!"
+        }, 
+        SparkleColor = Color3.fromRGB(38, 252, 95), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lucky Event"
+    }, 
+    ["Blarney McBreeze"] = {
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            650, 
+            1600
+        }, 
+        Chance = 3, 
+        Rarity = "Limited", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.35, 
+        Description = "A sleek blue fish that rides warm currents, its scales sparkle like shamrocks. A St. Patrick's breezy delight!", 
+        Hint = "Appears randomly in Lucky Event pools, lured by a rainbow glow.", 
+        FavouriteBait = "Lucky", 
+        FavouriteTime = nil, 
+        Price = 5500, 
+        XP = 2200, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "BLARNEY MCBREEZE!", 
+            "SHAMROCK SWIMMER!", 
+            "BREEZY LUCK BRINGER!"
+        }, 
+        SparkleColor = Color3.fromRGB(38, 252, 95), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lucky Event"
+    }, 
     ["Magma Leviathan"] = {
         BlockPassiveCapture = true, 
         Icon = "rbxassetid://119725034311950", 
@@ -5557,9 +5712,9 @@ local v5 = {
         }, 
         Quips = {
             "I feel it's power..", 
-            "Woah.. An Exalted Relic??", 
-            "An Exalted Relic!!", 
-            "I caught an Exalted Relic!"
+            "Woah.. An Song of the Deep??", 
+            "An Song of the Deep!!", 
+            "I caught an Song of the Deep!"
         }, 
         SparkleColor = Color3.fromRGB(228, 160, 255), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
@@ -11978,7 +12133,7 @@ local v5 = {
         Rarity = "Common", 
         Resilience = 100, 
         ProgressEfficiency = 0.8, 
-        Description = "Cyroskin... Used to craft something?", 
+        Description = "Cryoskin... Used to craft something?", 
         Hint = "Its pretty", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
@@ -13602,7 +13757,7 @@ local v5 = {
             "Weaver of the void!"
         }, 
         SparkleColor = Color3.fromRGB(148, 0, 211), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         From = "Atlantis"
     }, 
     ["Mage Marlin"] = {
@@ -15168,9 +15323,9 @@ local v5 = {
         Uncommon = Color3.fromRGB(161, 255, 169), 
         Unusual = Color3.fromRGB(192, 135, 198), 
         Rare = Color3.fromRGB(119, 108, 181), 
-        Legendary = Color3.fromRGB(240, 181, 109), 
+        Legendary = Color3.fromRGB(240, 181, 109),
         Mythical = Color3.fromRGB(255, 62, 120), 
-        Exotic = Color3.fromRGB(255, 255, 255), 
+        Exotic = Color3.fromRGB(255, 255, 255),
         Secret = Color3.fromRGB(255, 255, 255), 
         Limited = Color3.fromRGB(54, 73, 159), 
         Divine = Color3.fromRGB(202, 198, 255), 
