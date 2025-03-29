@@ -1,5 +1,5 @@
 local l_fish_0 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish");
-local l_presents_0 = {
+local l_presents_0 = local l_presents_0 = {
     Basic = {
         "Cookie", 
         "Cookie", 
@@ -101,7 +101,7 @@ local v2 = {
 };
 local v5 = {
     ["Wretched Guppy"] = {
-        Icon = "rbxassetid://REPLACEHERE", 
+        Icon = "rbxassetid://105045431285579", 
         WeightPool = {
             80, 
             180
@@ -128,12 +128,12 @@ local v5 = {
             "Sorrowful..."
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         FromLimited = "Cults Curse", 
         IsLimitedBestiary = true
     }, 
     ["Hollow Gazer"] = {
-        Icon = "rbxassetid://REPLACEHERE", 
+        Icon = "rbxassetid://82043991450361", 
         WeightPool = {
             300, 
             780
@@ -165,7 +165,7 @@ local v5 = {
         IsLimitedBestiary = true
     }, 
     ["Eldritch Spineback"] = {
-        Icon = "rbxassetid://REPLACEHERE", 
+        Icon = "rbxassetid://97819315465161", 
         WeightPool = {
             700, 
             1800
@@ -197,7 +197,7 @@ local v5 = {
         IsLimitedBestiary = true
     }, 
     ["Abyssal Maw"] = {
-        Icon = "rbxassetid://REPLACEHERE", 
+        Icon = "rbxassetid://132297023833361", 
         WeightPool = {
             6000, 
             17000
@@ -224,12 +224,12 @@ local v5 = {
             "Molar strength of the abyss!"
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         FromLimited = "Cults Curse", 
         IsLimitedBestiary = true
     }, 
     ["Bloodscript Eel"] = {
-        Icon = "rbxassetid://REPLACEHERE", 
+        Icon = "rbxassetid://112659110841268", 
         WeightPool = {
             180, 
             450
@@ -261,7 +261,7 @@ local v5 = {
         IsLimitedBestiary = true
     }, 
     ["Veilborn Parasite"] = {
-        Icon = "rbxassetid://REPLACEHERE", 
+        Icon = "rbxassetid://111709084035086", 
         WeightPool = {
             85, 
             230
@@ -288,12 +288,12 @@ local v5 = {
             "Parasitic!"
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         FromLimited = "Cults Curse", 
         IsLimitedBestiary = true
     }, 
     ["Profane Ray"] = {
-        Icon = "rbxassetid://REPLACEHERE", 
+        Icon = "rbxassetid://86916024375422", 
         WeightPool = {
             1200, 
             2800
@@ -320,12 +320,12 @@ local v5 = {
             "A sin with fins!"
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         FromLimited = "Cults Curse", 
         IsLimitedBestiary = true
     }, 
     ["The Whispering One"] = {
-        Icon = "rbxassetid://REPLACEHERE", 
+        Icon = "rbxassetid://114020294523055", 
         WeightPool = {
             5000, 
             14000
@@ -352,7 +352,7 @@ local v5 = {
             "DEAFENING SILENCE!"
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         FromLimited = "Cults Curse", 
         IsLimitedBestiary = true
     }, 
@@ -15822,6 +15822,4085 @@ local v5 = {
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Snowcap"
     }, 
+    ["Sea Leviathan"] = {
+        WeightPool = {
+            10000, 
+            15000
+        }, 
+        Chance = 150000, 
+        Rarity = "Exotic", 
+        Resilience = 4, 
+        Description = "Orcas tend to migrate from time to time.", 
+        Hint = "Search the ocean for migrating orcas", 
+        FavouriteBait = "Shark Head", 
+        FavouriteTime = nil, 
+        Price = 12000, 
+        XP = 8000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "ORCA! IMPOSSIBLE!", 
+            "The tide bows to its eternal majesty!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Ocean", 
+        CustomProgressEfficiency = {
+            {
+                Value = -0.8
+            }
+        }, 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Gale Snapper"] = {
+        Icon = "rbxassetid://139112436973391", 
+        WeightPool = {
+            20, 
+            55
+        }, 
+        Chance = 100, 
+        Rarity = "Common", 
+        Resilience = 80, 
+        ProgressEfficiency = 1.2, 
+        Description = "A sleek grey fish adorned with shimmering blue stripes, darting through the shallows like a fleeting gust.", 
+        Hint = "Look for it when the winds stir the surface.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 30, 
+        XP = 15, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Gale Snapper!", 
+            "Quick as the breeze!", 
+            "Stripey little fella!"
+        }, 
+        SparkleColor = Color3.fromRGB(73, 62, 237), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Drift Claw"] = {
+        Icon = "rbxassetid://126596829342845", 
+        WeightPool = {
+            460, 
+            1200
+        }, 
+        Chance = 90, 
+        Rarity = "Common", 
+        Resilience = 65, 
+        ProgressEfficiency = 0.95, 
+        Description = "A darker red fish with vivid bright red accents, lurking like a crimson shadow in the currents.", 
+        Hint = "It thrives where the cool water runs deep and slow.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Night", 
+        Price = 40, 
+        XP = 20, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Drift Claw!", 
+            "Red as blood!", 
+            "Caught in the drift!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 75, 10), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Foamrunner = {
+        Icon = "rbxassetid://84356183101180", 
+        WeightPool = {
+            500, 
+            1350
+        }, 
+        Chance = 80, 
+        Rarity = "Uncommon", 
+        Resilience = 55, 
+        ProgressEfficiency = 1.12, 
+        Description = "A light blue fish speckled with bright light blue spots, skimming the surface like sea foam.", 
+        Hint = "Seek it where the mist meets the eye.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = nil, 
+        Price = 80, 
+        XP = 40, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Foamrunner!", 
+            "Spotted a speedy one!", 
+            "Light as the tide!"
+        }, 
+        SparkleColor = Color3.fromRGB(120, 255, 246), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Sprayfin = {
+        Icon = "rbxassetid://83395965868895", 
+        WeightPool = {
+            50, 
+            140
+        }, 
+        Chance = 70, 
+        Rarity = "Uncommon", 
+        Resilience = 60, 
+        ProgressEfficiency = 1.08, 
+        Description = "A vibrant yellow fish with dark yellow stripes, slashing through the water like a burst of sunlight.", 
+        Hint = "It swims under the rays of the sun.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Day", 
+        Price = 90, 
+        XP = 45, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Sprayfin!", 
+            "Sunny and swift!", 
+            "A splash of gold!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 220, 92), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Ripple Spine"] = {
+        Icon = "rbxassetid://136572643815500", 
+        WeightPool = {
+            750, 
+            1900
+        }, 
+        Chance = 60, 
+        Rarity = "Unusual", 
+        Resilience = 45, 
+        ProgressEfficiency = 1.1, 
+        Description = "A light blue fish with long, flowing fins and dark blue stripes, rippling through the water like a living wave.", 
+        Hint = "It glides where the currents hum softly.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = "Night", 
+        Price = 140, 
+        XP = 70, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Ripple Spine!", 
+            "Fins like a river!", 
+            "Caught a wavy one!"
+        }, 
+        SparkleColor = Color3.fromRGB(140, 255, 242), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Depth Lurker"] = {
+        Icon = "rbxassetid://81860867661655", 
+        WeightPool = {
+            250, 
+            600
+        }, 
+        Chance = 50, 
+        Rarity = "Unusual", 
+        Resilience = 50, 
+        Description = "A grey fish with light purple fins, lurking in the shadows of the deep like a silent phantom.", 
+        Hint = "It waits where the light barely reaches.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 150, 
+        XP = 75, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Depth Lurker!", 
+            "Sneaky shadow!", 
+            "Purple fins, huh?"
+        }, 
+        SparkleColor = Color3.fromRGB(157, 157, 209), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Surge Pike"] = {
+        Icon = "rbxassetid://108565835701703", 
+        WeightPool = {
+            1500, 
+            4000
+        }, 
+        Chance = 40, 
+        Rarity = "Rare", 
+        Resilience = 35, 
+        ProgressEfficiency = 1.05, 
+        Description = "A long, slender fish with light yellow fins, surging through the water with electric grace.", 
+        Hint = "It strikes when the air feels charged.", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = "Day", 
+        Price = 380, 
+        XP = 190, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Surge Pike!", 
+            "Long and zappy!", 
+            "Caught a live wire!"
+        }, 
+        SparkleColor = Color3.fromRGB(231, 255, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Abyss Dart"] = {
+        Icon = "rbxassetid://120122502922513", 
+        WeightPool = {
+            6500, 
+            18000
+        }, 
+        Chance = 30, 
+        Rarity = "Rare", 
+        Resilience = 40, 
+        ProgressEfficiency = 0.9, 
+        Description = "A lilac colored fish with light purple fins and a sharp, pointed snout, piercing the abyss like a dart.", 
+        Hint = "It hunts in the darkest corners of the sea.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 400, 
+        XP = 200, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "An Abyss Dart!", 
+            "Pointy and purple!", 
+            "Darted right in!"
+        }, 
+        SparkleColor = Color3.fromRGB(204, 189, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Breaker Moth"] = {
+        Icon = "rbxassetid://132703206802175", 
+        WeightPool = {
+            300, 
+            800
+        }, 
+        Chance = 20, 
+        Rarity = "Legendary", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.65, 
+        Description = "A grey fish with sharp teeth, golden accents, and light purple fins, snapping through the tide.", 
+        Hint = "It emerges when the moon glows faintly.", 
+        FavouriteBait = "Gale Grub", 
+        FavouriteTime = "Night", 
+        Price = 1100, 
+        XP = 550, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A BREAKER MOTH!", 
+            "TEETH LIKE DAGGERS!", 
+            "GOLDEN SNAP!"
+        }, 
+        SparkleColor = Color3.fromRGB(230, 202, 64), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Tide Fang"] = {
+        Icon = "rbxassetid://113365976852842", 
+        WeightPool = {
+            600, 
+            1500
+        }, 
+        Chance = 10, 
+        Rarity = "Legendary", 
+        Resilience = 30, 
+        ProgressEfficiency = 0.55, 
+        Description = "A dark green fish with teal fins and light green spots, biting through the waves with feral might.", 
+        Hint = "It prowls when the tide turns restless.", 
+        FavouriteBait = "Neuro Slug", 
+        FavouriteTime = "Day", 
+        Price = 1200, 
+        XP = 600, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A TIDE FANG!", 
+            "FEROCIOUS BITE!", 
+            "SPOTTED A BEAST!"
+        }, 
+        SparkleColor = Color3.fromRGB(64, 230, 166), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Wave Piercer"] = {
+        Icon = "rbxassetid://121439252523126", 
+        WeightPool = {
+            500, 
+            1400
+        }, 
+        Chance = 5, 
+        Rarity = "Mythical", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.45, 
+        Description = "A grey fish with light blue fins and dark grey stripes, cutting through the waves with ethereal precision.", 
+        Hint = "It appears when the sea mirrors the sky.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Night", 
+        Price = 2100, 
+        XP = 1050, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A WAVE PIERCER!", 
+            "SLICES THE TIDE!", 
+            "STRIKING BEAUTY!"
+        }, 
+        SparkleColor = Color3.fromRGB(184, 238, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Gust Tail"] = {
+        Icon = "rbxassetid://124021549219972", 
+        WeightPool = {
+            5500, 
+            12000
+        }, 
+        Chance = 3, 
+        Rarity = "Mythical", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "A beige colored fish with piercing yellow eyes and dark grey stripes, riding the gusts below.", 
+        Hint = "It soars beneath stormy whispers.", 
+        FavouriteBait = "Nightmare Larva", 
+        FavouriteTime = nil, 
+        Price = 2200, 
+        XP = 1100, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A GUST TAIL!", 
+            "EYES LIKE LIGHTNING!", 
+            "WIND IN ITS FINS!"
+        }, 
+        SparkleColor = Color3.fromRGB(249, 255, 184), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Vortex Ray"] = {
+        Icon = "rbxassetid://80389769702703", 
+        WeightPool = {
+            4000, 
+            11000
+        }, 
+        Chance = 2, 
+        Rarity = "Exotic", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.3, 
+        Description = "A deep blue fish with yellow accents and dark blue stripes, swirling through the depths.", 
+        Hint = "It spirals where the waters twist.", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Day", 
+        Price = 7500, 
+        XP = 3750, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A VORTEX RAY!?!", 
+            "TAIL OF DOOM!!", 
+            "SWIRLING MENACE!?"
+        }, 
+        SparkleColor = Color3.fromRGB(84, 155, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Storm Skipper"] = {
+        Icon = "rbxassetid://118721375993994", 
+        WeightPool = {
+            500, 
+            1500
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.25, 
+        Description = "A dark blue fish crackling with light blue electric arcs, adorned with light blue spots and fins, skipping through tempests.", 
+        Hint = "It thrives in the midst of chaos.", 
+        FavouriteBait = "Golden Worm", 
+        FavouriteTime = "Night", 
+        Price = 10000, 
+        XP = 5000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A STORM SKIPPER!?!", 
+            "ELECTRIC FURY!!", 
+            "SHOCKING CATCH!?"
+        }, 
+        SparkleColor = Color3.fromRGB(130, 251, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Waveborne", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Watching Glowfin"] = {
+        Icon = "rbxassetid://103483576267723", 
+        WeightPool = {
+            10, 
+            40
+        }, 
+        Chance = 230, 
+        Rarity = "Common", 
+        Resilience = 80, 
+        ProgressEfficiency = 1.2, 
+        Description = "A vigilant presence that glows with quiet menace.", 
+        Hint = "It watches from the shallows when the sun is high.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 30, 
+        XP = 20, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Watching Glowfin!", 
+            "Caught it staring!", 
+            "Glows with grit!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 255, 200), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Pine Shoal", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Drifting Gildfin"] = {
+        Icon = "rbxassetid://83632386474738", 
+        WeightPool = {
+            15, 
+            45
+        }, 
+        Chance = 195, 
+        Rarity = "Common", 
+        Resilience = 75, 
+        ProgressEfficiency = 1.15, 
+        Description = "A wanderer that drifts with gilded grace.", 
+        Hint = "It floats where the currents whisper.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Night", 
+        Price = 35, 
+        XP = 22, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Drifting Gildfin!", 
+            "Drifts like royalty!", 
+            "Gilded catch!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 215, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Pine Shoal", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Blue Foamtail"] = {
+        Icon = "rbxassetid://119963825311230", 
+        WeightPool = {
+            20, 
+            60
+        }, 
+        Chance = 175, 
+        Rarity = "Uncommon", 
+        Resilience = 60, 
+        ProgressEfficiency = 1.1, 
+        Description = "A swift swimmer that foams with blue energy.", 
+        Hint = "It races where the waves bubble.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Day", 
+        Price = 65, 
+        XP = 45, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Blue Foamtail!", 
+            "Foamy and fast!", 
+            "Blue blur!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 191, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Pine Shoal", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Redwood Duskray"] = {
+        Icon = "rbxassetid://102903621677111", 
+        WeightPool = {
+            30, 
+            80
+        }, 
+        Chance = 165, 
+        Rarity = "Unusual", 
+        Resilience = 50, 
+        ProgressEfficiency = 1.05, 
+        Description = "A sturdy glider that rays through the dusk.", 
+        Hint = "It soars when the light fades red.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 125, 
+        XP = 70, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Redwood Duskray!", 
+            "Dusk\226\128\153s tough flyer!", 
+            "Redwood ruler!"
+        }, 
+        SparkleColor = Color3.fromRGB(139, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Pine Shoal", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Oak Stripetail"] = {
+        Icon = "rbxassetid://71230130632791", 
+        WeightPool = {
+            40, 
+            100
+        }, 
+        Chance = 150, 
+        Rarity = "Rare", 
+        Resilience = 40, 
+        ProgressEfficiency = 0.95, 
+        Description = "A resilient striker with a tail of oak strength.", 
+        Hint = "It lashes where the waters grow still.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Day", 
+        Price = 230, 
+        XP = 110, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "An Oak Stripetail!", 
+            "Tough as oak!", 
+            "Striped strength!"
+        }, 
+        SparkleColor = Color3.fromRGB(139, 69, 19), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Pine Shoal", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Pine Zephyrfish"] = {
+        Icon = "rbxassetid://83101453929168", 
+        WeightPool = {
+            50, 
+            120
+        }, 
+        Chance = 5, 
+        Rarity = "Legendary", 
+        Resilience = 30, 
+        ProgressEfficiency = 0.65, 
+        Description = "A swift zephyr that dances with pine\226\128\153s might.", 
+        Hint = "It breezes through when the wind howls.", 
+        FavouriteBait = "Gale Grub", 
+        FavouriteTime = "Night", 
+        Price = 1340, 
+        XP = 670, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A PINE ZEPHYRFISH!", 
+            "WIND\226\128\153S CHAMPION!", 
+            "PINE POWER!"
+        }, 
+        SparkleColor = Color3.fromRGB(34, 139, 34), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Pine Shoal", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Parktail Spinesnapper"] = {
+        Icon = "rbxassetid://128935101956474", 
+        WeightPool = {
+            60, 
+            150
+        }, 
+        Chance = 3, 
+        Rarity = "Mythical", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.45, 
+        Description = "A fierce snapper with a tail born of parkland fury.", 
+        Hint = "It snaps where the stillness breaks.", 
+        FavouriteBait = "Gale Grub", 
+        FavouriteTime = "Day", 
+        Price = 2850, 
+        XP = 1450, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A PARKTAIL SPINESNAPPER!", 
+            "SNAPS LIKE FATE!", 
+            "PARKLAND BEAST!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 107, 47), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Pine Shoal", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Sunray Sunscale"] = {
+        Icon = "rbxassetid://72618370604258", 
+        WeightPool = {
+            80, 
+            200
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.35, 
+        Description = "A radiant scaler that basks in sunray glory.", 
+        Hint = "It shines where the sun touches the sea.", 
+        FavouriteBait = nil, 
+        FavouriteTime = "Day", 
+        Price = 8450, 
+        XP = 4500, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A SUNRAY SUNSCALE!", 
+            "SOLAR LEGEND!", 
+            "RADIANT PRIZE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 165, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Pine Shoal", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Thornfish = {
+        Icon = "rbxassetid://139749999063062", 
+        WeightPool = {
+            100, 
+            300
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.2, 
+        Description = "A prickly terror that thorns through the deep.", 
+        Hint = "It stings where the shadows grow sharp.", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Night", 
+        Price = 12500, 
+        XP = 8000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A THORNFISH?!", 
+            "PRICKLY NIGHTMARE!", 
+            "THORN OF DOOM!"
+        }, 
+        SparkleColor = Color3.fromRGB(47, 79, 47), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Pine Shoal", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Bogscale = {
+        Icon = "rbxassetid://133302534353646", 
+        WeightPool = {
+            30, 
+            70
+        }, 
+        Chance = 110, 
+        Rarity = "Common", 
+        Resilience = 80, 
+        ProgressEfficiency = 1.1, 
+        Description = "A brown fish cloaked in grassy tendrils, blending into the muddy waters like a living mire.", 
+        Hint = "It thrives when the leaves fall and the air grows thick with haze.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 35, 
+        XP = 18, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Bogscale!", 
+            "Mossy catch!", 
+            "Muddy little guy!"
+        }, 
+        SparkleColor = Color3.fromRGB(5, 166, 29), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Murkdrifter = {
+        Icon = "rbxassetid://108956383264570", 
+        WeightPool = {
+            500, 
+            1300
+        }, 
+        Chance = 100, 
+        Rarity = "Common", 
+        Resilience = 65, 
+        ProgressEfficiency = 1.05, 
+        Description = "A green fish drifting through murky depths, a silent wanderer of the shadowed waters.", 
+        Hint = "It roams when the rains awaken the night\226\128\153s embrace.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Night", 
+        Price = 45, 
+        XP = 23, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Murkdrifter!", 
+            "Green and gloomy!", 
+            "Caught in the haze!"
+        }, 
+        SparkleColor = Color3.fromRGB(3, 133, 22), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Vinefish = {
+        Icon = "rbxassetid://89876897754455", 
+        WeightPool = {
+            120, 
+            340
+        }, 
+        Chance = 90, 
+        Rarity = "Uncommon", 
+        Resilience = 55, 
+        ProgressEfficiency = 1.15, 
+        Description = "A slender green fish with yellow fins, slithering through the currents with serpentine grace.", 
+        Hint = "It weaves through the currents when the warm gusts stir.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 90, 
+        XP = 45, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Vinefish!", 
+            "Slippery!", 
+            "Flashy!"
+        }, 
+        SparkleColor = Color3.fromRGB(123, 224, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Canopy Tetra"] = {
+        Icon = "rbxassetid://91242996252487", 
+        WeightPool = {
+            60, 
+            160
+        }, 
+        Chance = 80, 
+        Rarity = "Uncommon", 
+        Resilience = 60, 
+        ProgressEfficiency = 0.98, 
+        Description = "A light green fish with yellow fins and a faint blue shimmer, flitting like a leaf in the canopy\226\128\153s shade.", 
+        Hint = "It dances under the crisp light of a frozen dawn.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Day", 
+        Price = 100, 
+        XP = 50, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Canopy Tetra!", 
+            "Leafy little swimmer!", 
+            "Cute!"
+        }, 
+        SparkleColor = Color3.fromRGB(175, 224, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Hollow Snapper"] = {
+        Icon = "rbxassetid://118539928945168", 
+        WeightPool = {
+            800, 
+            2000
+        }, 
+        Chance = 70, 
+        Rarity = "Unusual", 
+        Resilience = 45, 
+        ProgressEfficiency = 0.9, 
+        Description = "A dark green fish with glowing fins, and a menacing glare that pierces the gloom.", 
+        Hint = "Its eerie light cuts through the shrouded dusk.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 160, 
+        XP = 80, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Hollow Snapper!", 
+            "Teal terror!", 
+            "Eyes that bite!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 255, 149), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Fogstripe = {
+        Icon = "rbxassetid://76727016103329", 
+        WeightPool = {
+            300, 
+            700
+        }, 
+        Chance = 60, 
+        Rarity = "Unusual", 
+        Resilience = 50, 
+        ProgressEfficiency = 0.93, 
+        Description = "A green fish with beige stripes and translucent fins, fading into the mist like a ghostly streak.", 
+        Hint = "It drifts through the veiled bloom of new life.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 170, 
+        XP = 85, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Fogstripe!", 
+            "Stripey ghost!", 
+            "Fades away fast!"
+        }, 
+        SparkleColor = Color3.fromRGB(244, 255, 179), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Temple Perch"] = {
+        Icon = "rbxassetid://79213491852476", 
+        WeightPool = {
+            1600, 
+            4200
+        }, 
+        Chance = 39, 
+        Rarity = "Rare", 
+        Resilience = 35, 
+        ProgressEfficiency = 0.95, 
+        Description = "A brown fish with light blue fins and accents, resting like a relic in ancient waters.", 
+        Hint = "It lingers where the sun blesses the warm stillness.", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = "Day", 
+        Price = 420, 
+        XP = 210, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Temple Perch!", 
+            "Ancient swimmer!", 
+            "A piece of the past!"
+        }, 
+        SparkleColor = Color3.fromRGB(84, 244, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Relic Dart"] = {
+        Icon = "rbxassetid://135875191174775", 
+        WeightPool = {
+            700, 
+            1900
+        }, 
+        Chance = 39, 
+        Rarity = "Rare", 
+        Resilience = 40, 
+        ProgressEfficiency = 0.88, 
+        Description = "A golden fish with light blue translucent fins, streaking through the deep like a forgotten treasure.", 
+        Hint = "It flashes through the cold, wet twilight.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 450, 
+        XP = 225, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Relic Dart!", 
+            "Gold!", 
+            "Not a relic for enchanting..."
+        }, 
+        SparkleColor = Color3.fromRGB(120, 246, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Echo Koi"] = {
+        Icon = "rbxassetid://99446334465175", 
+        WeightPool = {
+            350, 
+            900
+        }, 
+        Chance = 26, 
+        Rarity = "Legendary", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.55, 
+        Description = "A long fish with strange light blue whiskers and fins, its dark blue accents whispering secrets of the deep.", 
+        Hint = "Its melody hums under the bright bloom of dawn.", 
+        FavouriteBait = "Lushrooms", 
+        FavouriteTime = "Day", 
+        Price = 1200, 
+        XP = 600, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "AN ECHO KOI!", 
+            "WHISKERS OF MYSTERY!", 
+            "SINGING CATCH!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 107, 173), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Glade Lurker"] = {
+        Icon = "rbxassetid://75710782306179", 
+        WeightPool = {
+            650, 
+            1600
+        }, 
+        Chance = 14, 
+        Rarity = "Legendary", 
+        Resilience = 30, 
+        ProgressEfficiency = 0.45, 
+        Description = "A dark green-yellow fish with menacing fangs, stalking the glades beneath the waves.", 
+        Hint = "It prowls when the night cloaks the fading leaves.", 
+        FavouriteBait = "Lushrooms", 
+        FavouriteTime = "Night", 
+        Price = 1300, 
+        XP = 650, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A GLADE LURKER!", 
+            "FANGS OF FEAR!", 
+            "STALKER SNAGGED!"
+        }, 
+        SparkleColor = Color3.fromRGB(156, 176, 4), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Jungle Phantom"] = {
+        Icon = "rbxassetid://106375786188188", 
+        WeightPool = {
+            600, 
+            1600
+        }, 
+        Chance = 11, 
+        Rarity = "Mythical", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.3, 
+        Description = "A green fish with light green fins and dark green accents, fading into the jungle depths like a specter.", 
+        Hint = "It slips away when the warm rains drench the dark.", 
+        FavouriteBait = "Lushrooms", 
+        FavouriteTime = "Night", 
+        Price = 2400, 
+        XP = 1200, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A JUNGLE PHANTOM!", 
+            "GHOST OF THE DEPTHS!", 
+            "GREEN SHADOW!"
+        }, 
+        SparkleColor = Color3.fromRGB(110, 255, 94), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Idolfish = {
+        Icon = "rbxassetid://124815300302724", 
+        WeightPool = {
+            7100, 
+            17000
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.2, 
+        Description = "A white translucent fish adorned with yellow symbols and fins, glowing like a sacred relic.", 
+        Hint = "Its radiance pierces the chill of a restless frost.", 
+        FavouriteBait = "Golden Worm", 
+        FavouriteTime = nil, 
+        Price = 4300, 
+        XP = 2150, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "AN IDOLFISH!", 
+            "HOLY GLOW!", 
+            "SYMBOLS OF POWER!"
+        }, 
+        SparkleColor = Color3.fromRGB(227, 227, 227), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Primordial Levi"] = {
+        Icon = "rbxassetid://82281991219618", 
+        WeightPool = {
+            4500, 
+            12000
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 3, 
+        ProgressEfficiency = 0.15, 
+        Description = "A near-black fish with bright red accents, its menacing form a relic of a primal age.", 
+        Hint = "It stirs when the winds howl through the faded light.", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Night", 
+        Price = 12000, 
+        XP = 6000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A PRIMORDIAL LEVI!?!", 
+            "RED FURY UNLEASHED!!", 
+            "ANCIENT BEAST!?"
+        }, 
+        SparkleColor = Color3.fromRGB(207, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lushgrove", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Ashscale Minnow"] = {
+        Icon = "rbxassetid://82608711781963", 
+        WeightPool = {
+            90, 
+            210
+        }, 
+        Chance = 110, 
+        Rarity = "Common", 
+        Resilience = 80, 
+        ProgressEfficiency = 1.1, 
+        Description = "A small, ashen-hued fish, flickering through the haze with subtle shadows.", 
+        Hint = "It darts where the soot settles under daylight.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Day", 
+        Price = 35, 
+        XP = 16, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "An Ashscale Minnow!", 
+            "Tiny ash swimmer!", 
+            "Grey little spark!"
+        }, 
+        SparkleColor = Color3.fromRGB(105, 105, 105), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Glowfin Skipper"] = {
+        Icon = "rbxassetid://97038957605442", 
+        WeightPool = {
+            1500, 
+            3900
+        }, 
+        Chance = 105, 
+        Rarity = "Common", 
+        Resilience = 68, 
+        ProgressEfficiency = 1.03, 
+        Description = "A radiant fish, its gleam cutting through the smoky veil.", 
+        Hint = "It shines when the night hides the embers.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = "Night", 
+        Price = 43, 
+        XP = 21, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Glowfin Skipper!", 
+            "Yellow flicker!", 
+            "Caught a glowbug!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Pyre Fang"] = {
+        Icon = "rbxassetid://85330129929548", 
+        WeightPool = {
+            120, 
+            240
+        }, 
+        Chance = 108, 
+        Rarity = "Common", 
+        Resilience = 78, 
+        ProgressEfficiency = 1.12, 
+        Description = "A rugged fish, its fins sharp and tinged with embers.", 
+        Hint = "It lurks where the haze fuels the daylight\226\128\153s glow.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 37, 
+        XP = 18, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Pyre Fang!", 
+            "Jagged blaze!", 
+            "Fiery bite!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 165, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Firecrest = {
+        Icon = "rbxassetid://128937254044562", 
+        WeightPool = {
+            1440, 
+            3600
+        }, 
+        Chance = 102, 
+        Rarity = "Common", 
+        Resilience = 62, 
+        ProgressEfficiency = 1.07, 
+        Description = "A bold fish, its fins sharp and crowned with a fiery gleam.", 
+        Hint = "It crests where the warm rains fuel the dark.", 
+        FavouriteBait = "Ember Berries", 
+        FavouriteTime = "Night", 
+        Price = 47, 
+        XP = 23, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Firecrest!", 
+            "Orange crown!", 
+            "Fiery gaze!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 165, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Lava Bream"] = {
+        Icon = "rbxassetid://128937254044562", 
+        WeightPool = {
+            360, 
+            1020
+        }, 
+        Chance = 92, 
+        Rarity = "Common", 
+        Resilience = 57, 
+        ProgressEfficiency = 1.17, 
+        Description = "A dark fish, its fins aglow with the warmth of molten depths.", 
+        Hint = "It basks where the warm winds rage.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 93, 
+        XP = 44, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Lava Bream!", 
+            "Fiery fins!", 
+            "Hot little catch!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 165, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Moltenstripe = {
+        Icon = "rbxassetid://105209291563546", 
+        WeightPool = {
+            180, 
+            480
+        }, 
+        Chance = 85, 
+        Rarity = "Common", 
+        Resilience = 63, 
+        ProgressEfficiency = 0.96, 
+        Description = "A fiery-hued fish, marked with streaks of shadow, swift in heated currents.", 
+        Hint = "It streaks under the clear blaze of day.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Day", 
+        Price = 115, 
+        XP = 55, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Moltenstripe!", 
+            "Orange blaze!", 
+            "Striped fire!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 140, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Magma Pike"] = {
+        Icon = "rbxassetid://124187551496782", 
+        WeightPool = {
+            390, 
+            1050
+        }, 
+        Chance = 88, 
+        Rarity = "Uncommon", 
+        Resilience = 58, 
+        ProgressEfficiency = 1.13, 
+        Description = "A sturdy fish, its form kissed by the glow of molten veins.", 
+        Hint = "It rises when the winds fan the ancient fires.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 95, 
+        XP = 45, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Magma Pike!", 
+            "Lava lance!", 
+            "Scorching haul!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 165, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Hellmaw Eel"] = {
+        Icon = "rbxassetid://99140611676362", 
+        WeightPool = {
+            210, 
+            510
+        }, 
+        Chance = 82, 
+        Rarity = "Uncommon", 
+        Resilience = 61, 
+        ProgressEfficiency = 0.99, 
+        Description = "A sinuous creature, its jaws wide and lined with crimson hints.", 
+        Hint = "It slithers under the crisp fire of dawn.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Day", 
+        Price = 105, 
+        XP = 50, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Hellmaw Eel!", 
+            "Red jaws snap!", 
+            "Fiery serpent!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Sulfur Snapper"] = {
+        Icon = "rbxassetid://121667674321951", 
+        WeightPool = {
+            2400, 
+            6000
+        }, 
+        Chance = 72, 
+        Rarity = "Uncommon", 
+        Resilience = 47, 
+        ProgressEfficiency = 0.92, 
+        Description = "A shadowy fish, its fins alight and eyes agleam in acrid waters.", 
+        Hint = "Its glare cuts through the foggy night\226\128\153s heat.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 165, 
+        XP = 70, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Sulfur Snapper!", 
+            "Sulfur snap!", 
+            "Yellow-eyed fiend!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Smogfish = {
+        Icon = "rbxassetid://80993173249983", 
+        WeightPool = {
+            960, 
+            2160
+        }, 
+        Chance = 65, 
+        Rarity = "Uncommon", 
+        Resilience = 52, 
+        ProgressEfficiency = 0.94, 
+        Description = "A muted fish, drifting through the thick, choking haze.", 
+        Hint = "It lurks in the veiled haze of renewal.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 170, 
+        XP = 75, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Smogfish!", 
+            "Grey drifter!", 
+            "Caught in the smog!"
+        }, 
+        SparkleColor = Color3.fromRGB(128, 128, 128), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Sunflare Tetra"] = {
+        Icon = "rbxassetid://128054132545586", 
+        WeightPool = {
+            870, 
+            2040
+        }, 
+        Chance = 68, 
+        Rarity = "Uncommon", 
+        Resilience = 49, 
+        ProgressEfficiency = 0.9, 
+        Description = "A vibrant fish, its fins radiating like the sun\226\128\153s fleeting touch.", 
+        Hint = "It blazes where the warm rains ignite the dark.", 
+        FavouriteBait = "Sapphire Krill", 
+        FavouriteTime = "Night", 
+        Price = 179, 
+        XP = 85, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Sunflare Tetra!", 
+            "Solar fins!", 
+            "Flaming beauty!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 165, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Searfin = {
+        Icon = "rbxassetid://76050120437522", 
+        WeightPool = {
+            2520, 
+            6300
+        }, 
+        Chance = 74, 
+        Rarity = "Unusual", 
+        Resilience = 43, 
+        ProgressEfficiency = 0.91, 
+        Description = "A sleek fish, its fins shimmering with the heat of scorched tides.", 
+        Hint = "It glides where the sun ignites the stillness.", 
+        FavouriteBait = "Coal", 
+        FavouriteTime = "Day", 
+        Price = 168, 
+        XP = 78, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Searfin!", 
+            "Burning fins!", 
+            "Hot swimmer!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 165, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Basalt Pike"] = {
+        Icon = "rbxassetid://96112150720341", 
+        WeightPool = {
+            930, 
+            2190
+        }, 
+        Chance = 62, 
+        Rarity = "Unusual", 
+        Resilience = 48, 
+        ProgressEfficiency = 0.95, 
+        Description = "A rugged fish, its form dark and unyielding as stone forged in fire.", 
+        Hint = "It pierces the cold, wet dusk.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 175, 
+        XP = 80, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Basalt Pike!", 
+            "Rocky catch!", 
+            "Dark spear!"
+        }, 
+        SparkleColor = Color3.fromRGB(64, 64, 64), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Furnace Leaper"] = {
+        Icon = "rbxassetid://76056791333052", 
+        WeightPool = {
+            2340, 
+            5940
+        }, 
+        Chance = 70, 
+        Rarity = "Unusual", 
+        Resilience = 46, 
+        ProgressEfficiency = 0.88, 
+        Description = "A robust fish, its fins alight with the heat of hidden flames.", 
+        Hint = "It bounds where the sun stokes the calm flames.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Day", 
+        Price = 168, 
+        XP = 80, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Furnace Leaper!", 
+            "Tough blaze!", 
+            "Orange jumper!"
+        }, 
+        SparkleColor = Color3.fromRGB(169, 169, 169), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Smolderfang = {
+        Icon = "rbxassetid://87980683683213", 
+        WeightPool = {
+            990, 
+            2250
+        }, 
+        Chance = 58, 
+        Rarity = "Unusual", 
+        Resilience = 51, 
+        ProgressEfficiency = 0.93, 
+        Description = "A dark fish, its fins and gaze simmering with quiet intensity.", 
+        Hint = "It glows in the cold, wet shadows of dusk.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = "Night", 
+        Price = 179, 
+        XP = 85, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Smolderfang!", 
+            "Yellow glare!", 
+            "Smoky snap!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Blazebelly = {
+        Icon = "rbxassetid://138452270788009", 
+        WeightPool = {
+            4800, 
+            12600
+        }, 
+        Chance = 41, 
+        Rarity = "Rare", 
+        Resilience = 37, 
+        ProgressEfficiency = 0.97, 
+        Description = "A dark fish, its underbelly and fins pulsing with inner warmth.", 
+        Hint = "Its fire pulses through the bright renewal.", 
+        FavouriteBait = "Coal", 
+        FavouriteTime = "Day", 
+        Price = 441, 
+        XP = 210, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Blazebelly!", 
+            "Fiery guts!", 
+            "Hot belly haul!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 140, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Cragscale = {
+        Icon = "rbxassetid://98841634367281", 
+        WeightPool = {
+            2130, 
+            5760
+        }, 
+        Chance = 37, 
+        Rarity = "Rare", 
+        Resilience = 42, 
+        ProgressEfficiency = 0.86, 
+        Description = "A deep-hued fish, edged with rough shadows and faint, ghostly fins.", 
+        Hint = "It prowls the shrouded embers of night.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 465, 
+        XP = 220, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Cragscale!", 
+            "Jagged beast!", 
+            "Blue rock snag!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 139), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Volcanic Prowler"] = {
+        Icon = "rbxassetid://88780865663711", 
+        WeightPool = {
+            4650, 
+            12300
+        }, 
+        Chance = 43, 
+        Rarity = "Rare", 
+        Resilience = 33, 
+        ProgressEfficiency = 0.94, 
+        Description = "A stealthy fish, its teeth sharp and edges warm with fire.", 
+        Hint = "It stalks through the bright embers of dawn.", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = "Day", 
+        Price = 441, 
+        XP = 210, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Volcanic Prowler!", 
+            "Jagged hunter!", 
+            "Orange stalker!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 165, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Inferno Chaser"] = {
+        Icon = "rbxassetid://88606898103971", 
+        WeightPool = {
+            2040, 
+            5610
+        }, 
+        Chance = 35, 
+        Rarity = "Rare", 
+        Resilience = 39, 
+        ProgressEfficiency = 0.89, 
+        Description = "A slender, fiery fish, its whiskers trailing like sparks in pursuit.", 
+        Hint = "It races through the restless chill of ash.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 473, 
+        XP = 225, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "An Inferno Chaser!", 
+            "Whiskers of flame!", 
+            "Hot pursuit!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 140, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Cinder Dart"] = {
+        Icon = "rbxassetid://115755978818708", 
+        WeightPool = {
+            1080, 
+            2730
+        }, 
+        Chance = 28, 
+        Rarity = "Legendary", 
+        Resilience = 27, 
+        ProgressEfficiency = 0.57, 
+        Description = "A swift fish, its long fins trailing like embers in the wind.", 
+        Hint = "It streaks through the misty renewal\226\128\153s glow.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 1270, 
+        XP = 605, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A CINDER DART!", 
+            "MYTHIC BLAZE!", 
+            "ORANGE STREAKED!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 165, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Emberwing = {
+        Icon = "rbxassetid://100296568467790", 
+        WeightPool = {
+            1980, 
+            4860
+        }, 
+        Chance = 16, 
+        Rarity = "Legendary", 
+        Resilience = 32, 
+        ProgressEfficiency = 0.47, 
+        Description = "A shadowed fish, its fins flaring like wisps of flame.", 
+        Hint = "Its wings flare in the foggy night\226\128\153s glow.", 
+        FavouriteBait = "Ember Berries", 
+        FavouriteTime = "Night", 
+        Price = 1365, 
+        XP = 650, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "AN EMBERWING!", 
+            "FLAMED FINS!", 
+            "WINGED BLAZE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 140, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Scorchray = {
+        Icon = "rbxassetid://84376073594091", 
+        WeightPool = {
+            1020, 
+            2640
+        }, 
+        Chance = 24, 
+        Rarity = "Legendary", 
+        Resilience = 23, 
+        ProgressEfficiency = 0.53, 
+        Description = "A broad, dark creature, its edges flickering with fiery traces.", 
+        Hint = "It sweeps through the rainy embers of night.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Night", 
+        Price = 1260, 
+        XP = 600, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A SCORCHRAY!", 
+            "FLAMING WINGS!", 
+            "STINGING HEAT!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 140, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Brimstone Angler"] = {
+        Icon = "rbxassetid://76075072562142", 
+        WeightPool = {
+            1860, 
+            4830
+        }, 
+        Chance = 13, 
+        Rarity = "Mythical", 
+        Resilience = 22, 
+        ProgressEfficiency = 0.32, 
+        Description = "A mysterious fish, its fins casting an eerie glow in the mist.", 
+        Hint = "Its light tempts in the foggy embers of dusk.", 
+        FavouriteBait = "Ember Berries", 
+        FavouriteTime = "Night", 
+        Price = 2500, 
+        XP = 1200, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A BRIMSTONE ANGLER!", 
+            "GLOWING LURE!", 
+            "PURPLE!"
+        }, 
+        SparkleColor = Color3.fromRGB(138, 43, 226), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Obsidian Koi"] = {
+        Icon = "rbxassetid://95453863689311", 
+        WeightPool = {
+            1740, 
+            4680
+        }, 
+        Chance = 9, 
+        Rarity = "Mythical", 
+        Resilience = 18, 
+        ProgressEfficiency = 0.28, 
+        Description = "A sleek fish, its fins flowing like dark, polished glass.", 
+        Hint = "It drifts where the warm gusts fan the flames.", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = nil, 
+        Price = 2525, 
+        XP = 1220, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "AN OBSIDIAN KOI!", 
+            "SHINY ELEGANCE!", 
+            "BLACK BEAUTY!"
+        }, 
+        SparkleColor = Color3.fromRGB(10, 10, 10), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Tropicspike = {
+        Icon = "rbxassetid://132778604345651", 
+        WeightPool = {
+            21300, 
+            51000
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 12, 
+        ProgressEfficiency = 0.2, 
+        Description = "A striking fish, its fins a vivid dance of shifting hues.", 
+        Hint = "It spikes through the restless frost\226\128\153s blaze.", 
+        FavouriteBait = "Golden Worm", 
+        FavouriteTime = nil, 
+        Price = 4515, 
+        XP = 2150, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A TROPICSPIKE?!", 
+            "COLORFUL FURY!", 
+            "SPIKED SPECTRUM!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Molten Ripple"] = {
+        Icon = "rbxassetid://92446926296297", 
+        WeightPool = {
+            13500, 
+            36000
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.15, 
+        Description = "A round, cheerful fish, its surface rippling with molten charm.", 
+        Hint = "It bobs where the winds warm the ancient glow.", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Day", 
+        Price = 12600, 
+        XP = 6000, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A MOLTEN RIPPLE?!", 
+            "SMILING FLAME!", 
+            "CUTE INFERNO!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 140, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Emberreach", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Tidallow = {
+        Icon = "rbxassetid://108282314447639", 
+        WeightPool = {
+            60, 
+            150
+        }, 
+        Chance = 115, 
+        Rarity = "Common", 
+        Resilience = 82, 
+        ProgressEfficiency = 1.14, 
+        Description = "A tiny, bright yellow fish with striking red eyes, darting through shallow waters.", 
+        Hint = "It gleams under the sun\226\128\153s gentle rays.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 41, 
+        XP = 20, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Tidallow!", 
+            "Sunny little swimmer!", 
+            "Red-eyed catch!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Reefdart = {
+        Icon = "rbxassetid://128735643845295", 
+        WeightPool = {
+            90, 
+            180
+        }, 
+        Chance = 110, 
+        Rarity = "Common", 
+        Resilience = 79, 
+        ProgressEfficiency = 1.1, 
+        Description = "A slender blue eel with pink fins and eyes, weaving through coral shadows.", 
+        Hint = "It slinks along the reef when the tide rests.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Night", 
+        Price = 52, 
+        XP = 25, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Reefdart!", 
+            "Pink-finned eel!", 
+            "Slippery blue!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Crestscale = {
+        Icon = "rbxassetid://84104910132694", 
+        WeightPool = {
+            120, 
+            300
+        }, 
+        Chance = 95, 
+        Rarity = "Uncommon", 
+        Resilience = 60, 
+        ProgressEfficiency = 1.16, 
+        Description = "A small green fish with beige fins, its scales rising like a gentle wave.", 
+        Hint = "It basks where the breeze meets the tide.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 105, 
+        XP = 50, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Crestscale!", 
+            "Wavy green!", 
+            "Beige beauty!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 128, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Horizon Tetra"] = {
+        Icon = "rbxassetid://126840673773248", 
+        WeightPool = {
+            150, 
+            390
+        }, 
+        Chance = 78, 
+        Rarity = "Unusual", 
+        Resilience = 45, 
+        ProgressEfficiency = 0.92, 
+        Description = "A shimmering metallic blue fish with yellow fins, glinting at the water\226\128\153s edge.", 
+        Hint = "It sparkles where the sun kisses the horizon.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Day", 
+        Price = 185, 
+        XP = 88, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Horizon Tetra!", 
+            "Metallic marvel!", 
+            "Yellow shimmer!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 139), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Driftfin = {
+        Icon = "rbxassetid://74275363936709", 
+        WeightPool = {
+            240, 
+            660
+        }, 
+        Chance = 45, 
+        Rarity = "Rare", 
+        Resilience = 38, 
+        ProgressEfficiency = 0.98, 
+        Description = "A dirt-colored fish with sleek black fins, drifting silently with the current.", 
+        Hint = "It blends into the muddy depths at dusk.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Night", 
+        Price = 485, 
+        XP = 231, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Driftfin!", 
+            "Muddy mover!", 
+            "Black-finned drifter!"
+        }, 
+        SparkleColor = Color3.fromRGB(139, 69, 19), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Lantern Snapper"] = {
+        Icon = "rbxassetid://97920152799947", 
+        WeightPool = {
+            330, 
+            900
+        }, 
+        Chance = 30, 
+        Rarity = "Legendary", 
+        Resilience = 28, 
+        ProgressEfficiency = 0.4, 
+        Description = "A tiny red fish glowing like a lantern, illuminating the reef\226\128\153s shadows.", 
+        Hint = "Its light dances in the warm twilight glow.", 
+        FavouriteBait = "Crystal Bananas", 
+        FavouriteTime = "Night", 
+        Price = 1386, 
+        XP = 660, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A LANTERN SNAPPER!", 
+            "RED BEACON!", 
+            "GLOWING PRIZE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Abyss Flicker"] = {
+        Icon = "rbxassetid://71480787883450", 
+        WeightPool = {
+            420, 
+            1140
+        }, 
+        Chance = 15, 
+        Rarity = "Mythical", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.25, 
+        Description = "A dark purple fish with white accents, flickering like a ghost in the deep.", 
+        Hint = "It haunts the abyss under stormy skies.", 
+        FavouriteBait = "Crystal Bananas", 
+        FavouriteTime = "Night", 
+        Price = 2772, 
+        XP = 1320, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "AN ABYSS FLICKER!", 
+            "PURPLE PHANTOM!", 
+            "WHITE GLEAM!"
+        }, 
+        SparkleColor = Color3.fromRGB(75, 0, 130), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Whisper Eel"] = {
+        Icon = "rbxassetid://71517123874797", 
+        WeightPool = {
+            6000, 
+            15000
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.1, 
+        Description = "A light blue eel with translucent accents, its whispers echo through the currents.", 
+        Hint = "It hums where the winds churn the waves.", 
+        FavouriteBait = "Golden Worm", 
+        FavouriteTime = nil, 
+        Price = 4967, 
+        XP = 2365, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A WHISPER EEL?!", 
+            "TRANSLUCENT WONDER!", 
+            "EEL OF THE UNKNOWN!"
+        }, 
+        SparkleColor = Color3.fromRGB(173, 216, 230), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Phantom Koi"] = {
+        Icon = "rbxassetid://86526174459017", 
+        WeightPool = {
+            3600, 
+            9600
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 4, 
+        ProgressEfficiency = 0.15, 
+        Description = "A white koi with grey accents and ornate fins, a spectral beauty of the depths.", 
+        Hint = "It glides where the fog veils the tide.", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Day", 
+        Price = 13860, 
+        XP = 6600, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A PHANTOM KOI?!", 
+            "GHOSTLY GRACE!", 
+            "FIND A BED!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Blisterfish = {
+        Icon = "rbxassetid://128074767326231", 
+        WeightPool = {
+            80, 
+            200
+        }, 
+        Chance = 120, 
+        Rarity = "Common", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.36, 
+        Description = "A relentless survivor that thrives where others falter.", 
+        Hint = "It lurks where the waters grow bitter.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Night", 
+        Price = 100, 
+        XP = 90, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Blisterfish!", 
+            "Tough as scars!", 
+            "Unyielding catch!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Gloombiter = {
+        Icon = "rbxassetid://137775603621331", 
+        WeightPool = {
+            90, 
+            220
+        }, 
+        Chance = 115, 
+        Rarity = "Common", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.34, 
+        Description = "A fierce biter that claims the shadows as its domain.", 
+        Hint = "It strikes where the light fades.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Night", 
+        Price = 110, 
+        XP = 105, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Gloombiter!", 
+            "Darkness owns it!", 
+            "Bite of gloom!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Rotjaw = {
+        Icon = "rbxassetid://124108855972980", 
+        WeightPool = {
+            150, 
+            360
+        }, 
+        Chance = 100, 
+        Rarity = "Uncommon", 
+        Resilience = 14, 
+        ProgressEfficiency = 0.38, 
+        Description = "A brutal predator that crushes all in its relentless grip.", 
+        Hint = "It prowls where decay lingers.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Day", 
+        Price = 220, 
+        XP = 210, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Rotjaw!", 
+            "Jaws of ruin!", 
+            "Ugly but fierce!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Murkslither = {
+        Icon = "rbxassetid://109966045464913", 
+        WeightPool = {
+            170, 
+            400
+        }, 
+        Chance = 95, 
+        Rarity = "Uncommon", 
+        Resilience = 13, 
+        ProgressEfficiency = 0.37, 
+        Description = "A slippery terror that moves unseen through the murk.", 
+        Hint = "It glides where the waters turn thick.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 240, 
+        XP = 220, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Murkslither!", 
+            "Slithers like death!", 
+            "Murk\226\128\153s champion!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Split Eye Snapper"] = {
+        Icon = "rbxassetid://112900025094188", 
+        WeightPool = {
+            250, 
+            600
+        }, 
+        Chance = 85, 
+        Rarity = "Unusual", 
+        Resilience = 12, 
+        ProgressEfficiency = 0.32, 
+        Description = "A savage snapper that strikes with unerring precision.", 
+        Hint = "It hunts where the currents split.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Day", 
+        Price = 380, 
+        XP = 300, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Split-Eye Snapper!", 
+            "Snaps like thunder!", 
+            "Eyes of fury!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Tumor Pike"] = {
+        Icon = "rbxassetid://98693596371188", 
+        WeightPool = {
+            280, 
+            660
+        }, 
+        Chance = 80, 
+        Rarity = "Unusual", 
+        Resilience = 11, 
+        ProgressEfficiency = 0.3, 
+        Description = "A monstrous pike that dominates through sheer malice.", 
+        Hint = "It lurks where the depths fester.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Night", 
+        Price = 420, 
+        XP = 310, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Tumor Pike!", 
+            "Pike of pain!", 
+            "Growth of doom!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Hollowfin = {
+        Icon = "rbxassetid://80405623042225", 
+        WeightPool = {
+            400, 
+            960
+        }, 
+        Chance = 50, 
+        Rarity = "Rare", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.33, 
+        Description = "A relentless force that echoes with empty strength.", 
+        Hint = "It drifts where the silence grows heavy.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 700, 
+        XP = 600, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Hollowfin!", 
+            "Empty but fierce!", 
+            "Hollow terror!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Crawling Angler"] = {
+        Icon = "rbxassetid://82191223150871", 
+        WeightPool = {
+            450, 
+            1080
+        }, 
+        Chance = 45, 
+        Rarity = "Rare", 
+        Resilience = 9, 
+        ProgressEfficiency = 0.31, 
+        Description = "A cunning hunter that drags its prey into oblivion.", 
+        Hint = "It creeps where the shadows stretch long.", 
+        FavouriteBait = "Sapphire Krill", 
+        FavouriteTime = "Night", 
+        Price = 950, 
+        XP = 725, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Crawling Angler!", 
+            "Crawl of death!", 
+            "Angler\226\128\153s wrath!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Veinspawn = {
+        Icon = "rbxassetid://76126332564265", 
+        WeightPool = {
+            600, 
+            1440
+        }, 
+        Chance = 30, 
+        Rarity = "Legendary", 
+        Resilience = 8, 
+        ProgressEfficiency = 0.2, 
+        Description = "A merciless spawn that pulses with unyielding power.", 
+        Hint = "It emerges where the depths bleed.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = "Night", 
+        Price = 1700, 
+        XP = 2400, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A VEINSPAWN!", 
+            "PULSE OF FURY!", 
+            "SPAWN OF NIGHTMARES!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Screaming Fluke"] = {
+        Icon = "rbxassetid://107762008925903", 
+        WeightPool = {
+            800, 
+            1920
+        }, 
+        Chance = 25, 
+        Rarity = "Legendary", 
+        Resilience = 7, 
+        ProgressEfficiency = 0.18, 
+        Description = "A deafening horror that shatters the silence of the deep.", 
+        Hint = "It wails where the waters tremble.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = "Night", 
+        Price = 2000, 
+        XP = 2500, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A SCREAMING FLUKE!", 
+            "SCREAMS OF DOOM!", 
+            "FLUKE OF FEAR!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Chasm Leech"] = {
+        Icon = "rbxassetid://107762008925903", 
+        WeightPool = {
+            1200, 
+            2880
+        }, 
+        Chance = 15, 
+        Rarity = "Mythical", 
+        Resilience = 6, 
+        ProgressEfficiency = 0.08, 
+        Description = "A tenacious parasite that drains the life from the abyss.", 
+        Hint = "It clings where the chasms yawn wide.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = nil, 
+        Price = 3000, 
+        XP = 3800, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A CHASM LEECH!", 
+            "DRAINER OF DEPTHS!", 
+            "LEECH OF LEGEND!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Dreaming Aberration"] = {
+        Icon = "rbxassetid://97332199725161", 
+        WeightPool = {
+            18000, 
+            43200
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 3, 
+        ProgressEfficiency = 0.05, 
+        Description = "A twisted nightmare that defies the waking world.", 
+        Hint = "It haunts where dreams turn dark.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = "Night", 
+        Price = 8500, 
+        XP = 5050, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A DREAMING ABERRATION!", 
+            "NIGHTMARE UNLEASHED!", 
+            "DREAMS OF DREAD!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Abyssborn Monstrosity"] = {
+        Icon = "rbxassetid://121420749539557", 
+        WeightPool = {
+            24000, 
+            57600
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 1, 
+        ProgressEfficiency = 0.03, 
+        Description = "A colossal terror birthed from the abyss\226\128\153s cruel heart.", 
+        Hint = "It rises where the void claims all.", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Night", 
+        Price = 25000, 
+        XP = 15000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "AN ABYSSBORN MONSTROSITY?!", 
+            "BORN OF THE VOID!", 
+            "MONSTER OF ETERNITY!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "The Cursed Shores", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Hogchoker = {
+        Icon = "rbxassetid://77825372078181", 
+        WeightPool = {
+            40, 
+            100
+        }, 
+        Chance = 130, 
+        Rarity = "Common", 
+        Resilience = 85, 
+        ProgressEfficiency = 1.12, 
+        Description = "A sandy-colored fish with beige fins, flattening itself against the ocean floor.", 
+        Hint = "It hugs the sand when the sun shines bright.", 
+        FavouriteBait = "Sapphire Krill", 
+        FavouriteTime = "Day", 
+        Price = 40, 
+        XP = 20, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Hogchoker!", 
+            "Sandy pancake!", 
+            "Beige bottom-dweller!"
+        }, 
+        SparkleColor = Color3.fromRGB(194, 178, 128), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Rock Gunnel"] = {
+        Icon = "rbxassetid://115876328247518", 
+        WeightPool = {
+            60, 
+            140
+        }, 
+        Chance = 125, 
+        Rarity = "Common", 
+        Resilience = 80, 
+        ProgressEfficiency = 1.08, 
+        Description = "A long red fish with light red fins, slithering through rocky crevices.", 
+        Hint = "It hides in rocks when the tide rolls in.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Night", 
+        Price = 50, 
+        XP = 25, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Rock Gunnel!", 
+            "Red wriggler!", 
+            "Crevice crawler!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Pupfish = {
+        Icon = "rbxassetid://121080756125367", 
+        WeightPool = {
+            50, 
+            120
+        }, 
+        Chance = 127, 
+        Rarity = "Common", 
+        Resilience = 82, 
+        ProgressEfficiency = 1.1, 
+        Description = "A small blue fish with light blue fins, darting in playful schools.", 
+        Hint = "It frolics where the waves crash gently.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = "Day", 
+        Price = 45, 
+        XP = 22, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Pupfish!", 
+            "Blue pup!", 
+            "Tiny swimmer!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Four Eyes Fish"] = {
+        Icon = "rbxassetid://93265006831225", 
+        WeightPool = {
+            100, 
+            260
+        }, 
+        Chance = 110, 
+        Rarity = "Uncommon", 
+        Resilience = 60, 
+        ProgressEfficiency = 1.18, 
+        Description = "A lilac fish with light purple fins, sporting four curious eyes.", 
+        Hint = "It stares where the currents swirl.", 
+        FavouriteBait = "Lagoon Leech", 
+        FavouriteTime = nil, 
+        Price = 100, 
+        XP = 50, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Four-Eyes Fish!", 
+            "Quadruple glare!", 
+            "Lilac looker!"
+        }, 
+        SparkleColor = Color3.fromRGB(200, 162, 200), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Black Swallower"] = {
+        Icon = "rbxassetid://88566667097367", 
+        WeightPool = {
+            130, 
+            320
+        }, 
+        Chance = 105, 
+        Rarity = "Uncommon", 
+        Resilience = 58, 
+        ProgressEfficiency = 1.14, 
+        Description = "A black fish with a large belly and blurple fins, swallowing more than it should.", 
+        Hint = "It gulps in the dark of night.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 110, 
+        XP = 55, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Black Swallower!", 
+            "Big belly, bigger appetite!", 
+            "Blurple glutton!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Warty Angler"] = {
+        Icon = "rbxassetid://82476479573398", 
+        WeightPool = {
+            110, 
+            280
+        }, 
+        Chance = 107, 
+        Rarity = "Uncommon", 
+        Resilience = 62, 
+        ProgressEfficiency = 1.16, 
+        Description = "A black angler with a wide, toothless mouth, luring prey with warty charm.", 
+        Hint = "It gapes where the fog rolls thick.", 
+        FavouriteBait = "Crystal Bananas", 
+        FavouriteTime = "Night", 
+        Price = 105, 
+        XP = 52, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Warty Angler!", 
+            "Toothless terror!", 
+            "Warty wonder!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Lumpclinger = {
+        Icon = "rbxassetid://77872112276118", 
+        WeightPool = {
+            200, 
+            500
+        }, 
+        Chance = 100, 
+        Rarity = "Unusual", 
+        Resilience = 50, 
+        ProgressEfficiency = 0.95, 
+        Description = "A yellow fish with brown spikes, clinging to ocean debris.", 
+        Hint = "It sticks where the waves crash hard.", 
+        FavouriteBait = "Gale Grub", 
+        FavouriteTime = "Day", 
+        Price = 175, 
+        XP = 88, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Lumpclinger!", 
+            "Spiky clinger!", 
+            "Yellow lump!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Snipefish = {
+        Icon = "rbxassetid://106056189787720", 
+        WeightPool = {
+            180, 
+            460
+        }, 
+        Chance = 95, 
+        Rarity = "Unusual", 
+        Resilience = 48, 
+        ProgressEfficiency = 0.9, 
+        Description = "A black fish with purple fins and a ridiculous sniper scope on top, its long mouth aimed for disaster.", 
+        Hint = "It scopes out prey in the foggy dawn.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Day", 
+        Price = 185, 
+        XP = 92, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Snipefish!", 
+            "Deadly accurate!", 
+            "No-scope! Or not..."
+        }, 
+        SparkleColor = Color3.fromRGB(128, 0, 128), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Boarfish = {
+        Icon = "rbxassetid://73446225269523", 
+        WeightPool = {
+            220, 
+            540
+        }, 
+        Chance = 97, 
+        Rarity = "Unusual", 
+        Resilience = 52, 
+        ProgressEfficiency = 0.93, 
+        Description = "A dark red fish with yellow fins, charging through the currents.", 
+        Hint = "It barrels where the rain pounds the sea.", 
+        FavouriteBait = "Ember Berries", 
+        FavouriteTime = "Night", 
+        Price = 180, 
+        XP = 90, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Boarfish!", 
+            "Red charger!", 
+            "Yellow rusher!"
+        }, 
+        SparkleColor = Color3.fromRGB(139, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Telescopefish = {
+        Icon = "rbxassetid://116150855141556", 
+        WeightPool = {
+            400, 
+            1000
+        }, 
+        Chance = 60, 
+        Rarity = "Rare", 
+        Resilience = 38, 
+        ProgressEfficiency = 0.97, 
+        Description = "A long eel with beady yellow eyes and light green fins, peering into the abyss.", 
+        Hint = "It watches where the night grows cold.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 460, 
+        XP = 230, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Telescopefish!", 
+            "Eel spy!", 
+            "Yellow-eyed stalker!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Fangtooth = {
+        Icon = "rbxassetid://136382079356398", 
+        WeightPool = {
+            360, 
+            900
+        }, 
+        Chance = 55, 
+        Rarity = "Rare", 
+        Resilience = 42, 
+        ProgressEfficiency = 0.94, 
+        Description = "A dark fish with large green eyes and sharp teeth, a menace of the deep.", 
+        Hint = "It bites where the rain stirs the dark.", 
+        FavouriteBait = "Lushrooms", 
+        FavouriteTime = "Night", 
+        Price = 480, 
+        XP = 240, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Fangtooth!", 
+            "Toothy terror!", 
+            "Green-eyed biter!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 128, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Velvet Belly Lanternshark"] = {
+        Icon = "rbxassetid://107948417304479", 
+        WeightPool = {
+            600, 
+            1500
+        }, 
+        Chance = 28, 
+        Rarity = "Legendary", 
+        Resilience = 26, 
+        ProgressEfficiency = 0.6, 
+        Description = "A somewhat blue shark with light blue fins, glowing softly in the depths.", 
+        Hint = "It shines where the night swallows the sea.", 
+        FavouriteBait = "Crystal Bananas", 
+        FavouriteTime = "Night", 
+        Price = 1320, 
+        XP = 660, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A VELVET BELLY LANTERNSHARK!", 
+            "GLOWING MENACE!", 
+            "BLUE BEACON OF DOOM!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 191, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Snakehead = {
+        Icon = "rbxassetid://136363239688693", 
+        WeightPool = {
+            650, 
+            1600
+        }, 
+        Chance = 25, 
+        Rarity = "Legendary", 
+        Resilience = 30, 
+        ProgressEfficiency = 0.55, 
+        Description = "A long, gold-colored fish, slithering with predatory grace.", 
+        Hint = "It strikes where the waves roar loud.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 1400, 
+        XP = 700, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A SNAKEHEAD!", 
+            "GOLDEN SERPENT!", 
+            "SLITHERING TREASURE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 215, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Sarcastic Fringehead"] = {
+        Icon = "rbxassetid://109897068344522", 
+        WeightPool = {
+            550, 
+            1400
+        }, 
+        Chance = 30, 
+        Rarity = "Legendary", 
+        Resilience = 24, 
+        ProgressEfficiency = 0.58, 
+        Description = "A desaturated red fish with yellow-orange fins, one eye missing and a sarcastic mop of hair.", 
+        Hint = "It mocks you where the rain hits hard.", 
+        FavouriteBait = "Gale Grub", 
+        FavouriteTime = "Day", 
+        Price = 1350, 
+        XP = 680, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A SARCASTIC FRINGEHEAD!", 
+            "ONE-EYED JERK!", 
+            "YEAH, NICE TRY!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 165, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Knifefish = {
+        Icon = "rbxassetid://109566954982411", 
+        WeightPool = {
+            700, 
+            1700
+        }, 
+        Chance = 26, 
+        Rarity = "Legendary", 
+        Resilience = 28, 
+        ProgressEfficiency = 0.62, 
+        Description = "A metallic black fish with blue accents and fins, slicing through the water.", 
+        Hint = "It cuts where the fog blinds all.", 
+        FavouriteBait = "Lagoon Leech", 
+        FavouriteTime = "Night", 
+        Price = 1380, 
+        XP = 690, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A KNIFEFISH!", 
+            "METALLIC BLADE!", 
+            "BLUE SLASHER!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 139), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Tripod Fish"] = {
+        Icon = "rbxassetid://136127658076818", 
+        WeightPool = {
+            900, 
+            2200
+        }, 
+        Chance = 15, 
+        Rarity = "Mythical", 
+        Resilience = 22, 
+        ProgressEfficiency = 0.35, 
+        Description = "A metallic black fish with absurdly long blue fins, tripping over itself like a clumsy tripod.", 
+        Hint = "It stumbles where the depths grow cold.", 
+        FavouriteBait = "Sapphire Krill", 
+        FavouriteTime = "Day", 
+        Price = 2600, 
+        XP = 1300, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A TRIPOD FISH!", 
+            "THREE-LEGGED FLOP!", 
+            "WHOOPS, IT FELL AGAIN!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Pelican Eel"] = {
+        Icon = "rbxassetid://76876467738469", 
+        WeightPool = {
+            25000, 
+            60000
+        }, 
+        Chance = 12, 
+        Rarity = "Mythical", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.32, 
+        Description = "A deadly blue eel with a giant mouth and sharp teeth, swallowing the ocean whole.", 
+        Hint = "It gulps where the rain pours deep.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = "Day", 
+        Price = 2650, 
+        XP = 1350, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A PELICAN EEL!", 
+            "MOUTH OF DOOM!", 
+            "TEETH OF TERROR!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Bigfin Squid"] = {
+        Icon = "rbxassetid://120382401661595", 
+        WeightPool = {
+            950, 
+            2300
+        }, 
+        Chance = 10, 
+        Rarity = "Mythical", 
+        Resilience = 8, 
+        ProgressEfficiency = 0.28, 
+        Description = "A unique black squid with absurdly long, thin tentacles and light teal accents.", 
+        Hint = "It drifts where the fog hides the abyss.", 
+        FavouriteBait = "Crystal Bananas", 
+        FavouriteTime = "Night", 
+        Price = 2700, 
+        XP = 1400, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A BIGFIN SQUID!", 
+            "TENTACLE TANGLE!", 
+            "TEAL NIGHTMARE!"
+        }, 
+        SparkleColor = Color3.fromRGB(173, 216, 230), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["X-ray Tetra"] = {
+        Icon = "rbxassetid://124582234258164", 
+        WeightPool = {
+            3000, 
+            7500
+        }, 
+        Chance = 2, 
+        Rarity = "Exotic", 
+        Resilience = 12, 
+        ProgressEfficiency = 0.22, 
+        Description = "A transparent fish with a colorful hue inside, light blue fins, and vibrant eyes.", 
+        Hint = "It glows where the winds whip the waves.", 
+        FavouriteBait = "Sapphire Krill", 
+        FavouriteTime = "Day", 
+        Price = 4750, 
+        XP = 2375, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "AN X-RAY TETRA!", 
+            "SEE-THROUGH STUNNER!", 
+            "COLORFUL GHOST!"
+        }, 
+        SparkleColor = Color3.fromRGB(173, 216, 230), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Psychedelic Frogfish"] = {
+        Icon = "rbxassetid://128425433008144", 
+        WeightPool = {
+            80000, 
+            200000
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 2, 
+        ProgressEfficiency = 0.08, 
+        Description = "A red fish with cyan accents, gold-cyan fins, hopping around like a disco disaster.", 
+        Hint = "It grooves where the fog gets funky.", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Day", 
+        Price = 13200, 
+        XP = 6600, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A PSYCHEDELIC FROGFISH?!", 
+            "DISCO DIVA OF THE DEEP!", 
+            "GROOVY RIBBIT!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Murkfin = {
+        Icon = "rbxassetid://101330234849139", 
+        WeightPool = {
+            180, 
+            450
+        }, 
+        Chance = 120, 
+        Rarity = "Common", 
+        Resilience = 55, 
+        ProgressEfficiency = 0.8, 
+        Description = "A swamp-colored fish with blue fins, lurking in murky shallows.", 
+        Hint = "It thrives where the sun barely pierces the mire.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 45, 
+        XP = 25, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Murkfin!", 
+            "Swampy swimmer!", 
+            "Blue-finned muck!"
+        }, 
+        SparkleColor = Color3.fromRGB(139, 115, 85), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Brackscale = {
+        Icon = "rbxassetid://112447837123195", 
+        WeightPool = {
+            240, 
+            600
+        }, 
+        Chance = 100, 
+        Rarity = "Uncommon", 
+        Resilience = 52, 
+        ProgressEfficiency = 0.85, 
+        Description = "A dirt-brown fish with yellow-green fins, blending into brackish waters.", 
+        Hint = "It wallows where the tide meets the mud.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 105, 
+        XP = 50, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Brackscale!", 
+            "Muddy scales!", 
+            "Yellow-green catch!"
+        }, 
+        SparkleColor = Color3.fromRGB(139, 69, 19), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Lagoon Dart"] = {
+        Icon = "rbxassetid://123697771143998", 
+        WeightPool = {
+            300, 
+            720
+        }, 
+        Chance = 95, 
+        Rarity = "Uncommon", 
+        Resilience = 40, 
+        ProgressEfficiency = 0.82, 
+        Description = "A light navy blue fish with yellow fins, streaking through lagoon currents.", 
+        Hint = "It dashes under the warm rain\226\128\153s embrace.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Night", 
+        Price = 110, 
+        XP = 55, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Lagoon Dart!", 
+            "Navy streak!", 
+            "Yellow flash!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 128), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Glimmer Guppy"] = {
+        Icon = "rbxassetid://137884046783267", 
+        WeightPool = {
+            360, 
+            960
+        }, 
+        Chance = 80, 
+        Rarity = "Unusual", 
+        Resilience = 34, 
+        ProgressEfficiency = 0.7, 
+        Description = "A dark pastel purple fish with pink fins and yellow spots, shimmering faintly.", 
+        Hint = "It glints where the mist cloaks the lagoon.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Day", 
+        Price = 195, 
+        XP = 90, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Glimmer Guppy!", 
+            "Pastel sparkle!", 
+            "Spotty glow!"
+        }, 
+        SparkleColor = Color3.fromRGB(147, 112, 219), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Swampjaw = {
+        Icon = "rbxassetid://107062972353177", 
+        WeightPool = {
+            480, 
+            1200
+        }, 
+        Chance = 75, 
+        Rarity = "Unusual", 
+        Resilience = 28, 
+        ProgressEfficiency = 0.68, 
+        Description = "A long, dark green fish with yellow fins, its jaws snapping in the swamp.", 
+        Hint = "It lurks where the rain feeds the gloom.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Night", 
+        Price = 200, 
+        XP = 95, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Swampjaw!", 
+            "Green snapper!", 
+            "Yellow-finned terror!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 100, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Algae Lurker"] = {
+        Icon = "rbxassetid://112955322009977", 
+        WeightPool = {
+            720, 
+            1800
+        }, 
+        Chance = 48, 
+        Rarity = "Rare", 
+        Resilience = 24, 
+        ProgressEfficiency = 0.75, 
+        Description = "A long green-blue fish with light green fins, lurking among tangled algae.", 
+        Hint = "It hides where the lagoon blooms in stillness.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Day", 
+        Price = 510, 
+        XP = 245, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "An Algae Lurker!", 
+            "Green-blue stalker!", 
+            "Algae ambush!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 128, 128), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Reed Striker"] = {
+        Icon = "rbxassetid://130323250031239", 
+        WeightPool = {
+            600, 
+            1560
+        }, 
+        Chance = 42, 
+        Rarity = "Rare", 
+        Resilience = 23, 
+        ProgressEfficiency = 0.72, 
+        Description = "A beige-cyan fish with yellow fins, striking from the reeds with precision.", 
+        Hint = "It lunges where the wind rustles the water.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 515, 
+        XP = 240, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Reed Striker!", 
+            "Beige bolt!", 
+            "Yellow ambush!"
+        }, 
+        SparkleColor = Color3.fromRGB(245, 245, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Azure Prowler"] = {
+        Icon = "rbxassetid://105080078239199", 
+        WeightPool = {
+            960, 
+            2400
+        }, 
+        Chance = 32, 
+        Rarity = "Legendary", 
+        Resilience = 6, 
+        ProgressEfficiency = 0.35, 
+        Description = "A blue fish with golden fins, prowling the lagoon with regal grace.", 
+        Hint = "It hunts under the clear dusk\226\128\153s glow.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = "Night", 
+        Price = 1750, 
+        XP = 905, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "AN AZURE PROWLER!", 
+            "GOLDEN KING!", 
+            "BLUE MAJESTY!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Phantom Brine"] = {
+        Icon = "rbxassetid://103784722418647", 
+        WeightPool = {
+            840, 
+            2160
+        }, 
+        Chance = 28, 
+        Rarity = "Legendary", 
+        Resilience = 7, 
+        ProgressEfficiency = 0.38, 
+        Description = "A grey-green fish with translucent fins, haunting the briny depths.", 
+        Hint = "It drifts where the fog shrouds the waves.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = "Day", 
+        Price = 1855, 
+        XP = 995, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A PHANTOM BRINE!", 
+            "GHOSTLY GREEN!", 
+            "BRINE SPECTER!"
+        }, 
+        SparkleColor = Color3.fromRGB(128, 128, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Bloomtail = {
+        Icon = "rbxassetid://102687577048594", 
+        WeightPool = {
+            1200, 
+            3000
+        }, 
+        Chance = 18, 
+        Rarity = "Mythical", 
+        Resilience = 3, 
+        ProgressEfficiency = 0.2, 
+        Description = "A dark blue fish with light blue fins, its tail blooming like a lagoon flower.", 
+        Hint = "It blossoms where the rain meets the deep.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = "Night", 
+        Price = 3950, 
+        XP = 2390, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A BLOOMTAIL!", 
+            "BLUE BLOOM!", 
+            "TAIL OF WONDER!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 0, 139), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Depth Drifter"] = {
+        Icon = "rbxassetid://115184880043041", 
+        WeightPool = {
+            7200, 
+            18000
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 1, 
+        ProgressEfficiency = 0.08, 
+        Description = "A cyan blue fish with large light blue fins, drifting through the lagoon\226\128\153s abyss.", 
+        Hint = "It floats where the winds stir the depths.", 
+        FavouriteBait = "Golden Worm", 
+        FavouriteTime = nil, 
+        Price = 7500, 
+        XP = 5000, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A DEPTH DRIFTER?!", 
+            "CYAN DRIFTING!", 
+            "DRIFT OF THE DEEP!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Verdant Mirage"] = {
+        Icon = "rbxassetid://84550850034003", 
+        WeightPool = {
+            4800, 
+            12000
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 1, 
+        ProgressEfficiency = 0.12, 
+        Description = "A dark cyan fish with bright light blue accents, a mirage in the lagoon\226\128\153s heart.", 
+        Hint = "It shimmers where the fog hides the truth.", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Day", 
+        Price = 25000, 
+        XP = 15000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A VERDANT MIRAGE?!", 
+            "CYAN ILLUSION!", 
+            "MIRAGE OF MIGHT!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 139, 139), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Azure Lagoon", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Toilet Fish"] = {
+        Icon = "rbxassetid://78716099008235", 
+        WeightPool = {
+            30, 
+            200
+        }, 
+        Chance = 0.5, 
+        Rarity = "Secret", 
+        Resilience = 6, 
+        ProgressEfficiency = 0.35, 
+        Description = "i need to take a dump", 
+        Hint = "Kiwi would be fond of this", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = "Day", 
+        Price = 20000, 
+        XP = 12000, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "sigma", 
+            "toilet!!!!!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Dogefin = {
+        Icon = "rbxassetid://82390122887969", 
+        WeightPool = {
+            50, 
+            400
+        }, 
+        Chance = 0.5, 
+        Rarity = "Secret", 
+        Resilience = 6, 
+        ProgressEfficiency = 0.35, 
+        Description = "hapapa.. hapa patata", 
+        Hint = "\240\159\144\182?", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = "Night", 
+        Price = 21000, 
+        XP = 13000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "woof woof", 
+            "bark bark"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 208, 174), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Tartaruga = {
+        Icon = "rbxassetid://133777270496771", 
+        WeightPool = {
+            9500, 
+            40000
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 1, 
+        ProgressEfficiency = 0.2, 
+        Description = "A colossal sea turtle cloaked in shadow, its shell a fortress of ancient secrets.", 
+        Hint = "It looms where the cold mists shroud the deep.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = nil, 
+        Price = 10000, 
+        XP = 60000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A TORTUGA!", 
+            "SILLY TORTOISE!", 
+            "DONATELLO!?"
+        }, 
+        SparkleColor = Color3.fromRGB(101, 96, 19), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
     Rarities = {
         [1] = "Trash", 
         [2] = "Common", 
@@ -15853,6 +19932,6 @@ local v5 = {
         Relic = Color3.fromRGB(120, 255, 183), 
         Fragment = Color3.fromRGB(255, 63, 5), 
         Gemstone = Color3.fromRGB(172, 57, 255)
-    },
+    }, 
 };
 return v5;
