@@ -1,4 +1,46 @@
 return {
+    ["Sea Leviathan Pool"] = {
+        Pool = {
+            "Sea Leviathan", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard"
+        }, 
+        Priority = 4
+    }, 
     ["Sunny O'Coin"] = {
         Pool = {
             "Tire", 
@@ -412,6 +454,7 @@ return {
             "Harbinger Koi", 
             "Slain Maw"
         }, 
+        CantBeWhormholed = true, 
         Priority = 4
     }, 
     ["Atlantean Storm"] = {
@@ -2168,5 +2211,181 @@ return {
         }, 
         CantBeWhormholed = false, 
         Priority = 4
+    }, 
+    Waveborne = {
+        Pool = {
+            "Gale Snapper", 
+            "Drift Claw", 
+            "Foamrunner", 
+            "Sprayfin", 
+            "Ripple Spine", 
+            "Depth Lurker", 
+            "Surge Pike", 
+            "Abyss Dart", 
+            "Breaker Moth", 
+            "Tide Fang", 
+            "Wave Piercer", 
+            "Gust Tail", 
+            "Vortex Ray", 
+            "Storm Skipper"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["Pine Shoal"] = {
+        Pool = {
+            "Watching Glowfin", 
+            "Drifting Gildfin", 
+            "Blue Foamtail", 
+            "Redwood Duskray", 
+            "Oak Stripetail", 
+            "Pine Zephyrfish", 
+            "Parktail Spinesnapper", 
+            "Sunray Sunscale", 
+            "Thornfish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    Lushgrove = {
+        Pool = {
+            "Bogscale", 
+            "Murkdrifter", 
+            "Vinefish", 
+            "Canopy Tetra", 
+            "Hollow Snapper", 
+            "Fogstripe", 
+            "Temple Perch", 
+            "Relic Dart", 
+            "Echo Koi", 
+            "Glade Lurker", 
+            "Jungle Phantom", 
+            "Idolfish", 
+            "Primordial Levi"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    Emberreach = {
+        Pool = {
+            "Ashscale Minnow", 
+            "Glowfin Skipper", 
+            "Moltenstripe", 
+            "Sunflare Tetra", 
+            "Furnace Leaper", 
+            "Smolderfang", 
+            "Volcanic Prowler", 
+            "Inferno Chaser", 
+            "Cinder Dart", 
+            "Scorchray", 
+            "Brimstone Angler", 
+            "Obsidian Koi"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["Emberreach Ponds"] = {
+        Pool = {
+            "Pyre Fang", 
+            "Firecrest", 
+            "Sulfur Snapper", 
+            "Smogfish", 
+            "Blazebelly", 
+            "Cragscale", 
+            "Tropicspike"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
+    ["Emberreach Lava"] = {
+        Pool = {
+            "Lava Bream", 
+            "Magma Pike", 
+            "Hellmaw Eel", 
+            "Searfin", 
+            "Basalt Pike", 
+            "Emberwing", 
+            "Molten Ripple"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
+    ["Isle of New Beginnings"] = {
+        Pool = {
+            "Tidallow", 
+            "Reefdart", 
+            "Crestscale", 
+            "Horizon Tetra", 
+            "Driftfin", 
+            "Lantern Snapper", 
+            "Abyss Flicker", 
+            "Whisper Eel", 
+            "Phantom Koi"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["The Cursed Shores"] = {
+        Pool = {
+            "Blisterfish", 
+            "Gloombiter", 
+            "Rotjaw", 
+            "Murkslither", 
+            "Split Eye Snapper", 
+            "Tumor Pike", 
+            "Hollowfin", 
+            "Crawling Angler", 
+            "Veinspawn", 
+            "Screaming Fluke", 
+            "Chasm Leech", 
+            "Dreaming Aberration", 
+            "Abyssborn Monstrosity"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["Open Ocean"] = {
+        Pool = {
+            "Hogchoker", 
+            "Rock Gunnel", 
+            "Pupfish", 
+            "Four Eyes Fish", 
+            "Black Swallower", 
+            "Warty Angler", 
+            "Lumpclinger", 
+            "Snipefish", 
+            "Boarfish", 
+            "Telescopefish", 
+            "Fangtooth", 
+            "Velvet Belly Lanternshark", 
+            "Snakehead", 
+            "Sarcastic Fringehead", 
+            "Knifefish", 
+            "Tripod Fish", 
+            "Pelican Eel", 
+            "Bigfin Squid", 
+            "X-ray Tetra", 
+            "Psychedelic Frogfish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 0
+    }, 
+    ["Azure Lagoon"] = {
+        Pool = {
+            "Murkfin", 
+            "Brackscale", 
+            "Lagoon Dart", 
+            "Glimmer Guppy", 
+            "Swampjaw", 
+            "Algae Lurker", 
+            "Reed Striker", 
+            "Azure Prowler", 
+            "Phantom Brine", 
+            "Bloomtail", 
+            "Depth Drifter", 
+            "Verdant Mirage"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
     }
 };
