@@ -1,5 +1,5 @@
 local l_fish_0 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish");
-local l_presents_0 = local l_presents_0 = {
+local l_presents_0 = {
     Basic = {
         "Cookie", 
         "Cookie", 
