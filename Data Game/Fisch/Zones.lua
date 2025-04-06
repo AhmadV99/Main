@@ -1,43 +1,89 @@
 return {
+    DevTest = {
+        Pool = {
+            "Tartaruga"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["Animal Pool"] = {
+        Pool = {
+            "Cluckfin", 
+            "Zebrafishlet", 
+            "Piglet Pike", 
+            "Squirrelray", 
+            "Duckfin Tuna", 
+            "Porcufish", 
+            "Piranhamunk", 
+            "Salmoose", 
+            "Mained Lionfish", 
+            "Seacow"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
+    ["Animal Pool - Second Sea"] = {
+        Pool = {
+            "Minnowse", 
+            "Kittyfish", 
+            "Parrotfish", 
+            "Pengwhal", 
+            "Racuda", 
+            "Crocokoi", 
+            "Krabbit", 
+            "Siren Sheep", 
+            "Capybass"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
+    ["Octophant Pool Without Elephant"] = {
+        Pool = {
+            "Shrimpanzee", 
+            "Royal Tigerfish", 
+            "Slurpfloth", 
+            "Flamangler", 
+            "Orcanda"
+        }, 
+        Priority = 4
+    }, 
+    ["Octophant Pool With Elephant"] = {
+        Pool = {
+            "Shrimpanzee", 
+            "Royal Tigerfish", 
+            "Slurpfloth", 
+            "Flamangler", 
+            "Orcanda", 
+            "Octophant"
+        }, 
+        Priority = 4
+    }, 
     ["Sea Leviathan Pool"] = {
         Pool = {
             "Sea Leviathan", 
-            "Tire", 
-            "Boot", 
-            "Common Crate", 
-            "Seaweed", 
-            "Carbon Crate", 
-            "Quality Bait Crate", 
-            "Common Crate", 
-            "Bait Crate", 
-            "Mackerel", 
-            "Cod", 
-            "Amberjack", 
-            "Sardine", 
-            "Halibut", 
-            "Salmon", 
-            "Mullet", 
-            "Bluefin Tuna", 
-            "Yellowfin Tuna", 
-            "Barracuda", 
-            "Sea Bass", 
-            "Chinook Salmon", 
-            "Sea Pickle", 
-            "Swordfish", 
-            "Anglerfish", 
-            "Coelacanth", 
-            "Sailfish", 
-            "Stingray", 
-            "Sawfish", 
-            "Moonfish", 
-            "Dolphin", 
-            "Flying Fish", 
-            "Colossal Squid", 
-            "Oarfish", 
-            "Crown Bass", 
-            "Mythic Fish", 
-            "Long Pike", 
-            "Mustard"
+            "Hogchoker", 
+            "Rock Gunnel", 
+            "Pupfish", 
+            "Four Eyes Fish", 
+            "Black Swallower", 
+            "Warty Angler", 
+            "Tropical Bait Crate", 
+            "Lumpclinger", 
+            "Snipefish", 
+            "Boarfish", 
+            "Telescopefish", 
+            "Fangtooth", 
+            "Velvet Belly Lanternshark", 
+            "Snakehead", 
+            "Sarcastic Fringehead", 
+            "Knifefish", 
+            "Tripod Fish", 
+            "Pelican Eel", 
+            "Bigfin Squid", 
+            "X-ray Tetra", 
+            "Psychedelic Frogfish", 
+            "Dogefin", 
+            "Toilet Fish"
         }, 
         Priority = 4
     }, 
@@ -80,6 +126,7 @@ return {
             "Mustard", 
             "Sunny O'Coin"
         }, 
+        CantBeWhormholed = true, 
         Priority = 5
     }, 
     ["Rowdy McCharm"] = {
@@ -121,6 +168,7 @@ return {
             "Mustard", 
             "Rowdy McCharm"
         }, 
+        CantBeWhormholed = true, 
         Priority = 5
     }, 
     ["Plumrick O'Luck"] = {
@@ -162,6 +210,7 @@ return {
             "Mustard", 
             "Plumrick O'Luck"
         }, 
+        CantBeWhormholed = true, 
         Priority = 5
     }, 
     ["O'Mango Goldgrin"] = {
@@ -203,6 +252,7 @@ return {
             "Mustard", 
             "O'Mango Goldgrin"
         }, 
+        CantBeWhormholed = true, 
         Priority = 5
     }, 
     ["Clover McRich"] = {
@@ -244,6 +294,7 @@ return {
             "Mustard", 
             "Clover McRich"
         }, 
+        CantBeWhormholed = true, 
         Priority = 5
     }, 
     ["Blarney McBreeze"] = {
@@ -285,6 +336,7 @@ return {
             "Mustard", 
             "Blarney McBreeze"
         }, 
+        CantBeWhormholed = true, 
         Priority = 5
     }, 
     ["Ashfall Pool"] = {
@@ -399,6 +451,7 @@ return {
             "Long Pike", 
             "Mustard"
         }, 
+        CantBeWhormholed = true, 
         Priority = 4
     }, 
     ["Whales Pool"] = {
@@ -2216,6 +2269,7 @@ return {
         Pool = {
             "Gale Snapper", 
             "Drift Claw", 
+            "Tropical Bait Crate", 
             "Foamrunner", 
             "Sprayfin", 
             "Ripple Spine", 
@@ -2237,6 +2291,7 @@ return {
             "Watching Glowfin", 
             "Drifting Gildfin", 
             "Blue Foamtail", 
+            "Tropical Bait Crate", 
             "Redwood Duskray", 
             "Oak Stripetail", 
             "Pine Zephyrfish", 
@@ -2253,6 +2308,7 @@ return {
             "Murkdrifter", 
             "Vinefish", 
             "Canopy Tetra", 
+            "Tropical Bait Crate", 
             "Hollow Snapper", 
             "Fogstripe", 
             "Temple Perch", 
@@ -2271,6 +2327,7 @@ return {
             "Ashscale Minnow", 
             "Glowfin Skipper", 
             "Moltenstripe", 
+            "Tropical Bait Crate", 
             "Sunflare Tetra", 
             "Furnace Leaper", 
             "Smolderfang", 
@@ -2288,6 +2345,7 @@ return {
         Pool = {
             "Pyre Fang", 
             "Firecrest", 
+            "Tropical Bait Crate", 
             "Sulfur Snapper", 
             "Smogfish", 
             "Blazebelly", 
@@ -2315,12 +2373,14 @@ return {
             "Tidallow", 
             "Reefdart", 
             "Crestscale", 
+            "Tropical Bait Crate", 
             "Horizon Tetra", 
             "Driftfin", 
             "Lantern Snapper", 
             "Abyss Flicker", 
             "Whisper Eel", 
-            "Phantom Koi"
+            "Phantom Koi", 
+            "Tartaruga"
         }, 
         CantBeWhormholed = false, 
         Priority = 2
@@ -2331,6 +2391,7 @@ return {
             "Gloombiter", 
             "Rotjaw", 
             "Murkslither", 
+            "Tropical Bait Crate", 
             "Split Eye Snapper", 
             "Tumor Pike", 
             "Hollowfin", 
@@ -2352,6 +2413,7 @@ return {
             "Four Eyes Fish", 
             "Black Swallower", 
             "Warty Angler", 
+            "Tropical Bait Crate", 
             "Lumpclinger", 
             "Snipefish", 
             "Boarfish", 
@@ -2365,7 +2427,9 @@ return {
             "Pelican Eel", 
             "Bigfin Squid", 
             "X-ray Tetra", 
-            "Psychedelic Frogfish"
+            "Psychedelic Frogfish", 
+            "Dogefin", 
+            "Toilet Fish"
         }, 
         CantBeWhormholed = false, 
         Priority = 0
@@ -2375,6 +2439,7 @@ return {
             "Murkfin", 
             "Brackscale", 
             "Lagoon Dart", 
+            "Tropical Bait Crate", 
             "Glimmer Guppy", 
             "Swampjaw", 
             "Algae Lurker", 
