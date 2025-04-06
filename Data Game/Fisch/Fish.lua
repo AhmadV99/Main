@@ -100,6 +100,215 @@ local v2 = {
     }
 };
 local v5 = {
+    Shrimpanzee = {
+        Icon = "rbxassetid://80553083768726", 
+        WeightPool = {
+            1, 
+            10
+        }, 
+        Chance = 30, 
+        Rarity = "Limited", 
+        Resilience = 60, 
+        ProgressEfficiency = 1.15, 
+        Description = "A swift, shrimp-like creature with a tail that flicks like a whip, stashing shells in hidden burrows.", 
+        Hint = "It darts through the mist where the waves whisper.", 
+        FavouriteBait = "Phantom Leech", 
+        FavouriteTime = nil, 
+        Price = 250, 
+        XP = 1150, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Shrimpanzee!", 
+            "Tail-whippin' treasure!", 
+            "Burrow bandit!"
+        }, 
+        SparkleColor = Color3.fromRGB(159, 132, 115), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Octophant", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Royal Tigerfish"] = {
+        Icon = "rbxassetid://116436800778784", 
+        WeightPool = {
+            350, 
+            790
+        }, 
+        Chance = 25, 
+        Rarity = "Limited", 
+        Resilience = 30, 
+        ProgressEfficiency = 0.85, 
+        Description = "A sleek predator with a striped body, awaiting a target.", 
+        Hint = "It prowls where the sun blazes through the surface.", 
+        FavouriteBait = "Ember Berries", 
+        FavouriteTime = nil, 
+        Price = 900, 
+        XP = 1400, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Royal Tigerfish!", 
+            "King of tigers!", 
+            "Tiger of the tides!", 
+            "Royalty of the rivers!"
+        }, 
+        SparkleColor = Color3.fromRGB(232, 174, 81), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Octophant", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Slurpfloth = {
+        Icon = "rbxassetid://85215653083400", 
+        WeightPool = {
+            950, 
+            3700
+        }, 
+        Chance = 20, 
+        Rarity = "Limited", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.55, 
+        Description = "A lazy, sloth-like swimmer with drooping fins, nibbling slowly in the dark waters.", 
+        Hint = "It hangs where the rain drizzles over the sea.", 
+        FavouriteBait = "Fish Head", 
+        FavouriteTime = nil, 
+        Price = 1200, 
+        XP = 1700, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Slurpfloth!", 
+            "Sloth of the sea!", 
+            "Lazy tide lounger!", 
+            "Slow-munchin\226\128\153 drifter!"
+        }, 
+        SparkleColor = Color3.fromRGB(68, 54, 47), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Octophant", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Flamangler = {
+        Icon = "rbxassetid://123390569043670", 
+        WeightPool = {
+            720, 
+            2800
+        }, 
+        Chance = 15, 
+        Rarity = "Limited", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.25, 
+        Description = "A graceful fish with pink fins and a beak-like snout, wading through coral shallows.", 
+        Hint = "It struts where the wind ripples the surface.", 
+        FavouriteBait = "Lagoon Leech", 
+        FavouriteTime = nil, 
+        Price = 1500, 
+        XP = 2000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Flamangler!", 
+            "Pink-legged prince!", 
+            "Reef-wading wonder!", 
+            "Adequate lighting!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 179, 242), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Octophant", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Orcanda = {
+        Icon = "rbxassetid://86622122052662", 
+        WeightPool = {
+            30000, 
+            100000
+        }, 
+        Chance = 10, 
+        Rarity = "Limited", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.1, 
+        Description = "A large, slow-moving beast with a dorsal fin that cuts through the sea like a plow.", 
+        Hint = "It lumbers where the fog cloaks the horizon.", 
+        FavouriteBait = "Sapphire Krill", 
+        FavouriteTime = nil, 
+        Price = 2000, 
+        XP = 3000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "AN ORCANDA!", 
+            "IS IT AN ORCA OR A PANDA!?", 
+            "FIN LIKE A MOUNTAIN!", 
+            "GIANT OF THE GULF!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Octophant", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Octophant = {
+        Icon = "rbxassetid://110543339307346", 
+        WeightPool = {
+            80000, 
+            250000
+        }, 
+        Chance = 1, 
+        Rarity = "Limited", 
+        Resilience = 1, 
+        ProgressEfficiency = 0.95, 
+        Description = "A massive creature with strong tusks, sifting the ocean floor with ancient grace.", 
+        Hint = "It drifts where the sun warms the stillness.", 
+        FavouriteBait = "Golden Worm", 
+        FavouriteTime = nil, 
+        Price = 45000, 
+        XP = 100000, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "AN OCTOPHANT!", 
+            "TENTACLED TITAN!", 
+            "TRUNK OF THE TRENCH!", 
+            "COLOSSAL CUTENESS!"
+        }, 
+        SparkleColor = Color3.fromRGB(150, 150, 150), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Octophant", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
     ["Wretched Guppy"] = {
         Icon = "rbxassetid://105045431285579", 
         WeightPool = {
@@ -130,7 +339,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         FromLimited = "Cults Curse", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Cults Curse"
     }, 
     ["Hollow Gazer"] = {
         Icon = "rbxassetid://82043991450361", 
@@ -162,7 +372,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Cults Curse", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Cults Curse"
     }, 
     ["Eldritch Spineback"] = {
         Icon = "rbxassetid://97819315465161", 
@@ -194,7 +405,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Cults Curse", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Cults Curse"
     }, 
     ["Abyssal Maw"] = {
         Icon = "rbxassetid://132297023833361", 
@@ -226,7 +438,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         FromLimited = "Cults Curse", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Cults Curse"
     }, 
     ["Bloodscript Eel"] = {
         Icon = "rbxassetid://112659110841268", 
@@ -258,7 +471,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Cults Curse", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Cults Curse"
     }, 
     ["Veilborn Parasite"] = {
         Icon = "rbxassetid://111709084035086", 
@@ -290,7 +504,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         FromLimited = "Cults Curse", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Cults Curse"
     }, 
     ["Profane Ray"] = {
         Icon = "rbxassetid://86916024375422", 
@@ -322,7 +537,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         FromLimited = "Cults Curse", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Cults Curse"
     }, 
     ["The Whispering One"] = {
         Icon = "rbxassetid://114020294523055", 
@@ -354,7 +570,637 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         FromLimited = "Cults Curse", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Cults Curse"
+    }, 
+    Minnowse = {
+        Icon = "rbxassetid://140472962459296", 
+        WeightPool = {
+            5, 
+            17
+        }, 
+        Chance = 100, 
+        Rarity = "Limited", 
+        Resilience = 120, 
+        ProgressEfficiency = 1.15, 
+        Description = "A tiny swimmer with twitching whiskers, scurrying through the shallows.", 
+        Hint = "It squeaks where the fog blankets the morning tide.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = nil, 
+        Price = 250, 
+        XP = 425, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Minnowse!", 
+            "Cheese!", 
+            "Squeak!"
+        }, 
+        SparkleColor = Color3.fromRGB(161, 135, 116), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Animals2", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Kittyfish = {
+        Icon = "rbxassetid://75195976218261", 
+        WeightPool = {
+            45, 
+            213
+        }, 
+        Chance = 80, 
+        Rarity = "Limited", 
+        Resilience = 130, 
+        ProgressEfficiency = 1.1, 
+        Description = "A feline swimmer with whiskers, purring through the warm currents.", 
+        Hint = "It meows where the summer sun warms the currents.", 
+        FavouriteBait = "Fish Head", 
+        FavouriteTime = nil, 
+        Price = 300, 
+        XP = 650, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Kittyfish!", 
+            "Whiskers in the waves!", 
+            "Cat of the sea!", 
+            "A best friend!", 
+            "Aggressive purring!", 
+            "meow meow meow meow meow", 
+            "This isn't Mila...", 
+            ":3", 
+            "car"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Animals2", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Parrotfish = {
+        Icon = "rbxassetid://74639413269289", 
+        WeightPool = {
+            45, 
+            120
+        }, 
+        Chance = 70, 
+        Rarity = "Limited", 
+        Resilience = 50, 
+        ProgressEfficiency = 1.05, 
+        Description = "A vibrant fish with a beak, squawking through the coral reefs.", 
+        Hint = "It chatters where the winds stir the tropical waters.", 
+        FavouriteBait = "Crystal Bananas", 
+        FavouriteTime = nil, 
+        Price = 280, 
+        XP = 880, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Parrotfish!", 
+            "Parrot of the deep!", 
+            "Colorful catch!"
+        }, 
+        SparkleColor = Color3.fromRGB(113, 255, 97), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Animals2", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Pengwhal = {
+        Icon = "rbxassetid://94159581572250", 
+        WeightPool = {
+            150, 
+            440
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        ProgressEfficiency = 0.95, 
+        Description = "A sleek swimmer with a horned snout, waddling through icy seas.", 
+        Hint = "It spears the chill where snow dusts the waves.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = nil, 
+        Price = 450, 
+        XP = 1000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Pengwhal!", 
+            "Penguin of the sea!", 
+            "Icebound swimmer!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Animals2", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Racuda = {
+        Icon = "rbxassetid://126520579702144", 
+        WeightPool = {
+            65, 
+            250
+        }, 
+        Chance = 50, 
+        Rarity = "Limited", 
+        Resilience = 40, 
+        ProgressEfficiency = 0.85, 
+        Description = "A sneaky fish with a masked face, rummaging through murky waters.", 
+        Hint = "It scavenges where the rain muddies the depths.", 
+        FavouriteBait = "Bagel", 
+        FavouriteTime = nil, 
+        Price = 650, 
+        XP = 1150, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Racuda!", 
+            "Masked marauder!", 
+            "Raccoon of the reef!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Animals2", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Crocokoi = {
+        Icon = "rbxassetid://86079154768543", 
+        WeightPool = {
+            5000, 
+            14000
+        }, 
+        Chance = 40, 
+        Rarity = "Limited", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.75, 
+        Description = "A scaly swimmer with snapping jaws, lurking in the shallows.", 
+        Hint = "It snaps where the fog cloaks the swampy tides.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = nil, 
+        Price = 700, 
+        XP = 1500, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Crocokoi!", 
+            "Jaws of the deep!", 
+            "Croc in the current!"
+        }, 
+        SparkleColor = Color3.fromRGB(245, 227, 66), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Animals2", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Krabbit = {
+        Icon = "rbxassetid://79304773291970", 
+        WeightPool = {
+            7500, 
+            22000
+        }, 
+        Chance = 30, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.65, 
+        Description = "A hopping fish with long ears, nibbling through the weeds.", 
+        Hint = "It bounces where the spring blooms touch the water.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = nil, 
+        Price = 900, 
+        XP = 2700, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Krabbit!", 
+            "Hopper of the sea!", 
+            "Ears in the tide!"
+        }, 
+        SparkleColor = Color3.fromRGB(134, 64, 41), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Animals2", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Siren Sheep"] = {
+        Icon = "rbxassetid://93172648914203", 
+        WeightPool = {
+            3000, 
+            8000
+        }, 
+        Chance = 25, 
+        Rarity = "Limited", 
+        Resilience = 35, 
+        ProgressEfficiency = 0.55, 
+        Description = "A woolly fish with a haunting bleat, drifting through misty waters.", 
+        Hint = "It baas where the wind howls over the waves.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 1200, 
+        XP = 3100, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Siren Sheep!", 
+            "Sheep of the sea!", 
+            "Woolly wonder!"
+        }, 
+        SparkleColor = Color3.fromRGB(141, 188, 184), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Animals2", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Capybass = {
+        Icon = "rbxassetid://84310452827133", 
+        WeightPool = {
+            250, 
+            750
+        }, 
+        Chance = 20, 
+        Rarity = "Limited", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.5, 
+        Description = "A laid-back fish with a friendly snout, basking in calm waters.", 
+        Hint = "It lounges where the autumn sun softens the ripples.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 1500, 
+        XP = 3700, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Capybass!", 
+            "Fantastic swimmer!", 
+            "Friendliest catch!"
+        }, 
+        SparkleColor = Color3.fromRGB(108, 92, 75), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Animals2", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Cluckfin = {
+        Icon = "rbxassetid://77638446765066", 
+        WeightPool = {
+            95, 
+            390
+        }, 
+        Chance = 100, 
+        Rarity = "Limited", 
+        Resilience = 90, 
+        ProgressEfficiency = 1.05, 
+        Description = "A feathered fish, crowing beneath the waves.", 
+        Hint = "It clucks where the summer sun dances on the waves.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = nil, 
+        Price = 250, 
+        XP = 425, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Cluckfin!", 
+            "Feathers and fins!", 
+            "Rotisserie!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Animals1"
+    }, 
+    Zebrafishlet = {
+        Icon = "rbxassetid://127797733096795", 
+        WeightPool = {
+            85, 
+            350
+        }, 
+        Chance = 90, 
+        Rarity = "Limited", 
+        Resilience = 80, 
+        ProgressEfficiency = 1.08, 
+        Description = "A tiny striped swimmer, darting through the currents like a zebra in the herd.", 
+        Hint = "Its zebra stripes flicker where the river bends in the fog.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 300, 
+        XP = 650, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Zebrafishlet!", 
+            "Striped!", 
+            "A zebra in the deep!", 
+            "Black and white!"
+        }, 
+        SparkleColor = Color3.fromRGB(15, 15, 15), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Animals1"
+    }, 
+    ["Piglet Pike"] = {
+        Icon = "rbxassetid://102101720419012", 
+        WeightPool = {
+            115, 
+            410
+        }, 
+        Chance = 80, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        ProgressEfficiency = 0.96, 
+        Description = "A stout fish with a snout, wallowing in the muddy depths.", 
+        Hint = "It snorts and snuffles where cool rains turn the waters murky.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = nil, 
+        Price = 280, 
+        XP = 880, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Piglet Pike!", 
+            "A pig in the pond!", 
+            "Muddy and proud!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 152, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Animals1"
+    }, 
+    Squirrelray = {
+        Icon = "rbxassetid://83156169492063", 
+        WeightPool = {
+            90, 
+            290
+        }, 
+        Chance = 70, 
+        Rarity = "Limited", 
+        Resilience = 60, 
+        ProgressEfficiency = 1.03, 
+        Description = "A nimble ray with a bushy tail, hoarding treasures in the sand.", 
+        Hint = "It scurries where the winds whip the surface.", 
+        FavouriteBait = "Bagel", 
+        FavouriteTime = nil, 
+        Price = 450, 
+        XP = 1050, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Squirrelray!", 
+            "Nuts!", 
+            "Tail of the tide!", 
+            "Squirrel of the sea!"
+        }, 
+        SparkleColor = Color3.fromRGB(98, 54, 5), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Animals1"
+    }, 
+    ["Duckfin Tuna"] = {
+        Icon = "rbxassetid://110717843323075", 
+        WeightPool = {
+            850, 
+            3900
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 50, 
+        ProgressEfficiency = 1.07, 
+        Description = "A quacking tuna with webbed fins, paddling through the deep.", 
+        Hint = "It waddles in the water when the flowers bloom.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = nil, 
+        Price = 650, 
+        XP = 1150, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Duckfin Tuna!", 
+            "Quack attack!", 
+            "Duck in the deep!", 
+            "Waddle I do now?"
+        }, 
+        SparkleColor = Color3.fromRGB(44, 101, 29), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Animals1"
+    }, 
+    Porcufish = {
+        Icon = "rbxassetid://85718883692768", 
+        WeightPool = {
+            500, 
+            1400
+        }, 
+        Chance = 50, 
+        Rarity = "Limited", 
+        Resilience = 30, 
+        ProgressEfficiency = 0.85, 
+        Description = "A spiky swimmer with quills that shimmer in the dark waters.", 
+        Hint = "It bristles in the chill where the rain drums.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = nil, 
+        Price = 1800, 
+        XP = 1700, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Porcufish!", 
+            "Prickly and proud!", 
+            "Quills in the current!", 
+            "Ouch, that's sharp!"
+        }, 
+        SparkleColor = Color3.fromRGB(195, 186, 161), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Animals1"
+    }, 
+    Piranhamunk = {
+        Icon = "rbxassetid://132499310365024", 
+        WeightPool = {
+            750, 
+            2500
+        }, 
+        Chance = 35, 
+        Rarity = "Limited", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.55, 
+        Description = "A chittering fish with razor teeth, gnawing through the shadows.", 
+        Hint = "It bites where the fog hides the shore.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = nil, 
+        Price = 2600, 
+        XP = 2400, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Piranhamunk!", 
+            "Chomper!", 
+            "Teeth of the tide!", 
+            "Monkey with attitude!"
+        }, 
+        SparkleColor = Color3.fromRGB(131, 116, 88), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Animals1"
+    }, 
+    Salmoose = {
+        Icon = "rbxassetid://74678661777712", 
+        WeightPool = {
+            950, 
+            3000
+        }, 
+        Chance = 20, 
+        Rarity = "Limited", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.5, 
+        Description = "A majestic fish with antlers, swimming through icy streams.", 
+        Hint = "Its antlers sway where snow dusts the water.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = nil, 
+        Price = 3500, 
+        XP = 3400, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A SALMOOSE!", 
+            "MOOSE ON THE LOOSE!", 
+            "ANTLERS AHOY!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 237, 198), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Animals1"
+    }, 
+    ["Mained Lionfish"] = {
+        Icon = "rbxassetid://106599430074891", 
+        WeightPool = {
+            1500, 
+            4500
+        }, 
+        Chance = 10, 
+        Rarity = "Limited", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.45, 
+        Description = "A regal fish with a fiery mane, ruling the coral depths.", 
+        Hint = "Its mane flares where the sun ignites the waves.", 
+        FavouriteBait = "Fish Head", 
+        FavouriteTime = nil, 
+        Price = 6500, 
+        XP = 5000, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A MAINED LIONFISH!", 
+            "ROAR OF THE REEF!", 
+            "KING OF THE CURRENT!", 
+            "MANE AND MAJESTY!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Animals1"
+    }, 
+    Seacow = {
+        Icon = "rbxassetid://118193612403596", 
+        WeightPool = {
+            7500, 
+            35000
+        }, 
+        Chance = 5, 
+        Rarity = "Limited", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.15, 
+        Description = "A gentle giant grazing the ocean floor, its bulk a marvel of the deep.", 
+        Hint = "Its graze drifts where winds calm the sea.", 
+        FavouriteBait = "Shark Head", 
+        FavouriteTime = nil, 
+        Price = 14000, 
+        XP = 10000, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A SEACOW!", 
+            "MOO FROM THE BLUE!", 
+            "COW OF THE CORAL!", 
+            "GRASS-EATER OF THE GULF!"
+        }, 
+        SparkleColor = Color3.fromRGB(101, 96, 19), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Animals1"
     }, 
     ["Sunny O'Coin"] = {
         Icon = "rbxassetid://119725034311950", 
@@ -704,7 +1550,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Ashfall", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Ashfall"
     }, 
     ["Blistered Eel"] = {
         BlockPassiveCapture = true, 
@@ -736,7 +1583,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Ashfall", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Ashfall"
     }, 
     ["Lava Lamprey"] = {
         BlockPassiveCapture = true, 
@@ -768,7 +1616,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Ashfall", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Ashfall"
     }, 
     ["Molten Minnow"] = {
         BlockPassiveCapture = true, 
@@ -799,7 +1648,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         FromLimited = "Ashfall", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Ashfall"
     }, 
     ["Pyro Pike"] = {
         BlockPassiveCapture = true, 
@@ -831,7 +1681,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         FromLimited = "Ashfall", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Ashfall"
     }, 
     ["Cinder Carp"] = {
         BlockPassiveCapture = true, 
@@ -863,7 +1714,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Ashfall", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Ashfall"
     }, 
     ["Scooty Salmon"] = {
         BlockPassiveCapture = true, 
@@ -894,7 +1746,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Ashfall", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Ashfall"
     }, 
     ["Burnt Betta"] = {
         BlockPassiveCapture = true, 
@@ -926,7 +1779,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         FromLimited = "Ashfall", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Ashfall"
     }, 
     ["Ashcloud Archerfish"] = {
         BlockPassiveCapture = true, 
@@ -961,7 +1815,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         FromLimited = "Ashfall", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Ashfall"
     }, 
     ["Slain Maw"] = {
         BlockPassiveCapture = true, 
@@ -1257,7 +2112,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(254, 222, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Love"
+        FromLimited = "Love", 
+        From = "Love"
     }, 
     ["Lovestorm Eel Supercharged"] = {
         BlockPassiveCapture = true, 
@@ -1288,7 +2144,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 214, 212), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Love"
+        FromLimited = "Love", 
+        From = "Love"
     }, 
     ["Tempest Ray"] = {
         WeightPool = {
@@ -1765,7 +2622,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(161, 255, 247), 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         FromLimited = "Winter's Edge", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Winter's Edge"
     }, 
     ["Frozen Fangfish"] = {
         WeightPool = {
@@ -1793,7 +2651,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(33, 55, 255), 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         FromLimited = "Winter's Edge", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Winter's Edge"
     }, 
     ["Hollow Flake Catfish"] = {
         WeightPool = {
@@ -1821,7 +2680,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(29, 255, 247), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Winter's Edge", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Winter's Edge"
     }, 
     ["Crystal Carp"] = {
         WeightPool = {
@@ -1849,7 +2709,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(59, 255, 24), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Winter's Edge", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Winter's Edge"
     }, 
     ["Hollyscale Trout"] = {
         WeightPool = {
@@ -1877,7 +2738,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(25, 255, 21), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
         FromLimited = "Winter's Edge", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Winter's Edge"
     }, 
     ["Red Energy Crystal"] = {
         Requiriments = {
@@ -3721,7 +4583,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Archeological Site"
+        FromLimited = "Archeological Site", 
+        From = "Archeological Site"
     }, 
     ["Fossil Fan"] = {
         WeightPool = {
@@ -3748,7 +4611,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Archeological Site"
+        FromLimited = "Archeological Site", 
+        From = "Archeological Site"
     }, 
     ["Claw Gill"] = {
         WeightPool = {
@@ -3775,7 +4639,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Archeological Site"
+        FromLimited = "Archeological Site", 
+        From = "Archeological Site"
     }, 
     ["Spine Bone"] = {
         WeightPool = {
@@ -3802,7 +4667,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Archeological Site"
+        FromLimited = "Archeological Site", 
+        From = "Archeological Site"
     }, 
     ["Spine Blade"] = {
         WeightPool = {
@@ -3829,7 +4695,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Archeological Site"
+        FromLimited = "Archeological Site", 
+        From = "Archeological Site"
     }, 
     ["Shark Fang"] = {
         WeightPool = {
@@ -3856,7 +4723,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Archeological Site"
+        FromLimited = "Archeological Site", 
+        From = "Archeological Site"
     }, 
     ["Nessie's Spine"] = {
         WeightPool = {
@@ -3884,7 +4752,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Archeological Site"
+        FromLimited = "Archeological Site", 
+        From = "Archeological Site"
     }, 
     ["Spined Fin"] = {
         WeightPool = {
@@ -3912,7 +4781,8 @@ local v5 = {
         }, 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
-        FromLimited = "Archeological Site"
+        FromLimited = "Archeological Site", 
+        From = "Archeological Site"
     }, 
     ["Ancient Serpent Spine"] = {
         WeightPool = {
@@ -3940,7 +4810,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 12, 12), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Archeological Site"
+        FromLimited = "Archeological Site", 
+        From = "Archeological Site"
     }, 
     Resin = {
         BlockPassiveCapture = true, 
@@ -11814,7 +12685,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        FromLimited = "FischFright"
+        FromLimited = "FischFright", 
+        From = "FischFright"
     }, 
     Lurkerfish = {
         WeightPool = {
@@ -11846,7 +12718,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(140, 255, 176), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
-        FromLimited = "FischFright"
+        FromLimited = "FischFright", 
+        From = "FischFright"
     }, 
     ["Candy Fish"] = {
         WeightPool = {
@@ -11875,7 +12748,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 51, 51), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
-        FromLimited = "FischFright"
+        FromLimited = "FischFright", 
+        From = "FischFright"
     }, 
     Zombiefish = {
         WeightPool = {
@@ -11905,7 +12779,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 51, 51), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
-        FromLimited = "FischFright"
+        FromLimited = "FischFright", 
+        From = "FischFright"
     }, 
     Skelefish = {
         WeightPool = {
@@ -11934,7 +12809,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        FromLimited = "FischFright"
+        FromLimited = "FischFright", 
+        From = "FischFright"
     }, 
     Nessie = {
         BlockPassiveCapture = true, 
@@ -11966,7 +12842,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(129, 255, 181), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "FischFright"
+        FromLimited = "FischFright", 
+        From = "FischFright"
     }, 
     Turkey = {
         WeightPool = {
@@ -11997,7 +12874,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(208, 104, 135), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        FromLimited = "Fischgiving"
+        FromLimited = "Fischgiving", 
+        From = "Fischgiving"
     }, 
     Icicle = {
         WeightPool = {
@@ -12024,7 +12902,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(66, 236, 255), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Basic Present"] = {
         WeightPool = {
@@ -12060,7 +12939,8 @@ local v5 = {
             30, 
             50
         }, 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Unique Present"] = {
         WeightPool = {
@@ -12096,7 +12976,8 @@ local v5 = {
             90, 
             130
         }, 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Supreme Present"] = {
         WeightPool = {
@@ -12132,7 +13013,8 @@ local v5 = {
             450, 
             800
         }, 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Festive Bait Crate"] = {
         WeightPool = {
@@ -12167,6 +13049,7 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("crate"), 
         FromLimited = "Fischmas", 
+        From = "Fischmas", 
         IsCrate = true, 
         CrateType = "Bait", 
         BaitContents = {
@@ -12200,7 +13083,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(225, 166, 115), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Glass of Milk"] = {
         WeightPool = {
@@ -12228,7 +13112,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(231, 231, 231), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Candy Cane Carp"] = {
         WeightPool = {
@@ -12262,7 +13147,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 117, 117), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Santa Salmon"] = {
         WeightPool = {
@@ -12294,7 +13180,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Gingerbread Fish"] = {
         WeightPool = {
@@ -12324,7 +13211,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(165, 89, 54), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Ornament Fish"] = {
         WeightPool = {
@@ -12353,7 +13241,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(225, 50, 62), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Snowflake Flounder"] = {
         WeightPool = {
@@ -12382,7 +13271,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(137, 205, 236), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     Olmdeer = {
         WeightPool = {
@@ -12417,7 +13307,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(138, 108, 96), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         ViewportSizeOffset = 2, 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Santa Pufferfish"] = {
         WeightPool = {
@@ -12448,7 +13339,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 16, 16), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Northstar Serpent"] = {
         WeightPool = {
@@ -12480,7 +13372,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 237, 137), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        FromLimited = "Fischmas"
+        FromLimited = "Fischmas", 
+        From = "Fischmas"
     }, 
     ["Confetti Shark"] = {
         WeightPool = {
@@ -12511,7 +13404,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         FromLimited = "Golden Tide", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Golden Tide"
     }, 
     ["Tidal Pike"] = {
         WeightPool = {
@@ -12541,7 +13435,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Golden Tide", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Golden Tide"
     }, 
     ["Countdown Perch"] = {
         WeightPool = {
@@ -12571,7 +13466,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Golden Tide", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Golden Tide"
     }, 
     ["Hourglass Bass"] = {
         WeightPool = {
@@ -12601,7 +13497,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         FromLimited = "Golden Tide", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        From = "Golden Tide"
     }, 
     ["Eternal Frostwhale"] = {
         WeightPool = {
@@ -12633,6 +13530,7 @@ local v5 = {
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         FromLimited = "Golden Tide", 
         IsLimitedBestiary = true, 
+        From = "Golden Tide", 
         CustomProgressEfficiency = {
             {
                 Rod = "Firework Rod", 
@@ -14837,8 +15735,8 @@ local v5 = {
     }, 
     ["Leviathan Humpback Anglerfish"] = {
         WeightPool = {
-            35, 
-            80
+            350, 
+            800
         }, 
         Chance = 70, 
         Rarity = "Common", 
@@ -15824,34 +16722,35 @@ local v5 = {
     }, 
     ["Sea Leviathan"] = {
         WeightPool = {
-            10000, 
-            15000
+            22000, 
+            60000
         }, 
-        Chance = 150000, 
+        Chance = 1, 
         Rarity = "Exotic", 
-        Resilience = 4, 
-        Description = "Orcas tend to migrate from time to time.", 
-        Hint = "Search the ocean for migrating orcas", 
-        FavouriteBait = "Shark Head", 
+        Resilience = 3, 
+        Description = "A swift and deadly predator of the fog, elusive and nearly untouchable in its element.", 
+        Hint = "Venture into the fog where this elusive creature lurks, quick as the mist itself.", 
+        FavouriteBait = "Luminous Larva", 
         FavouriteTime = nil, 
-        Price = 12000, 
-        XP = 8000, 
+        Price = 21000, 
+        XP = 15000, 
         Seasons = {
-            "None"
+            "Spring"
         }, 
         Weather = {
-            "None"
+            "Foggy"
         }, 
         Quips = {
-            "ORCA! IMPOSSIBLE!", 
-            "The tide bows to its eternal majesty!"
+            "A SEA LEVIATHAN!?!", 
+            "A SHADOW IN THE MIST!", 
+            "THE FEROCITY OF A STORM!"
         }, 
-        SparkleColor = Color3.fromRGB(85, 255, 255), 
+        SparkleColor = Color3.fromRGB(255, 47, 0), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        From = "Ocean", 
+        From = "Open Ocean", 
         CustomProgressEfficiency = {
             {
-                Value = -0.8
+                Value = -0.9
             }
         }, 
         Worlds = {
@@ -15886,7 +16785,7 @@ local v5 = {
             "Stripey little fella!"
         }, 
         SparkleColor = Color3.fromRGB(73, 62, 237), 
-        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Waveborne", 
         Worlds = {
             "Sea 2"
@@ -16098,8 +16997,8 @@ local v5 = {
     ["Abyss Dart"] = {
         Icon = "rbxassetid://120122502922513", 
         WeightPool = {
-            6500, 
-            18000
+            650, 
+            1800
         }, 
         Chance = 30, 
         Rarity = "Rare", 
@@ -16123,7 +17022,7 @@ local v5 = {
             "Darted right in!"
         }, 
         SparkleColor = Color3.fromRGB(204, 189, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Waveborne", 
         Worlds = {
             "Sea 2"
@@ -16259,7 +17158,7 @@ local v5 = {
             "WIND IN ITS FINS!"
         }, 
         SparkleColor = Color3.fromRGB(249, 255, 184), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Waveborne", 
         Worlds = {
             "Sea 2"
@@ -17211,7 +18110,7 @@ local v5 = {
             "Fiery gaze!"
         }, 
         SparkleColor = Color3.fromRGB(255, 165, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Emberreach", 
         Worlds = {
             "Sea 2"
@@ -17449,7 +18348,7 @@ local v5 = {
             "Flaming beauty!"
         }, 
         SparkleColor = Color3.fromRGB(255, 165, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Emberreach", 
         Worlds = {
             "Sea 2"
@@ -17517,7 +18416,7 @@ local v5 = {
             "Dark spear!"
         }, 
         SparkleColor = Color3.fromRGB(64, 64, 64), 
-        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Emberreach", 
         Worlds = {
             "Sea 2"
@@ -17687,7 +18586,7 @@ local v5 = {
             "Orange stalker!"
         }, 
         SparkleColor = Color3.fromRGB(255, 165, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Emberreach", 
         Worlds = {
             "Sea 2"
@@ -17789,7 +18688,7 @@ local v5 = {
             "WINGED BLAZE!"
         }, 
         SparkleColor = Color3.fromRGB(255, 140, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Emberreach", 
         Worlds = {
             "Sea 2"
@@ -17857,7 +18756,7 @@ local v5 = {
             "PURPLE!"
         }, 
         SparkleColor = Color3.fromRGB(138, 43, 226), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
         From = "Emberreach", 
         Worlds = {
             "Sea 2"
@@ -17959,7 +18858,7 @@ local v5 = {
             "CUTE INFERNO!"
         }, 
         SparkleColor = Color3.fromRGB(255, 140, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Emberreach", 
         Worlds = {
             "Sea 2"
@@ -18274,8 +19173,8 @@ local v5 = {
     Blisterfish = {
         Icon = "rbxassetid://128074767326231", 
         WeightPool = {
-            80, 
-            200
+            8, 
+            20
         }, 
         Chance = 120, 
         Rarity = "Common", 
@@ -18308,8 +19207,8 @@ local v5 = {
     Gloombiter = {
         Icon = "rbxassetid://137775603621331", 
         WeightPool = {
-            90, 
-            220
+            9, 
+            22
         }, 
         Chance = 115, 
         Rarity = "Common", 
@@ -18342,8 +19241,8 @@ local v5 = {
     Rotjaw = {
         Icon = "rbxassetid://124108855972980", 
         WeightPool = {
-            150, 
-            360
+            15, 
+            36
         }, 
         Chance = 100, 
         Rarity = "Uncommon", 
@@ -18376,8 +19275,8 @@ local v5 = {
     Murkslither = {
         Icon = "rbxassetid://109966045464913", 
         WeightPool = {
-            170, 
-            400
+            17, 
+            40
         }, 
         Chance = 95, 
         Rarity = "Uncommon", 
@@ -18410,8 +19309,8 @@ local v5 = {
     ["Split Eye Snapper"] = {
         Icon = "rbxassetid://112900025094188", 
         WeightPool = {
-            250, 
-            600
+            25, 
+            60
         }, 
         Chance = 85, 
         Rarity = "Unusual", 
@@ -18430,7 +19329,7 @@ local v5 = {
             "Windy"
         }, 
         Quips = {
-            "A Split-Eye Snapper!", 
+            "A Split Eye Snapper!", 
             "Snaps like thunder!", 
             "Eyes of fury!"
         }, 
@@ -18444,8 +19343,8 @@ local v5 = {
     ["Tumor Pike"] = {
         Icon = "rbxassetid://98693596371188", 
         WeightPool = {
-            280, 
-            660
+            28, 
+            66
         }, 
         Chance = 80, 
         Rarity = "Unusual", 
@@ -18478,8 +19377,8 @@ local v5 = {
     Hollowfin = {
         Icon = "rbxassetid://80405623042225", 
         WeightPool = {
-            400, 
-            960
+            40, 
+            90
         }, 
         Chance = 50, 
         Rarity = "Rare", 
@@ -18512,8 +19411,8 @@ local v5 = {
     ["Crawling Angler"] = {
         Icon = "rbxassetid://82191223150871", 
         WeightPool = {
-            450, 
-            1080
+            45, 
+            130
         }, 
         Chance = 45, 
         Rarity = "Rare", 
@@ -18546,8 +19445,8 @@ local v5 = {
     Veinspawn = {
         Icon = "rbxassetid://76126332564265", 
         WeightPool = {
-            600, 
-            1440
+            60, 
+            140
         }, 
         Chance = 30, 
         Rarity = "Legendary", 
@@ -18580,8 +19479,8 @@ local v5 = {
     ["Screaming Fluke"] = {
         Icon = "rbxassetid://107762008925903", 
         WeightPool = {
-            800, 
-            1920
+            80, 
+            192
         }, 
         Chance = 25, 
         Rarity = "Legendary", 
@@ -18614,8 +19513,8 @@ local v5 = {
     ["Chasm Leech"] = {
         Icon = "rbxassetid://107762008925903", 
         WeightPool = {
-            1200, 
-            2880
+            12, 
+            28
         }, 
         Chance = 15, 
         Rarity = "Mythical", 
@@ -18648,8 +19547,8 @@ local v5 = {
     ["Dreaming Aberration"] = {
         Icon = "rbxassetid://97332199725161", 
         WeightPool = {
-            18000, 
-            43200
+            180, 
+            430
         }, 
         Chance = 1, 
         Rarity = "Exotic", 
@@ -18750,7 +19649,7 @@ local v5 = {
     ["Rock Gunnel"] = {
         Icon = "rbxassetid://115876328247518", 
         WeightPool = {
-            60, 
+            50, 
             140
         }, 
         Chance = 125, 
@@ -18818,7 +19717,7 @@ local v5 = {
     ["Four Eyes Fish"] = {
         Icon = "rbxassetid://93265006831225", 
         WeightPool = {
-            100, 
+            50, 
             260
         }, 
         Chance = 110, 
@@ -18886,7 +19785,7 @@ local v5 = {
     ["Warty Angler"] = {
         Icon = "rbxassetid://82476479573398", 
         WeightPool = {
-            110, 
+            50, 
             280
         }, 
         Chance = 107, 
@@ -19804,7 +20703,7 @@ local v5 = {
     ["Toilet Fish"] = {
         Icon = "rbxassetid://78716099008235", 
         WeightPool = {
-            30, 
+            35, 
             200
         }, 
         Chance = 0.5, 
@@ -19897,6 +20796,78 @@ local v5 = {
         SparkleColor = Color3.fromRGB(101, 96, 19), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Isle of New Beginnings", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Tropical Bait Crate"] = {
+        WeightPool = {
+            5, 
+            10
+        }, 
+        Chance = 15, 
+        Rarity = "Rare", 
+        Resilience = 110, 
+        Description = "A weathered wooden crate adorned with tropical leaves, designed to keep the bait fresh and lively. Likely drifted ashore from a fishing vessel exploring warm, exotic waters. The bait inside is vibrant and for the taking! Open it for a haul of tropical baits!", 
+        Hint = "Washed up from a tropical fishing expedition.", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = nil, 
+        BuyMult = 1.875, 
+        Price = 80, 
+        XP = 50, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Tropic Bait Crate!", 
+            "Treasure from the tropics!", 
+            "Whoa! A tropical haul!", 
+            "A crate from paradise!", 
+            "Did this float in from the islands?", 
+            "The bait\226\128\153s still kicking!", 
+            "Tropical vibes in a crate!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("crate"), 
+        From = "None", 
+        IsCrate = true, 
+        CrateType = "Bait", 
+        BaitContents = {
+            "Luminous Larva", 
+            "Sapphire Krill", 
+            "Sapphire Krill", 
+            "Mist Worms", 
+            "Mist Worms", 
+            "Mist Worms", 
+            "Crystal Bananas", 
+            "Crystal Bananas", 
+            "Crystal Bananas", 
+            "Crystal Bananas", 
+            "Lagoon Leech", 
+            "Lagoon Leech", 
+            "Lagoon Leech", 
+            "Lagoon Leech", 
+            "Ember Berries", 
+            "Ember Berries", 
+            "Ember Berries", 
+            "Ember Berries", 
+            "Ember Berries", 
+            "Lushrooms", 
+            "Lushrooms", 
+            "Lushrooms", 
+            "Lushrooms", 
+            "Lushrooms", 
+            "Lushrooms", 
+            "Gale Grub", 
+            "Gale Grub", 
+            "Gale Grub", 
+            "Gale Grub", 
+            "Gale Grub", 
+            "Gale Grub"
+        }, 
         Worlds = {
             "Sea 2"
         }
