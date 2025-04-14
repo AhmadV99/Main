@@ -3,7 +3,7 @@
   "rbxhttp": false,
   "script": "dtc.schedule(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/main/Nebula/Nebula.lua\"))",
   "versionName": "1.1.5",
-  "roblox_versionAPK": "",
+  "roblox_versionAPK": "2.666.609",
   "Keysystem": false,
   "ApkLink": {
     "32": "",
