@@ -1,12 +1,16 @@
 {
   "moduleName": "Nebula",
   "rbxhttp": false,
-  "script": "dtc.schedule(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula.lua\"))",
+  "script": "dtc.schedule(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/main/Nebula/Nebula.lua\"))",
   "versionName": "1.1.5",
   "Keysystem": false,
   "ApkLink": {
     "32": "",
-    "64": "https://www.mediafire.com/file/04zwizo2iovbwzf/Nebula666.apk/file"
+    "64": "https://www.mediafire.com/file/04zwizo2iovbwzf/Nebula666.apk/file",
+    "vng": {
+      "32": "",
+      "64": ""
+    }
   },
   "invite_discord": "https://discord.gg/EvVT3xEw84"
 }
