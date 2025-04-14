@@ -2,12 +2,12 @@
   "moduleName": "Nebula",
   "rbxhttp": false,
   "script": "dtc.schedule(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/main/Nebula/Nebula.lua\"))",
-  "versionName": "1.1.5",
+  "versionName": "1.2.0",
   "roblox_versionAPK": "2.666.609",
   "Keysystem": false,
   "ApkLink": {
     "32": "",
-    "64": "https://www.mediafire.com/file/04zwizo2iovbwzf/Nebula666.apk/file",
+    "64": "https://www.mediafire.com/file/vj5ppwbi5f28epy/Nebula666_Updated.apk/file",
     "vng": {
       "32": "",
       "64": "https://www.mediafire.com/file/iw21hk4w840skl1/Nebula666_VNG.apk/file"
