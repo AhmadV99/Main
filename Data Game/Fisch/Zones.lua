@@ -3,7 +3,7 @@ return {
         Pool = {
             "Tartaruga"
         }, 
-        CantBeWhormholed = false, 
+        CantBeWhormholed = true, 
         Priority = 2
     }, 
     ["Animal Pool"] = {
@@ -2407,6 +2407,7 @@ return {
     }, 
     ["Open Ocean"] = {
         Pool = {
+            "Cursed Thread", 
             "Hogchoker", 
             "Rock Gunnel", 
             "Pupfish", 
@@ -2452,5 +2453,36 @@ return {
         }, 
         CantBeWhormholed = false, 
         Priority = 2
+    }, 
+    ["Blue Moon - First Sea"] = {
+        BlueMoonEvent = true, 
+        Pool = {
+            "Moon Arctic Char", 
+            "Silver Scuttler", 
+            "Pale Ghost Lumpfish", 
+            "Frost Ray", 
+            "Blue Langanose", 
+            "Starbellied Wolf Fish", 
+            "Icy Daggerfish", 
+            "Lunar Monkfish", 
+            "Moon Idol Sea 1"
+        }, 
+        Priority = 3, 
+        CantBeWhormholed = false
+    }, 
+    ["Blue Moon - Second Sea"] = {
+        BlueMoonEvent = true, 
+        Pool = {
+            "Moonveil Killifish", 
+            "Gloamfin Gar", 
+            "Lurking Crescent Pike", 
+            "Moonridge Catfish", 
+            "Crescent Madtom", 
+            "Bog Lantern Goby", 
+            "Tarnished Moongill", 
+            "Moon Idol Sea 2"
+        }, 
+        Priority = 3, 
+        CantBeWhormholed = false
     }
 };
