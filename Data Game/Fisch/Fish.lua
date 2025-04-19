@@ -100,11 +100,594 @@ local v2 = {
     }
 };
 local v5 = {
+    ["Moon Idol Sea 1"] = {
+        Icon = "rbxassetid://74189195141290", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            500, 
+            500
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 150, 
+        ProgressEfficiency = 0.2, 
+        Description = "A moon shaped stone with an unmatched spirit...", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 30000, 
+        XP = 20000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A MOON IDOL!?!?!", 
+            "CELESTIAL GREATNESS!!!", 
+            "UNMATCHED POWERS!!!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 244, 176), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Blue Moon - First Sea"
+    }, 
+    ["Moon Arctic Char"] = {
+        Icon = "rbxassetid://113858607309335", 
+        WeightPool = {
+            120, 
+            300
+        }, 
+        Chance = 110, 
+        Rarity = "Common", 
+        Resilience = 75, 
+        ProgressEfficiency = 1.35, 
+        Description = "A sleek fish with silvery scales that reflect the moon's gentle glow.", 
+        Hint = "It glides where the ice meets the dawn's first light.", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 400, 
+        XP = 280, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Moon Arctic Char!", 
+            "Silvery swimmer!", 
+            "Lunar catch!"
+        }, 
+        SparkleColor = Color3.fromRGB(128, 187, 219), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Blue Moon - First Sea"
+    }, 
+    ["Silver Scuttler"] = {
+        Icon = "rbxassetid://81571343142363", 
+        WeightPool = {
+            900, 
+            2400
+        }, 
+        Chance = 95, 
+        Rarity = "Common", 
+        Resilience = 80, 
+        ProgressEfficiency = 1.1, 
+        Description = "A small, quick fish with shimmering scales that skitter across the ice.", 
+        Hint = "It darts beneath the frozen winds.", 
+        FavouriteBait = "Bagel", 
+        FavouriteTime = nil, 
+        Price = 580, 
+        XP = 370, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Silver Scuttler!", 
+            "Gleaming skitterer!", 
+            "Quick catch!"
+        }, 
+        SparkleColor = Color3.fromRGB(160, 160, 160), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Blue Moon - First Sea"
+    }, 
+    ["Pale Ghost Lumpfish"] = {
+        Icon = "rbxassetid://126941365600312", 
+        WeightPool = {
+            2, 
+            8
+        }, 
+        Chance = 90, 
+        Rarity = "Uncommon", 
+        Resilience = 60, 
+        ProgressEfficiency = 1.4, 
+        Description = "A round, pallid fish that clings to ice with an eerie, spectral presence.", 
+        Hint = "It haunts the foggy chill of dusk.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = nil, 
+        Price = 1000, 
+        XP = 750, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Pale Ghost Lumpfish!", 
+            "Spooky lump!", 
+            "Ghostly grab!"
+        }, 
+        SparkleColor = Color3.fromRGB(200, 200, 200), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Blue Moon - First Sea"
+    }, 
+    ["Frost Ray"] = {
+        Icon = "rbxassetid://135376186443805", 
+        WeightPool = {
+            800, 
+            2400
+        }, 
+        Chance = 85, 
+        Rarity = "Uncommon", 
+        Resilience = 55, 
+        ProgressEfficiency = 1.05, 
+        Description = "A flat, icy creature with wings that ripple like frozen waves.", 
+        Hint = "It sweeps through the snowy tides.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = nil, 
+        Price = 1900, 
+        XP = 900, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Frost Ray!", 
+            "Icy wings!", 
+            "Cold glider!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Blue Moon - First Sea"
+    }, 
+    ["Blue Langanose"] = {
+        Icon = "rbxassetid://100875351246693", 
+        WeightPool = {
+            600, 
+            1800
+        }, 
+        Chance = 80, 
+        Rarity = "Unusual", 
+        Resilience = 62, 
+        ProgressEfficiency = 1.15, 
+        Description = "A long fish with a deep blue hue, blending into the icy abyss.", 
+        Hint = "It probes the clear, cold depths.", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = nil, 
+        Price = 2850, 
+        XP = 1880, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Blue Langanose!", 
+            "Frozen whiskers!", 
+            "Blue beauty!"
+        }, 
+        SparkleColor = Color3.fromRGB(18, 49, 247), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Blue Moon - First Sea"
+    }, 
+    ["Starbellied Wolf Fish"] = {
+        Icon = "rbxassetid://89388598287015", 
+        WeightPool = {
+            70, 
+            240
+        }, 
+        Chance = 70, 
+        Rarity = "Rare", 
+        Resilience = 50, 
+        ProgressEfficiency = 1.25, 
+        Description = "A fierce predator with a surface speckled like a starry night sky.", 
+        Hint = "It hunts under the rainy mist.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = nil, 
+        Price = 3500, 
+        XP = 2950, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Starbellied Wolf Fish!", 
+            "Starry jaws!", 
+            "Lunar hunter!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Blue Moon - First Sea"
+    }, 
+    ["Icy Daggerfish"] = {
+        Icon = "rbxassetid://135539930141529", 
+        WeightPool = {
+            80, 
+            235
+        }, 
+        Chance = 60, 
+        Rarity = "Legendary", 
+        Resilience = 45, 
+        ProgressEfficiency = 1.2, 
+        Description = "A slender, glowing fish with a sharp, icy form that pierces the dark.", 
+        Hint = "It flashes within the deep fog.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = nil, 
+        Price = 4600, 
+        XP = 3100, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "AN ICY DAGGERFISH!", 
+            "SHARP GLOW!", 
+            "FROSTY BLADE!"
+        }, 
+        SparkleColor = Color3.fromRGB(128, 187, 219), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Blue Moon - First Sea"
+    }, 
+    ["Lunar Monkfish"] = {
+        Icon = "rbxassetid://82672626514771", 
+        WeightPool = {
+            800, 
+            2500
+        }, 
+        Chance = 50, 
+        Rarity = "Mythical", 
+        Resilience = 40, 
+        ProgressEfficiency = 0.85, 
+        Description = "A grotesque, moon-kissed beast lurking in the icy abyss.", 
+        Hint = "It waits where the winds howl over frozen waves.", 
+        FavouriteBait = "Shark Head", 
+        FavouriteTime = nil, 
+        Price = 8000, 
+        XP = 5500, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A LUNAR MONKFISH!", 
+            "MOONLIT HORROR!", 
+            "WIDE GUY!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Blue Moon - First Sea"
+    }, 
+    ["Moon Idol Sea 2"] = {
+        Icon = "rbxassetid://74189195141290", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            500, 
+            500
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 150, 
+        ProgressEfficiency = 0.2, 
+        Description = "A moon shaped stone with an unmatched spirit...", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 30000, 
+        XP = 20000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A MOON IDOL!?!?!", 
+            "CELESTIAL GREATNESS!!!", 
+            "UNMATCHED POWERS!!!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 244, 176), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Blue Moon - Second Sea", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Moonveil Killifish"] = {
+        Icon = "rbxassetid://126477157825621", 
+        WeightPool = {
+            40, 
+            120
+        }, 
+        Chance = 110, 
+        Rarity = "Common", 
+        Resilience = 75, 
+        ProgressEfficiency = 1.4, 
+        Description = "A blue delicate fish with a spotted pattern.", 
+        Hint = "It dances where the fog cloaks the edge.", 
+        FavouriteBait = "Ember Berries", 
+        FavouriteTime = nil, 
+        Price = 200, 
+        XP = 480, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Moonveil Killifish!", 
+            "Misty glimmer!", 
+            "Veiled catch!"
+        }, 
+        SparkleColor = Color3.fromRGB(13, 105, 172), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Blue Moon - Second Sea", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Gloamfin Gar"] = {
+        Icon = "rbxassetid://110150591793772", 
+        WeightPool = {
+            400, 
+            1200
+        }, 
+        Chance = 95, 
+        Rarity = "Common", 
+        Resilience = 80, 
+        ProgressEfficiency = 1.15, 
+        Description = "A long, sinewy fish with a pattern that glow brightly in the dusk.", 
+        Hint = "It slinks through the rainy shallows.", 
+        FavouriteBait = "Gale Grub", 
+        FavouriteTime = nil, 
+        Price = 290, 
+        XP = 1055, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Gloamfin Gar!", 
+            "Glowing prowler!", 
+            "Purple swimmer!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Blue Moon - Second Sea", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Lurking Crescent Pike"] = {
+        Icon = "rbxassetid://131036635264697", 
+        WeightPool = {
+            70, 
+            180
+        }, 
+        Chance = 90, 
+        Rarity = "Uncommon", 
+        Resilience = 60, 
+        ProgressEfficiency = 1.45, 
+        Description = "A slender fish with crescent markings, hiding in the shadows.", 
+        Hint = "It waits where the winds stir the bog's surface.", 
+        FavouriteBait = "Lagoon Leech", 
+        FavouriteTime = nil, 
+        Price = 500, 
+        XP = 1525, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Lurking Crescent Pike!", 
+            "Crescent shadow!", 
+            "Starry!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Blue Moon - Second Sea", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Moonridge Catfish"] = {
+        Icon = "rbxassetid://106024360957639", 
+        WeightPool = {
+            20, 
+            60
+        }, 
+        Chance = 85, 
+        Rarity = "Unusual", 
+        Resilience = 55, 
+        ProgressEfficiency = 1.25, 
+        Description = "A sleek fish with whiskers that lightly glow like moonlight.", 
+        Hint = "It swims where the waters clear under starlight.", 
+        FavouriteBait = "Mist Worms", 
+        FavouriteTime = nil, 
+        Price = 950, 
+        XP = 2350, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Moonridge Catfish!", 
+            "Whiskered wanderer!", 
+            "Moonlit whiskers!"
+        }, 
+        SparkleColor = Color3.fromRGB(103, 128, 158), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Blue Moon - Second Sea", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Crescent Madtom"] = {
+        Icon = "rbxassetid://72266570463259", 
+        WeightPool = {
+            30, 
+            90
+        }, 
+        Chance = 80, 
+        Rarity = "Rare", 
+        Resilience = 50, 
+        ProgressEfficiency = 1.2, 
+        Description = "A small, feisty fish with glowing eyes, darting through the tides.", 
+        Hint = "It flails where the rain feeds the water's heart.", 
+        FavouriteBait = "Lushrooms", 
+        FavouriteTime = nil, 
+        Price = 1425, 
+        XP = 3820, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Crescent Madtom!", 
+            "Tiny terror!", 
+            "Crescent catfish!"
+        }, 
+        SparkleColor = Color3.fromRGB(103, 128, 158), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Blue Moon - Second Sea", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Bog Lantern Goby"] = {
+        Icon = "rbxassetid://107526449346405", 
+        WeightPool = {
+            15, 
+            40
+        }, 
+        Chance = 70, 
+        Rarity = "Legendary", 
+        Resilience = 45, 
+        ProgressEfficiency = 1.3, 
+        Description = "A tiny fish with a large black eyes, looming within the bog's depths.", 
+        Hint = "It gleams where the fog hides the secrets.", 
+        FavouriteBait = "Crystal Bananas", 
+        FavouriteTime = nil, 
+        Price = 1750, 
+        XP = 5425, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A BOG LANTERN GOBY!", 
+            "GLOWING GUIDE!", 
+            "BOGGED LIGHT!"
+        }, 
+        SparkleColor = Color3.fromRGB(103, 128, 158), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Blue Moon - Second Sea", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Tarnished Moongill"] = {
+        Icon = "rbxassetid://100194202489039", 
+        WeightPool = {
+            10, 
+            35
+        }, 
+        Chance = 60, 
+        Rarity = "Mythical", 
+        Resilience = 35, 
+        ProgressEfficiency = 1.05, 
+        Description = "A small fish with gills that shimmer like silver under moonlight.", 
+        Hint = "It glides where the winds carve the bog's surface.", 
+        FavouriteBait = "Sapphire Krill", 
+        FavouriteTime = nil, 
+        Price = 2300, 
+        XP = 8500, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A TARNISHED MOONGILL!", 
+            "SILVER SHINE!", 
+            "stinky tarnished"
+        }, 
+        SparkleColor = Color3.fromRGB(103, 128, 158), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Blue Moon - Second Sea", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    Shell = {
+        Icon = "rbxassetid://80553083768726", 
+        WeightPool = {
+            5, 
+            10
+        }, 
+        Chance = 0, 
+        Rarity = "Common", 
+        Resilience = 100, 
+        ProgressEfficiency = 1, 
+        Description = "A swift, shrimp-like creature with a tail that flicks like a whip, stashing shells in hidden burrows.", 
+        Hint = "It darts through the mist where the waves whisper.", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 0, 
+        XP = 0, 
+        Seasons = nil, 
+        Weather = nil, 
+        Quips = {
+            "A Shrimpanzee!", 
+            "Tail-whippin' treasure!", 
+            "Burrow bandit!"
+        }, 
+        SparkleColor = Color3.fromRGB(159, 132, 115), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = nil, 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
     Shrimpanzee = {
         Icon = "rbxassetid://80553083768726", 
         WeightPool = {
-            1, 
-            10
+            80000, 
+            250000
         }, 
         Chance = 30, 
         Rarity = "Limited", 
@@ -283,7 +866,7 @@ local v5 = {
         Chance = 1, 
         Rarity = "Limited", 
         Resilience = 1, 
-        ProgressEfficiency = 0.95, 
+        ProgressEfficiency = 0.05, 
         Description = "A massive creature with strong tusks, sifting the ocean floor with ancient grace.", 
         Hint = "It drifts where the sun warms the stillness.", 
         FavouriteBait = "Golden Worm", 
@@ -1392,7 +1975,7 @@ local v5 = {
     ["Anglers Lantern"] = {
         Icon = "rbxassetid://127503265905341", 
         WeightPool = {
-            20, 
+            18, 
             20
         }, 
         Chance = 0.1, 
@@ -3229,7 +3812,7 @@ local v5 = {
             "Clever creature!"
         }, 
         SparkleColor = Color3.fromRGB(102, 235, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("heavybasic"), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Frigid Cavern"
     }, 
     ["Frigid Taco"] = {
@@ -3434,7 +4017,7 @@ local v5 = {
             "Quite the perch!"
         }, 
         SparkleColor = Color3.fromRGB(156, 197, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Cryogenic Canal"
     }, 
     ["Snowback Char"] = {
@@ -3962,7 +4545,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(33, 55, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavybasic"), 
-        From = "None"
+        From = "Ancient Isle"
     }, 
     ["Meg's Fang"] = {
         WeightPool = {
@@ -3989,7 +4572,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(33, 55, 255), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        From = "None"
+        From = "Ancient Isle"
     }, 
     ["Moon Wood"] = {
         WeightPool = {
@@ -4043,7 +4626,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 129, 25), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        From = "None"
+        From = "Roslit Volcano"
     }, 
     ["Ancient Wood"] = {
         WeightPool = {
@@ -4070,7 +4653,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(228, 255, 140), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        From = "None"
+        From = "Sunstone Island"
     }, 
     ["Void Wood"] = {
         WeightPool = {
@@ -4097,7 +4680,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(182, 65, 255), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        From = "None"
+        From = "Keepers Altar"
     }, 
     Moonstone = {
         WeightPool = {
@@ -5305,7 +5888,7 @@ local v5 = {
         Rarity = "Unusual", 
         Resilience = 70, 
         Description = "A serpentine predator with a ruffled neck and razor-sharp teeth, ancient and elusive.", 
-        Hint = "Hides in deep ocean caves near rocky crevices, appears during the Nigh time.", 
+        Hint = "Hides in deep ocean caves near rocky crevices, appears during the Night time.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
         Price = 150, 
@@ -19612,6 +20195,40 @@ local v5 = {
             "Sea 2"
         }
     }, 
+    ["Cursed Thread"] = {
+        Icon = "rbxassetid://126716943700827", 
+        WeightPool = {
+            40, 
+            100
+        }, 
+        Chance = 30, 
+        Rarity = "Mythical", 
+        Resilience = 85, 
+        ProgressEfficiency = 1.12, 
+        Description = "???", 
+        Hint = "???", 
+        FavouriteBait = "Sapphire Krill", 
+        FavouriteTime = "Day", 
+        Price = 40, 
+        XP = 20, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "weird...!", 
+            "what is this?", 
+            "is it a fish?"
+        }, 
+        SparkleColor = Color3.fromRGB(194, 178, 128), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Open Ocean", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
     Hogchoker = {
         Icon = "rbxassetid://77825372078181", 
         WeightPool = {
@@ -20801,6 +21418,7 @@ local v5 = {
         }
     }, 
     ["Tropical Bait Crate"] = {
+        Icon = "rbxassetid://87668309860817", 
         WeightPool = {
             5, 
             10
