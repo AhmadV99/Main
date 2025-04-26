@@ -101,7 +101,7 @@ local v2 = {
 };
 local v5 = {
     ["Moon Idol Sea 1"] = {
-        Icon = "rbxassetid://74189195141290", 
+        Icon = "rbxassetid://140635213153226", 
         BlockPassiveCapture = true, 
         WeightPool = {
             500, 
@@ -113,8 +113,8 @@ local v5 = {
         ProgressEfficiency = 0.2, 
         Description = "A moon shaped stone with an unmatched spirit...", 
         Hint = "???", 
-        FavouriteBait = nil, 
-        FavouriteTime = nil, 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
         Price = 30000, 
         XP = 20000, 
         Seasons = {
@@ -381,7 +381,7 @@ local v5 = {
         From = "Blue Moon - First Sea"
     }, 
     ["Moon Idol Sea 2"] = {
-        Icon = "rbxassetid://74189195141290", 
+        Icon = "rbxassetid://140635213153226", 
         BlockPassiveCapture = true, 
         WeightPool = {
             500, 
@@ -393,8 +393,8 @@ local v5 = {
         ProgressEfficiency = 0.2, 
         Description = "A moon shaped stone with an unmatched spirit...", 
         Hint = "???", 
-        FavouriteBait = nil, 
-        FavouriteTime = nil, 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
         Price = 30000, 
         XP = 20000, 
         Seasons = {
@@ -823,7 +823,7 @@ local v5 = {
         }
     }, 
     Orcanda = {
-        Icon = "rbxassetid://86622122052662", 
+        Icon = "rbxassetid://110031930947706", 
         WeightPool = {
             30000, 
             100000
@@ -1367,7 +1367,7 @@ local v5 = {
         }
     }, 
     Krabbit = {
-        Icon = "rbxassetid://79304773291970", 
+        Icon = "rbxassetid://118920669604134", 
         WeightPool = {
             7500, 
             22000
@@ -1401,7 +1401,7 @@ local v5 = {
         }
     }, 
     ["Siren Sheep"] = {
-        Icon = "rbxassetid://93172648914203", 
+        Icon = "rbxassetid://90218266378032", 
         WeightPool = {
             3000, 
             8000
@@ -2672,7 +2672,7 @@ local v5 = {
             70000
         }, 
         Chance = 1.0E-4, 
-        Rarity = "Secret", 
+        Rarity = "Limited", 
         Resilience = 3, 
         ProgressEfficiency = 0.1, 
         Description = "A lovely yet dangerous creature, striking with unpredictable ruthlessness. It thrives in a rare storm, leaving chaos behind it as it travels through the waters.", 
@@ -2705,7 +2705,7 @@ local v5 = {
             105000
         }, 
         Chance = 0.001, 
-        Rarity = "Secret", 
+        Rarity = "Limited", 
         Resilience = 1, 
         ProgressEfficiency = 0.05, 
         Description = "A Love Eel infused with fury of the tempest, with power beyond comprehension.", 
@@ -2986,7 +2986,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "Small but dangerous.."
+        }, 
         SparkleColor = Color3.fromRGB(161, 255, 247), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Grand Reef"
@@ -3011,7 +3013,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "Could've been on Roslit.. but hey!"
+        }, 
         SparkleColor = Color3.fromRGB(161, 255, 247), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Grand Reef"
@@ -3036,7 +3040,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "So colorful!"
+        }, 
         SparkleColor = Color3.fromRGB(161, 255, 247), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Grand Reef"
@@ -3061,7 +3067,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "Ya think he's strong?"
+        }, 
         SparkleColor = Color3.fromRGB(161, 255, 247), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Grand Reef"
@@ -3086,7 +3094,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "I love crystals.."
+        }, 
         SparkleColor = Color3.fromRGB(161, 255, 247), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Grand Reef"
@@ -3111,7 +3121,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "At least this one doesn't yap like a parrot.."
+        }, 
         SparkleColor = Color3.fromRGB(161, 255, 247), 
         HoldAnimation = l_fish_0:WaitForChild("heavybasic"), 
         From = "Grand Reef"
@@ -10889,7 +10901,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "Ooo, Shiny!!!"
+        }, 
         SparkleColor = Color3.fromRGB(255, 239, 231), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Roslit", 
@@ -11041,7 +11055,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "Must be expensive.."
+        }, 
         SparkleColor = Color3.fromRGB(255, 213, 108), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Roslit", 
@@ -11213,7 +11229,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "Pink! My favorite :')"
+        }, 
         SparkleColor = Color3.fromRGB(255, 201, 238), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Roslit", 
@@ -11331,7 +11349,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "Whoah! Pretty"
+        }, 
         SparkleColor = Color3.fromRGB(197, 178, 255), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Roslit", 
@@ -11420,7 +11440,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "Surely there's some lore behind this.."
+        }, 
         SparkleColor = Color3.fromRGB(82, 39, 255), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Roslit", 
@@ -11477,7 +11499,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "Aurora!?! Like borealis?"
+        }, 
         SparkleColor = Color3.fromRGB(106, 255, 188), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Roslit", 
@@ -11503,7 +11527,9 @@ local v5 = {
         Weather = {
             "None"
         }, 
-        Quips = {}, 
+        Quips = {
+            "Golden... So.. SHINY"
+        }, 
         SparkleColor = Color3.fromRGB(255, 228, 130), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Roslit", 
@@ -17783,6 +17809,7 @@ local v5 = {
     }, 
     ["Storm Skipper"] = {
         Icon = "rbxassetid://118721375993994", 
+        BlockPassiveCapture = true, 
         WeightPool = {
             500, 
             1500
@@ -18089,6 +18116,7 @@ local v5 = {
     }, 
     Thornfish = {
         Icon = "rbxassetid://139749999063062", 
+        BlockPassiveCapture = true, 
         WeightPool = {
             100, 
             300
@@ -18531,6 +18559,7 @@ local v5 = {
     }, 
     ["Primordial Levi"] = {
         Icon = "rbxassetid://82281991219618", 
+        BlockPassiveCapture = true, 
         WeightPool = {
             4500, 
             12000
@@ -19415,6 +19444,7 @@ local v5 = {
     }, 
     ["Molten Ripple"] = {
         Icon = "rbxassetid://92446926296297", 
+        BlockPassiveCapture = true, 
         WeightPool = {
             13500, 
             36000
@@ -19721,6 +19751,7 @@ local v5 = {
     }, 
     ["Phantom Koi"] = {
         Icon = "rbxassetid://86526174459017", 
+        BlockPassiveCapture = true, 
         WeightPool = {
             3600, 
             9600
@@ -19762,7 +19793,7 @@ local v5 = {
         Chance = 120, 
         Rarity = "Common", 
         Resilience = 15, 
-        ProgressEfficiency = 0.36, 
+        ProgressEfficiency = 0.75, 
         Description = "A relentless survivor that thrives where others falter.", 
         Hint = "It lurks where the waters grow bitter.", 
         FavouriteBait = "Worm", 
@@ -19796,7 +19827,7 @@ local v5 = {
         Chance = 115, 
         Rarity = "Common", 
         Resilience = 15, 
-        ProgressEfficiency = 0.34, 
+        ProgressEfficiency = 0.7, 
         Description = "A fierce biter that claims the shadows as its domain.", 
         Hint = "It strikes where the light fades.", 
         FavouriteBait = "Shrimp", 
@@ -19830,7 +19861,7 @@ local v5 = {
         Chance = 100, 
         Rarity = "Uncommon", 
         Resilience = 14, 
-        ProgressEfficiency = 0.38, 
+        ProgressEfficiency = 0.65, 
         Description = "A brutal predator that crushes all in its relentless grip.", 
         Hint = "It prowls where decay lingers.", 
         FavouriteBait = "Minnow", 
@@ -19864,7 +19895,7 @@ local v5 = {
         Chance = 95, 
         Rarity = "Uncommon", 
         Resilience = 13, 
-        ProgressEfficiency = 0.37, 
+        ProgressEfficiency = 0.6, 
         Description = "A slippery terror that moves unseen through the murk.", 
         Hint = "It glides where the waters turn thick.", 
         FavouriteBait = "Squid", 
@@ -19898,7 +19929,7 @@ local v5 = {
         Chance = 85, 
         Rarity = "Unusual", 
         Resilience = 12, 
-        ProgressEfficiency = 0.32, 
+        ProgressEfficiency = 0.55, 
         Description = "A savage snapper that strikes with unerring precision.", 
         Hint = "It hunts where the currents split.", 
         FavouriteBait = "Flakes", 
@@ -19932,7 +19963,7 @@ local v5 = {
         Chance = 80, 
         Rarity = "Unusual", 
         Resilience = 11, 
-        ProgressEfficiency = 0.3, 
+        ProgressEfficiency = 0.5, 
         Description = "A monstrous pike that dominates through sheer malice.", 
         Hint = "It lurks where the depths fester.", 
         FavouriteBait = "Insect", 
@@ -19966,7 +19997,7 @@ local v5 = {
         Chance = 50, 
         Rarity = "Rare", 
         Resilience = 10, 
-        ProgressEfficiency = 0.33, 
+        ProgressEfficiency = 0.45, 
         Description = "A relentless force that echoes with empty strength.", 
         Hint = "It drifts where the silence grows heavy.", 
         FavouriteBait = "Squid", 
@@ -20000,7 +20031,7 @@ local v5 = {
         Chance = 45, 
         Rarity = "Rare", 
         Resilience = 9, 
-        ProgressEfficiency = 0.31, 
+        ProgressEfficiency = 0.4, 
         Description = "A cunning hunter that drags its prey into oblivion.", 
         Hint = "It creeps where the shadows stretch long.", 
         FavouriteBait = "Sapphire Krill", 
@@ -20034,7 +20065,7 @@ local v5 = {
         Chance = 30, 
         Rarity = "Legendary", 
         Resilience = 8, 
-        ProgressEfficiency = 0.2, 
+        ProgressEfficiency = 0.35, 
         Description = "A merciless spawn that pulses with unyielding power.", 
         Hint = "It emerges where the depths bleed.", 
         FavouriteBait = "Mist Worms", 
@@ -20068,7 +20099,7 @@ local v5 = {
         Chance = 25, 
         Rarity = "Legendary", 
         Resilience = 7, 
-        ProgressEfficiency = 0.18, 
+        ProgressEfficiency = 0.25, 
         Description = "A deafening horror that shatters the silence of the deep.", 
         Hint = "It wails where the waters tremble.", 
         FavouriteBait = "Mist Worms", 
@@ -20102,7 +20133,7 @@ local v5 = {
         Chance = 15, 
         Rarity = "Mythical", 
         Resilience = 6, 
-        ProgressEfficiency = 0.08, 
+        ProgressEfficiency = 0.2, 
         Description = "A tenacious parasite that drains the life from the abyss.", 
         Hint = "It clings where the chasms yawn wide.", 
         FavouriteBait = "Mist Worms", 
@@ -20136,7 +20167,7 @@ local v5 = {
         Chance = 1, 
         Rarity = "Exotic", 
         Resilience = 3, 
-        ProgressEfficiency = 0.05, 
+        ProgressEfficiency = 0.15, 
         Description = "A twisted nightmare that defies the waking world.", 
         Hint = "It haunts where dreams turn dark.", 
         FavouriteBait = "Mist Worms", 
@@ -20163,6 +20194,7 @@ local v5 = {
     }, 
     ["Abyssborn Monstrosity"] = {
         Icon = "rbxassetid://121420749539557", 
+        BlockPassiveCapture = true, 
         WeightPool = {
             24000, 
             57600
@@ -20170,7 +20202,7 @@ local v5 = {
         Chance = 1, 
         Rarity = "Secret", 
         Resilience = 1, 
-        ProgressEfficiency = 0.03, 
+        ProgressEfficiency = 0.1, 
         Description = "A colossal terror birthed from the abyss\226\128\153s cruel heart.", 
         Hint = "It rises where the void claims all.", 
         FavouriteBait = "Luminous Larva", 
@@ -20198,8 +20230,8 @@ local v5 = {
     ["Cursed Thread"] = {
         Icon = "rbxassetid://126716943700827", 
         WeightPool = {
-            40, 
-            100
+            105, 
+            105
         }, 
         Chance = 30, 
         Rarity = "Mythical", 
@@ -20877,6 +20909,7 @@ local v5 = {
     }, 
     ["Psychedelic Frogfish"] = {
         Icon = "rbxassetid://128425433008144", 
+        BlockPassiveCapture = true, 
         WeightPool = {
             80000, 
             200000
@@ -21285,6 +21318,7 @@ local v5 = {
     }, 
     ["Verdant Mirage"] = {
         Icon = "rbxassetid://84550850034003", 
+        BlockPassiveCapture = true, 
         WeightPool = {
             4800, 
             12000
@@ -21319,6 +21353,7 @@ local v5 = {
     }, 
     ["Toilet Fish"] = {
         Icon = "rbxassetid://78716099008235", 
+        BlockPassiveCapture = true, 
         WeightPool = {
             35, 
             200
@@ -21352,6 +21387,7 @@ local v5 = {
     }, 
     Dogefin = {
         Icon = "rbxassetid://82390122887969", 
+        BlockPassiveCapture = true, 
         WeightPool = {
             50, 
             400
@@ -21418,7 +21454,7 @@ local v5 = {
         }
     }, 
     ["Tropical Bait Crate"] = {
-        Icon = "rbxassetid://87668309860817", 
+        Icon = "rbxassetid://107608220521320", 
         WeightPool = {
             5, 
             10
@@ -21450,7 +21486,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("crate"), 
-        From = "None", 
+        From = "Open Ocean", 
         IsCrate = true, 
         CrateType = "Bait", 
         BaitContents = {
@@ -21488,6 +21524,522 @@ local v5 = {
         }, 
         Worlds = {
             "Sea 2"
+        }
+    }, 
+    ["Azure Studfish"] = {
+        WeightPool = {
+            9, 
+            25
+        }, 
+        Chance = 130, 
+        Rarity = "Limited", 
+        Resilience = 100, 
+        Description = "A vibrant blue fish adorned with LEGO studs, shimmering like a sapphire in the sea.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 60, 
+        XP = 20, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "An Azure Studfish!", 
+            "Plastic!", 
+            "Studded!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    ["Clown Brickfish"] = {
+        WeightPool = {
+            3, 
+            8
+        }, 
+        Chance = 125, 
+        Rarity = "Limited", 
+        Resilience = 95, 
+        Description = "A playful orange fish, with bright black & white blocky patterns.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 80, 
+        XP = 30, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Clown Brickfish!", 
+            "Colorful!", 
+            "Nemo?"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 149, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    Goldbrick = {
+        WeightPool = {
+            15, 
+            40
+        }, 
+        Chance = 115, 
+        Rarity = "Limited", 
+        Resilience = 90, 
+        Description = "A hefty fish made of gleaming LEGO bricks, shining like a golden treasure.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 100, 
+        XP = 50, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Goldbrick!", 
+            "Gleaming!", 
+            "Gold?"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 234, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    ["Yellow Studfish"] = {
+        WeightPool = {
+            13, 
+            39
+        }, 
+        Chance = 105, 
+        Rarity = "Limited", 
+        Resilience = 85, 
+        Description = "A sunny yellow fish dotted with LEGO studs, brightening the ocean depths.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 150, 
+        XP = 70, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Yellow Studfish!", 
+            "Sunny!", 
+            "Studded!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 238, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    ["Stud Turtle"] = {
+        WeightPool = {
+            30, 
+            100
+        }, 
+        Chance = 95, 
+        Rarity = "Limited", 
+        Resilience = 80, 
+        Description = "A sturdy turtle with a shell made of interlocking LEGO bricks, slow but strong.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 400, 
+        XP = 220, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Stud Turtle!", 
+            "Armored!", 
+            "Blocky!"
+        }, 
+        SparkleColor = Color3.fromRGB(29, 217, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    Brickhorse = {
+        WeightPool = {
+            20, 
+            55
+        }, 
+        Chance = 85, 
+        Rarity = "Limited", 
+        Resilience = 75, 
+        Description = "A majestic seahorse crafted from purple LEGO bricks, elegant and cute.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 350, 
+        XP = 150, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Brickhorse!", 
+            "Regal!", 
+            "Studded!"
+        }, 
+        SparkleColor = Color3.fromRGB(66, 0, 179), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    ["Cardinal Studfish"] = {
+        WeightPool = {
+            19, 
+            54
+        }, 
+        Chance = 75, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "A striking black & white fish with LEGO studs, resembling a cardinal's vibrant crest.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 400, 
+        XP = 180, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Cardinal Studfish!", 
+            "Striped!", 
+            "Blocky!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    ["Crab Stud"] = {
+        WeightPool = {
+            23, 
+            80
+        }, 
+        Chance = 65, 
+        Rarity = "Limited", 
+        Resilience = 60, 
+        Description = "A feisty red crab with LEGO brick claws, ready to snap at anything.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 450, 
+        XP = 200, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Crab Stud!", 
+            "Snappy!", 
+            "Studded!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    ["Glow Brick"] = {
+        WeightPool = {
+            90, 
+            300
+        }, 
+        Chance = 55, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        Description = "A massive fish that glows with dark LEGO bricks, illuminating the deep sea.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 800, 
+        XP = 500, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Glow Brick!", 
+            "Glowing!", 
+            "Blocky!"
+        }, 
+        SparkleColor = Color3.fromRGB(7, 32, 86), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    Jellystud = {
+        WeightPool = {
+            15, 
+            40
+        }, 
+        Chance = 45, 
+        Rarity = "Limited", 
+        Resilience = 50, 
+        Description = "A translucent jellyfish with glowing LEGO studs, floating like a soft brick cloud.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 400, 
+        XP = 200, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Jellystud!", 
+            "Ouch!", 
+            "Studded!"
+        }, 
+        SparkleColor = Color3.fromRGB(28, 145, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    ["Stud Koi"] = {
+        WeightPool = {
+            550, 
+            1900
+        }, 
+        Chance = 35, 
+        Rarity = "Limited", 
+        Resilience = 40, 
+        Description = "A graceful koi with shimmering orange LEGO studs, a masterpiece of the sea.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 550, 
+        XP = 280, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Stud Koi!", 
+            "Elegant!", 
+            "Blocky!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 106, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    ["Stud Shark"] = {
+        WeightPool = {
+            40, 
+            140
+        }, 
+        Chance = 25, 
+        Rarity = "Limited", 
+        Resilience = 35, 
+        Description = "A fierce shark with sleek gray LEGO bricks, striking fear within the seas.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 650, 
+        XP = 300, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Stud Shark!", 
+            "Sharp!", 
+            "Studded!"
+        }, 
+        SparkleColor = Color3.fromRGB(99, 94, 94), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    ["Studling Crab"] = {
+        WeightPool = {
+            15, 
+            50
+        }, 
+        Chance = 15, 
+        Rarity = "Limited", 
+        Resilience = 40, 
+        Description = "A tiny crab with vibrant orange LEGO studs, scurrying along the ocean floor.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 600, 
+        XP = 280, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Studling Crab!", 
+            "Scuttling!", 
+            "Blocky!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 119, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    Studphin = {
+        WeightPool = {
+            25, 
+            90
+        }, 
+        Chance = 10, 
+        Rarity = "Limited", 
+        Resilience = 30, 
+        Description = "A playful dolphin with sky-blue LEGO bricks, leaping through the waves.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 700, 
+        XP = 300, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Studphin!", 
+            "Leaping!", 
+            "Studded!"
+        }, 
+        SparkleColor = Color3.fromRGB(28, 202, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    Tentabrick = {
+        WeightPool = {
+            300, 
+            1000
+        }, 
+        Chance = 5, 
+        Rarity = "Limited", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.35, 
+        Description = "A cute octopus with green LEGO brick tentacles, a creature of the deep.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 900, 
+        XP = 500, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Tentabrick!", 
+            "Mighty!", 
+            "Blocky!"
+        }, 
+        SparkleColor = Color3.fromRGB(9, 173, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
+        }
+    }, 
+    Studolodon = {
+        WeightPool = {
+            350, 
+            1500
+        }, 
+        Chance = 1, 
+        Rarity = "Limited", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.15, 
+        Description = "A prehistoric beast with massive LEGO brick plates, a plastic legend.", 
+        Hint = "Catchable during LEGO event.", 
+        FavouriteBait = "Stud Bait", 
+        FavouriteTime = nil, 
+        Price = 1500, 
+        XP = 700, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A STUDOLODON!!!", 
+            "PLASTIC MEGALODON!?!", 
+            "BRICKED FURY!", 
+            "LEGOLODON?", 
+            "ACRYLONITRILE BUTADIENE STYRENE!"
+        }, 
+        SparkleColor = Color3.fromRGB(39, 35, 141), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "LEGO", 
+        Worlds = {
+            "Sea 1"
         }
     }, 
     Rarities = {
