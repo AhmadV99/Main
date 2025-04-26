@@ -45,7 +45,8 @@ return {
             "Flamangler", 
             "Orcanda"
         }, 
-        Priority = 4
+        Priority = 4, 
+        CantBeWhormholed = true
     }, 
     ["Octophant Pool With Elephant"] = {
         Pool = {
@@ -56,7 +57,8 @@ return {
             "Orcanda", 
             "Octophant"
         }, 
-        Priority = 4
+        Priority = 4, 
+        CantBeWhormholed = true
     }, 
     ["Sea Leviathan Pool"] = {
         Pool = {
@@ -1091,7 +1093,6 @@ return {
             "Xiphactinus", 
             "Hyneria", 
             "Hallucigenia", 
-            "Palaeoniscum", 
             "Leedsichthys", 
             "Banana"
         }, 
@@ -2484,5 +2485,83 @@ return {
         }, 
         Priority = 3, 
         CantBeWhormholed = false
+    }, 
+    LEGO = {
+        ExclusiveRods = {
+            {
+                "Brick Built Rod", 
+                "Developers Rod"
+            }, 
+            "<font color=\"rgb(255,0,0)\">You must use the Brick Built Rod in this pool!</font>"
+        }, 
+        Pool = {
+            "Tentabrick", 
+            "Studphin", 
+            "Studling Crab", 
+            "Stud Shark", 
+            "Stud Koi", 
+            "Jellystud", 
+            "Glow Brick", 
+            "Crab Stud", 
+            "Cardinal Studfish", 
+            "Brickhorse", 
+            "Stud Turtle", 
+            "Yellow Studfish", 
+            "Goldbrick", 
+            "Clown Brickfish", 
+            "Azure Studfish"
+        }, 
+        Priority = 5, 
+        CantBeWhormholed = true
+    }, 
+    ["LEGO - Studolodon"] = {
+        ExclusiveRods = {
+            {
+                "Brick Built Rod", 
+                "Developers Rod"
+            }, 
+            "<font color=\"rgb(255,0,0)\">You must use the Brick Built Rod in this pool!</font>"
+        }, 
+        Pool = {
+            "Studolodon", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard"
+        }, 
+        Priority = 5, 
+        CantBeWhormholed = true
     }
 };
