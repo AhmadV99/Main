@@ -6,6 +6,26 @@ return {
         CantBeWhormholed = true, 
         Priority = 2
     }, 
+    ["Carrot Garden"] = {
+        RequiredDoors = {
+            {
+                "CarrotDoor"
+            }, 
+            "<font color='#FFA500'><b>You need to open the <i>CarrotDoor</i> to fish in this area!</b></font>"
+        }, 
+        Pool = {
+            "Carrot Turtle", 
+            "Carrot Pufferfish", 
+            "Carrot Minnow", 
+            "Carrot Eel", 
+            "Carrot Salmon", 
+            "Carrot Goldfish", 
+            "Carrot Snapper", 
+            "Carrot Shark"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = false
+    }, 
     ["Animal Pool"] = {
         Pool = {
             "Cluckfin", 
