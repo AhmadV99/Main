@@ -100,6 +100,278 @@ local v2 = {
     }
 };
 local v5 = {
+    ["Carrot Goldfish"] = {
+        Icon = "rbxassetid://115276761742692", 
+        WeightPool = {
+            10, 
+            30
+        }, 
+        Chance = 100, 
+        Rarity = "Common", 
+        Resilience = 120, 
+        ProgressEfficiency = 1.3, 
+        Description = "A shy goldfish with a soft carrot glow and green sprouts, drifting in the murk.", 
+        Hint = "Found in the vibrant carrot pool!", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 100, 
+        XP = 100, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Carrot Goldfish!", 
+            "Shining so bright!", 
+            "Healthy!"
+        }, 
+        SparkleColor = Color3.fromRGB(76, 127, 27), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Carrot Garden", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Carrot Pufferfish"] = {
+        Icon = "rbxassetid://80728513266395", 
+        WeightPool = {
+            16, 
+            36
+        }, 
+        Chance = 85, 
+        Rarity = "Common", 
+        Resilience = 103, 
+        ProgressEfficiency = 1.25, 
+        Description = "A cute pufferfish with carrot-dusted scales and green fins, puffing in the roots.", 
+        Hint = "Found in the vibrant carrot pool!", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 500, 
+        XP = 500, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "A Carrot Pufferfish!", 
+            "Puffing up so big!", 
+            "Carrot spots galore!"
+        }, 
+        SparkleColor = Color3.fromRGB(76, 127, 27), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Carrot Garden", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Carrot Minnow"] = {
+        Icon = "rbxassetid://118960625894895", 
+        WeightPool = {
+            22, 
+            52
+        }, 
+        Chance = 70, 
+        Rarity = "Uncommon", 
+        Resilience = 86, 
+        ProgressEfficiency = 1.2, 
+        Description = "A zippy minnow with a grubby sheen and sprouting streaks, flashing through the soil.", 
+        Hint = "Found in the vibrant carrot pool!", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 1000, 
+        XP = 1000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Carrot Minnow!", 
+            "Zippy little swimmer!", 
+            "Shiny carrot glow!"
+        }, 
+        SparkleColor = Color3.fromRGB(76, 127, 27), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Carrot Garden", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Carrot Eel"] = {
+        Icon = "rbxassetid://89496014572275", 
+        WeightPool = {
+            28, 
+            58
+        }, 
+        Chance = 55, 
+        Rarity = "Uncommon", 
+        Resilience = 69, 
+        ProgressEfficiency = 1.15, 
+        Description = "A graceful eel with light-brown skin and green bands, gliding smoothly.", 
+        Hint = "Found in the vibrant carrot pool!", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 2000, 
+        XP = 2000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Carrot Eel!", 
+            "Slipping through the water!", 
+            "Carrot scales sparkle!"
+        }, 
+        SparkleColor = Color3.fromRGB(76, 127, 27), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Carrot Garden", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Carrot Salmon"] = {
+        Icon = "rbxassetid://133212550618455", 
+        WeightPool = {
+            34, 
+            84
+        }, 
+        Chance = 40, 
+        Rarity = "Rare", 
+        Resilience = 52, 
+        ProgressEfficiency = 1.1, 
+        Description = "A lively salmon with dirty tones and green flecks, swimming energetically.", 
+        Hint = "Found in the vibrant carrot pool!", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 4000, 
+        XP = 4000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Carrot Salmon!", 
+            "Leaping so high!", 
+            "Orange like a carrot!"
+        }, 
+        SparkleColor = Color3.fromRGB(76, 127, 27), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Carrot Garden", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Carrot Turtle"] = {
+        Icon = "rbxassetid://105722497808580", 
+        WeightPool = {
+            80, 
+            240
+        }, 
+        Chance = 20, 
+        Rarity = "Legendary", 
+        Resilience = 35, 
+        ProgressEfficiency = 0.65, 
+        Description = "A serene turtle with a natural green shell, ambling peacefully.", 
+        Hint = "Found in the vibrant carrot pool!", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 8000, 
+        XP = 8000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A CARROT TURTLE!", 
+            "CARROT SHELL!", 
+            "SLOW BUT STEADY!"
+        }, 
+        SparkleColor = Color3.fromRGB(76, 127, 27), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Carrot Garden", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Carrot Snapper"] = {
+        Icon = "rbxassetid://117663818734096", 
+        WeightPool = {
+            55, 
+            125
+        }, 
+        Chance = 10, 
+        Rarity = "Mythical", 
+        Resilience = 12, 
+        ProgressEfficiency = 0.8, 
+        Description = "A calm snapper with covered in dirt and natural green highlights, nibbling gently.", 
+        Hint = "Found in the vibrant carrot pool!", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 12000, 
+        XP = 12000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A CARROT SNAPPER!", 
+            "NIBBLING!", 
+            "CARROT SHINE!"
+        }, 
+        SparkleColor = Color3.fromRGB(76, 127, 27), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Carrot Garden", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
+    ["Carrot Shark"] = {
+        Icon = "rbxassetid://98516812141486", 
+        WeightPool = {
+            150, 
+            470
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 8, 
+        ProgressEfficiency = 0.2, 
+        Description = "A grand shark with a dusty carrot sheen and a growing sprout, cruising the gardens.", 
+        Hint = "???", 
+        FavouriteBait = "None", 
+        FavouriteTime = "None", 
+        Price = 15000, 
+        XP = 15000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A CARROT SHARK!!!", 
+            "GLIDING SO GRAND!!!", 
+            "A SPROUT!!!"
+        }, 
+        SparkleColor = Color3.fromRGB(76, 127, 27), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Carrot Garden", 
+        Worlds = {
+            "Sea 2"
+        }
+    }, 
     ["Moon Idol Sea 1"] = {
         Icon = "rbxassetid://140635213153226", 
         BlockPassiveCapture = true, 
@@ -9948,17 +10220,18 @@ local v5 = {
             9, 
             28
         }, 
-        Chance = 30, 
-        Rarity = "Unusual", 
-        Resilience = 200, 
+        Chance = 100, 
+        Rarity = "Common", 
+        Resilience = 100, 
         Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
-        Hint = "Caught in oceans using a crab cage.", 
+        Hint = "Caught in oceans using a lobster cage.", 
         FavouriteBait = "None", 
-        FavouriteTime = nil, 
+        FavouriteTime = "Day", 
         Price = 130, 
         XP = 60, 
         Seasons = {
-            "Summer"
+            "Summer", 
+            "Autumn"
         }, 
         Weather = {
             "Clear"
@@ -9972,7 +10245,953 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 57, 57), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        From = "Ocean"
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "lobster"
+    }, 
+    ["Ancient Lobster"] = {
+        WeightPool = {
+            200, 
+            650
+        }, 
+        Chance = 5, 
+        Rarity = "Mythical", 
+        Resilience = 20, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Night", 
+        Price = 13000, 
+        XP = 8000, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 3, 
+        UtilityType = "lobster"
+    }, 
+    Studster = {
+        WeightPool = {
+            200, 
+            650
+        }, 
+        Chance = 5, 
+        Rarity = "Mythical", 
+        Resilience = 20, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Night", 
+        Price = 13000, 
+        XP = 8000, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 3, 
+        UtilityType = "lobster"
+    }, 
+    ["Slipper Lobster"] = {
+        WeightPool = {
+            90, 
+            280
+        }, 
+        Chance = 10, 
+        Rarity = "Legendary", 
+        Resilience = 30, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 8000, 
+        XP = 6000, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 2, 
+        UtilityType = "lobster"
+    }, 
+    ["Scalloped Spiny Lobster"] = {
+        WeightPool = {
+            45, 
+            120
+        }, 
+        Chance = 30, 
+        Rarity = "Rare", 
+        Resilience = 40, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Day", 
+        Price = 2300, 
+        XP = 1200, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 2, 
+        UtilityType = "lobster"
+    }, 
+    ["Rock Lobster"] = {
+        WeightPool = {
+            20, 
+            68
+        }, 
+        Chance = 50, 
+        Rarity = "Unusual", 
+        Resilience = 70, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Night", 
+        Price = 630, 
+        XP = 360, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "lobster"
+    }, 
+    ["Lagoon Lobster"] = {
+        WeightPool = {
+            12, 
+            50
+        }, 
+        Chance = 80, 
+        Rarity = "Uncommon", 
+        Resilience = 80, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Day", 
+        Price = 430, 
+        XP = 260, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "lobster"
+    }, 
+    ["Snowcap Lobster"] = {
+        WeightPool = {
+            10, 
+            30
+        }, 
+        Chance = 45, 
+        Rarity = "Unusual", 
+        Resilience = 65, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 730, 
+        XP = 460, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "lobster"
+    }, 
+    Langoustine = {
+        WeightPool = {
+            3, 
+            10
+        }, 
+        Chance = 8, 
+        Rarity = "Legendary", 
+        Resilience = 150, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Night", 
+        Price = 9000, 
+        XP = 1500, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 3, 
+        UtilityType = "lobster"
+    }, 
+    ["Waveborne Lobster"] = {
+        WeightPool = {
+            130, 
+            480
+        }, 
+        Chance = 30, 
+        Rarity = "Rare", 
+        Resilience = 30, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Day", 
+        Price = 3000, 
+        XP = 1600, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 2, 
+        UtilityType = "lobster"
+    }, 
+    ["Spiny Sunstone Lobster"] = {
+        WeightPool = {
+            45, 
+            170
+        }, 
+        Chance = 85, 
+        Rarity = "Uncommon", 
+        Resilience = 85, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 430, 
+        XP = 220, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "lobster"
+    }, 
+    ["Terrapin Lobster"] = {
+        WeightPool = {
+            18, 
+            58
+        }, 
+        Chance = 35, 
+        Rarity = "Rare", 
+        Resilience = 28, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Night", 
+        Price = 2300, 
+        XP = 2400, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 2, 
+        UtilityType = "lobster"
+    }, 
+    ["Western Rock Lobster"] = {
+        WeightPool = {
+            19, 
+            50
+        }, 
+        Chance = 90, 
+        Rarity = "Common", 
+        Resilience = 90, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Day", 
+        Price = 120, 
+        XP = 65, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "lobster"
+    }, 
+    ["Roslit Ray Lobster"] = {
+        WeightPool = {
+            13, 
+            40
+        }, 
+        Chance = 50, 
+        Rarity = "Unusual", 
+        Resilience = 45, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 630, 
+        XP = 560, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "lobster"
+    }, 
+    ["Lobster King"] = {
+        WeightPool = {
+            900000, 
+            4000000
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 1, 
+        Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
+        Hint = "Caught in oceans using a lobster cage.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Night", 
+        Price = 120000, 
+        XP = 400000, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Larry Lobster!", 
+            "Woah! A Lobster", 
+            "Awesome!", 
+            "A Lobster!", 
+            "Ou! A Lobster!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 4, 
+        UtilityType = "lobster"
+    }, 
+    ["Azureback Haddock School"] = {
+        WeightPool = {
+            180, 
+            750
+        }, 
+        Chance = 80, 
+        Rarity = "Uncommon", 
+        Resilience = 85, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Day", 
+        Price = 430, 
+        XP = 240, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "school"
+    }, 
+    ["Blobfish School"] = {
+        WeightPool = {
+            200, 
+            880
+        }, 
+        Chance = 3, 
+        Rarity = "Exotic", 
+        Resilience = 30, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Night", 
+        Price = 18000, 
+        XP = 20000, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 4, 
+        UtilityType = "school"
+    }, 
+    ["Bluefin Tuna School"] = {
+        WeightPool = {
+            125, 
+            400
+        }, 
+        Chance = 90, 
+        Rarity = "Common", 
+        Resilience = 95, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 125, 
+        XP = 62, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "school"
+    }, 
+    ["Coralwing Guppy School"] = {
+        WeightPool = {
+            180, 
+            580
+        }, 
+        Chance = 30, 
+        Rarity = "Rare", 
+        Resilience = 35, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Day", 
+        Price = 2500, 
+        XP = 1800, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 3, 
+        UtilityType = "school"
+    }, 
+    ["Duskwave Herring School"] = {
+        WeightPool = {
+            230, 
+            620
+        }, 
+        Chance = 10, 
+        Rarity = "Legendary", 
+        Resilience = 40, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Night", 
+        Price = 9500, 
+        XP = 7500, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 3, 
+        UtilityType = "school"
+    }, 
+    ["Infernal Halibut School"] = {
+        WeightPool = {
+            250, 
+            670
+        }, 
+        Chance = 5, 
+        Rarity = "Mythical", 
+        Resilience = 20, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 14000, 
+        XP = 8000, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 3, 
+        UtilityType = "school"
+    }, 
+    ["Moonveil Salmon School"] = {
+        WeightPool = {
+            235, 
+            615
+        }, 
+        Chance = 45, 
+        Rarity = "Unusual", 
+        Resilience = 60, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Day", 
+        Price = 680, 
+        XP = 460, 
+        Seasons = {
+            "Autumn", 
+            "Winter"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "school"
+    }, 
+    ["Pufferling School"] = {
+        WeightPool = {
+            190, 
+            570
+        }, 
+        Chance = 30, 
+        Rarity = "Rare", 
+        Resilience = 35, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Night", 
+        Price = 2500, 
+        XP = 1800, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 2, 
+        UtilityType = "school"
+    }, 
+    ["Sardines School"] = {
+        WeightPool = {
+            50, 
+            350
+        }, 
+        Chance = 90, 
+        Rarity = "Common", 
+        Resilience = 95, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 125, 
+        XP = 62, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "school"
+    }, 
+    ["Seaspawn Shrimp School"] = {
+        WeightPool = {
+            350, 
+            1500
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 1, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Day", 
+        Price = 50000, 
+        XP = 30000, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 4, 
+        UtilityType = "school"
+    }, 
+    ["Shiver Swarmfish School"] = {
+        WeightPool = {
+            200, 
+            600
+        }, 
+        Chance = 45, 
+        Rarity = "Unusual", 
+        Resilience = 60, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Night", 
+        Price = 680, 
+        XP = 460, 
+        Seasons = {
+            "Winter", 
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "school"
+    }, 
+    ["Veinfin Tetra School"] = {
+        WeightPool = {
+            220, 
+            660
+        }, 
+        Chance = 80, 
+        Rarity = "Uncommon", 
+        Resilience = 85, 
+        Description = "A school of awesome fish!", 
+        Hint = "Caught in oceans using a net.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 430, 
+        XP = 240, 
+        Seasons = {
+            "Summer", 
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "Wow, that's a lot of them!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 57, 57), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Ocean", 
+        Worlds = {
+            "Sea 1", 
+            "Sea 2"
+        }, 
+        UtilityTier = 1, 
+        UtilityType = "school"
     }, 
     Coelacanth = {
         WeightPool = {
@@ -21456,8 +22675,8 @@ local v5 = {
     ["Tropical Bait Crate"] = {
         Icon = "rbxassetid://107608220521320", 
         WeightPool = {
-            5, 
-            10
+            70, 
+            70
         }, 
         Chance = 15, 
         Rarity = "Rare", 
@@ -22068,7 +23287,7 @@ local v5 = {
         Mythical = Color3.fromRGB(255, 62, 120), 
         Exotic = Color3.fromRGB(255, 255, 255), 
         Secret = Color3.fromRGB(255, 255, 255), 
-        Limited = Color3.fromRGB(54, 73, 159), 
+        Limited = Color3.fromRGB(74, 100, 217), 
         Divine = Color3.fromRGB(202, 198, 255), 
         Relic = Color3.fromRGB(120, 255, 183), 
         Fragment = Color3.fromRGB(255, 63, 5), 
