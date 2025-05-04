@@ -49,6 +49,21 @@ return {
     },
     ["Egg"] = "Iceshard Egg", 
   },
+  ["Bionic Shard"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "1550",
+      ["Gems"] = "32",
+      ["Tickets"] = "1900",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Egg"] = "Cyber Egg", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://113926773562723",
+      ["Mythic"] = "rbxassetid://91891367979946",
+      ["MythicShiny"] = "rbxassetid://112797928273116",
+      ["Shiny"] = "rbxassetid://99439972902415",
+    },
+  },
   ["Easter Egg"] = {
     ["Stats"] = {
       ["Bubbles"] = "100",
@@ -147,13 +162,13 @@ return {
       ["Coins"] = "725",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Pastel Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://78848637998928",
       ["Mythic"] = "rbxassetid://101958456373333",
       ["MythicShiny"] = "rbxassetid://125017252768987",
       ["Shiny"] = "rbxassetid://84518745196741",
     },
-    ["Egg"] = "Pastel Egg", 
   },
   ["Ice Kitty"] = {
     ["Stats"] = {
@@ -173,13 +188,13 @@ return {
       ["Coins"] = "25",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Spikey Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://117943061949912",
       ["Mythic"] = "rbxassetid://71364911907818",
       ["MythicShiny"] = "rbxassetid://76908143137824",
       ["Shiny"] = "rbxassetid://130080332987186",
     },
-    ["Egg"] = "Spikey Egg", 
   },
   ["Deer"] = {
     ["Stats"] = {
@@ -217,6 +232,18 @@ return {
       ["Shiny"] = "rbxassetid://133884608297595",
     },
     ["Egg"] = "Rainbow Egg", 
+  },
+  ["Game Doggy"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "1",
+      ["Tickets"] = "1.1",
+    },
+    ["Rarity"] = "Common", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://90643252257374",
+      ["Shiny"] = "rbxassetid://107491835763520",
+    },
+    ["Egg"] = "Showman Egg", 
   },
   ["Dark Bat"] = {
     ["Stats"] = {
@@ -356,6 +383,21 @@ return {
     },
     ["Egg"] = "Lunar Egg", 
   },
+  ["Stone Gargoyle"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "785",
+      ["Gems"] = "9",
+      ["Tickets"] = "320",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Egg"] = "Mining Egg", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://96447056752701",
+      ["Mythic"] = "rbxassetid://79313909775478",
+      ["MythicShiny"] = "rbxassetid://136984425928222",
+      ["Shiny"] = "rbxassetid://118449202987348",
+    },
+  },
   ["DOOF"] = {
     ["Stats"] = {
       ["Bubbles"] = "1350",
@@ -456,13 +498,25 @@ return {
       ["Coins"] = "3500",
     },
     ["Rarity"] = "Secret", 
+    ["Egg"] = "Bunny Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://127748776007060",
       ["Mythic"] = "rbxassetid://73135911297429",
       ["MythicShiny"] = "rbxassetid://88763393448729",
       ["Shiny"] = "rbxassetid://91266745275312",
     },
-    ["Egg"] = "Bunny Egg", 
+  },
+  ["Mining Doggy"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "24",
+      ["Coins"] = "20",
+    },
+    ["Rarity"] = "Common", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://122503117196490",
+      ["Shiny"] = "rbxassetid://79474133380060",
+    },
+    ["Egg"] = "Mining Egg", 
   },
   ["Red Golem"] = {
     ["Stats"] = {
@@ -542,6 +596,18 @@ return {
     },
     ["Egg"] = "Bunny Egg", 
   },
+  ["Ore Golem"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "135",
+      ["Tickets"] = "70",
+    },
+    ["Rarity"] = "Epic", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://83559948607250",
+      ["Shiny"] = "rbxassetid://78142132254185",
+    },
+    ["Egg"] = "Mining Egg", 
+  },
   ["Electra Hydra"] = {
     ["Stats"] = {
       ["Bubbles"] = "130",
@@ -562,13 +628,13 @@ return {
       ["Coins"] = "2000",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Bunny Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://104513918534463",
       ["Mythic"] = "rbxassetid://118889671469786",
       ["MythicShiny"] = "rbxassetid://96170721611701",
       ["Shiny"] = "rbxassetid://81866848585659",
     },
-    ["Egg"] = "Bunny Egg", 
   },
   ["Ophanim"] = {
     ["Stats"] = {
@@ -630,13 +696,13 @@ return {
       ["Coins"] = "710",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Nightmare Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://104746232435869",
       ["Mythic"] = "rbxassetid://101754597452868",
       ["MythicShiny"] = "rbxassetid://85937441131538",
       ["Shiny"] = "rbxassetid://86848062315342",
     },
-    ["Egg"] = "Nightmare Egg", 
   },
   ["Easter Fluffle"] = {
     ["Stats"] = {
@@ -658,13 +724,13 @@ return {
       ["Coins"] = "1350",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Rainbow Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://71087965379129",
       ["Mythic"] = "rbxassetid://86741891826454",
       ["MythicShiny"] = "rbxassetid://89823280118528",
       ["Shiny"] = "rbxassetid://128101936411240",
     },
-    ["Egg"] = "Rainbow Egg", 
   },
   ["Lunarcorn"] = {
     ["Stats"] = {
@@ -680,9 +746,9 @@ return {
   },
   ["Demonic Dogcat"] = {
     ["Stats"] = {
-      ["Bubbles"] = "1300",
-      ["Gems"] = "22",
-      ["Coins"] = "1800",
+      ["Bubbles"] = "2225",
+      ["Gems"] = "45",
+      ["Coins"] = "3100",
     },
     ["Rarity"] = "Legendary", 
     ["Images"] = {
@@ -698,13 +764,13 @@ return {
       ["Coins"] = "220",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Lunar Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://129923067225161",
       ["Mythic"] = "rbxassetid://128746247448355",
       ["MythicShiny"] = "rbxassetid://124361472417361",
       ["Shiny"] = "rbxassetid://71831968325737",
     },
-    ["Egg"] = "Lunar Egg", 
   },
   ["Diamond Hexarium"] = {
     ["Stats"] = {
@@ -713,13 +779,25 @@ return {
       ["Coins"] = "1600",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "100M Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://136410802303648",
       ["Mythic"] = "rbxassetid://110459647433098",
       ["MythicShiny"] = "rbxassetid://70570552386283",
       ["Shiny"] = "rbxassetid://82003997046134",
     },
-    ["Egg"] = "100M Egg", 
+  },
+  ["Cave Mole"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "75",
+      ["Tickets"] = "40",
+    },
+    ["Rarity"] = "Rare", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://93047026359490",
+      ["Shiny"] = "rbxassetid://80686832114260",
+    },
+    ["Egg"] = "Mining Egg", 
   },
   ["Magma Bear"] = {
     ["Stats"] = {
@@ -740,13 +818,13 @@ return {
       ["Coins"] = "1850",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Void Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://124799956485057",
       ["Mythic"] = "rbxassetid://134388243020695",
       ["MythicShiny"] = "rbxassetid://116241431469732",
       ["Shiny"] = "rbxassetid://132769360414533",
     },
-    ["Egg"] = "Void Egg", 
   },
   ["Panda"] = {
     ["Stats"] = {
@@ -780,13 +858,55 @@ return {
       ["Coins"] = "3500",
     },
     ["Rarity"] = "Secret", 
+    ["Egg"] = "100M Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://102016856452664",
       ["Mythic"] = "rbxassetid://71734612734368",
       ["MythicShiny"] = "rbxassetid://87743556079640",
       ["Shiny"] = "rbxassetid://103886175167440",
     },
-    ["Egg"] = "100M Egg", 
+  },
+  ["Robo Kitty"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "65",
+      ["Gems"] = "1.8",
+      ["Tickets"] = "75",
+    },
+    ["Rarity"] = "Common", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://126153630042093",
+      ["Shiny"] = "rbxassetid://126245004235143",
+    },
+    ["Egg"] = "Cyber Egg", 
+  },
+  ["Game Master"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "1850",
+      ["Gems"] = "35",
+      ["Tickets"] = "1900",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Egg"] = "Game Egg", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://120685980526060",
+      ["Mythic"] = "rbxassetid://108919908305331",
+      ["MythicShiny"] = "rbxassetid://136491378615234",
+      ["Shiny"] = "rbxassetid://126718995367861",
+    },
+    ["Tag"] = "Season 2", 
+  },
+  ["Happy Dice"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "195",
+      ["Tickets"] = "130",
+    },
+    ["Rarity"] = "Epic", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://123053322701010",
+      ["Shiny"] = "rbxassetid://111037834995435",
+    },
+    ["Egg"] = "Game Egg", 
+    ["Tag"] = "Season 2", 
   },
   ["Seraphic Bunny"] = {
     ["Stats"] = {
@@ -795,13 +915,71 @@ return {
       ["Coins"] = "550",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Bunny Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://79750206272909",
       ["Mythic"] = "rbxassetid://93333271902816",
       ["MythicShiny"] = "rbxassetid://124711616271771",
       ["Shiny"] = "rbxassetid://103392017403068",
     },
-    ["Egg"] = "Bunny Egg", 
+  },
+  ["Dice Split"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "1750",
+      ["Gems"] = "32",
+      ["Tickets"] = "1800",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://140212979301756",
+      ["Mythic"] = "rbxassetid://114639637803307",
+      ["MythicShiny"] = "rbxassetid://115097115638781",
+      ["Shiny"] = "rbxassetid://128103253336307",
+    },
+    ["Tag"] = "Dice Chest", 
+  },
+  ["Fancy Demon"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "40",
+      ["Tickets"] = "20",
+    },
+    ["Rarity"] = "Rare", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://119579347444394",
+      ["Shiny"] = "rbxassetid://118660693089214",
+    },
+    ["Egg"] = "Game Egg", 
+    ["Tag"] = "Season 2", 
+  },
+  ["Dragon Plushie"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "1850",
+      ["Gems"] = "35",
+      ["Tickets"] = "1900",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://136544071549548",
+      ["Mythic"] = "rbxassetid://126021795170370",
+      ["MythicShiny"] = "rbxassetid://82801890357724",
+      ["Shiny"] = "rbxassetid://92576218287248",
+    },
+    ["Tag"] = "Game Prize", 
+  },
+  ["Magmas"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "1700",
+      ["Gems"] = "32",
+      ["Tickets"] = "1800",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://125225288285850",
+      ["Mythic"] = "rbxassetid://80649552245148",
+      ["MythicShiny"] = "rbxassetid://107724917918022",
+      ["Shiny"] = "rbxassetid://83592309171830",
+    },
+    ["Tag"] = "Game Prize", 
   },
   ["Dark Phoenix"] = {
     ["Stats"] = {
@@ -810,13 +988,13 @@ return {
       ["Coins"] = "410",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Void Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://121879532347673",
       ["Mythic"] = "rbxassetid://98329771345437",
       ["MythicShiny"] = "rbxassetid://97837991194893",
       ["Shiny"] = "rbxassetid://96543725025034",
     },
-    ["Egg"] = "Void Egg", 
   },
   ["Kitty"] = {
     ["Stats"] = {
@@ -830,6 +1008,35 @@ return {
     },
     ["Egg"] = "Common Egg", 
   },
+  ["Ethereal Bunny"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "1075",
+      ["Gems"] = "19",
+      ["Coins"] = "1400",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Egg"] = "Bunny Egg", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://93656019204074",
+      ["Mythic"] = "rbxassetid://91749246237791",
+      ["MythicShiny"] = "rbxassetid://121742387238600",
+      ["Shiny"] = "rbxassetid://130649018220152",
+    },
+  },
+  ["Manny"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "120",
+      ["Gems"] = "1.75",
+      ["Coins"] = "145",
+    },
+    ["Rarity"] = "Rare", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://136450592953585",
+      ["Shiny"] = "rbxassetid://114012206693503",
+    },
+    ["Egg"] = "Aura Egg", 
+    ["Tag"] = "Aura", 
+  },
   ["Mouse"] = {
     ["Stats"] = {
       ["Bubbles"] = "2",
@@ -841,6 +1048,17 @@ return {
       ["Shiny"] = "rbxassetid://113473859675084",
     },
     ["Egg"] = "Spotted Egg", 
+  },
+  ["Void Fox"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "65",
+      ["Coins"] = "55",
+    },
+    ["Rarity"] = "Rare", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://103797280739577",
+      ["Shiny"] = "rbxassetid://114427178223777",
+    },
   },
   ["Angel"] = {
     ["Stats"] = {
@@ -854,6 +1072,19 @@ return {
     },
     ["Egg"] = "Crystal Egg", 
   },
+  ["Dusk"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "975",
+      ["Gems"] = "15.5",
+      ["Tickets"] = "1300",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://89066931313193",
+      ["Shiny"] = "rbxassetid://126914744556808",
+    },
+    ["Tag"] = "Season 2", 
+  },
   ["Unicorn"] = {
     ["Stats"] = {
       ["Bubbles"] = "155",
@@ -861,13 +1092,28 @@ return {
       ["Coins"] = "135",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Crystal Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://91859045003732",
       ["Mythic"] = "rbxassetid://94136688249831",
       ["MythicShiny"] = "rbxassetid://124445223953228",
       ["Shiny"] = "rbxassetid://115354210206795",
     },
-    ["Egg"] = "Crystal Egg", 
+  },
+  ["King Pufferfish"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "1475",
+      ["Gems"] = "32",
+      ["Coins"] = "2300",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Egg"] = "100M Egg", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://78891298142055",
+      ["Mythic"] = "rbxassetid://135672381979356",
+      ["MythicShiny"] = "rbxassetid://123241517588205",
+      ["Shiny"] = "rbxassetid://135162856369456",
+    },
   },
   ["Void Kitty"] = {
     ["Stats"] = {
@@ -892,6 +1138,35 @@ return {
       ["Shiny"] = "rbxassetid://139545348445279",
     },
     ["Egg"] = "Magma Egg", 
+  },
+  ["Moon Deer"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "1000",
+      ["Gems"] = "22",
+      ["Coins"] = "1250",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://120225123806435",
+      ["Mythic"] = "rbxassetid://130216478201148",
+      ["MythicShiny"] = "rbxassetid://127432657813726",
+      ["Shiny"] = "rbxassetid://90255821847608",
+    },
+    ["Egg"] = "Season 2 Egg", 
+    ["Tag"] = "Season 2", 
+  },
+  ["Starry Lamb"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "195",
+      ["Coins"] = "265",
+    },
+    ["Rarity"] = "Epic", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://129047181207186",
+      ["Shiny"] = "rbxassetid://115966365794799",
+    },
+    ["Egg"] = "Season 2 Egg", 
+    ["Tag"] = "Season 2", 
   },
   ["Holy Shock"] = {
     ["Stats"] = {
@@ -918,6 +1193,34 @@ return {
     },
     ["Egg"] = "Iceshard Egg", 
   },
+  ["Silver Fox"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "110",
+      ["Gems"] = "2.5",
+      ["Coins"] = "125",
+    },
+    ["Rarity"] = "Unique", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://122444893544859",
+      ["Shiny"] = "rbxassetid://100728204642259",
+    },
+    ["Egg"] = "100M Egg", 
+  },
+  ["Luminosity"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "3050",
+      ["Gems"] = "70",
+      ["Tickets"] = "3550",
+    },
+    ["Rarity"] = "Secret", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://124773783852927",
+      ["Mythic"] = "rbxassetid://92067317285583",
+      ["MythicShiny"] = "rbxassetid://131286750513616",
+      ["Shiny"] = "rbxassetid://132609819087086",
+    },
+    ["Tag"] = "Season 2", 
+  },
   ["Rainbow Marshmellow"] = {
     ["Stats"] = {
       ["Bubbles"] = "1250",
@@ -925,13 +1228,13 @@ return {
       ["Coins"] = "1700",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Pastel Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://99797164913127",
       ["Mythic"] = "rbxassetid://95756192435113",
       ["MythicShiny"] = "rbxassetid://93613196809607",
       ["Shiny"] = "rbxassetid://113156755564013",
     },
-    ["Egg"] = "Pastel Egg", 
   },
   ["Virus"] = {
     ["Stats"] = {
@@ -940,13 +1243,13 @@ return {
       ["Coins"] = "850",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Hell Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://110185755598723",
       ["Mythic"] = "rbxassetid://123553243933827",
       ["MythicShiny"] = "rbxassetid://79500546432529",
       ["Shiny"] = "rbxassetid://104208878857321",
     },
-    ["Egg"] = "Hell Egg", 
   },
   ["Wolf"] = {
     ["Stats"] = {
@@ -972,6 +1275,76 @@ return {
     },
     ["Egg"] = "Crystal Egg", 
   },
+  ["Inferno Cube"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "480",
+      ["Gems"] = "6",
+      ["Coins"] = "520",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Egg"] = "Hell Egg", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://118510130470134",
+      ["Mythic"] = "rbxassetid://108444291064240",
+      ["MythicShiny"] = "rbxassetid://97641653727155",
+      ["Shiny"] = "rbxassetid://79182973159304",
+    },
+  },
+  ["Cyborg Phoenix"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "630",
+      ["Gems"] = "12",
+      ["Tickets"] = "400",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Egg"] = "Cyber Egg", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://105920543929343",
+      ["Mythic"] = "rbxassetid://102380696723944",
+      ["MythicShiny"] = "rbxassetid://88293167244219",
+      ["Shiny"] = "rbxassetid://135337380770193",
+    },
+  },
+  ["Cyber Wolf"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "130",
+      ["Tickets"] = "140",
+    },
+    ["Rarity"] = "Epic", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://112519144548644",
+      ["Shiny"] = "rbxassetid://109676694882054",
+    },
+    ["Egg"] = "Cyber Egg", 
+  },
+  ["Martian Kitty"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "115",
+      ["Gems"] = "2.5",
+      ["Tickets"] = "125",
+    },
+    ["Rarity"] = "Unique", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://95865916555707",
+      ["Shiny"] = "rbxassetid://128126875255924",
+    },
+    ["Egg"] = "Cyber Egg", 
+  },
+  ["Crystal Unicorn"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "480",
+      ["Gems"] = "6",
+      ["Tickets"] = "180",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Egg"] = "Mining Egg", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://80913268248921",
+      ["Mythic"] = "rbxassetid://100717636189777",
+      ["MythicShiny"] = "rbxassetid://76169254234638",
+      ["Shiny"] = "rbxassetid://80328115583771",
+    },
+  },
   ["Neon Elemental"] = {
     ["Stats"] = {
       ["Bubbles"] = "430",
@@ -979,13 +1352,29 @@ return {
       ["Coins"] = "500",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Void Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://76900428773295",
       ["Mythic"] = "rbxassetid://98823105797670",
       ["MythicShiny"] = "rbxassetid://115321521110239",
       ["Shiny"] = "rbxassetid://75299135501237",
     },
-    ["Egg"] = "Void Egg", 
+  },
+  ["Jackpot"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "3050",
+      ["Gems"] = "70",
+      ["Tickets"] = "3550",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Egg"] = "Game Egg", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://127110172492221",
+      ["Mythic"] = "rbxassetid://124077171526182",
+      ["MythicShiny"] = "rbxassetid://103074564849082",
+      ["Shiny"] = "rbxassetid://116720210619976",
+    },
+    ["Tag"] = "Season 2", 
   },
   ["Paper Doggy"] = {
     ["Stats"] = {
@@ -998,6 +1387,22 @@ return {
       ["Shiny"] = "rbxassetid://107372964901806",
     },
     ["Egg"] = "Pastel Egg", 
+  },
+  ["Nebula"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "1850",
+      ["Gems"] = "35",
+      ["Coins"] = "2450",
+    },
+    ["Rarity"] = "Legendary", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://131132006061222",
+      ["Mythic"] = "rbxassetid://123429576754180",
+      ["MythicShiny"] = "rbxassetid://85080452280244",
+      ["Shiny"] = "rbxassetid://118971288564521",
+    },
+    ["Egg"] = "Season 2 Egg", 
+    ["Tag"] = "Season 2", 
   },
   ["Magma Fox"] = {
     ["Stats"] = {
@@ -1073,6 +1478,18 @@ return {
     },
     ["Tag"] = "Exclusive Pet", 
   },
+  ["Queen of Hearts"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "2",
+      ["Tickets"] = "2",
+    },
+    ["Rarity"] = "Rare", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://129024054398763",
+      ["Shiny"] = "rbxassetid://130641327270296",
+    },
+    ["Egg"] = "Showman Egg", 
+  },
   ["Godly Gem"] = {
     ["Stats"] = {
       ["Bubbles"] = "3200",
@@ -1080,13 +1497,28 @@ return {
       ["Coins"] = "3750",
     },
     ["Rarity"] = "Secret", 
+    ["Egg"] = "Throwback Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://135660573331096",
       ["Mythic"] = "rbxassetid://79962120420648",
       ["MythicShiny"] = "rbxassetid://126464346470111",
       ["Shiny"] = "rbxassetid://131352042214414",
     },
+  },
+  ["Easter Serpent"] = {
+    ["Stats"] = {
+      ["Bubbles"] = "550",
+      ["Gems"] = "10",
+      ["Coins"] = "600",
+    },
+    ["Rarity"] = "Legendary", 
     ["Egg"] = "Throwback Egg", 
+    ["Images"] = {
+      ["Normal"] = "rbxassetid://98938067959398",
+      ["Mythic"] = "rbxassetid://128879026211802",
+      ["MythicShiny"] = "rbxassetid://114527045780663",
+      ["Shiny"] = "rbxassetid://125443598339397",
+    },
   },
   ["Overseer"] = {
     ["Stats"] = {
@@ -1203,20 +1635,17 @@ return {
     },
     ["Tag"] = "Reward Pet", 
   },
-  ["King Pufferfish"] = {
+  ["Mining Bat"] = {
     ["Stats"] = {
-      ["Bubbles"] = "1475",
-      ["Gems"] = "32",
-      ["Coins"] = "2300",
+      ["Bubbles"] = "45",
+      ["Tickets"] = "25",
     },
-    ["Rarity"] = "Legendary", 
+    ["Rarity"] = "Unique", 
     ["Images"] = {
-      ["Normal"] = "rbxassetid://78891298142055",
-      ["Mythic"] = "rbxassetid://135672381979356",
-      ["MythicShiny"] = "rbxassetid://123241517588205",
-      ["Shiny"] = "rbxassetid://135162856369456",
+      ["Normal"] = "rbxassetid://112786499042328",
+      ["Shiny"] = "rbxassetid://119531912421769",
     },
-    ["Egg"] = "100M Egg", 
+    ["Egg"] = "Mining Egg", 
   },
   ["Infernus"] = {
     ["Stats"] = {
@@ -1277,13 +1706,13 @@ return {
       ["Coins"] = "625",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "100M Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://72409952288287",
       ["Mythic"] = "rbxassetid://129721201697549",
       ["MythicShiny"] = "rbxassetid://76876858250583",
       ["Shiny"] = "rbxassetid://133778634002878",
     },
-    ["Egg"] = "100M Egg", 
   },
   ["Judgement"] = {
     ["Stats"] = {
@@ -1354,18 +1783,18 @@ return {
     },
     ["Egg"] = "100M Egg", 
   },
-  ["Silver Fox"] = {
+  ["Sleepy Bunny"] = {
     ["Stats"] = {
-      ["Bubbles"] = "110",
-      ["Gems"] = "2.5",
-      ["Coins"] = "125",
+      ["Bubbles"] = "40",
+      ["Coins"] = "20",
     },
-    ["Rarity"] = "Unique", 
+    ["Rarity"] = "Rare", 
     ["Images"] = {
-      ["Normal"] = "rbxassetid://122444893544859",
-      ["Shiny"] = "rbxassetid://100728204642259",
+      ["Normal"] = "rbxassetid://116722260024080",
+      ["Shiny"] = "rbxassetid://80968988528542",
     },
-    ["Egg"] = "100M Egg", 
+    ["Egg"] = "Season 2 Egg", 
+    ["Tag"] = "Season 2", 
   },
   ["Golden Golem"] = {
     ["Stats"] = {
@@ -1448,13 +1877,13 @@ return {
       ["Coins"] = "2200",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Throwback Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://122905176769988",
       ["Mythic"] = "rbxassetid://98349954814824",
       ["MythicShiny"] = "rbxassetid://94212506544352",
       ["Shiny"] = "rbxassetid://96405481047772",
     },
-    ["Egg"] = "Throwback Egg", 
   },
   ["Crescent Empress"] = {
     ["Stats"] = {
@@ -1471,20 +1900,17 @@ return {
     },
     ["Tag"] = "Season 1", 
   },
-  ["Easter Serpent"] = {
+  ["Gamer Boi"] = {
     ["Stats"] = {
-      ["Bubbles"] = "550",
-      ["Gems"] = "10",
-      ["Coins"] = "600",
+      ["Bubbles"] = "1",
+      ["Tickets"] = "1.5",
     },
-    ["Rarity"] = "Legendary", 
+    ["Rarity"] = "Common", 
     ["Images"] = {
-      ["Normal"] = "rbxassetid://98938067959398",
-      ["Mythic"] = "rbxassetid://128879026211802",
-      ["MythicShiny"] = "rbxassetid://114527045780663",
-      ["Shiny"] = "rbxassetid://125443598339397",
+      ["Normal"] = "rbxassetid://126142834628447",
+      ["Shiny"] = "rbxassetid://72474674070189",
     },
-    ["Egg"] = "Throwback Egg", 
+    ["Egg"] = "Showman Egg", 
   },
   ["Competitor Doggy"] = {
     ["Stats"] = {
@@ -1506,13 +1932,13 @@ return {
       ["Coins"] = "3300",
     },
     ["Rarity"] = "Secret", 
+    ["Egg"] = "Common Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://90180258328030",
       ["Mythic"] = "rbxassetid://129866994329896",
       ["MythicShiny"] = "rbxassetid://137302375759932",
       ["Shiny"] = "rbxassetid://122886742812315",
     },
-    ["Egg"] = "Common Egg", 
   },
   ["Lunar Fox"] = {
     ["Stats"] = {
@@ -1541,20 +1967,20 @@ return {
     },
     ["Tag"] = "Rift Chest", 
   },
-  ["Ethereal Bunny"] = {
+  ["Mech Robot"] = {
     ["Stats"] = {
-      ["Bubbles"] = "1075",
-      ["Gems"] = "19",
-      ["Coins"] = "1400",
+      ["Bubbles"] = "3000",
+      ["Gems"] = "65",
+      ["Tickets"] = "3500",
     },
-    ["Rarity"] = "Legendary", 
+    ["Rarity"] = "Secret", 
+    ["Egg"] = "Cyber Egg", 
     ["Images"] = {
-      ["Normal"] = "rbxassetid://93656019204074",
-      ["Mythic"] = "rbxassetid://91749246237791",
-      ["MythicShiny"] = "rbxassetid://121742387238600",
-      ["Shiny"] = "rbxassetid://130649018220152",
+      ["Normal"] = "rbxassetid://130370519146743",
+      ["Mythic"] = "rbxassetid://89902348379892",
+      ["MythicShiny"] = "rbxassetid://129610761607639",
+      ["Shiny"] = "rbxassetid://119284114227733",
     },
-    ["Egg"] = "Bunny Egg", 
   },
   ["Fox"] = {
     ["Stats"] = {
@@ -1621,24 +2047,26 @@ return {
       ["Coins"] = "65",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Magma Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://134572455978352",
       ["Mythic"] = "rbxassetid://80035682832524",
       ["MythicShiny"] = "rbxassetid://94747349710125",
       ["Shiny"] = "rbxassetid://89388252512800",
     },
-    ["Egg"] = "Magma Egg", 
   },
-  ["Void Fox"] = {
+  ["Dawn"] = {
     ["Stats"] = {
-      ["Bubbles"] = "65",
-      ["Coins"] = "55",
+      ["Bubbles"] = "1050",
+      ["Gems"] = "18",
+      ["Tickets"] = "1400",
     },
-    ["Rarity"] = "Rare", 
+    ["Rarity"] = "Legendary", 
     ["Images"] = {
-      ["Normal"] = "rbxassetid://103797280739577",
-      ["Shiny"] = "rbxassetid://114427178223777",
+      ["Normal"] = "rbxassetid://129676752705804",
+      ["Shiny"] = "rbxassetid://115221531612569",
     },
+    ["Tag"] = "Season 2", 
   },
   ["Hacker Prism"] = {
     ["Stats"] = {
@@ -1720,13 +2148,13 @@ return {
       ["Coins"] = "4250",
     },
     ["Rarity"] = "Secret", 
+    ["Egg"] = "Throwback Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://83620183601359",
       ["Mythic"] = "rbxassetid://90646637371519",
       ["MythicShiny"] = "rbxassetid://126118689750116",
       ["Shiny"] = "rbxassetid://70395978006731",
     },
-    ["Egg"] = "Throwback Egg", 
   },
   ["Egg Bunny"] = {
     ["Stats"] = {
@@ -1763,13 +2191,13 @@ return {
       ["Coins"] = "1550",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Throwback Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://101605071887404",
       ["Mythic"] = "rbxassetid://82858029797469",
       ["MythicShiny"] = "rbxassetid://85766838746496",
       ["Shiny"] = "rbxassetid://93628728332738",
     },
-    ["Egg"] = "Throwback Egg", 
   },
   ["Lunar Deity"] = {
     ["Stats"] = {
@@ -1805,27 +2233,28 @@ return {
       ["Coins"] = "3100",
     },
     ["Rarity"] = "Secret", 
+    ["Egg"] = "Pastel Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://78405356893234",
       ["Mythic"] = "rbxassetid://83862207009106",
       ["MythicShiny"] = "rbxassetid://91793667211055",
       ["Shiny"] = "rbxassetid://121098504222130",
     },
-    ["Egg"] = "Pastel Egg", 
   },
-  ["Manny"] = {
+  ["Moonlight"] = {
     ["Stats"] = {
-      ["Bubbles"] = "120",
-      ["Gems"] = "1.75",
-      ["Coins"] = "145",
+      ["Bubbles"] = "1325",
+      ["Gems"] = "23",
+      ["Tickets"] = "850",
     },
-    ["Rarity"] = "Rare", 
+    ["Rarity"] = "Legendary", 
     ["Images"] = {
-      ["Normal"] = "rbxassetid://136450592953585",
-      ["Shiny"] = "rbxassetid://114012206693503",
+      ["Normal"] = "rbxassetid://105329662848956",
+      ["Mythic"] = "rbxassetid://89913946001230",
+      ["MythicShiny"] = "rbxassetid://101837907789199",
+      ["Shiny"] = "rbxassetid://89009838742526",
     },
-    ["Egg"] = "Aura Egg", 
-    ["Tag"] = "Aura", 
+    ["Tag"] = "Season 2", 
   },
   ["Rainbow Shock"] = {
     ["Stats"] = {
@@ -1834,13 +2263,13 @@ return {
       ["Coins"] = "1700",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Rainbow Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://80342299362434",
       ["Mythic"] = "rbxassetid://119992028070509",
       ["MythicShiny"] = "rbxassetid://136701671381708",
       ["Shiny"] = "rbxassetid://139624175007925",
     },
-    ["Egg"] = "Rainbow Egg", 
   },
   ["The Overlord"] = {
     ["Stats"] = {
@@ -1849,13 +2278,13 @@ return {
       ["Coins"] = "2900",
     },
     ["Rarity"] = "Secret", 
+    ["Egg"] = "Nightmare Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://81862077296078",
       ["Mythic"] = "rbxassetid://82077340381689",
       ["MythicShiny"] = "rbxassetid://112536702440306",
       ["Shiny"] = "rbxassetid://116109471846939",
     },
-    ["Egg"] = "Nightmare Egg", 
   },
   ["Golem"] = {
     ["Stats"] = {
@@ -1876,28 +2305,28 @@ return {
       ["Coins"] = "1200",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Nightmare Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://121007330211533",
       ["Mythic"] = "rbxassetid://94069598639630",
       ["MythicShiny"] = "rbxassetid://85260875883743",
       ["Shiny"] = "rbxassetid://121831852984011",
     },
-    ["Egg"] = "Nightmare Egg", 
   },
-  ["Inferno Cube"] = {
+  ["Space Invader"] = {
     ["Stats"] = {
-      ["Bubbles"] = "480",
-      ["Gems"] = "6",
-      ["Coins"] = "520",
+      ["Bubbles"] = "1325",
+      ["Gems"] = "23",
+      ["Tickets"] = "850",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Cyber Egg", 
     ["Images"] = {
-      ["Normal"] = "rbxassetid://118510130470134",
-      ["Mythic"] = "rbxassetid://108444291064240",
-      ["MythicShiny"] = "rbxassetid://97641653727155",
-      ["Shiny"] = "rbxassetid://79182973159304",
+      ["Normal"] = "rbxassetid://119797844957100",
+      ["Mythic"] = "rbxassetid://120374926099633",
+      ["MythicShiny"] = "rbxassetid://79347814813084",
+      ["Shiny"] = "rbxassetid://96247663419252",
     },
-    ["Egg"] = "Hell Egg", 
   },
   ["Inferno Demon"] = {
     ["Stats"] = {
@@ -1942,13 +2371,13 @@ return {
       ["Coins"] = "395",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Lunar Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://116500311179740",
       ["Mythic"] = "rbxassetid://138345556062231",
       ["MythicShiny"] = "rbxassetid://76505798639885",
       ["Shiny"] = "rbxassetid://138951170227797",
     },
-    ["Egg"] = "Lunar Egg", 
   },
   ["Flying Pig"] = {
     ["Stats"] = {
@@ -1957,12 +2386,12 @@ return {
       ["Coins"] = "310",
     },
     ["Rarity"] = "Legendary", 
+    ["Egg"] = "Crystal Egg", 
     ["Images"] = {
       ["Normal"] = "rbxassetid://118299916052281",
       ["Mythic"] = "rbxassetid://79498492070152",
       ["MythicShiny"] = "rbxassetid://132959504112054",
       ["Shiny"] = "rbxassetid://108822579247381",
     },
-    ["Egg"] = "Crystal Egg", 
   },
 }
