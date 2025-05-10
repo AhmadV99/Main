@@ -26,45 +26,16 @@ local FuncsV4 = {} do
       Callback = Callback
     })
   end
-   
+
   function FuncsV4:Dropdown(Tab, Name, Content, Multi, Options, Default, Saver, Callback)
-    Name = typeof(Name) == "string" and Name or ""
-    Content = typeof(Content) == "string" and Content or ""
-    Multi = typeof(Multi) == "boolean" and Multi or false
-    Saver = typeof(Saver) == "boolean" and Saver or false
-    Callback = typeof(Callback) == "function" and Callback or function() end
-    
-    if typeof(Options) == "string" then
-      Options = { Options }
- 
-    elseif typeof(Options) == "table" then
-      local Fixed = {}
-
-      for i, v in pairs(Options) do
-        if typeof(i) == "string" and typeof(v) == "string" then
-          table.insert(Fixed, v)
-        elseif typeof(i) == "number" and typeof(v) == "string" then
-          table.insert(Fixed, v)
-        end
-      end
-
-      Options = fixed
-    else
-      Options = {}
-    end
-
-    if Multi then
-      if typeof(Default) == "string" then
-        Default = { Default }
-      elseif typeof(Default) ~= "table" then
-        Default = {}
-      end
-    else
-      if typeof(Default) ~= "string" then
-        Default = Options[1] or ""
-      end
-    end
-
+    Name = Name or ""
+    Content = Content or ""
+    Multi = Multi or false
+    Options = Options or {}
+    Default = Default or {}
+    Saver = Saver or false
+    Callback = Callback or function() end
+  
     return Tab:AddDropdown({
       Title = Name,
       Content = Content,
