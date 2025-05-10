@@ -35,14 +35,10 @@ local FuncsV4 = {} do
     Saver = Saver or false
     Callback = Callback or function() end
 
-  if Multi then
-    if type(Default) ~= "table" then
-      Default = {}
-    end
+        if Multi then
+    Default = typeof(Default) == "table" and Default or {}
   else
-    if type(Default) ~= "string" then
-      Default = Options[1] or {}
-    end
+    Default = typeof(Default) == "string" and Default or Options[1] or ""
   end
 
     return Tab:AddDropdown({
