@@ -32,10 +32,15 @@ local FuncsV4 = {} do
     Content = Content or ""
     Multi = Multi or false
     Options = Options or {}
-    Default = Default or {}
     Saver = Saver or false
     Callback = Callback or function() end
-  
+
+    if Multi and type(Default) ~= "table" then
+      Default = { Default }
+    elseif not Multi and type(Default) ~= "string" then
+      Default = Options[1] or ""
+    end
+
     return Tab:AddDropdown({
       Title = Name,
       Content = Content,
