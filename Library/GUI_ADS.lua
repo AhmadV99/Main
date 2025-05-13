@@ -6,7 +6,7 @@ local ExitButton = Instance.new("TextButton")
 local WaitButton = Instance.new("TextButton")
 
 ScreenGui.Name = "AdsGui"
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = (gethui() or cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui"))
 ScreenGui.ResetOnSpawn = false
 
 AdFrame.Name = "AdFrame"
