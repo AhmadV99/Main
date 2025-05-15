@@ -61,7 +61,7 @@ end)
 
 CopyButton.MouseButton1Click:Connect(function()
     if setclipboard then
-        setclipboard("https://discord.gg/speedhubx")
+        setclipboard("https://discord.gg/md5WNwbW9v")
         task.wait()
         CopyButton.Text = "Copied To Discord Link"
         task.wait(0.6)
