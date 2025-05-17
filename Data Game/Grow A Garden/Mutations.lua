@@ -31,4 +31,16 @@ return {
     ["Name"] = "Shocked",
     ["ValueMulti"] = 100,
   },
+  ["Bloodlit"] = {
+    ["Name"] = "Bloodlit",
+    ["ValueMulti"] = 4,
+  },
+    ["Zombified"] = {
+    ["Name"] = "Zombified",
+    ["ValueMulti"] = 25,
+  },
+    ["Celestial"] = {
+    ["Name"] = "Celestial",
+    ["ValueMulti"] = 120,
+  },
 }
