@@ -14,8 +14,8 @@ function Connection:Connect(Callback)
   table.insert(self._Callbacks, Callback)
 
   return function()
-    for i, _CallBack in ipairs(self._Callbacks) do
-      if _CallBack == Callback then
+    for i, _Callback in ipairs(self._Callbacks) do
+      if _Callback == Callback then
         table.remove(self._Callbacks, i)
         break
       end
@@ -26,7 +26,6 @@ end
 function Connection:Set(NewVal)
   if self._Value ~= NewVal then
     self._Value = NewVal
-    
     for _, Callback in ipairs(self._Callbacks) do
       Callback(NewVal)
     end
