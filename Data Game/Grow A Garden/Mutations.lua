@@ -1,4 +1,4 @@
-local MutationData = {
+return {
   ["Chilled"] = {
     Name = "Chilled",
     ValueMulti = 2,
