@@ -2,11 +2,9 @@ local Connection = {}
 Connection.__index = Connection
 
 function Connection.new(Val)
-  local New = setmetatable({}, {
-    _Value = Val or false,
-    _Callbacks = {}
-  })
-
+  local New = setmetatable({}, Connection)
+  New._Value = Val or false
+  New._Callbacks = {}
   return New
 end
 
