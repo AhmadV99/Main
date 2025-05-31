@@ -986,6 +986,155 @@ return {
         }, 
         States = {}
     }, 
+    Bee = {
+        Description = "Pollinator: Occasionally pollinates fruit", 
+        Actions = {}, 
+        Model = l_PetAssets_0:FindFirstChild("Bee"), 
+        DefaultHunger = 25000, 
+        WeldOffset = CFrame.Angles(0, 1.5707963267948966, -3.141592653589793), 
+        ToolWeldOffset = true, 
+        ModelScalePerLevel = 0.005, 
+        Icon = "rbxassetid://114116135745614", 
+        HungerFruitMultipliers = {}, 
+        MovementType = "Flight", 
+        MovementSpeed = 9, 
+        SellPrice = 400000, 
+        Rarity = "Uncommon", 
+        Passives = {
+            "Pollinator"
+        }, 
+        YHeightScaler = 0.2, 
+        Animations = {
+            Idle = l_PetAnimations_0.Bee.Idle, 
+            Walk = l_PetAnimations_0.Bee.Walk, 
+            Pollinate = l_PetAnimations_0.Bee.Pollinate
+        }
+    }, 
+    ["Honey Bee"] = {
+        Description = "Beeter Pollinator: Occasionally pollinates fruit", 
+        Actions = {}, 
+        Model = l_PetAssets_0:FindFirstChild("Bee"), 
+        Variant = "Honey Bee", 
+        DefaultHunger = 25000, 
+        WeldOffset = CFrame.Angles(0, 1.5707963267948966, -3.141592653589793), 
+        ToolWeldOffset = true, 
+        ModelScalePerLevel = 0.005, 
+        Icon = "rbxassetid://134999468799162", 
+        HungerFruitMultipliers = {}, 
+        MovementType = "Flight", 
+        MovementSpeed = 9, 
+        SellPrice = 800000, 
+        Rarity = "Rare", 
+        Passives = {
+            "Beeter Pollinator"
+        }, 
+        YHeightScaler = 0.2, 
+        Animations = {
+            Idle = l_PetAnimations_0.Bee.Idle, 
+            Walk = l_PetAnimations_0.Bee.Walk, 
+            Pollinate = l_PetAnimations_0.Bee.Pollinate
+        }
+    }, 
+    ["Petal Bee"] = {
+        Description = "Pollinator: Occasionally pollinates fruit & Flower Harvest: Harvested flowers have a chance to stay", 
+        Actions = {}, 
+        Model = l_PetAssets_0:FindFirstChild("Bee"), 
+        Variant = "Petal Bee", 
+        DefaultHunger = 25000, 
+        WeldOffset = CFrame.Angles(0, 1.5707963267948966, -3.141592653589793), 
+        ToolWeldOffset = true, 
+        ModelScalePerLevel = 0.005, 
+        Icon = "rbxassetid://137924182648564", 
+        HungerFruitMultipliers = {}, 
+        MovementType = "Flight", 
+        MovementSpeed = 9, 
+        SellPrice = 1000000, 
+        Rarity = "Legendary", 
+        Passives = {
+            "Pollinator", 
+            "Flower Harvest"
+        }, 
+        YHeightScaler = 0.03, 
+        Animations = {
+            Idle = l_PetAnimations_0.Bee.Idle, 
+            Walk = l_PetAnimations_0.Bee.Walk, 
+            Pollinate = l_PetAnimations_0.Bee.Pollinate
+        }
+    }, 
+    ["Golden Bee"] = {
+        Description = "Pollinator: Occasionally pollinates fruit & Golden Harvest: Harvested fruit has a chance to turn to gold", 
+        Actions = {}, 
+        Model = l_PetAssets_0:FindFirstChild("Bee"), 
+        Variant = "Golden Bee", 
+        DefaultHunger = 25000, 
+        WeldOffset = CFrame.Angles(0, 1.5707963267948966, -3.141592653589793), 
+        ToolWeldOffset = true, 
+        ModelScalePerLevel = 0.005, 
+        Icon = "rbxassetid://125658111834879", 
+        HungerFruitMultipliers = {}, 
+        MovementType = "Flight", 
+        MovementSpeed = 9, 
+        SellPrice = 1000000, 
+        Rarity = "Mythical", 
+        Passives = {
+            "Pollinator", 
+            "Golden Harvest"
+        }, 
+        YHeightScaler = 0.03, 
+        Animations = {
+            Idle = l_PetAnimations_0.Bee.Idle, 
+            Walk = l_PetAnimations_0.Bee.Walk, 
+            Pollinate = l_PetAnimations_0.Bee.Pollinate
+        }
+    }, 
+    ["Bear Bee"] = {
+        Description = "Wanna-Bee: Occasionally tries to pollinate fruit, but it just ends up being Honey-Glazed", 
+        Actions = {}, 
+        Model = l_PetAssets_0:FindFirstChild("Bear Bee"), 
+        DefaultHunger = 45000, 
+        WeldOffset = CFrame.Angles(0, -1.5707963267948966, 1.5707963267948966), 
+        ModelScalePerLevel = 0.005, 
+        Icon = "rbxassetid://97465846056354", 
+        HungerFruitMultipliers = {}, 
+        MovementType = "Grounded", 
+        MovementSpeed = 8, 
+        SellPrice = 4000000, 
+        Rarity = "Mythical", 
+        Passives = {
+            "Wanna-Bee"
+        }, 
+        YHeightScaler = 0.35, 
+        Animations = {
+            Idle = l_PetAnimations_0.BearBee.Idle, 
+            Walk = l_PetAnimations_0.BearBee.Walk, 
+            Sit = l_PetAnimations_0.BearBee.Sit
+        }
+    }, 
+    ["Queen Bee"] = {
+        Description = "Queen Pollinator: Occasionally pollinates fruit instantly & For the Queen: Occasionally refrehes a random pet's ability", 
+        Actions = {}, 
+        Model = l_PetAssets_0:FindFirstChild("Queen Bee"), 
+        DefaultHunger = 65000, 
+        WeldOffset = CFrame.Angles(0, 1.5707963267948966, -2.530727415391778), 
+        ToolWeldOffset = true, 
+        ModelScalePerLevel = 0.005, 
+        Icon = "rbxassetid://127281358672581", 
+        HungerFruitMultipliers = {}, 
+        MovementType = "Flight", 
+        MovementSpeed = 5, 
+        SellPrice = 8000000, 
+        Rarity = "Divine", 
+        Passives = {
+            "Queen Pollinator", 
+            "For the Queen"
+        }, 
+        YHeightScaler = 10, 
+        Animations = {
+            Idle = l_PetAnimations_0.QueenBee.Idle, 
+            Walk = l_PetAnimations_0.QueenBee.Walk, 
+            Spin = l_PetAnimations_0.QueenBee.Spin
+        }
+    }, 
     Firefly = {
         Description = "Lightning Bug: Occasionally strikes a random nearby fruit, with a small chance of turning it Shocked", 
         Actions = {}, 
