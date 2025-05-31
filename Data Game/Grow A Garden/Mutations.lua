@@ -64,4 +64,19 @@ return {
     ValueMulti = 5,
     Color = Color3.fromRGB(208, 43, 137)
   },
+  ["Voidtouched"] = {
+    Name = "Voidtouched",
+    ValueMulti = 135,
+    Color = Color3.fromRGB(225, 0, 255)
+  },
+  ["HoneyGlazed"] = {
+    Name = "HoneyGlazed",
+    ValueMulti = 5,
+    Color = Color3.fromRGB(255, 204, 0)
+  },
+  ["Pollinated"] = {
+    Name = "Pollinated",
+    ValueMulti = 3,
+    Color = Color3.fromRGB(255, 170, 0)
+  },
 }
