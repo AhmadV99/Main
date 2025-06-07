@@ -79,4 +79,19 @@ return {
     ValueMulti = 3,
     Color = Color3.fromRGB(255, 170, 0)
   },
+  ["Windstruck"] = {
+    Name = "Windstruck",
+    ValueMulti = 5,
+    Color = Color3.fromRGB(255, 170, 0)
+  },
+  ["Dawnbound"] = {
+    Name = "Dawnbound",
+    ValueMulti = 5,
+    Color = Color3.fromRGB(255, 170, 0)
+  },
+  ["Heavenly"] = {
+    Name = "Heavenly",
+    ValueMulti = 5,
+    Color = Color3.fromRGB(255, 170, 0)
+  },
 }
