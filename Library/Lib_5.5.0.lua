@@ -1,6 +1,6 @@
-local message = Instance.new("Message", workspace)
+--[[local message = Instance.new("Message", workspace)
 message.Text = "Hello\nPlease Join Our New Server, More Updates / Supports\nDiscord: discord.gg/speedhubx (Copied)"
-setclipboard("discord.gg/speedhubx")
+setclipboard("discord.gg/speedhubx")]]
 
 -- This file was protected using Luraph Obfuscator v14.4.1 [https://lura.ph/]
 
