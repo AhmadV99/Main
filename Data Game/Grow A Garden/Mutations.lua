@@ -94,4 +94,9 @@ return {
     ValueMulti = 5,
     Color = Color3.fromRGB(255, 170, 0)
   },
+  ["Molten"] = {
+    Name = "Molten",
+    ValueMulti = 5,
+    Color = Color3.fromRGB(255, 170, 0)
+  },
 }
