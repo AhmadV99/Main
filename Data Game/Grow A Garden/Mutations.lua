@@ -16,7 +16,7 @@ return {
   },
   ["Burnt"] = {
     Name = "Burnt",
-    ValueMulti = 5,
+    ValueMulti = 4,
     Color = Color3.fromRGB(40, 40, 40)
   },
   ["Choc"] = {
@@ -86,7 +86,7 @@ return {
   },
   ["Dawnbound"] = {
     Name = "Dawnbound",
-    ValueMulti = 5,
+    ValueMulti = 150,
     Color = Color3.fromRGB(255, 170, 0)
   },
   ["Heavenly"] = {
@@ -96,7 +96,7 @@ return {
   },
   ["Molten"] = {
     Name = "Molten",
-    ValueMulti = 5,
+    ValueMulti = 25,
     Color = Color3.fromRGB(255, 170, 0)
   },
 }
