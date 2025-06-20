@@ -99,4 +99,14 @@ return {
     ValueMulti = 25,
     Color = Color3.fromRGB(255, 170, 0)
   },
+  ["Meteoric"] = {
+    Name = "Meteoric",
+    ValueMulti = 125,
+    Color = Color3.fromRGB(73, 29, 193)
+  },
+  ["Cooked"] = {
+    Name = "Cooked",
+    ValueMulti = 10,
+    Color = Color3.fromRGB(210, 120, 60)
+  },
 }
