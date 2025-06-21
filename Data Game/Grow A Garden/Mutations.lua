@@ -109,4 +109,29 @@ return {
     ValueMulti = 10,
     Color = Color3.fromRGB(210, 120, 60)
   },
+  ["Paradisal"] = {
+    Name = "Paradisal",
+    ValueMulti = 18,
+    Color = Color3.fromRGB(176, 240, 0)
+  },
+  ["Verdant"] = {
+    Name = "Verdant",
+    ValueMulti = 4,
+    Color = Color3.fromRGB(34, 139, 34)
+  },
+  ["Sundried"] = {
+    Name = "Sundried",
+    ValueMulti = 85,
+    Color = Color3.fromRGB(207, 93, 0)
+  },
+  ["Galactic"] = {
+    Name = "Galactic",
+    ValueMulti = 120,
+    Color = Color3.fromRGB(243, 148, 255)
+  },
+  ["Alienlike"] = {
+    Name = "Alienlike",
+    ValueMulti = 100,
+    Color = Color3.fromRGB(0, 223, 197)
+  },
 }
