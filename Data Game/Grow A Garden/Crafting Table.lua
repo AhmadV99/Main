@@ -1,4 +1,4 @@
-{
+return {
   ["Sweet Soaker Sprinkler"] = {
     ["Inputs"] = {
       [1] = {
