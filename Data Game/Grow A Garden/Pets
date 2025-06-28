@@ -23,6 +23,9 @@ return {
   ["Crab"] = {
     ["DefaultHunger"] = 3000
   },
+  ["Meerkat"] = {
+    ["DefaultHunger"] = 22000
+  },
   ["Toucan"] = {
     ["DefaultHunger"] = 9000
   },
@@ -95,6 +98,9 @@ return {
   ["Cooked Owl"] = {
     ["DefaultHunger"] = 50000
   },
+  ["Axolotl"] = {
+    ["DefaultHunger"] = 22000
+  },
   ["Red Dragon"] = {
     ["DefaultHunger"] = 10000
   },
@@ -122,17 +128,29 @@ return {
   ["Moth"] = {
     ["DefaultHunger"] = 25000
   },
+  ["Golden Bee"] = {
+    ["DefaultHunger"] = 25000
+  },
+  ["Firefly"] = {
+    ["DefaultHunger"] = 25000
+  },
   ["Night Owl"] = {
     ["DefaultHunger"] = 50000
   },
-  ["Golden Bee"] = {
+  ["Hamster"] = {
+    ["DefaultHunger"] = 15000
+  },
+  ["Fennec Fox"] = {
+    ["DefaultHunger"] = 35000
+  },
+  ["Bee"] = {
     ["DefaultHunger"] = 25000
   },
   ["Peacock"] = {
     ["DefaultHunger"] = 19000
   },
-  ["Firefly"] = {
-    ["DefaultHunger"] = 25000
+  ["Sand Snake"] = {
+    ["DefaultHunger"] = 28000
   },
   ["Giant Ant"] = {
     ["DefaultHunger"] = 18000
@@ -164,8 +182,8 @@ return {
   ["Wasp"] = {
     ["DefaultHunger"] = 28000
   },
-  ["Bee"] = {
-    ["DefaultHunger"] = 25000
+  ["Hyacinth Macaw"] = {
+    ["DefaultHunger"] = 12000
   },
   ["Orange Tabby"] = {
     ["DefaultHunger"] = 1500
