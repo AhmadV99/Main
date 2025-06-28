@@ -81,7 +81,7 @@ return {
   },
   ["Windstruck"] = {
     Name = "Windstruck",
-    ValueMulti = 5,
+    ValueMulti = 2,
     Color = Color3.fromRGB(255, 170, 0)
   },
   ["Dawnbound"] = {
@@ -111,7 +111,7 @@ return {
   },
   ["Paradisal"] = {
     Name = "Paradisal",
-    ValueMulti = 18,
+    ValueMulti = 100,
     Color = Color3.fromRGB(176, 240, 0)
   },
   ["Verdant"] = {
@@ -133,5 +133,30 @@ return {
     Name = "Alienlike",
     ValueMulti = 100,
     Color = Color3.fromRGB(0, 223, 197)
+  },
+  ["Cloudtouched"] = {
+    Name = "Cloudtouched",
+    ValueMulti = 5,
+    Color = Color3.fromRGB(225, 255, 255)
+  },
+  ["Fried"] = {
+    Name = "Fried",
+    ValueMulti = 8,
+    Color = Color3.fromRGB(223, 110, 34)
+  },
+  ["Aurora"] = {
+    Name = "Aurora",
+    ValueMulti = 90,
+    Color = Color3.fromRGB(99, 89, 175)
+  },
+  ["Wiltproof"] = {
+    Name = "Wiltproof",
+    ValueMulti = 4,
+    Color = Color3.fromRGB(0, 222, 155)
+  },
+  ["Drenched"] = {
+    Name = "Drenched",
+    ValueMulti = 5,
+    Color = Color3.fromRGB(0, 55, 228)
   },
 }
