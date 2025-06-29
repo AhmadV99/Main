@@ -1,3 +1,6 @@
+if not _G.ExecutedADSSHX then
+    _G.ExecutedADSSHX = true
+
 local ScreenGui = Instance.new("ScreenGui")
 local AdFrame = Instance.new("Frame")
 local DiscordLabel = Instance.new("TextLabel")
@@ -72,6 +75,7 @@ end)
 ExitButton.MouseButton1Click:Connect(function()
     ScreenGui:Destroy()
 end)
+end
 
 task.spawn(function()
     pcall(function()
