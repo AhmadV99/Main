@@ -1,4 +1,7 @@
 return {
+  ["Brontosaurus"] = {
+    ["DefaultHunger"] = 80000
+  },
   ["Kiwi"] = {
     ["DefaultHunger"] = 50000
   },
@@ -20,6 +23,9 @@ return {
   ["Queen Bee"] = {
     ["DefaultHunger"] = 65000
   },
+  ["T-Rex"] = {
+    ["DefaultHunger"] = 60000
+  },
   ["Crab"] = {
     ["DefaultHunger"] = 3000
   },
@@ -38,8 +44,11 @@ return {
   ["Honey Bee"] = {
     ["DefaultHunger"] = 25000
   },
-  ["Monkey"] = {
-    ["DefaultHunger"] = 7400
+  ["Bald Eagle"] = {
+    ["DefaultHunger"] = 15000
+  },
+  ["Rooster"] = {
+    ["DefaultHunger"] = 4000
   },
   ["Squirrel"] = {
     ["DefaultHunger"] = 15000
@@ -49,6 +58,9 @@ return {
   },
   ["Starfish"] = {
     ["DefaultHunger"] = 1500
+  },
+  ["Stegosaurus"] = {
+    ["DefaultHunger"] = 40000
   },
   ["Mole"] = {
     ["DefaultHunger"] = 50000
@@ -67,6 +79,9 @@ return {
   },
   ["Seagull"] = {
     ["DefaultHunger"] = 3500
+  },
+  ["Raptor"] = {
+    ["DefaultHunger"] = 40000
   },
   ["Snail"] = {
     ["DefaultHunger"] = 12000
@@ -122,17 +137,23 @@ return {
   ["Dog"] = {
     ["DefaultHunger"] = 1000
   },
+  ["Golden Bee"] = {
+    ["DefaultHunger"] = 25000
+  },
+  ["Firefly"] = {
+    ["DefaultHunger"] = 25000
+  },
   ["Bear Bee"] = {
     ["DefaultHunger"] = 45000
   },
   ["Moth"] = {
     ["DefaultHunger"] = 25000
   },
-  ["Golden Bee"] = {
-    ["DefaultHunger"] = 25000
+  ["Fennec Fox"] = {
+    ["DefaultHunger"] = 35000
   },
-  ["Firefly"] = {
-    ["DefaultHunger"] = 25000
+  ["Triceratops"] = {
+    ["DefaultHunger"] = 40000
   },
   ["Night Owl"] = {
     ["DefaultHunger"] = 50000
@@ -140,8 +161,8 @@ return {
   ["Hamster"] = {
     ["DefaultHunger"] = 15000
   },
-  ["Fennec Fox"] = {
-    ["DefaultHunger"] = 35000
+  ["Pterodactyl"] = {
+    ["DefaultHunger"] = 40000
   },
   ["Bee"] = {
     ["DefaultHunger"] = 25000
@@ -152,8 +173,8 @@ return {
   ["Sand Snake"] = {
     ["DefaultHunger"] = 28000
   },
-  ["Giant Ant"] = {
-    ["DefaultHunger"] = 18000
+  ["Sea Otter"] = {
+    ["DefaultHunger"] = 30000
   },
   ["Blood Hedgehog"] = {
     ["DefaultHunger"] = 30000
@@ -209,8 +230,8 @@ return {
   ["Hedgehog"] = {
     ["DefaultHunger"] = 30000
   },
-  ["Sea Otter"] = {
-    ["DefaultHunger"] = 30000
+  ["Giant Ant"] = {
+    ["DefaultHunger"] = 18000
   },
   ["Scarlet Macaw"] = {
     ["DefaultHunger"] = 12000
@@ -221,14 +242,15 @@ return {
   ["Pig"] = {
     ["DefaultHunger"] = 5000
   },
-  ["Rooster"] = {
-    ["DefaultHunger"] = 4000
+  ["Monkey"] = {
+    ["DefaultHunger"] = 7400
   },
 }
 
---[[local Result = "{\n"
+--[[
+local Result = "{\n"
 
-for i, v in pairs(v7) do
+for i, v in pairs(require(game:GetService("ReplicatedStorage").Data.PetRegistry.PetList)) do
   Result = Result .. '  ["' .. i .. '"] = {\n'
   Result = Result .. '    ["DefaultHunger"] = ' .. v.DefaultHunger .. '\n'
   Result = Result .. '  },\n'
@@ -236,4 +258,5 @@ end
 
 Result = Result .. "}"
 
-setclipboard(Result)]]
+setclipboard(Result)
+]]
