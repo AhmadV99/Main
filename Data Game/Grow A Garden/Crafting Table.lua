@@ -65,12 +65,13 @@ return {
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
-    },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
       ["Amount"] = 40,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
     },
   },
   ["Stalk Sprout Sprinkler"] = {
@@ -178,6 +179,32 @@ return {
       [1] = "GearEventWorkbench",
     },
   },
+  ["Mutation Spray Pollinated"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "SprayBottle",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Cleaning Spray",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Bee Balm",
+        },
+      },
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Honey",
+      ["Amount"] = 25,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "GearEventWorkbench",
+    },
+  },
   ["Mutation Spray Chilled"] = {
     ["Inputs"] = {
       [1] = {
@@ -270,6 +297,24 @@ return {
       ["Amount"] = 250,
     },
   },
+  ["Ancient Seed Pack"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Dinosaur Egg",
+        },
+      },
+    },
+    ["MachineTypes"] = {
+      [1] = "DinoEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 5500000,
+    },
+  },
   ["Reclaimer"] = {
     ["Inputs"] = {
       [1] = {
@@ -327,6 +372,31 @@ return {
       ["Amount"] = 500000,
     },
   },
+  ["Mutation Spray Amber"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "SprayBottle",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Cleaning Spray",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Dinosaur Egg",
+        },
+      },
+    },
+    ["MachineTypes"] = {
+      [1] = "DinoEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 1000000,
+    },
+  },
   ["Suncoil"] = {
     ["Inputs"] = {
       [1] = {
@@ -358,12 +428,13 @@ return {
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
-    },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
       ["Amount"] = 40,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
     },
   },
   ["Spice Spritzer Sprinkler"] = {
@@ -418,12 +489,13 @@ return {
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
-    },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
       ["Amount"] = 80,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
     },
   },
   ["Nectar Thorn"] = {
@@ -457,12 +529,13 @@ return {
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
-    },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
       ["Amount"] = 20,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
     },
   },
   ["Crafters Seed Pack"] = {
@@ -475,12 +548,13 @@ return {
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
-    },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
       ["Amount"] = 10,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
     },
   },
   ["Bee Balm"] = {
@@ -500,12 +574,13 @@ return {
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
-    },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
       ["Amount"] = 10,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
     },
   },
   ["Dandelion"] = {
@@ -532,37 +607,31 @@ return {
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
-    },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
       ["Amount"] = 20,
     },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
+    },
   },
-  ["Mutation Spray Pollinated"] = {
+  ["Dino Crate"] = {
     ["Inputs"] = {
       [1] = {
-        ["ItemType"] = "SprayBottle",
+        ["ItemType"] = "PetEgg",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Cleaning Spray",
-        },
-      },
-      [2] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Bee Balm",
+          ["ItemName"] = "Dinosaur Egg",
         },
       },
     },
     ["MachineTypes"] = {
-      [1] = "GearEventWorkbench",
+      [1] = "DinoEventWorkbench",
     },
     ["Cost"] = {
-      ["CurrencyType"] = "Honey",
-      ["Amount"] = 25,
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 5500000,
     },
   },
   ["Guanabana"] = {
@@ -682,12 +751,13 @@ return {
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "GearEventWorkbench",
-    },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
       ["Amount"] = 12,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "GearEventWorkbench",
     },
   },
   ["Peace Lily"] = {
@@ -750,12 +820,13 @@ return {
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
-    },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
       ["Amount"] = 6,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
     },
   },
 }
