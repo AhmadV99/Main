@@ -246,17 +246,3 @@ return {
     ["DefaultHunger"] = 7400
   },
 }
-
---[[
-local Result = "{\n"
-
-for i, v in pairs(require(game:GetService("ReplicatedStorage").Data.PetRegistry.PetList)) do
-  Result = Result .. '  ["' .. i .. '"] = {\n'
-  Result = Result .. '    ["DefaultHunger"] = ' .. v.DefaultHunger .. '\n'
-  Result = Result .. '  },\n'
-end
-
-Result = Result .. "}"
-
-setclipboard(Result)
-]]
