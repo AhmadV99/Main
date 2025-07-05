@@ -134,7 +134,7 @@ return {
     {
         "Burning Bud", 
         12, 
-        65000, 
+        70000, 
         500
     }, 
     {
@@ -200,7 +200,7 @@ return {
     {
         "Pitcher Plant", 
         12, 
-        32000, 
+        52000, 
         275
     }, 
     {
@@ -278,7 +278,7 @@ return {
     {
         "Guanabana", 
         4, 
-        72500, 
+        70500, 
         400
     }, 
     {
@@ -630,6 +630,60 @@ return {
         400
     }, 
     {
+        "Liberty Lily", 
+        6.5, 
+        30000, 
+        350
+    }, 
+    {
+        "Firework Flower", 
+        20, 
+        151000, 
+        450
+    }, 
+    {
+        "Stonebite", 
+        1, 
+        35000, 
+        200
+    }, 
+    {
+        "Paradise Petal", 
+        2.75, 
+        25000, 
+        250
+    }, 
+    {
+        "Horned Dinoshroom", 
+        5, 
+        69000, 
+        275
+    }, 
+    {
+        "Boneboo", 
+        15, 
+        141141, 
+        300
+    }, 
+    {
+        "Firefly Fern", 
+        5, 
+        72000, 
+        400
+    }, 
+    {
+        "Fossilight", 
+        4, 
+        88000, 
+        500
+    }, 
+    {
+        "Bone Blossom", 
+        7, 
+        175000, 
+        200
+    }, 
+    {
         "Noble Flower", 
         5, 
         20000, 
@@ -652,5 +706,11 @@ return {
         3, 
         3000, 
         200
+    }, 
+    {
+        "Merica Mushroom", 
+        30, 
+        40000, 
+        20
     }
 };
