@@ -228,30 +228,3 @@ return {
     ["ValueMulti"] = 5,
   },
 }
-
---[[ 
-local c = require(game:GetService("ReplicatedStorage").Modules.MutationHandler)
-
-local result = "{\n"
-
-for i, v in pairs(c.GetMutations()) do
-  result ..= "  [\"" .. tostring(i) .. "\"] = {\n"
-
-  for i, val in pairs(v) do
-    if i ~= "_AddFX" and i ~= "_RemoveFX" and i ~= "TimeData" then
-      if typeof(val) == "Color3" then
-        local r, g, b = math.floor(val.R * 255), math.floor(val.G * 255), math.floor(val.B * 255)
-        result ..= "    [\"" .. tostring(i) .. "\"] = Color3.fromRGB(" .. r .. ", " .. g .. ", " .. b .. "),\n"
-      else
-        result ..= "    [\"" .. tostring(i) .. "\"] = " .. (typeof(val) == "string" and "\"" .. val .. "\"" or tostring(val)) .. ",\n"
-      end
-    end
-  end
-
-  result ..= "  },\n"
-end
-
-result ..= "}"
-
-setclipboard(result)
-]]
