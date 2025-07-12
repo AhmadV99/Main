@@ -1,4 +1,4 @@
-{
+return {
   ["Small Treat"] = {
     ["Inputs"] = {
       [1] = {
