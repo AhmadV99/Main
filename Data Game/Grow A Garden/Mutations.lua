@@ -35,6 +35,12 @@ return {
     ["Color"] = Color3.fromRGB(0, 55, 228),
     ["ValueMulti"] = 5,
   },
+  ["Tempestuous"] = {
+    ["Name"] = "Tempestuous",
+    ["Id"] = "N",
+    ["Color"] = Color3.fromRGB(143, 163, 180),
+    ["ValueMulti"] = 12,
+  },
   ["Shocked"] = {
     ["Name"] = "Shocked",
     ["Id"] = "a",
@@ -59,6 +65,12 @@ return {
     ["Color"] = Color3.fromRGB(200, 0, 0),
     ["ValueMulti"] = 4,
   },
+  ["Friendbound"] = {
+    ["Name"] = "Friendbound",
+    ["Id"] = "M",
+    ["Color"] = Color3.fromRGB(255, 0, 127),
+    ["ValueMulti"] = 70,
+  },
   ["Paradisal"] = {
     ["Name"] = "Paradisal",
     ["Id"] = "r",
@@ -68,8 +80,8 @@ return {
   ["Clay"] = {
     ["Name"] = "Clay",
     ["Id"] = "K",
-    ["Color"] = Color3.fromRGB(150, 100, 80),
-    ["ValueMulti"] = 3,
+    ["Color"] = Color3.fromRGB(147, 129, 122),
+    ["ValueMulti"] = 5,
   },
   ["Amber"] = {
     ["Name"] = "Amber",
@@ -119,6 +131,12 @@ return {
     ["Color"] = Color3.fromRGB(153, 141, 255),
     ["ValueMulti"] = 2,
   },
+  ["Infected"] = {
+    ["Name"] = "Infected",
+    ["Id"] = "O",
+    ["Color"] = Color3.fromRGB(67, 167, 0),
+    ["ValueMulti"] = 75,
+  },
   ["AncientAmber"] = {
     ["Name"] = "AncientAmber",
     ["Id"] = "I",
@@ -129,7 +147,7 @@ return {
     ["Name"] = "Ceramic",
     ["Id"] = "L",
     ["Color"] = Color3.fromRGB(234, 184, 146),
-    ["ValueMulti"] = 30,
+    ["ValueMulti"] = 32,
   },
   ["Pollinated"] = {
     ["Name"] = "Pollinated",
