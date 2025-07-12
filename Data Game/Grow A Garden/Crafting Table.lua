@@ -1,112 +1,43 @@
-return {
-  ["Sweet Soaker Sprinkler"] = {
+{
+  ["Small Treat"] = {
     ["Inputs"] = {
       [1] = {
-        ["ItemType"] = "Holdable",
+        ["ItemType"] = "PetEgg",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Watermelon",
+          ["ItemName"] = "Common Egg",
         },
       },
       [2] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Watermelon",
-        },
-      },
-      [3] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Watermelon",
-        },
-      },
-      [4] = {
-        ["ItemType"] = "Sprinkler",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Master Sprinkler",
-        },
-      },
-    },
-    ["MachineTypes"] = {
-      [1] = "GearEventWorkbench",
-    },
-  },
-  ["Lumira"] = {
-    ["Inputs"] = {
-      [1] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Pumpkin",
-        },
-      },
-      [2] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Pumpkin",
-        },
-      },
-      [3] = {
         ["ItemType"] = "Seed",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Dandelion",
-        },
-      },
-      [4] = {
-        ["ItemType"] = "Seed Pack",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Flower Seed Pack",
-        },
-      },
-    },
-    ["Cost"] = {
-      ["CurrencyType"] = "Honey",
-      ["Amount"] = 40,
-    },
-    ["DisplayInCrafting"] = false,
-    ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
-    },
-  },
-  ["Stalk Sprout Sprinkler"] = {
-    ["Inputs"] = {
-      [1] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Bamboo",
-        },
-      },
-      [2] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Beanstalk",
+          ["ItemName"] = "Dragon Fruit",
         },
       },
       [3] = {
         ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Mushroom",
-        },
-      },
-      [4] = {
-        ["ItemType"] = "Sprinkler",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Advanced Sprinkler",
+          ["ItemName"] = "Blueberry",
         },
       },
     },
     ["MachineTypes"] = {
       [1] = "GearEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 1000000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 3,
+          ["ItemName"] = "Small Treat",
+        },
+      },
     },
   },
   ["Tropical Mist Sprinkler"] = {
@@ -143,6 +74,15 @@ return {
     ["MachineTypes"] = {
       [1] = "GearEventWorkbench",
     },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Tropical Mist Sprinkler",
+        },
+      },
+    },
   },
   ["Berry Blusher Sprinkler"] = {
     ["Inputs"] = {
@@ -178,31 +118,14 @@ return {
     ["MachineTypes"] = {
       [1] = "GearEventWorkbench",
     },
-  },
-  ["Mutation Spray Pollinated"] = {
-    ["Inputs"] = {
+    ["Outputs"] = {
       [1] = {
-        ["ItemType"] = "SprayBottle",
+        ["ItemType"] = "Gear",
         ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Cleaning Spray",
+          ["Quantity"] = 1,
+          ["ItemName"] = "Berry Blusher Sprinkler",
         },
       },
-      [2] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Bee Balm",
-        },
-      },
-    },
-    ["Cost"] = {
-      ["CurrencyType"] = "Honey",
-      ["Amount"] = 25,
-    },
-    ["DisplayInCrafting"] = false,
-    ["MachineTypes"] = {
-      [1] = "GearEventWorkbench",
     },
   },
   ["Mutation Spray Chilled"] = {
@@ -229,40 +152,55 @@ return {
       ["CurrencyType"] = "Sheckles",
       ["Amount"] = 500000,
     },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Mutation Spray Chilled",
+        },
+      },
+    },
   },
-  ["Flower Froster Sprinkler"] = {
+  ["Small Toy"] = {
     ["Inputs"] = {
       [1] = {
-        ["ItemType"] = "Holdable",
+        ["ItemType"] = "PetEgg",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Orange Tulip",
+          ["ItemName"] = "Common Egg",
         },
       },
       [2] = {
-        ["ItemType"] = "Holdable",
+        ["ItemType"] = "Seed",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Daffodil",
+          ["ItemName"] = "Coconut",
         },
       },
       [3] = {
-        ["ItemType"] = "Sprinkler",
+        ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Advanced Sprinkler",
-        },
-      },
-      [4] = {
-        ["ItemType"] = "Sprinkler",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Basic Sprinkler",
+          ["ItemName"] = "Coconut",
         },
       },
     },
     ["MachineTypes"] = {
       [1] = "GearEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 1000000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 3,
+          ["ItemName"] = "Small Toy",
+        },
+      },
     },
   },
   ["Pack Bee"] = {
@@ -296,48 +234,56 @@ return {
       ["CurrencyType"] = "Honey",
       ["Amount"] = 250,
     },
-  },
-  ["Ancient Seed Pack"] = {
-    ["Inputs"] = {
+    ["Outputs"] = {
       [1] = {
-        ["ItemType"] = "PetEgg",
+        ["ItemType"] = "Pet",
         ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Dinosaur Egg",
+          ["Quantity"] = 1,
+          ["ItemName"] = "Pack Bee",
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "DinoEventWorkbench",
-    },
-    ["Cost"] = {
-      ["CurrencyType"] = "Sheckles",
-      ["Amount"] = 5500000,
-    },
   },
-  ["Reclaimer"] = {
+  ["Dandelion"] = {
     ["Inputs"] = {
       [1] = {
-        ["ItemType"] = "PetEgg",
+        ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Common Egg",
+          ["ItemName"] = "Bamboo",
         },
       },
       [2] = {
-        ["ItemType"] = "Harvest Tool",
+        ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Harvest Tool",
+          ["ItemName"] = "Bamboo",
+        },
+      },
+      [3] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Manuka Flower",
         },
       },
     },
-    ["MachineTypes"] = {
-      [1] = "GearEventWorkbench",
-    },
     ["Cost"] = {
-      ["CurrencyType"] = "Sheckles",
-      ["Amount"] = 500000,
+      ["CurrencyType"] = "Honey",
+      ["Amount"] = 20,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Dandelion",
+        },
+      },
     },
   },
   ["Lightning Rod"] = {
@@ -371,8 +317,141 @@ return {
       ["CurrencyType"] = "Sheckles",
       ["Amount"] = 500000,
     },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Lightning Rod",
+        },
+      },
+    },
   },
-  ["Mutation Spray Amber"] = {
+  ["Primal Egg"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Dinosaur Egg",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Bone Blossom",
+        },
+      },
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 5500000,
+    },
+    ["IsUnlockable"] = true,
+    ["MachineTypes"] = {
+      [1] = "DinoEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Primal Egg",
+        },
+      },
+    },
+  },
+  ["Lingonberry"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Blueberry",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Blueberry",
+        },
+      },
+      [3] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Blueberry",
+        },
+      },
+      [4] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Horsetail",
+        },
+      },
+    },
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 450000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Lingonberry",
+        },
+      },
+    },
+  },
+  ["Horsetail"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Stonebite",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Bamboo",
+        },
+      },
+      [3] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Corn",
+        },
+      },
+    },
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 15000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Horsetail",
+        },
+      },
+    },
+  },
+  ["Mutation Spray Choc"] = {
     ["Inputs"] = {
       [1] = {
         ["ItemType"] = "SprayBottle",
@@ -382,82 +461,106 @@ return {
         },
       },
       [2] = {
-        ["ItemType"] = "PetEgg",
+        ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Dinosaur Egg",
+          ["ItemName"] = "Cacao",
         },
       },
     },
     ["MachineTypes"] = {
-      [1] = "DinoEventWorkbench",
+      [1] = "GearEventWorkbench",
     },
     ["Cost"] = {
       ["CurrencyType"] = "Sheckles",
-      ["Amount"] = 1000000,
+      ["Amount"] = 200000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Mutation Spray Choc",
+        },
+      },
     },
   },
-  ["Suncoil"] = {
+  ["Anti Bee Egg"] = {
     ["Inputs"] = {
       [1] = {
-        ["ItemType"] = "Holdable",
+        ["ItemType"] = "PetEgg",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Crocus",
+          ["ItemName"] = "Bee Egg",
         },
       },
-      [2] = {
-        ["ItemType"] = "Holdable",
+    },
+    ["MachineTypes"] = {
+      [1] = "GearEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Honey",
+      ["Amount"] = 25,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "PetEgg",
         ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Daffodil",
+          ["Quantity"] = 1,
+          ["ItemName"] = "Anti Bee Egg",
         },
       },
-      [3] = {
-        ["ItemType"] = "Holdable",
+    },
+  },
+  ["Honey Crafters Crate"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "CosmeticCrate",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Dandelion",
-        },
-      },
-      [4] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Pink Lily",
+          ["ItemName"] = "Bee Crate",
         },
       },
     },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
-      ["Amount"] = 40,
+      ["Amount"] = 12,
     },
     ["DisplayInCrafting"] = false,
     ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
+      [1] = "GearEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "CosmeticCrate",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Honey Crafters Crate",
+        },
+      },
     },
   },
-  ["Spice Spritzer Sprinkler"] = {
+  ["Sweet Soaker Sprinkler"] = {
     ["Inputs"] = {
       [1] = {
         ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Pepper",
+          ["ItemName"] = "Watermelon",
         },
       },
       [2] = {
         ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Ember Lily",
+          ["ItemName"] = "Watermelon",
         },
       },
       [3] = {
         ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Cacao",
+          ["ItemName"] = "Watermelon",
         },
       },
       [4] = {
@@ -471,31 +574,58 @@ return {
     ["MachineTypes"] = {
       [1] = "GearEventWorkbench",
     },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Sweet Soaker Sprinkler",
+        },
+      },
+    },
   },
-  ["Honeysuckle"] = {
+  ["Stalk Sprout Sprinkler"] = {
     ["Inputs"] = {
       [1] = {
-        ["ItemType"] = "Seed",
+        ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Pink Lily",
+          ["ItemName"] = "Bamboo",
         },
       },
       [2] = {
-        ["ItemType"] = "Seed",
+        ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Purple Dahlia",
+          ["ItemName"] = "Beanstalk",
+        },
+      },
+      [3] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Mushroom",
+        },
+      },
+      [4] = {
+        ["ItemType"] = "Sprinkler",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Advanced Sprinkler",
         },
       },
     },
-    ["Cost"] = {
-      ["CurrencyType"] = "Honey",
-      ["Amount"] = 80,
-    },
-    ["DisplayInCrafting"] = false,
     ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
+      [1] = "GearEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Stalk Sprout Sprinkler",
+        },
+      },
     },
   },
   ["Nectar Thorn"] = {
@@ -537,27 +667,92 @@ return {
     ["MachineTypes"] = {
       [1] = "SeedEventWorkbench",
     },
-  },
-  ["Crafters Seed Pack"] = {
-    ["Inputs"] = {
+    ["Outputs"] = {
       [1] = {
-        ["ItemType"] = "Seed Pack",
+        ["ItemType"] = "Seed",
         ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Flower Seed Pack",
+          ["Quantity"] = 1,
+          ["ItemName"] = "Nectar Thorn",
         },
       },
     },
-    ["Cost"] = {
-      ["CurrencyType"] = "Honey",
-      ["Amount"] = 10,
+  },
+  ["Aloe Vera"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Peace Lily",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Prickly Pear",
+        },
+      },
     },
-    ["DisplayInCrafting"] = false,
     ["MachineTypes"] = {
       [1] = "SeedEventWorkbench",
     },
+    ["Cost"] = {
+      ["CurrencyType"] = "SummerCoins",
+      ["Amount"] = 18,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Aloe Vera",
+        },
+      },
+    },
   },
-  ["Bee Balm"] = {
+  ["Amber Spine"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Cactus",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Pumpkin",
+        },
+      },
+      [3] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Horsetail",
+        },
+      },
+    },
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 650000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Amber Spine",
+        },
+      },
+    },
+  },
+  ["Suncoil"] = {
     ["Inputs"] = {
       [1] = {
         ["ItemType"] = "Holdable",
@@ -570,68 +765,40 @@ return {
         ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Lavender",
-        },
-      },
-    },
-    ["Cost"] = {
-      ["CurrencyType"] = "Honey",
-      ["Amount"] = 10,
-    },
-    ["DisplayInCrafting"] = false,
-    ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
-    },
-  },
-  ["Dandelion"] = {
-    ["Inputs"] = {
-      [1] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Bamboo",
-        },
-      },
-      [2] = {
-        ["ItemType"] = "Holdable",
-        ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Bamboo",
+          ["ItemName"] = "Daffodil",
         },
       },
       [3] = {
-        ["ItemType"] = "Seed",
+        ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Manuka Flower",
+          ["ItemName"] = "Dandelion",
+        },
+      },
+      [4] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Pink Lily",
         },
       },
     },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
-      ["Amount"] = 20,
+      ["Amount"] = 40,
     },
     ["DisplayInCrafting"] = false,
     ["MachineTypes"] = {
       [1] = "SeedEventWorkbench",
     },
-  },
-  ["Dino Crate"] = {
-    ["Inputs"] = {
+    ["Outputs"] = {
       [1] = {
-        ["ItemType"] = "PetEgg",
+        ["ItemType"] = "Seed",
         ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Dinosaur Egg",
+          ["Quantity"] = 1,
+          ["ItemName"] = "Suncoil",
         },
       },
-    },
-    ["MachineTypes"] = {
-      [1] = "DinoEventWorkbench",
-    },
-    ["Cost"] = {
-      ["CurrencyType"] = "Sheckles",
-      ["Amount"] = 5500000,
     },
   },
   ["Guanabana"] = {
@@ -665,33 +832,51 @@ return {
       ["CurrencyType"] = "SummerCoins",
       ["Amount"] = 30,
     },
-  },
-  ["Aloe Vera"] = {
-    ["Inputs"] = {
+    ["Outputs"] = {
       [1] = {
         ["ItemType"] = "Seed",
         ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Guanabana",
+        },
+      },
+    },
+  },
+  ["Reclaimer"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Peace Lily",
+          ["ItemName"] = "Common Egg",
         },
       },
       [2] = {
-        ["ItemType"] = "Holdable",
+        ["ItemType"] = "Harvest Tool",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Prickly Pear",
+          ["ItemName"] = "Harvest Tool",
         },
       },
     },
     ["MachineTypes"] = {
-      [1] = "SeedEventWorkbench",
+      [1] = "GearEventWorkbench",
     },
     ["Cost"] = {
-      ["CurrencyType"] = "SummerCoins",
-      ["Amount"] = 18,
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 500000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 3,
+          ["ItemName"] = "Reclaimer",
+        },
+      },
     },
   },
-  ["Mutation Spray Choc"] = {
+  ["Mutation Spray Pollinated"] = {
     ["Inputs"] = {
       [1] = {
         ["ItemType"] = "SprayBottle",
@@ -704,16 +889,366 @@ return {
         ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Bee Balm",
+        },
+      },
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Honey",
+      ["Amount"] = 25,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "GearEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Mutation Spray Pollinated",
+        },
+      },
+    },
+  },
+  ["Spice Spritzer Sprinkler"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Pepper",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Ember Lily",
+        },
+      },
+      [3] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
           ["ItemName"] = "Cacao",
+        },
+      },
+      [4] = {
+        ["ItemType"] = "Sprinkler",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Master Sprinkler",
         },
       },
     },
     ["MachineTypes"] = {
       [1] = "GearEventWorkbench",
     },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Spice Spritzer Sprinkler",
+        },
+      },
+    },
+  },
+  ["Honeysuckle"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Pink Lily",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Purple Dahlia",
+        },
+      },
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Honey",
+      ["Amount"] = 80,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Honeysuckle",
+        },
+      },
+    },
+  },
+  ["Grand Volcania"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Ember Lily",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Ember Lily",
+        },
+      },
+      [3] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Dinosaur Egg",
+        },
+      },
+      [4] = {
+        ["ItemType"] = "Seed Pack",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Ancient Seed Pack",
+        },
+      },
+    },
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
+    },
     ["Cost"] = {
       ["CurrencyType"] = "Sheckles",
-      ["Amount"] = 200000,
+      ["Amount"] = 900000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Grand Volcania",
+        },
+      },
+    },
+  },
+  ["Crafters Seed Pack"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed Pack",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Flower Seed Pack",
+        },
+      },
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Honey",
+      ["Amount"] = 10,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed Pack",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Crafters Seed Pack",
+        },
+      },
+    },
+  },
+  ["Dinosaur Egg"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Common Egg",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Bone Blossom",
+        },
+      },
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 5500000,
+    },
+    ["IsUnlockable"] = true,
+    ["MachineTypes"] = {
+      [1] = "DinoEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Dinosaur Egg",
+        },
+      },
+    },
+  },
+  ["Archaeologist Crate"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Dinosaur Egg",
+        },
+      },
+    },
+    ["MachineTypes"] = {
+      [1] = "DinoEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 5500000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "CosmeticCrate",
+        ["ItemData"] = {
+          ["Quantity"] = 2,
+          ["ItemName"] = "Archaeologist Crate",
+        },
+      },
+    },
+  },
+  ["Dino Crate"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Dinosaur Egg",
+        },
+      },
+    },
+    ["MachineTypes"] = {
+      [1] = "DinoEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 5500000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "CosmeticCrate",
+        ["ItemData"] = {
+          ["Quantity"] = 2,
+          ["ItemName"] = "Dino Crate",
+        },
+      },
+    },
+  },
+  ["Ancient Seed Pack"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Dinosaur Egg",
+        },
+      },
+    },
+    ["MachineTypes"] = {
+      [1] = "DinoEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 5500000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed Pack",
+        ["ItemData"] = {
+          ["Quantity"] = 2,
+          ["ItemName"] = "Ancient Seed Pack",
+        },
+      },
+    },
+  },
+  ["Mutation Spray Amber"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "SprayBottle",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Cleaning Spray",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "PetEgg",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Dinosaur Egg",
+        },
+      },
+    },
+    ["MachineTypes"] = {
+      [1] = "DinoEventWorkbench",
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Sheckles",
+      ["Amount"] = 1000000,
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Mutation Spray Amber",
+        },
+      },
+    },
+  },
+  ["Bee Balm"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Crocus",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Lavender",
+        },
+      },
+    },
+    ["Cost"] = {
+      ["CurrencyType"] = "Honey",
+      ["Amount"] = 10,
+    },
+    ["DisplayInCrafting"] = false,
+    ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Bee Balm",
+        },
+      },
     },
   },
   ["Mutation Spray Shocked"] = {
@@ -740,24 +1275,107 @@ return {
       ["CurrencyType"] = "Sheckles",
       ["Amount"] = 1000000,
     },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Mutation Spray Shocked",
+        },
+      },
+    },
   },
-  ["Honey Crafters Crate"] = {
+  ["Lumira"] = {
     ["Inputs"] = {
       [1] = {
-        ["ItemType"] = "CosmeticCrate",
+        ["ItemType"] = "Holdable",
         ["ItemData"] = {
           ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Bee Crate",
+          ["ItemName"] = "Pumpkin",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Pumpkin",
+        },
+      },
+      [3] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Dandelion",
+        },
+      },
+      [4] = {
+        ["ItemType"] = "Seed Pack",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Flower Seed Pack",
         },
       },
     },
     ["Cost"] = {
       ["CurrencyType"] = "Honey",
-      ["Amount"] = 12,
+      ["Amount"] = 40,
     },
     ["DisplayInCrafting"] = false,
     ["MachineTypes"] = {
+      [1] = "SeedEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Lumira",
+        },
+      },
+    },
+  },
+  ["Flower Froster Sprinkler"] = {
+    ["Inputs"] = {
+      [1] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Orange Tulip",
+        },
+      },
+      [2] = {
+        ["ItemType"] = "Holdable",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Daffodil",
+        },
+      },
+      [3] = {
+        ["ItemType"] = "Sprinkler",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Advanced Sprinkler",
+        },
+      },
+      [4] = {
+        ["ItemType"] = "Sprinkler",
+        ["ItemData"] = {
+          ["AcceptAllTypes"] = false,
+          ["ItemName"] = "Basic Sprinkler",
+        },
+      },
+    },
+    ["MachineTypes"] = {
       [1] = "GearEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Gear",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Flower Froster Sprinkler",
+        },
+      },
     },
   },
   ["Peace Lily"] = {
@@ -784,23 +1402,14 @@ return {
       ["CurrencyType"] = "SummerCoins",
       ["Amount"] = 3,
     },
-  },
-  ["Anti Bee Egg"] = {
-    ["Inputs"] = {
+    ["Outputs"] = {
       [1] = {
-        ["ItemType"] = "PetEgg",
+        ["ItemType"] = "Seed",
         ["ItemData"] = {
-          ["AcceptAllTypes"] = false,
-          ["ItemName"] = "Bee Egg",
+          ["Quantity"] = 1,
+          ["ItemName"] = "Peace Lily",
         },
       },
-    },
-    ["MachineTypes"] = {
-      [1] = "GearEventWorkbench",
-    },
-    ["Cost"] = {
-      ["CurrencyType"] = "Honey",
-      ["Amount"] = 25,
     },
   },
   ["Manuka Flower"] = {
@@ -827,6 +1436,15 @@ return {
     ["DisplayInCrafting"] = false,
     ["MachineTypes"] = {
       [1] = "SeedEventWorkbench",
+    },
+    ["Outputs"] = {
+      [1] = {
+        ["ItemType"] = "Seed",
+        ["ItemData"] = {
+          ["Quantity"] = 1,
+          ["ItemName"] = "Manuka Flower",
+        },
+      },
     },
   },
 }
