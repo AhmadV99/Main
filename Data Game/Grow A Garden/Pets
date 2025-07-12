@@ -8,11 +8,20 @@ return {
   ["Panda"] = {
     ["DefaultHunger"] = 20000
   },
+  ["Parasaurolophus"] = {
+    ["DefaultHunger"] = 40000
+  },
   ["Capybara"] = {
     ["DefaultHunger"] = 30000
   },
+  ["Ankylosaurus"] = {
+    ["DefaultHunger"] = 40000
+  },
   ["Ostrich"] = {
     ["DefaultHunger"] = 20000
+  },
+  ["Rainbow Dilophosaurus"] = {
+    ["DefaultHunger"] = 30000
   },
   ["Bunny"] = {
     ["DefaultHunger"] = 1100
@@ -89,11 +98,20 @@ return {
   ["Flamingo"] = {
     ["DefaultHunger"] = 14000
   },
+  ["Golden Bee"] = {
+    ["DefaultHunger"] = 25000
+  },
+  ["Firefly"] = {
+    ["DefaultHunger"] = 25000
+  },
   ["Blood Kiwi"] = {
     ["DefaultHunger"] = 45000
   },
   ["Owl"] = {
     ["DefaultHunger"] = 50000
+  },
+  ["Rainbow Ankylosaurus"] = {
+    ["DefaultHunger"] = 40000
   },
   ["Spotted Deer"] = {
     ["DefaultHunger"] = 2500
@@ -125,10 +143,25 @@ return {
   ["Mimic Octopus"] = {
     ["DefaultHunger"] = 25000
   },
+  ["Rainbow Spinosaurus"] = {
+    ["DefaultHunger"] = 25000
+  },
+  ["Dilophosaurus"] = {
+    ["DefaultHunger"] = 30000
+  },
+  ["Rainbow Iguanodon"] = {
+    ["DefaultHunger"] = 40000
+  },
   ["Praying Mantis"] = {
     ["DefaultHunger"] = 55000
   },
+  ["Rainbow Parasaurolophus"] = {
+    ["DefaultHunger"] = 40000
+  },
   ["Caterpillar"] = {
+    ["DefaultHunger"] = 25000
+  },
+  ["Spinosaurus"] = {
     ["DefaultHunger"] = 25000
   },
   ["Turtle"] = {
@@ -137,11 +170,17 @@ return {
   ["Dog"] = {
     ["DefaultHunger"] = 1000
   },
-  ["Golden Bee"] = {
-    ["DefaultHunger"] = 25000
+  ["Rainbow Pachycephalosaurus"] = {
+    ["DefaultHunger"] = 40000
   },
-  ["Firefly"] = {
-    ["DefaultHunger"] = 25000
+  ["Pachycephalosaurus"] = {
+    ["DefaultHunger"] = 40000
+  },
+  ["Sand Snake"] = {
+    ["DefaultHunger"] = 28000
+  },
+  ["Radioactive Stegosaurus"] = {
+    ["DefaultHunger"] = 40000
   },
   ["Bear Bee"] = {
     ["DefaultHunger"] = 45000
@@ -170,8 +209,8 @@ return {
   ["Peacock"] = {
     ["DefaultHunger"] = 19000
   },
-  ["Sand Snake"] = {
-    ["DefaultHunger"] = 28000
+  ["Iguanodon"] = {
+    ["DefaultHunger"] = 40000
   },
   ["Sea Otter"] = {
     ["DefaultHunger"] = 30000
