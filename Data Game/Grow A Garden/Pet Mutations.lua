@@ -62,6 +62,17 @@ return {
       ["1"] = "Radiant Pet Mutation",
     },
   },
+  ["Tranquil"] = {
+    ["AvaliableFromMutationMachine"] = true,
+    ["Color"] = Color3.fromRGB(94, 247, 247),
+    ["Chance"] = 10,
+    ["Boosts"] = {
+    },
+    ["EnumId"] = "o",
+    ["Passives"] = {
+      ["1"] = "Tranquil Pet Mutation",
+    },
+  },
   ["IronSkin"] = {
     ["AvaliableFromMutationMachine"] = true,
     ["Color"] = Color3.fromRGB(206, 206, 206),
