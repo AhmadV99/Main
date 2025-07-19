@@ -1,4 +1,10 @@
-return {
+{
+  ["Radioactive"] = {
+    ["Name"] = "Radioactive",
+    ["Id"] = "P",
+    ["Color"] = Color3.fromRGB(98, 255, 0),
+    ["ValueMulti"] = 80,
+  },
   ["Meteoric"] = {
     ["Name"] = "Meteoric",
     ["Id"] = "D",
@@ -125,11 +131,47 @@ return {
     ["Color"] = Color3.fromRGB(212, 191, 141),
     ["ValueMulti"] = 3,
   },
+  ["Toxic"] = {
+    ["Name"] = "Toxic",
+    ["Id"] = "TX",
+    ["Color"] = Color3.fromRGB(85, 255, 0),
+    ["ValueMulti"] = 12,
+  },
   ["Moonlit"] = {
     ["Name"] = "Moonlit",
     ["Id"] = "z",
     ["Color"] = Color3.fromRGB(153, 141, 255),
     ["ValueMulti"] = 2,
+  },
+  ["Tranquil"] = {
+    ["Name"] = "Tranquil",
+    ["Id"] = "TQ",
+    ["Color"] = Color3.fromRGB(255, 255, 255),
+    ["ValueMulti"] = 20,
+  },
+  ["Enlightened"] = {
+    ["Name"] = "Enlightened",
+    ["Id"] = "EN",
+    ["Color"] = Color3.fromRGB(255, 255, 255),
+    ["ValueMulti"] = 35,
+  },
+  ["Eclipsed"] = {
+    ["Name"] = "Eclipsed",
+    ["Id"] = "EC",
+    ["Color"] = Color3.fromRGB(44, 111, 162),
+    ["ValueMulti"] = 15,
+  },
+  ["FoxfireChakra"] = {
+    ["Name"] = "FoxfireChakra",
+    ["Id"] = "S",
+    ["Color"] = Color3.fromRGB(255, 80, 65),
+    ["ValueMulti"] = 90,
+  },
+  ["Chakra"] = {
+    ["Name"] = "Chakra",
+    ["Id"] = "R",
+    ["Color"] = Color3.fromRGB(255, 80, 65),
+    ["ValueMulti"] = 15,
   },
   ["Infected"] = {
     ["Name"] = "Infected",
