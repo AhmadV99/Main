@@ -1,4 +1,4 @@
-{
+return {
   ["Radioactive"] = {
     ["Name"] = "Radioactive",
     ["Id"] = "P",
