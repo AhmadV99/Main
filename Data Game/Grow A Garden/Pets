@@ -8,6 +8,9 @@ return {
   ["Panda"] = {
     ["DefaultHunger"] = 20000
   },
+  ["Shiba Inu"] = {
+    ["DefaultHunger"] = 2000
+  },
   ["Parasaurolophus"] = {
     ["DefaultHunger"] = 40000
   },
@@ -19,6 +22,9 @@ return {
   },
   ["Ostrich"] = {
     ["DefaultHunger"] = 20000
+  },
+  ["Kitsune"] = {
+    ["DefaultHunger"] = 49999
   },
   ["Rainbow Dilophosaurus"] = {
     ["DefaultHunger"] = 30000
@@ -86,23 +92,38 @@ return {
   ["Raccoon"] = {
     ["DefaultHunger"] = 45000
   },
+  ["Golden Bee"] = {
+    ["DefaultHunger"] = 25000
+  },
+  ["Tanuki"] = {
+    ["DefaultHunger"] = 15000
+  },
+  ["Firefly"] = {
+    ["DefaultHunger"] = 25000
+  },
   ["Seagull"] = {
     ["DefaultHunger"] = 3500
   },
   ["Raptor"] = {
     ["DefaultHunger"] = 40000
   },
+  ["Koi"] = {
+    ["DefaultHunger"] = 2500
+  },
   ["Snail"] = {
     ["DefaultHunger"] = 12000
+  },
+  ["Nihonzaru"] = {
+    ["DefaultHunger"] = 8000
   },
   ["Flamingo"] = {
     ["DefaultHunger"] = 14000
   },
-  ["Golden Bee"] = {
-    ["DefaultHunger"] = 25000
+  ["Rainbow Parasaurolophus"] = {
+    ["DefaultHunger"] = 40000
   },
-  ["Firefly"] = {
-    ["DefaultHunger"] = 25000
+  ["Moon Cat"] = {
+    ["DefaultHunger"] = 2400
   },
   ["Blood Kiwi"] = {
     ["DefaultHunger"] = 45000
@@ -155,7 +176,7 @@ return {
   ["Praying Mantis"] = {
     ["DefaultHunger"] = 55000
   },
-  ["Rainbow Parasaurolophus"] = {
+  ["Kappa"] = {
     ["DefaultHunger"] = 40000
   },
   ["Caterpillar"] = {
@@ -248,8 +269,8 @@ return {
   ["Orange Tabby"] = {
     ["DefaultHunger"] = 1500
   },
-  ["Moon Cat"] = {
-    ["DefaultHunger"] = 2400
+  ["Tanchozuru"] = {
+    ["DefaultHunger"] = 40000
   },
   ["Blood Owl"] = {
     ["DefaultHunger"] = 50000
