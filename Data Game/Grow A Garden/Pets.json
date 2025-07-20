@@ -1,0 +1,308 @@
+{
+  "Brontosaurus": {
+    "DefaultHunger": 80000
+  },
+  "Kiwi": {
+    "DefaultHunger": 50000
+  },
+  "Panda": {
+    "DefaultHunger": 20000
+  },
+  "Shiba Inu": {
+    "DefaultHunger": 2000
+  },
+  "Parasaurolophus": {
+    "DefaultHunger": 40000
+  },
+  "Capybara": {
+    "DefaultHunger": 30000
+  },
+  "Ankylosaurus": {
+    "DefaultHunger": 40000
+  },
+  "Ostrich": {
+    "DefaultHunger": 20000
+  },
+  "Kitsune": {
+    "DefaultHunger": 49999
+  },
+  "Rainbow Dilophosaurus": {
+    "DefaultHunger": 30000
+  },
+  "Spinosaurus": {
+    "DefaultHunger": 25000
+  },
+  "Disco Bee": {
+    "DefaultHunger": 25000
+  },
+  "Queen Bee": {
+    "DefaultHunger": 65000
+  },
+  "T-Rex": {
+    "DefaultHunger": 60000
+  },
+  "Crab": {
+    "DefaultHunger": 3000
+  },
+  "Meerkat": {
+    "DefaultHunger": 22000
+  },
+  "Firefly": {
+    "DefaultHunger": 25000
+  },
+  "Deer": {
+    "DefaultHunger": 2500
+  },
+  "Red Giant Ant": {
+    "DefaultHunger": 15000
+  },
+  "Honey Bee": {
+    "DefaultHunger": 25000
+  },
+  "Bald Eagle": {
+    "DefaultHunger": 15000
+  },
+  "Rooster": {
+    "DefaultHunger": 4000
+  },
+  "Squirrel": {
+    "DefaultHunger": 15000
+  },
+  "Petal Bee": {
+    "DefaultHunger": 25000
+  },
+  "Starfish": {
+    "DefaultHunger": 1500
+  },
+  "Stegosaurus": {
+    "DefaultHunger": 40000
+  },
+  "Mole": {
+    "DefaultHunger": 50000
+  },
+  "Chicken": {
+    "DefaultHunger": 3400
+  },
+  "Echo Frog": {
+    "DefaultHunger": 50000
+  },
+  "Dragonfly": {
+    "DefaultHunger": 100000
+  },
+  "Raccoon": {
+    "DefaultHunger": 45000
+  },
+  "Monkey": {
+    "DefaultHunger": 7400
+  },
+  "Pig": {
+    "DefaultHunger": 5000
+  },
+  "Rainbow Iguanodon": {
+    "DefaultHunger": 40000
+  },
+  "Tanuki": {
+    "DefaultHunger": 15000
+  },
+  "Raptor": {
+    "DefaultHunger": 40000
+  },
+  "Praying Mantis": {
+    "DefaultHunger": 55000
+  },
+  "Snail": {
+    "DefaultHunger": 12000
+  },
+  "Nihonzaru": {
+    "DefaultHunger": 8000
+  },
+  "Flamingo": {
+    "DefaultHunger": 14000
+  },
+  "Giant Ant": {
+    "DefaultHunger": 18000
+  },
+  "Hedgehog": {
+    "DefaultHunger": 30000
+  },
+  "Blood Kiwi": {
+    "DefaultHunger": 45000
+  },
+  "Owl": {
+    "DefaultHunger": 50000
+  },
+  "Rainbow Ankylosaurus": {
+    "DefaultHunger": 40000
+  },
+  "Spotted Deer": {
+    "DefaultHunger": 2500
+  },
+  "Golden Lab": {
+    "DefaultHunger": 1200
+  },
+  "Orangutan": {
+    "DefaultHunger": 55000
+  },
+  "Frog": {
+    "DefaultHunger": 50000
+  },
+  "Pack Bee": {
+    "DefaultHunger": 25000
+  },
+  "Cooked Owl": {
+    "DefaultHunger": 50000
+  },
+  "Axolotl": {
+    "DefaultHunger": 22000
+  },
+  "Red Dragon": {
+    "DefaultHunger": 10000
+  },
+  "Cow": {
+    "DefaultHunger": 9500
+  },
+  "Mimic Octopus": {
+    "DefaultHunger": 25000
+  },
+  "Grey Mouse": {
+    "DefaultHunger": 15000
+  },
+  "Red Fox": {
+    "DefaultHunger": 35000
+  },
+  "Chicken Zombie": {
+    "DefaultHunger": 35000
+  },
+  "Golden Bee": {
+    "DefaultHunger": 25000
+  },
+  "Kappa": {
+    "DefaultHunger": 40000
+  },
+  "Caterpillar": {
+    "DefaultHunger": 25000
+  },
+  "Radioactive Stegosaurus": {
+    "DefaultHunger": 40000
+  },
+  "Turtle": {
+    "DefaultHunger": 10000
+  },
+  "Dog": {
+    "DefaultHunger": 1000
+  },
+  "Rainbow Pachycephalosaurus": {
+    "DefaultHunger": 40000
+  },
+  "Blood Owl": {
+    "DefaultHunger": 50000
+  },
+  "Fennec Fox": {
+    "DefaultHunger": 35000
+  },
+  "Triceratops": {
+    "DefaultHunger": 40000
+  },
+  "Koi": {
+    "DefaultHunger": 2500
+  },
+  "Moth": {
+    "DefaultHunger": 25000
+  },
+  "Hamster": {
+    "DefaultHunger": 15000
+  },
+  "Wasp": {
+    "DefaultHunger": 28000
+  },
+  "Night Owl": {
+    "DefaultHunger": 50000
+  },
+  "Tarantula Hawk": {
+    "DefaultHunger": 28000
+  },
+  "Rainbow Parasaurolophus": {
+    "DefaultHunger": 40000
+  },
+  "Peacock": {
+    "DefaultHunger": 19000
+  },
+  "Rainbow Spinosaurus": {
+    "DefaultHunger": 25000
+  },
+  "Iguanodon": {
+    "DefaultHunger": 40000
+  },
+  "Butterfly": {
+    "DefaultHunger": 26000
+  },
+  "Blood Hedgehog": {
+    "DefaultHunger": 30000
+  },
+  "Cat": {
+    "DefaultHunger": 1400
+  },
+  "Sea Turtle": {
+    "DefaultHunger": 22200
+  },
+  "Black Bunny": {
+    "DefaultHunger": 1300
+  },
+  "Brown Mouse": {
+    "DefaultHunger": 15000
+  },
+  "Sea Otter": {
+    "DefaultHunger": 30000
+  },
+  "Silver Monkey": {
+    "DefaultHunger": 8000
+  },
+  "Bee": {
+    "DefaultHunger": 25000
+  },
+  "Pterodactyl": {
+    "DefaultHunger": 40000
+  },
+  "Hyacinth Macaw": {
+    "DefaultHunger": 12000
+  },
+  "Orange Tabby": {
+    "DefaultHunger": 1500
+  },
+  "Tanchozuru": {
+    "DefaultHunger": 40000
+  },
+  "Bear Bee": {
+    "DefaultHunger": 45000
+  },
+  "Seal": {
+    "DefaultHunger": 17000
+  },
+  "Sand Snake": {
+    "DefaultHunger": 28000
+  },
+  "Pachycephalosaurus": {
+    "DefaultHunger": 40000
+  },
+  "Moon Cat": {
+    "DefaultHunger": 2400
+  },
+  "Bunny": {
+    "DefaultHunger": 1100
+  },
+  "Toucan": {
+    "DefaultHunger": 9000
+  },
+  "Scarlet Macaw": {
+    "DefaultHunger": 12000
+  },
+  "Polar Bear": {
+    "DefaultHunger": 20000
+  },
+  "Dilophosaurus": {
+    "DefaultHunger": 30000
+  },
+  "Seagull": {
+    "DefaultHunger": 3500
+  }
+}
