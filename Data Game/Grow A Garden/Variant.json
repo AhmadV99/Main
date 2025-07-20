@@ -1,0 +1,5 @@
+[
+  { "type": "Normal", "amount": 1000, "value": 1 },
+  { "type": "Gold", "amount": 10, "value": 20 },
+  { "type": "Rainbow", "amount": 1, "value": 50 }
+]
