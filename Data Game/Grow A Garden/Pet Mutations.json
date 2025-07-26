@@ -1,36 +1,34 @@
 {
   "Normal": {
     "AvaliableFromMutationMachine": false,
-    "Color": {
-      "r": 255,
-      "g": 255,
-      "b": 255
-    },
+    "Color": null,
     "Boosts": [],
     "EnumId": "m",
     "Passives": []
   },
-  "Tranquil": {
+  "Corrupted": {
     "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 94,
-      "g": 247,
-      "b": 247
-    },
+    "Color": null,
     "Chance": 10,
     "Boosts": [],
-    "EnumId": "o",
+    "EnumId": "p",
     "Passives": [
-      "Tranquil Pet Mutation"
+      "Corrupted Pet Mutation"
+    ]
+  },
+  "Ascended": {
+    "AvaliableFromMutationMachine": true,
+    "Color": null,
+    "Chance": 1,
+    "Boosts": [],
+    "EnumId": "n",
+    "Passives": [
+      "Ascended Pet Mutation"
     ]
   },
   "Inverted": {
     "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 128,
-      "g": 128,
-      "b": 128
-    },
+    "Color": null,
     "Chance": 50,
     "Boosts": [
       {
@@ -45,11 +43,7 @@
   },
   "Rainbow": {
     "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 4,
-      "g": 175,
-      "b": 236
-    },
+    "Color": null,
     "Chance": 10,
     "Boosts": [
       {
@@ -64,11 +58,7 @@
   },
   "Radiant": {
     "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 248,
-      "g": 108,
-      "b": 38
-    },
+    "Color": null,
     "Chance": 10,
     "Boosts": [
       []
@@ -78,27 +68,19 @@
       "Radiant Pet Mutation"
     ]
   },
-  "Shocked": {
+  "Tranquil": {
     "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 255,
-      "g": 255,
-      "b": 100
-    },
+    "Color": null,
     "Chance": 10,
     "Boosts": [],
-    "EnumId": "a",
+    "EnumId": "o",
     "Passives": [
-      "Shocked Pet Mutation"
+      "Tranquil Pet Mutation"
     ]
   },
   "IronSkin": {
     "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 206,
-      "g": 206,
-      "b": 206
-    },
+    "Color": null,
     "Chance": 10,
     "Boosts": [
       []
@@ -110,11 +92,7 @@
   },
   "Golden": {
     "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 255,
-      "g": 225,
-      "b": 0
-    },
+    "Color": null,
     "Chance": 20,
     "Boosts": [
       {
@@ -127,80 +105,9 @@
       "Golden Pet Mutation"
     ]
   },
-  "Shiny": {
-    "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 145,
-      "g": 207,
-      "b": 221
-    },
-    "Chance": 100,
-    "Boosts": [
-      {
-        "BoostAmount": 0.3,
-        "BoostType": "PET_XP_BOOST"
-      }
-    ],
-    "EnumId": "d",
-    "Passives": [
-      "Shiny Pet Mutation"
-    ]
-  },
-  "Mega": {
-    "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 255,
-      "g": 90,
-      "b": 90
-    },
-    "Chance": 20,
-    "Boosts": [
-      {
-        "BoostAmount": 2,
-        "BoostType": "SIZE_MODIFICATION"
-      }
-    ],
-    "EnumId": "i",
-    "Passives": [
-      "Mega Pet Mutation",
-      "Mega Pet Mutation Bonus"
-    ]
-  },
-  "Windy": {
-    "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 162,
-      "g": 185,
-      "b": 209
-    },
-    "Chance": 30,
-    "Boosts": [],
-    "EnumId": "e",
-    "Passives": [
-      "Windy Pet Mutation"
-    ]
-  },
-  "Rideable": {
-    "AvaliableFromMutationMachine": false,
-    "Color": {
-      "r": 255,
-      "g": 255,
-      "b": 255
-    },
-    "Chance": 0,
-    "Boosts": [
-      []
-    ],
-    "EnumId": "h",
-    "Passives": []
-  },
   "Tiny": {
     "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 173,
-      "g": 216,
-      "b": 230
-    },
+    "Color": null,
     "Chance": 20,
     "Boosts": [
       {
@@ -214,27 +121,9 @@
       "Tiny Pet Mutation Bonus"
     ]
   },
-  "Ascended": {
-    "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 247,
-      "g": 245,
-      "b": 184
-    },
-    "Chance": 1,
-    "Boosts": [],
-    "EnumId": "n",
-    "Passives": [
-      "Ascended Pet Mutation"
-    ]
-  },
   "Frozen": {
     "AvaliableFromMutationMachine": true,
-    "Color": {
-      "r": 108,
-      "g": 184,
-      "b": 255
-    },
+    "Color": null,
     "Chance": 30,
     "Boosts": [
       []
@@ -242,6 +131,67 @@
     "EnumId": "f",
     "Passives": [
       "Frozen Pet Mutation"
+    ]
+  },
+  "Windy": {
+    "AvaliableFromMutationMachine": true,
+    "Color": null,
+    "Chance": 30,
+    "Boosts": [],
+    "EnumId": "e",
+    "Passives": [
+      "Windy Pet Mutation"
+    ]
+  },
+  "Rideable": {
+    "AvaliableFromMutationMachine": false,
+    "Color": null,
+    "Chance": 0,
+    "Boosts": [
+      []
+    ],
+    "EnumId": "h",
+    "Passives": []
+  },
+  "Mega": {
+    "AvaliableFromMutationMachine": true,
+    "Color": null,
+    "Chance": 20,
+    "Boosts": [
+      {
+        "BoostAmount": 2,
+        "BoostType": "SIZE_MODIFICATION"
+      }
+    ],
+    "EnumId": "i",
+    "Passives": [
+      "Mega Pet Mutation",
+      "Mega Pet Mutation Bonus"
+    ]
+  },
+  "Shiny": {
+    "AvaliableFromMutationMachine": true,
+    "Color": null,
+    "Chance": 100,
+    "Boosts": [
+      {
+        "BoostAmount": 0.3,
+        "BoostType": "PET_XP_BOOST"
+      }
+    ],
+    "EnumId": "d",
+    "Passives": [
+      "Shiny Pet Mutation"
+    ]
+  },
+  "Shocked": {
+    "AvaliableFromMutationMachine": true,
+    "Color": null,
+    "Chance": 10,
+    "Boosts": [],
+    "EnumId": "a",
+    "Passives": [
+      "Shocked Pet Mutation"
     ]
   }
 }
