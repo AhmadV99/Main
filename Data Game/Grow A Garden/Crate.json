@@ -370,6 +370,46 @@
     "Icon": "rbxassetid://79712703111915",
     "OpenTime": 1800
   },
+  "Corrupted Zen Crate": {
+    "Color": null,
+    "CosmeticRolls": {
+      "Items": {
+        "Corrupted Well": {
+          "NormalizedOdd": 4,
+          "Name": "Corrupted Well",
+          "ItemOdd": 4
+        },
+        "Corrupted Garden Light": {
+          "NormalizedOdd": 20,
+          "Name": "Corrupted Garden Light",
+          "ItemOdd": 20
+        },
+        "Corrupted Bridge": {
+          "NormalizedOdd": 13,
+          "Name": "Corrupted Bridge",
+          "ItemOdd": 13
+        },
+        "Mounted Katanas": {
+          "NormalizedOdd": 13,
+          "Name": "Mounted Katanas",
+          "ItemOdd": 13
+        },
+        "Zen Fan": {
+          "NormalizedOdd": 30,
+          "Name": "Zen Fan",
+          "ItemOdd": 30
+        },
+        "Corrupted Bamboo Fence": {
+          "NormalizedOdd": 20,
+          "Name": "Corrupted Bamboo Fence",
+          "ItemOdd": 20
+        }
+      },
+      "TotalOdds": 100
+    },
+    "Icon": "rbxassetid://117200584838690",
+    "OpenTime": 3600
+  },
   "July 4th Crate": {
     "Color": null,
     "CosmeticRolls": {
