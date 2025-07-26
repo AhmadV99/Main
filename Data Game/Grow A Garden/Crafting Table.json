@@ -685,13 +685,14 @@
         }
       }
     ],
-    "MachineTypes": [
-      "SeedEventWorkbench"
-    ],
     "Cost": {
       "CurrencyType": "SummerCoins",
       "Amount": 18
     },
+    "DisplayInCrafting": false,
+    "MachineTypes": [
+      "SeedEventWorkbench"
+    ],
     "Outputs": [
       {
         "ItemType": "Seed",
@@ -816,13 +817,14 @@
         }
       }
     ],
-    "MachineTypes": [
-      "SeedEventWorkbench"
-    ],
     "Cost": {
       "CurrencyType": "SummerCoins",
       "Amount": 30
     },
+    "DisplayInCrafting": false,
+    "MachineTypes": [
+      "SeedEventWorkbench"
+    ],
     "Outputs": [
       {
         "ItemType": "Seed",
@@ -1074,13 +1076,14 @@
         }
       }
     ],
-    "MachineTypes": [
-      "SeedEventWorkbench"
-    ],
     "Cost": {
       "CurrencyType": "SummerCoins",
       "Amount": 3
     },
+    "DisplayInCrafting": false,
+    "MachineTypes": [
+      "SeedEventWorkbench"
+    ],
     "Outputs": [
       {
         "ItemType": "Seed",
