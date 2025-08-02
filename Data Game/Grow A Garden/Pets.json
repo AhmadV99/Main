@@ -3,9 +3,13 @@
     "Icon": "rbxassetid://138431192706334",
     "DefaultHunger": 80000
   },
-  "Kiwi": {
-    "Icon": "rbxassetid://104651906442347",
-    "DefaultHunger": 50000
+  "Fennec Fox": {
+    "Icon": "rbxassetid://106568248173155",
+    "DefaultHunger": 35000
+  },
+  "Spaghetti Sloth": {
+    "Icon": "rbxassetid://82028428678888",
+    "DefaultHunger": 18000
   },
   "Panda": {
     "Icon": "rbxassetid://107090327345246",
@@ -71,17 +75,33 @@
     "Icon": "rbxassetid://111346621796974",
     "DefaultHunger": 22000
   },
-  "Firefly": {
-    "Icon": "rbxassetid://131310748087635",
-    "DefaultHunger": 25000
+  "Monkey": {
+    "Icon": "rbxassetid://113881196210664",
+    "DefaultHunger": 7400
+  },
+  "Toucan": {
+    "Icon": "rbxassetid://118598422473758",
+    "DefaultHunger": 9000
+  },
+  "Pig": {
+    "Icon": "rbxassetid://134476443266448",
+    "DefaultHunger": 5000
   },
   "Deer": {
     "Icon": "rbxassetid://91926785467809",
     "DefaultHunger": 2500
   },
-  "Red Giant Ant": {
-    "Icon": "rbxassetid://89449712431551",
-    "DefaultHunger": 15000
+  "Blood Hedgehog": {
+    "Icon": "rbxassetid://76471191139414",
+    "DefaultHunger": 30000
+  },
+  "Polar Bear": {
+    "Icon": "rbxassetid://72209118254193",
+    "DefaultHunger": 20000
+  },
+  "Dilophosaurus": {
+    "Icon": "rbxassetid://88442192911950",
+    "DefaultHunger": 30000
   },
   "Honey Bee": {
     "Icon": "rbxassetid://134999468799162",
@@ -94,6 +114,10 @@
   "Rooster": {
     "Icon": "rbxassetid://137107493326109",
     "DefaultHunger": 4000
+  },
+  "Giant Ant": {
+    "Icon": "rbxassetid://71413253805996",
+    "DefaultHunger": 18000
   },
   "Squirrel": {
     "Icon": "rbxassetid://96950434895806",
@@ -123,61 +147,65 @@
     "Icon": "rbxassetid://79089804794269",
     "DefaultHunger": 50000
   },
-  "Monkey": {
-    "Icon": "rbxassetid://113881196210664",
-    "DefaultHunger": 7400
-  },
-  "Pig": {
-    "Icon": "rbxassetid://134476443266448",
-    "DefaultHunger": 5000
-  },
-  "Chicken": {
-    "Icon": "rbxassetid://108080824427369",
-    "DefaultHunger": 3400
-  },
-  "Polar Bear": {
-    "Icon": "rbxassetid://72209118254193",
-    "DefaultHunger": 20000
-  },
-  "Toucan": {
-    "Icon": "rbxassetid://118598422473758",
-    "DefaultHunger": 9000
-  },
-  "Giant Ant": {
-    "Icon": "rbxassetid://71413253805996",
-    "DefaultHunger": 18000
-  },
-  "Echo Frog": {
-    "Icon": "rbxassetid://102271225890686",
-    "DefaultHunger": 50000
-  },
   "Hedgehog": {
     "Icon": "rbxassetid://83544966481425",
     "DefaultHunger": 30000
-  },
-  "Dragonfly": {
-    "Icon": "rbxassetid://118484611393651",
-    "DefaultHunger": 100000
   },
   "Grey Mouse": {
     "Icon": "rbxassetid://116310390398341",
     "DefaultHunger": 15000
   },
-  "Raccoon": {
-    "Icon": "rbxassetid://136232391555861",
-    "DefaultHunger": 45000
-  },
   "Red Fox": {
     "Icon": "rbxassetid://116662854190616",
     "DefaultHunger": 35000
+  },
+  "Chicken": {
+    "Icon": "rbxassetid://108080824427369",
+    "DefaultHunger": 3400
   },
   "Chicken Zombie": {
     "Icon": "rbxassetid://108581559611673",
     "DefaultHunger": 35000
   },
-  "Dilophosaurus": {
-    "Icon": "rbxassetid://88442192911950",
-    "DefaultHunger": 30000
+  "Queen Bee": {
+    "Icon": "rbxassetid://127281358672581",
+    "DefaultHunger": 65000
+  },
+  "Blood Owl": {
+    "Icon": "rbxassetid://81262783747840",
+    "DefaultHunger": 50000
+  },
+  "Echo Frog": {
+    "Icon": "rbxassetid://102271225890686",
+    "DefaultHunger": 50000
+  },
+  "Moon Cat": {
+    "Icon": "rbxassetid://72392850111255",
+    "DefaultHunger": 2400
+  },
+  "Dragonfly": {
+    "Icon": "rbxassetid://118484611393651",
+    "DefaultHunger": 100000
+  },
+  "Kiwi": {
+    "Icon": "rbxassetid://104651906442347",
+    "DefaultHunger": 50000
+  },
+  "Raccoon": {
+    "Icon": "rbxassetid://136232391555861",
+    "DefaultHunger": 45000
+  },
+  "Golden Lab": {
+    "Icon": "rbxassetid://99376934607716",
+    "DefaultHunger": 1200
+  },
+  "Wasp": {
+    "Icon": "rbxassetid://72767862942880",
+    "DefaultHunger": 28000
+  },
+  "Tarantula Hawk": {
+    "Icon": "rbxassetid://126203792467378",
+    "DefaultHunger": 28000
   },
   "Tanuki": {
     "Icon": "rbxassetid://86675114036925",
@@ -187,9 +215,9 @@
     "Icon": "rbxassetid://133649762905181",
     "DefaultHunger": 40000
   },
-  "Blood Owl": {
-    "Icon": "rbxassetid://81262783747840",
-    "DefaultHunger": 50000
+  "Praying Mantis": {
+    "Icon": "rbxassetid://121485029406440",
+    "DefaultHunger": 55000
   },
   "Snail": {
     "Icon": "rbxassetid://80970021440625",
@@ -203,12 +231,12 @@
     "Icon": "rbxassetid://122573642551827",
     "DefaultHunger": 14000
   },
-  "Praying Mantis": {
-    "Icon": "rbxassetid://121485029406440",
-    "DefaultHunger": 55000
+  "Butterfly": {
+    "Icon": "rbxassetid://119048229505161",
+    "DefaultHunger": 26000
   },
-  "Caterpillar": {
-    "Icon": "rbxassetid://119651461526366",
+  "Spinosaurus": {
+    "Icon": "rbxassetid://78132119445447",
     "DefaultHunger": 25000
   },
   "Blood Kiwi": {
@@ -227,9 +255,9 @@
     "Icon": "rbxassetid://126439207915258",
     "DefaultHunger": 2500
   },
-  "Golden Lab": {
-    "Icon": "rbxassetid://99376934607716",
-    "DefaultHunger": 1200
+  "French Fry Ferret": {
+    "Icon": "rbxassetid://124662460084969",
+    "DefaultHunger": 37000
   },
   "Orangutan": {
     "Icon": "rbxassetid://91252752916705",
@@ -263,17 +291,17 @@
     "Icon": "rbxassetid://118831959038511",
     "DefaultHunger": 25000
   },
-  "Spinosaurus": {
-    "Icon": "rbxassetid://78132119445447",
+  "Pachycephalosaurus": {
+    "Icon": "rbxassetid://98967783170808",
+    "DefaultHunger": 40000
+  },
+  "Mochi Mouse": {
+    "Icon": "rbxassetid://91015602604713",
     "DefaultHunger": 25000
   },
-  "Wasp": {
-    "Icon": "rbxassetid://72767862942880",
-    "DefaultHunger": 28000
-  },
-  "Tarantula Hawk": {
-    "Icon": "rbxassetid://126203792467378",
-    "DefaultHunger": 28000
+  "Sea Turtle": {
+    "Icon": "rbxassetid://136324651089948",
+    "DefaultHunger": 22200
   },
   "Golden Bee": {
     "Icon": "rbxassetid://125658111834879",
@@ -303,49 +331,49 @@
     "Icon": "rbxassetid://71353461716145",
     "DefaultHunger": 40000
   },
-  "Butterfly": {
-    "Icon": "rbxassetid://119048229505161",
-    "DefaultHunger": 26000
+  "Bear Bee": {
+    "Icon": "rbxassetid://97465846056354",
+    "DefaultHunger": 45000
   },
-  "Fennec Fox": {
-    "Icon": "rbxassetid://106568248173155",
-    "DefaultHunger": 35000
+  "Sea Otter": {
+    "Icon": "rbxassetid://94422445572440",
+    "DefaultHunger": 30000
   },
-  "Triceratops": {
-    "Icon": "rbxassetid://133031079193526",
-    "DefaultHunger": 40000
+  "Hamster": {
+    "Icon": "rbxassetid://95041454621458",
+    "DefaultHunger": 15000
   },
-  "Koi": {
-    "Icon": "rbxassetid://112819490327372",
-    "DefaultHunger": 2500
+  "Bagel Bunny": {
+    "Icon": "rbxassetid://83878222838385",
+    "DefaultHunger": 1200
   },
   "Moth": {
     "Icon": "rbxassetid://134180528391091",
     "DefaultHunger": 25000
   },
-  "Sea Turtle": {
-    "Icon": "rbxassetid://136324651089948",
-    "DefaultHunger": 22200
+  "Pancake Mole": {
+    "Icon": "rbxassetid://118795155833639",
+    "DefaultHunger": 50000
   },
-  "Pterodactyl": {
-    "Icon": "rbxassetid://132325249273328",
-    "DefaultHunger": 40000
+  "Peacock": {
+    "Icon": "rbxassetid://79434662175672",
+    "DefaultHunger": 19000
   },
   "Night Owl": {
     "Icon": "rbxassetid://101760640498094",
     "DefaultHunger": 50000
   },
-  "Blood Hedgehog": {
-    "Icon": "rbxassetid://76471191139414",
-    "DefaultHunger": 30000
+  "Bee": {
+    "Icon": "rbxassetid://114116135745614",
+    "DefaultHunger": 25000
   },
   "Rainbow Parasaurolophus": {
     "Icon": "rbxassetid://116062422658499",
     "DefaultHunger": 40000
   },
-  "Sea Otter": {
-    "Icon": "rbxassetid://94422445572440",
-    "DefaultHunger": 30000
+  "Pterodactyl": {
+    "Icon": "rbxassetid://132325249273328",
+    "DefaultHunger": 40000
   },
   "Rainbow Spinosaurus": {
     "Icon": "rbxassetid://98134533729834",
@@ -355,21 +383,21 @@
     "Icon": "rbxassetid://132997806707299",
     "DefaultHunger": 40000
   },
-  "Peacock": {
-    "Icon": "rbxassetid://79434662175672",
-    "DefaultHunger": 19000
+  "Triceratops": {
+    "Icon": "rbxassetid://133031079193526",
+    "DefaultHunger": 40000
   },
-  "Bee": {
-    "Icon": "rbxassetid://114116135745614",
-    "DefaultHunger": 25000
+  "Bacon Pig": {
+    "Icon": "rbxassetid://134476443266448",
+    "DefaultHunger": 5000
   },
   "Cat": {
     "Icon": "rbxassetid://136444015144013",
     "DefaultHunger": 1400
   },
-  "Hamster": {
-    "Icon": "rbxassetid://95041454621458",
-    "DefaultHunger": 15000
+  "Sand Snake": {
+    "Icon": "rbxassetid://110203289397199",
+    "DefaultHunger": 28000
   },
   "Black Bunny": {
     "Icon": "rbxassetid://86614624778104",
@@ -379,21 +407,21 @@
     "Icon": "rbxassetid://94641319183999",
     "DefaultHunger": 15000
   },
-  "Bear Bee": {
-    "Icon": "rbxassetid://97465846056354",
-    "DefaultHunger": 45000
+  "Caterpillar": {
+    "Icon": "rbxassetid://119651461526366",
+    "DefaultHunger": 25000
   },
   "Silver Monkey": {
     "Icon": "rbxassetid://136985272620600",
     "DefaultHunger": 8000
   },
-  "Sand Snake": {
-    "Icon": "rbxassetid://110203289397199",
-    "DefaultHunger": 28000
-  },
-  "Pachycephalosaurus": {
-    "Icon": "rbxassetid://98967783170808",
+  "Rainbow Iguanodon": {
+    "Icon": "rbxassetid://70960389100537",
     "DefaultHunger": 40000
+  },
+  "Cooked Owl": {
+    "Icon": "rbxassetid://78954652883059",
+    "DefaultHunger": 50000
   },
   "Hyacinth Macaw": {
     "Icon": "rbxassetid://118586950763516",
@@ -407,33 +435,33 @@
     "Icon": "rbxassetid://102876710012857",
     "DefaultHunger": 40000
   },
-  "Rainbow Iguanodon": {
-    "Icon": "rbxassetid://70960389100537",
-    "DefaultHunger": 40000
+  "Corrupted Kodama": {
+    "Icon": "rbxassetid://131755084333898",
+    "DefaultHunger": 22000
   },
   "Seal": {
     "Icon": "rbxassetid://70977930937021",
     "DefaultHunger": 17000
   },
-  "Cooked Owl": {
-    "Icon": "rbxassetid://78954652883059",
-    "DefaultHunger": 50000
-  },
-  "Moon Cat": {
-    "Icon": "rbxassetid://72392850111255",
-    "DefaultHunger": 2400
-  },
-  "Corrupted Kodama": {
-    "Icon": "rbxassetid://131755084333898",
-    "DefaultHunger": 22000
-  },
-  "Queen Bee": {
-    "Icon": "rbxassetid://127281358672581",
-    "DefaultHunger": 65000
-  },
   "Kodama": {
     "Icon": "rbxassetid://123076615425263",
     "DefaultHunger": 22000
+  },
+  "Firefly": {
+    "Icon": "rbxassetid://131310748087635",
+    "DefaultHunger": 25000
+  },
+  "Koi": {
+    "Icon": "rbxassetid://112819490327372",
+    "DefaultHunger": 2500
+  },
+  "Red Giant Ant": {
+    "Icon": "rbxassetid://89449712431551",
+    "DefaultHunger": 15000
+  },
+  "Seagull": {
+    "Icon": "rbxassetid://125267211322255",
+    "DefaultHunger": 3500
   },
   "Scarlet Macaw": {
     "Icon": "rbxassetid://103592675269053",
@@ -443,12 +471,12 @@
     "Icon": "rbxassetid://104799415228364",
     "DefaultHunger": 28000
   },
-  "Seagull": {
-    "Icon": "rbxassetid://125267211322255",
-    "DefaultHunger": 3500
-  },
   "Maneki-neko": {
     "Icon": "rbxassetid://116049439913569",
     "DefaultHunger": 1777
+  },
+  "Sushi Bear": {
+    "Icon": "rbxassetid://101808352881529",
+    "DefaultHunger": 20000
   }
 }
