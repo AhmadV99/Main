@@ -1,21 +1,4 @@
 {
-  "Normal": {
-    "AvaliableFromMutationMachine": false,
-    "Color": null,
-    "Boosts": [],
-    "EnumId": "m",
-    "Passives": []
-  },
-  "Corrupted": {
-    "AvaliableFromMutationMachine": true,
-    "Color": null,
-    "Chance": 10,
-    "Boosts": [],
-    "EnumId": "p",
-    "Passives": [
-      "Corrupted Pet Mutation"
-    ]
-  },
   "Ascended": {
     "AvaliableFromMutationMachine": true,
     "Color": null,
@@ -41,20 +24,15 @@
       "Inverted Pet Mutation"
     ]
   },
-  "Rainbow": {
-    "AvaliableFromMutationMachine": true,
+  "Rideable": {
+    "AvaliableFromMutationMachine": false,
     "Color": null,
-    "Chance": 10,
+    "Chance": 0,
     "Boosts": [
-      {
-        "BoostAmount": 0.2,
-        "BoostType": "PASSIVE_BOOST"
-      }
+      []
     ],
-    "EnumId": "c",
-    "Passives": [
-      "Rainbow Pet Mutation"
-    ]
+    "EnumId": "h",
+    "Passives": []
   },
   "Radiant": {
     "AvaliableFromMutationMachine": true,
@@ -68,14 +46,72 @@
       "Radiant Pet Mutation"
     ]
   },
-  "Tranquil": {
+  "Fried": {
+    "AvaliableFromMutationMachine": false,
+    "Color": null,
+    "Chance": 0,
+    "Boosts": [],
+    "EnumId": "q",
+    "Passives": [
+      "Fried Pet Mutation"
+    ]
+  },
+  "Windy": {
+    "AvaliableFromMutationMachine": true,
+    "Color": null,
+    "Chance": 30,
+    "Boosts": [],
+    "EnumId": "e",
+    "Passives": [
+      "Windy Pet Mutation"
+    ]
+  },
+  "Mega": {
+    "AvaliableFromMutationMachine": true,
+    "Color": null,
+    "Chance": 20,
+    "Boosts": [
+      {
+        "BoostAmount": 2,
+        "BoostType": "SIZE_MODIFICATION"
+      }
+    ],
+    "EnumId": "i",
+    "Passives": [
+      "Mega Pet Mutation",
+      "Mega Pet Mutation Bonus"
+    ]
+  },
+  "Shocked": {
     "AvaliableFromMutationMachine": true,
     "Color": null,
     "Chance": 10,
     "Boosts": [],
-    "EnumId": "o",
+    "EnumId": "a",
     "Passives": [
-      "Tranquil Pet Mutation"
+      "Shocked Pet Mutation"
+    ]
+  },
+  "Normal": {
+    "AvaliableFromMutationMachine": false,
+    "Color": null,
+    "Boosts": [],
+    "EnumId": "m",
+    "Passives": []
+  },
+  "Rainbow": {
+    "AvaliableFromMutationMachine": true,
+    "Color": null,
+    "Chance": 10,
+    "Boosts": [
+      {
+        "BoostAmount": 0.2,
+        "BoostType": "PASSIVE_BOOST"
+      }
+    ],
+    "EnumId": "c",
+    "Passives": [
+      "Rainbow Pet Mutation"
     ]
   },
   "IronSkin": {
@@ -121,52 +157,24 @@
       "Tiny Pet Mutation Bonus"
     ]
   },
-  "Frozen": {
-    "AvaliableFromMutationMachine": true,
-    "Color": null,
-    "Chance": 30,
-    "Boosts": [
-      []
-    ],
-    "EnumId": "f",
-    "Passives": [
-      "Frozen Pet Mutation"
-    ]
-  },
-  "Windy": {
-    "AvaliableFromMutationMachine": true,
-    "Color": null,
-    "Chance": 30,
-    "Boosts": [],
-    "EnumId": "e",
-    "Passives": [
-      "Windy Pet Mutation"
-    ]
-  },
-  "Rideable": {
+  "Tranquil": {
     "AvaliableFromMutationMachine": false,
     "Color": null,
     "Chance": 0,
-    "Boosts": [
-      []
-    ],
-    "EnumId": "h",
-    "Passives": []
-  },
-  "Mega": {
-    "AvaliableFromMutationMachine": true,
-    "Color": null,
-    "Chance": 20,
-    "Boosts": [
-      {
-        "BoostAmount": 2,
-        "BoostType": "SIZE_MODIFICATION"
-      }
-    ],
-    "EnumId": "i",
+    "Boosts": [],
+    "EnumId": "o",
     "Passives": [
-      "Mega Pet Mutation",
-      "Mega Pet Mutation Bonus"
+      "Tranquil Pet Mutation"
+    ]
+  },
+  "Corrupted": {
+    "AvaliableFromMutationMachine": false,
+    "Color": null,
+    "Chance": 0,
+    "Boosts": [],
+    "EnumId": "p",
+    "Passives": [
+      "Corrupted Pet Mutation"
     ]
   },
   "Shiny": {
@@ -184,14 +192,16 @@
       "Shiny Pet Mutation"
     ]
   },
-  "Shocked": {
+  "Frozen": {
     "AvaliableFromMutationMachine": true,
     "Color": null,
-    "Chance": 10,
-    "Boosts": [],
-    "EnumId": "a",
+    "Chance": 30,
+    "Boosts": [
+      []
+    ],
+    "EnumId": "f",
     "Passives": [
-      "Shocked Pet Mutation"
+      "Frozen Pet Mutation"
     ]
   }
 }
