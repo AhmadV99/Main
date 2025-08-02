@@ -370,6 +370,46 @@
     "Icon": "rbxassetid://79712703111915",
     "OpenTime": 1800
   },
+  "July 4th Crate": {
+    "Color": null,
+    "CosmeticRolls": {
+      "Items": {
+        "America Flag Badge": {
+          "NormalizedOdd": 19,
+          "Name": "America Flag Badge",
+          "ItemOdd": 19
+        },
+        "July 4th Toy": {
+          "NormalizedOdd": 19,
+          "Name": "July 4th Toy",
+          "ItemOdd": 19
+        },
+        "America Banner": {
+          "NormalizedOdd": 19,
+          "Name": "America Banner",
+          "ItemOdd": 19
+        },
+        "Uncle Sam Gnome": {
+          "NormalizedOdd": 5,
+          "Name": "Uncle Sam Gnome",
+          "ItemOdd": 5
+        },
+        "Bald Eagle Statue": {
+          "NormalizedOdd": 19,
+          "Name": "Bald Eagle Statue",
+          "ItemOdd": 19
+        },
+        "American Flag": {
+          "NormalizedOdd": 19,
+          "Name": "American Flag",
+          "ItemOdd": 19
+        }
+      },
+      "TotalOdds": 100
+    },
+    "Icon": "rbxassetid://128614481307269",
+    "OpenTime": 3600
+  },
   "Corrupted Zen Crate": {
     "Color": null,
     "CosmeticRolls": {
@@ -410,44 +450,49 @@
     "Icon": "rbxassetid://117200584838690",
     "OpenTime": 3600
   },
-  "July 4th Crate": {
+  "Food Crate": {
     "Color": null,
     "CosmeticRolls": {
       "Items": {
-        "America Flag Badge": {
-          "NormalizedOdd": 19,
-          "Name": "America Flag Badge",
-          "ItemOdd": 19
+        "Golden Hotdog Statue": {
+          "NormalizedOdd": 3,
+          "Name": "Golden Hotdog Statue",
+          "ItemOdd": 3
         },
-        "July 4th Toy": {
-          "NormalizedOdd": 19,
-          "Name": "July 4th Toy",
-          "ItemOdd": 19
+        "Cheese Mat": {
+          "NormalizedOdd": 6,
+          "Name": "Cheese Mat",
+          "ItemOdd": 6
         },
-        "America Banner": {
-          "NormalizedOdd": 19,
-          "Name": "America Banner",
-          "ItemOdd": 19
+        "Hotdog Cart": {
+          "NormalizedOdd": 6,
+          "Name": "Hotdog Cart",
+          "ItemOdd": 6
         },
-        "Uncle Sam Gnome": {
-          "NormalizedOdd": 5,
-          "Name": "Uncle Sam Gnome",
-          "ItemOdd": 5
+        "Blue Cake": {
+          "NormalizedOdd": 25,
+          "Name": "Blue Cake",
+          "ItemOdd": 25
         },
-        "Bald Eagle Statue": {
-          "NormalizedOdd": 19,
-          "Name": "Bald Eagle Statue",
-          "ItemOdd": 19
+        "Pink Cake": {
+          "NormalizedOdd": 25,
+          "Name": "Pink Cake",
+          "ItemOdd": 25
         },
-        "American Flag": {
-          "NormalizedOdd": 19,
-          "Name": "American Flag",
-          "ItemOdd": 19
+        "Banana Hammock": {
+          "NormalizedOdd": 15,
+          "Name": "Banana Hammock",
+          "ItemOdd": 15
+        },
+        "Coffee Machine": {
+          "NormalizedOdd": 20,
+          "Name": "Coffee Machine",
+          "ItemOdd": 20
         }
       },
       "TotalOdds": 100
     },
-    "Icon": "rbxassetid://128614481307269",
+    "Icon": "rbxassetid://116209463147438",
     "OpenTime": 3600
   },
   "Sign Crate": {
