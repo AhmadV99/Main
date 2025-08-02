@@ -40,46 +40,50 @@
       }
     ]
   },
-  "Tropical Mist Sprinkler": {
+  "Veinpetal": {
     "Inputs": [
       {
-        "ItemType": "Holdable",
+        "ItemType": "Seed",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Coconut"
+          "ItemName": "Orange Tulip"
+        }
+      },
+      {
+        "ItemType": "Seed",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Daffodil"
         }
       },
       {
         "ItemType": "Holdable",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Dragon Fruit"
+          "ItemName": "Beanstalk"
         }
       },
       {
         "ItemType": "Holdable",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Mango"
-        }
-      },
-      {
-        "ItemType": "Sprinkler",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Godly Sprinkler"
+          "ItemName": "Burning Bud"
         }
       }
     ],
     "MachineTypes": [
-      "GearEventWorkbench"
+      "SeedEventWorkbench"
     ],
+    "Cost": {
+      "CurrencyType": "Sheckles",
+      "Amount": 650000
+    },
     "Outputs": [
       {
-        "ItemType": "Gear",
+        "ItemType": "Seed",
         "ItemData": {
           "Quantity": 1,
-          "ItemName": "Tropical Mist Sprinkler"
+          "ItemName": "Veinpetal"
         }
       }
     ]
@@ -407,7 +411,7 @@
         "ItemType": "Seed",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Stonebite"
+          "ItemName": "Daffodil"
         }
       },
       {
@@ -835,154 +839,6 @@
       }
     ]
   },
-  "Reclaimer": {
-    "Inputs": [
-      {
-        "ItemType": "PetEgg",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Common Egg"
-        }
-      },
-      {
-        "ItemType": "Harvest Tool",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Harvest Tool"
-        }
-      }
-    ],
-    "MachineTypes": [
-      "GearEventWorkbench"
-    ],
-    "Cost": {
-      "CurrencyType": "Sheckles",
-      "Amount": 500000
-    },
-    "Outputs": [
-      {
-        "ItemType": "Gear",
-        "ItemData": {
-          "Quantity": 3,
-          "ItemName": "Reclaimer"
-        }
-      }
-    ]
-  },
-  "Mutation Spray Pollinated": {
-    "Inputs": [
-      {
-        "ItemType": "SprayBottle",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Cleaning Spray"
-        }
-      },
-      {
-        "ItemType": "Holdable",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Bee Balm"
-        }
-      }
-    ],
-    "Cost": {
-      "CurrencyType": "Honey",
-      "Amount": 25
-    },
-    "DisplayInCrafting": false,
-    "MachineTypes": [
-      "GearEventWorkbench"
-    ],
-    "Outputs": [
-      {
-        "ItemType": "Gear",
-        "ItemData": {
-          "Quantity": 1,
-          "ItemName": "Mutation Spray Pollinated"
-        }
-      }
-    ]
-  },
-  "Spice Spritzer Sprinkler": {
-    "Inputs": [
-      {
-        "ItemType": "Holdable",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Pepper"
-        }
-      },
-      {
-        "ItemType": "Holdable",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Ember Lily"
-        }
-      },
-      {
-        "ItemType": "Holdable",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Cacao"
-        }
-      },
-      {
-        "ItemType": "Sprinkler",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Master Sprinkler"
-        }
-      }
-    ],
-    "MachineTypes": [
-      "GearEventWorkbench"
-    ],
-    "Outputs": [
-      {
-        "ItemType": "Gear",
-        "ItemData": {
-          "Quantity": 1,
-          "ItemName": "Spice Spritzer Sprinkler"
-        }
-      }
-    ]
-  },
-  "Honeysuckle": {
-    "Inputs": [
-      {
-        "ItemType": "Seed",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Pink Lily"
-        }
-      },
-      {
-        "ItemType": "Seed",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Purple Dahlia"
-        }
-      }
-    ],
-    "Cost": {
-      "CurrencyType": "Honey",
-      "Amount": 80
-    },
-    "DisplayInCrafting": false,
-    "MachineTypes": [
-      "SeedEventWorkbench"
-    ],
-    "Outputs": [
-      {
-        "ItemType": "Seed",
-        "ItemData": {
-          "Quantity": 1,
-          "ItemName": "Honeysuckle"
-        }
-      }
-    ]
-  },
   "Grand Volcania": {
     "Inputs": [
       {
@@ -1031,65 +887,70 @@
       }
     ]
   },
-  "Crafters Seed Pack": {
+  "Reclaimer": {
     "Inputs": [
       {
-        "ItemType": "Seed Pack",
+        "ItemType": "PetEgg",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Flower Seed Pack"
+          "ItemName": "Common Egg"
+        }
+      },
+      {
+        "ItemType": "Harvest Tool",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Harvest Tool"
         }
       }
     ],
-    "Cost": {
-      "CurrencyType": "Honey",
-      "Amount": 10
-    },
-    "DisplayInCrafting": false,
     "MachineTypes": [
-      "SeedEventWorkbench"
+      "GearEventWorkbench"
     ],
+    "Cost": {
+      "CurrencyType": "Sheckles",
+      "Amount": 500000
+    },
     "Outputs": [
       {
-        "ItemType": "Seed Pack",
+        "ItemType": "Gear",
         "ItemData": {
-          "Quantity": 1,
-          "ItemName": "Crafters Seed Pack"
+          "Quantity": 3,
+          "ItemName": "Reclaimer"
         }
       }
     ]
   },
-  "Peace Lily": {
+  "Mutation Spray Amber": {
     "Inputs": [
       {
-        "ItemType": "Seed",
+        "ItemType": "SprayBottle",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Rafflesia"
+          "ItemName": "Cleaning Spray"
         }
       },
       {
-        "ItemType": "Seed",
+        "ItemType": "PetEgg",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Cauliflower"
+          "ItemName": "Dinosaur Egg"
         }
       }
     ],
-    "Cost": {
-      "CurrencyType": "SummerCoins",
-      "Amount": 3
-    },
-    "DisplayInCrafting": false,
     "MachineTypes": [
-      "SeedEventWorkbench"
+      "DinoEventWorkbench"
     ],
+    "Cost": {
+      "CurrencyType": "Sheckles",
+      "Amount": 1000000
+    },
     "Outputs": [
       {
-        "ItemType": "Seed",
+        "ItemType": "Gear",
         "ItemData": {
           "Quantity": 1,
-          "ItemName": "Peace Lily"
+          "ItemName": "Mutation Spray Amber"
         }
       }
     ]
@@ -1138,7 +999,190 @@
       }
     ]
   },
-  "Dino Crate": {
+  "Peace Lily": {
+    "Inputs": [
+      {
+        "ItemType": "Seed",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Rafflesia"
+        }
+      },
+      {
+        "ItemType": "Seed",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Cauliflower"
+        }
+      }
+    ],
+    "Cost": {
+      "CurrencyType": "SummerCoins",
+      "Amount": 3
+    },
+    "DisplayInCrafting": false,
+    "MachineTypes": [
+      "SeedEventWorkbench"
+    ],
+    "Outputs": [
+      {
+        "ItemType": "Seed",
+        "ItemData": {
+          "Quantity": 1,
+          "ItemName": "Peace Lily"
+        }
+      }
+    ]
+  },
+  "Tanning Mirror": {
+    "Inputs": [
+      {
+        "ItemType": "Sprinkler",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Basic Sprinkler"
+        }
+      },
+      {
+        "ItemType": "Sprinkler",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Advanced Sprinkler"
+        }
+      },
+      {
+        "ItemType": "Sprinkler",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Godly Sprinkler"
+        }
+      }
+    ],
+    "MachineTypes": [
+      "GearEventWorkbench"
+    ],
+    "Cost": {
+      "CurrencyType": "Sheckles",
+      "Amount": 500000
+    },
+    "Outputs": [
+      {
+        "ItemType": "Gear",
+        "ItemData": {
+          "Quantity": 1,
+          "ItemName": "Tanning Mirror"
+        }
+      }
+    ]
+  },
+  "Honeysuckle": {
+    "Inputs": [
+      {
+        "ItemType": "Seed",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Pink Lily"
+        }
+      },
+      {
+        "ItemType": "Seed",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Purple Dahlia"
+        }
+      }
+    ],
+    "Cost": {
+      "CurrencyType": "Honey",
+      "Amount": 80
+    },
+    "DisplayInCrafting": false,
+    "MachineTypes": [
+      "SeedEventWorkbench"
+    ],
+    "Outputs": [
+      {
+        "ItemType": "Seed",
+        "ItemData": {
+          "Quantity": 1,
+          "ItemName": "Honeysuckle"
+        }
+      }
+    ]
+  },
+  "Spice Spritzer Sprinkler": {
+    "Inputs": [
+      {
+        "ItemType": "Holdable",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Pepper"
+        }
+      },
+      {
+        "ItemType": "Holdable",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Ember Lily"
+        }
+      },
+      {
+        "ItemType": "Holdable",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Cacao"
+        }
+      },
+      {
+        "ItemType": "Sprinkler",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Master Sprinkler"
+        }
+      }
+    ],
+    "MachineTypes": [
+      "GearEventWorkbench"
+    ],
+    "Outputs": [
+      {
+        "ItemType": "Gear",
+        "ItemData": {
+          "Quantity": 1,
+          "ItemName": "Spice Spritzer Sprinkler"
+        }
+      }
+    ]
+  },
+  "Crafters Seed Pack": {
+    "Inputs": [
+      {
+        "ItemType": "Seed Pack",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Flower Seed Pack"
+        }
+      }
+    ],
+    "Cost": {
+      "CurrencyType": "Honey",
+      "Amount": 10
+    },
+    "DisplayInCrafting": false,
+    "MachineTypes": [
+      "SeedEventWorkbench"
+    ],
+    "Outputs": [
+      {
+        "ItemType": "Seed Pack",
+        "ItemData": {
+          "Quantity": 1,
+          "ItemName": "Crafters Seed Pack"
+        }
+      }
+    ]
+  },
+  "Archaeologist Crate": {
     "Inputs": [
       {
         "ItemType": "PetEgg",
@@ -1160,7 +1204,7 @@
         "ItemType": "CosmeticCrate",
         "ItemData": {
           "Quantity": 2,
-          "ItemName": "Dino Crate"
+          "ItemName": "Archaeologist Crate"
         }
       }
     ]
@@ -1214,15 +1258,8 @@
       }
     ]
   },
-  "Mutation Spray Amber": {
+  "Dino Crate": {
     "Inputs": [
-      {
-        "ItemType": "SprayBottle",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Cleaning Spray"
-        }
-      },
       {
         "ItemType": "PetEgg",
         "ItemData": {
@@ -1236,14 +1273,62 @@
     ],
     "Cost": {
       "CurrencyType": "Sheckles",
-      "Amount": 1000000
+      "Amount": 5500000
     },
     "Outputs": [
       {
-        "ItemType": "Gear",
+        "ItemType": "CosmeticCrate",
+        "ItemData": {
+          "Quantity": 2,
+          "ItemName": "Dino Crate"
+        }
+      }
+    ]
+  },
+  "Twisted Tangle": {
+    "Inputs": [
+      {
+        "ItemType": "Seed",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Cactus"
+        }
+      },
+      {
+        "ItemType": "Seed",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Bamboo"
+        }
+      },
+      {
+        "ItemType": "Holdable",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Cactus"
+        }
+      },
+      {
+        "ItemType": "Holdable",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Mango"
+        }
+      }
+    ],
+    "MachineTypes": [
+      "SeedEventWorkbench"
+    ],
+    "Cost": {
+      "CurrencyType": "Sheckles",
+      "Amount": 50000
+    },
+    "Outputs": [
+      {
+        "ItemType": "Seed",
         "ItemData": {
           "Quantity": 1,
-          "ItemName": "Mutation Spray Amber"
+          "ItemName": "Twisted Tangle"
         }
       }
     ]
@@ -1283,6 +1368,33 @@
       }
     ]
   },
+  "Ancient Seed Pack": {
+    "Inputs": [
+      {
+        "ItemType": "PetEgg",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Dinosaur Egg"
+        }
+      }
+    ],
+    "MachineTypes": [
+      "DinoEventWorkbench"
+    ],
+    "Cost": {
+      "CurrencyType": "Sheckles",
+      "Amount": 5500000
+    },
+    "Outputs": [
+      {
+        "ItemType": "Seed Pack",
+        "ItemData": {
+          "Quantity": 2,
+          "ItemName": "Ancient Seed Pack"
+        }
+      }
+    ]
+  },
   "Mutation Spray Shocked": {
     "Inputs": [
       {
@@ -1317,29 +1429,46 @@
       }
     ]
   },
-  "Ancient Seed Pack": {
+  "Tropical Mist Sprinkler": {
     "Inputs": [
       {
-        "ItemType": "PetEgg",
+        "ItemType": "Holdable",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Dinosaur Egg"
+          "ItemName": "Coconut"
+        }
+      },
+      {
+        "ItemType": "Holdable",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Dragon Fruit"
+        }
+      },
+      {
+        "ItemType": "Holdable",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Mango"
+        }
+      },
+      {
+        "ItemType": "Sprinkler",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Godly Sprinkler"
         }
       }
     ],
     "MachineTypes": [
-      "DinoEventWorkbench"
+      "GearEventWorkbench"
     ],
-    "Cost": {
-      "CurrencyType": "Sheckles",
-      "Amount": 5500000
-    },
     "Outputs": [
       {
-        "ItemType": "Seed Pack",
+        "ItemType": "Gear",
         "ItemData": {
-          "Quantity": 2,
-          "ItemName": "Ancient Seed Pack"
+          "Quantity": 1,
+          "ItemName": "Tropical Mist Sprinkler"
         }
       }
     ]
@@ -1388,29 +1517,37 @@
       }
     ]
   },
-  "Archaeologist Crate": {
+  "Mutation Spray Pollinated": {
     "Inputs": [
       {
-        "ItemType": "PetEgg",
+        "ItemType": "SprayBottle",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Dinosaur Egg"
+          "ItemName": "Cleaning Spray"
+        }
+      },
+      {
+        "ItemType": "Holdable",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Bee Balm"
         }
       }
     ],
-    "MachineTypes": [
-      "DinoEventWorkbench"
-    ],
     "Cost": {
-      "CurrencyType": "Sheckles",
-      "Amount": 5500000
+      "CurrencyType": "Honey",
+      "Amount": 25
     },
+    "DisplayInCrafting": false,
+    "MachineTypes": [
+      "GearEventWorkbench"
+    ],
     "Outputs": [
       {
-        "ItemType": "CosmeticCrate",
+        "ItemType": "Gear",
         "ItemData": {
-          "Quantity": 2,
-          "ItemName": "Archaeologist Crate"
+          "Quantity": 1,
+          "ItemName": "Mutation Spray Pollinated"
         }
       }
     ]
