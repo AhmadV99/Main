@@ -300,6 +300,56 @@
     "Icon": "rbxassetid://95673817494918",
     "OpenTime": 3600
   },
+  "Kitchen Crate": {
+    "Color": null,
+    "CosmeticRolls": {
+      "Items": {
+        "Donut Swing": {
+          "NormalizedOdd": 6.993006993006993,
+          "Name": "Donut Swing",
+          "ItemOdd": 10
+        },
+        "Frying Pan": {
+          "NormalizedOdd": 17.482517482517483,
+          "Name": "Frying Pan",
+          "ItemOdd": 25
+        },
+        "Pizza Box": {
+          "NormalizedOdd": 17.482517482517483,
+          "Name": "Pizza Box",
+          "ItemOdd": 25
+        },
+        "Chris P Statue": {
+          "NormalizedOdd": 2.097902097902098,
+          "Name": "Chris P Statue",
+          "ItemOdd": 3
+        },
+        "Fridge": {
+          "NormalizedOdd": 13.986013986013987,
+          "Name": "Fridge",
+          "ItemOdd": 20
+        },
+        "Stove": {
+          "NormalizedOdd": 13.986013986013987,
+          "Name": "Stove",
+          "ItemOdd": 20
+        },
+        "Cabinet Utensil": {
+          "NormalizedOdd": 13.986013986013987,
+          "Name": "Cabinet Utensil",
+          "ItemOdd": 20
+        },
+        "Sink Cabinet": {
+          "NormalizedOdd": 13.986013986013987,
+          "Name": "Sink Cabinet",
+          "ItemOdd": 20
+        }
+      },
+      "TotalOdds": 143
+    },
+    "Icon": "rbxassetid://134802128882693",
+    "OpenTime": 3600
+  },
   "Zen Gnome Crate": {
     "Color": null,
     "CosmeticRolls": {
