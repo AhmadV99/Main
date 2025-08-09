@@ -141,6 +141,16 @@
       "Golden Pet Mutation"
     ]
   },
+  "Aromatic": {
+    "AvaliableFromMutationMachine": false,
+    "Color": null,
+    "Chance": 0,
+    "Boosts": [],
+    "EnumId": "r",
+    "Passives": [
+      "Aromatic Pet Mutation"
+    ]
+  },
   "Tiny": {
     "AvaliableFromMutationMachine": true,
     "Color": null,
