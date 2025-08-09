@@ -1,12 +1,12 @@
 {
-  "Tranquil": {
-    "Id": "TQ",
-    "ValueMulti": 20,
-    "Name": "Tranquil",
+  "Eclipsed": {
+    "Id": "EC",
+    "ValueMulti": 30,
+    "Name": "Eclipsed",
     "Color": {
-      "r": 255,
-      "g": 255,
-      "b": 255
+      "r": 44,
+      "g": 111,
+      "b": 162
     }
   },
   "Meteoric": {
@@ -129,6 +129,16 @@
       "b": 0
     }
   },
+  "Junkshock": {
+    "Id": "JS",
+    "ValueMulti": 45,
+    "Name": "Junkshock",
+    "Color": {
+      "r": 147,
+      "g": 247,
+      "b": 0
+    }
+  },
   "AncientAmber": {
     "Id": "I",
     "ValueMulti": 50,
@@ -219,6 +229,26 @@
       "b": 0
     }
   },
+  "Aromatic": {
+    "Id": "ar",
+    "ValueMulti": 3,
+    "Name": "Aromatic",
+    "Color": {
+      "r": 162,
+      "g": 145,
+      "b": 57
+    }
+  },
+  "Boil": {
+    "Id": "BOL",
+    "ValueMulti": 15,
+    "Name": "Boil",
+    "Color": {
+      "r": 150,
+      "g": 178,
+      "b": 225
+    }
+  },
   "Celestial": {
     "Id": "C",
     "ValueMulti": 120,
@@ -279,6 +309,16 @@
       "b": 0
     }
   },
+  "Jackpot": {
+    "Id": "JA",
+    "ValueMulti": 15,
+    "Name": "Jackpot",
+    "Color": {
+      "r": 132,
+      "g": 245,
+      "b": 112
+    }
+  },
   "Clay": {
     "Id": "K",
     "ValueMulti": 5,
@@ -299,24 +339,24 @@
     "Name": "Amber",
     "Id": "G"
   },
-  "Jackpot": {
-    "Id": "JA",
-    "ValueMulti": 15,
-    "Name": "Jackpot",
+  "Galactic": {
+    "Id": "k",
+    "ValueMulti": 120,
+    "Name": "Galactic",
     "Color": {
-      "r": 132,
-      "g": 245,
-      "b": 112
+      "r": 243,
+      "g": 148,
+      "b": 255
     }
   },
-  "HarmonisedFoxfireChakra": {
-    "Id": "X",
-    "ValueMulti": 190,
-    "Name": "HarmonisedFoxfireChakra",
+  "HoneyGlazed": {
+    "Id": "E",
+    "ValueMulti": 5,
+    "Name": "HoneyGlazed",
     "Color": {
-      "r": 170,
-      "g": 85,
-      "b": 255
+      "r": 255,
+      "g": 204,
+      "b": 0
     }
   },
   "Frozen": {
@@ -349,24 +389,14 @@
       "b": 19
     }
   },
-  "Galactic": {
-    "Id": "k",
-    "ValueMulti": 120,
-    "Name": "Galactic",
+  "Enlightened": {
+    "Id": "EN",
+    "ValueMulti": 35,
+    "Name": "Enlightened",
     "Color": {
-      "r": 243,
-      "g": 148,
+      "r": 255,
+      "g": 255,
       "b": 255
-    }
-  },
-  "Eclipsed": {
-    "Id": "EC",
-    "ValueMulti": 30,
-    "Name": "Eclipsed",
-    "Color": {
-      "r": 44,
-      "g": 111,
-      "b": 162
     }
   },
   "Sundried": {
@@ -377,6 +407,16 @@
       "r": 207,
       "g": 93,
       "b": 0
+    }
+  },
+  "Blitzshock": {
+    "Id": "BS",
+    "ValueMulti": 50,
+    "Name": "Blitzshock",
+    "Color": {
+      "r": 0,
+      "g": 192,
+      "b": 245
     }
   },
   "Sandy": {
@@ -409,14 +449,14 @@
       "b": 255
     }
   },
-  "Blitzshock": {
-    "Id": "BS",
-    "ValueMulti": 50,
-    "Name": "Blitzshock",
+  "Oil": {
+    "Id": "OL",
+    "ValueMulti": 15,
+    "Name": "Oil",
     "Color": {
-      "r": 0,
-      "g": 192,
-      "b": 245
+      "r": 52,
+      "g": 52,
+      "b": 77
     }
   },
   "Zombified": {
@@ -439,6 +479,36 @@
       "b": 0
     }
   },
+  "Static": {
+    "Id": "V",
+    "ValueMulti": 8,
+    "Name": "Static",
+    "Color": {
+      "r": 255,
+      "g": 255,
+      "b": 0
+    }
+  },
+  "Ceramic": {
+    "Id": "L",
+    "ValueMulti": 32,
+    "Name": "Ceramic",
+    "Color": {
+      "r": 234,
+      "g": 184,
+      "b": 146
+    }
+  },
+  "Dawnbound": {
+    "Id": "c",
+    "ValueMulti": 150,
+    "Name": "Dawnbound",
+    "Color": {
+      "r": 255,
+      "g": 213,
+      "b": 0
+    }
+  },
   "Drenched": {
     "Id": "p",
     "ValueMulti": 5,
@@ -449,13 +519,13 @@
       "b": 228
     }
   },
-  "HoneyGlazed": {
-    "Id": "E",
-    "ValueMulti": 5,
-    "Name": "HoneyGlazed",
+  "Molten": {
+    "Id": "i",
+    "ValueMulti": 25,
+    "Name": "Molten",
     "Color": {
-      "r": 255,
-      "g": 204,
+      "r": 223,
+      "g": 100,
       "b": 0
     }
   },
@@ -469,44 +539,14 @@
       "b": 223
     }
   },
-  "Ceramic": {
-    "Id": "L",
-    "ValueMulti": 32,
-    "Name": "Ceramic",
-    "Color": {
-      "r": 234,
-      "g": 184,
-      "b": 146
-    }
-  },
-  "Aurora": {
-    "Id": "l",
-    "ValueMulti": 90,
-    "Name": "Aurora",
-    "Color": {
-      "r": 99,
-      "g": 89,
-      "b": 175
-    }
-  },
-  "Dawnbound": {
-    "Id": "c",
-    "ValueMulti": 150,
-    "Name": "Dawnbound",
+  "Chakra": {
+    "Id": "R",
+    "ValueMulti": 15,
+    "Name": "Chakra",
     "Color": {
       "r": 255,
-      "g": 213,
-      "b": 0
-    }
-  },
-  "Molten": {
-    "Id": "i",
-    "ValueMulti": 25,
-    "Name": "Molten",
-    "Color": {
-      "r": 223,
-      "g": 100,
-      "b": 0
+      "g": 80,
+      "b": 65
     }
   },
   "Pasta": {
@@ -519,14 +559,14 @@
       "b": 128
     }
   },
-  "Bloodlit": {
-    "Id": "A",
-    "ValueMulti": 4,
-    "Name": "Bloodlit",
+  "Aurora": {
+    "Id": "l",
+    "ValueMulti": 90,
+    "Name": "Aurora",
     "Color": {
-      "r": 200,
-      "g": 0,
-      "b": 0
+      "r": 99,
+      "g": 89,
+      "b": 175
     }
   },
   "Plasma": {
@@ -559,14 +599,14 @@
       "b": 255
     }
   },
-  "Chakra": {
-    "Id": "R",
-    "ValueMulti": 15,
-    "Name": "Chakra",
+  "Bloodlit": {
+    "Id": "A",
+    "ValueMulti": 4,
+    "Name": "Bloodlit",
     "Color": {
-      "r": 255,
-      "g": 80,
-      "b": 65
+      "r": 200,
+      "g": 0,
+      "b": 0
     }
   },
   "Wiltproof": {
@@ -579,24 +619,24 @@
       "b": 155
     }
   },
-  "OldAmber": {
+  "HarmonisedChakra": {
+    "Id": "W",
+    "ValueMulti": 35,
+    "Name": "HarmonisedChakra",
     "Color": {
-      "r": 252,
-      "g": 106,
-      "b": 33
-    },
-    "ValueMulti": 20,
-    "Name": "OldAmber",
-    "Id": "H"
+      "r": 170,
+      "g": 85,
+      "b": 255
+    }
   },
-  "Static": {
-    "Id": "V",
-    "ValueMulti": 8,
-    "Name": "Static",
+  "HarmonisedFoxfireChakra": {
+    "Id": "X",
+    "ValueMulti": 190,
+    "Name": "HarmonisedFoxfireChakra",
     "Color": {
-      "r": 255,
-      "g": 255,
-      "b": 0
+      "r": 170,
+      "g": 85,
+      "b": 255
     }
   },
   "Lightcycle": {
@@ -609,15 +649,15 @@
       "b": 255
     }
   },
-  "HarmonisedChakra": {
-    "Id": "W",
-    "ValueMulti": 35,
-    "Name": "HarmonisedChakra",
+  "OldAmber": {
     "Color": {
-      "r": 170,
-      "g": 85,
-      "b": 255
-    }
+      "r": 252,
+      "g": 106,
+      "b": 33
+    },
+    "ValueMulti": 20,
+    "Name": "OldAmber",
+    "Id": "H"
   },
   "Voidtouched": {
     "Id": "f",
@@ -629,10 +669,10 @@
       "b": 255
     }
   },
-  "Enlightened": {
-    "Id": "EN",
-    "ValueMulti": 35,
-    "Name": "Enlightened",
+  "Tranquil": {
+    "Id": "TQ",
+    "ValueMulti": 20,
+    "Name": "Tranquil",
     "Color": {
       "r": 255,
       "g": 255,
