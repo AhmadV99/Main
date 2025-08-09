@@ -870,13 +870,14 @@
         }
       }
     ],
-    "MachineTypes": [
-      "SeedEventWorkbench"
-    ],
     "Cost": {
       "CurrencyType": "Sheckles",
       "Amount": 900000
     },
+    "DisplayInCrafting": false,
+    "MachineTypes": [
+      "SeedEventWorkbench"
+    ],
     "Outputs": [
       {
         "ItemType": "Seed",
