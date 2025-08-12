@@ -11,12 +11,6 @@ LocalPlayer.Idled:connect(function()
     VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
 end)
 
-task.spawn(function()
-   pcall(function()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/main/Library/GUI_ADS.lua"))()
-   end)
-end)
-
 local CoreGui = (game:GetService("RunService"):IsStudio() and LocalPlayer.PlayerGui) or (gethui() or game:GetService("CoreGui"):Clone())
 
 local function MakeDraggable(topbarobject, object)
