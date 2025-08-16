@@ -220,6 +220,46 @@
     "Icon": "rbxassetid://140481838960536",
     "OpenTime": 600
   },
+  "Sprout Crate": {
+    "Color": null,
+    "CosmeticRolls": {
+      "Items": {
+        "Egg Podium": {
+          "NormalizedOdd": 4.761904761904762,
+          "Name": "Egg Podium",
+          "ItemOdd": 5
+        },
+        "Bean Vine Pillar": {
+          "NormalizedOdd": 23.809523809523807,
+          "Name": "Bean Vine Pillar",
+          "ItemOdd": 25
+        },
+        "Beanpod Crate": {
+          "NormalizedOdd": 19.047619047619047,
+          "Name": "Beanpod Crate",
+          "ItemOdd": 20
+        },
+        "Chopped Beanstalk": {
+          "NormalizedOdd": 19.047619047619047,
+          "Name": "Chopped Beanstalk",
+          "ItemOdd": 20
+        },
+        "Beanstalk Entrance": {
+          "NormalizedOdd": 9.523809523809524,
+          "Name": "Beanstalk Entrance",
+          "ItemOdd": 10
+        },
+        "Beanstalk Hammock": {
+          "NormalizedOdd": 23.809523809523807,
+          "Name": "Beanstalk Hammock",
+          "ItemOdd": 25
+        }
+      },
+      "TotalOdds": 105
+    },
+    "Icon": "rbxassetid://117396875478804",
+    "OpenTime": 3600
+  },
   "Bee Crate": {
     "Color": null,
     "CosmeticRolls": {
