@@ -88,37 +88,46 @@
       }
     ]
   },
-  "Dinosaur Egg": {
+  "Berry Blusher Sprinkler": {
     "Inputs": [
       {
-        "ItemType": "PetEgg",
+        "ItemType": "Holdable",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Common Egg"
+          "ItemName": "Grape"
         }
       },
       {
         "ItemType": "Holdable",
         "ItemData": {
           "AcceptAllTypes": false,
-          "ItemName": "Bone Blossom"
+          "ItemName": "Blueberry"
+        }
+      },
+      {
+        "ItemType": "Holdable",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Strawberry"
+        }
+      },
+      {
+        "ItemType": "Sprinkler",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Godly Sprinkler"
         }
       }
     ],
-    "Cost": {
-      "CurrencyType": "Sheckles",
-      "Amount": 5500000
-    },
-    "IsUnlockable": true,
     "MachineTypes": [
-      "DinoEventWorkbench"
+      "GearEventWorkbench"
     ],
     "Outputs": [
       {
-        "ItemType": "PetEgg",
+        "ItemType": "Gear",
         "ItemData": {
           "Quantity": 1,
-          "ItemName": "Dinosaur Egg"
+          "ItemName": "Berry Blusher Sprinkler"
         }
       }
     ]
@@ -442,6 +451,54 @@
         "ItemData": {
           "Quantity": 1,
           "ItemName": "Horsetail"
+        }
+      }
+    ]
+  },
+  "Pet Pouch": {
+    "Inputs": [
+      {
+        "ItemType": "PetEgg",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Common Egg"
+        }
+      },
+      {
+        "ItemType": "Food",
+        "ItemData": {
+          "Quantity": 1,
+          "ItemName": "Corndog"
+        }
+      },
+      {
+        "ItemType": "PetBoost",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Small Treat"
+        }
+      },
+      {
+        "ItemType": "PetBoost",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Small Toy"
+        }
+      }
+    ],
+    "MachineTypes": [
+      "GearEventWorkbench"
+    ],
+    "Cost": {
+      "CurrencyType": "Sheckles",
+      "Amount": 50000000
+    },
+    "Outputs": [
+      {
+        "ItemType": "Gear",
+        "ItemData": {
+          "Quantity": 1,
+          "ItemName": "Pet Pouch"
         }
       }
     ]
@@ -1430,6 +1487,41 @@
       }
     ]
   },
+  "Dinosaur Egg": {
+    "Inputs": [
+      {
+        "ItemType": "PetEgg",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Common Egg"
+        }
+      },
+      {
+        "ItemType": "Holdable",
+        "ItemData": {
+          "AcceptAllTypes": false,
+          "ItemName": "Bone Blossom"
+        }
+      }
+    ],
+    "Cost": {
+      "CurrencyType": "Sheckles",
+      "Amount": 5500000
+    },
+    "IsUnlockable": true,
+    "MachineTypes": [
+      "DinoEventWorkbench"
+    ],
+    "Outputs": [
+      {
+        "ItemType": "PetEgg",
+        "ItemData": {
+          "Quantity": 1,
+          "ItemName": "Dinosaur Egg"
+        }
+      }
+    ]
+  },
   "Tropical Mist Sprinkler": {
     "Inputs": [
       {
@@ -1470,50 +1562,6 @@
         "ItemData": {
           "Quantity": 1,
           "ItemName": "Tropical Mist Sprinkler"
-        }
-      }
-    ]
-  },
-  "Berry Blusher Sprinkler": {
-    "Inputs": [
-      {
-        "ItemType": "Holdable",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Grape"
-        }
-      },
-      {
-        "ItemType": "Holdable",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Blueberry"
-        }
-      },
-      {
-        "ItemType": "Holdable",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Strawberry"
-        }
-      },
-      {
-        "ItemType": "Sprinkler",
-        "ItemData": {
-          "AcceptAllTypes": false,
-          "ItemName": "Godly Sprinkler"
-        }
-      }
-    ],
-    "MachineTypes": [
-      "GearEventWorkbench"
-    ],
-    "Outputs": [
-      {
-        "ItemType": "Gear",
-        "ItemData": {
-          "Quantity": 1,
-          "ItemName": "Berry Blusher Sprinkler"
         }
       }
     ]
