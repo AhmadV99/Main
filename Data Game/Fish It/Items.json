@@ -1,1514 +1,1298 @@
 {
-  "Ballina Angelfish": {
-    "Type": "Fishes",
-    "Name": "Ballina Angelfish",
-    "Tier": 3,
-    "Id": 119,
-    "Icon": "rbxassetid://99236757363784"
-  },
-  "Orangy Goby": {
-    "Type": "Fishes",
-    "Name": "Orangy Goby",
-    "Tier": 1,
-    "Id": 32,
-    "Icon": "rbxassetid://80870534603019"
-  },
-  "Enchanted Angelfish": {
-    "Type": "Fishes",
-    "Name": "Enchanted Angelfish",
-    "Tier": 4,
-    "Id": 14,
-    "Icon": "rbxassetid://108347802265821"
-  },
-  "DEC24 - Sapphire Plaque": {
-    "Type": "Trophies",
-    "Name": "DEC24 - Sapphire Plaque",
-    "Tier": 90,
-    "Id": 12,
-    "Icon": "rbxassetid://119747646543723"
-  },
-  "Polarized": {
-    "Type": "Fishing Rods",
-    "Name": "Polarized",
-    "Tier": 2,
-    "Id": 128,
-    "Icon": "rbxassetid://127763221923032"
-  },
-  "Pinata": {
-    "Type": "Fishing Rods",
-    "Name": "Pinata",
-    "Tier": 2,
-    "Id": 217,
-    "Icon": "rbxassetid://96441140230554"
-  },
-  "Scissortail Dartfish": {
-    "Type": "Fishes",
-    "Name": "Scissortail Dartfish",
-    "Tier": 2,
-    "Id": 29,
-    "Icon": "rbxassetid://90918658215983"
-  },
-  "Racoon Butterfly Fish": {
-    "Type": "Fishes",
-    "Name": "Racoon Butterfly Fish",
-    "Tier": 2,
-    "Id": 144,
-    "Icon": "rbxassetid://92680808637130"
-  },
-  "Monster Shark": {
-    "Type": "Fishes",
-    "Name": "Monster Shark",
-    "Tier": 7,
-    "Id": 206,
-    "Icon": "rbxassetid://109551787474599"
-  },
-  "Fiery": {
-    "Type": "Fishing Rods",
-    "Name": "Fiery",
-    "Tier": 6,
-    "Id": 216,
-    "Icon": "rbxassetid://95655883897541"
-  },
-  "Reef Chromis": {
-    "Type": "Fishes",
-    "Name": "Reef Chromis",
-    "Tier": 1,
-    "Id": 43,
-    "Icon": "rbxassetid://130761855658346"
-  },
-  "Mistletoe Damsel": {
-    "Type": "Fishes",
-    "Name": "Mistletoe Damsel",
-    "Tier": 1,
-    "Id": 91,
-    "Icon": "rbxassetid://119896827350397"
-  },
-  "Christmastree Longnose": {
-    "Type": "Fishes",
-    "Name": "Christmastree Longnose",
-    "Tier": 3,
-    "Id": 93,
-    "Icon": "rbxassetid://121538254026074"
-  },
-  "Lucky Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Lucky Rod",
-    "Tier": 3,
-    "Id": 4,
-    "Icon": "rbxassetid://85174841193446"
-  },
-  "Worm Fish": {
-    "Type": "Fishes",
-    "Name": "Worm Fish",
-    "Tier": 7,
-    "Id": 145,
-    "Icon": "rbxassetid://88157067345872"
-  },
-  "Coal Tang": {
-    "Type": "Fishes",
-    "Name": "Coal Tang",
-    "Tier": 2,
-    "Id": 19,
-    "Icon": "rbxassetid://92488575546885"
-  },
-  "Lobster": {
-    "Type": "Fishes",
-    "Name": "Lobster",
-    "Tier": 4,
-    "Id": 36,
-    "Icon": "rbxassetid://106973499045957"
-  },
-  "Gingerbread Tang": {
-    "Type": "Fishes",
-    "Name": "Gingerbread Tang",
-    "Tier": 1,
-    "Id": 90,
-    "Icon": "rbxassetid://81165959957452"
-  },
-  "Blackcap Basslet": {
-    "Type": "Fishes",
-    "Name": "Blackcap Basslet",
-    "Tier": 2,
-    "Id": 182,
-    "Icon": "rbxassetid://95659897738388"
-  },
-  "Specked Butterfly": {
-    "Type": "Fishes",
-    "Name": "Specked Butterfly",
-    "Tier": 1,
-    "Id": 33,
-    "Icon": "rbxassetid://116155560772333"
-  },
-  "White Tang": {
-    "Type": "Fishes",
-    "Name": "White Tang",
-    "Tier": 1,
-    "Id": 115,
-    "Icon": "rbxassetid://138516719984773"
-  },
-  "Panther Grouper": {
-    "Type": "Fishes",
-    "Name": "Panther Grouper",
-    "Tier": 4,
-    "Id": 27,
-    "Icon": "rbxassetid://110559683316227"
-  },
-  "Flame Angelfish": {
-    "Type": "Fishes",
-    "Name": "Flame Angelfish",
-    "Tier": 2,
-    "Id": 68,
-    "Icon": "rbxassetid://128385926161840"
-  },
-  "Firecoal Damsel": {
-    "Type": "Fishes",
-    "Name": "Firecoal Damsel",
-    "Tier": 4,
-    "Id": 49,
-    "Icon": "rbxassetid://108870635586928"
-  },
-  "Giant Squid": {
-    "Type": "Fishes",
-    "Name": "Giant Squid",
-    "Tier": 7,
-    "Id": 156,
-    "Icon": "rbxassetid://135470649745250"
-  },
-  "Festive Goby": {
-    "Type": "Fishes",
-    "Name": "Festive Goby",
-    "Tier": 1,
-    "Id": 92,
-    "Icon": "rbxassetid://131719468046777"
-  },
-  "Robot Kraken": {
-    "Type": "Fishes",
-    "Name": "Robot Kraken",
-    "Tier": 7,
-    "Id": 159,
-    "Icon": "rbxassetid://80927639907406"
-  },
-  "Abyssal Chroma": {
-    "Type": "Fishing Rods",
-    "Name": "Abyssal Chroma",
-    "Tier": 100,
-    "Id": 167,
-    "Icon": "rbxassetid://124678532461341"
-  },
-  "Skeleton Fish": {
-    "Type": "Fishes",
-    "Name": "Skeleton Fish",
-    "Tier": 1,
-    "Id": 165,
-    "Icon": "rbxassetid://110090152643341"
-  },
-  "Loving": {
-    "Type": "Fishing Rods",
-    "Name": "Loving",
-    "Tier": 100,
-    "Id": 175,
-    "Icon": "rbxassetid://112586849729572"
-  },
-  "Magma Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Magma Rod",
-    "Tier": 5,
-    "Id": 3,
-    "Icon": "rbxassetid://130960889779123"
-  },
-  "Swordfish": {
-    "Type": "Fishes",
-    "Name": "Swordfish",
-    "Tier": 2,
-    "Id": 164,
-    "Icon": "rbxassetid://105539179190905"
-  },
-  "Astral Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Astral Rod",
-    "Tier": 5,
-    "Id": 5,
-    "Icon": "rbxassetid://123734625865292"
-  },
-  "Pink Dolphin": {
-    "Type": "Fishes",
-    "Name": "Pink Dolphin",
-    "Tier": 4,
-    "Id": 207,
-    "Icon": "rbxassetid://86256600614394"
-  },
-  "Frozen Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Frozen Rod",
-    "Tier": 100,
-    "Id": 102,
-    "Icon": "rbxassetid://136553588257457"
-  },
-  "Magic Tang": {
-    "Type": "Fishes",
-    "Name": "Magic Tang",
-    "Tier": 4,
-    "Id": 16,
-    "Icon": "rbxassetid://88573644059627"
-  },
-  "Toy Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Toy Rod",
-    "Tier": 1,
-    "Id": 84,
-    "Icon": "rbxassetid://138216787235127"
-  },
-  "Astra Damsel": {
-    "Type": "Fishes",
-    "Name": "Astra Damsel",
-    "Tier": 4,
-    "Id": 17,
-    "Icon": "rbxassetid://80597542368624"
-  },
-  "Enchant Stone": {
-    "Type": "EnchantStones",
-    "Name": "Enchant Stone",
-    "Tier": 1,
-    "Id": 10,
-    "Icon": "rbxassetid://138135001339336"
-  },
-  "Blue-Banded Goby": {
-    "Type": "Fishes",
-    "Name": "Blue-Banded Goby",
-    "Tier": 2,
-    "Id": 106,
-    "Icon": "rbxassetid://137187691311291"
-  },
-  "DEC24 - Wood Plaque": {
-    "Type": "Trophies",
-    "Name": "DEC24 - Wood Plaque",
-    "Tier": 90,
-    "Id": 118,
-    "Icon": "rbxassetid://0"
-  },
-  "Flower Garden": {
-    "Type": "Fishing Rods",
-    "Name": "Flower Garden",
-    "Tier": 3,
-    "Id": 179,
-    "Icon": "rbxassetid://131572620708470"
-  },
-  "Fangtooth": {
-    "Type": "Fishes",
-    "Name": "Fangtooth",
-    "Tier": 4,
-    "Id": 155,
-    "Icon": "rbxassetid://82285034746187"
-  },
-  "Eerie Shark": {
-    "Type": "Fishes",
-    "Name": "Eerie Shark",
-    "Tier": 7,
-    "Id": 201,
-    "Icon": "rbxassetid://114252804065144"
-  },
-  "Blob Fish": {
-    "Type": "Fishes",
-    "Name": "Blob Fish",
-    "Tier": 6,
-    "Id": 150,
-    "Icon": "rbxassetid://109329387304752"
-  },
-  "Lavafin Tuna": {
-    "Type": "Fishes",
-    "Name": "Lavafin Tuna",
-    "Tier": 4,
-    "Id": 48,
-    "Icon": "rbxassetid://96111934641941"
-  },
-  "Luminous Fish": {
-    "Type": "Fishes",
-    "Name": "Luminous Fish",
-    "Tier": 6,
-    "Id": 205,
-    "Icon": "rbxassetid://78374908088019"
-  },
-  "Angler Fish": {
-    "Type": "Fishes",
-    "Name": "Angler Fish",
-    "Tier": 4,
-    "Id": 149,
-    "Icon": "rbxassetid://95565358831204"
-  },
-  "Angelic Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Angelic Rod",
-    "Tier": 100,
-    "Id": 124,
-    "Icon": "rbxassetid://103391024554005"
-  },
-  "Starfish": {
-    "Type": "Fishes",
-    "Name": "Starfish",
-    "Tier": 3,
-    "Id": 209,
-    "Icon": "rbxassetid://93878183859150"
-  },
-  "Boar Fish": {
-    "Type": "Fishes",
-    "Name": "Boar Fish",
-    "Tier": 1,
-    "Id": 151,
-    "Icon": "rbxassetid://114009571858522"
-  },
-  "Demascus Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Demascus Rod",
-    "Tier": 2,
-    "Id": 77,
-    "Icon": "rbxassetid://92202353564703"
-  },
-  "Clownfish": {
-    "Type": "Fishes",
-    "Name": "Clownfish",
-    "Tier": 1,
-    "Id": 64,
-    "Icon": "rbxassetid://98117815811053"
-  },
-  "Lightsaber": {
-    "Type": "Fishing Rods",
-    "Name": "Lightsaber",
-    "Tier": 100,
-    "Id": 130,
-    "Icon": "rbxassetid://99584235204159"
-  },
-  "Banded Butterfly": {
-    "Type": "Fishes",
-    "Name": "Banded Butterfly",
-    "Tier": 2,
-    "Id": 44,
-    "Icon": "rbxassetid://108599906664305"
-  },
-  "Lion Fish": {
-    "Type": "Fishes",
-    "Name": "Lion Fish",
-    "Tier": 2,
-    "Id": 204,
-    "Icon": "rbxassetid://92595165502684"
-  },
-  "Sushi Cardinal": {
-    "Type": "Fishes",
-    "Name": "Sushi Cardinal",
-    "Tier": 4,
-    "Id": 39,
-    "Icon": "rbxassetid://104436232234256"
-  },
-  "Carbon Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Carbon Rod",
-    "Tier": 1,
-    "Id": 76,
-    "Icon": "rbxassetid://124099699625912"
-  },
-  "Earthly": {
-    "Type": "Fishing Rods",
-    "Name": "Earthly",
-    "Tier": 2,
-    "Id": 132,
-    "Icon": "rbxassetid://130277486101163"
-  },
-  "Flying Fish": {
-    "Type": "Fishes",
-    "Name": "Flying Fish",
-    "Tier": 2,
-    "Id": 203,
-    "Icon": "rbxassetid://76398271598694"
-  },
-  "Flat Fish": {
-    "Type": "Fishes",
-    "Name": "Flat Fish",
-    "Tier": 2,
-    "Id": 202,
-    "Icon": "rbxassetid://72446028934813"
-  },
-  "Christmas Trophy 2024": {
-    "Type": "Trophies",
-    "Name": "Christmas Trophy 2024",
-    "Tier": 90,
-    "Id": 104,
-    "Icon": "rbxassetid://139475070609098"
-  },
-  "Soulreaver": {
-    "Type": "Fishing Rods",
-    "Name": "Soulreaver",
-    "Tier": 5,
-    "Id": 212,
-    "Icon": "rbxassetid://82915877680641"
-  },
-  "Cow Clownfish": {
-    "Type": "Fishes",
-    "Name": "Cow Clownfish",
-    "Tier": 4,
-    "Id": 57,
-    "Icon": "rbxassetid://88952725333000"
-  },
-  "Chrome Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Chrome Rod",
-    "Tier": 4,
-    "Id": 7,
-    "Icon": "rbxassetid://83222944871842"
-  },
-  "Ghost Worm Fish": {
-    "Type": "Fishes",
-    "Name": "Ghost Worm Fish",
-    "Tier": 7,
-    "Id": 176,
-    "Icon": "rbxassetid://107896897205452"
-  },
-  "Dark Tentacle": {
-    "Type": "Fishes",
-    "Name": "Dark Tentacle",
-    "Tier": 3,
-    "Id": 210,
-    "Icon": "rbxassetid://82928155035287"
-  },
-  "Corazon Damsel": {
-    "Type": "Fishes",
-    "Name": "Corazon Damsel",
-    "Tier": 1,
-    "Id": 31,
-    "Icon": "rbxassetid://117026260439113"
-  },
-  "Enlightened": {
-    "Type": "Fishing Rods",
-    "Name": "Enlightened",
-    "Tier": 7,
-    "Id": 193,
-    "Icon": "rbxassetid://135282537420782"
-  },
-  "Angler Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Angler Rod",
-    "Tier": 6,
-    "Id": 168,
-    "Icon": "rbxassetid://76924330674942"
-  },
-  "Galactic": {
-    "Type": "Fishing Rods",
-    "Name": "Galactic",
-    "Tier": 7,
-    "Id": 192,
-    "Icon": "rbxassetid://127771159160485"
-  },
-  "Jewel Tang": {
-    "Type": "Fishes",
-    "Name": "Jewel Tang",
-    "Tier": 2,
-    "Id": 60,
-    "Icon": "rbxassetid://130344776739450"
-  },
-  "Cute Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Cute Rod",
-    "Tier": 95,
-    "Id": 123,
-    "Icon": "rbxassetid://103281741610796"
-  },
-  "Gar Fish": {
-    "Type": "Fishes",
-    "Name": "Gar Fish",
-    "Tier": 2,
-    "Id": 197,
-    "Icon": "rbxassetid://116893747982628"
-  },
-  "Lava Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Lava Rod",
-    "Tier": 2,
-    "Id": 2,
-    "Icon": "rbxassetid://75593774049916"
-  },
-  "Gingerbread Clownfish": {
-    "Type": "Fishes",
-    "Name": "Gingerbread Clownfish",
-    "Tier": 2,
-    "Id": 94,
-    "Icon": "rbxassetid://76627481663195"
-  },
-  "Strawberry Dotty": {
-    "Type": "Fishes",
-    "Name": "Strawberry Dotty",
-    "Tier": 1,
-    "Id": 65,
-    "Icon": "rbxassetid://113189737934915"
-  },
-  "Domino Damsel": {
-    "Type": "Fishes",
-    "Name": "Domino Damsel",
-    "Tier": 4,
-    "Id": 26,
-    "Icon": "rbxassetid://100965955122629"
-  },
-  "Blue Lobster": {
-    "Type": "Fishes",
-    "Name": "Blue Lobster",
-    "Tier": 4,
-    "Id": 22,
-    "Icon": "rbxassetid://79569787883962"
-  },
-  "Jellyfish": {
-    "Type": "Fishes",
-    "Name": "Jellyfish",
-    "Tier": 3,
-    "Id": 157,
-    "Icon": "rbxassetid://115477999636961"
-  },
-  "Frostborn Shark": {
-    "Type": "Fishes",
-    "Name": "Frostborn Shark",
-    "Tier": 7,
-    "Id": 136,
-    "Icon": "rbxassetid://125463067542850"
-  },
-  "Plasma Shark": {
-    "Type": "Fishes",
-    "Name": "Plasma Shark",
-    "Tier": 5,
-    "Id": 137,
-    "Icon": "rbxassetid://88847410678758"
-  },
-  "Frog": {
-    "Type": "Fishes",
-    "Name": "Frog",
-    "Tier": 3,
-    "Id": 196,
-    "Icon": "rbxassetid://71290852112649"
-  },
-  "Blumato Clownfish": {
-    "Type": "Fishes",
-    "Name": "Blumato Clownfish",
-    "Tier": 2,
-    "Id": 107,
-    "Icon": "rbxassetid://135433263876257"
-  },
-  "Crystal Crab": {
-    "Type": "Fishes",
-    "Name": "Crystal Crab",
-    "Tier": 7,
-    "Id": 195,
-    "Icon": "rbxassetid://110188263756245"
-  },
-  "Bleekers Damsel": {
-    "Type": "Fishes",
-    "Name": "Bleekers Damsel",
-    "Tier": 2,
-    "Id": 121,
-    "Icon": "rbxassetid://116977046936052"
-  },
-  "Fishing Radar": {
-    "Type": "Gears",
-    "Name": "Fishing Radar",
-    "Tier": 3,
-    "Id": 81,
-    "Icon": "rbxassetid://93370980069910"
-  },
-  "Barracuda Fish": {
-    "Type": "Fishes",
-    "Name": "Barracuda Fish",
-    "Tier": 3,
-    "Id": 194,
-    "Icon": "rbxassetid://109111807975453"
-  },
-  "Aether Shard": {
-    "Type": "Fishing Rods",
-    "Name": "Aether Shard",
-    "Tier": 2,
-    "Id": 177,
-    "Icon": "rbxassetid://125006628928474"
-  },
-  "Saw Fish": {
-    "Type": "Fishes",
-    "Name": "Saw Fish",
-    "Tier": 5,
-    "Id": 208,
-    "Icon": "rbxassetid://102132456822726"
-  },
-  "Lake Sturgeon": {
-    "Type": "Fishes",
-    "Name": "Lake Sturgeon",
-    "Tier": 5,
-    "Id": 199,
-    "Icon": "rbxassetid://91608917361161"
-  },
-  "Cursed": {
-    "Type": "Fishing Rods",
-    "Name": "Cursed",
-    "Tier": 6,
-    "Id": 180,
-    "Icon": "rbxassetid://131975420788500"
-  },
-  "Ghostfinn Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Ghostfinn Rod",
-    "Tier": 6,
-    "Id": 169,
-    "Icon": "rbxassetid://116644397704032"
-  },
-  "Forsaken": {
-    "Type": "Fishing Rods",
-    "Name": "Forsaken",
-    "Tier": 5,
-    "Id": 127,
-    "Icon": "rbxassetid://116453364785174"
-  },
-  "Starjam Tang": {
-    "Type": "Fishes",
-    "Name": "Starjam Tang",
-    "Tier": 4,
-    "Id": 24,
-    "Icon": "rbxassetid://129447526017878"
-  },
-  "Vintage Damsel": {
-    "Type": "Fishes",
-    "Name": "Vintage Damsel",
-    "Tier": 2,
-    "Id": 58,
-    "Icon": "rbxassetid://135465556501628"
-  },
-  "Jelly": {
-    "Type": "Fishing Rods",
-    "Name": "Jelly",
-    "Tier": 7,
-    "Id": 181,
-    "Icon": "rbxassetid://140074706748952"
-  },
-  "Red Snapper": {
-    "Type": "Fishes",
-    "Name": "Red Snapper",
-    "Tier": 2,
-    "Id": 188,
-    "Icon": "rbxassetid://70818316245817"
-  },
-  "Blob Shark": {
-    "Type": "Fishes",
-    "Name": "Blob Shark",
-    "Tier": 7,
-    "Id": 82,
-    "Icon": "rbxassetid://120294742064292"
-  },
-  "Fire Goby": {
-    "Type": "Fishes",
-    "Name": "Fire Goby",
-    "Tier": 2,
-    "Id": 41,
-    "Icon": "rbxassetid://94533805203782"
-  },
-  "Pink Smith Damsel": {
-    "Type": "Fishes",
-    "Name": "Pink Smith Damsel",
-    "Tier": 2,
-    "Id": 120,
-    "Icon": "rbxassetid://76606007357699"
-  },
-  "Ash Basslet": {
-    "Type": "Fishes",
-    "Name": "Ash Basslet",
-    "Tier": 1,
-    "Id": 20,
-    "Icon": "rbxassetid://89467763428838"
-  },
-  "Sail Tang": {
-    "Type": "Fishes",
-    "Name": "Sail Tang",
-    "Tier": 1,
-    "Id": 113,
-    "Icon": "rbxassetid://86089485683202"
-  },
-  "Azure Damsel": {
-    "Type": "Fishes",
-    "Name": "Azure Damsel",
-    "Tier": 1,
-    "Id": 66,
-    "Icon": "rbxassetid://82037285284063"
-  },
-  "Queen Crab": {
-    "Type": "Fishes",
-    "Name": "Queen Crab",
-    "Tier": 7,
-    "Id": 187,
-    "Icon": "rbxassetid://73709080100110"
-  },
-  "Loggerhead Turtle": {
-    "Type": "Fishes",
-    "Name": "Loggerhead Turtle",
-    "Tier": 5,
-    "Id": 34,
-    "Icon": "rbxassetid://91953712080535"
-  },
-  "Parrot Fish": {
-    "Type": "Fishes",
-    "Name": "Parrot Fish",
-    "Tier": 2,
-    "Id": 186,
-    "Icon": "rbxassetid://101895900955177"
-  },
-  "Hermit Crab": {
-    "Type": "Fishes",
-    "Name": "Hermit Crab",
-    "Tier": 6,
-    "Id": 185,
-    "Icon": "rbxassetid://84444153694943"
-  },
-  "Ice Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Ice Rod",
-    "Tier": 2,
-    "Id": 78,
-    "Icon": "rbxassetid://92630142441112"
-  },
-  "Coney Fish": {
-    "Type": "Fishes",
-    "Name": "Coney Fish",
-    "Tier": 3,
-    "Id": 184,
-    "Icon": "rbxassetid://126049387807805"
-  },
-  "Jennifer Dottyback": {
-    "Type": "Fishes",
-    "Name": "Jennifer Dottyback",
-    "Tier": 1,
-    "Id": 46,
-    "Icon": "rbxassetid://82888113748973"
-  },
-  "Prismy Seahorse": {
-    "Type": "Fishes",
-    "Name": "Prismy Seahorse",
-    "Tier": 5,
-    "Id": 35,
-    "Icon": "rbxassetid://105300029672501"
-  },
-  "Thresher Shark": {
-    "Type": "Fishes",
-    "Name": "Thresher Shark",
-    "Tier": 5,
-    "Id": 147,
-    "Icon": "rbxassetid://70681751795899"
-  },
-  "Amber": {
-    "Type": "Fishing Rods",
-    "Name": "Amber",
-    "Tier": 2,
-    "Id": 178,
-    "Icon": "rbxassetid://92025920580149"
-  },
-  "Sheepshead Fish": {
-    "Type": "Fishes",
-    "Name": "Sheepshead Fish",
-    "Tier": 3,
-    "Id": 191,
-    "Icon": "rbxassetid://112711438552296"
-  },
-  "Vintage Blue Tang": {
-    "Type": "Fishes",
-    "Name": "Vintage Blue Tang",
-    "Tier": 1,
-    "Id": 62,
-    "Icon": "rbxassetid://136876564868613"
-  },
-  "Ares Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Ares Rod",
-    "Tier": 6,
-    "Id": 126,
-    "Icon": "rbxassetid://74424529377774"
-  },
-  "Red Matter": {
-    "Type": "Fishing Rods",
-    "Name": "Red Matter",
-    "Tier": 100,
-    "Id": 131,
-    "Icon": "rbxassetid://126405191333384"
-  },
-  "Rockfish": {
-    "Type": "Fishes",
-    "Name": "Rockfish",
-    "Tier": 2,
-    "Id": 189,
-    "Icon": "rbxassetid://88961987133136"
-  },
-  "Ghost Shark": {
-    "Type": "Fishes",
-    "Name": "Ghost Shark",
-    "Tier": 7,
-    "Id": 83,
-    "Icon": "rbxassetid://102028503382077"
-  },
-  "Yello Damselfish": {
-    "Type": "Fishes",
-    "Name": "Yello Damselfish",
-    "Tier": 2,
-    "Id": 69,
-    "Icon": "rbxassetid://125066072333378"
-  },
-  "Midnight Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Midnight Rod",
-    "Tier": 3,
-    "Id": 80,
-    "Icon": "rbxassetid://130162999569066"
-  },
-  "Lava Butterfly": {
-    "Type": "Fishes",
-    "Name": "Lava Butterfly",
-    "Tier": 2,
-    "Id": 87,
-    "Icon": "rbxassetid://121441755541039"
-  },
-  "Diving Gear": {
-    "Type": "Gears",
-    "Name": "Diving Gear",
-    "Tier": 5,
-    "Id": 105,
-    "Icon": "rbxassetid://70900622237072"
-  },
-  "Blueflame Ray": {
-    "Type": "Fishes",
-    "Name": "Blueflame Ray",
-    "Tier": 5,
-    "Id": 47,
-    "Icon": "rbxassetid://113303332536600"
-  },
-  "Heavenly": {
-    "Type": "Fishing Rods",
-    "Name": "Heavenly",
-    "Tier": 100,
-    "Id": 173,
-    "Icon": "rbxassetid://93080233675189"
-  },
-  "Moorish Idol": {
-    "Type": "Fishes",
-    "Name": "Moorish Idol",
-    "Tier": 4,
-    "Id": 55,
-    "Icon": "rbxassetid://99527607304877"
-  },
-  "Skunk Tilefish": {
-    "Type": "Fishes",
-    "Name": "Skunk Tilefish",
-    "Tier": 1,
-    "Id": 63,
-    "Icon": "rbxassetid://117649671337741"
-  },
-  "Aquatic": {
-    "Type": "Fishing Rods",
-    "Name": "Aquatic",
-    "Tier": 100,
-    "Id": 170,
-    "Icon": "rbxassetid://113612903290719"
-  },
-  "Lightning": {
-    "Type": "Fishing Rods",
-    "Name": "Lightning",
-    "Tier": 100,
-    "Id": 174,
-    "Icon": "rbxassetid://101379332743485"
-  },
-  "Candy Cane Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Candy Cane Rod",
-    "Tier": 5,
-    "Id": 100,
-    "Icon": "rbxassetid://82270679061745"
-  },
-  "Aqua Prism": {
-    "Type": "Fishing Rods",
-    "Name": "Aqua Prism",
-    "Tier": 100,
-    "Id": 171,
-    "Icon": "rbxassetid://108606190037759"
-  },
-  "Slurpfish Chromis": {
-    "Type": "Fishes",
-    "Name": "Slurpfish Chromis",
-    "Tier": 2,
-    "Id": 86,
-    "Icon": "rbxassetid://73157781682607"
-  },
-  "Dead Fish": {
-    "Type": "Fishes",
-    "Name": "Dead Fish",
-    "Tier": 1,
-    "Id": 166,
-    "Icon": "rbxassetid://72777968915255"
-  },
-  "Watanabei Angelfish": {
-    "Type": "Fishes",
-    "Name": "Watanabei Angelfish",
-    "Tier": 1,
-    "Id": 114,
-    "Icon": "rbxassetid://133021124365377"
-  },
-  "Orca": {
-    "Type": "Fishes",
-    "Name": "Orca",
-    "Tier": 7,
-    "Id": 200,
-    "Icon": "rbxassetid://120876783250189"
-  },
-  "Purple Saber": {
-    "Type": "Fishing Rods",
-    "Name": "Purple Saber",
-    "Tier": 3,
-    "Id": 213,
-    "Icon": "rbxassetid://100717868964112"
-  },
-  "Strippled Seahorse": {
-    "Type": "Fishes",
-    "Name": "Strippled Seahorse",
-    "Tier": 5,
-    "Id": 146,
-    "Icon": "rbxassetid://120444751052938"
-  },
-  "Shrimp Goby": {
-    "Type": "Fishes",
-    "Name": "Shrimp Goby",
-    "Tier": 2,
-    "Id": 42,
-    "Icon": "rbxassetid://79722493639079"
-  },
-  "Vampire Squid": {
-    "Type": "Fishes",
-    "Name": "Vampire Squid",
-    "Tier": 4,
-    "Id": 162,
-    "Icon": "rbxassetid://87203317027314"
-  },
-  "Salmon": {
-    "Type": "Fishes",
-    "Name": "Salmon",
-    "Tier": 2,
-    "Id": 190,
-    "Icon": "rbxassetid://125238936461158"
-  },
-  "Monochrome": {
-    "Type": "Fishing Rods",
-    "Name": "Monochrome",
-    "Tier": 4,
-    "Id": 148,
-    "Icon": "rbxassetid://90210469908392"
-  },
-  "Luck Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Luck Rod",
-    "Tier": 1,
-    "Id": 79,
-    "Icon": "rbxassetid://127110979437680"
-  },
-  "Christmas Tree Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Christmas Tree Rod",
-    "Tier": 4,
-    "Id": 101,
-    "Icon": "rbxassetid://78639604918154"
-  },
-  "Pygmy Goby": {
-    "Type": "Fishes",
-    "Name": "Pygmy Goby",
-    "Tier": 1,
-    "Id": 112,
-    "Icon": "rbxassetid://128173847216247"
-  },
-  "Yellowstate Angelfish": {
-    "Type": "Fishes",
-    "Name": "Yellowstate Angelfish",
-    "Tier": 1,
-    "Id": 61,
-    "Icon": "rbxassetid://82807541331151"
-  },
-  "King Crab": {
-    "Type": "Fishes",
-    "Name": "King Crab",
-    "Tier": 6,
-    "Id": 158,
-    "Icon": "rbxassetid://136951139611035"
-  },
-  "Dark Eel": {
-    "Type": "Fishes",
-    "Name": "Dark Eel",
-    "Tier": 2,
-    "Id": 153,
-    "Icon": "rbxassetid://135880333888900"
-  },
-  "Pilot Fish": {
-    "Type": "Fishes",
-    "Name": "Pilot Fish",
-    "Tier": 2,
-    "Id": 140,
-    "Icon": "rbxassetid://114269547366510"
-  },
-  "Spotted Lantern Fish": {
-    "Type": "Fishes",
-    "Name": "Spotted Lantern Fish",
-    "Tier": 2,
-    "Id": 161,
-    "Icon": "rbxassetid://121295544969455"
-  },
-  "Deep Sea Crab": {
-    "Type": "Fishes",
-    "Name": "Deep Sea Crab",
-    "Tier": 5,
-    "Id": 152,
-    "Icon": "rbxassetid://107492220673765"
-  },
-  "Viperfish": {
-    "Type": "Fishes",
-    "Name": "Viperfish",
-    "Tier": 2,
-    "Id": 163,
-    "Icon": "rbxassetid://132331063285672"
-  },
-  "Maroon Butterfly": {
-    "Type": "Fishes",
-    "Name": "Maroon Butterfly",
-    "Tier": 4,
-    "Id": 56,
-    "Icon": "rbxassetid://0"
-  },
-  "Candy Butterfly": {
-    "Type": "Fishes",
-    "Name": "Candy Butterfly",
-    "Tier": 2,
-    "Id": 59,
-    "Icon": "rbxassetid://118627817589849"
-  },
-  "Catfish": {
-    "Type": "Fishes",
-    "Name": "Catfish",
-    "Tier": 3,
-    "Id": 183,
-    "Icon": "rbxassetid://98970734819318"
-  },
-  "Abyss Seahorse": {
-    "Type": "Fishes",
-    "Name": "Abyss Seahorse",
-    "Tier": 5,
-    "Id": 15,
-    "Icon": "rbxassetid://140212951494890"
-  },
-  "Copperband Butterfly": {
-    "Type": "Fishes",
-    "Name": "Copperband Butterfly",
-    "Tier": 2,
-    "Id": 67,
-    "Icon": "rbxassetid://79518413256091"
-  },
-  "Festive Pufferfish": {
-    "Type": "Fishes",
-    "Name": "Festive Pufferfish",
-    "Tier": 4,
-    "Id": 96,
-    "Icon": "rbxassetid://111730193849173"
-  },
-  "Charmed Tang": {
-    "Type": "Fishes",
-    "Name": "Charmed Tang",
-    "Tier": 3,
-    "Id": 18,
-    "Icon": "rbxassetid://115703943090504"
-  },
-  "Monk Fish": {
-    "Type": "Fishes",
-    "Name": "Monk Fish",
-    "Tier": 4,
-    "Id": 160,
-    "Icon": "rbxassetid://117683281700675"
-  },
-  "Orange Basslet": {
-    "Type": "Fishes",
-    "Name": "Orange Basslet",
-    "Tier": 2,
-    "Id": 142,
-    "Icon": "rbxassetid://129792505755834"
-  },
-  "Gingerbread Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Gingerbread Rod",
-    "Tier": 2,
-    "Id": 103,
-    "Icon": "rbxassetid://88417579240692"
-  },
-  "Pufferfish": {
-    "Type": "Fishes",
-    "Name": "Pufferfish",
-    "Tier": 4,
-    "Id": 143,
-    "Icon": "rbxassetid://88950964359044"
-  },
-  "Korean Angelfish": {
-    "Type": "Fishes",
-    "Name": "Korean Angelfish",
-    "Tier": 3,
-    "Id": 72,
-    "Icon": "rbxassetid://134484917450451"
-  },
-  "Silver Tuna": {
-    "Type": "Fishes",
-    "Name": "Silver Tuna",
-    "Tier": 2,
-    "Id": 139,
-    "Icon": "rbxassetid://84055400571306"
-  },
-  "Axolotl": {
-    "Type": "Fishes",
-    "Name": "Axolotl",
-    "Tier": 4,
-    "Id": 138,
-    "Icon": "rbxassetid://76558551981982"
-  },
-  "Super Enchant Stone": {
-    "Type": "EnchantStones",
-    "Name": "Super Enchant Stone",
-    "Tier": 6,
-    "Id": 125,
-    "Icon": "rbxassetid://131638728415711"
-  },
-  "Crystalized": {
-    "Type": "Fishing Rods",
-    "Name": "Crystalized",
-    "Tier": 7,
-    "Id": 134,
-    "Icon": "rbxassetid://103493787682868"
-  },
-  "Darwin Clownfish": {
-    "Type": "Fishes",
-    "Name": "Darwin Clownfish",
-    "Tier": 3,
-    "Id": 71,
-    "Icon": "rbxassetid://109996187340520"
-  },
-  "Unicorn Tang": {
-    "Type": "Fishes",
-    "Name": "Unicorn Tang",
-    "Tier": 4,
-    "Id": 74,
-    "Icon": "rbxassetid://85435653124474"
-  },
-  "Ghoul Rod": {
-    "Type": "Fishing Rods",
-    "Name": "Ghoul Rod",
-    "Tier": 7,
-    "Id": 129,
-    "Icon": "rbxassetid://72323478762209"
-  },
-  "White Clownfish": {
-    "Type": "Fishes",
-    "Name": "White Clownfish",
-    "Tier": 2,
-    "Id": 28,
-    "Icon": "rbxassetid://94709558139061"
-  },
-  "Wahoo": {
-    "Type": "Fishes",
-    "Name": "Wahoo",
-    "Tier": 2,
-    "Id": 211,
-    "Icon": "rbxassetid://88311721896238"
-  },
-  "Greenbee Grouper": {
-    "Type": "Fishes",
-    "Name": "Greenbee Grouper",
-    "Tier": 4,
-    "Id": 25,
-    "Icon": "rbxassetid://79015880866732"
-  },
-  "Dorhey Tang": {
-    "Type": "Fishes",
-    "Name": "Dorhey Tang",
-    "Tier": 4,
-    "Id": 70,
-    "Icon": "rbxassetid://136891625122640"
-  },
-  "Starter Rod": {
+  "1": {
+    "Icon": "rbxassetid://100007811075966",
     "Type": "Fishing Rods",
     "Name": "Starter Rod",
-    "Tier": 1,
-    "Id": 1,
-    "Icon": "rbxassetid://100007811075966"
+    "Tier": 1
   },
-  "Grass Rod": {
+  "2": {
+    "Icon": "rbxassetid://75593774049916",
     "Type": "Fishing Rods",
-    "Name": "Grass Rod",
-    "Tier": 2,
-    "Id": 85,
-    "Icon": "rbxassetid://130802650199282"
+    "Name": "Lava Rod",
+    "Tier": 2
   },
-  "Loving Shark": {
-    "Type": "Fishes",
-    "Name": "Loving Shark",
-    "Tier": 6,
-    "Id": 122,
-    "Icon": "rbxassetid://119173750281399"
-  },
-  "Great Whale": {
-    "Type": "Fishes",
-    "Name": "Great Whale",
-    "Tier": 7,
-    "Id": 141,
-    "Icon": "rbxassetid://110349456710432"
-  },
-  "Herring Fish": {
-    "Type": "Fishes",
-    "Name": "Herring Fish",
-    "Tier": 1,
-    "Id": 198,
-    "Icon": "rbxassetid://83087225269219"
-  },
-  "Volcanic Basslet": {
-    "Type": "Fishes",
-    "Name": "Volcanic Basslet",
-    "Tier": 1,
-    "Id": 51,
-    "Icon": "rbxassetid://73441603866106"
-  },
-  "Volsail Tang": {
-    "Type": "Fishes",
-    "Name": "Volsail Tang",
-    "Tier": 3,
-    "Id": 89,
-    "Icon": "rbxassetid://129946055426678"
-  },
-  "Fade Tang": {
-    "Type": "Fishes",
-    "Name": "Fade Tang",
-    "Tier": 1,
-    "Id": 109,
-    "Icon": "rbxassetid://99713500880459"
-  },
-  "DEC24 - Golden Plaque": {
-    "Type": "Trophies",
-    "Name": "DEC24 - Golden Plaque",
-    "Tier": 90,
-    "Id": 11,
-    "Icon": "rbxassetid://85571255574708"
-  },
-  "Zoster Butterfly": {
-    "Type": "Fishes",
-    "Name": "Zoster Butterfly",
-    "Tier": 1,
-    "Id": 116,
-    "Icon": "rbxassetid://80869011808607"
-  },
-  "Rockform Cardianl": {
-    "Type": "Fishes",
-    "Name": "Rockform Cardianl",
-    "Tier": 3,
-    "Id": 88,
-    "Icon": "rbxassetid://120329148296828"
-  },
-  "Boa Angelfish": {
-    "Type": "Fishes",
-    "Name": "Boa Angelfish",
-    "Tier": 1,
-    "Id": 45,
-    "Icon": "rbxassetid://132840818442941"
-  },
-  "Electric Eel": {
-    "Type": "Fishes",
-    "Name": "Electric Eel",
-    "Tier": 1,
-    "Id": 154,
-    "Icon": "rbxassetid://112551199622795"
-  },
-  "Chrome Tuna": {
-    "Type": "Fishes",
-    "Name": "Chrome Tuna",
-    "Tier": 4,
-    "Id": 53,
-    "Icon": "rbxassetid://103021560011734"
-  },
-  "Kau Cardinal": {
-    "Type": "Fishes",
-    "Name": "Kau Cardinal",
-    "Tier": 3,
-    "Id": 40,
-    "Icon": "rbxassetid://120735400809864"
-  },
-  "Tricolore Butterfly": {
-    "Type": "Fishes",
-    "Name": "Tricolore Butterfly",
-    "Tier": 2,
-    "Id": 30,
-    "Icon": "rbxassetid://138769463668635"
-  },
-  "Blossom": {
+  "3": {
+    "Icon": "rbxassetid://130960889779123",
     "Type": "Fishing Rods",
-    "Name": "Blossom",
-    "Tier": 100,
-    "Id": 172,
-    "Icon": "rbxassetid://128521809779947"
+    "Name": "Magma Rod",
+    "Tier": 5
   },
-  "Masked Angelfish": {
-    "Type": "Fishes",
-    "Name": "Masked Angelfish",
-    "Tier": 1,
-    "Id": 111,
-    "Icon": "rbxassetid://85192354177842"
-  },
-  "Lined Cardinal Fish": {
-    "Type": "Fishes",
-    "Name": "Lined Cardinal Fish",
-    "Tier": 5,
-    "Id": 110,
-    "Icon": "rbxassetid://96973556889996"
-  },
-  "Bandit Angelfish": {
-    "Type": "Fishes",
-    "Name": "Bandit Angelfish",
-    "Tier": 2,
-    "Id": 117,
-    "Icon": "rbxassetid://86776001616210"
-  },
-  "Candycane Lobster": {
-    "Type": "Fishes",
-    "Name": "Candycane Lobster",
-    "Tier": 4,
-    "Id": 95,
-    "Icon": "rbxassetid://81306607650028"
-  },
-  "Conspi Angelfish": {
-    "Type": "Fishes",
-    "Name": "Conspi Angelfish",
-    "Tier": 1,
-    "Id": 108,
-    "Icon": "rbxassetid://70666845671780"
-  },
-  "Pirate Octopus": {
+  "4": {
+    "Icon": "rbxassetid://85174841193446",
     "Type": "Fishing Rods",
-    "Name": "Pirate Octopus",
-    "Tier": 4,
-    "Id": 214,
-    "Icon": "rbxassetid://113826603097430"
+    "Name": "Lucky Rod",
+    "Tier": 3
   },
-  "Hyper Rod": {
+  "5": {
+    "Icon": "rbxassetid://123734625865292",
     "Type": "Fishing Rods",
-    "Name": "Hyper Rod",
-    "Tier": 100,
-    "Id": 9,
-    "Icon": "rbxassetid://114578814996909"
+    "Name": "Astral Rod",
+    "Tier": 5
   },
-  "Hawks Turtle": {
-    "Type": "Fishes",
-    "Name": "Hawks Turtle",
-    "Tier": 5,
-    "Id": 21,
-    "Icon": "rbxassetid://129453304232199"
-  },
-  "DEC24 - Silver Plaque": {
-    "Type": "Trophies",
-    "Name": "DEC24 - Silver Plaque",
-    "Tier": 90,
-    "Id": 13,
-    "Icon": "rbxassetid://121596290109429"
-  },
-  "Patriot Tang": {
-    "Type": "Fishes",
-    "Name": "Patriot Tang",
-    "Tier": 1,
-    "Id": 135,
-    "Icon": "rbxassetid://118534942671075"
-  },
-  "Great Christmas Whale": {
-    "Type": "Fishes",
-    "Name": "Great Christmas Whale",
-    "Tier": 7,
-    "Id": 99,
-    "Icon": "rbxassetid://71302255255094"
-  },
-  "Magma Goby": {
-    "Type": "Fishes",
-    "Name": "Magma Goby",
-    "Tier": 2,
-    "Id": 50,
-    "Icon": "rbxassetid://136836819813966"
-  },
-  "Yellowfin Tuna": {
-    "Type": "Fishes",
-    "Name": "Yellowfin Tuna",
-    "Tier": 4,
-    "Id": 73,
-    "Icon": "rbxassetid://86565235696991"
-  },
-  "Gingerbread Turtle": {
-    "Type": "Fishes",
-    "Name": "Gingerbread Turtle",
-    "Tier": 5,
-    "Id": 97,
-    "Icon": "rbxassetid://105391647263950"
-  },
-  "Maze Angelfish": {
-    "Type": "Fishes",
-    "Name": "Maze Angelfish",
-    "Tier": 3,
-    "Id": 23,
-    "Icon": "rbxassetid://133123622412997"
-  },
-  "Bumblebee Grouper": {
-    "Type": "Fishes",
-    "Name": "Bumblebee Grouper",
-    "Tier": 4,
-    "Id": 37,
-    "Icon": "rbxassetid://138718017852833"
-  },
-  "Gingerbread Shark": {
-    "Type": "Fishes",
-    "Name": "Gingerbread Shark",
-    "Tier": 6,
-    "Id": 98,
-    "Icon": "rbxassetid://134485196164902"
-  },
-  "Steampunk Rod": {
+  "6": {
+    "Icon": "rbxassetid://109211472277743",
     "Type": "Fishing Rods",
     "Name": "Steampunk Rod",
-    "Tier": 4,
-    "Id": 6,
-    "Icon": "rbxassetid://109211472277743"
+    "Tier": 4
   },
-  "Dotted Stingray": {
-    "Type": "Fishes",
-    "Name": "Dotted Stingray",
-    "Tier": 5,
-    "Id": 75,
-    "Icon": "rbxassetid://132465838670740"
+  "7": {
+    "Icon": "rbxassetid://83222944871842",
+    "Type": "Fishing Rods",
+    "Name": "Chrome Rod",
+    "Tier": 4
   },
-  "Hammerhead Shark": {
-    "Type": "Fishes",
-    "Name": "Hammerhead Shark",
-    "Tier": 5,
-    "Id": 52,
-    "Icon": "rbxassetid://91373020648344"
-  },
-  "Gold Rod": {
+  "8": {
+    "Icon": "rbxassetid://114471091895897",
     "Type": "Fishing Rods",
     "Name": "Gold Rod",
-    "Tier": 100,
-    "Id": 8,
-    "Icon": "rbxassetid://114471091895897"
+    "Tier": 100
   },
-  "Neptune's Trident": {
+  "9": {
+    "Icon": "rbxassetid://114578814996909",
     "Type": "Fishing Rods",
-    "Name": "Neptune's Trident",
-    "Tier": 6,
-    "Id": 133,
-    "Icon": "rbxassetid://101209529442976"
+    "Name": "Hyper Rod",
+    "Tier": 100
   },
-  "Longnose Butterfly": {
+  "10": {
+    "Icon": "rbxassetid://138135001339336",
+    "Type": "EnchantStones",
+    "Name": "Enchant Stone",
+    "Tier": 1
+  },
+  "11": {
+    "Icon": "rbxassetid://85571255574708",
+    "Type": "Trophies",
+    "Name": "DEC24 - Golden Plaque",
+    "Tier": 90
+  },
+  "12": {
+    "Icon": "rbxassetid://119747646543723",
+    "Type": "Trophies",
+    "Name": "DEC24 - Sapphire Plaque",
+    "Tier": 90
+  },
+  "13": {
+    "Icon": "rbxassetid://121596290109429",
+    "Type": "Trophies",
+    "Name": "DEC24 - Silver Plaque",
+    "Tier": 90
+  },
+  "14": {
+    "Icon": "rbxassetid://108347802265821",
+    "Type": "Fishes",
+    "Name": "Enchanted Angelfish",
+    "Tier": 4
+  },
+  "15": {
+    "Icon": "rbxassetid://140212951494890",
+    "Type": "Fishes",
+    "Name": "Abyss Seahorse",
+    "Tier": 5
+  },
+  "16": {
+    "Icon": "rbxassetid://88573644059627",
+    "Type": "Fishes",
+    "Name": "Magic Tang",
+    "Tier": 4
+  },
+  "17": {
+    "Icon": "rbxassetid://80597542368624",
+    "Type": "Fishes",
+    "Name": "Astra Damsel",
+    "Tier": 4
+  },
+  "18": {
+    "Icon": "rbxassetid://115703943090504",
+    "Type": "Fishes",
+    "Name": "Charmed Tang",
+    "Tier": 3
+  },
+  "19": {
+    "Icon": "rbxassetid://92488575546885",
+    "Type": "Fishes",
+    "Name": "Coal Tang",
+    "Tier": 2
+  },
+  "20": {
+    "Icon": "rbxassetid://89467763428838",
+    "Type": "Fishes",
+    "Name": "Ash Basslet",
+    "Tier": 1
+  },
+  "21": {
+    "Icon": "rbxassetid://129453304232199",
+    "Type": "Fishes",
+    "Name": "Hawks Turtle",
+    "Tier": 5
+  },
+  "22": {
+    "Icon": "rbxassetid://79569787883962",
+    "Type": "Fishes",
+    "Name": "Blue Lobster",
+    "Tier": 4
+  },
+  "23": {
+    "Icon": "rbxassetid://133123622412997",
+    "Type": "Fishes",
+    "Name": "Maze Angelfish",
+    "Tier": 3
+  },
+  "24": {
+    "Icon": "rbxassetid://129447526017878",
+    "Type": "Fishes",
+    "Name": "Starjam Tang",
+    "Tier": 4
+  },
+  "25": {
+    "Icon": "rbxassetid://79015880866732",
+    "Type": "Fishes",
+    "Name": "Greenbee Grouper",
+    "Tier": 4
+  },
+  "26": {
+    "Icon": "rbxassetid://100965955122629",
+    "Type": "Fishes",
+    "Name": "Domino Damsel",
+    "Tier": 4
+  },
+  "27": {
+    "Icon": "rbxassetid://110559683316227",
+    "Type": "Fishes",
+    "Name": "Panther Grouper",
+    "Tier": 4
+  },
+  "28": {
+    "Icon": "rbxassetid://94709558139061",
+    "Type": "Fishes",
+    "Name": "White Clownfish",
+    "Tier": 2
+  },
+  "29": {
+    "Icon": "rbxassetid://90918658215983",
+    "Type": "Fishes",
+    "Name": "Scissortail Dartfish",
+    "Tier": 2
+  },
+  "30": {
+    "Icon": "rbxassetid://138769463668635",
+    "Type": "Fishes",
+    "Name": "Tricolore Butterfly",
+    "Tier": 2
+  },
+  "31": {
+    "Icon": "rbxassetid://117026260439113",
+    "Type": "Fishes",
+    "Name": "Corazon Damsel",
+    "Tier": 1
+  },
+  "32": {
+    "Icon": "rbxassetid://80870534603019",
+    "Type": "Fishes",
+    "Name": "Orangy Goby",
+    "Tier": 1
+  },
+  "33": {
+    "Icon": "rbxassetid://116155560772333",
+    "Type": "Fishes",
+    "Name": "Specked Butterfly",
+    "Tier": 1
+  },
+  "34": {
+    "Icon": "rbxassetid://91953712080535",
+    "Type": "Fishes",
+    "Name": "Loggerhead Turtle",
+    "Tier": 5
+  },
+  "35": {
+    "Icon": "rbxassetid://105300029672501",
+    "Type": "Fishes",
+    "Name": "Prismy Seahorse",
+    "Tier": 5
+  },
+  "36": {
+    "Icon": "rbxassetid://106973499045957",
+    "Type": "Fishes",
+    "Name": "Lobster",
+    "Tier": 4
+  },
+  "37": {
+    "Icon": "rbxassetid://138718017852833",
+    "Type": "Fishes",
+    "Name": "Bumblebee Grouper",
+    "Tier": 4
+  },
+  "38": {
+    "Icon": "rbxassetid://78488362036598",
     "Type": "Fishes",
     "Name": "Longnose Butterfly",
-    "Tier": 4,
-    "Id": 38,
-    "Icon": "rbxassetid://78488362036598"
+    "Tier": 4
   },
-  "Manta Ray": {
+  "39": {
+    "Icon": "rbxassetid://104436232234256",
+    "Type": "Fishes",
+    "Name": "Sushi Cardinal",
+    "Tier": 4
+  },
+  "40": {
+    "Icon": "rbxassetid://120735400809864",
+    "Type": "Fishes",
+    "Name": "Kau Cardinal",
+    "Tier": 3
+  },
+  "41": {
+    "Icon": "rbxassetid://94533805203782",
+    "Type": "Fishes",
+    "Name": "Fire Goby",
+    "Tier": 2
+  },
+  "42": {
+    "Icon": "rbxassetid://79722493639079",
+    "Type": "Fishes",
+    "Name": "Shrimp Goby",
+    "Tier": 2
+  },
+  "43": {
+    "Icon": "rbxassetid://130761855658346",
+    "Type": "Fishes",
+    "Name": "Reef Chromis",
+    "Tier": 1
+  },
+  "44": {
+    "Icon": "rbxassetid://108599906664305",
+    "Type": "Fishes",
+    "Name": "Banded Butterfly",
+    "Tier": 2
+  },
+  "45": {
+    "Icon": "rbxassetid://132840818442941",
+    "Type": "Fishes",
+    "Name": "Boa Angelfish",
+    "Tier": 1
+  },
+  "46": {
+    "Icon": "rbxassetid://82888113748973",
+    "Type": "Fishes",
+    "Name": "Jennifer Dottyback",
+    "Tier": 1
+  },
+  "47": {
+    "Icon": "rbxassetid://113303332536600",
+    "Type": "Fishes",
+    "Name": "Blueflame Ray",
+    "Tier": 5
+  },
+  "48": {
+    "Icon": "rbxassetid://96111934641941",
+    "Type": "Fishes",
+    "Name": "Lavafin Tuna",
+    "Tier": 4
+  },
+  "49": {
+    "Icon": "rbxassetid://108870635586928",
+    "Type": "Fishes",
+    "Name": "Firecoal Damsel",
+    "Tier": 4
+  },
+  "50": {
+    "Icon": "rbxassetid://136836819813966",
+    "Type": "Fishes",
+    "Name": "Magma Goby",
+    "Tier": 2
+  },
+  "51": {
+    "Icon": "rbxassetid://73441603866106",
+    "Type": "Fishes",
+    "Name": "Volcanic Basslet",
+    "Tier": 1
+  },
+  "52": {
+    "Icon": "rbxassetid://91373020648344",
+    "Type": "Fishes",
+    "Name": "Hammerhead Shark",
+    "Tier": 5
+  },
+  "53": {
+    "Icon": "rbxassetid://103021560011734",
+    "Type": "Fishes",
+    "Name": "Chrome Tuna",
+    "Tier": 4
+  },
+  "54": {
+    "Icon": "rbxassetid://88385941559907",
     "Type": "Fishes",
     "Name": "Manta Ray",
-    "Tier": 5,
-    "Id": 54,
-    "Icon": "rbxassetid://88385941559907"
+    "Tier": 5
+  },
+  "55": {
+    "Icon": "rbxassetid://99527607304877",
+    "Type": "Fishes",
+    "Name": "Moorish Idol",
+    "Tier": 4
+  },
+  "56": {
+    "Icon": "rbxassetid://0",
+    "Type": "Fishes",
+    "Name": "Maroon Butterfly",
+    "Tier": 4
+  },
+  "57": {
+    "Icon": "rbxassetid://88952725333000",
+    "Type": "Fishes",
+    "Name": "Cow Clownfish",
+    "Tier": 4
+  },
+  "58": {
+    "Icon": "rbxassetid://135465556501628",
+    "Type": "Fishes",
+    "Name": "Vintage Damsel",
+    "Tier": 2
+  },
+  "59": {
+    "Icon": "rbxassetid://118627817589849",
+    "Type": "Fishes",
+    "Name": "Candy Butterfly",
+    "Tier": 2
+  },
+  "60": {
+    "Icon": "rbxassetid://130344776739450",
+    "Type": "Fishes",
+    "Name": "Jewel Tang",
+    "Tier": 2
+  },
+  "61": {
+    "Icon": "rbxassetid://82807541331151",
+    "Type": "Fishes",
+    "Name": "Yellowstate Angelfish",
+    "Tier": 1
+  },
+  "62": {
+    "Icon": "rbxassetid://136876564868613",
+    "Type": "Fishes",
+    "Name": "Vintage Blue Tang",
+    "Tier": 1
+  },
+  "63": {
+    "Icon": "rbxassetid://117649671337741",
+    "Type": "Fishes",
+    "Name": "Skunk Tilefish",
+    "Tier": 1
+  },
+  "64": {
+    "Icon": "rbxassetid://98117815811053",
+    "Type": "Fishes",
+    "Name": "Clownfish",
+    "Tier": 1
+  },
+  "65": {
+    "Icon": "rbxassetid://113189737934915",
+    "Type": "Fishes",
+    "Name": "Strawberry Dotty",
+    "Tier": 1
+  },
+  "66": {
+    "Icon": "rbxassetid://82037285284063",
+    "Type": "Fishes",
+    "Name": "Azure Damsel",
+    "Tier": 1
+  },
+  "67": {
+    "Icon": "rbxassetid://79518413256091",
+    "Type": "Fishes",
+    "Name": "Copperband Butterfly",
+    "Tier": 2
+  },
+  "68": {
+    "Icon": "rbxassetid://128385926161840",
+    "Type": "Fishes",
+    "Name": "Flame Angelfish",
+    "Tier": 2
+  },
+  "69": {
+    "Icon": "rbxassetid://125066072333378",
+    "Type": "Fishes",
+    "Name": "Yello Damselfish",
+    "Tier": 2
+  },
+  "70": {
+    "Icon": "rbxassetid://136891625122640",
+    "Type": "Fishes",
+    "Name": "Dorhey Tang",
+    "Tier": 4
+  },
+  "71": {
+    "Icon": "rbxassetid://109996187340520",
+    "Type": "Fishes",
+    "Name": "Darwin Clownfish",
+    "Tier": 3
+  },
+  "72": {
+    "Icon": "rbxassetid://134484917450451",
+    "Type": "Fishes",
+    "Name": "Korean Angelfish",
+    "Tier": 3
+  },
+  "73": {
+    "Icon": "rbxassetid://86565235696991",
+    "Type": "Fishes",
+    "Name": "Yellowfin Tuna",
+    "Tier": 4
+  },
+  "74": {
+    "Icon": "rbxassetid://85435653124474",
+    "Type": "Fishes",
+    "Name": "Unicorn Tang",
+    "Tier": 4
+  },
+  "75": {
+    "Icon": "rbxassetid://132465838670740",
+    "Type": "Fishes",
+    "Name": "Dotted Stingray",
+    "Tier": 5
+  },
+  "76": {
+    "Icon": "rbxassetid://124099699625912",
+    "Type": "Fishing Rods",
+    "Name": "Carbon Rod",
+    "Tier": 1
+  },
+  "77": {
+    "Icon": "rbxassetid://92202353564703",
+    "Type": "Fishing Rods",
+    "Name": "Demascus Rod",
+    "Tier": 2
+  },
+  "78": {
+    "Icon": "rbxassetid://92630142441112",
+    "Type": "Fishing Rods",
+    "Name": "Ice Rod",
+    "Tier": 2
+  },
+  "79": {
+    "Icon": "rbxassetid://127110979437680",
+    "Type": "Fishing Rods",
+    "Name": "Luck Rod",
+    "Tier": 1
+  },
+  "80": {
+    "Icon": "rbxassetid://130162999569066",
+    "Type": "Fishing Rods",
+    "Name": "Midnight Rod",
+    "Tier": 3
+  },
+  "81": {
+    "Icon": "rbxassetid://93370980069910",
+    "Type": "Gears",
+    "Name": "Fishing Radar",
+    "Tier": 3
+  },
+  "82": {
+    "Icon": "rbxassetid://120294742064292",
+    "Type": "Fishes",
+    "Name": "Blob Shark",
+    "Tier": 7
+  },
+  "83": {
+    "Icon": "rbxassetid://102028503382077",
+    "Type": "Fishes",
+    "Name": "Ghost Shark",
+    "Tier": 7
+  },
+  "84": {
+    "Icon": "rbxassetid://138216787235127",
+    "Type": "Fishing Rods",
+    "Name": "Toy Rod",
+    "Tier": 1
+  },
+  "85": {
+    "Icon": "rbxassetid://130802650199282",
+    "Type": "Fishing Rods",
+    "Name": "Grass Rod",
+    "Tier": 2
+  },
+  "86": {
+    "Icon": "rbxassetid://73157781682607",
+    "Type": "Fishes",
+    "Name": "Slurpfish Chromis",
+    "Tier": 2
+  },
+  "87": {
+    "Icon": "rbxassetid://121441755541039",
+    "Type": "Fishes",
+    "Name": "Lava Butterfly",
+    "Tier": 2
+  },
+  "88": {
+    "Icon": "rbxassetid://120329148296828",
+    "Type": "Fishes",
+    "Name": "Rockform Cardianl",
+    "Tier": 3
+  },
+  "89": {
+    "Icon": "rbxassetid://129946055426678",
+    "Type": "Fishes",
+    "Name": "Volsail Tang",
+    "Tier": 3
+  },
+  "90": {
+    "Icon": "rbxassetid://81165959957452",
+    "Type": "Fishes",
+    "Name": "Gingerbread Tang",
+    "Tier": 1
+  },
+  "91": {
+    "Icon": "rbxassetid://119896827350397",
+    "Type": "Fishes",
+    "Name": "Mistletoe Damsel",
+    "Tier": 1
+  },
+  "92": {
+    "Icon": "rbxassetid://131719468046777",
+    "Type": "Fishes",
+    "Name": "Festive Goby",
+    "Tier": 1
+  },
+  "93": {
+    "Icon": "rbxassetid://121538254026074",
+    "Type": "Fishes",
+    "Name": "Christmastree Longnose",
+    "Tier": 3
+  },
+  "94": {
+    "Icon": "rbxassetid://76627481663195",
+    "Type": "Fishes",
+    "Name": "Gingerbread Clownfish",
+    "Tier": 2
+  },
+  "95": {
+    "Icon": "rbxassetid://81306607650028",
+    "Type": "Fishes",
+    "Name": "Candycane Lobster",
+    "Tier": 4
+  },
+  "96": {
+    "Icon": "rbxassetid://111730193849173",
+    "Type": "Fishes",
+    "Name": "Festive Pufferfish",
+    "Tier": 4
+  },
+  "97": {
+    "Icon": "rbxassetid://105391647263950",
+    "Type": "Fishes",
+    "Name": "Gingerbread Turtle",
+    "Tier": 5
+  },
+  "98": {
+    "Icon": "rbxassetid://134485196164902",
+    "Type": "Fishes",
+    "Name": "Gingerbread Shark",
+    "Tier": 6
+  },
+  "99": {
+    "Icon": "rbxassetid://71302255255094",
+    "Type": "Fishes",
+    "Name": "Great Christmas Whale",
+    "Tier": 7
+  },
+  "100": {
+    "Icon": "rbxassetid://82270679061745",
+    "Type": "Fishing Rods",
+    "Name": "Candy Cane Rod",
+    "Tier": 5
+  },
+  "101": {
+    "Icon": "rbxassetid://78639604918154",
+    "Type": "Fishing Rods",
+    "Name": "Christmas Tree Rod",
+    "Tier": 4
+  },
+  "102": {
+    "Icon": "rbxassetid://136553588257457",
+    "Type": "Fishing Rods",
+    "Name": "Frozen Rod",
+    "Tier": 100
+  },
+  "103": {
+    "Icon": "rbxassetid://88417579240692",
+    "Type": "Fishing Rods",
+    "Name": "Gingerbread Rod",
+    "Tier": 2
+  },
+  "104": {
+    "Icon": "rbxassetid://139475070609098",
+    "Type": "Trophies",
+    "Name": "Christmas Trophy 2024",
+    "Tier": 90
+  },
+  "105": {
+    "Icon": "rbxassetid://70900622237072",
+    "Type": "Gears",
+    "Name": "Diving Gear",
+    "Tier": 5
+  },
+  "106": {
+    "Icon": "rbxassetid://137187691311291",
+    "Type": "Fishes",
+    "Name": "Blue-Banded Goby",
+    "Tier": 2
+  },
+  "107": {
+    "Icon": "rbxassetid://135433263876257",
+    "Type": "Fishes",
+    "Name": "Blumato Clownfish",
+    "Tier": 2
+  },
+  "108": {
+    "Icon": "rbxassetid://70666845671780",
+    "Type": "Fishes",
+    "Name": "Conspi Angelfish",
+    "Tier": 1
+  },
+  "109": {
+    "Icon": "rbxassetid://99713500880459",
+    "Type": "Fishes",
+    "Name": "Fade Tang",
+    "Tier": 1
+  },
+  "110": {
+    "Icon": "rbxassetid://96973556889996",
+    "Type": "Fishes",
+    "Name": "Lined Cardinal Fish",
+    "Tier": 5
+  },
+  "111": {
+    "Icon": "rbxassetid://85192354177842",
+    "Type": "Fishes",
+    "Name": "Masked Angelfish",
+    "Tier": 1
+  },
+  "112": {
+    "Icon": "rbxassetid://128173847216247",
+    "Type": "Fishes",
+    "Name": "Pygmy Goby",
+    "Tier": 1
+  },
+  "113": {
+    "Icon": "rbxassetid://86089485683202",
+    "Type": "Fishes",
+    "Name": "Sail Tang",
+    "Tier": 1
+  },
+  "114": {
+    "Icon": "rbxassetid://133021124365377",
+    "Type": "Fishes",
+    "Name": "Watanabei Angelfish",
+    "Tier": 1
+  },
+  "115": {
+    "Icon": "rbxassetid://138516719984773",
+    "Type": "Fishes",
+    "Name": "White Tang",
+    "Tier": 1
+  },
+  "116": {
+    "Icon": "rbxassetid://80869011808607",
+    "Type": "Fishes",
+    "Name": "Zoster Butterfly",
+    "Tier": 1
+  },
+  "117": {
+    "Icon": "rbxassetid://86776001616210",
+    "Type": "Fishes",
+    "Name": "Bandit Angelfish",
+    "Tier": 2
+  },
+  "118": {
+    "Icon": "rbxassetid://0",
+    "Type": "Trophies",
+    "Name": "DEC24 - Wood Plaque",
+    "Tier": 90
+  },
+  "119": {
+    "Icon": "rbxassetid://99236757363784",
+    "Type": "Fishes",
+    "Name": "Ballina Angelfish",
+    "Tier": 3
+  },
+  "120": {
+    "Icon": "rbxassetid://76606007357699",
+    "Type": "Fishes",
+    "Name": "Pink Smith Damsel",
+    "Tier": 2
+  },
+  "121": {
+    "Icon": "rbxassetid://116977046936052",
+    "Type": "Fishes",
+    "Name": "Bleekers Damsel",
+    "Tier": 2
+  },
+  "122": {
+    "Icon": "rbxassetid://119173750281399",
+    "Type": "Fishes",
+    "Name": "Loving Shark",
+    "Tier": 6
+  },
+  "123": {
+    "Icon": "rbxassetid://103281741610796",
+    "Type": "Fishing Rods",
+    "Name": "Cute Rod",
+    "Tier": 95
+  },
+  "124": {
+    "Icon": "rbxassetid://103391024554005",
+    "Type": "Fishing Rods",
+    "Name": "Angelic Rod",
+    "Tier": 100
+  },
+  "125": {
+    "Icon": "rbxassetid://131638728415711",
+    "Type": "EnchantStones",
+    "Name": "Super Enchant Stone",
+    "Tier": 6
+  },
+  "126": {
+    "Icon": "rbxassetid://74424529377774",
+    "Type": "Fishing Rods",
+    "Name": "Ares Rod",
+    "Tier": 6
+  },
+  "127": {
+    "Icon": "rbxassetid://116453364785174",
+    "Type": "Fishing Rods",
+    "Name": "Forsaken",
+    "Tier": 5
+  },
+  "128": {
+    "Icon": "rbxassetid://127763221923032",
+    "Type": "Fishing Rods",
+    "Name": "Polarized",
+    "Tier": 2
+  },
+  "129": {
+    "Icon": "rbxassetid://72323478762209",
+    "Type": "Fishing Rods",
+    "Name": "Ghoul Rod",
+    "Tier": 7
+  },
+  "130": {
+    "Icon": "rbxassetid://99584235204159",
+    "Type": "Fishing Rods",
+    "Name": "Lightsaber",
+    "Tier": 100
+  },
+  "131": {
+    "Icon": "rbxassetid://126405191333384",
+    "Type": "Fishing Rods",
+    "Name": "Red Matter",
+    "Tier": 100
+  },
+  "132": {
+    "Icon": "rbxassetid://130277486101163",
+    "Type": "Fishing Rods",
+    "Name": "Earthly",
+    "Tier": 2
+  },
+  "133": {
+    "Icon": "rbxassetid://101209529442976",
+    "Type": "Fishing Rods",
+    "Name": "Neptune's Trident",
+    "Tier": 6
+  },
+  "134": {
+    "Icon": "rbxassetid://103493787682868",
+    "Type": "Fishing Rods",
+    "Name": "Crystalized",
+    "Tier": 7
+  },
+  "135": {
+    "Icon": "rbxassetid://118534942671075",
+    "Type": "Fishes",
+    "Name": "Patriot Tang",
+    "Tier": 1
+  },
+  "136": {
+    "Icon": "rbxassetid://125463067542850",
+    "Type": "Fishes",
+    "Name": "Frostborn Shark",
+    "Tier": 7
+  },
+  "137": {
+    "Icon": "rbxassetid://88847410678758",
+    "Type": "Fishes",
+    "Name": "Plasma Shark",
+    "Tier": 5
+  },
+  "138": {
+    "Icon": "rbxassetid://76558551981982",
+    "Type": "Fishes",
+    "Name": "Axolotl",
+    "Tier": 4
+  },
+  "139": {
+    "Icon": "rbxassetid://84055400571306",
+    "Type": "Fishes",
+    "Name": "Silver Tuna",
+    "Tier": 2
+  },
+  "140": {
+    "Icon": "rbxassetid://114269547366510",
+    "Type": "Fishes",
+    "Name": "Pilot Fish",
+    "Tier": 2
+  },
+  "141": {
+    "Icon": "rbxassetid://110349456710432",
+    "Type": "Fishes",
+    "Name": "Great Whale",
+    "Tier": 7
+  },
+  "142": {
+    "Icon": "rbxassetid://129792505755834",
+    "Type": "Fishes",
+    "Name": "Orange Basslet",
+    "Tier": 2
+  },
+  "143": {
+    "Icon": "rbxassetid://88950964359044",
+    "Type": "Fishes",
+    "Name": "Pufferfish",
+    "Tier": 4
+  },
+  "144": {
+    "Icon": "rbxassetid://92680808637130",
+    "Type": "Fishes",
+    "Name": "Racoon Butterfly Fish",
+    "Tier": 2
+  },
+  "145": {
+    "Icon": "rbxassetid://88157067345872",
+    "Type": "Fishes",
+    "Name": "Worm Fish",
+    "Tier": 7
+  },
+  "146": {
+    "Icon": "rbxassetid://120444751052938",
+    "Type": "Fishes",
+    "Name": "Strippled Seahorse",
+    "Tier": 5
+  },
+  "147": {
+    "Icon": "rbxassetid://70681751795899",
+    "Type": "Fishes",
+    "Name": "Thresher Shark",
+    "Tier": 5
+  },
+  "148": {
+    "Icon": "rbxassetid://90210469908392",
+    "Type": "Fishing Rods",
+    "Name": "Monochrome",
+    "Tier": 4
+  },
+  "149": {
+    "Icon": "rbxassetid://95565358831204",
+    "Type": "Fishes",
+    "Name": "Angler Fish",
+    "Tier": 4
+  },
+  "150": {
+    "Icon": "rbxassetid://109329387304752",
+    "Type": "Fishes",
+    "Name": "Blob Fish",
+    "Tier": 6
+  },
+  "151": {
+    "Icon": "rbxassetid://114009571858522",
+    "Type": "Fishes",
+    "Name": "Boar Fish",
+    "Tier": 1
+  },
+  "152": {
+    "Icon": "rbxassetid://107492220673765",
+    "Type": "Fishes",
+    "Name": "Deep Sea Crab",
+    "Tier": 5
+  },
+  "153": {
+    "Icon": "rbxassetid://135880333888900",
+    "Type": "Fishes",
+    "Name": "Dark Eel",
+    "Tier": 2
+  },
+  "154": {
+    "Icon": "rbxassetid://112551199622795",
+    "Type": "Fishes",
+    "Name": "Electric Eel",
+    "Tier": 1
+  },
+  "155": {
+    "Icon": "rbxassetid://82285034746187",
+    "Type": "Fishes",
+    "Name": "Fangtooth",
+    "Tier": 4
+  },
+  "156": {
+    "Icon": "rbxassetid://135470649745250",
+    "Type": "Fishes",
+    "Name": "Giant Squid",
+    "Tier": 7
+  },
+  "157": {
+    "Icon": "rbxassetid://115477999636961",
+    "Type": "Fishes",
+    "Name": "Jellyfish",
+    "Tier": 3
+  },
+  "158": {
+    "Icon": "rbxassetid://136951139611035",
+    "Type": "Fishes",
+    "Name": "King Crab",
+    "Tier": 6
+  },
+  "159": {
+    "Icon": "rbxassetid://80927639907406",
+    "Type": "Fishes",
+    "Name": "Robot Kraken",
+    "Tier": 7
+  },
+  "160": {
+    "Icon": "rbxassetid://117683281700675",
+    "Type": "Fishes",
+    "Name": "Monk Fish",
+    "Tier": 4
+  },
+  "161": {
+    "Icon": "rbxassetid://121295544969455",
+    "Type": "Fishes",
+    "Name": "Spotted Lantern Fish",
+    "Tier": 2
+  },
+  "162": {
+    "Icon": "rbxassetid://87203317027314",
+    "Type": "Fishes",
+    "Name": "Vampire Squid",
+    "Tier": 4
+  },
+  "163": {
+    "Icon": "rbxassetid://132331063285672",
+    "Type": "Fishes",
+    "Name": "Viperfish",
+    "Tier": 2
+  },
+  "164": {
+    "Icon": "rbxassetid://105539179190905",
+    "Type": "Fishes",
+    "Name": "Swordfish",
+    "Tier": 2
+  },
+  "165": {
+    "Icon": "rbxassetid://110090152643341",
+    "Type": "Fishes",
+    "Name": "Skeleton Fish",
+    "Tier": 1
+  },
+  "166": {
+    "Icon": "rbxassetid://72777968915255",
+    "Type": "Fishes",
+    "Name": "Dead Fish",
+    "Tier": 1
+  },
+  "167": {
+    "Icon": "rbxassetid://124678532461341",
+    "Type": "Fishing Rods",
+    "Name": "Abyssal Chroma",
+    "Tier": 100
+  },
+  "168": {
+    "Icon": "rbxassetid://76924330674942",
+    "Type": "Fishing Rods",
+    "Name": "Angler Rod",
+    "Tier": 6
+  },
+  "169": {
+    "Icon": "rbxassetid://116644397704032",
+    "Type": "Fishing Rods",
+    "Name": "Ghostfinn Rod",
+    "Tier": 6
+  },
+  "170": {
+    "Icon": "rbxassetid://113612903290719",
+    "Type": "Fishing Rods",
+    "Name": "Aquatic",
+    "Tier": 100
+  },
+  "171": {
+    "Icon": "rbxassetid://108606190037759",
+    "Type": "Fishing Rods",
+    "Name": "Aqua Prism",
+    "Tier": 100
+  },
+  "172": {
+    "Icon": "rbxassetid://128521809779947",
+    "Type": "Fishing Rods",
+    "Name": "Blossom",
+    "Tier": 100
+  },
+  "173": {
+    "Icon": "rbxassetid://93080233675189",
+    "Type": "Fishing Rods",
+    "Name": "Heavenly",
+    "Tier": 100
+  },
+  "174": {
+    "Icon": "rbxassetid://101379332743485",
+    "Type": "Fishing Rods",
+    "Name": "Lightning",
+    "Tier": 100
+  },
+  "175": {
+    "Icon": "rbxassetid://112586849729572",
+    "Type": "Fishing Rods",
+    "Name": "Loving",
+    "Tier": 100
+  },
+  "176": {
+    "Icon": "rbxassetid://107896897205452",
+    "Type": "Fishes",
+    "Name": "Ghost Worm Fish",
+    "Tier": 7
+  },
+  "177": {
+    "Icon": "rbxassetid://125006628928474",
+    "Type": "Fishing Rods",
+    "Name": "Aether Shard",
+    "Tier": 2
+  },
+  "178": {
+    "Icon": "rbxassetid://92025920580149",
+    "Type": "Fishing Rods",
+    "Name": "Amber",
+    "Tier": 2
+  },
+  "179": {
+    "Icon": "rbxassetid://131572620708470",
+    "Type": "Fishing Rods",
+    "Name": "Flower Garden",
+    "Tier": 3
+  },
+  "180": {
+    "Icon": "rbxassetid://131975420788500",
+    "Type": "Fishing Rods",
+    "Name": "Cursed",
+    "Tier": 6
+  },
+  "181": {
+    "Icon": "rbxassetid://140074706748952",
+    "Type": "Fishing Rods",
+    "Name": "Jelly",
+    "Tier": 7
+  },
+  "182": {
+    "Icon": "rbxassetid://95659897738388",
+    "Type": "Fishes",
+    "Name": "Blackcap Basslet",
+    "Tier": 2
+  },
+  "183": {
+    "Icon": "rbxassetid://98970734819318",
+    "Type": "Fishes",
+    "Name": "Catfish",
+    "Tier": 3
+  },
+  "184": {
+    "Icon": "rbxassetid://126049387807805",
+    "Type": "Fishes",
+    "Name": "Coney Fish",
+    "Tier": 3
+  },
+  "185": {
+    "Icon": "rbxassetid://84444153694943",
+    "Type": "Fishes",
+    "Name": "Hermit Crab",
+    "Tier": 6
+  },
+  "186": {
+    "Icon": "rbxassetid://101895900955177",
+    "Type": "Fishes",
+    "Name": "Parrot Fish",
+    "Tier": 2
+  },
+  "187": {
+    "Icon": "rbxassetid://73709080100110",
+    "Type": "Fishes",
+    "Name": "Queen Crab",
+    "Tier": 7
+  },
+  "188": {
+    "Icon": "rbxassetid://70818316245817",
+    "Type": "Fishes",
+    "Name": "Red Snapper",
+    "Tier": 2
+  },
+  "189": {
+    "Icon": "rbxassetid://88961987133136",
+    "Type": "Fishes",
+    "Name": "Rockfish",
+    "Tier": 2
+  },
+  "190": {
+    "Icon": "rbxassetid://125238936461158",
+    "Type": "Fishes",
+    "Name": "Salmon",
+    "Tier": 2
+  },
+  "191": {
+    "Icon": "rbxassetid://112711438552296",
+    "Type": "Fishes",
+    "Name": "Sheepshead Fish",
+    "Tier": 3
+  },
+  "192": {
+    "Icon": "rbxassetid://127771159160485",
+    "Type": "Fishing Rods",
+    "Name": "Galactic",
+    "Tier": 7
+  },
+  "193": {
+    "Icon": "rbxassetid://135282537420782",
+    "Type": "Fishing Rods",
+    "Name": "Enlightened",
+    "Tier": 7
+  },
+  "194": {
+    "Icon": "rbxassetid://109111807975453",
+    "Type": "Fishes",
+    "Name": "Barracuda Fish",
+    "Tier": 3
+  },
+  "195": {
+    "Icon": "rbxassetid://110188263756245",
+    "Type": "Fishes",
+    "Name": "Crystal Crab",
+    "Tier": 7
+  },
+  "196": {
+    "Icon": "rbxassetid://71290852112649",
+    "Type": "Fishes",
+    "Name": "Frog",
+    "Tier": 3
+  },
+  "197": {
+    "Icon": "rbxassetid://116893747982628",
+    "Type": "Fishes",
+    "Name": "Gar Fish",
+    "Tier": 2
+  },
+  "198": {
+    "Icon": "rbxassetid://83087225269219",
+    "Type": "Fishes",
+    "Name": "Herring Fish",
+    "Tier": 1
+  },
+  "199": {
+    "Icon": "rbxassetid://91608917361161",
+    "Type": "Fishes",
+    "Name": "Lake Sturgeon",
+    "Tier": 5
+  },
+  "200": {
+    "Icon": "rbxassetid://120876783250189",
+    "Type": "Fishes",
+    "Name": "Orca",
+    "Tier": 7
+  },
+  "201": {
+    "Icon": "rbxassetid://114252804065144",
+    "Type": "Fishes",
+    "Name": "Eerie Shark",
+    "Tier": 7
+  },
+  "202": {
+    "Icon": "rbxassetid://72446028934813",
+    "Type": "Fishes",
+    "Name": "Flat Fish",
+    "Tier": 2
+  },
+  "203": {
+    "Icon": "rbxassetid://76398271598694",
+    "Type": "Fishes",
+    "Name": "Flying Fish",
+    "Tier": 2
+  },
+  "204": {
+    "Icon": "rbxassetid://92595165502684",
+    "Type": "Fishes",
+    "Name": "Lion Fish",
+    "Tier": 2
+  },
+  "205": {
+    "Icon": "rbxassetid://78374908088019",
+    "Type": "Fishes",
+    "Name": "Luminous Fish",
+    "Tier": 6
+  },
+  "206": {
+    "Icon": "rbxassetid://109551787474599",
+    "Type": "Fishes",
+    "Name": "Monster Shark",
+    "Tier": 7
+  },
+  "207": {
+    "Icon": "rbxassetid://86256600614394",
+    "Type": "Fishes",
+    "Name": "Pink Dolphin",
+    "Tier": 4
+  },
+  "208": {
+    "Icon": "rbxassetid://102132456822726",
+    "Type": "Fishes",
+    "Name": "Saw Fish",
+    "Tier": 5
+  },
+  "209": {
+    "Icon": "rbxassetid://93878183859150",
+    "Type": "Fishes",
+    "Name": "Starfish",
+    "Tier": 3
+  },
+  "210": {
+    "Icon": "rbxassetid://82928155035287",
+    "Type": "Fishes",
+    "Name": "Dark Tentacle",
+    "Tier": 3
+  },
+  "211": {
+    "Icon": "rbxassetid://88311721896238",
+    "Type": "Fishes",
+    "Name": "Wahoo",
+    "Tier": 2
+  },
+  "212": {
+    "Icon": "rbxassetid://82915877680641",
+    "Type": "Fishing Rods",
+    "Name": "Soulreaver",
+    "Tier": 5
+  },
+  "213": {
+    "Icon": "rbxassetid://100717868964112",
+    "Type": "Fishing Rods",
+    "Name": "Purple Saber",
+    "Tier": 3
+  },
+  "214": {
+    "Icon": "rbxassetid://113826603097430",
+    "Type": "Fishing Rods",
+    "Name": "Pirate Octopus",
+    "Tier": 4
+  },
+  "216": {
+    "Icon": "rbxassetid://95655883897541",
+    "Type": "Fishing Rods",
+    "Name": "Fiery",
+    "Tier": 6
+  },
+  "217": {
+    "Icon": "rbxassetid://96441140230554",
+    "Type": "Fishing Rods",
+    "Name": "Pinata",
+    "Tier": 2
   }
 }
