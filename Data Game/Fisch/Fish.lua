@@ -107,6 +107,955 @@ local v2 = {
     }
 };
 local v5 = {
+    ["Supersized Driftwood"] = {
+        Icon = "rbxassetid://102455611835809", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            1400, 
+            1400
+        }, 
+        Chance = 0, 
+        Rarity = "Special", 
+        Resilience = 30, 
+        ForcedProgressEfficiency = 2, 
+        Description = "very large...", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 25000, 
+        XP = 10000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "LARGE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
+    ["Supersized Scylla"] = {
+        Icon = "rbxassetid://124361765249229", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            200000000, 
+            500000000
+        }, 
+        Chance = 0, 
+        Rarity = "Special", 
+        Resilience = -100, 
+        ForcedProgressEfficiency = 0.01, 
+        Description = "very large...", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 280000, 
+        XP = 500000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "SCYLLA ITSELF!?!", 
+            "IT'S REAL!?!?!?!", 
+            "IT'S MASSIVE!!!", 
+            "GET THE CAMERA!!!", 
+            "THE LEGEND WAS TRUE!!!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 239, 201), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
+    ["Supersized Mosslurker"] = {
+        Icon = "rbxassetid://138877273682281", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            200000000, 
+            500000000
+        }, 
+        Chance = 0, 
+        Rarity = "Special", 
+        Resilience = -100, 
+        ForcedProgressEfficiency = 0.02, 
+        Description = "very large...", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 250000, 
+        XP = 520000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "LARGE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 239, 201), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
+    ["Supersized Bloop Fish"] = {
+        Icon = "rbxassetid://84676091673435", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            300000000, 
+            700000000
+        }, 
+        Chance = 0, 
+        Rarity = "Special", 
+        Resilience = -100, 
+        ForcedProgressEfficiency = 0.02, 
+        Description = "very large...", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 290000, 
+        XP = 430000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "LARGE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 239, 201), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
+    ["Supersized Floppy"] = {
+        Icon = "rbxassetid://110074220763561", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            300000, 
+            700000
+        }, 
+        Chance = 0, 
+        Rarity = "Special", 
+        Resilience = -100, 
+        ForcedProgressEfficiency = 0.4, 
+        Description = "very large...", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 100000, 
+        XP = 10000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "LARGE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 239, 201), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
+    ["Supersized Sea Pickle"] = {
+        Icon = "rbxassetid://135046768157056", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            30000, 
+            70000
+        }, 
+        Chance = 0, 
+        Rarity = "Special", 
+        Resilience = -100, 
+        ForcedProgressEfficiency = 1.5, 
+        Description = "very large...", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 100000, 
+        XP = 10000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "LARGE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 239, 201), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
+    ["Colossal Blue Dragon"] = {
+        Icon = "rbxassetid://113874550892544", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            1000000, 
+            4000000
+        }, 
+        Chance = 5, 
+        Rarity = "Exotic", 
+        Resilience = 10, 
+        Description = "A breathtakingly massive form of the blue dragon, its wing-like fins ripple like banners as it drifts through the open sea. Though its size is staggering, it moves with a slow, graceful rhythm, glowing softly as if lit from within. Sailors say spotting one is a once-in-a-lifetime event; a fleeting glimpse of living ocean light.", 
+        Hint = "???", 
+        FavouriteBait = "Shark Head", 
+        FavouriteTime = nil, 
+        Price = 200000, 
+        XP = 500000, 
+        Seasons = {
+            "Spring", 
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "IT'S BEAUTIFUL... AND HUGE!!!", 
+            "I DIDN'T KNOW THEY COULD GET THAT BIG!!!", 
+            "IT'S LIKE A FLOATING ISLAND!!!", 
+            "IT'S SHIMMERING!!!", 
+            "HOW IS THAT EVEN REAL?!"
+        }, 
+        SparkleColor = Color3.fromRGB(103, 176, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Luminescent Cavern", 
+        ProgressEfficiency = 0.1
+    }, 
+    ["Colossal Ancient Dragon"] = {
+        Icon = "rbxassetid://103423320839824", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            1000000, 
+            4000000
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 10, 
+        Description = "Its worn fins are etched with cracks like old stone, and barnacle-like growths glimmer faintly across its body. Said to have drifted through the currents since before the first sailors, it moves with patient dignity; a relic of an ocean that has long forgotten its age.", 
+        Hint = "???", 
+        FavouriteBait = "Shark Head", 
+        FavouriteTime = nil, 
+        Price = 300000, 
+        XP = 600000, 
+        Seasons = {
+            "Spring", 
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "IT LOOKS OLDER THAN THE OCEAN ITSELF...", 
+            "HOW IS IT STILL ALIVE?!", 
+            "ITS FINS ARE LIKE WEATHERED STONE...", 
+            "IT FEELS... ANCIENT.", 
+            "IT'S OLDER THAN ANYTHING WE'VE EVER SEEN!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 101, 111), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Crimson Cavern", 
+        ForcedProgressEfficiency = 0.05
+    }, 
+    ["Colossal Ethereal Dragon"] = {
+        Icon = "rbxassetid://128001384475181", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            1000000, 
+            4000000
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = -100, 
+        Description = "So faint it seems half made of light, this delicate being drifts like a waking dream. Its body shimmers with shifting colors that fade when touched, as though it exists only in the corner of one's vision; a fleeting illusion of the sea's imagination.", 
+        Hint = "???", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = nil, 
+        Price = 400000, 
+        XP = 700000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "IS IT EVEN REAL?!", 
+            "I CAN SEE THROUGH IT...", 
+            "IT'S LIKE A DREAM FLOATING BY...", 
+            "IT'S... BEAUTIFUL.", 
+            "IT DOESN'T FEEL LIKE IT BELONGS HERE..."
+        }, 
+        SparkleColor = Color3.fromRGB(199, 120, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Luminescent Cavern", 
+        ForcedProgressEfficiency = 0.02
+    }, 
+    ["Bluelip Batfish"] = {
+        Icon = "rbxassetid://91091879174260", 
+        WeightPool = {
+            20, 
+            60
+        }, 
+        Chance = 100, 
+        Rarity = "Common", 
+        Resilience = 100, 
+        Description = "A bizarre bottom-dweller with vivid blue lips, waddling on cavern sands.", 
+        Hint = "Waddles in rainy cavern glow.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 150, 
+        XP = 70, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "A Bluelip Batfish!", 
+            "Walking oddity of the floor!", 
+            "Blue-lipped wanderer!"
+        }, 
+        SparkleColor = Color3.fromRGB(100, 0, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Luminescent Cavern"
+    }, 
+    ["Hawaiian Bobtail Squid"] = {
+        Icon = "rbxassetid://102903150218991", 
+        WeightPool = {
+            5, 
+            20
+        }, 
+        Chance = 80, 
+        Rarity = "Uncommon", 
+        Resilience = 90, 
+        ProgressEfficiency = 1.05, 
+        Description = "A small squid with a symbiotic glow, camouflaging in shallow cavern sands by night.", 
+        Hint = "Shines in clear cavern nights.", 
+        FavouriteBait = "Shrimp", 
+        FavouriteTime = "Night", 
+        Price = 300, 
+        XP = 100, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Hawaiian Bobtail Squid!", 
+            "Glowing with bacterial light!", 
+            "Master of midnight camouflage!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Luminescent Cavern"
+    }, 
+    ["Blue Ribbon Eel"] = {
+        Icon = "rbxassetid://94662492511243", 
+        WeightPool = {
+            15, 
+            50
+        }, 
+        Chance = 45, 
+        Rarity = "Rare", 
+        Resilience = 60, 
+        ProgressEfficiency = 1.1, 
+        Description = "A slender blue eel undulating from cavern burrows, hunting with open jaws.", 
+        Hint = "Slithers in foggy cavern murk.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Night", 
+        Price = 1820, 
+        XP = 390, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Blue Ribbon Eel!", 
+            "Slender cavern serpent!", 
+            "Electric blue hunter!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 200, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Luminescent Cavern"
+    }, 
+    ["Kitefin Shark"] = {
+        Icon = "rbxassetid://121133757932708", 
+        WeightPool = {
+            1000, 
+            3000
+        }, 
+        Chance = 10, 
+        Rarity = "Legendary", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.5, 
+        Description = "A glowing deep-sea shark cruising cavern slopes with photophores.", 
+        Hint = "Patrols foggy cavern depths.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 8000, 
+        XP = 2800, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A KITEFIN SHARK!", 
+            "GLOWING DEPTH PREDATOR!", 
+            "BIOLUMINESCENT BEHEMOTH!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 255, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Luminescent Cavern"
+    }, 
+    ["Atolla Jellyfish"] = {
+        Icon = "rbxassetid://130524142982493", 
+        WeightPool = {
+            200, 
+            500
+        }, 
+        Chance = 5, 
+        Rarity = "Mythical", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.3, 
+        Description = "A crown-shaped jelly pulsing blue flashes to startle predators in the deep.", 
+        Hint = "Flashes in foggy cavern gloom.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Night", 
+        Price = 12800, 
+        XP = 4200, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "An Atolla Jellyfish!", 
+            "Flashing alarm in the dark!", 
+            "Deep-sea dazzler!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 100, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Luminescent Cavern"
+    }, 
+    Dinoflagellates = {
+        Icon = "rbxassetid://82939103544280", 
+        WeightPool = {
+            1, 
+            2
+        }, 
+        Chance = 25, 
+        Rarity = "Unusual", 
+        Resilience = 50, 
+        ProgressEfficiency = 1.05, 
+        Description = "Microscopic plankton sparking blue-green light when disturbed in cavern waters.", 
+        Hint = "Clings to crab cages.", 
+        FavouriteBait = "Weird Algae", 
+        FavouriteTime = "Night", 
+        Price = 300, 
+        XP = 180, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Dinoflagellates!", 
+            "Sparkling microbial bloom!", 
+            "Nighttime wave illuminator!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 255, 100), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Luminescent Cavern"
+    }, 
+    ["Electric Blue Seahorse"] = {
+        Icon = "rbxassetid://79504879823981", 
+        WeightPool = {
+            20, 
+            80
+        }, 
+        Chance = 4, 
+        Rarity = "Mythical", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.3, 
+        Description = "A vibrant blue seahorse clinging to cavern corals, swaying in glowing currents.", 
+        Hint = "Found in foggy crab cages.", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Night", 
+        Price = 13800, 
+        XP = 8200, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "AN ELECTRIC BLUE SEAHORSE!", 
+            "SPARKLING CAVERN CLINGER!", 
+            "MYTHICAL GLOW MARE!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 255, 200), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Luminescent Cavern"
+    }, 
+    ["Blue Sea Slug"] = {
+        Icon = "rbxassetid://77135933623318", 
+        WeightPool = {
+            2, 
+            7
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.1, 
+        Description = "A tiny blue drifter storing venomous stings, floating in cavern currents.", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = "Night", 
+        Price = 35000, 
+        XP = 25000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A TINY BLUE DRAGON!", 
+            "VENOMOUS GLOWING DRIFTER!", 
+            "SECRET OF THE CAVERN!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 150, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Luminescent Cavern"
+    }, 
+    ["Vampire Squid"] = {
+        Icon = "rbxassetid://72036462107555", 
+        WeightPool = {
+            150, 
+            400
+        }, 
+        Chance = 5, 
+        Rarity = "Mythical", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.3, 
+        Description = "A deep-sea cephalopod with glowing red eyes and webbed arms, cloaking itself in crimson currents.", 
+        Hint = "Lurks in foggy crimson depths.", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Night", 
+        Price = 12500, 
+        XP = 4000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Vampire Squid!", 
+            "Crimson cloaked drifter!", 
+            "Glowing eyed phantom!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 0, 50), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Crimson Cavern"
+    }, 
+    ["Japanese Dragon Eel"] = {
+        Icon = "rbxassetid://87343237282565", 
+        WeightPool = {
+            800, 
+            2500
+        }, 
+        Chance = 10, 
+        Rarity = "Legendary", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.5, 
+        Description = "A serpentine eel with crimson scales, coiling through cavern crevices with predatory grace.", 
+        Hint = "Slithers in foggy crimson murk.", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 8500, 
+        XP = 3000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A JAPANESE DRAGON EEL!", 
+            "CRIMSON COILED PREDATOR!", 
+            "LEGENDARY CAVERN SERPENT!"
+        }, 
+        SparkleColor = Color3.fromRGB(200, 0, 50), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Crimson Cavern"
+    }, 
+    Viperfish = {
+        Icon = "rbxassetid://72067324279387", 
+        WeightPool = {
+            10, 
+            40
+        }, 
+        Chance = 50, 
+        Rarity = "Rare", 
+        Resilience = 70, 
+        ProgressEfficiency = 1.1, 
+        Description = "A ferocious fish with needle-like teeth, lurking in crimson shadows.", 
+        Hint = "Bites in rainy depths.", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 1800, 
+        XP = 350, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "A Viperfish!", 
+            "Toothy terror of the deep!", 
+            "Crimson fang hunter!"
+        }, 
+        SparkleColor = Color3.fromRGB(150, 0, 100), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Crimson Cavern"
+    }, 
+    ["Red Fangtooth"] = {
+        Icon = "rbxassetid://129698554074017", 
+        WeightPool = {
+            15, 
+            50
+        }, 
+        Chance = 40, 
+        Rarity = "Rare", 
+        Resilience = 65, 
+        ProgressEfficiency = 1.1, 
+        Description = "A grotesque fish with oversized fangs, prowling crimson cavern depths.", 
+        Hint = "Lurks in rainy shadows.", 
+        FavouriteBait = "Flakes", 
+        FavouriteTime = "Night", 
+        Price = 1600, 
+        XP = 300, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "A Fangtooth!", 
+            "Fanged menace of the deep!", 
+            "Crimson toothy prowler!"
+        }, 
+        SparkleColor = Color3.fromRGB(200, 50, 100), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Crimson Cavern"
+    }, 
+    ["Sea Raven"] = {
+        Icon = "rbxassetid://129111295782686", 
+        WeightPool = {
+            20, 
+            70
+        }, 
+        Chance = 70, 
+        Rarity = "Uncommon", 
+        Resilience = 85, 
+        Description = "A crimson-hued fish with wing-like fins, gliding through rainy cavern waters.", 
+        Hint = "Glides in rainy crimson currents.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 350, 
+        XP = 110, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "A Sea Raven!", 
+            "Crimson winged swimmer!", 
+            "Cave gliding raven!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 80, 80), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Crimson Cavern"
+    }, 
+    ["Lithodes Megacantha"] = {
+        Icon = "rbxassetid://113069639113174", 
+        WeightPool = {
+            50, 
+            150
+        }, 
+        Chance = 2, 
+        Rarity = "Exotic", 
+        Resilience = 1, 
+        Description = "A spiny crimson crab scuttling in crab cages, armored with jagged spines.", 
+        Hint = "Clings to foggy crab cages.", 
+        FavouriteBait = "Weird Algae", 
+        FavouriteTime = "Night", 
+        Price = 40000, 
+        XP = 22000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Lithodes Megacantha!", 
+            "Spiked crimson scuttler!", 
+            "Crab cage conqueror!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 50, 50), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Crimson Cavern"
+    }, 
+    ["Red Crabsquid"] = {
+        Icon = "rbxassetid://81267114198950", 
+        WeightPool = {
+            30, 
+            100
+        }, 
+        Chance = 60, 
+        Rarity = "Uncommon", 
+        Resilience = 80, 
+        ProgressEfficiency = 1.05, 
+        Description = "A hybrid creature with squid-like tentacles, dwelling in crimson crab cages.", 
+        Hint = "Scurries in clear crab cages.", 
+        FavouriteBait = nil, 
+        FavouriteTime = "Day", 
+        Price = 400, 
+        XP = 120, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Red Crabsquid!", 
+            "Tentacled cave crawler!", 
+            "Crimson cage dweller!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 100, 100), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Crimson Cavern"
+    }, 
+    ["Red Spotted Blenny"] = {
+        Icon = "rbxassetid://91180143142182", 
+        WeightPool = {
+            5, 
+            25
+        }, 
+        Chance = 75, 
+        Rarity = "Common", 
+        Resilience = 90, 
+        Description = "A small fish with crimson spots, darting through crab cages in clear waters.", 
+        Hint = "Commonly hides in clear crab cages.", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 200, 
+        XP = 80, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A Red Spotted Blenny!", 
+            "Spotted cave sprinter!", 
+            "Crimson darting blenny!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 150, 150), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Crimson Cavern"
+    }, 
+    ["Turkey Leg"] = {
+        Icon = "rbxassetid://13073604", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            14, 
+            100
+        }, 
+        Chance = 10, 
+        Rarity = "Special", 
+        Resilience = 30, 
+        Description = "Gobble Gobble Yum Yum! Forks are lame...", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 5000, 
+        XP = 1000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Is it Thanksgiving already???"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
+    Cheezburger = {
+        Icon = "rbxassetid://16646570", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            14, 
+            100
+        }, 
+        Chance = 70, 
+        Rarity = "Special", 
+        Resilience = 30, 
+        Description = "U can has cheezburger!", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 5000, 
+        XP = 1000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Can i have cheezburger pls???"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
+    ["Bloxy Cola"] = {
+        Icon = "rbxassetid://10472127", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            14, 
+            100
+        }, 
+        Chance = 20, 
+        Rarity = "Special", 
+        Resilience = 30, 
+        Description = "Warning: Bloxy Cola may be habit-forming.", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 5000, 
+        XP = 1000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "I bet this is tasty!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
+    ["Lava Bucket"] = {
+        Icon = "rbxassetid://87438002145271", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            150, 
+            210
+        }, 
+        Chance = 40, 
+        Rarity = "Special", 
+        Resilience = 10, 
+        ForcedProgressEfficiency = 1.5, 
+        Description = "Hot to the touch", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 150000, 
+        XP = 50000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "TENTACLES!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
+    Obsidian = {
+        Icon = "rbxassetid://92639825831734", 
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            150, 
+            210
+        }, 
+        Chance = 25, 
+        Rarity = "Special", 
+        Resilience = 50, 
+        ForcedProgressEfficiency = 1.25, 
+        Description = "Maybe with ten of these i can make a portal!!", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 100000, 
+        XP = 25000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Maybe if i catch ten of these i can make a portal !!!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "None", 
+        Unregistered = true, 
+        Appraisable = false
+    }, 
     ["Dr. Ishmael"] = {
         Icon = "rbxassetid://84562985809933", 
         BlockPassiveCapture = true, 
@@ -1491,8 +2440,7 @@ local v5 = {
         SparkleColor = Color3.fromRGB(136, 136, 136), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "None", 
-        Unregistered = true, 
-        Appraisable = false
+        Unregistered = true
     }, 
     Lusca = {
         Icon = "rbxassetid://91580952772256", 
@@ -1523,8 +2471,7 @@ local v5 = {
         SparkleColor = Color3.fromRGB(136, 136, 136), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "None", 
-        Unregistered = true, 
-        Appraisable = false
+        Unregistered = true
     }, 
     Akkorokamui = {
         Icon = "rbxassetid://137659114038895", 
@@ -1555,8 +2502,7 @@ local v5 = {
         SparkleColor = Color3.fromRGB(136, 136, 136), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "None", 
-        Unregistered = true, 
-        Appraisable = false
+        Unregistered = true
     }, 
     ["Experimental Salmon"] = {
         Icon = "rbxassetid://94033445887927", 
@@ -3938,8 +4884,8 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Gale Grub", 
         FavouriteTime = "Day", 
-        Price = 200, 
-        XP = 100, 
+        Price = 50, 
+        XP = 70, 
         Seasons = {
             "Summer"
         }, 
@@ -3971,8 +4917,8 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = "Night", 
-        Price = 300, 
-        XP = 150, 
+        Price = 70, 
+        XP = 80, 
         Seasons = {
             "Autumn"
         }, 
@@ -4005,8 +4951,8 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 400, 
-        XP = 190, 
+        Price = 100, 
+        XP = 100, 
         Seasons = {
             "Spring"
         }, 
@@ -4038,8 +4984,8 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Night", 
-        Price = 500, 
-        XP = 200, 
+        Price = 110, 
+        XP = 105, 
         Seasons = {
             "Winter"
         }, 
@@ -4071,8 +5017,8 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Day", 
-        Price = 900, 
-        XP = 300, 
+        Price = 300, 
+        XP = 180, 
         Seasons = {
             "Summer"
         }, 
@@ -4105,8 +5051,8 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Night", 
-        Price = 1000, 
-        XP = 400, 
+        Price = 320, 
+        XP = 190, 
         Seasons = {
             "Autumn"
         }, 
@@ -4139,8 +5085,8 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Night", 
-        Price = 5000, 
-        XP = 2000, 
+        Price = 4000, 
+        XP = 1800, 
         Seasons = {
             "Winter"
         }, 
@@ -4173,8 +5119,8 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 7000, 
-        XP = 4000, 
+        Price = 6800, 
+        XP = 2200, 
         Seasons = {
             "Winter"
         }, 
@@ -4207,8 +5153,8 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 15000, 
-        XP = 8000, 
+        Price = 14000, 
+        XP = 5000, 
         Seasons = {
             "Summer"
         }, 
