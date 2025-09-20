@@ -6,6 +6,32 @@ return {
         CantBeWhormholed = true, 
         Priority = 2
     }, 
+    ["Luminescent Cavern"] = {
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Hawaiian Bobtail Squid", 
+            "Blue Ribbon Eel", 
+            "Bluelip Batfish", 
+            "Kitefin Shark", 
+            "Atolla Jellyfish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["Crimson Cavern"] = {
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Sea Raven", 
+            "Red Fangtooth", 
+            "Viperfish", 
+            "Japanese Dragon Eel", 
+            "Vampire Squid"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
     ["Carrot Garden"] = {
         Pool = {
             "Carrot Turtle", 
@@ -388,6 +414,45 @@ return {
             "Whiptail Catfish", 
             "Whiptail Catfish", 
             "Bloop Fish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
+    ["Colossal Ethereal Dragon"] = {
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Hawaiian Bobtail Squid", 
+            "Blue Ribbon Eel", 
+            "Bluelip Batfish", 
+            "Kitefin Shark", 
+            "Atolla Jellyfish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
+    ["Colossal Blue Dragon"] = {
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Hawaiian Bobtail Squid", 
+            "Blue Ribbon Eel", 
+            "Bluelip Batfish", 
+            "Kitefin Shark", 
+            "Atolla Jellyfish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
+    ["Colossal Ancient Dragon"] = {
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Sea Raven", 
+            "Red Fangtooth", 
+            "Viperfish", 
+            "Japanese Dragon Eel", 
+            "Vampire Squid"
         }, 
         CantBeWhormholed = true, 
         Priority = 3
