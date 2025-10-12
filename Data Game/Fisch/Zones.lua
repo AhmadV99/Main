@@ -6,6 +6,19 @@ return {
         CantBeWhormholed = true, 
         Priority = 2
     }, 
+    MossjawHunt = {
+        Pool = {
+            "Bronze Corydoras", 
+            "Neon Tetra", 
+            "Cardinal Tetra", 
+            "Redeye Piranha", 
+            "Black Ghost Knifefish", 
+            "Electric Eel", 
+            "Pirarucu"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
     ["Luminescent Cavern"] = {
         Pool = {
             "Rock", 
@@ -15,6 +28,23 @@ return {
             "Bluelip Batfish", 
             "Kitefin Shark", 
             "Atolla Jellyfish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["Lost Jungle"] = {
+        Pool = {
+            "Driftwood", 
+            "Neon Tetra", 
+            "Cardinal Tetra", 
+            "Bronze Corydoras", 
+            "Freshwater Pacu", 
+            "Redeye Piranha", 
+            "Black Ghost Knifefish", 
+            "Payara", 
+            "Electric Eel", 
+            "Pirarucu", 
+            "Goliath Tigerfish"
         }, 
         CantBeWhormholed = false, 
         Priority = 2
@@ -1270,6 +1300,49 @@ return {
         }, 
         Priority = 1
     }, 
+    Earthquake = {
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Akkorokamui", 
+            "Lusca", 
+            "Charybdis"
+        }, 
+        Priority = 0
+    }, 
     ["Atlantis Ocean"] = {
         Pool = {
             "Tire", 
@@ -1475,6 +1548,25 @@ return {
             "Molten Ripple"
         }, 
         Priority = 2
+    }, 
+    Eruption = {
+        Pool = {
+            "Volcanic Geode", 
+            "Rock", 
+            "Basalt", 
+            "Quality Bait Crate", 
+            "Inferno Wood", 
+            "Ember Snapper", 
+            "Pyrogrub", 
+            "Ember Perch", 
+            "Magma Tang", 
+            "Obsidian Salmon", 
+            "Obsidian Swordfish", 
+            "Molten Banshee", 
+            "Molten Ripple", 
+            "Ashclaw"
+        }, 
+        Priority = 3
     }, 
     ["Roslit Pond"] = {
         Pool = {
@@ -1996,6 +2088,13 @@ return {
         Priority = 10, 
         CantBeWhormholed = true
     }, 
+    Him = {
+        Pool = {
+            "Him"
+        }, 
+        Priority = 1000, 
+        CantBeWhormholed = true
+    }, 
     ["Lovestorm Eel"] = {
         Pool = {
             "Tire", 
@@ -2077,6 +2176,77 @@ return {
         }, 
         CantBeWhormholed = true, 
         Priority = 100
+    }, 
+    ["Birthday Megalodon"] = {
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Birthday Squid", 
+            "Birthday Dumbo Octopus", 
+            "Birthday Goldfish", 
+            "Birthday Megalodon"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 100
+    }, 
+    BirthdayCake = {
+        Pool = {
+            "Birthday Cake"
+        }, 
+        Priority = 101, 
+        CantBeWhormholed = true, 
+        StartDate = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0), 
+        InvalidDate = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
+    }, 
+    BabysFirstBalloon = {
+        Pool = {
+            "Baby's First Balloon"
+        }, 
+        Priority = 101, 
+        CantBeWhormholed = true, 
+        StartDate = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0), 
+        InvalidDate = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
+    }, 
+    BirthdayGift = {
+        Pool = {
+            "Birthday Gift"
+        }, 
+        Priority = 101, 
+        CantBeWhormholed = true, 
+        StartDate = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0), 
+        InvalidDate = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
     }, 
     ["Megalodon Default"] = {
         Pool = {
