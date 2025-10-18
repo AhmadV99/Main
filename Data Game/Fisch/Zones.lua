@@ -1341,7 +1341,8 @@ return {
             "Lusca", 
             "Charybdis"
         }, 
-        Priority = 0
+        Priority = 0, 
+        CantBeWhormholed = true
     }, 
     ["Atlantis Ocean"] = {
         Pool = {
@@ -1566,7 +1567,8 @@ return {
             "Molten Ripple", 
             "Ashclaw"
         }, 
-        Priority = 3
+        Priority = 3, 
+        CantBeWhormholed = true
     }, 
     ["Roslit Pond"] = {
         Pool = {
@@ -2451,6 +2453,74 @@ return {
         Priority = 102, 
         CantBeWhormholed = true
     }, 
+    FischFright25 = {
+        Pool = {
+            "Kelpie", 
+            "Phantom Jellyfish", 
+            "Vampire Perch", 
+            "Spider Salmon", 
+            "Werewolf Walleye", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
+    FrightfulVillage = {
+        Pool = {
+            "Coffin Crab", 
+            "Pumpkin Pufferfish", 
+            "Ectoplasm Eel", 
+            "Frankenshrimp", 
+            "Ghost Minnow", 
+            "Potion Perch", 
+            "Mourning Manta Ray", 
+            "Candle Carp", 
+            "Gravestone Stingray", 
+            "Frightful Crate"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
+    NessieCatacomb = {
+        Pool = {
+            "Skeletal Nessie", 
+            "Coffin Crab", 
+            "Pumpkin Pufferfish", 
+            "Ectoplasm Eel", 
+            "Frankenshrimp", 
+            "Ghost Minnow", 
+            "Potion Perch", 
+            "Mourning Manta Ray", 
+            "Candle Carp", 
+            "Gravestone Stingray"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
     Fischgiving = {
         Pool = {
             "Turkey"
@@ -2458,6 +2528,14 @@ return {
         Priority = 103, 
         CantBeWhormholed = true, 
         InvalidDate = DateTime.fromUniversalTime(2024, 12, 7, 8)
+    }, 
+    SourGummy = {
+        Pool = {
+            "Xtra Sour Gummy Pack"
+        }, 
+        Priority = 110, 
+        CantBeWhormholed = true, 
+        InvalidDate = DateTime.fromUniversalTime(2025, 11, 1, 16)
     }, 
     Fischmas24 = {
         Pool = {
