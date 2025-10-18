@@ -743,6 +743,7 @@ local v5 = {
     ["Birthday Megalodon"] = {
         Icon = "rbxassetid://134630477795750", 
         ProgressEfficiency = 0.05, 
+        FinalChanceDivisor = 20, 
         WeightPool = {
             500100, 
             670100
@@ -3374,7 +3375,7 @@ local v5 = {
         FavouriteBait = "\240\159\145\189", 
         FavouriteTime = nil, 
         Price = 170000, 
-        XP = 340000, 
+        XP = 140000, 
         Seasons = {
             "None"
         }, 
@@ -3502,7 +3503,7 @@ local v5 = {
         FavouriteBait = "\240\159\145\189", 
         FavouriteTime = nil, 
         Price = 140000, 
-        XP = 200000, 
+        XP = 100000, 
         Seasons = {
             "None"
         }, 
@@ -3740,8 +3741,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(136, 112, 89), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        From = "None", 
-        Unregistered = true
+        From = "Roslit Volcano"
     }, 
     Charybdis = {
         Icon = "rbxassetid://134631974573413", 
@@ -3774,8 +3774,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(136, 136, 136), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        From = "None", 
-        Unregistered = true
+        From = "Ocean"
     }, 
     Lusca = {
         Icon = "rbxassetid://91580952772256", 
@@ -3808,8 +3807,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(136, 77, 78), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        From = "None", 
-        Unregistered = true
+        From = "Ocean"
     }, 
     Akkorokamui = {
         Icon = "rbxassetid://137659114038895", 
@@ -3842,8 +3840,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(136, 44, 46), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        From = "None", 
-        Unregistered = true
+        From = "Ocean"
     }, 
     ["Experimental Salmon"] = {
         Icon = "rbxassetid://94033445887927", 
@@ -4402,6 +4399,7 @@ local v5 = {
             200000
         }, 
         Chance = 1, 
+        FinalChanceDivisor = 20, 
         Rarity = "Limited", 
         Resilience = -50, 
         ForcedProgressEfficiency = 0.1, 
@@ -9300,6 +9298,7 @@ local v5 = {
             1400000
         }, 
         Chance = 0.1, 
+        FinalChanceDivisor = 20, 
         Rarity = "Exotic", 
         Resilience = 3, 
         ProgressEfficiency = 0.1, 
@@ -9364,6 +9363,7 @@ local v5 = {
             1400000
         }, 
         Chance = 0.1, 
+        FinalChanceDivisor = 4, 
         Rarity = "Exotic", 
         Resilience = 3, 
         ProgressEfficiency = 0.05, 
@@ -9395,6 +9395,7 @@ local v5 = {
             1700000
         }, 
         Chance = 0.1, 
+        FinalChanceDivisor = 12, 
         Rarity = "Exotic", 
         Resilience = 1, 
         ProgressEfficiency = 0.05, 
@@ -14417,6 +14418,7 @@ local v5 = {
             10
         }, 
         Chance = 0.005, 
+        FinalChanceDivisor = 8, 
         Rarity = "Secret", 
         Resilience = 45, 
         Description = "A simple banana, rich in potassium. How did it get in the water?", 
@@ -15356,6 +15358,7 @@ local v5 = {
             130000
         }, 
         Chance = 0.02, 
+        FinalChanceDivisor = 3.5, 
         Rarity = "Mythical", 
         Resilience = 10, 
         ProgressEfficiency = 0.2, 
@@ -16438,6 +16441,7 @@ local v5 = {
             45
         }, 
         Chance = 0.005, 
+        FinalChanceDivisor = 5, 
         Rarity = "Exotic", 
         Resilience = 20, 
         ProgressEfficiency = 0.5, 
@@ -17411,7 +17415,7 @@ local v5 = {
             650
         }, 
         Chance = 5, 
-        Rarity = "Mythical", 
+        Rarity = "Extinct", 
         Resilience = 20, 
         Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
         Hint = "Caught in oceans using a lobster cage.", 
@@ -17941,6 +17945,7 @@ local v5 = {
             880
         }, 
         Chance = 3, 
+        FinalChanceDivisor = 8, 
         Rarity = "Extinct", 
         Resilience = 30, 
         Description = "A school of awesome fish!", 
@@ -20163,6 +20168,7 @@ local v5 = {
             5500
         }, 
         Chance = 0.01, 
+        FinalChanceDivisor = 3, 
         Rarity = "Exotic", 
         Resilience = 40, 
         ProgressEfficiency = 0.65, 
@@ -21778,6 +21784,953 @@ local v5 = {
         FromLimited = "FischFright", 
         From = "FischFright"
     }, 
+    ["Jack-o-Lantern"] = {
+        WeightPool = {
+            210, 
+            350
+        }, 
+        Chance = 1, 
+        FinalChanceDivisor = 30, 
+        Rarity = "Limited", 
+        Resilience = 30, 
+        ProgressEfficiency = 0.4, 
+        Description = "Someone carved this and threw it into the ocean for you to catch...", 
+        Hint = "Only obtainable during FischFright; Caught while fishing anywhere during the event!", 
+        FavouriteBait = "Gummy Fish", 
+        FavouriteTime = nil, 
+        Price = 1600, 
+        XP = 1400, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "HELLOOO SPOOOKYYY MONTHH!!", 
+            "Wait I knew who carved this???", 
+            "AAAAAAAAAAAAAAA!!!!!!"
+        }, 
+        SparkleColor = Color3.fromRGB(126, 255, 216), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Pumpkin Pufferfish"] = {
+        WeightPool = {
+            5, 
+            20
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 80, 
+        Description = "A pufferfish with a spooky twist.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing at the Frightful Village!", 
+        FavouriteBait = "Hallow-Pop", 
+        FavouriteTime = "Night", 
+        Price = 200, 
+        XP = 150, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "\240\159\142\131", 
+            "The Jack-o-Lantern muhaahaha", 
+            "The chocolate Icing MUHAHAHAH", 
+            "The SPOOKY version of the pufferfish."
+        }, 
+        SparkleColor = Color3.fromRGB(255, 227, 15), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    Frankenshrimp = {
+        WeightPool = {
+            1, 
+            2
+        }, 
+        Chance = 90, 
+        Rarity = "Limited", 
+        Resilience = 100, 
+        Description = "A shrimp that was deconstructed and reconstructed in the form of a zombie.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing at the Frightful Village!", 
+        FavouriteBait = "Candy Corn", 
+        FavouriteTime = "Day", 
+        Price = 150, 
+        XP = 100, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Frankenshrimp!", 
+            "How many times do you think it took to make this thing???", 
+            "ZAWMBIEEE SHRAMPPP!!!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 107, 96), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Licorice Leech"] = {
+        WeightPool = {
+            3.2, 
+            6.4
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 90, 
+        Description = "This creature's favorite candy is licorice, who would've guessed.", 
+        Hint = "Only obtainable during FischFright; Obtained through Trick-or-Treating!", 
+        FavouriteBait = "Gobstopper", 
+        FavouriteTime = nil, 
+        Price = 200, 
+        XP = 150, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "What do you think this thing tastes like?", 
+            "Licorice with a side of... Leech??", 
+            "Didn't know a candy could have teeth like that."
+        }, 
+        SparkleColor = Color3.fromRGB(255, 107, 96), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Candle Carp"] = {
+        WeightPool = {
+            20, 
+            70
+        }, 
+        Chance = 50, 
+        Rarity = "Limited", 
+        Resilience = 50, 
+        Description = "A carp with a little spin on it, don't hold it for too long.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing at the Frightful Village!", 
+        FavouriteBait = "Sour Gummy Worm", 
+        FavouriteTime = "Night", 
+        Price = 400, 
+        XP = 250, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "Carp-tastic!", 
+            "!!!", 
+            "Woah! Grey Carp!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Spooky Relic"] = {
+        WeightPool = {
+            210, 
+            210
+        }, 
+        Chance = 30, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.5, 
+        Description = "A stone filled with the blessing of the Vampire King. Returning it to its throne under the Statue of Sovereignty will result in your currently equipped rod being engulfed in its power.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing anywhere during the event!", 
+        FavouriteBait = "Gummy Fish", 
+        FavouriteTime = "Day", 
+        Price = 1000, 
+        XP = 600, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "This is like a normal relic but scarier..", 
+            "Woah.. A Spooky Relic??", 
+            "Yippie A Spooky Relic!!"
+        }, 
+        SparkleColor = Color3.fromRGB(126, 255, 216), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Eerie Relic"] = {
+        WeightPool = {
+            210, 
+            210
+        }, 
+        Chance = 30, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.5, 
+        Description = "A stone filled with the blessing of the Werewolf King. Returning it to its throne under the Statue of Sovereignty will result in your currently equipped rod being engulfed in its power.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing anywhere during the event!", 
+        FavouriteBait = "Hallow-Pop", 
+        FavouriteTime = nil, 
+        Price = 1000, 
+        XP = 600, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "This is like a normal relic but more eerie..", 
+            "Woah.. An Eerie Relic??", 
+            "Yippie A Eerie Relic!!"
+        }, 
+        SparkleColor = Color3.fromRGB(126, 255, 216), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Frightful Relic"] = {
+        WeightPool = {
+            210, 
+            210
+        }, 
+        Chance = 30, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.5, 
+        Description = "A stone filled with the blessing of the Pumpkin King. Returning it to its throne under the Statue of Sovereignty will result in your currently equipped rod being engulfed in its power.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing anywhere during the event!", 
+        FavouriteBait = "Candy Corn", 
+        FavouriteTime = "Night", 
+        Price = 1000, 
+        XP = 600, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "This is like a normal relic but I get a sense of frightfulness..", 
+            "Woah.. A Frightful Relic??", 
+            "Yippie A Frightful Relic!!"
+        }, 
+        SparkleColor = Color3.fromRGB(126, 255, 216), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Ghost Minnow"] = {
+        WeightPool = {
+            1, 
+            6
+        }, 
+        Chance = 90, 
+        Rarity = "Limited", 
+        Resilience = 100, 
+        Description = "The ghost minnow, a distant relative to the normal minnow, the only difference is that one is translucent.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing anywhere during the event!", 
+        FavouriteBait = "Gobstopper", 
+        FavouriteTime = "Day", 
+        Price = 150, 
+        XP = 100, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "WOAH A GHOST MINNOW!!! wait these exist??", 
+            "What's the difference between this and a normal minnow?", 
+            "Wow this fish is massive..!"
+        }, 
+        SparkleColor = Color3.fromRGB(161, 161, 161), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Mourning Manta Ray"] = {
+        WeightPool = {
+            7750, 
+            10000
+        }, 
+        Chance = 5, 
+        Rarity = "Limited", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.1, 
+        Description = "This Manta Ray has been through some things, hope it gets well soon <3.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing at the Frightful Village!", 
+        FavouriteBait = "Sour Gummy Worm", 
+        FavouriteTime = nil, 
+        Price = 12000, 
+        XP = 6000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "Awe poor Manta Ray :(.", 
+            "Rip Skelefish 24 - 24.", 
+            "LLSF \240\159\149\138\239\184\143\240\159\149\138\239\184\143\240\159\149\138\239\184\143."
+        }, 
+        SparkleColor = Color3.fromRGB(87, 118, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Caramel Chub"] = {
+        WeightPool = {
+            10, 
+            30
+        }, 
+        Chance = 50, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "You might not want to eat this, yeah it's caramel but I would be careful.", 
+        Hint = "Only obtainable during FischFright; Obtained through Trick-or-Treating!", 
+        FavouriteBait = "Gummy Fish", 
+        FavouriteTime = "Night", 
+        Price = 250, 
+        XP = 200, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "I thought this would be sticky?", 
+            "Woah, a Chub... But caramel??"
+        }, 
+        SparkleColor = Color3.fromRGB(193, 130, 58), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Candy Corn Cod"] = {
+        WeightPool = {
+            20, 
+            100
+        }, 
+        Chance = 50, 
+        Rarity = "Limited", 
+        Resilience = 50, 
+        Description = "It's very similar to a normal cod but this one was candified.", 
+        Hint = "Only obtainable during FischFright; Obtained through Trick-or-Treating!", 
+        FavouriteBait = "Hallow-Pop", 
+        FavouriteTime = "Day", 
+        Price = 400, 
+        XP = 250, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Cod.. I swear this wasn't candy before??", 
+            "I caught a Cod... But strangely this feels different.", 
+            "mmmmm candy corn my favorite..."
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Frightful Crate"] = {
+        WeightPool = {
+            80, 
+            80
+        }, 
+        Chance = 40, 
+        Rarity = "Limited", 
+        Resilience = 30, 
+        Description = "A spooky wooden crate with fabric over top to preserve the bait inside. Seems like it came straight from the Pumpkin King. Opening it might give you an array of spooky baits.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing at the Frightful Village!", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = nil, 
+        Price = 800, 
+        Unpurchasable = true, 
+        XP = 500, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "BOOO. Scared you didn't I.", 
+            "Wow a bait crate with a SPOOOKYYY twist.", 
+            "That's a pretty cool pumpkin face if you ask me."
+        }, 
+        SparkleColor = Color3.fromRGB(130, 130, 130), 
+        HoldAnimation = l_fish_0:WaitForChild("crate"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true, 
+        IsCrate = true, 
+        CrateType = "All", 
+        Currency = "Candy", 
+        BaitContents = {
+            "Gummy Fish", 
+            "Hallow-Pop", 
+            "Candy Corn", 
+            "Gobstopper"
+        }, 
+        FishContents = {
+            "Xtra Sour Gummy Pack", 
+            "Caramel Chub", 
+            "Gummy Guppy", 
+            "Licorice Leech", 
+            "Marshmallow Mackerel", 
+            "Lollipop Lamprey"
+        }, 
+        CoinContents = {
+            5, 
+            10
+        }
+    }, 
+    ["Xtra Sour Gummy Pack"] = {
+        WeightPool = {
+            8, 
+            8
+        }, 
+        Chance = 0, 
+        Rarity = "Limited", 
+        Resilience = 130, 
+        Description = "A sour pack of gummies; so sour even the fish would pucker!", 
+        Hint = "Only obtainable during FischFright; ???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 100, 
+        Unpurchasable = true, 
+        XP = 50, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "YUMMY!"
+        }, 
+        SparkleColor = Color3.fromRGB(130, 130, 130), 
+        HoldAnimation = l_fish_0:WaitForChild("crate"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true, 
+        IsCrate = true, 
+        CrateType = "Bait", 
+        BaitContents = {
+            "Sour Gummy Worm"
+        }
+    }, 
+    Kelpie = {
+        WeightPool = {
+            500, 
+            1500
+        }, 
+        Chance = 1, 
+        Rarity = "Limited", 
+        Resilience = 3, 
+        ProgressEfficiency = 0.1, 
+        Description = "A mythical water horse with a spooky aura, lurking in the frightful pools.", 
+        Hint = "Only obtainable during FischFright; Exclusively caught from Frightful Pools!", 
+        FavouriteBait = "Gummy Fish", 
+        FavouriteTime = nil, 
+        Price = 12500, 
+        XP = 6500, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "A Kelpie! Straight out of legends.", 
+            "This horse-fish is eerie!", 
+            "Beware its watery tricks."
+        }, 
+        SparkleColor = Color3.fromRGB(0, 128, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Phantom Jellyfish"] = {
+        WeightPool = {
+            100, 
+            300
+        }, 
+        Chance = 40, 
+        Rarity = "Limited", 
+        Resilience = 8, 
+        ProgressEfficiency = 0.85, 
+        Description = "A ghostly jellyfish that floats ethereally through the water.", 
+        Hint = "Only obtainable during FischFright; Exclusively caught from Frightful Pools!", 
+        FavouriteBait = "Hallow-Pop", 
+        FavouriteTime = "Night", 
+        Price = 800, 
+        XP = 500, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "Phantom Jellyfish! So translucent.", 
+            "It stings with spectral pain!", 
+            "Boo! Jelly style."
+        }, 
+        SparkleColor = Color3.fromRGB(173, 216, 230), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Vampire Perch"] = {
+        WeightPool = {
+            200, 
+            600
+        }, 
+        Chance = 25, 
+        Rarity = "Limited", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.7, 
+        Description = "A blood-sucking perch with fangs ready to bite.", 
+        Hint = "Only obtainable during FischFright; Exclusively caught from Frightful Pools!", 
+        FavouriteBait = "Candy Corn", 
+        FavouriteTime = "Day", 
+        Price = 1200, 
+        XP = 700, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "Vampire Perch! Thirsty for blood?", 
+            "Count Perchula!", 
+            "It vantz to suck your bait."
+        }, 
+        SparkleColor = Color3.fromRGB(139, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Spider Salmon"] = {
+        WeightPool = {
+            300, 
+            800
+        }, 
+        Chance = 20, 
+        Rarity = "Limited", 
+        Resilience = 12, 
+        ProgressEfficiency = 0.55, 
+        Description = "A salmon covered in web-like patterns, creepy and crawly.", 
+        Hint = "Only obtainable during FischFright; Exclusively caught from Frightful Pools!", 
+        FavouriteBait = "Gobstopper", 
+        FavouriteTime = nil, 
+        Price = 1800, 
+        XP = 1000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Spider Salmon! Eight legs? No, but spooky.", 
+            "Webbing its way to your rod.", 
+            "Arachno-fish!"
+        }, 
+        SparkleColor = Color3.fromRGB(128, 128, 128), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Werewolf Walleye"] = {
+        WeightPool = {
+            400, 
+            1200
+        }, 
+        Chance = 18, 
+        Rarity = "Limited", 
+        Resilience = 14, 
+        ProgressEfficiency = 0.4, 
+        Description = "A walleye that howls at the moon, transforming under the night sky.", 
+        Hint = "Only obtainable during FischFright; Exclusively caught from Frightful Pools!", 
+        FavouriteBait = "Sour Gummy Worm", 
+        FavouriteTime = "Night", 
+        Price = 2200, 
+        XP = 1300, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "Werewolf Walleye! Awooo!", 
+            "Full moon special.", 
+            "Bites harder at night."
+        }, 
+        SparkleColor = Color3.fromRGB(105, 105, 105), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Coffin Crab"] = {
+        WeightPool = {
+            50, 
+            150
+        }, 
+        Chance = 45, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.9, 
+        Description = "A crab that hides in coffin-like shells, emerging only to pinch.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing at the Frightful Village!", 
+        FavouriteBait = "Gummy Fish", 
+        FavouriteTime = "Day", 
+        Price = 500, 
+        XP = 300, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "Coffin Crab! Rest in pieces.", 
+            "Pinchy undead.", 
+            "Crab from the grave."
+        }, 
+        SparkleColor = Color3.fromRGB(139, 69, 19), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Ectoplasm Eel"] = {
+        WeightPool = {
+            150, 
+            450
+        }, 
+        Chance = 30, 
+        Rarity = "Limited", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.8, 
+        Description = "An eel made of glowing ectoplasm, slippery and supernatural.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing at the Frightful Village!", 
+        FavouriteBait = "Hallow-Pop", 
+        FavouriteTime = nil, 
+        Price = 1000, 
+        XP = 600, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "Ectoplasm Eel! Ghostly slime.", 
+            "Shocking and spooky.", 
+            "Eel from the beyond."
+        }, 
+        SparkleColor = Color3.fromRGB(50, 205, 50), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Potion Perch"] = {
+        WeightPool = {
+            100, 
+            300
+        }, 
+        Chance = 40, 
+        Rarity = "Limited", 
+        Resilience = 18, 
+        ProgressEfficiency = 0.9, 
+        Description = "A perch that brews mysterious potions in its belly.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing at the Frightful Village!", 
+        FavouriteBait = "Gobstopper", 
+        FavouriteTime = "Day", 
+        Price = 700, 
+        XP = 400, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Potion Perch! Magical brew.", 
+            "What does it concoct?", 
+            "Enchanted fish."
+        }, 
+        SparkleColor = Color3.fromRGB(148, 0, 211), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Gravestone Stingray"] = {
+        WeightPool = {
+            2000, 
+            5000
+        }, 
+        Chance = 8, 
+        Rarity = "Limited", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.3, 
+        Description = "A massive stingray shaped like a gravestone, haunting the depths.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing at the Frightful Village!", 
+        FavouriteBait = "Sour Gummy Worm", 
+        FavouriteTime = nil, 
+        Price = 8000, 
+        XP = 4000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "Gravestone Stingray! Monumental catch.", 
+            "RIP to my rod.", 
+            "Sting from the grave."
+        }, 
+        SparkleColor = Color3.fromRGB(112, 128, 144), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Marshmallow Mackerel"] = {
+        WeightPool = {
+            50, 
+            200
+        }, 
+        Chance = 50, 
+        Rarity = "Limited", 
+        Resilience = 50, 
+        ProgressEfficiency = 1.1, 
+        Description = "A sweet mackerel that tastes like toasted marshmallows.", 
+        Hint = "Only obtainable during FischFright; Obtained through Trick-or-Treating!", 
+        FavouriteBait = "Gummy Fish", 
+        FavouriteTime = "Night", 
+        Price = 400, 
+        XP = 200, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "Marshmallow Mackerel! Fluffy fish.", 
+            "Sweet and spooky.", 
+            "Campfire favorite."
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Gummy Guppy"] = {
+        WeightPool = {
+            5, 
+            15
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 80, 
+        Description = "A chewy guppy made entirely of gummy candy.", 
+        Hint = "Only obtainable during FischFright; Obtained through Trick-or-Treating!", 
+        FavouriteBait = "Hallow-Pop", 
+        FavouriteTime = "Day", 
+        Price = 200, 
+        XP = 150, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "Gummy Guppy! Chewy delight.", 
+            "Candy fish!", 
+            "Sweet catch."
+        }, 
+        SparkleColor = Color3.fromRGB(255, 0, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Lollipop Lamprey"] = {
+        WeightPool = {
+            10, 
+            40
+        }, 
+        Chance = 55, 
+        Rarity = "Limited", 
+        Resilience = 60, 
+        Description = "A lamprey with a lollipop for a head, sucking on sweets.", 
+        Hint = "Only obtainable during FischFright; Obtained through Trick-or-Treating!", 
+        FavouriteBait = "Candy Corn", 
+        FavouriteTime = nil, 
+        Price = 300, 
+        XP = 200, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "Lollipop Lamprey! Sweet sucker.", 
+            "Candy on a stick... fish?", 
+            "Lick it?"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 105, 180), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Baby Nessie"] = {
+        WeightPool = {
+            100, 
+            400
+        }, 
+        Chance = 25, 
+        Rarity = "Limited", 
+        Resilience = 30, 
+        ProgressEfficiency = 2, 
+        Description = "A cute baby version of the legendary Nessie, with a spooky twist.", 
+        Hint = "Only obtainable during FischFright; Obtained through Trick-or-Treating!", 
+        FavouriteBait = "Gobstopper", 
+        FavouriteTime = "Night", 
+        Price = 11500, 
+        XP = 6800, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Baby Nessie! Adorable monster.", 
+            "Mini loch legend.", 
+            "Aww, spooky cute."
+        }, 
+        SparkleColor = Color3.fromRGB(34, 139, 34), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    Scarecrow = {
+        WeightPool = {
+            200, 
+            600
+        }, 
+        Chance = 1, 
+        FinalChanceDivisor = 30, 
+        Rarity = "Limited", 
+        Resilience = 40, 
+        ProgressEfficiency = 0.3, 
+        Description = "Not a fish, but a scarecrow that somehow ended up in the water.", 
+        Hint = "Only obtainable during FischFright; Caught while fishing anywhere during the event!", 
+        FavouriteBait = "Sour Gummy Worm", 
+        FavouriteTime = "Day", 
+        Price = 600, 
+        XP = 400, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "Scarecrow! Scaring fish?", 
+            "Farmyard floater.", 
+            "Crow repellent in water."
+        }, 
+        SparkleColor = Color3.fromRGB(218, 165, 32), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
+    ["Skeletal Nessie"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            5000, 
+            15000
+        }, 
+        Chance = 1, 
+        FinalChanceDivisor = 24, 
+        Rarity = "Limited", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.1, 
+        Description = "The bony remains of Nessie, risen from the catacombs.", 
+        Hint = "Only obtainable during FischFright; ???", 
+        FavouriteBait = "Gummy Fish", 
+        FavouriteTime = nil, 
+        Price = 15000, 
+        XP = 7000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Rainy"
+        }, 
+        Quips = {
+            "Skeletal Nessie! Bone-chilling.", 
+            "Undead legend.", 
+            "Rattling catch."
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        FromLimited = "FischFright 2", 
+        From = "FischFright 2", 
+        IsLimitedBestiary = true
+    }, 
     Turkey = {
         WeightPool = {
             80, 
@@ -22282,6 +23235,7 @@ local v5 = {
             200000
         }, 
         Chance = 0.02, 
+        FinalChanceDivisor = 12, 
         Rarity = "Limited", 
         Resilience = 10, 
         ProgressEfficiency = 0.1, 
@@ -22741,6 +23695,7 @@ local v5 = {
             1400000
         }, 
         Chance = 0.1, 
+        FinalChanceDivisor = 20, 
         Rarity = "Exotic", 
         Resilience = 3, 
         ProgressEfficiency = 0.1, 
