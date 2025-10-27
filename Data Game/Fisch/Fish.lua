@@ -188,7 +188,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Bronze Corydoras!", 
@@ -220,7 +220,7 @@ local v5 = {
         }, 
         Weather = {
             "Clear", 
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "An Oscar Cichlid!", 
@@ -250,7 +250,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Freshwater Pacu!", 
@@ -433,7 +433,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "AN ELECTRIC EEL!", 
@@ -465,7 +465,7 @@ local v5 = {
         }, 
         Weather = {
             "Clear", 
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A PIRARUCU!", 
@@ -496,7 +496,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A PIRAIBA!", 
@@ -528,7 +528,7 @@ local v5 = {
             "Summer"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Motoro Stingray!", 
@@ -1725,7 +1725,7 @@ local v5 = {
             "Winter"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Bluelip Batfish!", 
@@ -2035,7 +2035,7 @@ local v5 = {
             "Winter"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Viperfish!", 
@@ -2066,7 +2066,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Fangtooth!", 
@@ -2096,7 +2096,7 @@ local v5 = {
             "Winter"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Sea Raven!", 
@@ -6025,7 +6025,7 @@ local v5 = {
             "Winter"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A OCEAN TRIGGERFISH!", 
@@ -6363,7 +6363,7 @@ local v5 = {
             "Winter"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Cobalt Angelfish!", 
@@ -6602,7 +6602,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A BLOOP FISH!?!?!", 
@@ -6640,7 +6640,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A BABY BLOOP FISH!?!?!", 
@@ -6824,7 +6824,7 @@ local v5 = {
             "None"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A MOSSLURKER!?!?!", 
@@ -6893,7 +6893,7 @@ local v5 = {
             "Spring"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Carrot Pufferfish!", 
@@ -11349,7 +11349,7 @@ local v5 = {
             "Winter"
         }, 
         Weather = {
-            "Snow"
+            "Rain"
         }, 
         Quips = {
             "Like catching a snowflake!", 
@@ -12022,7 +12022,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(228, 255, 140), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        From = "Sunstone Island"
+        From = "Sunstone"
     }, 
     ["Void Wood"] = {
         WeightPool = {
@@ -14117,7 +14117,7 @@ local v5 = {
         Price = 170, 
         XP = 135, 
         Seasons = {
-            "Fall", 
+            "Autumn", 
             "Winter"
         }, 
         Weather = {
@@ -14302,10 +14302,10 @@ local v5 = {
         Price = 3000, 
         XP = 1800, 
         Seasons = {
-            "None"
+            "Summer"
         }, 
         Weather = {
-            "Summer"
+            "None"
         }, 
         Quips = {
             "Woah, I caught a Ginsu Shark!", 
@@ -16603,10 +16603,10 @@ local v5 = {
         Price = 120, 
         XP = 75, 
         Seasons = {
-            "None"
+            "Autumn"
         }, 
         Weather = {
-            "Autumn"
+            "None"
         }, 
         Quips = {
             "Is it grey magic?", 
@@ -16764,7 +16764,8 @@ local v5 = {
             "Spring"
         }, 
         Weather = {
-            "Foggy, Rain"
+            "Foggy", 
+            "Rain"
         }, 
         Quips = {
             "WOAH!!", 
@@ -17329,7 +17330,7 @@ local v5 = {
         XP = 35, 
         Seasons = {
             "Summer", 
-            "autumn"
+            "Autumn"
         }, 
         Weather = {
             "None"
@@ -17523,7 +17524,7 @@ local v5 = {
             120
         }, 
         Chance = 30, 
-        Rarity = "Rare", 
+        Rarity = "Extinct", 
         Resilience = 40, 
         Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
         Hint = "Caught in oceans using a lobster cage.", 
@@ -17631,7 +17632,7 @@ local v5 = {
             30
         }, 
         Chance = 45, 
-        Rarity = "Unusual", 
+        Rarity = "Extinct", 
         Resilience = 65, 
         Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
         Hint = "Caught in oceans using a lobster cage.", 
@@ -17665,7 +17666,7 @@ local v5 = {
             10
         }, 
         Chance = 8, 
-        Rarity = "Legendary", 
+        Rarity = "Extinct", 
         Resilience = 150, 
         Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
         Hint = "Caught in oceans using a lobster cage.", 
@@ -17678,7 +17679,7 @@ local v5 = {
             "Spring"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Larry Lobster!", 
@@ -17736,7 +17737,7 @@ local v5 = {
             170
         }, 
         Chance = 85, 
-        Rarity = "Uncommon", 
+        Rarity = "Extinct", 
         Resilience = 85, 
         Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
         Hint = "Caught in oceans using a lobster cage.", 
@@ -17770,7 +17771,7 @@ local v5 = {
             58
         }, 
         Chance = 35, 
-        Rarity = "Rare", 
+        Rarity = "Extinct", 
         Resilience = 28, 
         Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
         Hint = "Caught in oceans using a lobster cage.", 
@@ -17783,7 +17784,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Larry Lobster!", 
@@ -18091,7 +18092,7 @@ local v5 = {
             "Spring"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "Wow, that's a lot of them!"
@@ -18124,7 +18125,7 @@ local v5 = {
             "Winter"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "Wow, that's a lot of them!"
@@ -21080,7 +21081,8 @@ local v5 = {
         Price = 40, 
         XP = 10, 
         Seasons = {
-            "Spring, Summer"
+            "Spring", 
+            "Summer"
         }, 
         Weather = {
             "None"
@@ -21232,7 +21234,7 @@ local v5 = {
         XP = 35, 
         Seasons = {
             "Summer", 
-            "autumn"
+            "Autumn"
         }, 
         Weather = {
             "None"
@@ -21785,6 +21787,7 @@ local v5 = {
         From = "FischFright"
     }, 
     ["Jack-o-Lantern"] = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             210, 
             350
@@ -21898,7 +21901,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "What do you think this thing tastes like?", 
@@ -21952,7 +21955,7 @@ local v5 = {
         Resilience = 20, 
         ProgressEfficiency = 0.5, 
         Description = "A stone filled with the blessing of the Vampire King. Returning it to its throne under the Statue of Sovereignty will result in your currently equipped rod being engulfed in its power.", 
-        Hint = "Only obtainable during FischFright; Caught while fishing anywhere during the event!", 
+        Hint = "Only obtainable during FischFright; Obtained as a rare reward from Trick-or-Treating!", 
         FavouriteBait = "Gummy Fish", 
         FavouriteTime = "Day", 
         Price = 1000, 
@@ -21984,13 +21987,13 @@ local v5 = {
         Resilience = 20, 
         ProgressEfficiency = 0.5, 
         Description = "A stone filled with the blessing of the Werewolf King. Returning it to its throne under the Statue of Sovereignty will result in your currently equipped rod being engulfed in its power.", 
-        Hint = "Only obtainable during FischFright; Caught while fishing anywhere during the event!", 
-        FavouriteBait = "Hallow-Pop", 
+        Hint = "Only obtainable during FischFright; Obtained as a rare reward from Trick-or-Treating!", 
+        FavouriteBait = nil, 
         FavouriteTime = nil, 
         Price = 1000, 
         XP = 600, 
         Seasons = {
-            "Autumn"
+            "None"
         }, 
         Weather = {
             "None"
@@ -22016,16 +22019,16 @@ local v5 = {
         Resilience = 20, 
         ProgressEfficiency = 0.5, 
         Description = "A stone filled with the blessing of the Pumpkin King. Returning it to its throne under the Statue of Sovereignty will result in your currently equipped rod being engulfed in its power.", 
-        Hint = "Only obtainable during FischFright; Caught while fishing anywhere during the event!", 
-        FavouriteBait = "Candy Corn", 
-        FavouriteTime = "Night", 
+        Hint = "Only obtainable during FischFright; Obtained as a rare reward from Trick-or-Treating!", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
         Price = 1000, 
         XP = 600, 
         Seasons = {
-            "Autumn"
+            "None"
         }, 
         Weather = {
-            "Foggy"
+            "None"
         }, 
         Quips = {
             "This is like a normal relic but I get a sense of frightfulness..", 
@@ -22047,16 +22050,16 @@ local v5 = {
         Rarity = "Limited", 
         Resilience = 100, 
         Description = "The ghost minnow, a distant relative to the normal minnow, the only difference is that one is translucent.", 
-        Hint = "Only obtainable during FischFright; Caught while fishing anywhere during the event!", 
-        FavouriteBait = "Gobstopper", 
-        FavouriteTime = "Day", 
+        Hint = "Only obtainable during FischFright; Caught while fishing at the Frightful Village!", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
         Price = 150, 
         XP = 100, 
         Seasons = {
-            "Autumn"
+            "None"
         }, 
         Weather = {
-            "Rainy"
+            "None"
         }, 
         Quips = {
             "WOAH A GHOST MINNOW!!! wait these exist??", 
@@ -22269,7 +22272,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Kelpie! Straight out of legends.", 
@@ -22429,7 +22432,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "Coffin Crab! Rest in pieces.", 
@@ -22557,7 +22560,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "Marshmallow Mackerel! Fluffy fish.", 
@@ -22665,6 +22668,7 @@ local v5 = {
         IsLimitedBestiary = true
     }, 
     Scarecrow = {
+        BlockPassiveCapture = true, 
         WeightPool = {
             200, 
             600
@@ -22704,7 +22708,7 @@ local v5 = {
             15000
         }, 
         Chance = 1, 
-        FinalChanceDivisor = 24, 
+        FinalChanceDivisor = 35, 
         Rarity = "Limited", 
         Resilience = 5, 
         ProgressEfficiency = 0.1, 
@@ -22718,7 +22722,7 @@ local v5 = {
             "Autumn"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "Skeletal Nessie! Bone-chilling.", 
@@ -23149,7 +23153,7 @@ local v5 = {
             "None"
         }, 
         Weather = {
-            "Rainy"
+            "Rain"
         }, 
         Quips = {
             "A Snowflake Flounder!", 
@@ -32737,6 +32741,7 @@ local v5 = {
         Cataclysmic = Color3.fromRGB(255, 255, 255), 
         Special = Color3.fromRGB(255, 255, 255), 
         Nuclear = Color3.fromRGB(255, 255, 255)
-    }, 
+    },
 };
+
 return v5;
