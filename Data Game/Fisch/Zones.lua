@@ -2535,6 +2535,7 @@ return {
         }, 
         Priority = 110, 
         CantBeWhormholed = true, 
+        StartDate = DateTime.fromUniversalTime(2024, 11, 1, 16), 
         InvalidDate = DateTime.fromUniversalTime(2025, 11, 1, 16)
     }, 
     Fischmas24 = {
