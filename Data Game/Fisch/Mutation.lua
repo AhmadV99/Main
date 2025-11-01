@@ -1,4 +1,10 @@
 return  {
+    Fabulous = {
+        PriceMultiply = 13.5, 
+        Chance = 0, 
+        Display = "Fabulous", 
+        Color = Color3.fromRGB(223, 149, 255)
+    }, 
     Unlucky = {
         PriceMultiply = 0.5, 
         Chance = 0, 
