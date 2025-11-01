@@ -14695,6 +14695,7 @@ local v5 = {
         From = "None"
     }, 
     ["Bloop Cosmetic Crate"] = {
+        Icon = "rbxassetid://73337293410960", 
         WeightPool = {
             100, 
             101
@@ -31107,186 +31108,6 @@ local v5 = {
             "Sea 1"
         }
     }, 
-    ["JWEDamage-1"] = {
-        WeightPool = {
-            10, 
-            20
-        }, 
-        Chance = 130, 
-        Rarity = "Common", 
-        Resilience = 100, 
-        Description = "", 
-        Hint = "", 
-        FavouriteBait = nil, 
-        FavouriteTime = nil, 
-        Price = 0, 
-        XP = 0, 
-        Seasons = {
-            "None"
-        }, 
-        Weather = {
-            "None"
-        }, 
-        Quips = {}, 
-        SparkleColor = Color3.fromRGB(255, 255, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        From = nil, 
-        Worlds = {
-            "Sea 1"
-        }, 
-        BlockCatchChatMessage = true, 
-        Unregistered = true
-    }, 
-    ["JWEDamage-2"] = {
-        WeightPool = {
-            10, 
-            20
-        }, 
-        Chance = 130, 
-        Rarity = "Uncommon", 
-        Resilience = 100, 
-        Description = "", 
-        Hint = "", 
-        FavouriteBait = nil, 
-        FavouriteTime = nil, 
-        Price = 0, 
-        XP = 0, 
-        Seasons = {
-            "None"
-        }, 
-        Weather = {
-            "None"
-        }, 
-        Quips = {}, 
-        SparkleColor = Color3.fromRGB(255, 255, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        From = nil, 
-        Worlds = {
-            "Sea 1"
-        }, 
-        BlockCatchChatMessage = true, 
-        Unregistered = true
-    }, 
-    ["JWEDamage-3"] = {
-        WeightPool = {
-            10, 
-            20
-        }, 
-        Chance = 130, 
-        Rarity = "Unusual", 
-        Resilience = 100, 
-        Description = "", 
-        Hint = "", 
-        FavouriteBait = nil, 
-        FavouriteTime = nil, 
-        Price = 0, 
-        XP = 0, 
-        Seasons = {
-            "None"
-        }, 
-        Weather = {
-            "None"
-        }, 
-        Quips = {}, 
-        SparkleColor = Color3.fromRGB(255, 255, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        From = nil, 
-        Worlds = {
-            "Sea 1"
-        }, 
-        BlockCatchChatMessage = true, 
-        Unregistered = true
-    }, 
-    ["JWEDamage-4"] = {
-        WeightPool = {
-            10, 
-            20
-        }, 
-        Chance = 130, 
-        Rarity = "Rare", 
-        Resilience = 100, 
-        Description = "", 
-        Hint = "", 
-        FavouriteBait = nil, 
-        FavouriteTime = nil, 
-        Price = 0, 
-        XP = 0, 
-        Seasons = {
-            "None"
-        }, 
-        Weather = {
-            "None"
-        }, 
-        Quips = {}, 
-        SparkleColor = Color3.fromRGB(255, 255, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        From = nil, 
-        Worlds = {
-            "Sea 1"
-        }, 
-        BlockCatchChatMessage = true, 
-        Unregistered = true
-    }, 
-    ["JWEDamage-5"] = {
-        WeightPool = {
-            10, 
-            20
-        }, 
-        Chance = 130, 
-        Rarity = "Legendary", 
-        Resilience = 100, 
-        Description = "", 
-        Hint = "", 
-        FavouriteBait = nil, 
-        FavouriteTime = nil, 
-        Price = 0, 
-        XP = 0, 
-        Seasons = {
-            "None"
-        }, 
-        Weather = {
-            "None"
-        }, 
-        Quips = {}, 
-        SparkleColor = Color3.fromRGB(255, 255, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        From = nil, 
-        Worlds = {
-            "Sea 1"
-        }, 
-        BlockCatchChatMessage = true, 
-        Unregistered = true
-    }, 
-    ["JWEDamage-6"] = {
-        WeightPool = {
-            10, 
-            20
-        }, 
-        Chance = 130, 
-        Rarity = "Mythical", 
-        Resilience = 100, 
-        Description = "", 
-        Hint = "", 
-        FavouriteBait = nil, 
-        FavouriteTime = nil, 
-        Price = 0, 
-        XP = 0, 
-        Seasons = {
-            "None"
-        }, 
-        Weather = {
-            "None"
-        }, 
-        Quips = {}, 
-        SparkleColor = Color3.fromRGB(255, 255, 0), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        From = nil, 
-        Worlds = {
-            "Sea 1"
-        }, 
-        BlockCatchChatMessage = true, 
-        Unregistered = true
-    }, 
     ["Azure Studfish"] = {
         WeightPool = {
             9, 
@@ -32716,7 +32537,11 @@ local v5 = {
         [15] = "Apex", 
         [16] = "Extinct", 
         [17] = "Cataclysmic", 
-        [18] = "Special"
+        [18] = "Special", 
+        [19] = "Nuclear", 
+        [20] = "Unique", 
+        [21] = "Whistle", 
+        [22] = "Mirror"
     }, 
     RarityColours = {
         Trash = Color3.fromRGB(145, 145, 145), 
@@ -32741,7 +32566,7 @@ local v5 = {
         Cataclysmic = Color3.fromRGB(255, 255, 255), 
         Special = Color3.fromRGB(255, 255, 255), 
         Nuclear = Color3.fromRGB(255, 255, 255)
-    },
+    }, 
 };
 
 return v5;
