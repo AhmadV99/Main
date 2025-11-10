@@ -1,45 +1,54 @@
+local type = type
+local assert = assert
+
+local table_remove = table.remove
+local table_insert = table.insert
+
+local setmetatable = setmetatable
+
+local task_spawn = task.spawn
+
 local Connection = {}
 Connection.__index = Connection
 
-function Connection.new(Val)
+function Connection.new()
   local New = setmetatable({}, Connection)
-  New._Value = Val or false
   New._Callbacks = {}
 
   return New
 end
 
 function Connection.FireCallback(func, ...)
-  return task.spawn(func, ...)
+  return task_spawn(func, ...)
 end
 
 function Connection:Connect(Callback)
   if type(Callback) ~= "function" then return end
 
-  table.insert(self._Callbacks, Callback)
+  local Connection_Object = {}
 
-  return function()
-    for i, cb in ipairs(self._Callbacks) do
-      if cb == Callback then
-        table.remove(self._Callbacks, i)
-        break
+  Connection_Object._Callback = Callback
+  Connection_Object._Parent = self
+
+  setmetatable(Connection_Object, { __index = {
+    Disconnect = function(self)
+      local Callbacks = self._Parent._Callbacks
+
+      for i = #Callbacks, 1, -1 do
+        if Callbacks[i] == self._Callback then
+          table_remove(Callbacks, i)
+          break
+        end
       end
+
+      self._Callback = nil
+      self._Parent = nil
     end
-  end
-end
+  }})
 
-function Connection:Set(NewVal)
-  if self._Value ~= NewVal then
-    self._Value = NewVal
+  table_insert(self._Callbacks, Callback)
 
-    for _, func in ipairs(self._Callbacks) do
-      Connection.FireCallback(func, NewVal)
-    end
-  end
-end
-
-function Connection:Get()
-  return self._Value
+  return Connection_Object
 end
 
 function Connection:Fire(...)
@@ -52,9 +61,9 @@ function Connection.Create(Names)
   assert(type(Names) == "table", "Expected table of names")
 
   local Events = {}
-  
-  for _, name in ipairs(Names) do
-    Events[name] = Connection.new()
+
+  for _, Name in ipairs(Names) do
+    Events[Name] = Connection.new()
   end
 
   return Events
