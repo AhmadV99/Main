@@ -5,7 +5,12 @@ function Connection.new(Val)
   local New = setmetatable({}, Connection)
   New._Value = Val or false
   New._Callbacks = {}
+
   return New
+end
+
+function Connection.FireCallback(func, ...)
+  return task.spawn(func, ...)
 end
 
 function Connection:Connect(Callback)
@@ -14,8 +19,8 @@ function Connection:Connect(Callback)
   table.insert(self._Callbacks, Callback)
 
   return function()
-    for i, _Callback in ipairs(self._Callbacks) do
-      if _Callback == Callback then
+    for i, cb in ipairs(self._Callbacks) do
+      if cb == Callback then
         table.remove(self._Callbacks, i)
         break
       end
@@ -26,8 +31,9 @@ end
 function Connection:Set(NewVal)
   if self._Value ~= NewVal then
     self._Value = NewVal
-    for _, Callback in ipairs(self._Callbacks) do
-      Callback(NewVal)
+
+    for _, func in ipairs(self._Callbacks) do
+      Connection.FireCallback(func, NewVal)
     end
   end
 end
@@ -37,8 +43,8 @@ function Connection:Get()
 end
 
 function Connection:Fire(...)
-  for _, Callback in ipairs(self._Callbacks) do
-    Callback(...)
+  for _, func in ipairs(self._Callbacks) do
+    Connection.FireCallback(func, ...)
   end
 end
 
@@ -46,7 +52,7 @@ function Connection.Create(Names)
   assert(type(Names) == "table", "Expected table of names")
 
   local Events = {}
-
+  
   for _, name in ipairs(Names) do
     Events[name] = Connection.new()
   end
