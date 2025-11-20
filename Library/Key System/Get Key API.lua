@@ -86,7 +86,7 @@ return {
 
   [6701277882] = { -- Fish It
     ["Linkvertise"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-jOqPFgJvjYNe",
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-TvHBCBqhGNCg",
       Icon = 122637139040192,
     },
 
