@@ -1,714 +1,3682 @@
 return {
-    ["DevTest"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
-    ["MossjawHunt"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
+    DevTest = {
+        Pool = {
+            "Tartaruga"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
+    HallOfWhispers = {
+        Pool = {
+            "Rock", 
+            "Destroyed Fossil", 
+            "Bone", 
+            "Stalactite", 
+            "Typhleotris", 
+            "Gollum Snakehead", 
+            "Stoplight Loosejaw", 
+            "Garra Andruzzii", 
+            "Blind Swamp Eel", 
+            "Key of Oaths", 
+            "Cathulid"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
+    PassageOfOaths = {
+        Pool = {
+            "Rock", 
+            "Destroyed Fossil", 
+            "Bone", 
+            "Stalactite", 
+            "Sloane's Viperfish", 
+            "Spiny Hatchetfish", 
+            "Swampfish", 
+            "Garra Typhlops", 
+            "Abyssal Grenadier", 
+            "Cathulith"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
+    MossjawHunt = {
+        Pool = {
+            "Bronze Corydoras", 
+            "Neon Tetra", 
+            "Cardinal Tetra", 
+            "Redeye Piranha", 
+            "Black Ghost Knifefish", 
+            "Electric Eel", 
+            "Pirarucu"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
     ["Luminescent Cavern"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Hawaiian Bobtail Squid", 
+            "Blue Ribbon Eel", 
+            "Bluelip Batfish", 
+            "Kitefin Shark", 
+            "Atolla Jellyfish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
     ["Lost Jungle"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Driftwood", 
+            "Neon Tetra", 
+            "Cardinal Tetra", 
+            "Bronze Corydoras", 
+            "Freshwater Pacu", 
+            "Redeye Piranha", 
+            "Black Ghost Knifefish", 
+            "Payara", 
+            "Electric Eel", 
+            "Pirarucu", 
+            "Goliath Tigerfish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
     ["Crimson Cavern"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Sea Raven", 
+            "Red Fangtooth", 
+            "Viperfish", 
+            "Japanese Dragon Eel", 
+            "Vampire Squid"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["Cultist Lair"] = {
+        Pool = {
+            "Rock", 
+            "Destroyed Fossil", 
+            "Bone", 
+            "Stalactite", 
+            "Mexican Tetra", 
+            "Abyssal Slickhead", 
+            "Cave Loach", 
+            "Scaly Dragonfish", 
+            "Sinocyclocheilus", 
+            "Key of Whispers"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["Hall of Whispers"] = {
+        Pool = {
+            "Rock", 
+            "Destroyed Fossil", 
+            "Bone", 
+            "Stalactite", 
+            "Typhleotris", 
+            "Gollum Snakehead", 
+            "Stoplight Loosejaw", 
+            "Garra Andruzzii", 
+            "Blind Swamp Eel", 
+            "Key of Oaths"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["Passage of Oaths"] = {
+        Pool = {
+            "Rock", 
+            "Destroyed Fossil", 
+            "Bone", 
+            "Stalactite", 
+            "Sloane's Viperfish", 
+            "Spiny Hatchetfish", 
+            "Swampfish", 
+            "Garra Typhlops", 
+            "Abyssal Grenadier"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["The Sanctum"] = {
+        Pool = {
+            "Rock", 
+            "Cave Angel Fish", 
+            "Ozark Cavefish", 
+            "Cave Loach", 
+            "Stoplight Loosejaw", 
+            "Scaly Dragonfish", 
+            "Spiny Hatchetfish", 
+            "Swampfish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    ["The Sanctum Hunt"] = {
+        Pool = {
+            "Cave Angel Fish", 
+            "Ozark Cavefish", 
+            "Cave Loach", 
+            "Stoplight Loosejaw", 
+            "Scaly Dragonfish", 
+            "Spiny Hatchetfish", 
+            "Swampfish", 
+            "Leviathan"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
+    ["The Sanctum Profane Hunt"] = {
+        Pool = {
+            "Cave Angel Fish", 
+            "Ozark Cavefish", 
+            "Cave Loach", 
+            "Stoplight Loosejaw", 
+            "Scaly Dragonfish", 
+            "Spiny Hatchetfish", 
+            "Swampfish", 
+            "Profane Leviathan"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
     ["Carrot Garden"] = {
-        ["Pool"] = {},
-        ["Priority"] = 102,
-        ["CantBeWhormholed"] = false
-    },
+        Pool = {
+            "Carrot Turtle", 
+            "Carrot Pufferfish", 
+            "Carrot Minnow", 
+            "Carrot Eel", 
+            "Carrot Salmon", 
+            "Carrot Goldfish", 
+            "Carrot Snapper", 
+            "Carrot Shark"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = false
+    }, 
     ["AFK Pool - Trading Plaza"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Doubloon"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
     ["Gilded Arch"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Squirrelfish", 
+            "French Grunt", 
+            "Sergeant Major", 
+            "Coney Grouper", 
+            "Doctorfish Tang", 
+            "Bluehead Wrasse", 
+            "Islandhopper Butterflyfish", 
+            "Stoplight Parrotfish", 
+            "Scrawled Filefish", 
+            "Spadefish", 
+            "Ocean Triggerfish", 
+            "Rock Hind", 
+            "Rainbow Grouper", 
+            "Spotted Moray Eel", 
+            "Great Barracuda", 
+            "Tilefish", 
+            "Black Grouper"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
     ["Castaway Cliffs"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Clowned Triggerfish", 
+            "Flamekissed Hawkfish", 
+            "Mandarinfish", 
+            "Cobalt Angelfish", 
+            "Trevally", 
+            "Warty Frogfish", 
+            "Hidden Pipefish", 
+            "Mirage Toadfish", 
+            "Scalloped Hammerhead", 
+            "Great Goldcursed Shark"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
     ["Magician Narwhal - Sea 2"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        Pool = {
+            "Cursed Thread", 
+            "Hogchoker", 
+            "Rock Gunnel", 
+            "Pupfish", 
+            "Four Eyes Fish", 
+            "Black Swallower", 
+            "Warty Angler", 
+            "Tropical Bait Crate", 
+            "Lumpclinger", 
+            "Snipefish", 
+            "Boarfish", 
+            "Telescopefish", 
+            "Fangtooth", 
+            "Velvet Belly Lanternshark", 
+            "Snakehead", 
+            "Sarcastic Fringehead", 
+            "Knifefish", 
+            "Tripod Fish", 
+            "Pelican Eel", 
+            "Bigfin Squid", 
+            "X-ray Tetra", 
+            "Psychedelic Frogfish", 
+            "Dogefin", 
+            "Toilet Fish", 
+            "Magician Narwhal"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Magician Narwhal - Sea 1"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Magician Narwhal"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Beluga - Sea 2"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        Pool = {
+            "Cursed Thread", 
+            "Hogchoker", 
+            "Rock Gunnel", 
+            "Pupfish", 
+            "Four Eyes Fish", 
+            "Black Swallower", 
+            "Warty Angler", 
+            "Tropical Bait Crate", 
+            "Lumpclinger", 
+            "Snipefish", 
+            "Boarfish", 
+            "Telescopefish", 
+            "Fangtooth", 
+            "Velvet Belly Lanternshark", 
+            "Snakehead", 
+            "Sarcastic Fringehead", 
+            "Knifefish", 
+            "Tripod Fish", 
+            "Pelican Eel", 
+            "Bigfin Squid", 
+            "X-ray Tetra", 
+            "Psychedelic Frogfish", 
+            "Dogefin", 
+            "Toilet Fish", 
+            "Beluga"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Beluga - Sea 1"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Beluga"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Narwhal - Sea 2"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        Pool = {
+            "Cursed Thread", 
+            "Hogchoker", 
+            "Rock Gunnel", 
+            "Pupfish", 
+            "Four Eyes Fish", 
+            "Black Swallower", 
+            "Warty Angler", 
+            "Tropical Bait Crate", 
+            "Lumpclinger", 
+            "Snipefish", 
+            "Boarfish", 
+            "Telescopefish", 
+            "Fangtooth", 
+            "Velvet Belly Lanternshark", 
+            "Snakehead", 
+            "Sarcastic Fringehead", 
+            "Knifefish", 
+            "Tripod Fish", 
+            "Pelican Eel", 
+            "Bigfin Squid", 
+            "X-ray Tetra", 
+            "Psychedelic Frogfish", 
+            "Dogefin", 
+            "Toilet Fish", 
+            "Narwhal"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Narwhal - Sea 1"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Narwhal"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Apex Leviathan"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
-    ["Mosslurker"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        Pool = {
+            "Cursed Thread", 
+            "Hogchoker", 
+            "Rock Gunnel", 
+            "Pupfish", 
+            "Four Eyes Fish", 
+            "Black Swallower", 
+            "Warty Angler", 
+            "Tropical Bait Crate", 
+            "Lumpclinger", 
+            "Snipefish", 
+            "Boarfish", 
+            "Telescopefish", 
+            "Fangtooth", 
+            "Velvet Belly Lanternshark", 
+            "Snakehead", 
+            "Sarcastic Fringehead", 
+            "Knifefish", 
+            "Tripod Fish", 
+            "Pelican Eel", 
+            "Bigfin Squid", 
+            "X-ray Tetra", 
+            "Psychedelic Frogfish", 
+            "Dogefin", 
+            "Toilet Fish", 
+            "Apex Leviathan"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
+    Mosslurker = {
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Mosslurker"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Bloop Fish"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Red Snapper", 
+            "Anchovy", 
+            "Largemouth Bass", 
+            "Trout", 
+            "Red Snapper", 
+            "Anchovy", 
+            "Largemouth Bass", 
+            "Trout", 
+            "Red Snapper", 
+            "Anchovy", 
+            "Largemouth Bass", 
+            "Trout", 
+            "Carp", 
+            "Yellowfin Tuna", 
+            "Carp", 
+            "Yellowfin Tuna", 
+            "Carp", 
+            "Yellowfin Tuna", 
+            "Whiptail Catfish", 
+            "Whiptail Catfish", 
+            "Bloop Fish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
     ["Colossal Ethereal Dragon"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Hawaiian Bobtail Squid", 
+            "Blue Ribbon Eel", 
+            "Bluelip Batfish", 
+            "Kitefin Shark", 
+            "Atolla Jellyfish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
     ["Colossal Blue Dragon"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Hawaiian Bobtail Squid", 
+            "Blue Ribbon Eel", 
+            "Bluelip Batfish", 
+            "Kitefin Shark", 
+            "Atolla Jellyfish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
     ["Colossal Ancient Dragon"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Sea Raven", 
+            "Red Fangtooth", 
+            "Viperfish", 
+            "Japanese Dragon Eel", 
+            "Vampire Squid"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
     ["Animal Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Cluckfin", 
+            "Zebrafishlet", 
+            "Piglet Pike", 
+            "Squirrelray", 
+            "Duckfin Tuna", 
+            "Porcufish", 
+            "Piranhamunk", 
+            "Salmoose", 
+            "Mained Lionfish", 
+            "Seacow"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
     ["Animal Pool - Second Sea"] = {
-        ["Pool"] = {},
-        ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Minnowse", 
+            "Kittyfish", 
+            "Parrotfish", 
+            "Pengwhal", 
+            "Racuda", 
+            "Crocokoi", 
+            "Krabbit", 
+            "Siren Sheep", 
+            "Capybass"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
     ["Octophant Pool Without Elephant"] = {
-        ["Pool"] = {},
-        ["Priority"] = 4,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Shrimpanzee", 
+            "Royal Tigerfish", 
+            "Slurpfloth", 
+            "Flamangler", 
+            "Orcanda"
+        }, 
+        Priority = 4, 
+        CantBeWhormholed = true
+    }, 
     ["Octophant Pool With Elephant"] = {
-        ["Pool"] = {},
-        ["Priority"] = 4,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Shrimpanzee", 
+            "Royal Tigerfish", 
+            "Slurpfloth", 
+            "Flamangler", 
+            "Orcanda", 
+            "Octophant"
+        }, 
+        Priority = 4, 
+        CantBeWhormholed = true
+    }, 
     ["Sea Leviathan Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 4,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Sea Leviathan", 
+            "Hogchoker", 
+            "Rock Gunnel", 
+            "Pupfish", 
+            "Four Eyes Fish", 
+            "Black Swallower", 
+            "Warty Angler", 
+            "Tropical Bait Crate", 
+            "Lumpclinger", 
+            "Snipefish", 
+            "Boarfish", 
+            "Telescopefish", 
+            "Fangtooth", 
+            "Velvet Belly Lanternshark", 
+            "Snakehead", 
+            "Sarcastic Fringehead", 
+            "Knifefish", 
+            "Tripod Fish", 
+            "Pelican Eel", 
+            "Bigfin Squid", 
+            "X-ray Tetra", 
+            "Psychedelic Frogfish", 
+            "Dogefin", 
+            "Toilet Fish"
+        }, 
+        Priority = 4, 
+        CantBeWhormholed = true
+    }, 
     ["Smurf Pool"] = {
-        ["ExclusiveRods"] = {},
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true
-    },
+        ExclusiveRods = {
+            {
+                "Smurf Rod"
+            }, 
+            "<font color=\"rgb(255,0,0)\">You must use the Smurf Rod in this pool!</font>"
+        }, 
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Ken", 
+            "No Name", 
+            "Moxie", 
+            "Hefty", 
+            "Clumsy Smurf", 
+            "Brainy Smurf", 
+            "Mama Poot", 
+            "Vanity", 
+            "Grouchy Smurf"
+        }, 
+        CantBeWhormholed = true
+    }, 
     ["Smurf Storm Pool"] = {
-        ["ExclusiveRods"] = {},
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true
-    },
-    ["Sunny O\'Coin"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        ExclusiveRods = {
+            {
+                "Smurf Rod"
+            }, 
+            "<font color=\"rgb(255,0,0)\">You must use the Smurf Rod in this pool!</font>"
+        }, 
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Sawfish", 
+            "Moonfish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Ken", 
+            "No Name", 
+            "Moxie", 
+            "Hefty", 
+            "Clumsy Smurf", 
+            "Brainy Smurf", 
+            "Mama Poot", 
+            "Vanity", 
+            "Papa Smurf", 
+            "Grouchy Smurf"
+        }, 
+        CantBeWhormholed = true
+    }, 
+    ["Sunny O'Coin"] = {
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Sunny O'Coin"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Rowdy McCharm"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
-    ["Plumrick O\'Luck"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
-    ["O\'Mango Goldgrin"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Rowdy McCharm"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
+    ["Plumrick O'Luck"] = {
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Plumrick O'Luck"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
+    ["O'Mango Goldgrin"] = {
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "O'Mango Goldgrin"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Clover McRich"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Clover McRich"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Blarney McBreeze"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 5
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Blarney McBreeze"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 5
+    }, 
     ["Ashfall Pool"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Ember Catfish", 
+            "Blistered Eel", 
+            "Lava Lamprey", 
+            "Molten Minnow", 
+            "Pyro Pike", 
+            "Cinder Carp", 
+            "Coelacanth", 
+            "Scooty Salmon", 
+            "Burnt Betta", 
+            "Ashcloud Archerfish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 1
+    }, 
     ["Cults Curse Pool"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 1
-    },
+        Pool = {
+            "The Whispering One", 
+            "Profane Ray", 
+            "Veilborn Parasite", 
+            "Bloodscript Eel", 
+            "Abyssal Maw", 
+            "Eldritch Spineback", 
+            "Hollow Gazer", 
+            "Wretched Guppy"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 1
+    }, 
     ["Ancient Orcas Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 4
-    },
+        Pool = {
+            "Ancient Orca", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard"
+        }, 
+        Priority = 4
+    }, 
     ["Orcas Pool"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 4
-    },
+        Pool = {
+            "Orca", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 4
+    }, 
     ["Whales Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 4
-    },
+        Pool = {
+            "Blue Whale", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard"
+        }, 
+        Priority = 4
+    }, 
     ["Notes Island Pool"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 4
-    },
+        Pool = {
+            "Rotfin Eel", 
+            "Wraithfin", 
+            "Siren\226\128\153s Guppy", 
+            "Black Veil Ray", 
+            "Hexeye Snapper", 
+            "Bone Lanternfish", 
+            "Harbinger Koi", 
+            "Slain Maw"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 4
+    }, 
     ["Atlantean Storm"] = {
-        ["Pool"] = {},
-        ["Priority"] = 4
-    },
+        Pool = {
+            "Void Angler", 
+            "Tempest Ray", 
+            "Abyss Snapper", 
+            "Whirlpool Marlin", 
+            "Vortex Barracuda", 
+            "Typhoon Tuna", 
+            "Cyclone Mako", 
+            "Maelstorm Shark"
+        }, 
+        Priority = 4
+    }, 
     ["The Depths - Serpent"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Destroyed Fossil", 
+            "Scrap Metal", 
+            "Deep-sea Dragonfish", 
+            "Deep-sea Hatchetfish", 
+            "Frilled Shark", 
+            "Depth Octopus", 
+            "Three-eyed Fish", 
+            "Luminescent Minnow", 
+            "Goblin Shark", 
+            "Black Dragon Fish", 
+            "Spider Crab", 
+            "Nautilus", 
+            "Small Spine Chimera", 
+            "Ancient Eel", 
+            "Mutated Shark", 
+            "Barreleye Fish", 
+            "Sea Snake", 
+            "Ancient Depth Serpent", 
+            "Enchant Relic"
+        }, 
+        Priority = 2
+    }, 
     ["The Depths"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Destroyed Fossil", 
+            "Scrap Metal", 
+            "Deep-sea Dragonfish", 
+            "Deep-sea Hatchetfish", 
+            "Frilled Shark", 
+            "Depth Octopus", 
+            "Three-eyed Fish", 
+            "Luminescent Minnow", 
+            "Goblin Shark", 
+            "Black Dragon Fish", 
+            "Spider Crab", 
+            "Nautilus", 
+            "Small Spine Chimera", 
+            "Ancient Eel", 
+            "Mutated Shark", 
+            "Barreleye Fish", 
+            "Sea Snake", 
+            "Enchant Relic"
+        }, 
+        Priority = 1
+    }, 
     ["Crystal Cove"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
-    ["Fischfest"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Destroyed Fossil", 
+            "Scrap Metal", 
+            "Deep-sea Dragonfish", 
+            "Deep-sea Hatchetfish", 
+            "Frilled Shark", 
+            "Depth Octopus", 
+            "Three-eyed Fish", 
+            "Luminescent Minnow", 
+            "Opalescent Catfish", 
+            "Pufferflute", 
+            "Stringed Grouper", 
+            "Crystal Frilled Shark", 
+            "DJ Spinopus"
+        }, 
+        Priority = 1
+    }, 
+    Fischfest = {
+        Pool = {
+            "Sunsquid", 
+            "Surfboard Ray", 
+            "Beach Ball Pufferfish", 
+            "Sandslasher", 
+            "Tidepopper", 
+            "Coconut", 
+            "Shellphone", 
+            "Popsicle", 
+            "Message in a Bottle", 
+            "Tiki Mask"
+        }, 
+        Priority = 1, 
+        CantBeWhormholed = true
+    }, 
     ["Ocean Greedy"] = {
-        ["Pool"] = {},
-        ["Priority"] = 4
-    },
-    ["Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 0
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard"
+        }, 
+        Priority = 4
+    }, 
+    Ocean = {
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard"
+        }, 
+        Priority = 0
+    }, 
     ["Deep Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
-    ["Earthquake"] = {
-        ["Pool"] = {},
-        ["Priority"] = 0,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Blobfish"
+        }, 
+        Priority = 1
+    }, 
+    Earthquake = {
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard", 
+            "Akkorokamui", 
+            "Lusca", 
+            "Charybdis"
+        }, 
+        Priority = 0, 
+        CantBeWhormholed = true
+    }, 
     ["Atlantis Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard"
+        }, 
+        Priority = 1
+    }, 
     ["Grand Reef"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Reef Minnow", 
+            "Reef Goby", 
+            "Coral Chromis", 
+            "Coral Guard", 
+            "Crystal Wrasse", 
+            "Reef Parrotfish", 
+            "Coral Emperor", 
+            "Grand Reef Guardian"
+        }, 
+        Priority = 3
+    }, 
     ["Forsaken Shores"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Corsair Grouper", 
+            "Scurvy Sailfish", 
+            "Cutlass Fish", 
+            "Reefrunner Snapper"
+        }, 
+        Priority = 1
+    }, 
     ["Forsaken Shores Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Corsair Grouper", 
+            "Scurvy Sailfish", 
+            "Cutlass Fish", 
+            "Reefrunner Snapper", 
+            "Shortfin Mako Shark", 
+            "Galleon Goliath", 
+            "Buccaneer Barracuda", 
+            "Cursed Eel", 
+            "Shipwreck Barracuda", 
+            "Golden Seahorse"
+        }, 
+        Priority = 2
+    }, 
     ["Forsaken Shores Pond"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Corsair Grouper", 
+            "Scurvy Sailfish", 
+            "Cutlass Fish", 
+            "Reefrunner Snapper", 
+            "Captain's Goldfish", 
+            "Pirate Captain's Goldfish"
+        }, 
+        Priority = 3
+    }, 
     ["Moosewood Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Trout", 
+            "Barracuda", 
+            "Flounder", 
+            "Yellowfin Tuna", 
+            "Sockeye Salmon", 
+            "Red Snapper", 
+            "Mackerel", 
+            "Anchovy", 
+            "Eel", 
+            "Moonfish", 
+            "Bull Shark"
+        }, 
+        Priority = 1
+    }, 
     ["Moosewood Ocean Mythical"] = {
-        ["Pool"] = {},
-        ["Priority"] = 4
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Trout", 
+            "Barracuda", 
+            "Flounder", 
+            "Yellowfin Tuna", 
+            "Sockeye Salmon", 
+            "Red Snapper", 
+            "Anchovy", 
+            "Eel", 
+            "Whisker Bill", 
+            "Treble Bass"
+        }, 
+        Priority = 4
+    }, 
     ["Moosewood Docks"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Driftwood", 
+            "Seaweed", 
+            "Bait Crate", 
+            "Common Crate", 
+            "Flounder", 
+            "Red Snapper", 
+            "Trout", 
+            "Snook", 
+            "Mackerel", 
+            "Sockeye Salmon", 
+            "Anchovy", 
+            "Pike"
+        }, 
+        Priority = 2
+    }, 
     ["Moosewood Pond"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
-    ["Lava"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
-    ["Eruption"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Tire", 
+            "Driftwood", 
+            "Common Crate", 
+            "Largemouth Bass", 
+            "Trout", 
+            "Goldfish", 
+            "Carp", 
+            "Bream", 
+            "Pike", 
+            "Eel", 
+            "Whiptail Catfish"
+        }, 
+        Priority = 2
+    }, 
+    Lava = {
+        Pool = {
+            "Volcanic Geode", 
+            "Rock", 
+            "Basalt", 
+            "Quality Bait Crate", 
+            "Inferno Wood", 
+            "Ember Snapper", 
+            "Pyrogrub", 
+            "Ember Perch", 
+            "Magma Tang", 
+            "Obsidian Salmon", 
+            "Obsidian Swordfish", 
+            "Molten Banshee", 
+            "Molten Ripple"
+        }, 
+        Priority = 2, 
+        RequiredDurability = 100
+    }, 
+    Eruption = {
+        Pool = {
+            "Volcanic Geode", 
+            "Rock", 
+            "Basalt", 
+            "Quality Bait Crate", 
+            "Inferno Wood", 
+            "Ember Snapper", 
+            "Pyrogrub", 
+            "Ember Perch", 
+            "Magma Tang", 
+            "Obsidian Salmon", 
+            "Obsidian Swordfish", 
+            "Molten Banshee", 
+            "Molten Ripple", 
+            "Ashclaw"
+        }, 
+        Priority = 3, 
+        CantBeWhormholed = true, 
+        RequiredDurability = 100
+    }, 
     ["Roslit Pond"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Driftwood", 
+            "Alligator Gar", 
+            "Perch", 
+            "Minnow", 
+            "Pumpkinseed", 
+            "Chub", 
+            "Arapaima", 
+            "Axolotl"
+        }, 
+        Priority = 2
+    }, 
     ["Roslit Pond Seaweed"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Driftwood", 
+            "Seaweed", 
+            "Alligator Gar", 
+            "Perch", 
+            "Minnow", 
+            "Pumpkinseed", 
+            "Trout", 
+            "Arapaima", 
+            "Suckermouth Catfish", 
+            "Axolotl"
+        }, 
+        Priority = 3
+    }, 
     ["Roslit Bay"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Driftwood", 
+            "Common Crate", 
+            "Log", 
+            "Butterflyfish", 
+            "Angelfish", 
+            "Clownfish", 
+            "Blue Tang", 
+            "Yellow Boxfish", 
+            "Ribbon Eel", 
+            "Nurse Shark", 
+            "Pufferfish", 
+            "Bull Shark", 
+            "Crown Bass", 
+            "Manta Ray", 
+            "Dumbo Octopus"
+        }, 
+        Priority = 3
+    }, 
     ["Roslit Bay Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Driftwood", 
+            "Common Crate", 
+            "Log", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Mullet", 
+            "Yellow Boxfish", 
+            "Pufferfish", 
+            "Squid", 
+            "Swordfish", 
+            "Nurse Shark", 
+            "Crown Bass", 
+            "Dumbo Octopus", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Manta Ray"
+        }, 
+        Priority = 2
+    }, 
     ["Roslit Bay Clam"] = {
-        ["Pool"] = {},
-        ["Priority"] = 10000
-    },
+        Pool = {
+            "Driftwood", 
+            "Log", 
+            "Cod", 
+            "Clam", 
+            "Squid", 
+            "Flying Fish", 
+            "Mythic Fish"
+        }, 
+        Priority = 10000
+    }, 
     ["Desolate Deep"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Log", 
+            "Rock", 
+            "Common Crate", 
+            "Stalactite", 
+            "String", 
+            "Coral Geode", 
+            "Slate Tuna", 
+            "Phantom Ray", 
+            "Rockstar Hermit Crab", 
+            "Horseshoe Crab", 
+            "Banditfish", 
+            "Cockatoo Squid", 
+            "Midnight Axolotl", 
+            "Barbed Shark", 
+            "Emperor Jellyfish"
+        }, 
+        Priority = 2
+    }, 
     ["Brine Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Bone", 
+            "Coral Geode", 
+            "Common Crate", 
+            "Stalactite", 
+            "Gazerfish", 
+            "Brine Shrimp", 
+            "Globe Jellyfish", 
+            "Dweller Catfish", 
+            "Brine Phantom", 
+            "Spectral Serpent"
+        }, 
+        Priority = 2, 
+        RequiredDurability = 200
+    }, 
     ["Brine Pool Water"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Rock", 
+            "Stalactite", 
+            "Bone", 
+            "Coral Geode", 
+            "Common Crate", 
+            "Stalactite", 
+            "Gazerfish", 
+            "Brine Shrimp", 
+            "Globe Jellyfish", 
+            "Dweller Catfish", 
+            "Brine Phantom", 
+            "Spectral Serpent"
+        }, 
+        Priority = 2, 
+        RequiredDurability = 200
+    }, 
     ["Ancient Isle Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Tire", 
+            "Carbon Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Cod", 
+            "Sardine", 
+            "Sea Bass", 
+            "Mullet", 
+            "Piranha", 
+            "Anomalocaris", 
+            "Starfish", 
+            "Onychodus", 
+            "Acanthodii", 
+            "Xiphactinus", 
+            "Hyneria", 
+            "Cobia", 
+            "Ginsu Shark", 
+            "Dunkleosteus", 
+            "Colossal Squid", 
+            "Helicoprion", 
+            "Mosasaurus", 
+            "Banana", 
+            "Ancient Fragment", 
+            "Meg's Fang", 
+            "Meg's Spine"
+        }, 
+        Priority = 2
+    }, 
     ["Ancient Isle Pond"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Log", 
+            "Piranha", 
+            "Cladoselache", 
+            "Anomalocaris", 
+            "Xiphactinus", 
+            "Hyneria", 
+            "Hallucigenia", 
+            "Floppy", 
+            "Banana"
+        }, 
+        Priority = 3
+    }, 
     ["Ancient Isle Waterfall"] = {
-        ["Pool"] = {},
-        ["Priority"] = 4
-    },
+        Pool = {
+            "Log", 
+            "Piranha", 
+            "Cladoselache", 
+            "Anomalocaris", 
+            "Xiphactinus", 
+            "Hyneria", 
+            "Hallucigenia", 
+            "Leedsichthys", 
+            "Banana"
+        }, 
+        Priority = 4
+    }, 
     ["Ancient Archives"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Palaeoniscum", 
+            "Birgeria", 
+            "Phanerorhynchus", 
+            "Diplurus", 
+            "Lepidotes", 
+            "Amblypterus"
+        }, 
+        Priority = 1
+    }, 
     ["Terrapin Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Log", 
+            "Driftwood", 
+            "Common Crate", 
+            "Fish Barrel", 
+            "Sea Bass", 
+            "Largemouth Bass", 
+            "Smallmouth Bass", 
+            "White Bass", 
+            "Redeye Bass", 
+            "Chinook Salmon", 
+            "Gudgeon", 
+            "Walleye", 
+            "Golden Smallmouth Bass", 
+            "Sea Turtle", 
+            "Manatee"
+        }, 
+        Priority = 2
+    }, 
     ["Terrapin Olm"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Log", 
+            "Driftwood", 
+            "Common Crate", 
+            "Fish Barrel", 
+            "Sea Bass", 
+            "Largemouth Bass", 
+            "Smallmouth Bass", 
+            "White Bass", 
+            "Redeye Bass", 
+            "Chinook Salmon", 
+            "Gudgeon", 
+            "Walleye", 
+            "Olm"
+        }, 
+        Priority = 3
+    }, 
     ["Mushgrove Water"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
-    ["Vertigo"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Carbon Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Log", 
+            "Driftwood", 
+            "Resin", 
+            "Swamp Bass", 
+            "Grey Carp", 
+            "Bowfin", 
+            "White Perch", 
+            "Fungal Cluster", 
+            "Marsh Gar", 
+            "Catfish", 
+            "Alligator", 
+            "Handfish", 
+            "RocketFuel"
+        }, 
+        Priority = 2
+    }, 
+    Vertigo = {
+        Pool = {
+            "Carbon Crate", 
+            "Rock", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Twilight Eel", 
+            "Fangborn Gar", 
+            "Spiderfish", 
+            "The Depths Key", 
+            "Abyssacuda", 
+            "Voidfin Mahi", 
+            "Rubber Ducky"
+        }, 
+        Priority = 2
+    }, 
     ["Snowcap Pond"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Common Crate", 
+            "Quality Bait Crate", 
+            "Ice", 
+            "Boot", 
+            "Blackfish", 
+            "Burbot", 
+            "Grayling", 
+            "Glacier Pike", 
+            "Sturgeon", 
+            "Pond Emperor", 
+            "Baby Pond Emperor"
+        }, 
+        Priority = 2
+    }, 
     ["Snowcap Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
-    ["Snowburrow"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
-    ["Sunstone"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Ice", 
+            "Tire", 
+            "Carbon Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Moon Wood", 
+            "Cod", 
+            "Sardine", 
+            "Salmon", 
+            "Sea Bass", 
+            "Porgy", 
+            "Arctic Char", 
+            "Pollock", 
+            "Red Drum", 
+            "Herring", 
+            "Bluegill", 
+            "Lingcod", 
+            "Mullet", 
+            "Skipjack Tuna", 
+            "Glacierfish", 
+            "Moonfish", 
+            "Colossal Squid", 
+            "Ringle"
+        }, 
+        Priority = 2
+    }, 
+    Snowburrow = {
+        Pool = {
+            "Ice", 
+            "Stalactite", 
+            "Freezing Shroom", 
+            "Cod", 
+            "Sardine", 
+            "Salmon", 
+            "Sea Bass", 
+            "Porgy", 
+            "Arctic Char", 
+            "Pollock", 
+            "Red Drum", 
+            "Herring", 
+            "Bluegill", 
+            "Lingcod", 
+            "Mullet", 
+            "Skipjack Tuna", 
+            "Glacierfish", 
+            "Moonfish", 
+            "Colossal Squid", 
+            "Ringle", 
+            "White Sturgeon", 
+            "Glacial Fragment"
+        }, 
+        Priority = 2
+    }, 
+    Sunstone = {
+        Pool = {
+            "Seaweed", 
+            "Driftwood", 
+            "Quality Bait Crate", 
+            "Ancient Wood", 
+            "Trumpetfish", 
+            "Glassfish", 
+            "Longtail Bass", 
+            "Sweetfish", 
+            "Red Tang", 
+            "Mahi Mahi", 
+            "Napoleonfish", 
+            "Chinfish", 
+            "Sailfish", 
+            "Sunfish", 
+            "Wiifish", 
+            "Voltfish", 
+            "Tartaruga", 
+            "Speed Core"
+        }, 
+        Priority = 2
+    }, 
+    Mineshaft = {
+        Pool = {
+            "Stalactite", 
+            "Rock", 
+            "Boot", 
+            "Scrap Metal", 
+            "Rusty Bolt", 
+            "Iron Chunk", 
+            "Gold Piece", 
+            "Crystal Geode", 
+            "Radiant Crystal"
+        }, 
+        Priority = 3
+    }, 
     ["Sunstone Hidden"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Common Crate", 
+            "Carbon Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Quality Bait Crate", 
+            "Tire", 
+            "Seaweed", 
+            "Driftwood", 
+            "Boot", 
+            "Rock"
+        }, 
+        Priority = 2
+    }, 
     ["Keepers Altar"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Seaweed", 
+            "Void Wood", 
+            "Bluefish", 
+            "Keepers Guardian", 
+            "Lapisjack", 
+            "Pale Tang", 
+            "Umbral Shark"
+        }, 
+        Priority = 3
+    }, 
     ["Harvesters Spike"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Carbon Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Bluefin Tuna", 
+            "Sockeye Salmon", 
+            "Mullet", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Sawfish"
+        }, 
+        Priority = 3
+    }, 
     ["The Arch"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Mullet", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Bluefin Tuna", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Sailfish", 
+            "Rabbitfish", 
+            "Moonfish"
+        }, 
+        Priority = 3
+    }, 
     ["Scallop Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 3
-    },
-    ["Debug"] = {
-        ["Pool"] = {},
-        ["Priority"] = 10,
-        ["CantBeWhormholed"] = true
-    },
-    ["Relics"] = {
-        ["Pool"] = {},
-        ["Priority"] = 10,
-        ["CantBeWhormholed"] = true
-    },
-    ["ExaltedRelics"] = {
-        ["Pool"] = {},
-        ["Priority"] = 10,
-        ["CantBeWhormholed"] = true
-    },
-    ["CosmicRelic"] = {
-        ["Pool"] = {},
-        ["Priority"] = 100,
-        ["CantBeWhormholed"] = true
-    },
-    ["EmojiFish"] = {
-        ["Pool"] = {},
-        ["Priority"] = 10,
-        ["CantBeWhormholed"] = true
-    },
-    ["Him"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1000,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Seaweed", 
+            "Scallop"
+        }, 
+        Priority = 3
+    }, 
+    Debug = {
+        Pool = {
+            "Colossal Squid"
+        }, 
+        Priority = 10, 
+        CantBeWhormholed = true
+    }, 
+    Relics = {
+        Pool = {
+            "Enchant Relic"
+        }, 
+        Priority = 10, 
+        CantBeWhormholed = true
+    }, 
+    ExaltedRelics = {
+        Pool = {
+            "Exalted Relic"
+        }, 
+        Priority = 10, 
+        CantBeWhormholed = true
+    }, 
+    CosmicRelic = {
+        Pool = {
+            "Cosmic Relic"
+        }, 
+        Priority = 100, 
+        CantBeWhormholed = true
+    }, 
+    EmojiFish = {
+        Pool = {
+            "\240\159\144\159", 
+            "\240\159\166\145", 
+            "\240\159\166\136", 
+            "\240\159\144\139", 
+            "\240\159\144\161"
+        }, 
+        Priority = 10, 
+        CantBeWhormholed = true
+    }, 
+    Him = {
+        Pool = {
+            "Him"
+        }, 
+        Priority = 1000, 
+        CantBeWhormholed = true
+    }, 
     ["Lovestorm Eel"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 100
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Lovestorm Eel"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 100
+    }, 
     ["Lovestorm Eel Supercharged"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 100
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Lovestorm Eel Supercharged"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 100
+    }, 
     ["Birthday Megalodon"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 100
-    },
-    ["BirthdayCake"] = {
-        ["Pool"] = {},
-        ["Priority"] = 101,
-        ["CantBeWhormholed"] = true,
-        ["StartDate"] = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
-        ["InvalidDate"] = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
-    },
-    ["BabysFirstBalloon"] = {
-        ["Pool"] = {},
-        ["Priority"] = 101,
-        ["CantBeWhormholed"] = true,
-        ["StartDate"] = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
-        ["InvalidDate"] = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
-    },
-    ["BirthdayGift"] = {
-        ["Pool"] = {},
-        ["Priority"] = 101,
-        ["CantBeWhormholed"] = true,
-        ["StartDate"] = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
-        ["InvalidDate"] = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Birthday Squid", 
+            "Birthday Dumbo Octopus", 
+            "Birthday Goldfish", 
+            "Birthday Megalodon"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 100
+    }, 
+    BirthdayCake = {
+        Pool = {
+            "Birthday Cake"
+        }, 
+        Priority = 101, 
+        CantBeWhormholed = true, 
+        StartDate = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0), 
+        InvalidDate = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
+    }, 
+    BabysFirstBalloon = {
+        Pool = {
+            "Baby's First Balloon"
+        }, 
+        Priority = 101, 
+        CantBeWhormholed = true, 
+        StartDate = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0), 
+        InvalidDate = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
+    }, 
+    BirthdayGift = {
+        Pool = {
+            "Birthday Gift"
+        }, 
+        Priority = 101, 
+        CantBeWhormholed = true, 
+        StartDate = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0), 
+        InvalidDate = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
+    }, 
     ["Megalodon Default"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 100
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Megalodon", 
+            "Ancient Megalodon"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 100
+    }, 
     ["Megalodon Ancient"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 100
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Megalodon", 
+            "Phantom Megalodon", 
+            "Ancient Megalodon"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 100
+    }, 
     ["Great White Shark"] = {
-        ["Pool"] = {},
-        ["Priority"] = 100
-    },
+        Pool = {
+            "Great White Shark", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Sea Bass", 
+            "Barracuda", 
+            "Haddock", 
+            "Sailfish", 
+            "Porgy", 
+            "Mullet", 
+            "Cookiecutter Shark", 
+            "Driftwood", 
+            "Common Crate"
+        }, 
+        Priority = 100
+    }, 
     ["Great Hammerhead Shark"] = {
-        ["Pool"] = {},
-        ["Priority"] = 100
-    },
+        Pool = {
+            "Great Hammerhead Shark", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Sea Bass", 
+            "Barracuda", 
+            "Haddock", 
+            "Sailfish", 
+            "Porgy", 
+            "Mullet", 
+            "Cookiecutter Shark", 
+            "Driftwood", 
+            "Common Crate"
+        }, 
+        Priority = 100
+    }, 
     ["Whale Shark"] = {
-        ["Pool"] = {},
-        ["Priority"] = 100
-    },
-    ["Isonade"] = {
-        ["Pool"] = {},
-        ["Priority"] = 101
-    },
-    ["FischFright24"] = {
-        ["Pool"] = {},
-        ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
-    },
-    ["FischFright25"] = {
-        ["Pool"] = {},
-        ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
-    },
-    ["FrightfulVillage"] = {
-        ["Pool"] = {},
-        ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
-    },
-    ["NessieCatacomb"] = {
-        ["Pool"] = {},
-        ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
-    },
-    ["Fischgiving"] = {
-        ["Pool"] = {},
-        ["Priority"] = 103,
-        ["CantBeWhormholed"] = true,
-        ["InvalidDate"] = DateTime.fromUniversalTime(2024, 12, 7, 8)
-    },
-    ["SourGummy"] = {
-        ["Pool"] = {},
-        ["Priority"] = 110,
-        ["CantBeWhormholed"] = true,
-        ["StartDate"] = DateTime.fromUniversalTime(2024, 11, 1, 16),
-        ["InvalidDate"] = DateTime.fromUniversalTime(2025, 11, 1, 16)
-    },
-    ["Fischmas24"] = {
-        ["Pool"] = {},
-        ["Priority"] = 104,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Whale Shark", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Sea Bass", 
+            "Barracuda", 
+            "Haddock", 
+            "Sailfish", 
+            "Porgy", 
+            "Mullet", 
+            "Cookiecutter Shark", 
+            "Driftwood", 
+            "Common Crate"
+        }, 
+        Priority = 100
+    }, 
+    Isonade = {
+        Pool = {
+            "Isonade", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Sea Bass", 
+            "Barracuda", 
+            "Haddock", 
+            "Mullet", 
+            "Cookiecutter Shark", 
+            "The Depths Key"
+        }, 
+        Priority = 101
+    }, 
+    FischFright24 = {
+        Pool = {
+            "Lurkerfish", 
+            "Skelefish", 
+            "Candy Fish", 
+            "Ghoulfish", 
+            "Zombiefish", 
+            "Nessie", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
+    FischFright25 = {
+        Pool = {
+            "Kelpie", 
+            "Phantom Jellyfish", 
+            "Vampire Perch", 
+            "Spider Salmon", 
+            "Werewolf Walleye", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
+    FrightfulVillage = {
+        Pool = {
+            "Coffin Crab", 
+            "Pumpkin Pufferfish", 
+            "Ectoplasm Eel", 
+            "Frankenshrimp", 
+            "Ghost Minnow", 
+            "Potion Perch", 
+            "Mourning Manta Ray", 
+            "Candle Carp", 
+            "Gravestone Stingray", 
+            "Frightful Crate"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
+    NessieCatacomb = {
+        Pool = {
+            "Skeletal Nessie", 
+            "Coffin Crab", 
+            "Pumpkin Pufferfish", 
+            "Ectoplasm Eel", 
+            "Frankenshrimp", 
+            "Ghost Minnow", 
+            "Potion Perch", 
+            "Mourning Manta Ray", 
+            "Candle Carp", 
+            "Gravestone Stingray"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
+    Fischgiving = {
+        Pool = {
+            "Turkey"
+        }, 
+        Priority = 103, 
+        CantBeWhormholed = true, 
+        InvalidDate = DateTime.fromUniversalTime(2024, 12, 7, 8)
+    }, 
+    SourGummy = {
+        Pool = {
+            "Xtra Sour Gummy Pack"
+        }, 
+        Priority = 110, 
+        CantBeWhormholed = true, 
+        StartDate = DateTime.fromUniversalTime(2024, 11, 1, 16), 
+        InvalidDate = DateTime.fromUniversalTime(2025, 11, 1, 16)
+    }, 
+    Fischmas24 = {
+        Pool = {
+            "Icicle", 
+            "Basic Present", 
+            "Unique Present", 
+            "Supreme Present", 
+            "Festive Bait Crate", 
+            "Cookie", 
+            "Candy Cane Carp", 
+            "Santa Salmon", 
+            "Gingerbread Fish", 
+            "Snowflake Flounder", 
+            "Olmdeer", 
+            "Santa Pufferfish", 
+            "Northstar Serpent", 
+            "Glass of Milk", 
+            "Ornament Fish"
+        }, 
+        Priority = 104, 
+        CantBeWhormholed = true
+    }, 
     ["Overgrowth Caves"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Ice Anchovy", 
+            "Icy Salmon", 
+            "Icy Carp", 
+            "Frigid Crab", 
+            "Icy Tuna", 
+            "Icy Goldfish", 
+            "Frigid Antlers", 
+            "Frozen Walnut", 
+            "Glass Diamond"
+        }, 
+        Priority = 2
+    }, 
     ["Frigid Cavern"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Ice Eel", 
+            "Frigid Shrimp", 
+            "Ice Jellyfish", 
+            "Ice Octopus", 
+            "Frigid Taco", 
+            "Snowfish", 
+            "Polar Alligator", 
+            "Frigid Mammoth Tusk", 
+            "Glass Diamond"
+        }, 
+        Priority = 2
+    }, 
     ["Cryogenic Canal"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Frost Minnow", 
+            "Snowflake Smelt", 
+            "Iced Perch", 
+            "Snowback Char", 
+            "Chillfin Herring", 
+            "Frozen Pike", 
+            "Icebreaker Haddock", 
+            "Frostjaw Cod", 
+            "Aurora Trout", 
+            "Glacial Sturgeon"
+        }, 
+        Priority = 2
+    }, 
     ["Glacial Grotto"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Snowgill Dace", 
+            "Frostling Goby", 
+            "Chillback Whitefish", 
+            "Icy Walleye", 
+            "Shiverfin Haddock", 
+            "Frostbite Flounder", 
+            "Glacier Swordfish", 
+            "Icefang Barracuda", 
+            "Borealis Snapper", 
+            "Icebeard Shark"
+        }, 
+        Priority = 2
+    }, 
     ["The Summit Ocean"] = {
-        ["Pool"] = {},
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Pufferfish", 
+            "Swordfish", 
+            "Bluefin Tuna", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Crown Bass", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Mythic Fish", 
+            "Glass Diamond"
+        }, 
+        Priority = 2
+    }, 
     ["Forsaken Algae Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 100,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Forsaken Algae"
+        }, 
+        Priority = 100, 
+        CantBeWhormholed = true
+    }, 
     ["Ancient Algae Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 100,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Ancient Algae"
+        }, 
+        Priority = 100, 
+        CantBeWhormholed = true
+    }, 
     ["Mushgrove Algae Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 100,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Mushgrove Algae"
+        }, 
+        Priority = 100, 
+        CantBeWhormholed = true
+    }, 
     ["Snowcap Algae Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 100,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Snowcap Algae"
+        }, 
+        Priority = 100, 
+        CantBeWhormholed = true
+    }, 
     ["Golden Tide"] = {
-        ["Pool"] = {},
-        ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
-    },
+        Pool = {
+            "Confetti Shark", 
+            "Countdown Perch", 
+            "Eternal Frostwhale", 
+            "Hourglass Bass", 
+            "Tidal Pike", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray"
+        }, 
+        Priority = 102, 
+        CantBeWhormholed = true
+    }, 
     ["Zeus Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Lightning Minnow", 
+            "Voltfin Carp", 
+            "Sparkfin Tetra", 
+            "Static Ray", 
+            "Lightning Pike", 
+            "Stormcloud Angelfish", 
+            "Thunder Bass", 
+            "Storm Eel", 
+            "Thunder Serpent", 
+            "Zeus' Herald"
+        }, 
+        Priority = 1
+    }, 
     ["Poseidon Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
-    ["Sunken\'s Depth"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Colossal Carp", 
+            "Titan Tuna", 
+            "Giant Manta", 
+            "Leviathan Bass", 
+            "Massive Marlin", 
+            "Titanic Sturgeon", 
+            "Titanfang Grouper", 
+            "Deep Emperor", 
+            "Deep Behemoth", 
+            "Abyssal Goliath"
+        }, 
+        Priority = 1
+    }, 
+    ["Sunken's Depth"] = {
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Sunken Silverscale", 
+            "Atlantean Anchovy", 
+            "Oracle Minnow", 
+            "Poseidon's Perch", 
+            "Marble Maiden", 
+            "Crystal Chorus", 
+            "Helios Ray", 
+            "Philosopher's Fish", 
+            "Atlantean Guardian", 
+            "Triton's Herald", 
+            "Twilight Glowfish", 
+            "Atlantean Alchemist", 
+            "Deep Crownfish", 
+            "Celestial Koi"
+        }, 
+        Priority = 1
+    }, 
     ["Ethereal Abyss"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Column Crawler", 
+            "Atlantean Sardine", 
+            "Neptune's Nibbler", 
+            "Aqua Scribe", 
+            "Temple Drifter", 
+            "Mosaic Swimmer", 
+            "Echo Fisher", 
+            "Oracle's Eye", 
+            "Siren Singer", 
+            "Chronos Deep Swimmer", 
+            "Voidscale Guppy", 
+            "Starlit Weaver", 
+            "Mage Marlin", 
+            "King Jellyfish"
+        }, 
+        Priority = 1
+    }, 
     ["Kraken Pool"] = {
-        ["Pool"] = {},
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Shadowfang Snapper", 
+            "Tentacled Horror", 
+            "Tentacle Eel", 
+            "Deep One", 
+            "Eldritch Horror", 
+            "Kraken's Herald", 
+            "Abyssal King", 
+            "Void Emperor", 
+            "Abyssal Devourer"
+        }, 
+        Priority = 1
+    }, 
     ["The Kraken Pool"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Shadowfang Snapper", 
+            "Tentacled Horror", 
+            "Tentacle Eel", 
+            "Deep One", 
+            "Eldritch Horror", 
+            "Kraken's Herald", 
+            "Abyssal King", 
+            "Void Emperor", 
+            "Abyssal Devourer", 
+            "The Kraken"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 1
+    }, 
     ["Ancient Kraken Pool"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 1
-    },
+        Pool = {
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Shadowfang Snapper", 
+            "Tentacled Horror", 
+            "Tentacle Eel", 
+            "Deep One", 
+            "Eldritch Horror", 
+            "Kraken's Herald", 
+            "Abyssal King", 
+            "Void Emperor", 
+            "Abyssal Devourer", 
+            "Ancient Kraken"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 1
+    }, 
     ["Volcanic Vents"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Inferno Hide", 
+            "Hellfire Haddock", 
+            "Embertail Eel", 
+            "Infernal Iguanafish", 
+            "Smoldering Stingray", 
+            "Pyrite Pufferfish", 
+            "Molten Moray", 
+            "Scalding Swordfish", 
+            "Blisterback Blenny", 
+            "Magma Leviathan"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
     ["Challengers Deep"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Frozen Leviathan", 
+            "Frostscale Fangtooth", 
+            "Subzero Stargazer", 
+            "Chillshadow Chub", 
+            "Deep Freeze Devilfish", 
+            "Iceberg Isopod", 
+            "Polar Prowler", 
+            "Chillfin Chimaera", 
+            "Cryoskin", 
+            "Cryo Coelacanth"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
     ["Abyssal Zenith"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Titanic Black Seadevil", 
+            "Leviathan Humpback Anglerfish", 
+            "Abyssal Bearded Seadevil", 
+            "Colossal Saccopharynx", 
+            "Radiant Triplewart Seadevil", 
+            "Deeplight Footballfish", 
+            "Voidglow Ghostfish", 
+            "Infant Giant Seadevil", 
+            "Giant Seadevil", 
+            "Crowned Anglerfish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
     ["Calm Zone"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Quartzfin Queenfish", 
+            "Diamond Discus", 
+            "Emerald Elephantnose", 
+            "Sapphire Stargazer", 
+            "Ruby Rasbora", 
+            "Prismatic Parrotfish", 
+            "Crystal Corydoras", 
+            "Shimmering Silverside", 
+            "Crystallized Seadragon"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
     ["Forsaken Veil"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Hydra Haddock", 
+            "Serpent Surgeonfish", 
+            "Kraken Koi", 
+            "Gorgon Grouper", 
+            "Cyclone Scorpionfish", 
+            "Siren Sculpin", 
+            "Typhoon Tailfin", 
+            "Twilight Tentaclefish"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 3
+    }, 
     ["Forsaken Veil - Scylla"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 4
-    },
-    ["Waveborne"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Hydra Haddock", 
+            "Serpent Surgeonfish", 
+            "Kraken Koi", 
+            "Gorgon Grouper", 
+            "Cyclone Scorpionfish", 
+            "Siren Sculpin", 
+            "Typhoon Tailfin", 
+            "Twilight Tentaclefish", 
+            "Scylla"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 4
+    }, 
+    Waveborne = {
+        Pool = {
+            "Gale Snapper", 
+            "Drift Claw", 
+            "Tropical Bait Crate", 
+            "Foamrunner", 
+            "Sprayfin", 
+            "Ripple Spine", 
+            "Depth Lurker", 
+            "Surge Pike", 
+            "Abyss Dart", 
+            "Breaker Moth", 
+            "Tide Fang", 
+            "Wave Piercer", 
+            "Gust Tail", 
+            "Vortex Ray", 
+            "Storm Skipper"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
     ["Pine Shoal"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
-    ["Lushgrove"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
-    ["Emberreach"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Watching Glowfin", 
+            "Drifting Gildfin", 
+            "Blue Foamtail", 
+            "Tropical Bait Crate", 
+            "Redwood Duskray", 
+            "Oak Stripetail", 
+            "Pine Zephyrfish", 
+            "Parktail Spinesnapper", 
+            "Sunray Sunscale", 
+            "Thornfish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
+    Lushgrove = {
+        Pool = {
+            "Bogscale", 
+            "Murkdrifter", 
+            "Vinefish", 
+            "Canopy Tetra", 
+            "Tropical Bait Crate", 
+            "Hollow Snapper", 
+            "Fogstripe", 
+            "Temple Perch", 
+            "Relic Dart", 
+            "Echo Koi", 
+            "Glade Lurker", 
+            "Jungle Phantom", 
+            "Idolfish", 
+            "Primordial Levi"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
+    Emberreach = {
+        Pool = {
+            "Ashscale Minnow", 
+            "Glowfin Skipper", 
+            "Moltenstripe", 
+            "Tropical Bait Crate", 
+            "Sunflare Tetra", 
+            "Furnace Leaper", 
+            "Smolderfang", 
+            "Volcanic Prowler", 
+            "Inferno Chaser", 
+            "Cinder Dart", 
+            "Scorchray", 
+            "Brimstone Angler", 
+            "Obsidian Koi"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
     ["Emberreach Ponds"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Pyre Fang", 
+            "Firecrest", 
+            "Tropical Bait Crate", 
+            "Sulfur Snapper", 
+            "Smogfish", 
+            "Blazebelly", 
+            "Cragscale", 
+            "Tropicspike"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3
+    }, 
     ["Emberreach Lava"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 3
-    },
+        Pool = {
+            "Lava Bream", 
+            "Magma Pike", 
+            "Hellmaw Eel", 
+            "Searfin", 
+            "Basalt Pike", 
+            "Emberwing", 
+            "Molten Ripple"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 3, 
+        RequiredDurability = 100
+    }, 
     ["Isle of New Beginnings"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Tidallow", 
+            "Reefdart", 
+            "Crestscale", 
+            "Tropical Bait Crate", 
+            "Horizon Tetra", 
+            "Driftfin", 
+            "Lantern Snapper", 
+            "Abyss Flicker", 
+            "Whisper Eel", 
+            "Phantom Koi", 
+            "Tartaruga"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
     ["Cursed Isle"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Blisterfish", 
+            "Gloombiter", 
+            "Rotjaw", 
+            "Murkslither", 
+            "Tropical Bait Crate", 
+            "Split Eye Snapper", 
+            "Tumor Pike", 
+            "Hollowfin", 
+            "Crawling Angler", 
+            "Veinspawn", 
+            "Screaming Fluke", 
+            "Chasm Leech", 
+            "Dreaming Aberration", 
+            "Abyssborn Monstrosity"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
+    }, 
     ["Open Ocean"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 0
-    },
+        Pool = {
+            "Cursed Thread", 
+            "Hogchoker", 
+            "Rock Gunnel", 
+            "Pupfish", 
+            "Four Eyes Fish", 
+            "Black Swallower", 
+            "Warty Angler", 
+            "Tropical Bait Crate", 
+            "Lumpclinger", 
+            "Snipefish", 
+            "Boarfish", 
+            "Telescopefish", 
+            "Fangtooth", 
+            "Velvet Belly Lanternshark", 
+            "Snakehead", 
+            "Sarcastic Fringehead", 
+            "Knifefish", 
+            "Tripod Fish", 
+            "Pelican Eel", 
+            "Bigfin Squid", 
+            "X-ray Tetra", 
+            "Psychedelic Frogfish", 
+            "Dogefin", 
+            "Toilet Fish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 0
+    }, 
     ["Azure Lagoon"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Murkfin", 
+            "Brackscale", 
+            "Lagoon Dart", 
+            "Tropical Bait Crate", 
+            "Glimmer Guppy", 
+            "Swampjaw", 
+            "Algae Lurker", 
+            "Reed Striker", 
+            "Azure Prowler", 
+            "Phantom Brine", 
+            "Bloomtail", 
+            "Depth Drifter", 
+            "Verdant Mirage"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
     ["Blue Moon - First Sea"] = {
-        ["BlueMoonEvent"] = true,
-        ["Pool"] = {},
-        ["Priority"] = 3,
-        ["CantBeWhormholed"] = false
-    },
+        BlueMoonEvent = true, 
+        Pool = {
+            "Moon Arctic Char", 
+            "Silver Scuttler", 
+            "Pale Ghost Lumpfish", 
+            "Frost Ray", 
+            "Blue Langanose", 
+            "Starbellied Wolf Fish", 
+            "Icy Daggerfish", 
+            "Lunar Monkfish", 
+            "Moon Idol", 
+            "Moonveil Killifish", 
+            "Gloamfin Gar", 
+            "Lurking Crescent Pike", 
+            "Moonridge Catfish", 
+            "Crescent Madtom", 
+            "Bog Lantern Goby", 
+            "Tarnished Moongill"
+        }, 
+        Priority = 3, 
+        CantBeWhormholed = false
+    }, 
     ["Blue Moon - Second Sea"] = {
-        ["BlueMoonEvent"] = true,
-        ["Pool"] = {},
-        ["Priority"] = 3,
-        ["CantBeWhormholed"] = true
-    },
+        BlueMoonEvent = true, 
+        Pool = {
+            "Moonveil Killifish", 
+            "Gloamfin Gar", 
+            "Lurking Crescent Pike", 
+            "Moonridge Catfish", 
+            "Crescent Madtom", 
+            "Bog Lantern Goby", 
+            "Tarnished Moongill", 
+            "Moon Idol Sea 2"
+        }, 
+        Priority = 3, 
+        CantBeWhormholed = true
+    }, 
     ["Jurassic Island Pool"] = {
-        ["ExclusiveRods"] = {},
-        ["Pool"] = {},
-        ["Priority"] = 6,
-        ["CantBeWhormholed"] = true
-    },
+        ExclusiveRods = {
+            {
+                "Zora's Rod", 
+                "Henry's Rod", 
+                "Duncan's Rod", 
+                "Developers Rod", 
+                "Mission Specialist's Rod", 
+                "Fixer's Rod", 
+                "Paleontologist's Rod"
+            }, 
+            "<font color=\"rgb(255,0,0)\">You must use a Jurassic World rod in this pool!</font>"
+        }, 
+        Pool = {
+            "Gillicus", 
+            "Oreochima", 
+            "Diplomystus", 
+            "Giant Lamprey", 
+            "Edestus", 
+            "Jurassic Helicoprion", 
+            "Dasyatis", 
+            "Rhizodus"
+        }, 
+        Priority = 6, 
+        CantBeWhormholed = true
+    }, 
     ["Jurassic Island Ocean Pool"] = {
-        ["ExclusiveRods"] = {},
-        ["Pool"] = {},
-        ["Priority"] = 5,
-        ["CantBeWhormholed"] = true
-    },
-    ["LEGO"] = {
-        ["ExclusiveRods"] = {},
-        ["Pool"] = {},
-        ["Priority"] = 5,
-        ["CantBeWhormholed"] = true
-    },
+        ExclusiveRods = {
+            {
+                "Zora's Rod", 
+                "Henry's Rod", 
+                "Duncan's Rod", 
+                "Developers Rod", 
+                "Mission Specialist's Rod", 
+                "Fixer's Rod", 
+                "Paleontologist's Rod"
+            }, 
+            "<font color=\"rgb(255,0,0)\">You must use a Jurassic World rod in this pool!</font>"
+        }, 
+        Pool = {
+            "Gillicus", 
+            "Oreochima", 
+            "Diplomystus", 
+            "Giant Lamprey", 
+            "Edestus", 
+            "Jurassic Helicoprion", 
+            "Dasyatis", 
+            "Rhizodus"
+        }, 
+        Priority = 5, 
+        CantBeWhormholed = true
+    }, 
+    LEGO = {
+        ExclusiveRods = {
+            {
+                "Brick Built Rod", 
+                "Developers Rod"
+            }, 
+            "<font color=\"rgb(255,0,0)\">You must use the Brick Built Rod in this pool!</font>"
+        }, 
+        Pool = {
+            "Tentabrick", 
+            "Studphin", 
+            "Studling Crab", 
+            "Stud Shark", 
+            "Stud Koi", 
+            "Jellystud", 
+            "Glow Brick", 
+            "Crab Stud", 
+            "Cardinal Studfish", 
+            "Brickhorse", 
+            "Stud Turtle", 
+            "Yellow Studfish", 
+            "Goldbrick", 
+            "Clown Brickfish", 
+            "Azure Studfish"
+        }, 
+        Priority = 5, 
+        CantBeWhormholed = true
+    }, 
     ["LEGO - Studolodon"] = {
-        ["ExclusiveRods"] = {},
-        ["Pool"] = {},
-        ["Priority"] = 5,
-        ["CantBeWhormholed"] = true
-    },
+        ExclusiveRods = {
+            {
+                "Brick Built Rod", 
+                "Developers Rod"
+            }, 
+            "<font color=\"rgb(255,0,0)\">You must use the Brick Built Rod in this pool!</font>"
+        }, 
+        Pool = {
+            "Studolodon", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Seaweed", 
+            "Carbon Crate", 
+            "Quality Bait Crate", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Mackerel", 
+            "Cod", 
+            "Amberjack", 
+            "Sardine", 
+            "Halibut", 
+            "Salmon", 
+            "Mullet", 
+            "Bluefin Tuna", 
+            "Yellowfin Tuna", 
+            "Barracuda", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Sea Pickle", 
+            "Swordfish", 
+            "Anglerfish", 
+            "Coelacanth", 
+            "Sailfish", 
+            "Stingray", 
+            "Sawfish", 
+            "Moonfish", 
+            "Dolphin", 
+            "Flying Fish", 
+            "Colossal Squid", 
+            "Oarfish", 
+            "Crown Bass", 
+            "Mythic Fish", 
+            "Long Pike", 
+            "Mustard"
+        }, 
+        Priority = 5, 
+        CantBeWhormholed = true
+    }, 
     ["Whale Interior"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = true,
-        ["Priority"] = 2
-    },
+        Pool = {
+            "Bearded Toadfish", 
+            "Giant Moray", 
+            "Gulf Toadfish", 
+            "Oyster toadfish", 
+            "Smooth toadfish", 
+            "Splendid toadfish"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
     ["Treasure Island"] = {
-        ["Pool"] = {},
-        ["CantBeWhormholed"] = false,
-        ["Priority"] = 2
+        Pool = {
+            "Bluegem Angelfish", 
+            "Coin Triggerfish", 
+            "Crowned Royal Gramma", 
+            "Emerald Angelfish", 
+            "Gemscale Mandarinfish", 
+            "Gemstone Whale Shark", 
+            "Goldband Butterflyfish", 
+            "Golden Dorado", 
+            "Goldfin Octopus", 
+            "Hidden Filefish", 
+            "Net Wolffish", 
+            "Queen Angelfish", 
+            "Ruby Lionfish", 
+            "Coin Piranha", 
+            "Coin Squid", 
+            "Gem Anchovy", 
+            "Gem Blobfish", 
+            "Gem Dolphin", 
+            "Gem Eel", 
+            "Gem Marlin", 
+            "Gem Salmon"
+        }, 
+        CantBeWhormholed = false, 
+        Priority = 2
     }
 };
