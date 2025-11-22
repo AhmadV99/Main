@@ -83,7 +83,7 @@ local l_presents_0 = {
         "Enchant Relic"
     }
 };
-local v2 = {
+local v3 = {
     ["Desolate Deep"] = {
         Trash = 22, 
         Common = 22, 
@@ -106,7 +106,194 @@ local v2 = {
         Rare = 15
     }
 };
-local v5 = {
+local v4 = {
+    ["Admin Fish Barrel"] = {
+        Icon = "rbxassetid://85580725974378", 
+        WeightPool = {
+            150, 
+            150
+        }, 
+        Chance = 0, 
+        Rarity = "Special", 
+        Resilience = 110, 
+        Description = "A large admin barrel with iron hoops. The barrel filled with a large array of admin fish that all seem pretty fresh. Therefore, finders keeps?- Opening it might give you an assortment of admin fish", 
+        Hint = "Fallen off of a chair boat.", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = nil, 
+        Price = 10000, 
+        XP = 1600, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "An Admin Fish Barrel!", 
+            "Woah! An Admin Fish Barrel!", 
+            "Don't mind if I do!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("crate"), 
+        IsCrate = true, 
+        CrateType = "Fish", 
+        FishContents = {
+            "Dr. Ishmael", 
+            "Golden Nessie", 
+            "Black Iron Bucket", 
+            "Singularity", 
+            "Snowflake", 
+            "Mango", 
+            "Frank", 
+            "Alien Hat", 
+            "Cheezburger", 
+            "Bloxy Cola", 
+            "Turkey Leg", 
+            "Golden Coin", 
+            "Taco", 
+            "Star", 
+            "Ghost", 
+            "Cousin Tentacles", 
+            "Mr. Tentacles", 
+            "Mango Smoothie", 
+            "Kind Egg", 
+            "Parasite", 
+            "Flashlight", 
+            "Tentacles Junior", 
+            "Mrs. Tentacles", 
+            "Ghoul", 
+            "Snowman", 
+            "JellyBop", 
+            "Glitched Shades", 
+            "Fridge", 
+            "Fischipedia Accurate Pickle", 
+            "Supersized Floppy", 
+            "Poltergeist", 
+            "Golden Scylla", 
+            "UFO", 
+            "Gargantuan Taco", 
+            "Rocket Ship", 
+            "Broken Scylla", 
+            "Moon", 
+            "8-Bit Mr. Tentacles", 
+            "Corrupted Scylla", 
+            "Venoblossom", 
+            "Corrupted Megalodon"
+        }, 
+        From = "Admin-Exclusive", 
+        Unregistered = true, 
+        Appraisable = false, 
+        BlockPassiveCapture = true, 
+        Unpurchasable = true
+    }, 
+    ["Admin Crate"] = {
+        Icon = "rbxassetid://78501567647840", 
+        WeightPool = {
+            80, 
+            80
+        }, 
+        Chance = 0, 
+        Rarity = "Special", 
+        Resilience = 120, 
+        Description = "A moderately sized admin crate seemingly lost from an admin's boat of some kind. The date of it's disappearance is unknown. Therefore, finders keepers?- Opening it might give you an array of admin fish, bait, and money!", 
+        Hint = "Fallen off of a chair boat.", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = nil, 
+        Price = 10000, 
+        XP = 1600, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "An Admin Crate!", 
+            "A Crate!", 
+            "Woah! An Admin Crate!", 
+            "Who left this here?"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("crate"), 
+        IsCrate = true, 
+        CrateType = "All", 
+        BaitContents = {
+            "Taco", 
+            "Golden Coin", 
+            "Singularity", 
+            "UFO", 
+            "Star"
+        }, 
+        FishContents = {
+            "Frank", 
+            "Mango", 
+            "Bloxy Cola", 
+            "Turkey Leg", 
+            "Mr. Tentacles", 
+            "Star", 
+            "Golden Coin", 
+            "Ghost", 
+            "Snowflake", 
+            "Flashlight", 
+            "Taco", 
+            "Corrupted Megalodon"
+        }, 
+        CoinContents = {
+            4000, 
+            12000
+        }, 
+        From = "Admin-Exclusive", 
+        Unregistered = true, 
+        Appraisable = false, 
+        BlockPassiveCapture = true, 
+        Unpurchasable = true
+    }, 
+    ["Admin Bait Crate"] = {
+        Icon = "rbxassetid://84989881492296", 
+        WeightPool = {
+            80, 
+            80
+        }, 
+        Chance = 0, 
+        Rarity = "Special", 
+        Resilience = 120, 
+        Description = "A wooden crate with fabric over top to preserve the bait inside. Seemingly lost from an admin's boat of some kind. The bait is still alive and fresh. Therefore, finders keepers?- Opening it might give you an array of admin-exclusive baits!", 
+        Hint = "Fallen off of a chair boat.", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = nil, 
+        Price = 10000, 
+        XP = 1600, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Crate of Bait!", 
+            "An Admin Bait Crate!", 
+            "Woah! An Admin Crate!", 
+            "An Admin Crate!", 
+            "Who left this here?", 
+            "An Admin Crate full of Bait!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("crate"), 
+        From = "Admin-Exclusive", 
+        IsCrate = true, 
+        CrateType = "Bait", 
+        BaitContents = {
+            "Taco", 
+            "Golden Coin", 
+            "Singularity", 
+            "UFO", 
+            "Star"
+        }, 
+        Unregistered = true, 
+        Appraisable = false, 
+        BlockPassiveCapture = true, 
+        Unpurchasable = true
+    }, 
     ["Neon Tetra"] = {
         Icon = "rbxassetid://104112900208797", 
         WeightPool = {
@@ -120,8 +307,8 @@ local v5 = {
         Hint = "Found in schools near calm shallows. Can be speared or fished in shallow water.", 
         FavouriteBait = "Ant", 
         FavouriteTime = "Day", 
-        Price = 40, 
-        XP = 60, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -151,8 +338,8 @@ local v5 = {
         Hint = "Shoals together in dappled waters. Can be speared or fished in shallow water.", 
         FavouriteBait = "Earthworm", 
         FavouriteTime = "Day", 
-        Price = 55, 
-        XP = 70, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "Summer"
         }, 
@@ -181,8 +368,8 @@ local v5 = {
         Hint = "Scavenges along muddy riverbeds. Can be speared or fished in shallow water.", 
         FavouriteBait = "Beetle Grub", 
         FavouriteTime = "Day", 
-        Price = 80, 
-        XP = 90, 
+        Price = 104, 
+        XP = 60, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -212,8 +399,8 @@ local v5 = {
         Hint = "Prefers slow-moving jungle waters. Can be speared in shallow water.", 
         FavouriteBait = "Cricket", 
         FavouriteTime = "Day", 
-        Price = 200, 
-        XP = 150, 
+        Price = 215, 
+        XP = 130, 
         Seasons = {
             "Summer", 
             "Autumn"
@@ -244,8 +431,8 @@ local v5 = {
         Hint = "Feeds on fruits near riverbanks. Sometimes caught or speared in shallow water.", 
         FavouriteBait = "Cricket", 
         FavouriteTime = "Day", 
-        Price = 400, 
-        XP = 200, 
+        Price = 217, 
+        XP = 130, 
         Seasons = {
             "Autumn"
         }, 
@@ -274,8 +461,8 @@ local v5 = {
         Hint = "Hunts near the surface in still waters. Can be speared when close to the surface.", 
         FavouriteBait = "Snail", 
         FavouriteTime = "Day", 
-        Price = 600, 
-        XP = 250, 
+        Price = 334, 
+        XP = 200, 
         Seasons = {
             "Summer"
         }, 
@@ -304,8 +491,8 @@ local v5 = {
         Hint = "Moves in packs, striking at dusk.", 
         FavouriteBait = "Centipede", 
         FavouriteTime = "Night", 
-        Price = 800, 
-        XP = 300, 
+        Price = 338, 
+        XP = 200, 
         Seasons = {
             "Summer"
         }, 
@@ -334,8 +521,8 @@ local v5 = {
         Hint = "Active only after dusk, haunting the dark waters.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Night", 
-        Price = 1200, 
-        XP = 450, 
+        Price = 341, 
+        XP = 200, 
         Seasons = {
             "Autumn"
         }, 
@@ -364,8 +551,8 @@ local v5 = {
         Hint = "Surfaces often to breathe in stagnant waters. Can be speared in shallow water.", 
         FavouriteBait = "Centipede", 
         FavouriteTime = "Day", 
-        Price = 1500, 
-        XP = 700, 
+        Price = 330, 
+        XP = 200, 
         Seasons = {
             "Summer"
         }, 
@@ -394,8 +581,8 @@ local v5 = {
         Hint = "Strikes fast in turbulent waters.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Night", 
-        Price = 2200, 
-        XP = 900, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Summer"
         }, 
@@ -426,8 +613,8 @@ local v5 = {
         Hint = "Lurks in murky shallows, especially in storms.", 
         FavouriteBait = "Stag Beetle", 
         FavouriteTime = "Night", 
-        Price = 3000, 
-        XP = 1200, 
+        Price = 1881, 
+        XP = 1500, 
         Seasons = {
             "Summer", 
             "Autumn"
@@ -458,8 +645,8 @@ local v5 = {
         Hint = "Surfaces with a loud gulp in the deep jungle rivers.", 
         FavouriteBait = "Dragonfly", 
         FavouriteTime = "Day", 
-        Price = 5000, 
-        XP = 2200, 
+        Price = 1958, 
+        XP = 1570, 
         Seasons = {
             "Summer"
         }, 
@@ -490,8 +677,8 @@ local v5 = {
         Hint = "Dwells in the deep and muddy channels. Sometimes speared in shallow water.", 
         FavouriteBait = "Dragonfly", 
         FavouriteTime = "Night", 
-        Price = 5200, 
-        XP = 1800, 
+        Price = 1939, 
+        XP = 1550, 
         Seasons = {
             "Autumn"
         }, 
@@ -521,8 +708,8 @@ local v5 = {
         Hint = "Buried in sand and mud, waiting for prey. Sometimes speared in shallow water.", 
         FavouriteBait = "Dragonfly", 
         FavouriteTime = "Day", 
-        Price = 7500, 
-        XP = 2100, 
+        Price = 3265, 
+        XP = 2610, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -553,8 +740,8 @@ local v5 = {
         Hint = "Haunts the deepest currents, striking in chaos.", 
         FavouriteBait = "Stag Beetle", 
         FavouriteTime = "Night", 
-        Price = 7000, 
-        XP = 2500, 
+        Price = 3360, 
+        XP = 2690, 
         Seasons = {
             "Autumn"
         }, 
@@ -573,7 +760,7 @@ local v5 = {
     Mossjaw = {
         Icon = "rbxassetid://129498791494514", 
         BlockPassiveCapture = true, 
-        ProgressEfficiency = 0.05, 
+        ForcedProgressEfficiency = 0.2, 
         WeightPool = {
             3000000, 
             7000000
@@ -585,8 +772,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Glowworm", 
         FavouriteTime = "Night", 
-        Price = 220000, 
-        XP = 500000, 
+        Price = 48000, 
+        XP = 12000, 
         Seasons = {
             "None"
         }, 
@@ -609,20 +796,20 @@ local v5 = {
     ["Elder Mossjaw"] = {
         Icon = "rbxassetid://109400702021847", 
         BlockPassiveCapture = true, 
-        ForcedProgressEfficiency = 0.03, 
+        ForcedProgressEfficiency = 0.15, 
         WeightPool = {
             6000000, 
             14000000
         }, 
         Chance = 1, 
         Rarity = "Secret", 
-        Resilience = -200, 
+        Resilience = -50, 
         Description = "Older than memory, the Elder Mossjaw is whispered of in fearful stories. It has a moss-draped hide, and its eyes gleam with a cruel, ancient intelligence. To face it is to face the jungle's oldest terror.", 
         Hint = "???", 
         FavouriteBait = "Glowworm", 
         FavouriteTime = "Night", 
-        Price = 320000, 
-        XP = 700000, 
+        Price = 50000, 
+        XP = 13000, 
         Seasons = {
             "None"
         }, 
@@ -755,8 +942,8 @@ local v5 = {
         Hint = "Exclusively obtainable on Fisch's Anniversary day! [Anniversary Pools]", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 200000, 
-        XP = 500000, 
+        Price = 20000, 
+        XP = 50000, 
         Seasons = {
             "None"
         }, 
@@ -771,8 +958,10 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(211, 160, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Anniversary", 
-        From = "Anniversary"
+        From = "Anniversary", 
+        RewardTitle = "\240\159\142\137\240\159\166\136"
     }, 
     ["Birthday Cake"] = {
         Icon = "rbxassetid://127342374174774", 
@@ -804,8 +993,10 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(211, 160, 255), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Anniversary", 
-        From = "Anniversary"
+        From = "Anniversary", 
+        RewardTitle = "\240\159\142\130"
     }, 
     ["Baby's First Balloon"] = {
         Icon = "rbxassetid://90758389162807", 
@@ -837,8 +1028,10 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(211, 160, 255), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        AnnounceInChat = true, 
         FromLimited = "Anniversary", 
-        From = "Anniversary"
+        From = "Anniversary", 
+        RewardTitle = "\240\159\142\136"
     }, 
     ["Birthday Gift"] = {
         Icon = "rbxassetid://74152853398579", 
@@ -870,8 +1063,10 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(211, 160, 255), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Anniversary", 
-        From = "Anniversary"
+        From = "Anniversary", 
+        RewardTitle = "\240\159\142\129"
     }, 
     ["Corrupted Floppy"] = {
         Icon = "rbxassetid://138896437082404", 
@@ -888,8 +1083,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 290000, 
-        XP = 430000, 
+        Price = 11250, 
+        XP = 11250, 
         Seasons = {
             "None"
         }, 
@@ -920,8 +1115,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 300000, 
-        XP = 450000, 
+        Price = 30000, 
+        XP = 15000, 
         Seasons = {
             "None"
         }, 
@@ -952,8 +1147,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 295000, 
-        XP = 440000, 
+        Price = 11297, 
+        XP = 11300, 
         Seasons = {
             "None"
         }, 
@@ -984,8 +1179,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 320000, 
-        XP = 430000, 
+        Price = 11297, 
+        XP = 11300, 
         Seasons = {
             "None"
         }, 
@@ -1016,8 +1211,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 350000, 
-        XP = 480000, 
+        Price = 11321, 
+        XP = 11320, 
         Seasons = {
             "None"
         }, 
@@ -1198,8 +1393,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 25000, 
-        XP = 10000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -1230,8 +1425,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 280000, 
-        XP = 500000, 
+        Price = 11345, 
+        XP = 11340, 
         Seasons = {
             "None"
         }, 
@@ -1266,8 +1461,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 250000, 
-        XP = 520000, 
+        Price = 11321, 
+        XP = 11320, 
         Seasons = {
             "None"
         }, 
@@ -1298,8 +1493,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 290000, 
-        XP = 430000, 
+        Price = 11321, 
+        XP = 11320, 
         Seasons = {
             "None"
         }, 
@@ -1330,8 +1525,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 100000, 
-        XP = 10000, 
+        Price = 10421, 
+        XP = 10420, 
         Seasons = {
             "None"
         }, 
@@ -1362,8 +1557,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 100000, 
-        XP = 10000, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "None"
         }, 
@@ -1394,8 +1589,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 100000, 
-        XP = 10000, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "None"
         }, 
@@ -1425,8 +1620,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 50000, 
-        XP = 15000, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "None"
         }, 
@@ -1457,8 +1652,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 15000, 
-        XP = 2500, 
+        Price = 11025, 
+        XP = 11020, 
         Seasons = {
             "None"
         }, 
@@ -1488,8 +1683,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 1000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -1520,8 +1715,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "sunlight", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 2500, 
+        Price = 11132, 
+        XP = 11130, 
         Seasons = {
             "None"
         }, 
@@ -1552,8 +1747,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "sap", 
         FavouriteTime = nil, 
-        Price = 100000, 
-        XP = 25000, 
+        Price = 11132, 
+        XP = 11130, 
         Seasons = {
             "None"
         }, 
@@ -1585,8 +1780,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "BULBBSSSS", 
         FavouriteTime = nil, 
-        Price = 270000, 
-        XP = 150000, 
+        Price = 11345, 
+        XP = 11340, 
         Seasons = {
             "None"
         }, 
@@ -1616,8 +1811,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = nil, 
-        Price = 200000, 
-        XP = 500000, 
+        Price = 25000, 
+        XP = 11690, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -1635,7 +1830,7 @@ local v5 = {
         SparkleColor = Color3.fromRGB(103, 176, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Luminescent Cavern", 
-        ProgressEfficiency = 0.1
+        ForcedProgressEfficiency = 0.2
     }, 
     ["Colossal Ancient Dragon"] = {
         Icon = "rbxassetid://103423320839824", 
@@ -1651,8 +1846,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = nil, 
-        Price = 250000, 
-        XP = 600000, 
+        Price = 35000, 
+        XP = 11800, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -1670,7 +1865,7 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 101, 111), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Crimson Cavern", 
-        ForcedProgressEfficiency = 0.05
+        ForcedProgressEfficiency = 0.15
     }, 
     ["Colossal Ethereal Dragon"] = {
         Icon = "rbxassetid://128001384475181", 
@@ -1686,8 +1881,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = nil, 
-        Price = 300000, 
-        XP = 700000, 
+        Price = 40000, 
+        XP = 16290, 
         Seasons = {
             "None"
         }, 
@@ -1704,7 +1899,7 @@ local v5 = {
         SparkleColor = Color3.fromRGB(199, 120, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Luminescent Cavern", 
-        ForcedProgressEfficiency = 0.02
+        ForcedProgressEfficiency = 0.1
     }, 
     ["Bluelip Batfish"] = {
         Icon = "rbxassetid://91091879174260", 
@@ -1719,8 +1914,8 @@ local v5 = {
         Hint = "Waddles in rainy cavern glow.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 150, 
-        XP = 70, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Winter"
         }, 
@@ -1750,8 +1945,8 @@ local v5 = {
         Hint = "Shines in clear cavern nights.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Night", 
-        Price = 300, 
-        XP = 100, 
+        Price = 102, 
+        XP = 60, 
         Seasons = {
             "Summer"
         }, 
@@ -1781,8 +1976,8 @@ local v5 = {
         Hint = "Slithers in foggy cavern murk.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Night", 
-        Price = 1820, 
-        XP = 390, 
+        Price = 330, 
+        XP = 200, 
         Seasons = {
             "Autumn"
         }, 
@@ -1812,8 +2007,8 @@ local v5 = {
         Hint = "Patrols foggy cavern depths.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 8000, 
-        XP = 2800, 
+        Price = 2016, 
+        XP = 1610, 
         Seasons = {
             "Winter"
         }, 
@@ -1843,8 +2038,8 @@ local v5 = {
         Hint = "Flashes in foggy cavern gloom.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 12800, 
-        XP = 4200, 
+        Price = 3523, 
+        XP = 2820, 
         Seasons = {
             "Autumn"
         }, 
@@ -1874,8 +2069,8 @@ local v5 = {
         Hint = "Clings to crab cages.", 
         FavouriteBait = "Weird Algae", 
         FavouriteTime = "Night", 
-        Price = 300, 
-        XP = 180, 
+        Price = 225, 
+        XP = 140, 
         Seasons = {
             "Spring"
         }, 
@@ -1905,8 +2100,8 @@ local v5 = {
         Hint = "Found in foggy crab cages.", 
         FavouriteBait = "Luminous Larva", 
         FavouriteTime = "Night", 
-        Price = 13800, 
-        XP = 8200, 
+        Price = 3523, 
+        XP = 2820, 
         Seasons = {
             "Spring"
         }, 
@@ -1936,8 +2131,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = "Night", 
-        Price = 35000, 
-        XP = 25000, 
+        Price = 7372, 
+        XP = 7370, 
         Seasons = {
             "Winter"
         }, 
@@ -1967,8 +2162,8 @@ local v5 = {
         Hint = "Lurks in foggy crimson depths.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 12500, 
-        XP = 4000, 
+        Price = 3523, 
+        XP = 2820, 
         Seasons = {
             "Autumn"
         }, 
@@ -1998,8 +2193,8 @@ local v5 = {
         Hint = "Slithers in foggy crimson murk.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 8500, 
-        XP = 3000, 
+        Price = 2016, 
+        XP = 1610, 
         Seasons = {
             "Winter"
         }, 
@@ -2029,8 +2224,8 @@ local v5 = {
         Hint = "Bites in rainy depths.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Night", 
-        Price = 1800, 
-        XP = 350, 
+        Price = 322, 
+        XP = 190, 
         Seasons = {
             "Winter"
         }, 
@@ -2060,8 +2255,8 @@ local v5 = {
         Hint = "Lurks in rainy shadows.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Night", 
-        Price = 1600, 
-        XP = 300, 
+        Price = 326, 
+        XP = 200, 
         Seasons = {
             "Autumn"
         }, 
@@ -2090,8 +2285,8 @@ local v5 = {
         Hint = "Glides in rainy crimson currents.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 350, 
-        XP = 110, 
+        Price = 104, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -2120,8 +2315,8 @@ local v5 = {
         Hint = "Clings to foggy crab cages.", 
         FavouriteBait = "Weird Algae", 
         FavouriteTime = "Night", 
-        Price = 40000, 
-        XP = 22000, 
+        Price = 7475, 
+        XP = 9980, 
         Seasons = {
             "Spring"
         }, 
@@ -2151,8 +2346,8 @@ local v5 = {
         Hint = "Scurries in clear crab cages.", 
         FavouriteBait = nil, 
         FavouriteTime = "Day", 
-        Price = 400, 
-        XP = 120, 
+        Price = 105, 
+        XP = 60, 
         Seasons = {
             "Summer"
         }, 
@@ -2181,8 +2376,8 @@ local v5 = {
         Hint = "Commonly hides in clear crab cages.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 200, 
-        XP = 80, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "Spring"
         }, 
@@ -2212,8 +2407,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 1000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -2243,8 +2438,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 1000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -2274,8 +2469,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 1000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -2306,8 +2501,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 150000, 
-        XP = 50000, 
+        Price = 11025, 
+        XP = 11020, 
         Seasons = {
             "None"
         }, 
@@ -2338,8 +2533,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 100000, 
-        XP = 25000, 
+        Price = 10125, 
+        XP = 10120, 
         Seasons = {
             "None"
         }, 
@@ -2370,8 +2565,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 250000, 
-        XP = 500000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -2402,8 +2597,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 188888, 
-        XP = 188888, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -2434,8 +2629,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 25000, 
-        XP = 5000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -2466,8 +2661,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 25000, 
-        XP = 5000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -2498,8 +2693,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 3000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -2530,8 +2725,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 3000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -2562,8 +2757,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Green?", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 10125, 
+        XP = 10120, 
         Seasons = {
             "Winter"
         }, 
@@ -2594,8 +2789,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "King", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 11309, 
+        XP = 11310, 
         Seasons = {
             "Winter"
         }, 
@@ -2628,8 +2823,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Water?", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "Winter"
         }, 
@@ -2662,8 +2857,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Wink Wink", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 9562, 
+        XP = 9560, 
         Seasons = {
             "Winter"
         }, 
@@ -2696,8 +2891,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Trampoline", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 10688, 
+        XP = 10690, 
         Seasons = {
             "Winter"
         }, 
@@ -2730,8 +2925,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Scrambled Egg", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "Winter"
         }, 
@@ -2764,8 +2959,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "hi", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 11345, 
+        XP = 11340, 
         Seasons = {
             "Winter"
         }, 
@@ -2798,8 +2993,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Au", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 11345, 
+        XP = 11340, 
         Seasons = {
             "Winter"
         }, 
@@ -2830,8 +3025,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Dice", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 11345, 
+        XP = 11340, 
         Seasons = {
             "Winter"
         }, 
@@ -2864,8 +3059,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Refracting light", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 9562, 
+        XP = 9560, 
         Seasons = {
             "Winter"
         }, 
@@ -2898,8 +3093,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Fire", 
         FavouriteTime = nil, 
-        Price = 100000, 
-        XP = 50000, 
+        Price = 12339, 
+        XP = 12340, 
         Seasons = {
             "Winter"
         }, 
@@ -2932,8 +3127,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Joy", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 10125, 
+        XP = 10120, 
         Seasons = {
             "Winter"
         }, 
@@ -2966,8 +3161,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Wood", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 10125, 
+        XP = 10120, 
         Seasons = {
             "Winter"
         }, 
@@ -3000,8 +3195,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Steel That Blue", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 12683, 
+        XP = 12680, 
         Seasons = {
             "Winter"
         }, 
@@ -3034,8 +3229,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Tarnished", 
         FavouriteTime = nil, 
-        Price = 100000, 
-        XP = 5, 
+        Price = 11345, 
+        XP = 11340, 
         Seasons = {
             "Winter"
         }, 
@@ -3067,8 +3262,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\140\153", 
         FavouriteTime = nil, 
-        Price = 275000, 
-        XP = 500000, 
+        Price = 11345, 
+        XP = 11340, 
         Seasons = {
             "None"
         }, 
@@ -3100,8 +3295,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\154\128", 
         FavouriteTime = nil, 
-        Price = 170000, 
-        XP = 200000, 
+        Price = 11250, 
+        XP = 11250, 
         Seasons = {
             "None"
         }, 
@@ -3133,8 +3328,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\226\173\144", 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 5000, 
+        Price = 10575, 
+        XP = 10580, 
         Seasons = {
             "None"
         }, 
@@ -3166,8 +3361,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\148\165\240\159\148\165\240\159\148\165", 
         FavouriteTime = nil, 
-        Price = 170000, 
-        XP = 200000, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "None"
         }, 
@@ -3201,8 +3396,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\148\165", 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 5000, 
+        Price = 10125, 
+        XP = 10120, 
         Seasons = {
             "None"
         }, 
@@ -3229,15 +3424,15 @@ local v5 = {
             400000
         }, 
         Chance = 1, 
-        Rarity = "Cataclysmic", 
+        Rarity = "Apex", 
         Resilience = -100, 
         ForcedProgressEfficiency = 0.03, 
         Description = "A monstrous, skeletal leviathan that coils through the lightless abyss, its bone-white form glowing with an unnatural, radiant sheen. Stirred from its ancient slumber by a catastrophic pulse of forbidden energy, it emerges from the deep when the seas fall silent, its haunting, resonant hum shattering sonar and reviving long-buried fears of the ocean's wrath. Sailors whisper it is a relic of a lost age, reborn in the wake of humanity's hubris.", 
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 310000, 
-        XP = 700000, 
+        Price = 50000, 
+        XP = 20000, 
         Seasons = {
             "None"
         }, 
@@ -3274,8 +3469,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 165425, 
-        XP = 248, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "None"
         }, 
@@ -3310,8 +3505,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\148\167", 
         FavouriteTime = nil, 
-        Price = 50000, 
-        XP = 50000, 
+        Price = 11025, 
+        XP = 11020, 
         Seasons = {
             "None"
         }, 
@@ -3342,8 +3537,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\148\167", 
         FavouriteTime = nil, 
-        Price = 50000, 
-        XP = 50000, 
+        Price = 11025, 
+        XP = 11020, 
         Seasons = {
             "None"
         }, 
@@ -3374,8 +3569,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\145\189", 
         FavouriteTime = nil, 
-        Price = 170000, 
-        XP = 140000, 
+        Price = 11345, 
+        XP = 11340, 
         Seasons = {
             "None"
         }, 
@@ -3406,8 +3601,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\145\189", 
         FavouriteTime = nil, 
-        Price = 1000, 
-        XP = 5000, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "None"
         }, 
@@ -3438,8 +3633,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\145\189", 
         FavouriteTime = nil, 
-        Price = 50000, 
-        XP = 50000, 
+        Price = 13322, 
+        XP = 13320, 
         Seasons = {
             "None"
         }, 
@@ -3470,8 +3665,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\145\189", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 9000, 
+        Price = 10184, 
+        XP = 10180, 
         Seasons = {
             "None"
         }, 
@@ -3502,8 +3697,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "\240\159\145\189", 
         FavouriteTime = nil, 
-        Price = 140000, 
-        XP = 100000, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "None"
         }, 
@@ -3534,8 +3729,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Ketchup", 
         FavouriteTime = nil, 
-        Price = 1000, 
-        XP = 5000, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "None"
         }, 
@@ -3566,8 +3761,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Mustard", 
         FavouriteTime = nil, 
-        Price = 1000, 
-        XP = 5000, 
+        Price = 10587, 
+        XP = 10590, 
         Seasons = {
             "None"
         }, 
@@ -3660,8 +3855,8 @@ local v5 = {
         Hint = "Occasionally caught by traps.", 
         FavouriteBait = "None", 
         FavouriteTime = "Night", 
-        Price = 9500, 
-        XP = 7000, 
+        Price = 3554, 
+        XP = 2840, 
         Seasons = {
             "Winter"
         }, 
@@ -3692,8 +3887,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 11500, 
-        XP = 5000, 
+        Price = 8480, 
+        XP = 11580, 
         Seasons = {
             "Winter"
         }, 
@@ -3718,15 +3913,15 @@ local v5 = {
             5000000
         }, 
         Chance = 1, 
-        Rarity = "Cataclysmic", 
+        Rarity = "Apex", 
         Resilience = -70, 
         ForcedProgressEfficiency = 0.05, 
         Description = "Born from magma and fury, the Ashclaw scuttles through the lowest point of lava within Roslit Bay's volcano. Its shell burns with the heat of a thousand eruptions, and its claws leave trails of ember wherever it walks.", 
         Hint = "???", 
         FavouriteBait = "Coal", 
         FavouriteTime = nil, 
-        Price = 320000, 
-        XP = 640000, 
+        Price = 44000, 
+        XP = 20000, 
         Seasons = {
             "None"
         }, 
@@ -3751,7 +3946,7 @@ local v5 = {
             40000000
         }, 
         Chance = 1, 
-        Rarity = "Cataclysmic", 
+        Rarity = "Apex", 
         Resilience = -70, 
         ForcedProgressEfficiency = 0.05, 
         Description = "A colossal vortex given form; Charybdis devours all who draw near. Said to have once been a goddess cursed to hunger eternally, her swirling maw still consumes ships, storms, and even the sea itself.", 
@@ -3761,8 +3956,8 @@ local v5 = {
             "Stag Beetle"
         }, 
         FavouriteTime = "Night", 
-        Price = 315000, 
-        XP = 647000, 
+        Price = 25500, 
+        XP = 20000, 
         Seasons = {
             "None"
         }, 
@@ -3784,7 +3979,7 @@ local v5 = {
             40000000
         }, 
         Chance = 1, 
-        Rarity = "Cataclysmic", 
+        Rarity = "Apex", 
         Resilience = -70, 
         ForcedProgressEfficiency = 0.05, 
         Description = "A terrifying hybrid of shark and octopus, Lusca is said to guard the sunken passages of the deep. Sailors whisper that its roar can split coral and drag down entire fleets beneath the waves.", 
@@ -3794,8 +3989,8 @@ local v5 = {
             "Stag Beetle"
         }, 
         FavouriteTime = "Day", 
-        Price = 312000, 
-        XP = 651000, 
+        Price = 25000, 
+        XP = 20000, 
         Seasons = {
             "None"
         }, 
@@ -3817,7 +4012,7 @@ local v5 = {
             40000000
         }, 
         Chance = 1, 
-        Rarity = "Cataclysmic", 
+        Rarity = "Apex", 
         Resilience = -70, 
         ForcedProgressEfficiency = 0.05, 
         Description = "A divine cephalopod from ancient legend, Akkorokamui's scarlet tendrils glow like veins of fire through the sea. It is said to grant great fortune to those it spares; and swift demise to those it doesn't.", 
@@ -3827,8 +4022,8 @@ local v5 = {
             "Stag Beetle"
         }, 
         FavouriteTime = nil, 
-        Price = 311000, 
-        XP = 652000, 
+        Price = 24000, 
+        XP = 20000, 
         Seasons = {
             "None"
         }, 
@@ -3856,8 +4051,8 @@ local v5 = {
         Hint = "Resides freshwaters Moosewood along some oceans in. Shrimp prefers.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = nil, 
-        Price = 45, 
-        XP = 25, 
+        Price = 5125, 
+        XP = 5120, 
         Seasons = {
             "Autumn", 
             "Winter"
@@ -4425,6 +4620,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 237, 137), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Fischfest", 
         From = "Fischfest", 
         IsLimitedBestiary = true
@@ -4444,8 +4640,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Mango", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 8000, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "Winter"
         }, 
@@ -4477,8 +4673,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Mango", 
         FavouriteTime = nil, 
-        Price = 1000, 
-        XP = 5000, 
+        Price = 9000, 
+        XP = 9000, 
         Seasons = {
             "Winter"
         }, 
@@ -4510,8 +4706,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Mango", 
         FavouriteTime = nil, 
-        Price = 200000, 
-        XP = 50000, 
+        Price = 11025, 
+        XP = 11020, 
         Seasons = {
             "Winter"
         }, 
@@ -4543,8 +4739,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "$5", 
         FavouriteTime = nil, 
-        Price = 100000, 
-        XP = 5, 
+        Price = 11345, 
+        XP = 11340, 
         Seasons = {
             "Winter"
         }, 
@@ -4577,8 +4773,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 5000, 
+        Price = 9474, 
+        XP = 9470, 
         Seasons = {
             "None"
         }, 
@@ -4609,8 +4805,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 0, 
-        XP = 1000000, 
+        Price = 11368, 
+        XP = 11370, 
         Seasons = {
             "None"
         }, 
@@ -4641,8 +4837,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 100, 
-        XP = 200, 
+        Price = 10125, 
+        XP = 10120, 
         Seasons = {
             "Winter"
         }, 
@@ -4678,8 +4874,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 80000, 
-        XP = 50000, 
+        Price = 11132, 
+        XP = 11130, 
         Seasons = {
             "Winter"
         }, 
@@ -4711,8 +4907,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 100000, 
-        XP = 300000, 
+        Price = 11345, 
+        XP = 11340, 
         Seasons = {
             "None"
         }, 
@@ -4743,8 +4939,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 8000, 
-        XP = 5000, 
+        Price = 11132, 
+        XP = 11130, 
         Seasons = {
             "None"
         }, 
@@ -4777,8 +4973,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 80000, 
-        XP = 32000, 
+        Price = 11250, 
+        XP = 11250, 
         Seasons = {
             "None"
         }, 
@@ -4811,8 +5007,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 152000, 
-        XP = 520000, 
+        Price = 11321, 
+        XP = 11320, 
         Seasons = {
             "None"
         }, 
@@ -4846,8 +5042,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Golden Worm", 
         FavouriteTime = nil, 
-        Price = 155000, 
-        XP = 300000, 
+        Price = 13032, 
+        XP = 13030, 
         Seasons = {
             "None"
         }, 
@@ -4882,8 +5078,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Golden Worm", 
         FavouriteTime = nil, 
-        Price = 150000, 
-        XP = 500000, 
+        Price = 11250, 
+        XP = 11250, 
         Seasons = {
             "None"
         }, 
@@ -4919,8 +5115,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 5000, 
+        Price = 10125, 
+        XP = 10120, 
         Seasons = {
             "None"
         }, 
@@ -4954,8 +5150,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Night Shrimp", 
         FavouriteTime = nil, 
-        Price = 12500, 
-        XP = 35000, 
+        Price = 11463, 
+        XP = 11460, 
         Seasons = {
             "Winter"
         }, 
@@ -5022,8 +5218,8 @@ local v5 = {
         Hint = "Shimmers in clear spring waters.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 1200, 
-        XP = 2200, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "Winter", 
             "Spring"
@@ -5056,8 +5252,8 @@ local v5 = {
         Hint = "Puffs up under clear autumn skies.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 1200, 
-        XP = 2200, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "Autumn"
         }, 
@@ -5089,8 +5285,8 @@ local v5 = {
         Hint = "Gleams in rainy summer nights, only caught by clever traps.", 
         FavouriteBait = nil, 
         FavouriteTime = "Night", 
-        Price = 1000, 
-        XP = 2000, 
+        Price = 368, 
+        XP = 220, 
         Seasons = {
             "Summer"
         }, 
@@ -5122,8 +5318,8 @@ local v5 = {
         Hint = "Sparkles in rainy summer nights, elusive to all but traps.", 
         FavouriteBait = nil, 
         FavouriteTime = "Night", 
-        Price = 8000, 
-        XP = 20000, 
+        Price = 1838, 
+        XP = 1470, 
         Seasons = {
             "Summer"
         }, 
@@ -5155,8 +5351,8 @@ local v5 = {
         Hint = "Strums in rainy summer days.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Day", 
-        Price = 7000, 
-        XP = 9000, 
+        Price = 1500, 
+        XP = 1200, 
         Seasons = {
             "Summer"
         }, 
@@ -5188,8 +5384,8 @@ local v5 = {
         Hint = "Lurks in rainy summer nights.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Night", 
-        Price = 8000, 
-        XP = 10000, 
+        Price = 1500, 
+        XP = 1200, 
         Seasons = {
             "Summer"
         }, 
@@ -5221,8 +5417,8 @@ local v5 = {
         Hint = "Dances in rainy summer nights, only caught by the craftiest traps.", 
         FavouriteBait = nil, 
         FavouriteTime = "Night", 
-        Price = 15000, 
-        XP = 40000, 
+        Price = 3062, 
+        XP = 2450, 
         Seasons = {
             "Summer"
         }, 
@@ -5254,8 +5450,8 @@ local v5 = {
         Hint = "Spins in clear spring nights.", 
         FavouriteBait = "Snare", 
         FavouriteTime = "Night", 
-        Price = 12000, 
-        XP = 20000, 
+        Price = 2500, 
+        XP = 2000, 
         Seasons = {
             "Summer", 
             "Spring"
@@ -5289,7 +5485,7 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = nil, 
-        Price = 20000, 
+        Price = 10000, 
         XP = 8000, 
         Seasons = {
             "None"
@@ -5329,8 +5525,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Day", 
-        Price = 20000, 
-        XP = 8000, 
+        Price = 6250, 
+        XP = 6250, 
         Seasons = {
             "Spring", 
             "Winter"
@@ -5368,8 +5564,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 50, 
-        XP = 100, 
+        Price = 5000, 
+        XP = 5000, 
         Seasons = {
             "None"
         }, 
@@ -5386,7 +5582,8 @@ local v5 = {
         Worlds = {
             "Sea 1"
         }, 
-        BlockPassiveCapture = true
+        BlockPassiveCapture = true, 
+        RewardTitle = "Him"
     }, 
     ["\240\159\144\139"] = {
         Icon = "rbxassetid://131380228822418", 
@@ -5402,8 +5599,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5, 
-        XP = 10, 
+        Price = 5000, 
+        XP = 5000, 
         Seasons = {
             "None"
         }, 
@@ -5420,7 +5617,8 @@ local v5 = {
         Worlds = {
             "Sea 1"
         }, 
-        BlockPassiveCapture = true
+        BlockPassiveCapture = true, 
+        RewardTitle = "\240\159\144\139"
     }, 
     ["\240\159\166\136"] = {
         Icon = "rbxassetid://90384385365540", 
@@ -5436,8 +5634,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5, 
-        XP = 10, 
+        Price = 5000, 
+        XP = 5000, 
         Seasons = {
             "None"
         }, 
@@ -5454,7 +5652,8 @@ local v5 = {
         Worlds = {
             "Sea 1"
         }, 
-        BlockPassiveCapture = true
+        BlockPassiveCapture = true, 
+        RewardTitle = "\240\159\166\136"
     }, 
     ["\240\159\166\145"] = {
         Icon = "rbxassetid://93002700239933", 
@@ -5470,8 +5669,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5, 
-        XP = 10, 
+        Price = 5000, 
+        XP = 5000, 
         Seasons = {
             "None"
         }, 
@@ -5488,7 +5687,8 @@ local v5 = {
         Worlds = {
             "Sea 1"
         }, 
-        BlockPassiveCapture = true
+        BlockPassiveCapture = true, 
+        RewardTitle = "\240\159\166\145"
     }, 
     ["\240\159\144\161"] = {
         Icon = "rbxassetid://114436592672349", 
@@ -5504,8 +5704,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5, 
-        XP = 10, 
+        Price = 5000, 
+        XP = 5000, 
         Seasons = {
             "None"
         }, 
@@ -5522,7 +5722,8 @@ local v5 = {
         Worlds = {
             "Sea 1"
         }, 
-        BlockPassiveCapture = true
+        BlockPassiveCapture = true, 
+        RewardTitle = "\240\159\144\161"
     }, 
     ["\240\159\144\159"] = {
         Icon = "rbxassetid://79632511271596", 
@@ -5538,8 +5739,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 5, 
-        XP = 10, 
+        Price = 5000, 
+        XP = 5000, 
         Seasons = {
             "None"
         }, 
@@ -5588,7 +5789,8 @@ local v5 = {
         Worlds = {
             "Sea 1"
         }, 
-        BlockPassiveCapture = true
+        BlockPassiveCapture = true, 
+        RewardTitle = "\240\159\144\159"
     }, 
     Doubloon = {
         Icon = "rbxassetid://-1", 
@@ -5604,8 +5806,8 @@ local v5 = {
         Hint = "", 
         FavouriteBait = "", 
         FavouriteTime = "", 
-        Price = 1, 
-        XP = 0, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Summer"
         }, 
@@ -5619,7 +5821,11 @@ local v5 = {
         Worlds = {
             "Sea 1"
         }, 
-        Unregistered = true
+        Unregistered = true, 
+        BlockCatchMessage = true, 
+        RemoveMutations = true, 
+        RemoveShiny = true, 
+        RemoveSparkling = true
     }, 
     ["Friend Fish"] = {
         Icon = "rbxassetid://95707933700367", 
@@ -5635,8 +5841,8 @@ local v5 = {
         Hint = "A very friendly fish...", 
         FavouriteBait = "Pizza", 
         FavouriteTime = nil, 
-        Price = 1, 
-        XP = 1, 
+        Price = 6908, 
+        XP = 6910, 
         Seasons = {
             "NONE!"
         }, 
@@ -6258,7 +6464,7 @@ local v5 = {
         FavouriteBait = "Gale Grub", 
         FavouriteTime = "Day", 
         Price = 50, 
-        XP = 70, 
+        XP = 30, 
         Seasons = {
             "Summer"
         }, 
@@ -6290,10 +6496,10 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = "Night", 
-        Price = 70, 
-        XP = 80, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
-            "Autumn"
+            "Spring"
         }, 
         Weather = {
             "Windy"
@@ -6324,8 +6530,8 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 100, 
-        XP = 100, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Spring"
         }, 
@@ -6358,7 +6564,7 @@ local v5 = {
         FavouriteBait = "Worm", 
         FavouriteTime = "Night", 
         Price = 110, 
-        XP = 105, 
+        XP = 70, 
         Seasons = {
             "Winter"
         }, 
@@ -6390,10 +6596,10 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Day", 
-        Price = 300, 
-        XP = 180, 
+        Price = 225, 
+        XP = 140, 
         Seasons = {
-            "Summer"
+            "Winter"
         }, 
         Weather = {
             "Clear"
@@ -6424,10 +6630,10 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Night", 
-        Price = 320, 
-        XP = 190, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
-            "Autumn"
+            "Spring"
         }, 
         Weather = {
             "Foggy"
@@ -6458,10 +6664,10 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Night", 
-        Price = 4000, 
-        XP = 1800, 
+        Price = 2016, 
+        XP = 1610, 
         Seasons = {
-            "Winter"
+            "Autumn"
         }, 
         Weather = {
             "Foggy"
@@ -6492,10 +6698,10 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 6800, 
-        XP = 2200, 
+        Price = 3523, 
+        XP = 2820, 
         Seasons = {
-            "Winter"
+            "Autumn"
         }, 
         Weather = {
             "Foggy"
@@ -6526,10 +6732,10 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 14000, 
-        XP = 5000, 
+        Price = 7743, 
+        XP = 11790, 
         Seasons = {
-            "Summer"
+            "Autumn"
         }, 
         Weather = {
             "Clear"
@@ -6561,10 +6767,10 @@ local v5 = {
         Hint = "Lurks in waters favored by pirates.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 50000, 
-        XP = 20000, 
+        Price = 7488, 
+        XP = 7490, 
         Seasons = {
-            "Winter"
+            "Autumn"
         }, 
         Weather = {
             "Foggy"
@@ -6581,6 +6787,714 @@ local v5 = {
             "Sea 1"
         }
     }, 
+    ["Mexican Tetra"] = {
+        Icon = "rbxassetid://122083760302325", 
+        WeightPool = {
+            5, 
+            15
+        }, 
+        Chance = 100, 
+        Rarity = "Common", 
+        Resilience = 100, 
+        Description = "A small, schooling characin found in cave pools and streams, often blind in subterranean forms.", 
+        Hint = "Obtainable at Cultist Lair", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Day", 
+        Price = 50, 
+        XP = 30, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Mexican Tetra!", 
+            "Blind but bold!", 
+            "Cave wanderer!"
+        }, 
+        SparkleColor = Color3.fromRGB(150, 200, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    ["Abyssal Slickhead"] = {
+        Icon = "rbxassetid://123413492069227", 
+        WeightPool = {
+            20, 
+            70
+        }, 
+        Chance = 90, 
+        Rarity = "Common", 
+        Resilience = 95, 
+        Description = "A deep-sea slickhead with smooth, scaleless skin, inhabiting abyssal waters.", 
+        Hint = "Obtainable at Cultist Lair", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 51, 
+        XP = 30, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "An Abyssal Slickhead!", 
+            "Oily and ominous!", 
+            "Slithers from the depths!"
+        }, 
+        SparkleColor = Color3.fromRGB(100, 100, 120), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Cultist Lair"
+    }, 
+    ["Cave Loach"] = {
+        Icon = "rbxassetid://118326447536654", 
+        WeightPool = {
+            8, 
+            30
+        }, 
+        Chance = 80, 
+        Rarity = "Common", 
+        Resilience = 92, 
+        Description = "A bottom-dwelling loach adapted to cave streams, using barbels to forage in darkness.", 
+        Hint = "Obtainable at Cultist Lair and The Sanctum", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 51, 
+        XP = 30, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Cave Loach!", 
+            "Whiskers in the dark!", 
+            "Bottom feeder supreme!"
+        }, 
+        SparkleColor = Color3.fromRGB(200, 180, 120), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    ["Scaly Dragonfish"] = {
+        Icon = "rbxassetid://129717322722323", 
+        WeightPool = {
+            100, 
+            280
+        }, 
+        Chance = 3, 
+        Rarity = "Mythical", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.2, 
+        Description = "A predatory deep-sea fish with fang-like teeth and a chin barbel for luring prey.", 
+        Hint = "Obtainable at Cultist Lair", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 3558, 
+        XP = 2850, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Scaly Dragonfish!", 
+            "Fierce and fanged!", 
+            "Dragon of the depths!"
+        }, 
+        SparkleColor = Color3.fromRGB(50, 100, 150), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Cultist Lair"
+    }, 
+    Sinocyclocheilus = {
+        Icon = "rbxassetid://95210315375474", 
+        WeightPool = {
+            10, 
+            40
+        }, 
+        Chance = 60, 
+        Rarity = "Uncommon", 
+        Resilience = 70, 
+        ProgressEfficiency = 1.06, 
+        Description = "A cave-dwelling barb from Chinese karst caves, often blind with reduced pigmentation.", 
+        Hint = "Obtainable at Cultist Lair", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Day", 
+        Price = 108, 
+        XP = 60, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Sinocyclocheilus!", 
+            "Eternal cave dweller!", 
+            "See with senses alone!"
+        }, 
+        SparkleColor = Color3.fromRGB(120, 200, 180), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    Typhleotris = {
+        Icon = "rbxassetid://116408502480937", 
+        WeightPool = {
+            12, 
+            45
+        }, 
+        Chance = 55, 
+        Rarity = "Uncommon", 
+        Resilience = 68, 
+        ProgressEfficiency = 1.05, 
+        Description = "A blind cave gudgeon from Madagascar karst caves, lacking pigmentation.", 
+        Hint = "Obtainable at the Hall of Whispers", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Night", 
+        Price = 108, 
+        XP = 60, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Typhleotris!", 
+            "Phantom of the caves!", 
+            "Invisible hunter!"
+        }, 
+        SparkleColor = Color3.fromRGB(200, 200, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    ["Gollum Snakehead"] = {
+        Icon = "rbxassetid://87794872338917", 
+        WeightPool = {
+            15, 
+            50
+        }, 
+        Chance = 45, 
+        Rarity = "Uncommon", 
+        Resilience = 65, 
+        Description = "A blind cavefish from North American karst aquifers, using vibration to navigate.", 
+        Hint = "Obtainable at the Hall of Whispers", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Day", 
+        Price = 109, 
+        XP = 70, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Gollum Snakehead!", 
+            "Vibration visionary!", 
+            "Dark domain master!"
+        }, 
+        SparkleColor = Color3.fromRGB(220, 220, 200), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Cultist Lair"
+    }, 
+    ["Stoplight Loosejaw"] = {
+        Icon = "rbxassetid://113009657863494", 
+        WeightPool = {
+            250, 
+            850
+        }, 
+        Chance = 5, 
+        Rarity = "Mythical", 
+        Resilience = 45, 
+        ProgressEfficiency = 0.25, 
+        Description = "A deep-sea dragonfish with red and green bioluminescent lights for hunting zooplankton.", 
+        Hint = "Obtainable at the Hall of Whispers and The Sanctum", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 3337, 
+        XP = 2670, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "A Stoplight Loosejaw!", 
+            "Glowing nightmare!", 
+            "Jaws of doom!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 255, 100), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Cultist Lair"
+    }, 
+    ["Garra Andruzzii"] = {
+        Icon = "rbxassetid://131986997216374", 
+        WeightPool = {
+            10, 
+            40
+        }, 
+        Chance = 30, 
+        Rarity = "Rare", 
+        Resilience = 40, 
+        ProgressEfficiency = 1.12, 
+        Description = "A blind cave barb from Somali phreatic waters, scaleless and depigmented.", 
+        Hint = "Obtainable at the Hall of Whispers", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = "Day", 
+        Price = 345, 
+        XP = 210, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Garra Andruzzii!", 
+            "Wall-clinging enigma!", 
+            "Blind climber!"
+        }, 
+        SparkleColor = Color3.fromRGB(180, 150, 100), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    ["Blind Swamp Eel"] = {
+        Icon = "rbxassetid://101516422693600", 
+        WeightPool = {
+            18, 
+            60
+        }, 
+        Chance = 25, 
+        Rarity = "Unusual", 
+        Resilience = 55, 
+        Description = "An elongated, blind swamp eel from Mexican cave systems, burrowing in muddy substrates.", 
+        Hint = "Obtainable at the Hall of Whispers", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Night", 
+        Price = 222, 
+        XP = 130, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A Blind Swamp Eel!", 
+            "Slithery swamp snake!", 
+            "Burrows in bog!"
+        }, 
+        SparkleColor = Color3.fromRGB(100, 150, 80), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    Cathulid = {
+        Icon = "rbxassetid://134935216163521", 
+        WeightPool = {
+            35, 
+            100
+        }, 
+        Chance = 20, 
+        Rarity = "Exotic", 
+        Resilience = 50, 
+        Description = "A fictional eldritch abomination whispering from the cultist depths.", 
+        Hint = "Obtainable at the Hall of Whispers", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 6250, 
+        XP = 9000, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Cathulid!", 
+            "Eldritch whisperer!", 
+            "Tentacles twitch!"
+        }, 
+        SparkleColor = Color3.fromRGB(150, 50, 200), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Cultist Lair"
+    }, 
+    ["Sloane's Viperfish"] = {
+        Icon = "rbxassetid://140193171843384", 
+        WeightPool = {
+            30, 
+            90
+        }, 
+        Chance = 18, 
+        Rarity = "Rare", 
+        Resilience = 38, 
+        ProgressEfficiency = 1.15, 
+        Description = "A mesopelagic predator with fang-like teeth and a bioluminescent lure.", 
+        Hint = "Obtainable at the Passage of Oaths", 
+        FavouriteBait = "Minnow", 
+        FavouriteTime = "Night", 
+        Price = 346, 
+        XP = 210, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "Sloane\226\128\153s Viperfish!", 
+            "Fangs in the void!", 
+            "Lantern lure!"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 200, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Cultist Lair"
+    }, 
+    ["Spiny Hatchetfish"] = {
+        Icon = "rbxassetid://74419905981363", 
+        WeightPool = {
+            25, 
+            75
+        }, 
+        Chance = 16, 
+        Rarity = "Rare", 
+        Resilience = 35, 
+        ProgressEfficiency = 1.13, 
+        Description = "A mesopelagic fish with upward-facing eyes and tubular photophores.", 
+        Hint = "Obtainable at the Passage of Oaths and The Sanctum", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Day", 
+        Price = 349, 
+        XP = 210, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A Spiny Hatchetfish!", 
+            "Razor wings!", 
+            "Glides like death!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 100, 150), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    Swampfish = {
+        Icon = "rbxassetid://93692214428501", 
+        WeightPool = {
+            15, 
+            50
+        }, 
+        Chance = 14, 
+        Rarity = "Legendary", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.7, 
+        Description = "A blind cavefish from southeastern U.S. swamps and streams.", 
+        Hint = "Obtainable at the Passage of Oaths", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Night", 
+        Price = 1900, 
+        XP = 1520, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "A SWAMPFISH!", 
+            "MURKY MENACE!", 
+            "BLIND BUT BRUTAL!"
+        }, 
+        SparkleColor = Color3.fromRGB(80, 120, 60), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    ["Garra Typhlops"] = {
+        Icon = "rbxassetid://79695356555464", 
+        WeightPool = {
+            12, 
+            45
+        }, 
+        Chance = 12, 
+        Rarity = "Legendary", 
+        Resilience = 22, 
+        ProgressEfficiency = 0.65, 
+        Description = "A blind cave barb clinging to rocks in Iranian subterranean streams.", 
+        Hint = "Obtainable at the Passage of Oaths", 
+        FavouriteBait = "Seaweed", 
+        FavouriteTime = "Day", 
+        Price = 1931, 
+        XP = 1540, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A GARRA TYPLOPS!", 
+            "CLINGS TO DARKNESS!", 
+            "ETERNAL BLIND!"
+        }, 
+        SparkleColor = Color3.fromRGB(140, 100, 180), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    ["Abyssal Grenadier"] = {
+        Icon = "rbxassetid://100746099215107", 
+        WeightPool = {
+            700, 
+            2500
+        }, 
+        Chance = 10, 
+        Rarity = "Mythical", 
+        Resilience = 18, 
+        ProgressEfficiency = 0.45, 
+        Description = "A deep-sea rattail scavenging abyssal plains worldwide.", 
+        Hint = "Obtainable at the Passage of Oaths", 
+        FavouriteBait = "Fish Head", 
+        FavouriteTime = "Night", 
+        Price = 3374, 
+        XP = 2700, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Windy"
+        }, 
+        Quips = {
+            "AN ABYSSAL GRENADIER!", 
+            "RATTAIL TITAN!", 
+            "CRUSHER FROM BELOW!"
+        }, 
+        SparkleColor = Color3.fromRGB(60, 60, 120), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Cultist Lair"
+    }, 
+    Cathulith = {
+        Icon = "rbxassetid://112779729946329", 
+        WeightPool = {
+            1000, 
+            4000
+        }, 
+        Chance = 7, 
+        Rarity = "Exotic", 
+        Resilience = 14, 
+        ProgressEfficiency = 0.4, 
+        Description = "A fictional ancient abomination writhing in cultist shadows.", 
+        Hint = "Obtainable at the Passage of Oaths", 
+        FavouriteBait = "Squid", 
+        FavouriteTime = "Night", 
+        Price = 6729, 
+        XP = 10980, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A CATHULITH!", 
+            "ANCIENT ABOMINATION!", 
+            "WRITHE IN FEAR!"
+        }, 
+        SparkleColor = Color3.fromRGB(100, 20, 150), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Cultist Lair"
+    }, 
+    ["Cave Angel Fish"] = {
+        Icon = "rbxassetid://109182511876293", 
+        WeightPool = {
+            40, 
+            110
+        }, 
+        Chance = 5, 
+        Rarity = "Exotic", 
+        Resilience = 12, 
+        ProgressEfficiency = 0.25, 
+        Description = "A waterfall-climbing cave loach from Thai subterranean streams.", 
+        Hint = "Obtainable at The Sanctum", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = "Day", 
+        Price = 8174, 
+        XP = 11340, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "Clear"
+        }, 
+        Quips = {
+            "A CAVE ANGEL FISH!", 
+            "CELESTIAL IN SHADOWS!", 
+            "FALLEN SERAPH!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 100), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    ["Ozark Cavefish"] = {
+        Icon = "rbxassetid://83240292547701", 
+        WeightPool = {
+            8, 
+            35
+        }, 
+        Chance = 20, 
+        Rarity = "Legendary", 
+        Resilience = 19, 
+        ProgressEfficiency = 0.4, 
+        Description = "A translucent, blind cavefish from Ozark karst aquifers.", 
+        Hint = "Obtainable at The Sanctum", 
+        FavouriteBait = "Worm", 
+        FavouriteTime = "Night", 
+        Price = 2041, 
+        XP = 1630, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "AN OZARK CAVEFISH!", 
+            "TRANSLUCENT TREASURE!", 
+            "VOID VETERAN!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 200, 220), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    Leviathan = {
+        Icon = "rbxassetid://87964387582734", 
+        WeightPool = {
+            2000000, 
+            3800000
+        }, 
+        Chance = 1, 
+        FinalChanceDivisor = 5, 
+        Rarity = "Exotic", 
+        BlockPassiveCapture = true, 
+        PassiveChanceDivisor = 12, 
+        Resilience = -10, 
+        ForcedProgressEfficiency = 0.05, 
+        Description = "???", 
+        Hint = "???", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Night", 
+        Price = 56250, 
+        XP = 20000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A LEVIATHAN!", 
+            "FROM THE VOID!"
+        }, 
+        SparkleColor = Color3.fromRGB(200, 0, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Cultist Lair"
+    }, 
+    ["Profane Leviathan"] = {
+        Icon = "rbxassetid://113371310866535", 
+        WeightPool = {
+            2200000, 
+            4200000
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        BlockPassiveCapture = true, 
+        PassiveChanceDivisor = 5, 
+        Resilience = -50, 
+        ForcedProgressEfficiency = 0.04, 
+        Description = "???", 
+        Hint = "???", 
+        FavouriteBait = "Luminous Larva", 
+        FavouriteTime = "Night", 
+        Price = 62500, 
+        XP = 25000, 
+        Seasons = {
+            "Winter"
+        }, 
+        Weather = {
+            "Foggy"
+        }, 
+        Quips = {
+            "A PROFANE LEVIATHAN!", 
+            "FROM THE VOID!"
+        }, 
+        SparkleColor = Color3.fromRGB(200, 0, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        From = "Cultist Lair"
+    }, 
+    ["Key of Oaths"] = {
+        Icon = "rbxassetid://82147182722710", 
+        WeightPool = {
+            5, 
+            10
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 35, 
+        ProgressEfficiency = 0.9, 
+        Description = "This is the Key that leads to the gates of the Passage of Oaths...", 
+        Hint = "Where does this key open up?...", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Day", 
+        Price = 800, 
+        XP = 350, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "I caught a key!", 
+            "Woah, a key!!"
+        }, 
+        SparkleColor = Color3.fromRGB(126, 126, 126), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
+    ["Key of Whispers"] = {
+        Icon = "rbxassetid://139759974332159", 
+        WeightPool = {
+            5, 
+            10
+        }, 
+        Chance = 1, 
+        Rarity = "Exotic", 
+        Resilience = 35, 
+        ProgressEfficiency = 0.9, 
+        Description = "This is the Key that leads to the gates of the Hall of Whispers...", 
+        Hint = "Where does this key open up?...", 
+        FavouriteBait = "None", 
+        FavouriteTime = "Day", 
+        Price = 800, 
+        XP = 350, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "I caught a key!", 
+            "Woah, a key!!"
+        }, 
+        SparkleColor = Color3.fromRGB(126, 126, 126), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Cultist Lair"
+    }, 
     ["Bloop Fish"] = {
         Icon = "rbxassetid://84676091673435", 
         BlockPassiveCapture = true, 
@@ -6596,8 +7510,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Luminous Larva", 
         FavouriteTime = "Night", 
-        Price = 250000, 
-        XP = 600000, 
+        Price = 55063, 
+        XP = 20080, 
         Seasons = {
             "Autumn"
         }, 
@@ -6617,7 +7531,8 @@ local v5 = {
         Worlds = {
             "Sea 1"
         }, 
-        HideInBestiary = true
+        HideInBestiary = true, 
+        BiteColor = Color3.fromRGB(192, 226, 255)
     }, 
     ["Baby Bloop Fish"] = {
         Icon = "rbxassetid://105810326444747", 
@@ -6634,8 +7549,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Luminous Larva", 
         FavouriteTime = "Night", 
-        Price = 100000, 
-        XP = 80000, 
+        Price = 7184, 
+        XP = 7180, 
         Seasons = {
             "Autumn"
         }, 
@@ -6669,8 +7584,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Golden Worm", 
         FavouriteTime = nil, 
-        Price = 230000, 
-        XP = 500000, 
+        Price = 35032, 
+        XP = 20040, 
         Seasons = {
             "Summer"
         }, 
@@ -6709,8 +7624,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 150000, 
-        XP = 130000, 
+        Price = 17970, 
+        XP = 23960, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -6746,8 +7661,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Day", 
-        Price = 130000, 
-        XP = 120000, 
+        Price = 17692, 
+        XP = 23590, 
         Seasons = {
             "Summer"
         }, 
@@ -6782,8 +7697,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Luminous Larva", 
         FavouriteTime = nil, 
-        Price = 200000, 
-        XP = 400000, 
+        Price = 20000, 
+        XP = 40000, 
         Seasons = {
             "None"
         }, 
@@ -6801,7 +7716,8 @@ local v5 = {
         Worlds = {
             "Sea 1"
         }, 
-        HideInBestiary = true
+        HideInBestiary = true, 
+        BiteColor = Color3.fromRGB(0, 234, 255)
     }, 
     Mosslurker = {
         Icon = "rbxassetid://138877273682281", 
@@ -6818,8 +7734,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = "Night", 
-        Price = 200000, 
-        XP = 400000, 
+        Price = 35000, 
+        XP = 20000, 
         Seasons = {
             "None"
         }, 
@@ -6837,7 +7753,8 @@ local v5 = {
         Worlds = {
             "Sea 1"
         }, 
-        HideInBestiary = true
+        HideInBestiary = true, 
+        BiteColor = Color3.fromRGB(84, 203, 98)
     }, 
     ["Carrot Goldfish"] = {
         Icon = "rbxassetid://115276761742692", 
@@ -6853,8 +7770,8 @@ local v5 = {
         Hint = "Found in the vibrant carrot pool!", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 100, 
-        XP = 100, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Spring"
         }, 
@@ -6887,8 +7804,8 @@ local v5 = {
         Hint = "Found in the vibrant carrot pool!", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 150, 
-        XP = 150, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Spring"
         }, 
@@ -6921,8 +7838,8 @@ local v5 = {
         Hint = "Found in the vibrant carrot pool!", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 500, 
-        XP = 500, 
+        Price = 103, 
+        XP = 60, 
         Seasons = {
             "Spring"
         }, 
@@ -6955,8 +7872,8 @@ local v5 = {
         Hint = "Found in the vibrant carrot pool!", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 700, 
-        XP = 700, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Spring"
         }, 
@@ -6989,8 +7906,8 @@ local v5 = {
         Hint = "Found in the vibrant carrot pool!", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 1000, 
-        XP = 1000, 
+        Price = 336, 
+        XP = 200, 
         Seasons = {
             "Spring"
         }, 
@@ -7023,8 +7940,8 @@ local v5 = {
         Hint = "Found in the vibrant carrot pool!", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 3000, 
-        XP = 3000, 
+        Price = 1882, 
+        XP = 1510, 
         Seasons = {
             "Spring"
         }, 
@@ -7057,8 +7974,8 @@ local v5 = {
         Hint = "Found in the vibrant carrot pool!", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 4000, 
-        XP = 4000, 
+        Price = 3182, 
+        XP = 2550, 
         Seasons = {
             "Spring"
         }, 
@@ -7091,8 +8008,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 8000, 
-        XP = 8000, 
+        Price = 5405, 
+        XP = 11520, 
         Seasons = {
             "Spring"
         }, 
@@ -7126,8 +8043,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 30000, 
-        XP = 20000, 
+        Price = 6053, 
+        XP = 6050, 
         Seasons = {
             "None"
         }, 
@@ -7158,8 +8075,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 30000, 
-        XP = 20000, 
+        Price = 6053, 
+        XP = 6050, 
         Seasons = {
             "None"
         }, 
@@ -7189,8 +8106,8 @@ local v5 = {
         Hint = "It glides where the ice meets the dawn's first light.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 400, 
-        XP = 280, 
+        Price = 53, 
+        XP = 30, 
         Seasons = {
             "Winter"
         }, 
@@ -7220,8 +8137,8 @@ local v5 = {
         Hint = "It darts beneath the frozen winds.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = nil, 
-        Price = 580, 
-        XP = 370, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Winter"
         }, 
@@ -7251,8 +8168,8 @@ local v5 = {
         Hint = "It haunts the foggy chill of dusk.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = nil, 
-        Price = 1000, 
-        XP = 750, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "Winter"
         }, 
@@ -7282,8 +8199,8 @@ local v5 = {
         Hint = "It sweeps through the snowy tides.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 1900, 
-        XP = 900, 
+        Price = 111, 
+        XP = 70, 
         Seasons = {
             "Winter"
         }, 
@@ -7313,8 +8230,8 @@ local v5 = {
         Hint = "It probes the clear, cold depths.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 2850, 
-        XP = 1880, 
+        Price = 219, 
+        XP = 130, 
         Seasons = {
             "Winter"
         }, 
@@ -7344,8 +8261,8 @@ local v5 = {
         Hint = "It hunts under the rainy mist.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 3500, 
-        XP = 2950, 
+        Price = 338, 
+        XP = 200, 
         Seasons = {
             "Winter"
         }, 
@@ -7375,8 +8292,8 @@ local v5 = {
         Hint = "It flashes within the deep fog.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = nil, 
-        Price = 4600, 
-        XP = 3100, 
+        Price = 1706, 
+        XP = 1360, 
         Seasons = {
             "Winter"
         }, 
@@ -7406,8 +8323,8 @@ local v5 = {
         Hint = "It waits where the winds howl over frozen waves.", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = nil, 
-        Price = 8000, 
-        XP = 5500, 
+        Price = 2974, 
+        XP = 2380, 
         Seasons = {
             "Winter"
         }, 
@@ -7438,8 +8355,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 30000, 
-        XP = 20000, 
+        Price = 6053, 
+        XP = 6050, 
         Seasons = {
             "None"
         }, 
@@ -7469,8 +8386,8 @@ local v5 = {
         Hint = "It dances where the fog cloaks the edge.", 
         FavouriteBait = "Ember Berries", 
         FavouriteTime = nil, 
-        Price = 200, 
-        XP = 480, 
+        Price = 53, 
+        XP = 30, 
         Seasons = {
             "Winter"
         }, 
@@ -7503,8 +8420,8 @@ local v5 = {
         Hint = "It slinks through the rainy shallows.", 
         FavouriteBait = "Gale Grub", 
         FavouriteTime = nil, 
-        Price = 290, 
-        XP = 1055, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Winter"
         }, 
@@ -7537,8 +8454,8 @@ local v5 = {
         Hint = "It waits where the winds stir the bog's surface.", 
         FavouriteBait = "Lagoon Leech", 
         FavouriteTime = nil, 
-        Price = 500, 
-        XP = 1525, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "Winter"
         }, 
@@ -7571,8 +8488,8 @@ local v5 = {
         Hint = "It swims where the waters clear under starlight.", 
         FavouriteBait = "Mist Worms", 
         FavouriteTime = nil, 
-        Price = 950, 
-        XP = 2350, 
+        Price = 222, 
+        XP = 130, 
         Seasons = {
             "Winter"
         }, 
@@ -7605,8 +8522,8 @@ local v5 = {
         Hint = "It flails where the rain feeds the water's heart.", 
         FavouriteBait = "Lushrooms", 
         FavouriteTime = nil, 
-        Price = 1425, 
-        XP = 3820, 
+        Price = 338, 
+        XP = 200, 
         Seasons = {
             "Winter"
         }, 
@@ -7639,8 +8556,8 @@ local v5 = {
         Hint = "It gleams where the fog hides the secrets.", 
         FavouriteBait = "Crystal Bananas", 
         FavouriteTime = nil, 
-        Price = 1750, 
-        XP = 5425, 
+        Price = 1706, 
+        XP = 1360, 
         Seasons = {
             "Winter"
         }, 
@@ -7673,8 +8590,8 @@ local v5 = {
         Hint = "It glides where the winds carve the bog's surface.", 
         FavouriteBait = "Sapphire Krill", 
         FavouriteTime = nil, 
-        Price = 2300, 
-        XP = 8500, 
+        Price = 2906, 
+        XP = 2320, 
         Seasons = {
             "Winter"
         }, 
@@ -7689,36 +8606,6 @@ local v5 = {
         SparkleColor = Color3.fromRGB(103, 128, 158), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Blue Moon - First Sea", 
-        Worlds = {
-            "Sea 1"
-        }
-    }, 
-    Shell = {
-        Icon = "rbxassetid://80553083768726", 
-        WeightPool = {
-            5, 
-            10
-        }, 
-        Chance = 0, 
-        Rarity = "Extinct", 
-        Resilience = 100, 
-        ProgressEfficiency = 1, 
-        Description = "A swift, shrimp-like creature with a tail that flicks like a whip, stashing shells in hidden burrows.", 
-        Hint = "It darts through the mist where the waves whisper.", 
-        FavouriteBait = nil, 
-        FavouriteTime = nil, 
-        Price = 0, 
-        XP = 0, 
-        Seasons = nil, 
-        Weather = nil, 
-        Quips = {
-            "A Shrimpanzee!", 
-            "Tail-whippin' treasure!", 
-            "Burrow bandit!"
-        }, 
-        SparkleColor = Color3.fromRGB(159, 132, 115), 
-        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        From = nil, 
         Worlds = {
             "Sea 1"
         }
@@ -7892,6 +8779,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         From = "Octophant", 
         Worlds = {
             "Sea 1"
@@ -7911,8 +8799,8 @@ local v5 = {
         Hint = "It drifts where the sun warms the stillness.", 
         FavouriteBait = "Golden Worm", 
         FavouriteTime = nil, 
-        Price = 45000, 
-        XP = 100000, 
+        Price = 4500, 
+        XP = 10000, 
         Seasons = {
             "Summer"
         }, 
@@ -7927,6 +8815,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(150, 150, 150), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         From = "Octophant", 
         Worlds = {
             "Sea 1"
@@ -8192,6 +9081,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Cults Curse", 
         IsLimitedBestiary = true, 
         From = "Cults Curse"
@@ -8823,6 +9713,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(101, 96, 19), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         From = "Animals1"
     }, 
     ["Mama Poot"] = {
@@ -9164,6 +10055,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(38, 252, 95), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         From = "Lucky Event"
     }, 
     ["Rowdy McCharm"] = {
@@ -9195,6 +10087,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(38, 252, 95), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         From = "Lucky Event"
     }, 
     ["Plumrick O'Luck"] = {
@@ -9226,6 +10119,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(38, 252, 95), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         From = "Lucky Event"
     }, 
     ["O'Mango Goldgrin"] = {
@@ -9257,6 +10151,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(38, 252, 95), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         From = "Lucky Event"
     }, 
     ["Blarney McBreeze"] = {
@@ -9288,6 +10183,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(38, 252, 95), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         From = "Lucky Event"
     }, 
     ["Magma Leviathan"] = {
@@ -9306,8 +10202,8 @@ local v5 = {
         Hint = "Surfaces in thick fog, as if the volcano itself breathes it to life.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Day", 
-        Price = 25000, 
-        XP = 12000, 
+        Price = 14793, 
+        XP = 11830, 
         Seasons = {
             "Summer"
         }, 
@@ -9337,8 +10233,8 @@ local v5 = {
         Hint = "Can be collected by feeding a baby anglerfish", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 1200, 
-        XP = 350, 
+        Price = 4925, 
+        XP = 1940, 
         Seasons = {
             "None"
         }, 
@@ -9371,8 +10267,8 @@ local v5 = {
         Hint = "Appears during the darkest nights, when the ocean is still.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 22000, 
-        XP = 16000, 
+        Price = 14925, 
+        XP = 11940, 
         Seasons = {
             "Autumn"
         }, 
@@ -9403,8 +10299,8 @@ local v5 = {
         Hint = "Appears during the calmest days, when the wind is strong.", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = nil, 
-        Price = 35000, 
-        XP = 40000, 
+        Price = 14975, 
+        XP = 11980, 
         Seasons = {
             "Spring"
         }, 
@@ -9433,8 +10329,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = nil, 
-        Price = 200000, 
-        XP = 500000, 
+        Price = 44238, 
+        XP = 16240, 
         Seasons = {
             "None"
         }, 
@@ -9451,11 +10347,7 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         From = "Veil of the Forsaken", 
-        CustomProgressEfficiency = {
-            {
-                Value = -0.95
-            }
-        }
+        ForcedProgressEfficiency = 0.05
     }, 
     ["Ember Catfish"] = {
         BlockPassiveCapture = true, 
@@ -9486,6 +10378,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true, 
         From = "Ashfall"
@@ -9519,6 +10412,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true, 
         From = "Ashfall"
@@ -9552,6 +10446,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true, 
         From = "Ashfall"
@@ -9584,6 +10479,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        AnnounceInChat = true, 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true, 
         From = "Ashfall"
@@ -9617,6 +10513,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
+        AnnounceInChat = true, 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true, 
         From = "Ashfall"
@@ -9650,6 +10547,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true, 
         From = "Ashfall"
@@ -9682,6 +10580,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true, 
         From = "Ashfall"
@@ -9715,6 +10614,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
+        AnnounceInChat = true, 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true, 
         From = "Ashfall"
@@ -9751,6 +10651,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true, 
         From = "Ashfall"
@@ -10049,6 +10950,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(254, 222, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Love", 
         From = "Love"
     }, 
@@ -10082,6 +10984,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 214, 212), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Love", 
         From = "Love"
     }, 
@@ -10097,8 +11000,8 @@ local v5 = {
         Hint = "Found swimming in the upper waters of the Atlantean Storm.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "None", 
-        Price = 250, 
-        XP = 150, 
+        Price = 109, 
+        XP = 70, 
         Seasons = {
             "Winter"
         }, 
@@ -10126,8 +11029,8 @@ local v5 = {
         Hint = "Found in the mid-depths of the Atlantean Storm.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "None", 
-        Price = 300, 
-        XP = 180, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "Autumn"
         }, 
@@ -10155,8 +11058,8 @@ local v5 = {
         Hint = "Found in the deeper parts of the Atlantean Storm.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "None", 
-        Price = 450, 
-        XP = 250, 
+        Price = 222, 
+        XP = 130, 
         Seasons = {
             "Spring"
         }, 
@@ -10184,8 +11087,8 @@ local v5 = {
         Hint = "Found patrolling the storm's edge.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "None", 
-        Price = 600, 
-        XP = 300, 
+        Price = 225, 
+        XP = 140, 
         Seasons = {
             "Summer"
         }, 
@@ -10213,8 +11116,8 @@ local v5 = {
         Hint = "Found in the storm's strongest currents.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "None", 
-        Price = 900, 
-        XP = 450, 
+        Price = 341, 
+        XP = 200, 
         Seasons = {
             "Winter"
         }, 
@@ -10242,8 +11145,8 @@ local v5 = {
         Hint = "Found in the deepest parts of the Atlantean Storm.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "None", 
-        Price = 1200, 
-        XP = 600, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "Spring"
         }, 
@@ -10272,8 +11175,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "None", 
-        Price = 3000, 
-        XP = 1500, 
+        Price = 2018, 
+        XP = 1610, 
         Seasons = {
             "Autumn"
         }, 
@@ -10303,8 +11206,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "None", 
-        Price = 4500, 
-        XP = 2000, 
+        Price = 3525, 
+        XP = 2820, 
         Seasons = {
             "Summer"
         }, 
@@ -10333,8 +11236,8 @@ local v5 = {
         Hint = "Found swimming among shallow coral reefs.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "None", 
-        Price = 85, 
-        XP = 65, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -10360,8 +11263,8 @@ local v5 = {
         Hint = "Found in schools near healthy coral formations.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "None", 
-        Price = 120, 
-        XP = 95, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -10387,8 +11290,8 @@ local v5 = {
         Hint = "Look for them in coral crevices.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "None", 
-        Price = 200, 
-        XP = 150, 
+        Price = 105, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -10414,8 +11317,8 @@ local v5 = {
         Hint = "Found guarding specific coral territories.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "None", 
-        Price = 250, 
-        XP = 180, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -10441,8 +11344,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Insect", 
         FavouriteTime = "None", 
-        Price = 450, 
-        XP = 300, 
+        Price = 217, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -10468,8 +11371,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Coral", 
         FavouriteTime = "None", 
-        Price = 900, 
-        XP = 600, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -10496,8 +11399,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "None", 
-        Price = 4000, 
-        XP = 1800, 
+        Price = 2037, 
+        XP = 1630, 
         Seasons = {
             "None"
         }, 
@@ -10527,8 +11430,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "None", 
-        Price = 7000, 
-        XP = 3500, 
+        Price = 3462, 
+        XP = 2770, 
         Seasons = {
             "None"
         }, 
@@ -10571,6 +11474,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(161, 255, 247), 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
+        AnnounceInChat = true, 
         FromLimited = "Winter's Edge", 
         IsLimitedBestiary = true, 
         From = "Winter's Edge"
@@ -10600,6 +11504,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(33, 55, 255), 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
+        AnnounceInChat = true, 
         FromLimited = "Winter's Edge", 
         IsLimitedBestiary = true, 
         From = "Winter's Edge"
@@ -10629,6 +11534,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(29, 255, 247), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Winter's Edge", 
         IsLimitedBestiary = true, 
         From = "Winter's Edge"
@@ -10658,6 +11564,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(59, 255, 24), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Winter's Edge", 
         IsLimitedBestiary = true, 
         From = "Winter's Edge"
@@ -10687,12 +11594,13 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(25, 255, 21), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        AnnounceInChat = true, 
         FromLimited = "Winter's Edge", 
         IsLimitedBestiary = true, 
         From = "Winter's Edge"
     }, 
     ["Red Energy Crystal"] = {
-        Requiriments = {
+        Requirements = {
             GatesOpened = {
                 "RedShardDoor"
             }
@@ -10710,7 +11618,7 @@ local v5 = {
         FavouriteTime = nil, 
         BuyMult = 50000, 
         Price = 5, 
-        XP = 250, 
+        XP = 2000, 
         Seasons = {
             "None"
         }, 
@@ -10736,8 +11644,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 0, 
-        XP = 250, 
+        Price = 2500, 
+        XP = 2000, 
         Seasons = {
             "None"
         }, 
@@ -10763,8 +11671,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 0, 
-        XP = 250, 
+        Price = 2500, 
+        XP = 2000, 
         Seasons = {
             "None"
         }, 
@@ -10790,8 +11698,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 0, 
-        XP = 250, 
+        Price = 2500, 
+        XP = 2000, 
         Seasons = {
             "None"
         }, 
@@ -10817,8 +11725,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 1500, 
-        XP = 250, 
+        Price = 2500, 
+        XP = 2000, 
         Seasons = {
             "None"
         }, 
@@ -10846,8 +11754,8 @@ local v5 = {
         Hint = "Schools in the shallow waters of Overgrowth Caves.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 140, 
-        XP = 80, 
+        Price = 106, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -10875,8 +11783,8 @@ local v5 = {
         Hint = "Found in the flowing waters of the cave's streams.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 180, 
-        XP = 95, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -10904,8 +11812,8 @@ local v5 = {
         Hint = "Prefers the deeper pools within the cave.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = "None", 
-        Price = 250, 
-        XP = 120, 
+        Price = 217, 
+        XP = 130, 
         Seasons = {
             "Winter"
         }, 
@@ -10933,8 +11841,8 @@ local v5 = {
         Hint = "Scuttles along the icy cave floor.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "None", 
-        Price = 300, 
-        XP = 140, 
+        Price = 220, 
+        XP = 130, 
         Seasons = {
             "Winter"
         }, 
@@ -10962,8 +11870,8 @@ local v5 = {
         Hint = "Patrols the cave's larger water chambers.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "None", 
-        Price = 600, 
-        XP = 250, 
+        Price = 341, 
+        XP = 200, 
         Seasons = {
             "Winter"
         }, 
@@ -10991,8 +11899,8 @@ local v5 = {
         Hint = "Found in the cave's illuminated pools.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 800, 
-        XP = 300, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Winter"
         }, 
@@ -11021,8 +11929,8 @@ local v5 = {
         Hint = "Hidden in the deepest, coldest parts of the cave.", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 1200, 
-        XP = 800, 
+        Price = 1860, 
+        XP = 1490, 
         Seasons = {
             "Winter"
         }, 
@@ -11051,8 +11959,8 @@ local v5 = {
         Hint = "Only appears in the most ancient sections of the cave.", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 2500, 
-        XP = 700, 
+        Price = 3294, 
+        XP = 2640, 
         Seasons = {
             "Winter"
         }, 
@@ -11080,8 +11988,8 @@ local v5 = {
         Hint = "Slithers through the narrow ice tunnels of Frigid Cavern.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Night", 
-        Price = 155, 
-        XP = 95, 
+        Price = 106, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -11109,8 +12017,8 @@ local v5 = {
         Hint = "Clusters in the cavern's cold water pools.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Night", 
-        Price = 175, 
-        XP = 90, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -11138,7 +12046,7 @@ local v5 = {
         Hint = "Drifts through the cavern's larger chambers.", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 280, 
+        Price = 220, 
         XP = 130, 
         Seasons = {
             "Winter"
@@ -11167,8 +12075,8 @@ local v5 = {
         Hint = "Hides in the icy crevices of the cavern.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 350, 
-        XP = 150, 
+        Price = 222, 
+        XP = 130, 
         Seasons = {
             "Winter"
         }, 
@@ -11196,8 +12104,8 @@ local v5 = {
         Hint = "Lost in the depths of the cavern ages ago.", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 600, 
-        XP = 250, 
+        Price = 341, 
+        XP = 200, 
         Seasons = {
             "Winter"
         }, 
@@ -11225,8 +12133,8 @@ local v5 = {
         Hint = "Swims in the most frigid waters of the cavern.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "None", 
-        Price = 800, 
-        XP = 300, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Winter"
         }, 
@@ -11255,8 +12163,8 @@ local v5 = {
         Hint = "Lurks in the largest chambers of the frozen cavern.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 3000, 
-        XP = 1000, 
+        Price = 1899, 
+        XP = 1520, 
         Seasons = {
             "Winter"
         }, 
@@ -11285,8 +12193,8 @@ local v5 = {
         Hint = "Hidden in the oldest, deepest part of the frozen cavern.", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 3000, 
-        XP = 1200, 
+        Price = 3294, 
+        XP = 2640, 
         Seasons = {
             "Winter"
         }, 
@@ -11314,8 +12222,8 @@ local v5 = {
         Hint = "Found in the shallow waters of Cryogenic Canal.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 150, 
-        XP = 85, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -11343,8 +12251,8 @@ local v5 = {
         Hint = "Active during snowfall in the canal.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 180, 
-        XP = 95, 
+        Price = 109, 
+        XP = 70, 
         Seasons = {
             "Winter"
         }, 
@@ -11372,8 +12280,8 @@ local v5 = {
         Hint = "Lurks near ice formations in the canal.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "None", 
-        Price = 250, 
-        XP = 120, 
+        Price = 220, 
+        XP = 130, 
         Seasons = {
             "Winter"
         }, 
@@ -11401,8 +12309,8 @@ local v5 = {
         Hint = "Found in the deeper sections of the canal.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 320, 
-        XP = 150, 
+        Price = 222, 
+        XP = 130, 
         Seasons = {
             "Winter"
         }, 
@@ -11430,7 +12338,7 @@ local v5 = {
         Hint = "Schools in the colder currents of the canal.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Day", 
-        Price = 450, 
+        Price = 341, 
         XP = 200, 
         Seasons = {
             "Winter"
@@ -11459,8 +12367,8 @@ local v5 = {
         Hint = "Hunts in the deepest parts of the canal.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "None", 
-        Price = 650, 
-        XP = 280, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Winter"
         }, 
@@ -11488,8 +12396,8 @@ local v5 = {
         Hint = "Breaks through thin ice sheets near the canal surface.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 800, 
-        XP = 350, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "Winter"
         }, 
@@ -11518,8 +12426,8 @@ local v5 = {
         Hint = "Found in the darkest depths of the canal.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 2000, 
-        XP = 800, 
+        Price = 1860, 
+        XP = 1490, 
         Seasons = {
             "Winter"
         }, 
@@ -11548,8 +12456,8 @@ local v5 = {
         Hint = "Only appears when the aurora shimmers above the canal.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 6000, 
-        XP = 2000, 
+        Price = 3294, 
+        XP = 2640, 
         Seasons = {
             "Winter"
         }, 
@@ -11578,8 +12486,8 @@ local v5 = {
         Hint = "Dwells in the oldest, deepest parts of the frozen waters.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 7000, 
-        XP = 2200, 
+        Price = 3294, 
+        XP = 2640, 
         Seasons = {
             "Winter"
         }, 
@@ -11607,8 +12515,8 @@ local v5 = {
         Hint = "Common in the grotto's shallow waters.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 160, 
-        XP = 90, 
+        Price = 106, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -11636,8 +12544,8 @@ local v5 = {
         Hint = "Found among the icy rocks at the grotto floor.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 180, 
-        XP = 95, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -11665,7 +12573,7 @@ local v5 = {
         Hint = "Swims in the middle depths of the grotto.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "None", 
-        Price = 280, 
+        Price = 217, 
         XP = 130, 
         Seasons = {
             "Winter"
@@ -11694,8 +12602,8 @@ local v5 = {
         Hint = "Hunts during twilight in the grotto's waters.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Night", 
-        Price = 350, 
-        XP = 160, 
+        Price = 220, 
+        XP = 130, 
         Seasons = {
             "Winter"
         }, 
@@ -11723,8 +12631,8 @@ local v5 = {
         Hint = "Prefers the deeper grotto waters.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 500, 
-        XP = 220, 
+        Price = 338, 
+        XP = 200, 
         Seasons = {
             "Winter"
         }, 
@@ -11752,8 +12660,8 @@ local v5 = {
         Hint = "Camouflaged against the icy grotto floor.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "None", 
-        Price = 750, 
-        XP = 300, 
+        Price = 341, 
+        XP = 200, 
         Seasons = {
             "Winter"
         }, 
@@ -11781,8 +12689,8 @@ local v5 = {
         Hint = "Patrols the deeper waters of the grotto.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "None", 
-        Price = 1000, 
-        XP = 400, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Winter"
         }, 
@@ -11810,8 +12718,8 @@ local v5 = {
         Hint = "Patrols the deeper waters hunting for prey.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "None", 
-        Price = 650, 
-        XP = 300, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Winter"
         }, 
@@ -11841,8 +12749,8 @@ local v5 = {
         Hint = "Active in the Glacial Grotto during the northern lights.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 3500, 
-        XP = 1200, 
+        Price = 1918, 
+        XP = 1530, 
         Seasons = {
             "Winter"
         }, 
@@ -11871,8 +12779,8 @@ local v5 = {
         Hint = "Only appears in the deepest, darkest parts of the Glacial Grotto.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 8000, 
-        XP = 2500, 
+        Price = 3391, 
+        XP = 2710, 
         Seasons = {
             "Winter"
         }, 
@@ -11901,8 +12809,8 @@ local v5 = {
         Hint = "Found in the Oceans of Ancient Isles...", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 1500, 
-        XP = 250, 
+        Price = 2500, 
+        XP = 2000, 
         Seasons = {
             "None"
         }, 
@@ -11928,8 +12836,8 @@ local v5 = {
         Hint = "Found in the Oceans of Ancient Isles...", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 1500, 
-        XP = 250, 
+        Price = 2500, 
+        XP = 2000, 
         Seasons = {
             "None"
         }, 
@@ -11955,8 +12863,8 @@ local v5 = {
         Hint = "This resilient wood has endured the bitterest winters, its strength forged under the pale glow of the moon.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 450, 
-        XP = 50, 
+        Price = 1500, 
+        XP = 1200, 
         Seasons = {
             "None"
         }, 
@@ -11982,8 +12890,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 700, 
-        XP = 90, 
+        Price = 2500, 
+        XP = 2000, 
         Seasons = {
             "None"
         }, 
@@ -12009,8 +12917,8 @@ local v5 = {
         Hint = "Legends whisper of Sunstone Island radiating an aura of ancient power", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 450, 
-        XP = 50, 
+        Price = 1500, 
+        XP = 1200, 
         Seasons = {
             "None"
         }, 
@@ -12036,8 +12944,8 @@ local v5 = {
         Hint = "Void Wood is said to be imbued with the altar's enigmatic power.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 350, 
-        XP = 35, 
+        Price = 1500, 
+        XP = 1200, 
         Seasons = {
             "None"
         }, 
@@ -12311,10 +13219,10 @@ local v5 = {
             500000, 
             670000
         }, 
-        Chance = 0.01, 
+        Chance = 5, 
         Rarity = "Exotic", 
         Resilience = 5, 
-        ProgressEfficiency = 0.2, 
+        ForcedProgressEfficiency = 0.2, 
         Description = "The Megalodon is a gigantic predatory shark known for its enormous size. It possesses a large mouth with many serrated teeth which can easily rip through anything in its way. They went extinct around 3.6 million years ago, during the early Pliocene epoch. They are one of the apex predators of the Ancient Isle, and will put up an incredible fight when hooked.", 
         Hint = "???", 
         FavouriteBait = {
@@ -12322,8 +13230,8 @@ local v5 = {
             "Tryhard Worm"
         }, 
         FavouriteTime = "None", 
-        Price = 10000, 
-        XP = 6000, 
+        Price = 31250, 
+        XP = 15000, 
         Seasons = {
             "None"
         }, 
@@ -12344,16 +13252,16 @@ local v5 = {
             500000, 
             670000
         }, 
-        Chance = 1.0E-4, 
+        Chance = 1, 
         Rarity = "Limited", 
         Resilience = 5, 
-        ProgressEfficiency = 0.15, 
+        ForcedProgressEfficiency = 0.15, 
         Description = "The Phantom Meg is a spectral version of the ancient Megalodon, haunting the waters with an ethereal glow. Its serrated teeth remain just as fearsome, tearing through anything in its way. Though extinct for millions of years, this ghostly apex predator dominates the Ancient Isle and will challenge any angler brave enough to hook it.", 
         Hint = "The Phantom Meg only emerges during the eclipse & twilight hours of the celestial cycle, when the sun and moon align every seven days.", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = "None", 
-        Price = 20000, 
-        XP = 12000, 
+        Price = 40000, 
+        XP = 18000, 
         Seasons = {
             "None"
         }, 
@@ -12365,7 +13273,9 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 0, 0), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        From = "Ancient Isle"
+        AnnounceInChat = true, 
+        From = "Ancient Isle", 
+        NoAnglerQuest = true
     }, 
     ["Ancient Megalodon"] = {
         BlockPassiveCapture = true, 
@@ -12374,16 +13284,16 @@ local v5 = {
             500000, 
             700000
         }, 
-        Chance = 0.005, 
+        Chance = 2, 
         Rarity = "Exotic", 
         Resilience = 5, 
-        ProgressEfficiency = 0.2, 
+        ForcedProgressEfficiency = 0.15, 
         Description = "The Ancient Megalodon is a colossal predatory shark from prehistoric times, unmatched in size and ferocity. With its massive mouth and serrated teeth, it can effortlessly rip through any obstacle. A true apex predator of the Ancient Isle, it offers an incredible battle for those daring to catch it.", 
         Hint = "???", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = "None", 
-        Price = 16000, 
-        XP = 9000, 
+        Price = 37500, 
+        XP = 20000, 
         Seasons = {
             "None"
         }, 
@@ -12423,6 +13333,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         HideInBestiary = true
     }, 
@@ -12452,6 +13363,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         HideInBestiary = true
     }, 
@@ -12481,6 +13393,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         HideInBestiary = true
     }, 
@@ -12510,6 +13423,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         HideInBestiary = true
     }, 
@@ -12538,6 +13452,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         From = "Archeological Site"
     }, 
@@ -12566,6 +13481,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         From = "Archeological Site"
     }, 
@@ -12594,6 +13510,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         From = "Archeological Site"
     }, 
@@ -12622,6 +13539,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         From = "Archeological Site"
     }, 
@@ -12650,6 +13568,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         From = "Archeological Site"
     }, 
@@ -12678,6 +13597,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         From = "Archeological Site"
     }, 
@@ -12707,6 +13627,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         From = "Archeological Site"
     }, 
@@ -12735,6 +13656,7 @@ local v5 = {
             "Woah a bone!"
         }, 
         HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
+        AnnounceInChat = true, 
         SparkleColor = Color3.fromRGB(126, 124, 123), 
         FromLimited = "Archeological Site", 
         From = "Archeological Site"
@@ -12765,6 +13687,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 12, 12), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         From = "Archeological Site"
     }, 
@@ -12782,8 +13705,8 @@ local v5 = {
         Hint = "Its pretty", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 800, 
-        XP = 250, 
+        Price = 5263, 
+        XP = 5260, 
         Seasons = {
             "None"
         }, 
@@ -12823,6 +13746,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 12, 12), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Archeological Site", 
         From = "Archeological Site"
     }, 
@@ -12838,8 +13762,8 @@ local v5 = {
         Hint = "Found within the Ancient Isle's waterfall.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 125, 
-        XP = 35, 
+        Price = 215, 
+        XP = 130, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -12868,8 +13792,8 @@ local v5 = {
         Hint = "Found in the dark waters of the Archives...", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 200, 
-        XP = 60, 
+        Price = 222, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -12897,8 +13821,8 @@ local v5 = {
         Hint = "Found in the dark waters of the Archives...", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Night", 
-        Price = 450, 
-        XP = 90, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -12926,8 +13850,8 @@ local v5 = {
         Hint = "Found in the dark waters of the Archives...", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Day", 
-        Price = 800, 
-        XP = 250, 
+        Price = 1762, 
+        XP = 1410, 
         Seasons = {
             "None"
         }, 
@@ -12955,8 +13879,8 @@ local v5 = {
         Hint = "Found in the dark waters of the Archives...", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Night", 
-        Price = 1800, 
-        XP = 500, 
+        Price = 3000, 
+        XP = 2400, 
         Seasons = {
             "None"
         }, 
@@ -12984,8 +13908,8 @@ local v5 = {
         Hint = "Found in the dark waters of the Archives...", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 2500, 
-        XP = 700, 
+        Price = 3031, 
+        XP = 2420, 
         Seasons = {
             "None"
         }, 
@@ -13015,8 +13939,8 @@ local v5 = {
         Hint = "Dr. Crookspine might know what to do with this.", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 800, 
-        XP = 250, 
+        Price = 4526, 
+        XP = 8420, 
         Seasons = {
             "None"
         }, 
@@ -13044,8 +13968,8 @@ local v5 = {
         Hint = "Dr. Crookspine might know what to do with this.", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 800, 
-        XP = 250, 
+        Price = 4526, 
+        XP = 8420, 
         Seasons = {
             "None"
         }, 
@@ -13065,7 +13989,8 @@ local v5 = {
             12, 
             13
         }, 
-        Chance = 0.05, 
+        Chance = 1, 
+        FinalChanceDivisor = 5, 
         Rarity = "Exotic", 
         Resilience = 100, 
         ProgressEfficiency = 0.8, 
@@ -13073,8 +13998,8 @@ local v5 = {
         Hint = "Dr. Crookspine might know what to do with this.", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 800, 
-        XP = 250, 
+        Price = 5526, 
+        XP = 8420, 
         Seasons = {
             "None"
         }, 
@@ -13101,8 +14026,8 @@ local v5 = {
         Hint = "Where does this key open up?...", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 800, 
-        XP = 350, 
+        Price = 4888, 
+        XP = 9510, 
         Seasons = {
             "None"
         }, 
@@ -13183,8 +14108,8 @@ local v5 = {
         Hint = "Dwells during the Night, near steep underwater cliffs.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Night", 
-        Price = 35, 
-        XP = 20, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -13210,8 +14135,8 @@ local v5 = {
         Hint = "Lurks deep in shadowy trenches during the Night", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Night", 
-        Price = 45, 
-        XP = 25, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -13237,8 +14162,8 @@ local v5 = {
         Hint = "Found in shallow caves under glowing coral clusters.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Night", 
-        Price = 120, 
-        XP = 30, 
+        Price = 210, 
+        XP = 130, 
         Seasons = {
             "Spring"
         }, 
@@ -13264,8 +14189,8 @@ local v5 = {
         Hint = "Hides in deep ocean caves near rocky crevices, appears during the Night time.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 150, 
-        XP = 45, 
+        Price = 215, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -13291,8 +14216,8 @@ local v5 = {
         Hint = "Lurks in deep, dark waters in the Depth.", 
         FavouriteBait = "Coral", 
         FavouriteTime = "Day", 
-        Price = 175, 
-        XP = 50, 
+        Price = 225, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -13318,8 +14243,8 @@ local v5 = {
         Hint = "Swims during the dark night and underwater ruins.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Night", 
-        Price = 200, 
-        XP = 55, 
+        Price = 215, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -13345,8 +14270,8 @@ local v5 = {
         Hint = "Roams trench edges and dark underwater canyons.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 450, 
-        XP = 80, 
+        Price = 338, 
+        XP = 200, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -13373,8 +14298,8 @@ local v5 = {
         Hint = "Found in the deepest ocean trenches, far from light.", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Night", 
-        Price = 500, 
-        XP = 120, 
+        Price = 341, 
+        XP = 200, 
         Seasons = {
             "None"
         }, 
@@ -13400,8 +14325,8 @@ local v5 = {
         Hint = "Can be found during the day through fishing or inside crab cages.", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Day", 
-        Price = 550, 
-        XP = 135, 
+        Price = 330, 
+        XP = 200, 
         Seasons = {
             "Summer"
         }, 
@@ -13428,8 +14353,8 @@ local v5 = {
         Hint = "Dwells in deep coral reefs and rocky underwater caves, mostly visible during the Night.", 
         FavouriteBait = "None", 
         FavouriteTime = "Night", 
-        Price = 1000, 
-        XP = 300, 
+        Price = 1802, 
+        XP = 1440, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -13457,8 +14382,8 @@ local v5 = {
         Hint = "Roams the deep ocean, patrolling sunken ruins and underwater trenches.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Day", 
-        Price = 1200, 
-        XP = 300, 
+        Price = 1877, 
+        XP = 1500, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -13486,8 +14411,8 @@ local v5 = {
         Hint = "Found in deep ocean caves during the Night.", 
         FavouriteBait = "Coal", 
         FavouriteTime = "Night", 
-        Price = 1500, 
-        XP = 350, 
+        Price = 1956, 
+        XP = 1560, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -13515,8 +14440,8 @@ local v5 = {
         Hint = "Patrols the darkest depths during the Coldest Nights...", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 3000, 
-        XP = 800, 
+        Price = 3132, 
+        XP = 2510, 
         Seasons = {
             "Winter"
         }, 
@@ -13543,8 +14468,8 @@ local v5 = {
         Hint = "Found in the deep ocean during the Night, drifting near bioluminescent creatures.", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Night", 
-        Price = 4500, 
-        XP = 950, 
+        Price = 3099, 
+        XP = 2480, 
         Seasons = {
             "Summer"
         }, 
@@ -13571,8 +14496,8 @@ local v5 = {
         Hint = "Swims near coral reefs and sunken ruins in shallow waters during the cold nights.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 5000, 
-        XP = 1200, 
+        Price = 3326, 
+        XP = 2660, 
         Seasons = {
             "Winter"
         }, 
@@ -13599,8 +14524,8 @@ local v5 = {
         Hint = "Dwells in the deepest trenches, guarding forgotten underwater ruins. Appears only during the darkest of nights...", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 8000, 
-        XP = 2200, 
+        Price = 14029, 
+        XP = 11220, 
         Seasons = {
             "None"
         }, 
@@ -13626,11 +14551,10 @@ local v5 = {
         Hint = "commonly caught in Forsaken Shores.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Day", 
-        Price = 35, 
+        Price = 50, 
         XP = 30, 
         Seasons = {
-            "Spring", 
-            "Summer"
+            "Spring"
         }, 
         Weather = {
             "None"
@@ -13655,8 +14579,8 @@ local v5 = {
         Hint = "commonly caught in Forsaken Shores surrounding Ocean.", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Night", 
-        Price = 190, 
-        XP = 70, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -13683,8 +14607,8 @@ local v5 = {
         Hint = "Often found in deeper seas near Forsaken Shores.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Day", 
-        Price = 190, 
-        XP = 85, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "Winter"
         }, 
@@ -13711,8 +14635,8 @@ local v5 = {
         Hint = "Lurks near reefs during the Night & when it's cold.", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Night", 
-        Price = 250, 
-        XP = 100, 
+        Price = 112, 
+        XP = 70, 
         Seasons = {
             "Winter"
         }, 
@@ -13740,7 +14664,7 @@ local v5 = {
         Hint = "Often found near rocky shores.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Night", 
-        Price = 300, 
+        Price = 235, 
         XP = 140, 
         Seasons = {
             "Winter"
@@ -13767,8 +14691,8 @@ local v5 = {
         Hint = "commonly caught in Forsaken Shores.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 500, 
-        XP = 175, 
+        Price = 230, 
+        XP = 140, 
         Seasons = {
             "Spring"
         }, 
@@ -13795,8 +14719,8 @@ local v5 = {
         Hint = "commonly caught in Forsaken Shores.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 750, 
-        XP = 200, 
+        Price = 380, 
+        XP = 230, 
         Seasons = {
             "None"
         }, 
@@ -13823,10 +14747,10 @@ local v5 = {
         Hint = "Found in darker waters in the oceanside.", 
         FavouriteBait = "Coal", 
         FavouriteTime = "Night", 
-        Price = 700, 
-        XP = 250, 
+        Price = 403, 
+        XP = 240, 
         Seasons = {
-            "Summer"
+            "Winter"
         }, 
         Weather = {
             "Rain"
@@ -13851,8 +14775,8 @@ local v5 = {
         Hint = "Lurking near old wrecks in the Forsaken Ocean.", 
         FavouriteBait = "Coral", 
         FavouriteTime = "Night", 
-        Price = 1200, 
-        XP = 400, 
+        Price = 1838, 
+        XP = 1470, 
         Seasons = {
             "None"
         }, 
@@ -13878,8 +14802,8 @@ local v5 = {
         Hint = "Drifting near seaweed & algae in the Oceanside.", 
         FavouriteBait = "Weird Algae", 
         FavouriteTime = "Day", 
-        Price = 2900, 
-        XP = 2800, 
+        Price = 3062, 
+        XP = 2450, 
         Seasons = {
             "Summer"
         }, 
@@ -13906,8 +14830,8 @@ local v5 = {
         Hint = "Found beneath enchanted waterfalls.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Day", 
-        Price = 1700, 
-        XP = 2800, 
+        Price = 3094, 
+        XP = 2480, 
         Seasons = {
             "Summer"
         }, 
@@ -13919,6 +14843,34 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(243, 255, 14), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Forsaken Shores"
+    }, 
+    ["Pirate Captain's Goldfish"] = {
+        Icon = "rbxassetid://81214107375924", 
+        WeightPool = {
+            15, 
+            30
+        }, 
+        Chance = 1, 
+        Rarity = "Secret", 
+        Resilience = 1, 
+        Description = "A mythical, elusive goldfish found beneath waterfalls, said to bring fortune to rare finders.", 
+        Hint = "???", 
+        FavouriteBait = "Truffle Worm", 
+        FavouriteTime = "Day", 
+        Price = 30094, 
+        XP = 24800, 
+        Seasons = {
+            "Summer"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "IS THAT A CAPTAIN GOLDFISH?!"
+        }, 
+        SparkleColor = Color3.fromRGB(139, 174, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Forsaken Shores"
     }, 
     Piranha = {
@@ -13933,8 +14885,8 @@ local v5 = {
         Hint = "Can be found in the waters of the Ancient Isle.", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 85, 
-        XP = 95, 
+        Price = 54, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Winter"
@@ -13965,8 +14917,8 @@ local v5 = {
         Hint = "Can be found in freshwater in the Ancient Isle.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 90, 
-        XP = 95, 
+        Price = 54, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -13995,8 +14947,8 @@ local v5 = {
         Hint = "Found around the Ancient Isle.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Night", 
-        Price = 90, 
-        XP = 100, 
+        Price = 109, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -14025,8 +14977,8 @@ local v5 = {
         Hint = "Found at the Ancient Isle.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 110, 
-        XP = 115, 
+        Price = 101, 
+        XP = 60, 
         Seasons = {
             "Summer"
         }, 
@@ -14055,8 +15007,8 @@ local v5 = {
         Hint = "Found around the waters of the Ancient Isle.", 
         FavouriteBait = "None", 
         FavouriteTime = "Night", 
-        Price = 115, 
-        XP = 110, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -14085,7 +15037,7 @@ local v5 = {
         Hint = "Can be found in the waters of the Ancient Isle.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 160, 
+        Price = 215, 
         XP = 130, 
         Seasons = {
             "Winter"
@@ -14114,8 +15066,8 @@ local v5 = {
         Hint = "Can be found all around the Ancient Isle.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 170, 
-        XP = 135, 
+        Price = 220, 
+        XP = 130, 
         Seasons = {
             "Autumn", 
             "Winter"
@@ -14144,8 +15096,8 @@ local v5 = {
         Hint = "Can be found in the waters of the Ancient Isle.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 145, 
-        XP = 120, 
+        Price = 212, 
+        XP = 130, 
         Seasons = {
             "Spring"
         }, 
@@ -14173,8 +15125,8 @@ local v5 = {
         Hint = "Can be found in freshwater at the Ancient Isle.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 200, 
-        XP = 125, 
+        Price = 319, 
+        XP = 190, 
         Seasons = {
             "Autumn"
         }, 
@@ -14203,8 +15155,8 @@ local v5 = {
         Hint = "Found around the Ancient Isle.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 230, 
-        XP = 140, 
+        Price = 334, 
+        XP = 200, 
         Seasons = {
             "Summer", 
             "Autumn"
@@ -14237,8 +15189,8 @@ local v5 = {
         Hint = "Can be found in the waters of the Ancient Isle.", 
         FavouriteBait = "Super Flakes", 
         FavouriteTime = nil, 
-        Price = 2000, 
-        XP = 1200, 
+        Price = 1821, 
+        XP = 1460, 
         Seasons = {
             "Autumn"
         }, 
@@ -14268,8 +15220,8 @@ local v5 = {
         Hint = "Can be found in the waterfalls on the Ancient Isle.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Day", 
-        Price = 2200, 
-        XP = 1500, 
+        Price = 1861, 
+        XP = 1490, 
         Seasons = {
             "None"
         }, 
@@ -14299,8 +15251,8 @@ local v5 = {
         Hint = "Can be found in the waters of the Ancient Isle.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 3000, 
-        XP = 1800, 
+        Price = 1879, 
+        XP = 1500, 
         Seasons = {
             "Summer"
         }, 
@@ -14331,8 +15283,8 @@ local v5 = {
         Hint = "Can be found in the waters of the Ancient Isle.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Day", 
-        Price = 3500, 
-        XP = 2000, 
+        Price = 1901, 
+        XP = 1520, 
         Seasons = {
             "None"
         }, 
@@ -14361,8 +15313,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 6000, 
-        XP = 2500, 
+        Price = 3461, 
+        XP = 2770, 
         Seasons = {
             "None"
         }, 
@@ -14392,8 +15344,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 7500, 
-        XP = 3000, 
+        Price = 3462, 
+        XP = 2770, 
         Seasons = {
             "None"
         }, 
@@ -14425,8 +15377,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 18500, 
-        XP = 6900, 
+        Price = 5688, 
+        XP = 5690, 
         Seasons = {
             "Summer"
         }, 
@@ -14642,8 +15594,8 @@ local v5 = {
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
         BuyMult = 1.6, 
-        Price = 80, 
-        XP = 20, 
+        Price = 100, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -14708,9 +15660,9 @@ local v5 = {
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
         BuyMult = 1.6, 
-        Price = 80, 
+        Price = 5000, 
         Unpurchasable = true, 
-        XP = 20, 
+        XP = 5000, 
         Seasons = {
             "None"
         }, 
@@ -14745,8 +15697,8 @@ local v5 = {
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
         BuyMult = 3.5, 
-        Price = 140, 
-        XP = 50, 
+        Price = 338, 
+        XP = 200, 
         Seasons = {
             "None"
         }, 
@@ -14807,8 +15759,8 @@ local v5 = {
         Hint = "Fallen off of a fishing boat.", 
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
-        Price = 80, 
-        XP = 40, 
+        Price = 100, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -15042,7 +15994,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 255, 216), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
-        From = "None"
+        From = "None", 
+        RelicGroup = "Default"
     }, 
     ["Exalted Relic"] = {
         WeightPool = {
@@ -15073,7 +16026,8 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(228, 160, 255), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
-        From = "None"
+        From = "None", 
+        RelicGroup = "Exalted"
     }, 
     ["Song of the Deep"] = {
         WeightPool = {
@@ -15105,7 +16059,42 @@ local v5 = {
         SparkleColor = Color3.fromRGB(228, 160, 255), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
         HideInBestiary = true, 
-        From = "None"
+        From = "None", 
+        RelicGroup = "SongOfTheDeep"
+    }, 
+    ["Twisted Relic"] = {
+        Icon = "rbxassetid://104028602283751", 
+        WeightPool = {
+            210, 
+            210
+        }, 
+        Chance = 0, 
+        Rarity = "Relic", 
+        Resilience = 35, 
+        ProgressEfficiency = 0.8, 
+        Description = "An evil stone filled with the essence of Merlin's dark energy.. Taking it under the Statue of Sovereignty will result in your currently equipped rod being cursed with its unknown power.", 
+        Hint = "???", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 13000, 
+        XP = 6000, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "I feel it's power..", 
+            "Woah.. A Twisted Relic??", 
+            "A Twisted Relic!!", 
+            "I caught a Twisted Relic!"
+        }, 
+        SparkleColor = Color3.fromRGB(85, 81, 121), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HideInBestiary = true, 
+        From = "None", 
+        RelicGroup = "Twisted"
     }, 
     ["Cosmic Relic"] = {
         WeightPool = {
@@ -15136,14 +16125,15 @@ local v5 = {
         SparkleColor = Color3.fromRGB(197, 82, 255), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
         HideInBestiary = true, 
-        From = "None"
+        From = "None", 
+        RelicGroup = "Cosmic"
     }, 
     Bone = {
         WeightPool = {
             10, 
             25
         }, 
-        Chance = 100 * v2["Brine Pool"].Trash, 
+        Chance = 100, 
         Rarity = "Trash", 
         Resilience = 80, 
         Description = "A bone from the remains of a dissolved creature.", 
@@ -15173,15 +16163,15 @@ local v5 = {
             80, 
             140
         }, 
-        Chance = 100 * v2["Brine Pool"].Common, 
+        Chance = 100 * v3["Brine Pool"].Common, 
         Rarity = "Common", 
         Resilience = 85, 
         Description = "The Gazerfish is a fast-moving prey fish within the Brine Pool of the Desolate Deep. They have a singular large eyeball on the front of their bodies, which they can close to disguise themselves from possible predators during the night. When they are most active during the day, they swim near the surface looking for smaller creatures to feed on.", 
         Hint = "Found in the Brine Pool during the day.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 190, 
-        XP = 100, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Autumn", 
             "Winter"
@@ -15204,15 +16194,15 @@ local v5 = {
             1, 
             3
         }, 
-        Chance = 90 * v2["Brine Pool"].Uncommon, 
+        Chance = 90 * v3["Brine Pool"].Uncommon, 
         Rarity = "Uncommon", 
         Resilience = 65, 
         Description = "The Brine Shrimp is a small crustacean abundant in the Brine Pool within the Desolate Deep. They possess the ability to adapt and survive within harsh conditions, particularly incredibly salty water like the Brine Pool. They feed on microorganisms during the day, and are at the bottom of the food chain within the Brine Pool.", 
         Hint = "Found in the Brine Pool during the day.", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 230, 
-        XP = 130, 
+        Price = 109, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -15236,15 +16226,15 @@ local v5 = {
             140, 
             240
         }, 
-        Chance = 60 * v2["Brine Pool"].Unusual, 
+        Chance = 60 * v3["Brine Pool"].Unusual, 
         Rarity = "Unusual", 
         Resilience = 25, 
         Description = "The Globe Jellyfish is a distant relative of the elusive Emperor Jellyfish. They are highly venomous instead of electrifying, which makes it a threat to any unfortunate creatures who come in contact with it.", 
         Hint = "Found in the saline waters of the Brine Pool.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 300, 
-        XP = 150, 
+        Price = 238, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -15265,7 +16255,7 @@ local v5 = {
             100, 
             160
         }, 
-        Chance = 40 * v2["Brine Pool"].Rare, 
+        Chance = 40 * v3["Brine Pool"].Rare, 
         Rarity = "Rare", 
         Resilience = 20, 
         ProgressEfficiency = 0.8, 
@@ -15273,8 +16263,8 @@ local v5 = {
         Hint = "Found in the Brine Pool.", 
         FavouriteBait = "Weird Algae", 
         FavouriteTime = "Day", 
-        Price = 440, 
-        XP = 150, 
+        Price = 376, 
+        XP = 230, 
         Seasons = {
             "Winter"
         }, 
@@ -15304,8 +16294,8 @@ local v5 = {
         Hint = "Found in the Brine Pool.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 3000, 
-        XP = 1000, 
+        Price = 1937, 
+        XP = 1550, 
         Seasons = {
             "Autumn"
         }, 
@@ -15336,8 +16326,8 @@ local v5 = {
         Hint = "Found in the Brine Pool.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 3000, 
-        XP = 1000, 
+        Price = 1937, 
+        XP = 1550, 
         Seasons = {
             "Autumn"
         }, 
@@ -15367,8 +16357,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 9000, 
-        XP = 3500, 
+        Price = 3589, 
+        XP = 2870, 
         Seasons = {
             "None"
         }, 
@@ -15391,7 +16381,7 @@ local v5 = {
             60, 
             130
         }, 
-        Chance = 100 * v2["Desolate Deep"].Trash, 
+        Chance = 100, 
         Rarity = "Trash", 
         Resilience = 80, 
         Description = "A sharp and spiky rock formation that has fallen from the ceiling of a formidable cavern.", 
@@ -15423,7 +16413,7 @@ local v5 = {
             180, 
             180
         }, 
-        Chance = 17 * v2["Desolate Deep"].Uncommon, 
+        Chance = 17 * v3["Desolate Deep"].Uncommon, 
         Rarity = "Uncommon", 
         Resilience = 120, 
         Description = "A geode filled with deep dark items and fish. Possibly has been untouched for years!- Like a coral reef Christmas!", 
@@ -15431,8 +16421,8 @@ local v5 = {
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
         BuyMult = 3, 
-        Price = 200, 
-        XP = 20, 
+        Price = 100, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -15504,8 +16494,8 @@ local v5 = {
         Hint = "Caught in the Desolate Deep using a crab cage.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 25, 
-        XP = 60, 
+        Price = 54, 
+        XP = 30, 
         Seasons = {
             "Spring"
         }, 
@@ -15528,15 +16518,15 @@ local v5 = {
             300, 
             600
         }, 
-        Chance = 90 * v2["Desolate Deep"].Common, 
+        Chance = 90 * v3["Desolate Deep"].Common, 
         Rarity = "Common", 
         Resilience = 35, 
         Description = "With their Stone Exocranium on the front of their body, the invasive Slate Tuna is able to hunt and kill pray at alarmingly high rates. However, this stone noggin of theirs also ends up in slower swim speeds for this predator, resulting with this fish being lower down on the food chain in this deep chasm.", 
         Hint = "Found commonly in the Desolate Deep.", 
         FavouriteBait = "Super Flakes", 
         FavouriteTime = nil, 
-        Price = 70, 
-        XP = 25, 
+        Price = 58, 
+        XP = 30, 
         Seasons = {
             "Spring"
         }, 
@@ -15561,15 +16551,15 @@ local v5 = {
             40, 
             60
         }, 
-        Chance = 90 * v2["Desolate Deep"].Uncommon, 
+        Chance = 90 * v3["Desolate Deep"].Uncommon, 
         Rarity = "Uncommon", 
         Resilience = 45, 
         Description = "The Phantom Ray is a menacing yet beautiful species of ray, resembling the shape of an anchor with bioluminescent engravings throughout its body, as well as a translucent fin that they use to move around. They typically like to feed on microorganisms during the night, and spend most of the day sitting underneath ledges or large vegetation.", 
         Hint = "Found in the Desolate Deep.", 
         FavouriteBait = "Weird Algae", 
         FavouriteTime = "Night", 
-        Price = 140, 
-        XP = 60, 
+        Price = 114, 
+        XP = 70, 
         Seasons = {
             "Summer", 
             "Autumn"
@@ -15592,15 +16582,15 @@ local v5 = {
             4, 
             12
         }, 
-        Chance = 25 * v2["Desolate Deep"].Unusual, 
+        Chance = 25 * v3["Desolate Deep"].Unusual, 
         Rarity = "Unusual", 
         Resilience = 100, 
         Description = "The Rockstar Hermit Crab is a unique evolutionary species, originating from the simple hermit crab. They possess antennae resembling two lightning-bolts on either side of their head, which is where their name comes from. Caught with rods or crab cages in the Desolate Deep.", 
         Hint = "Caught in the Desolate Deep using a crab cage.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 65, 
-        XP = 75, 
+        Price = 200, 
+        XP = 120, 
         Seasons = {
             "Summer"
         }, 
@@ -15622,15 +16612,15 @@ local v5 = {
             4, 
             20
         }, 
-        Chance = 45 * v2["Desolate Deep"].Unusual, 
+        Chance = 45 * v3["Desolate Deep"].Unusual, 
         Rarity = "Unusual", 
         Resilience = 35, 
         Description = "The Cockatoo Squid is an intriguing species of squid. Their bodies are almost entirely translucent and bioluminescent, which they can use to hide from possible predators. They typically leave their hiding spots at night in search of microorganisms to feed on. [Contribution by @Johnny_D3pp]", 
         Hint = "Found in the Desolate Deep during the night.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Night", 
-        Price = 200, 
-        XP = 65, 
+        Price = 233, 
+        XP = 140, 
         Seasons = {
             "Summer", 
             "Winter"
@@ -15652,15 +16642,15 @@ local v5 = {
             150, 
             200
         }, 
-        Chance = 75 * v2["Desolate Deep"].Rare, 
+        Chance = 75 * v3["Desolate Deep"].Rare, 
         Rarity = "Rare", 
         Resilience = 30, 
         Description = "Banditfish are insanely fast hunters and swimmers, hence their name. They have a single rudder-like fin at the back of their bodies, which they move in a swaying motion to glide throughout the waters. Despite being remarkably good at hunting smaller prey, they are still no match for the greater creatures within the Desolate Deep.", 
         Hint = "Caught in the Desolate Deep", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 250, 
-        XP = 100, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "Spring"
         }, 
@@ -15690,8 +16680,8 @@ local v5 = {
         Hint = "Hangs out near the deepest parts of the Desolate Deep during the Night.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Night", 
-        Price = 1100, 
-        XP = 550, 
+        Price = 1964, 
+        XP = 1570, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -15723,8 +16713,8 @@ local v5 = {
         Hint = "Can be found within the Desolate Deep", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = nil, 
-        Price = 8300, 
-        XP = 4000, 
+        Price = 2074, 
+        XP = 1660, 
         Seasons = {
             "None"
         }, 
@@ -15758,8 +16748,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
-        Price = 6000, 
-        XP = 4500, 
+        Price = 3493, 
+        XP = 2790, 
         Seasons = {
             "None"
         }, 
@@ -15788,8 +16778,8 @@ local v5 = {
         Hint = "Caught with crab cages in the Desolate Deep.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 3000, 
-        XP = 1000, 
+        Price = 10500, 
+        XP = 8000, 
         Seasons = {
             "None"
         }, 
@@ -15818,8 +16808,8 @@ local v5 = {
         Hint = "Found in Keepers Altar.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = nil, 
-        Price = 100, 
-        XP = 90, 
+        Price = 116, 
+        XP = 70, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -15851,8 +16841,8 @@ local v5 = {
         Hint = "Swims quietly in Keepers Altar during the day.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 65, 
-        XP = 75, 
+        Price = 233, 
+        XP = 140, 
         Seasons = {
             "Summer"
         }, 
@@ -15881,8 +16871,8 @@ local v5 = {
         Hint = "Found in Keepers Altar.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Day", 
-        Price = 115, 
-        XP = 80, 
+        Price = 360, 
+        XP = 220, 
         Seasons = {
             "Spring"
         }, 
@@ -15912,8 +16902,8 @@ local v5 = {
         Hint = "Found in Keepers Altar.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 250, 
-        XP = 120, 
+        Price = 356, 
+        XP = 210, 
         Seasons = {
             "Winter"
         }, 
@@ -15943,8 +16933,8 @@ local v5 = {
         Hint = "Caught at night in Keepers Altar.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 1000, 
-        XP = 500, 
+        Price = 1877, 
+        XP = 1500, 
         Seasons = {
             "Winter"
         }, 
@@ -15972,8 +16962,8 @@ local v5 = {
         Hint = "Found in saltwater near Moosewood Docks. Prefers the Summer and Autumn.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 70, 
-        XP = 80, 
+        Price = 53, 
+        XP = 30, 
         Seasons = {
             "Summer", 
             "Autumn"
@@ -16004,8 +16994,8 @@ local v5 = {
         Hint = "Caught in all saltwater\226\128\153s of Moosewood", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 30, 
-        XP = 20, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Spring"
         }, 
@@ -16033,8 +17023,8 @@ local v5 = {
         Hint = "Found in Moosewoods freshwater. Seems to prefer worms and other small baits.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 85, 
-        XP = 20, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -16065,8 +17055,8 @@ local v5 = {
         Hint = "Can be found in plenty of common waters in Moosewood & Roslit.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 65, 
-        XP = 40, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -16096,7 +17086,7 @@ local v5 = {
         Hint = "Found in freshwaters, and along ocean beaches. Prefers day.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 60, 
+        Price = 52, 
         XP = 30, 
         Seasons = {
             "Spring", 
@@ -16129,8 +17119,8 @@ local v5 = {
         Hint = "Resides in oceans, some freshwaters along Moosewood. Prefers shrimp.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = nil, 
-        Price = 45, 
-        XP = 25, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "Autumn", 
             "Winter"
@@ -16162,8 +17152,8 @@ local v5 = {
         Hint = "Found in the back of Moosewood Pond.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = nil, 
-        Price = 110, 
-        XP = 80, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -16196,8 +17186,8 @@ local v5 = {
         Hint = "Found in open saltwater near moosewood.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 120, 
-        XP = 80, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "Summer"
         }, 
@@ -16227,8 +17217,8 @@ local v5 = {
         Hint = "Lives in calm ponds. Very easy to catch with bagels.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 65, 
-        XP = 75, 
+        Price = 102, 
+        XP = 60, 
         Seasons = {
             "Summer"
         }, 
@@ -16258,8 +17248,8 @@ local v5 = {
         Hint = "Can be found close to ocean docks of Moosewood.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = nil, 
-        Price = 110, 
-        XP = 45, 
+        Price = 208, 
+        XP = 120, 
         Seasons = {
             "Spring"
         }, 
@@ -16289,8 +17279,8 @@ local v5 = {
         Hint = "Lays flat at the bottom of the ocean. Prefers the night.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 120, 
-        XP = 80, 
+        Price = 210, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -16318,8 +17308,8 @@ local v5 = {
         Hint = "Only comes out at night. Can be found in all kinds of habitats near Moosewood.", 
         FavouriteBait = "None", 
         FavouriteTime = "Night", 
-        Price = 130, 
-        XP = 90, 
+        Price = 217, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -16350,8 +17340,8 @@ local v5 = {
         Hint = "Found in Moosewoods freshwater. Seems to prefer insect baits. Very vicious.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 230, 
-        XP = 90, 
+        Price = 222, 
+        XP = 130, 
         Seasons = {
             "Autumn", 
             "Spring"
@@ -16384,8 +17374,8 @@ local v5 = {
         Hint = "Caught in Moosewood Pond during the night.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Night", 
-        Price = 600, 
-        XP = 200, 
+        Price = 1725, 
+        XP = 1380, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -16418,7 +17408,7 @@ local v5 = {
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = nil, 
         Price = 3100, 
-        XP = 1000, 
+        XP = 2480, 
         Seasons = {
             "None"
         }, 
@@ -16450,8 +17440,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
-        Price = 4000, 
-        XP = 1200, 
+        Price = 5316, 
+        XP = 10650, 
         Seasons = {
             "None"
         }, 
@@ -16509,8 +17499,8 @@ local v5 = {
         Hint = "Found in Mushgrove.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 80, 
-        XP = 80, 
+        Price = 54, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -16540,8 +17530,8 @@ local v5 = {
         Hint = "Can be found in Mushgrove Swamp.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 60, 
-        XP = 50, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -16571,8 +17561,8 @@ local v5 = {
         Hint = "Caught in Mushgrove Swamp at night.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Night", 
-        Price = 100, 
-        XP = 50, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -16601,8 +17591,8 @@ local v5 = {
         Hint = "Found in Mushgrove Swamp near the fallen watch tower.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 120, 
-        XP = 75, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "Autumn"
         }, 
@@ -16634,8 +17624,8 @@ local v5 = {
         Hint = "Can be caught while cage fishing in mushgrove.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 150, 
-        XP = 40, 
+        Price = 205, 
+        XP = 120, 
         Seasons = {
             "Winter"
         }, 
@@ -16665,8 +17655,8 @@ local v5 = {
         Hint = "Can be caught while cage fishing in mushgrove.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 330, 
-        XP = 80, 
+        Price = 308, 
+        XP = 180, 
         Seasons = {
             "Summer"
         }, 
@@ -16696,8 +17686,8 @@ local v5 = {
         Hint = "Found under the bridges of Mushgrove Swamp.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = nil, 
-        Price = 280, 
-        XP = 100, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "Winter"
         }, 
@@ -16726,8 +17716,8 @@ local v5 = {
         Hint = "Can be found in Mushgrove Swamp during the night.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Night", 
-        Price = 300, 
-        XP = 120, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "Autumn", 
             "Summer"
@@ -16759,8 +17749,8 @@ local v5 = {
         Hint = "Found in Mushgrove Swamp during the night.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 700, 
-        XP = 400, 
+        Price = 1898, 
+        XP = 1520, 
         Seasons = {
             "Spring"
         }, 
@@ -16791,8 +17781,8 @@ local v5 = {
         Hint = "Can be found in Mushgrove Swamp.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 1000, 
-        XP = 500, 
+        Price = 3141, 
+        XP = 2510, 
         Seasons = {
             "Spring"
         }, 
@@ -16822,8 +17812,8 @@ local v5 = {
         Hint = "In salt waters.", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 95, 
-        XP = 90, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -16853,8 +17843,8 @@ local v5 = {
         Hint = "Found all over the Ocean during the day and prefers shrimp.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Day", 
-        Price = 90, 
-        XP = 40, 
+        Price = 54, 
+        XP = 30, 
         Seasons = {
             "Summer", 
             "Spring"
@@ -16886,8 +17876,8 @@ local v5 = {
         Hint = "Found all over the Ocean, prefers bagels.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = nil, 
-        Price = 90, 
-        XP = 40, 
+        Price = 54, 
+        XP = 30, 
         Seasons = {
             "Summer", 
             "Spring"
@@ -16919,8 +17909,8 @@ local v5 = {
         Hint = "Found commonly in the Second Sea.", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 30, 
-        XP = 20, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -16949,8 +17939,8 @@ local v5 = {
         Hint = "Found in mildly warm saltwater.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Day", 
-        Price = 75, 
-        XP = 80, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -16982,8 +17972,8 @@ local v5 = {
         Hint = "Found in schools near 'Haddock rock'.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 50, 
-        XP = 60, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Autumn", 
             "Winter"
@@ -17011,8 +18001,8 @@ local v5 = {
         Hint = "Caught at night in deep oceans in crab cages.", 
         FavouriteBait = "None", 
         FavouriteTime = "Night", 
-        Price = 45, 
-        XP = 35, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -17043,8 +18033,8 @@ local v5 = {
         Hint = "Can be easily caught while cage fishing. Best caught near docks and beaches.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 20, 
-        XP = 35, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Summer"
         }, 
@@ -17074,8 +18064,8 @@ local v5 = {
         Hint = "Can be easily caught while cage fishing. Best caught near docks and beaches.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 20, 
-        XP = 35, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Winter"
         }, 
@@ -17105,8 +18095,8 @@ local v5 = {
         Hint = "Found in deeper saltwater and near Moosewood.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Day", 
-        Price = 150, 
-        XP = 90, 
+        Price = 111, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -17135,8 +18125,8 @@ local v5 = {
         Hint = "Found in cold deep ocean water.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 90, 
-        XP = 70, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Winter", 
             "Spring"
@@ -17167,8 +18157,8 @@ local v5 = {
         Hint = "Found in oceans and some freshwaters.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 130, 
-        XP = 90, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Spring", 
             "Winter"
@@ -17202,7 +18192,7 @@ local v5 = {
         FavouriteBait = "Minnow", 
         FavouriteTime = "Day", 
         Price = 115, 
-        XP = 80, 
+        XP = 70, 
         Seasons = {
             "Spring"
         }, 
@@ -17232,8 +18222,8 @@ local v5 = {
         Hint = "Can be caught while cage fishing in Second Seas.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 100, 
-        XP = 50, 
+        Price = 102, 
+        XP = 60, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -17264,8 +18254,8 @@ local v5 = {
         Hint = "Best caught in sandy or grass filled areas of the ocean.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 100, 
-        XP = 40, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "Winter", 
             "Autumn"
@@ -17296,8 +18286,8 @@ local v5 = {
         Hint = "Caught at night in deep oceans in crab cages.", 
         FavouriteBait = "None", 
         FavouriteTime = "Night", 
-        Price = 45, 
-        XP = 35, 
+        Price = 100, 
+        XP = 60, 
         Seasons = {
             "Summer"
         }, 
@@ -17327,8 +18317,8 @@ local v5 = {
         Hint = "Can be easily caught while cage fishing. Best caught near large rocks and all over Terrapin Island.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 30, 
-        XP = 35, 
+        Price = 101, 
+        XP = 60, 
         Seasons = {
             "Summer", 
             "Autumn"
@@ -17359,8 +18349,8 @@ local v5 = {
         Hint = "Caught at night in the ocean.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Night", 
-        Price = 200, 
-        XP = 100, 
+        Price = 233, 
+        XP = 140, 
         Seasons = {
             "Summer", 
             "Autumn"
@@ -17389,8 +18379,8 @@ local v5 = {
         Hint = "Caught in oceans using a lobster cage.", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 130, 
-        XP = 60, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Summer", 
             "Autumn"
@@ -17843,7 +18833,7 @@ local v5 = {
             40
         }, 
         Chance = 50, 
-        Rarity = "Unusual", 
+        Rarity = "Extinct", 
         Resilience = 45, 
         Description = "Lobsters are valuable crustaceans known for their rich, succulent meat. Lobsters are most active in the summer to autumn, and are commonly caught in crab cages during calm clear days.", 
         Hint = "Caught in oceans using a lobster cage.", 
@@ -18317,8 +19307,8 @@ local v5 = {
         Hint = "Found in the Deep Ocean.", 
         FavouriteBait = "None", 
         FavouriteTime = "Night", 
-        Price = 370, 
-        XP = 300, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -18348,8 +19338,8 @@ local v5 = {
         Hint = "Found in deep open.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 350, 
-        XP = 120, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "Summer"
         }, 
@@ -18379,8 +19369,8 @@ local v5 = {
         Hint = "Found on the floor ocean. Best found near Haddock.", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 250, 
-        XP = 100, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Summer", 
             "Spring"
@@ -18410,8 +19400,8 @@ local v5 = {
         Hint = "Found in sea caves during the day.", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 230, 
-        XP = 100, 
+        Price = 338, 
+        XP = 200, 
         Seasons = {
             "Summer", 
             "Spring"
@@ -18440,8 +19430,8 @@ local v5 = {
         Hint = "Can be rarely caught while cage fishing, especially in the ocean.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 320, 
-        XP = 80, 
+        Price = 300, 
+        XP = 180, 
         Seasons = {
             "None"
         }, 
@@ -18469,8 +19459,8 @@ local v5 = {
         Hint = "Found in the far, deep ocean during the night.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 230, 
-        XP = 100, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "Winter", 
             "Autumn"
@@ -18499,8 +19489,8 @@ local v5 = {
         Hint = "Found in reefs and deepwaters.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 230, 
-        XP = 100, 
+        Price = 326, 
+        XP = 200, 
         Seasons = {
             "Summer"
         }, 
@@ -18530,8 +19520,8 @@ local v5 = {
         Hint = "Found in deep ocean water. Extremely strong.", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 850, 
-        XP = 300, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "Summer"
         }, 
@@ -18563,8 +19553,8 @@ local v5 = {
         Hint = "Found in ocean water. Extremely strong.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 800, 
-        XP = 300, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Spring"
         }, 
@@ -18595,8 +19585,8 @@ local v5 = {
         Hint = "Found during a shark hunt during the night.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = "Night", 
-        Price = 500, 
-        XP = 300, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "Summer", 
             "Spring"
@@ -18628,8 +19618,8 @@ local v5 = {
         Hint = "Found roaming in all types of waters and on the coasts.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = nil, 
-        Price = 400, 
-        XP = 150, 
+        Price = 1800, 
+        XP = 1440, 
         Seasons = {
             "Spring"
         }, 
@@ -18659,8 +19649,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Night", 
-        Price = 1800, 
-        XP = 900, 
+        Price = 1958, 
+        XP = 1570, 
         Seasons = {
             "Winter"
         }, 
@@ -18693,8 +19683,8 @@ local v5 = {
         Hint = "In salt waters during the night. ", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 1200, 
-        XP = 700, 
+        Price = 1879, 
+        XP = 1500, 
         Seasons = {
             "Summer"
         }, 
@@ -18724,8 +19714,8 @@ local v5 = {
         Hint = "In salt waters during the night. ", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Night", 
-        Price = 1200, 
-        XP = 700, 
+        Price = 1900, 
+        XP = 1520, 
         Seasons = {
             "None"
         }, 
@@ -18755,8 +19745,8 @@ local v5 = {
         Hint = "Found under The Arch.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 1100, 
-        XP = 800, 
+        Price = 1823, 
+        XP = 1460, 
         Seasons = {
             "None"
         }, 
@@ -18785,8 +19775,8 @@ local v5 = {
         Hint = "Found in the ocean.", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 1200, 
-        XP = 600, 
+        Price = 1876, 
+        XP = 1500, 
         Seasons = {
             "Summer", 
             "Spring"
@@ -18815,8 +19805,8 @@ local v5 = {
         Hint = "found all around the ocean during the night.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 1500, 
-        XP = 900, 
+        Price = 1838, 
+        XP = 1470, 
         Seasons = {
             "Autumn"
         }, 
@@ -18846,8 +19836,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 4000, 
-        XP = 2000, 
+        Price = 3229, 
+        XP = 2580, 
         Seasons = {
             "Winter"
         }, 
@@ -18877,8 +19867,8 @@ local v5 = {
         Hint = "Only rarely spotted in the oceans during a Shark Hunt.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = nil, 
-        Price = 6000, 
-        XP = 900, 
+        Price = 13272, 
+        XP = 9620, 
         Seasons = {
             "Autumn"
         }, 
@@ -18909,8 +19899,8 @@ local v5 = {
         Hint = "Only rarely spotted in the oceans during a Shark Hunt. Only awake during the day.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 5500, 
-        XP = 860, 
+        Price = 13230, 
+        XP = 10580, 
         Seasons = {
             "Spring"
         }, 
@@ -18943,8 +19933,8 @@ local v5 = {
         Hint = "Found in the Ocean.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 2000, 
-        XP = 800, 
+        Price = 3270, 
+        XP = 2620, 
         Seasons = {
             "None"
         }, 
@@ -18973,8 +19963,8 @@ local v5 = {
         Hint = "Found in the ocean. Can be caught in rods and cages.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Night", 
-        Price = 2000, 
-        XP = 60, 
+        Price = 2812, 
+        XP = 2250, 
         Seasons = {
             "Autumn", 
             "Summer"
@@ -19005,10 +19995,10 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = "Night", 
-        Price = 6500, 
-        XP = 3000, 
+        Price = 8554, 
+        XP = 8840, 
         Seasons = {
-            "None"
+            "Winter"
         }, 
         Weather = {
             "Foggy"
@@ -19035,8 +20025,8 @@ local v5 = {
         Hint = "Only rarely spotted in the oceans during a Shark Hunt near the Desolate Deep.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Day", 
-        Price = 6500, 
-        XP = 3000, 
+        Price = 12273, 
+        XP = 12620, 
         Seasons = {
             "Summer", 
             "Autumn"
@@ -19068,8 +20058,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 18000, 
-        XP = 6600, 
+        Price = 5562, 
+        XP = 5560, 
         Seasons = {
             "Autumn", 
             "Spring"
@@ -19102,8 +20092,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 19000, 
-        XP = 7000, 
+        Price = 5688, 
+        XP = 5690, 
         Seasons = {
             "Summer"
         }, 
@@ -19134,10 +20124,9 @@ local v5 = {
         Hint = "commonly caught in Roslit Pond.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Day", 
-        Price = 40, 
-        XP = 40, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
-            "Spring", 
             "Summer"
         }, 
         Weather = {
@@ -19163,8 +20152,8 @@ local v5 = {
         Hint = "Found in freshwater of Roslit.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 70, 
-        XP = 80, 
+        Price = 54, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -19193,10 +20182,10 @@ local v5 = {
         Hint = "Lives in Roslit Bays pond. Very easy to catch with bagels.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = nil, 
-        Price = 45, 
-        XP = 75, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
-            "Spring"
+            "Autumn"
         }, 
         Weather = {
             "Clear"
@@ -19224,8 +20213,8 @@ local v5 = {
         Hint = "From catching Clams.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 60, 
-        XP = 0, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -19252,8 +20241,8 @@ local v5 = {
         Hint = "Found in Roslit freshwater during warm days.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 90, 
-        XP = 30, 
+        Price = 105, 
+        XP = 60, 
         Seasons = {
             "Summer"
         }, 
@@ -19282,10 +20271,9 @@ local v5 = {
         Hint = "Found in Roslit Bays coral reef.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = nil, 
-        Price = 90, 
-        XP = 90, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
-            "Spring", 
             "Summer"
         }, 
         Weather = {
@@ -19315,10 +20303,9 @@ local v5 = {
         Hint = "Found in Roslit Bays coral reef.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 90, 
-        XP = 90, 
+        Price = 109, 
+        XP = 70, 
         Seasons = {
-            "Spring", 
             "Summer"
         }, 
         Weather = {
@@ -19349,7 +20336,7 @@ local v5 = {
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
         Price = 110, 
-        XP = 60, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -19378,8 +20365,8 @@ local v5 = {
         Hint = "From catching Clams.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 120, 
-        XP = 0, 
+        Price = 200, 
+        XP = 120, 
         Seasons = {
             "None"
         }, 
@@ -19406,8 +20393,8 @@ local v5 = {
         Hint = "Found in Roslit Bays coral reef.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 120, 
-        XP = 60, 
+        Price = 220, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -19434,8 +20421,8 @@ local v5 = {
         Hint = "Best found at night in ocean near Roslit Bay.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Night", 
-        Price = 140, 
-        XP = 95, 
+        Price = 228, 
+        XP = 140, 
         Seasons = {
             "Winter"
         }, 
@@ -19463,8 +20450,8 @@ local v5 = {
         Hint = "Only comes out at night. Can be found inside the coral reef of Roslit Bay.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 150, 
-        XP = 150, 
+        Price = 235, 
+        XP = 140, 
         Seasons = {
             "Summer"
         }, 
@@ -19494,8 +20481,8 @@ local v5 = {
         Hint = "Found in Roslit Bays coral reef.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Day", 
-        Price = 140, 
-        XP = 100, 
+        Price = 230, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -19522,8 +20509,8 @@ local v5 = {
         Hint = "Found behind Roslit Bay.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 13, 
-        XP = 25, 
+        Price = 215, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -19552,8 +20539,8 @@ local v5 = {
         Hint = "From catching Clams.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 145, 
-        XP = 0, 
+        Price = 200, 
+        XP = 120, 
         Seasons = {
             "None"
         }, 
@@ -19580,8 +20567,8 @@ local v5 = {
         Hint = "Found in Roslit Bays freshwater during the day.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 250, 
-        XP = 150, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -19610,8 +20597,8 @@ local v5 = {
         Hint = "Can be found in lakes during summer.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 220, 
-        XP = 100, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Summer"
         }, 
@@ -19642,10 +20629,9 @@ local v5 = {
         Hint = "Found best near seaweed of Roslit Bays pond.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Day", 
-        Price = 160, 
-        XP = 80, 
+        Price = 330, 
+        XP = 200, 
         Seasons = {
-            "Spring", 
             "Autumn"
         }, 
         Weather = {
@@ -19672,8 +20658,8 @@ local v5 = {
         Hint = "From catching Clams.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 200, 
-        XP = 0, 
+        Price = 300, 
+        XP = 180, 
         Seasons = {
             "None"
         }, 
@@ -19701,10 +20687,10 @@ local v5 = {
         Hint = "Caught in Roslit Bays coral reef.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 900, 
-        XP = 400, 
+        Price = 1822, 
+        XP = 1460, 
         Seasons = {
-            "Winter"
+            "Spring"
         }, 
         Weather = {
             "Rain"
@@ -19731,8 +20717,8 @@ local v5 = {
         Hint = "Caught in Roslit Bays pond at night.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Night", 
-        Price = 1000, 
-        XP = 550, 
+        Price = 1633, 
+        XP = 1310, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -19763,8 +20749,8 @@ local v5 = {
         Hint = "From catching Clams.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 880, 
-        XP = 0, 
+        Price = 1500, 
+        XP = 1200, 
         Seasons = {
             "None"
         }, 
@@ -19792,9 +20778,10 @@ local v5 = {
         Hint = "Found gliding through Roslit Bays coral reef during the night.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Night", 
-        Price = 3000, 
-        XP = 1000, 
+        Price = 3128, 
+        XP = 2500, 
         Seasons = {
+            "Spring", 
             "Summer"
         }, 
         Weather = {
@@ -19822,8 +20809,8 @@ local v5 = {
         Hint = "From catching Clams.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 2250, 
-        XP = 0, 
+        Price = 2500, 
+        XP = 2000, 
         Seasons = {
             "None"
         }, 
@@ -19850,8 +20837,8 @@ local v5 = {
         Hint = "From catching Clams.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 3500, 
-        XP = 600, 
+        Price = 10000, 
+        XP = 8000, 
         Seasons = {
             "None"
         }, 
@@ -19864,7 +20851,8 @@ local v5 = {
         SparkleColor = Color3.fromRGB(255, 228, 130), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Roslit", 
-        IsPearl = true
+        IsPearl = true, 
+        NoAnglerQuest = true
     }, 
     Basalt = {
         WeightPool = {
@@ -19911,8 +20899,8 @@ local v5 = {
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
         BuyMult = 3, 
-        Price = 200, 
-        XP = 20, 
+        Price = 300, 
+        XP = 180, 
         Seasons = {
             "None"
         }, 
@@ -19984,8 +20972,8 @@ local v5 = {
         Hint = "Found in Roslit Volcano during the day.", 
         FavouriteBait = "Coal", 
         FavouriteTime = "Day", 
-        Price = 130, 
-        XP = 90, 
+        Price = 115, 
+        XP = 70, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -20017,8 +21005,8 @@ local v5 = {
         Hint = "Found in volcanic regions.", 
         FavouriteBait = "Coal", 
         FavouriteTime = nil, 
-        Price = 200, 
-        XP = 120, 
+        Price = 230, 
+        XP = 140, 
         Seasons = {
             "Summer"
         }, 
@@ -20048,8 +21036,8 @@ local v5 = {
         Hint = "Found in volcanic regions.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 160, 
-        XP = 100, 
+        Price = 230, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -20080,8 +21068,8 @@ local v5 = {
         Hint = "Found in volcanic regions.", 
         FavouriteBait = "Coal", 
         FavouriteTime = nil, 
-        Price = 340, 
-        XP = 120, 
+        Price = 372, 
+        XP = 220, 
         Seasons = {
             "Winter"
         }, 
@@ -20111,8 +21099,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Coal", 
         FavouriteTime = "Night", 
-        Price = 600, 
-        XP = 300, 
+        Price = 1858, 
+        XP = 1490, 
         Seasons = {
             "Winter"
         }, 
@@ -20144,8 +21132,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 2500, 
-        XP = 1000, 
+        Price = 3132, 
+        XP = 2510, 
         Seasons = {
             "Summer"
         }, 
@@ -20178,8 +21166,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = nil, 
-        Price = 6500, 
-        XP = 2000, 
+        Price = 12421, 
+        XP = 9940, 
         Seasons = {
             "Summer"
         }, 
@@ -20241,8 +21229,8 @@ local v5 = {
         Hint = "Found in saltwater\226\128\153s near Snowcap.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 60, 
-        XP = 90, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "Summer", 
             "Spring"
@@ -20272,8 +21260,8 @@ local v5 = {
         Hint = "Found in Snowcap Pond during the day.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 80, 
-        XP = 100, 
+        Price = 54, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -20302,8 +21290,8 @@ local v5 = {
         Hint = "Found in salt-water of Snowcap.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 80, 
-        XP = 50, 
+        Price = 56, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -20334,8 +21322,8 @@ local v5 = {
         Hint = "Found commonly in the coast of Snowcaps salt-water during the day.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Day", 
-        Price = 70, 
-        XP = 50, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Summer", 
             "Spring"
@@ -20365,8 +21353,8 @@ local v5 = {
         Hint = "Found in Snowcap island, especially near the docks.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 70, 
-        XP = 50, 
+        Price = 55, 
+        XP = 30, 
         Seasons = {
             "Summer"
         }, 
@@ -20396,8 +21384,8 @@ local v5 = {
         Hint = "Found in open salt-water near Snowcap.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 80, 
-        XP = 50, 
+        Price = 112, 
+        XP = 70, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -20427,8 +21415,8 @@ local v5 = {
         Hint = "Found in Snowcap Pond.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 80, 
-        XP = 110, 
+        Price = 112, 
+        XP = 70, 
         Seasons = {
             "Autumn"
         }, 
@@ -20456,8 +21444,8 @@ local v5 = {
         Hint = "Found in Snowcap Pond during the night.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Night", 
-        Price = 100, 
-        XP = 100, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -20485,8 +21473,8 @@ local v5 = {
         Hint = "Found near Snowcap Island.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 150, 
-        XP = 100, 
+        Price = 228, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -20515,8 +21503,8 @@ local v5 = {
         Hint = "Found in Snowcaps freshwater. Seems to prefer insect baits.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 230, 
-        XP = 90, 
+        Price = 222, 
+        XP = 130, 
         Seasons = {
             "Autumn", 
             "Spring"
@@ -20550,8 +21538,8 @@ local v5 = {
         Hint = "Found in Snowcaps ocean water during the day. Especially active near the water-side enterance of Snowcap Cave.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 110, 
-        XP = 80, 
+        Price = 228, 
+        XP = 140, 
         Seasons = {
             "Autumn", 
             "Summer"
@@ -20581,8 +21569,8 @@ local v5 = {
         Hint = "found in Snowcap Pond.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 300, 
-        XP = 100, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -20613,8 +21601,8 @@ local v5 = {
         Hint = "Found in Snowcap Pond.", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 900, 
-        XP = 700, 
+        Price = 1939, 
+        XP = 1550, 
         Seasons = {
             "Winter"
         }, 
@@ -20644,10 +21632,10 @@ local v5 = {
         Hint = "Found in the open ocean of Snowcap Island during the night.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = "Night", 
-        Price = 900, 
-        XP = 500, 
+        Price = 2954, 
+        XP = 2360, 
         Seasons = {
-            "None"
+            "Winter"
         }, 
         Weather = {
             "Clear", 
@@ -20676,10 +21664,10 @@ local v5 = {
         Hint = "Found in Snowcap Caves during the night. Big fan of the Truffle Worm.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 800, 
-        XP = 400, 
+        Price = 3161, 
+        XP = 2530, 
         Seasons = {
-            "None"
+            "Winter"
         }, 
         Weather = {
             "Rain", 
@@ -20707,8 +21695,8 @@ local v5 = {
         Hint = "Found in the centre gap of Sunstone Island.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 40, 
-        XP = 25, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Autumn"
         }, 
@@ -20737,8 +21725,8 @@ local v5 = {
         Hint = "Found in Sunstone Island.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = nil, 
-        Price = 45, 
-        XP = 50, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -20766,8 +21754,8 @@ local v5 = {
         Hint = "Found in open ocean water and in Sunstone.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = nil, 
-        Price = 120, 
-        XP = 70, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -20795,8 +21783,8 @@ local v5 = {
         Hint = "Found in Sunstone Island.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = nil, 
-        Price = 100, 
-        XP = 90, 
+        Price = 109, 
+        XP = 70, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -20828,8 +21816,8 @@ local v5 = {
         Hint = "Caught near Sunstone Island.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 85, 
-        XP = 40, 
+        Price = 105, 
+        XP = 60, 
         Seasons = {
             "Autumn", 
             "Winter"
@@ -20860,8 +21848,8 @@ local v5 = {
         Hint = "Found in the waters near Sunstone Island during the day.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Day", 
-        Price = 100, 
-        XP = 80, 
+        Price = 220, 
+        XP = 130, 
         Seasons = {
             "Autumn", 
             "Summer"
@@ -20891,8 +21879,8 @@ local v5 = {
         Hint = "Found near Sunstone Island.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 150, 
-        XP = 90, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "Spring"
         }, 
@@ -20921,8 +21909,8 @@ local v5 = {
         Hint = "Found easier in the outer waters of Sunstone Island during the day.", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 200, 
-        XP = 100, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Summer"
         }, 
@@ -20951,8 +21939,8 @@ local v5 = {
         Hint = "Caught near Sunstone Island and can sometimes weigh over 1,000 kg.", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 1500, 
-        XP = 550, 
+        Price = 1849, 
+        XP = 1480, 
         Seasons = {
             "Summer"
         }, 
@@ -20987,8 +21975,8 @@ local v5 = {
         Hint = "Found rarely near Sunstone Island during the day.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 1200, 
-        XP = 500, 
+        Price = 1804, 
+        XP = 1440, 
         Seasons = {
             "Autumn"
         }, 
@@ -21018,8 +22006,8 @@ local v5 = {
         Hint = "Found swimming near Sunstone Island during the Night.", 
         FavouriteBait = "Super Flakes", 
         FavouriteTime = "Night", 
-        Price = 2200, 
-        XP = 850, 
+        Price = 3332, 
+        XP = 2670, 
         Seasons = {
             "None"
         }, 
@@ -21036,6 +22024,163 @@ local v5 = {
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Sunstone"
     }, 
+    ["Rusty Bolt"] = {
+        Icon = "rbxassetid://139151300056129", 
+        WeightPool = {
+            2, 
+            4
+        }, 
+        Chance = 75, 
+        Rarity = "Trash", 
+        Resilience = 85, 
+        Description = "A corroded old bolt, probably dropped by a careless miner long ago.", 
+        Hint = "???", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = nil, 
+        Price = 52, 
+        XP = 30, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Rusty Bolt...", 
+            "What a shame...", 
+            "Seems useless...", 
+            "Who dropped it here?"
+        }, 
+        SparkleColor = Color3.fromRGB(61, 52, 49), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Mineshaft"
+    }, 
+    ["Iron Chunk"] = {
+        Icon = "rbxassetid://72863476372935", 
+        WeightPool = {
+            10, 
+            40
+        }, 
+        Chance = 60, 
+        Rarity = "Common", 
+        Resilience = 90, 
+        ProgressEfficiency = 0.8, 
+        Description = "A heavy lump of raw iron ore ready to be smelted into something useful.", 
+        Hint = "???", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = nil, 
+        Price = 451, 
+        XP = 30, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "An Iron Chunk!", 
+            "Smelting time!", 
+            "It's heavy!"
+        }, 
+        SparkleColor = Color3.fromRGB(126, 126, 126), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Mineshaft"
+    }, 
+    ["Gold Piece"] = {
+        Icon = "rbxassetid://74552510080428", 
+        WeightPool = {
+            2, 
+            16
+        }, 
+        Chance = 20, 
+        Rarity = "Rare", 
+        Resilience = 30, 
+        ProgressEfficiency = 1.2, 
+        Description = "A shiny fragment of pure gold broken off from a richer vein.", 
+        Hint = "???", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = nil, 
+        Price = 1352, 
+        XP = 210, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Gold Piece!", 
+            "Smelting time!", 
+            "Treasure!", 
+            "Booyah!", 
+            "I'm rich!!!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 249, 89), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Mineshaft"
+    }, 
+    ["Crystal Geode"] = {
+        Icon = "rbxassetid://71621262147854", 
+        WeightPool = {
+            80, 
+            120
+        }, 
+        Chance = 3, 
+        Rarity = "Legendary", 
+        Resilience = 70, 
+        ProgressEfficiency = 1.5, 
+        Description = "A decently sized, glittering geode hiding sparkling crystals within its rocky shell.", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 4000, 
+        XP = 1480, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Crystal Geode!", 
+            "Woah!!", 
+            "What could be inside?"
+        }, 
+        SparkleColor = Color3.fromRGB(205, 169, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Mineshaft"
+    }, 
+    ["Radiant Crystal"] = {
+        Icon = "rbxassetid://115709607213153", 
+        WeightPool = {
+            20, 
+            20
+        }, 
+        Chance = 1, 
+        Rarity = "Gemstone", 
+        Resilience = 30, 
+        ProgressEfficiency = 0.4, 
+        Description = "An otherworldly glowing crystal that pulses with divine energy...", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 10000, 
+        XP = 7500, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Radiant Crystal!", 
+            "I got blessed!", 
+            "I'm feeling DIVINE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Mineshaft"
+    }, 
     ["Smallmouth Bass"] = {
         WeightPool = {
             5, 
@@ -21048,8 +22193,8 @@ local v5 = {
         Hint = "Can be found in freshwaters and in the filtered waters of Terrapin Island.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 70, 
-        XP = 90, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -21079,8 +22224,8 @@ local v5 = {
         Hint = "Found in the water of Terrapin Island.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 40, 
-        XP = 10, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -21109,8 +22254,8 @@ local v5 = {
         Hint = "Can be found in freshwaters and in the filtered waters of Terrapin Island during the day.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Day", 
-        Price = 110, 
-        XP = 50, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -21140,8 +22285,8 @@ local v5 = {
         Hint = "Can be found near Terrapin Island.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 90, 
-        XP = 90, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -21170,8 +22315,8 @@ local v5 = {
         Hint = "Can be found in freshwaters and in the filtered waters of Terrapin Island during the day.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 115, 
-        XP = 100, 
+        Price = 225, 
+        XP = 140, 
         Seasons = {
             "Spring", 
             "Autumn"
@@ -21201,8 +22346,8 @@ local v5 = {
         Hint = "Found in the waters of Terrapin Island, and general ocean waters.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 230, 
-        XP = 100, 
+        Price = 225, 
+        XP = 140, 
         Seasons = {
             "Autumn"
         }, 
@@ -21231,8 +22376,8 @@ local v5 = {
         Hint = "Can be easily caught while cage fishing. Only found near Terrapin Island.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 200, 
-        XP = 35, 
+        Price = 304, 
+        XP = 180, 
         Seasons = {
             "Summer", 
             "Autumn"
@@ -21263,8 +22408,8 @@ local v5 = {
         Hint = "Swims fiercely in freshwater alongside their cousin; the Smallmouth Bass.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 700, 
-        XP = 250, 
+        Price = 1669, 
+        XP = 1340, 
         Seasons = {
             "Autumn"
         }, 
@@ -21297,8 +22442,8 @@ local v5 = {
         Hint = "Resides on the floor of caves and dark rocky areas. Loves the night.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Night", 
-        Price = 900, 
-        XP = 500, 
+        Price = 1595, 
+        XP = 1280, 
         Seasons = {
             "None"
         }, 
@@ -21333,8 +22478,8 @@ local v5 = {
         Hint = "Caught near Terrapin Island during the day.", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 2000, 
-        XP = 1000, 
+        Price = 3128, 
+        XP = 2500, 
         Seasons = {
             "None"
         }, 
@@ -21363,8 +22508,8 @@ local v5 = {
         Hint = "Found commonly in Vertigo.", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 30, 
-        XP = 20, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "Winter"
         }, 
@@ -21392,8 +22537,8 @@ local v5 = {
         Hint = "Caught with crab cages in Vertigo.", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 55, 
-        XP = 35, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Summer", 
             "Winter"
@@ -21424,8 +22569,8 @@ local v5 = {
         Hint = "Found in Vertigo's Dip.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 90, 
-        XP = 100, 
+        Price = 115, 
+        XP = 70, 
         Seasons = {
             "Winter"
         }, 
@@ -21453,8 +22598,8 @@ local v5 = {
         Hint = "Found in Vertigo's cave water.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = nil, 
-        Price = 170, 
-        XP = 100, 
+        Price = 235, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -21483,8 +22628,8 @@ local v5 = {
         Hint = "Found in Vertigos calm waters.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 400, 
-        XP = 90, 
+        Price = 368, 
+        XP = 220, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -21514,8 +22659,8 @@ local v5 = {
         Hint = "Found in Vertigo.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = nil, 
-        Price = 450, 
-        XP = 400, 
+        Price = 368, 
+        XP = 220, 
         Seasons = {
             "Spring"
         }, 
@@ -21545,8 +22690,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 900, 
-        XP = 800, 
+        Price = 1776, 
+        XP = 1420, 
         Seasons = {
             "None"
         }, 
@@ -21577,8 +22722,8 @@ local v5 = {
         Hint = "Can be found when fishing in a strange whirlpool.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = nil, 
-        Price = 8000, 
-        XP = 1200, 
+        Price = 3404, 
+        XP = 2720, 
         Seasons = {
             "None"
         }, 
@@ -21627,6 +22772,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright", 
         From = "FischFright"
     }, 
@@ -21660,6 +22806,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(140, 255, 176), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright", 
         From = "FischFright"
     }, 
@@ -21690,6 +22837,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 51, 51), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright", 
         From = "FischFright"
     }, 
@@ -21721,6 +22869,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 51, 51), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright", 
         From = "FischFright"
     }, 
@@ -21751,6 +22900,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright", 
         From = "FischFright"
     }, 
@@ -21784,6 +22934,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(129, 255, 181), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright", 
         From = "FischFright"
     }, 
@@ -21817,6 +22968,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 255, 216), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright 2", 
         From = "FischFright 2", 
         IsLimitedBestiary = true
@@ -21849,6 +23001,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 227, 15), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright 2", 
         From = "FischFright 2", 
         IsLimitedBestiary = true
@@ -21974,9 +23127,11 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 255, 216), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright 2", 
         From = "FischFright 2", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        RelicGroup = "Spooky"
     }, 
     ["Eerie Relic"] = {
         WeightPool = {
@@ -22006,9 +23161,11 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 255, 216), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright 2", 
         From = "FischFright 2", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        RelicGroup = "Eerie"
     }, 
     ["Frightful Relic"] = {
         WeightPool = {
@@ -22038,9 +23195,11 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 255, 216), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright 2", 
         From = "FischFright 2", 
-        IsLimitedBestiary = true
+        IsLimitedBestiary = true, 
+        RelicGroup = "Frightful"
     }, 
     ["Ghost Minnow"] = {
         WeightPool = {
@@ -22245,6 +23404,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(130, 130, 130), 
         HoldAnimation = l_fish_0:WaitForChild("crate"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright 2", 
         From = "FischFright 2", 
         IsLimitedBestiary = true, 
@@ -22282,6 +23442,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(0, 128, 0), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright 2", 
         From = "FischFright 2", 
         IsLimitedBestiary = true
@@ -22664,6 +23825,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(34, 139, 34), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright 2", 
         From = "FischFright 2", 
         IsLimitedBestiary = true
@@ -22698,6 +23860,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(218, 165, 32), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright 2", 
         From = "FischFright 2", 
         IsLimitedBestiary = true
@@ -22732,6 +23895,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "FischFright 2", 
         From = "FischFright 2", 
         IsLimitedBestiary = true
@@ -22765,6 +23929,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(208, 104, 135), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
         FromLimited = "Fischgiving", 
         From = "Fischgiving"
     }, 
@@ -23265,6 +24430,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 237, 137), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Fischmas", 
         From = "Fischmas"
     }, 
@@ -23421,6 +24587,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(154, 218, 143), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         FromLimited = "Golden Tide", 
         IsLimitedBestiary = true, 
         From = "Golden Tide", 
@@ -23430,7 +24597,7 @@ local v5 = {
                 Value = -0.6
             }, 
             {
-                Value = 0.2
+                Value = -0.8
             }
         }
     }, 
@@ -23449,8 +24616,8 @@ local v5 = {
         Hint = "Its pretty", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 50, 
-        XP = 250, 
+        Price = 53, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -23476,8 +24643,8 @@ local v5 = {
         Hint = "Found in the coldest parts of the deep, especially under direct light.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = "Day", 
-        Price = 30, 
-        XP = 50, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "Winter"
         }, 
@@ -23504,8 +24671,8 @@ local v5 = {
         Hint = "Lurks near the surface of freezing waters, seeking light.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 100, 
-        XP = 110, 
+        Price = 105, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -23532,8 +24699,8 @@ local v5 = {
         Hint = "Found in areas with heavy ice cover, especially under clear skies.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 100, 
-        XP = 100, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -23560,8 +24727,8 @@ local v5 = {
         Hint = "Prefers cold waters, especially during storms.", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 300, 
-        XP = 250, 
+        Price = 217, 
+        XP = 130, 
         Seasons = {
             "Autumn"
         }, 
@@ -23588,8 +24755,8 @@ local v5 = {
         Hint = "Found near underwater ice formations in the dark, especially during windy weather.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Night", 
-        Price = 400, 
-        XP = 350, 
+        Price = 338, 
+        XP = 200, 
         Seasons = {
             "Winter"
         }, 
@@ -23616,8 +24783,8 @@ local v5 = {
         Hint = "Appears during the coldest nights, when the moon is full.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = nil, 
-        Price = 500, 
-        XP = 650, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "Autumn"
         }, 
@@ -23646,8 +24813,8 @@ local v5 = {
         Hint = "Found in the deepest of trenches, most notably when the stars are present.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 1500, 
-        XP = 2000, 
+        Price = 1909, 
+        XP = 1530, 
         Seasons = {
             "Winter"
         }, 
@@ -23675,8 +24842,8 @@ local v5 = {
         Hint = "Appears in the deepest, coldest waters, especially in the dark.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 4000, 
-        XP = 2800, 
+        Price = 3404, 
+        XP = 2720, 
         Seasons = {
             "Winter"
         }, 
@@ -23708,8 +24875,8 @@ local v5 = {
         Hint = "Appears during the coldest nights, when the moon is full.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 18000, 
-        XP = 20000, 
+        Price = 14793, 
+        XP = 11830, 
         Seasons = {
             "Winter"
         }, 
@@ -23737,8 +24904,8 @@ local v5 = {
         Hint = "Found darting in schools through Zeus Pool.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 120, 
-        XP = 80, 
+        Price = 54, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -23767,8 +24934,8 @@ local v5 = {
         Hint = "Most active during thunderstorms in Zeus Pool.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 450, 
-        XP = 250, 
+        Price = 228, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -23797,8 +24964,8 @@ local v5 = {
         Hint = "Glides along the bottom of Zeus Pool during storms.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = nil, 
-        Price = 280, 
-        XP = 150, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -23827,8 +24994,8 @@ local v5 = {
         Hint = "Hunts during thunderstorms in Zeus Pool.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 550, 
-        XP = 300, 
+        Price = 230, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -23857,8 +25024,8 @@ local v5 = {
         Hint = "Common in Zeus Pool, especially before storms.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 180, 
-        XP = 100, 
+        Price = 54, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -23887,8 +25054,8 @@ local v5 = {
         Hint = "Only appears during the fiercest thunderstorms in zeus pool.", 
         FavouriteBait = "None", 
         FavouriteTime = "Night", 
-        Price = 2500, 
-        XP = 1200, 
+        Price = 1800, 
+        XP = 1440, 
         Seasons = {
             "None"
         }, 
@@ -23917,8 +25084,8 @@ local v5 = {
         Hint = "Hunts near the surface during storms in zeus pool.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 276, 
-        XP = 143, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -23947,7 +25114,7 @@ local v5 = {
         Hint = "Schools in the shallows of Zeus Pool.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 90, 
+        Price = 53, 
         XP = 30, 
         Seasons = {
             "None"
@@ -23977,8 +25144,8 @@ local v5 = {
         Hint = "Found in deeper parts of Zeus Pool during storms.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = nil, 
-        Price = 310, 
-        XP = 231, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -24007,8 +25174,8 @@ local v5 = {
         Hint = "Appears only during the most powerful thunderstorms in zeus pool.", 
         FavouriteBait = "None", 
         FavouriteTime = "Night", 
-        Price = 5000, 
-        XP = 2000, 
+        Price = 3031, 
+        XP = 2420, 
         Seasons = {
             "None"
         }, 
@@ -24037,8 +25204,8 @@ local v5 = {
         Hint = "Makes large waves when surfacing in Poseidon's Pool.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Day", 
-        Price = 180, 
-        XP = 100, 
+        Price = 106, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -24067,8 +25234,8 @@ local v5 = {
         Hint = "Feel for sudden strong currents in deep water, Poseidon Pool fish.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 220, 
-        XP = 120, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -24097,8 +25264,8 @@ local v5 = {
         Hint = "Watch for massive shadows gliding beneath the surface, Poseidon Pool fish.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Day", 
-        Price = 350, 
-        XP = 180, 
+        Price = 217, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -24127,8 +25294,8 @@ local v5 = {
         Hint = "Creates disturbances in Poseidon's Pool when hunting, Poseidon Pool fish.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 400, 
-        XP = 200, 
+        Price = 220, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -24157,8 +25324,8 @@ local v5 = {
         Hint = "Watch for massive shapes breaking the surface at high speed, Poseidon Pool fish..", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 800, 
-        XP = 400, 
+        Price = 341, 
+        XP = 200, 
         Seasons = {
             "None"
         }, 
@@ -24187,8 +25354,8 @@ local v5 = {
         Hint = "Patrols the deep waters of Poseidon's Pool.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Night", 
-        Price = 900, 
-        XP = 450, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -24217,8 +25384,8 @@ local v5 = {
         Hint = "Listen for deep rumbling sounds in Poseidon's Pool.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 1000, 
-        XP = 500, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -24248,8 +25415,8 @@ local v5 = {
         Hint = "Lurks in the darkest depths of Poseidon's Pool.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 3000, 
-        XP = 1500, 
+        Price = 2018, 
+        XP = 1610, 
         Seasons = {
             "None"
         }, 
@@ -24279,8 +25446,8 @@ local v5 = {
         Hint = "The deepest parts of the pool grow still when it approaches, Poseidon Pool fish.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 4000, 
-        XP = 2000, 
+        Price = 2057, 
+        XP = 1650, 
         Seasons = {
             "None"
         }, 
@@ -24310,8 +25477,8 @@ local v5 = {
         Hint = "The deepest parts of Poseidon's Pool occasionally tremble with its presence, Poseidon Pool.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 6000, 
-        XP = 2500, 
+        Price = 3525, 
+        XP = 2820, 
         Seasons = {
             "None"
         }, 
@@ -24340,8 +25507,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Day", 
-        Price = 65, 
-        XP = 45, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "Summer"
         }, 
@@ -24369,8 +25536,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "None", 
         FavouriteTime = nil, 
-        Price = 40, 
-        XP = 25, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -24398,7 +25565,7 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 50, 
+        Price = 51, 
         XP = 30, 
         Seasons = {
             "None"
@@ -24427,8 +25594,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 70, 
-        XP = 50, 
+        Price = 53, 
+        XP = 30, 
         Seasons = {
             "Spring"
         }, 
@@ -24456,8 +25623,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 120, 
-        XP = 80, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Spring", 
             "Summer"
@@ -24486,8 +25653,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Night", 
-        Price = 160, 
-        XP = 100, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "Winter"
         }, 
@@ -24515,8 +25682,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 180, 
-        XP = 110, 
+        Price = 222, 
+        XP = 130, 
         Seasons = {
             "Summer"
         }, 
@@ -24544,8 +25711,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Coral", 
         FavouriteTime = "Day", 
-        Price = 300, 
-        XP = 180, 
+        Price = 228, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -24573,8 +25740,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = nil, 
-        Price = 250, 
-        XP = 150, 
+        Price = 225, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -24602,8 +25769,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Night", 
-        Price = 500, 
-        XP = 300, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -24631,8 +25798,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Night Shrimp", 
         FavouriteTime = "Night", 
-        Price = 650, 
-        XP = 400, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -24660,8 +25827,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 800, 
-        XP = 500, 
+        Price = 356, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -24689,8 +25856,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 2000, 
-        XP = 1000, 
+        Price = 1800, 
+        XP = 1440, 
         Seasons = {
             "None"
         }, 
@@ -24718,8 +25885,8 @@ local v5 = {
         Hint = "Sunken's Depth Pool", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 8000, 
-        XP = 3000, 
+        Price = 3062, 
+        XP = 2450, 
         Seasons = {
             "Winter"
         }, 
@@ -24747,8 +25914,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 55, 
-        XP = 35, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -24774,8 +25941,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "None", 
         FavouriteTime = "Day", 
-        Price = 35, 
-        XP = 20, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -24801,7 +25968,7 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Day", 
-        Price = 45, 
+        Price = 51, 
         XP = 30, 
         Seasons = {
             "Spring", 
@@ -24829,8 +25996,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Day", 
-        Price = 60, 
-        XP = 40, 
+        Price = 52, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -24856,8 +26023,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Day", 
-        Price = 170, 
-        XP = 105, 
+        Price = 109, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -24884,8 +26051,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Coral", 
         FavouriteTime = nil, 
-        Price = 150, 
-        XP = 95, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "Spring"
         }, 
@@ -24912,8 +26079,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Night", 
-        Price = 190, 
-        XP = 115, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -24940,8 +26107,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Night Shrimp", 
         FavouriteTime = "Night", 
-        Price = 350, 
-        XP = 200, 
+        Price = 230, 
+        XP = 140, 
         Seasons = {
             "Winter"
         }, 
@@ -24969,8 +26136,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Night", 
-        Price = 380, 
-        XP = 220, 
+        Price = 233, 
+        XP = 140, 
         Seasons = {
             "Summer"
         }, 
@@ -24998,8 +26165,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = nil, 
-        Price = 400, 
-        XP = 240, 
+        Price = 231, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -25027,8 +26194,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Night Shrimp", 
         FavouriteTime = "Night", 
-        Price = 650, 
-        XP = 400, 
+        Price = 352, 
+        XP = 210, 
         Seasons = {
             "Winter"
         }, 
@@ -25056,8 +26223,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Deep Coral", 
         FavouriteTime = "Night", 
-        Price = 800, 
-        XP = 500, 
+        Price = 356, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -25085,8 +26252,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 2500, 
-        XP = 1200, 
+        Price = 1800, 
+        XP = 1440, 
         Seasons = {
             "None"
         }, 
@@ -25114,8 +26281,8 @@ local v5 = {
         Hint = "Ethereal Abyss Pool", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 3500, 
-        XP = 1800, 
+        Price = 3050, 
+        XP = 2440, 
         Seasons = {
             "Winter"
         }, 
@@ -25143,8 +26310,8 @@ local v5 = {
         Hint = "Hunts in the shadowy corners of Kraken's Pool.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 200, 
-        XP = 120, 
+        Price = 106, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -25173,8 +26340,8 @@ local v5 = {
         Hint = "Look for writhing shadows in the depths, Kraken Pool.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Night", 
-        Price = 300, 
-        XP = 180, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -25203,8 +26370,8 @@ local v5 = {
         Hint = "Watch for reaching tendrils in dark waters, Kraken Pool.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Night", 
-        Price = 450, 
-        XP = 250, 
+        Price = 217, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -25233,8 +26400,8 @@ local v5 = {
         Hint = "The oldest parts of the pool hold its secrets, Kraken Pool.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 900, 
-        XP = 400, 
+        Price = 341, 
+        XP = 200, 
         Seasons = {
             "None"
         }, 
@@ -25263,8 +26430,8 @@ local v5 = {
         Hint = "Your eyes may refuse to focus where it swims, Kraken Pool.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 1200, 
-        XP = 600, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "None"
         }, 
@@ -25294,8 +26461,8 @@ local v5 = {
         Hint = "Watch for unusual patterns in the water's surface, Kraken Pool.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 3000, 
-        XP = 1500, 
+        Price = 2018, 
+        XP = 1610, 
         Seasons = {
             "None"
         }, 
@@ -25325,8 +26492,8 @@ local v5 = {
         Hint = "The ground trembles when it stirs, Kraken Pool.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 4000, 
-        XP = 2000, 
+        Price = 2057, 
+        XP = 1650, 
         Seasons = {
             "None"
         }, 
@@ -25356,8 +26523,8 @@ local v5 = {
         Hint = "Look for patches where light cannot penetrate, Kraken Pool.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 6000, 
-        XP = 3000, 
+        Price = 3492, 
+        XP = 2790, 
         Seasons = {
             "None"
         }, 
@@ -25387,8 +26554,8 @@ local v5 = {
         Hint = "The depths grow hollow in its wake, Kraken Pool.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 8000, 
-        XP = 4000, 
+        Price = 3543, 
+        XP = 2830, 
         Seasons = {
             "None"
         }, 
@@ -25414,7 +26581,7 @@ local v5 = {
         Chance = 0.02, 
         Rarity = "Exotic", 
         Resilience = 9, 
-        ProgressEfficiency = 0.15, 
+        ForcedProgressEfficiency = 0.15, 
         Description = "The ruler of the abyssal depths, a being of such immense power that its mere presence warps the fabric of reality. Few have ever witnessed its true form and lived.", 
         Hint = "When all other creatures flee, the master approaches, Kraken Pool.", 
         FavouriteBait = {
@@ -25422,8 +26589,8 @@ local v5 = {
             "Tryhard Worm"
         }, 
         FavouriteTime = "Night", 
-        Price = 20000, 
-        XP = 10000, 
+        Price = 37500, 
+        XP = 20000, 
         Seasons = {
             "None"
         }, 
@@ -25454,8 +26621,8 @@ local v5 = {
         Hint = "The oldest legends speak of its existence, Kraken Pool on Poseidon Wrath Event.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 50000, 
-        XP = 25000, 
+        Price = 44000, 
+        XP = 22000, 
         Seasons = {
             "None"
         }, 
@@ -25484,8 +26651,8 @@ local v5 = {
         Hint = "Search the ocean for migrating orcas", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = nil, 
-        Price = 12000, 
-        XP = 8000, 
+        Price = 12400, 
+        XP = 9920, 
         Seasons = {
             "None"
         }, 
@@ -25519,8 +26686,8 @@ local v5 = {
         Hint = "Search the ocean for migrating orcas", 
         FavouriteBait = "Shark Head", 
         FavouriteTime = nil, 
-        Price = 15000, 
-        XP = 10000, 
+        Price = 14240, 
+        XP = 11240, 
         Seasons = {
             "None"
         }, 
@@ -25549,8 +26716,8 @@ local v5 = {
         Hint = "Known for its rarity and immense size, only the keenest eyes will spot it.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = nil, 
-        Price = 30000, 
-        XP = 25000, 
+        Price = 14493, 
+        XP = 11590, 
         Seasons = {
             "Summer"
         }, 
@@ -25581,8 +26748,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 75000, 
-        XP = 60000, 
+        Price = 7488, 
+        XP = 7490, 
         Seasons = {
             "Summer"
         }, 
@@ -25611,8 +26778,8 @@ local v5 = {
         Hint = "Commonly swims around shallow trenches, typically during storms.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = "None", 
-        Price = 45, 
-        XP = 20, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -25639,8 +26806,8 @@ local v5 = {
         Hint = "Noticed within the warmer parts of the abyss, especially during rainfall.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "None", 
-        Price = 40, 
-        XP = 25, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "Summer"
         }, 
@@ -25668,8 +26835,8 @@ local v5 = {
         Hint = "Located in the coldest parts of the trench, typically found in groups.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "None", 
-        Price = 120, 
-        XP = 95, 
+        Price = 104, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -25697,8 +26864,8 @@ local v5 = {
         Hint = "Discovered in the deepest ends of the abyss, especially during gusty weather.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "None", 
-        Price = 100, 
-        XP = 90, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -25725,8 +26892,8 @@ local v5 = {
         Hint = "Prefers cool, still waters with empty skies.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = nil, 
-        Price = 600, 
-        XP = 200, 
+        Price = 222, 
+        XP = 130, 
         Seasons = {
             "Autumn"
         }, 
@@ -25753,8 +26920,8 @@ local v5 = {
         Hint = "Typically away from groups, it prefers uncrowded skies.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 1000, 
-        XP = 325, 
+        Price = 326, 
+        XP = 200, 
         Seasons = {
             "Spring"
         }, 
@@ -25784,8 +26951,8 @@ local v5 = {
         Hint = "Haunting the deepest parts of the trench, particularly under vast amounts of shade and deep fog.", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 7500, 
-        XP = 2800, 
+        Price = 2074, 
+        XP = 1660, 
         Seasons = {
             "Spring"
         }, 
@@ -25814,8 +26981,8 @@ local v5 = {
         Hint = "Found in the deeper parts of the trench, especially within cool temperatures.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 2600, 
+        Price = 2047, 
+        XP = 1640, 
         Seasons = {
             "Autumn"
         }, 
@@ -25843,8 +27010,8 @@ local v5 = {
         Hint = "Swims in the deepest parts of the trench, especially under clear skies.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = nil, 
-        Price = 9000, 
-        XP = 3800, 
+        Price = 3601, 
+        XP = 2880, 
         Seasons = {
             "Autumn"
         }, 
@@ -25872,8 +27039,8 @@ local v5 = {
         Hint = "Found in shallow, clear waters, especially on warm days.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Day", 
-        Price = 300, 
-        XP = 50, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "Summer"
         }, 
@@ -25900,8 +27067,8 @@ local v5 = {
         Hint = "Glistening in freezing waters, notably when the sky is clear.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 1200, 
-        XP = 110, 
+        Price = 104, 
+        XP = 60, 
         Seasons = {
             "Winter"
         }, 
@@ -25929,8 +27096,8 @@ local v5 = {
         Hint = "Located in clear waters with a glistening green shine, typically during the day.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = "Day", 
-        Price = 1000, 
-        XP = 100, 
+        Price = 102, 
+        XP = 60, 
         Seasons = {
             "Summer"
         }, 
@@ -25958,8 +27125,8 @@ local v5 = {
         Hint = "Located in clear waters with a glistening deep blue shine.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 1300, 
-        XP = 250, 
+        Price = 208, 
+        XP = 120, 
         Seasons = {
             "Spring"
         }, 
@@ -25986,8 +27153,8 @@ local v5 = {
         Hint = "Located in clear waters with a glistening red shine, typically during cold nights.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 1400, 
-        XP = 350, 
+        Price = 322, 
+        XP = 190, 
         Seasons = {
             "Winter"
         }, 
@@ -26014,8 +27181,8 @@ local v5 = {
         Hint = "Located in clear waters with a glistening rainbow shine.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 1500, 
-        XP = 650, 
+        Price = 345, 
+        XP = 210, 
         Seasons = {
             "Spring"
         }, 
@@ -26043,8 +27210,8 @@ local v5 = {
         Hint = "Located in clear waters with a wide variation of shining colors, frequently providing light to the darkness.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 3000, 
-        XP = 2000, 
+        Price = 1821, 
+        XP = 1460, 
         Seasons = {
             "Autumn"
         }, 
@@ -26073,8 +27240,8 @@ local v5 = {
         Hint = "Located in clear waters with a unique indescribable shine, rarely spotted within the darkness.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Night", 
-        Price = 7800, 
-        XP = 2400, 
+        Price = 3132, 
+        XP = 2510, 
         Seasons = {
             "Spring"
         }, 
@@ -26105,8 +27272,8 @@ local v5 = {
         Hint = "Its pretty", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
-        Price = 50, 
-        XP = 250, 
+        Price = 53, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -26132,8 +27299,8 @@ local v5 = {
         Hint = "Common within the dark, especially after rainfall.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Night", 
-        Price = 50, 
-        XP = 20, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "Summer"
         }, 
@@ -26160,8 +27327,8 @@ local v5 = {
         Hint = "A small yet dangerous fish, not a fan of direct light.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Night", 
-        Price = 130, 
-        XP = 90, 
+        Price = 102, 
+        XP = 60, 
         Seasons = {
             "Spring"
         }, 
@@ -26189,8 +27356,8 @@ local v5 = {
         Hint = "Not quite a lizard, typically found when under star-lit skies.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Night", 
-        Price = 120, 
-        XP = 80, 
+        Price = 105, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -26217,8 +27384,8 @@ local v5 = {
         Hint = "Prefers warm, still waters under the cover of night.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = "Night", 
-        Price = 900, 
-        XP = 150, 
+        Price = 212, 
+        XP = 130, 
         Seasons = {
             "Spring"
         }, 
@@ -26245,8 +27412,8 @@ local v5 = {
         Hint = "Found absent from the crowd, it prefers to avoid direct sunlight.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Night", 
-        Price = 1100, 
-        XP = 250, 
+        Price = 330, 
+        XP = 200, 
         Seasons = {
             "Autumn"
         }, 
@@ -26273,8 +27440,8 @@ local v5 = {
         Hint = "Small yet blindingly bright. When it rains, it hunts.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 1300, 
-        XP = 450, 
+        Price = 349, 
+        XP = 210, 
         Seasons = {
             "Spring"
         }, 
@@ -26302,8 +27469,8 @@ local v5 = {
         Hint = "With a razor-sharp edge, it is said to appear when the sun blazes overhead.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = "Day", 
-        Price = 4000, 
-        XP = 1100, 
+        Price = 2056, 
+        XP = 1640, 
         Seasons = {
             "Summer"
         }, 
@@ -26332,8 +27499,8 @@ local v5 = {
         Hint = "If the skies are clear and the air is hot, be ready.", 
         FavouriteBait = "Fish Head", 
         FavouriteTime = "Day", 
-        Price = 6300, 
-        XP = 1500, 
+        Price = 3490, 
+        XP = 2790, 
         Seasons = {
             "Summer"
         }, 
@@ -26360,8 +27527,8 @@ local v5 = {
         Hint = "A steady fish, commonly spotted during windy conditions.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 400, 
-        XP = 160, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -26389,8 +27556,8 @@ local v5 = {
         Hint = "A swift fish that is typically difficult to spot due to foggy conditions.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = nil, 
-        Price = 1250, 
-        XP = 220, 
+        Price = 108, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -26419,8 +27586,8 @@ local v5 = {
         Hint = "Located in deeper waters, typically when the weather is still.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 1100, 
-        XP = 330, 
+        Price = 111, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -26449,8 +27616,8 @@ local v5 = {
         Hint = "Prefers to swim in groups, where conditions are clear.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 1500, 
-        XP = 1350, 
+        Price = 233, 
+        XP = 140, 
         Seasons = {
             "None"
         }, 
@@ -26478,8 +27645,8 @@ local v5 = {
         Hint = "Usually found in shallow water, where rain is prevalent.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 1800, 
-        XP = 1150, 
+        Price = 377, 
+        XP = 230, 
         Seasons = {
             "None"
         }, 
@@ -26507,8 +27674,8 @@ local v5 = {
         Hint = "Typically found alone, where wind is fierce.", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 4000, 
-        XP = 1450, 
+        Price = 392, 
+        XP = 240, 
         Seasons = {
             "None"
         }, 
@@ -26536,8 +27703,8 @@ local v5 = {
         Hint = "Occasionally located in stormy weather conditions.", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = nil, 
-        Price = 9000, 
-        XP = 2800, 
+        Price = 2153, 
+        XP = 1720, 
         Seasons = {
             "None"
         }, 
@@ -26566,8 +27733,8 @@ local v5 = {
         Hint = "Rarely spotted in dark, murky waters", 
         FavouriteBait = "Truffle Worm", 
         FavouriteTime = nil, 
-        Price = 13000, 
-        XP = 3400, 
+        Price = 3653, 
+        XP = 2920, 
         Seasons = {
             "None"
         }, 
@@ -26589,7 +27756,7 @@ local v5 = {
             5, 
             20
         }, 
-        Chance = 0.5, 
+        Chance = 1, 
         Rarity = "Exotic", 
         Resilience = 10, 
         ProgressEfficiency = 0.2, 
@@ -26597,8 +27764,8 @@ local v5 = {
         Hint = "Found in Snowcap Pond.", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 5000, 
-        XP = 100, 
+        Price = 3355, 
+        XP = 11480, 
         Seasons = {
             "Winter"
         }, 
@@ -28742,8 +29909,8 @@ local v5 = {
         Hint = "It bobs where the winds warm the ancient glow.", 
         FavouriteBait = "Luminous Larva", 
         FavouriteTime = "Day", 
-        Price = 12600, 
-        XP = 6000, 
+        Price = 7306, 
+        XP = 7310, 
         Seasons = {
             "Summer"
         }, 
@@ -29083,8 +30250,8 @@ local v5 = {
         Hint = "It lurks where the waters grow bitter.", 
         FavouriteBait = "Worm", 
         FavouriteTime = "Night", 
-        Price = 100, 
-        XP = 90, 
+        Price = 64, 
+        XP = 40, 
         Seasons = {
             "Autumn"
         }, 
@@ -29117,8 +30284,8 @@ local v5 = {
         Hint = "It strikes where the light fades.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = "Night", 
-        Price = 110, 
-        XP = 105, 
+        Price = 65, 
+        XP = 40, 
         Seasons = {
             "Winter"
         }, 
@@ -29151,8 +30318,8 @@ local v5 = {
         Hint = "It prowls where decay lingers.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = "Day", 
-        Price = 220, 
-        XP = 210, 
+        Price = 131, 
+        XP = 80, 
         Seasons = {
             "Autumn"
         }, 
@@ -29185,8 +30352,8 @@ local v5 = {
         Hint = "It glides where the waters turn thick.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 240, 
-        XP = 220, 
+        Price = 132, 
+        XP = 80, 
         Seasons = {
             "Winter"
         }, 
@@ -29219,8 +30386,8 @@ local v5 = {
         Hint = "It hunts where the currents split.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = "Day", 
-        Price = 380, 
-        XP = 300, 
+        Price = 268, 
+        XP = 160, 
         Seasons = {
             "Spring"
         }, 
@@ -29253,8 +30420,8 @@ local v5 = {
         Hint = "It lurks where the depths fester.", 
         FavouriteBait = "Insect", 
         FavouriteTime = "Night", 
-        Price = 420, 
-        XP = 310, 
+        Price = 271, 
+        XP = 160, 
         Seasons = {
             "Autumn"
         }, 
@@ -29287,8 +30454,8 @@ local v5 = {
         Hint = "It drifts where the silence grows heavy.", 
         FavouriteBait = "Squid", 
         FavouriteTime = "Night", 
-        Price = 700, 
-        XP = 600, 
+        Price = 411, 
+        XP = 250, 
         Seasons = {
             "Winter"
         }, 
@@ -29321,8 +30488,8 @@ local v5 = {
         Hint = "It creeps where the shadows stretch long.", 
         FavouriteBait = "Sapphire Krill", 
         FavouriteTime = "Night", 
-        Price = 950, 
-        XP = 725, 
+        Price = 416, 
+        XP = 250, 
         Seasons = {
             "Autumn"
         }, 
@@ -29355,8 +30522,8 @@ local v5 = {
         Hint = "It emerges where the depths bleed.", 
         FavouriteBait = "Mist Worms", 
         FavouriteTime = "Night", 
-        Price = 1700, 
-        XP = 2400, 
+        Price = 2102, 
+        XP = 1680, 
         Seasons = {
             "Winter"
         }, 
@@ -29389,8 +30556,8 @@ local v5 = {
         Hint = "It wails where the waters tremble.", 
         FavouriteBait = "Mist Worms", 
         FavouriteTime = "Night", 
-        Price = 2000, 
-        XP = 2500, 
+        Price = 2145, 
+        XP = 1720, 
         Seasons = {
             "Autumn"
         }, 
@@ -29423,8 +30590,8 @@ local v5 = {
         Hint = "It clings where the chasms yawn wide.", 
         FavouriteBait = "Mist Worms", 
         FavouriteTime = nil, 
-        Price = 3000, 
-        XP = 3800, 
+        Price = 3614, 
+        XP = 2890, 
         Seasons = {
             "Winter"
         }, 
@@ -29457,8 +30624,8 @@ local v5 = {
         Hint = "It haunts where dreams turn dark.", 
         FavouriteBait = "Mist Worms", 
         FavouriteTime = "Night", 
-        Price = 8500, 
-        XP = 5050, 
+        Price = 4662, 
+        XP = 11730, 
         Seasons = {
             "Spring"
         }, 
@@ -29492,8 +30659,8 @@ local v5 = {
         Hint = "It rises where the void claims all.", 
         FavouriteBait = "Luminous Larva", 
         FavouriteTime = "Night", 
-        Price = 25000, 
-        XP = 15000, 
+        Price = 7422, 
+        XP = 7420, 
         Seasons = {
             "Winter"
         }, 
@@ -30651,8 +31818,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Mist Worms", 
         FavouriteTime = "Day", 
-        Price = 20000, 
-        XP = 12000, 
+        Price = 7030, 
+        XP = 7030, 
         Seasons = {
             "Summer"
         }, 
@@ -30685,8 +31852,8 @@ local v5 = {
         Hint = "\240\159\144\182?", 
         FavouriteBait = "Mist Worms", 
         FavouriteTime = "Night", 
-        Price = 21000, 
-        XP = 13000, 
+        Price = 7030, 
+        XP = 7030, 
         Seasons = {
             "Winter"
         }, 
@@ -30718,8 +31885,8 @@ local v5 = {
         Hint = "It looms where the cold mists shroud the deep.", 
         FavouriteBait = "Mist Worms", 
         FavouriteTime = nil, 
-        Price = 10000, 
-        XP = 20000, 
+        Price = 11580, 
+        XP = 11660, 
         Seasons = {
             "Winter"
         }, 
@@ -30839,6 +32006,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 0), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         From = "Jurassic Island", 
         Worlds = {
             "Sea 1"
@@ -31103,6 +32271,7 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 0, 0), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         From = "Jurassic Island", 
         Worlds = {
             "Sea 1"
@@ -31138,7 +32307,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     ["Clown Brickfish"] = {
         WeightPool = {
@@ -31170,7 +32341,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     Goldbrick = {
         WeightPool = {
@@ -31202,7 +32375,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     ["Yellow Studfish"] = {
         WeightPool = {
@@ -31234,7 +32409,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     ["Stud Turtle"] = {
         WeightPool = {
@@ -31266,7 +32443,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     Brickhorse = {
         WeightPool = {
@@ -31298,7 +32477,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     ["Cardinal Studfish"] = {
         WeightPool = {
@@ -31330,7 +32511,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     ["Crab Stud"] = {
         WeightPool = {
@@ -31362,7 +32545,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     ["Glow Brick"] = {
         WeightPool = {
@@ -31394,7 +32579,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     Jellystud = {
         WeightPool = {
@@ -31426,7 +32613,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     ["Stud Koi"] = {
         WeightPool = {
@@ -31458,7 +32647,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     ["Stud Shark"] = {
         WeightPool = {
@@ -31490,7 +32681,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     ["Studling Crab"] = {
         WeightPool = {
@@ -31522,7 +32715,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     Studphin = {
         WeightPool = {
@@ -31554,7 +32749,9 @@ local v5 = {
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     Tentabrick = {
         WeightPool = {
@@ -31584,10 +32781,13 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(9, 173, 0), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     Studolodon = {
         WeightPool = {
@@ -31619,10 +32819,13 @@ local v5 = {
         }, 
         SparkleColor = Color3.fromRGB(39, 35, 141), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        AnnounceInChat = true, 
         From = "LEGO", 
         Worlds = {
             "Sea 1"
-        }
+        }, 
+        RemoveMutations = true, 
+        RemoveSparkling = true
     }, 
     ["Gem Salmon"] = {
         WeightPool = {
@@ -31636,8 +32839,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Flakes", 
         FavouriteTime = nil, 
-        Price = 80, 
-        XP = 70, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -31669,8 +32872,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Shrimp", 
         FavouriteTime = nil, 
-        Price = 100, 
-        XP = 70, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -31702,8 +32905,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Bagel", 
         FavouriteTime = nil, 
-        Price = 130, 
-        XP = 80, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -31735,8 +32938,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 150, 
-        XP = 110, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -31768,8 +32971,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Insect", 
         FavouriteTime = nil, 
-        Price = 180, 
-        XP = 130, 
+        Price = 51, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -31801,8 +33004,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Worm", 
         FavouriteTime = nil, 
-        Price = 170, 
-        XP = 140, 
+        Price = 50, 
+        XP = 30, 
         Seasons = {
             "None"
         }, 
@@ -31834,8 +33037,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Mist Worms", 
         FavouriteTime = nil, 
-        Price = 680, 
-        XP = 340, 
+        Price = 104, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -31867,8 +33070,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Gale Grub", 
         FavouriteTime = nil, 
-        Price = 730, 
-        XP = 380, 
+        Price = 104, 
+        XP = 60, 
         Seasons = {
             "None"
         }, 
@@ -31900,8 +33103,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Seaweed", 
         FavouriteTime = nil, 
-        Price = 780, 
-        XP = 400, 
+        Price = 110, 
+        XP = 70, 
         Seasons = {
             "None"
         }, 
@@ -31933,8 +33136,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Lushrooms", 
         FavouriteTime = nil, 
-        Price = 830, 
-        XP = 540, 
+        Price = 215, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -31966,8 +33169,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Lagoon Leech", 
         FavouriteTime = nil, 
-        Price = 880, 
-        XP = 590, 
+        Price = 217, 
+        XP = 130, 
         Seasons = {
             "None"
         }, 
@@ -32000,8 +33203,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
-        Price = 1130, 
-        XP = 480, 
+        Price = 205, 
+        XP = 120, 
         Seasons = {
             "None"
         }, 
@@ -32034,8 +33237,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Magnet", 
         FavouriteTime = nil, 
-        Price = 1330, 
-        XP = 800, 
+        Price = 308, 
+        XP = 180, 
         Seasons = {
             "None"
         }, 
@@ -32067,8 +33270,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Squid", 
         FavouriteTime = nil, 
-        Price = 1280, 
-        XP = 780, 
+        Price = 338, 
+        XP = 200, 
         Seasons = {
             "None"
         }, 
@@ -32100,8 +33303,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Minnow", 
         FavouriteTime = nil, 
-        Price = 1550, 
-        XP = 860, 
+        Price = 341, 
+        XP = 200, 
         Seasons = {
             "None"
         }, 
@@ -32134,8 +33337,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Crystal Bananas", 
         FavouriteTime = nil, 
-        Price = 2750, 
-        XP = 2130, 
+        Price = 1965, 
+        XP = 1570, 
         Seasons = {
             "None"
         }, 
@@ -32168,8 +33371,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Crystal Bananas", 
         FavouriteTime = nil, 
-        Price = 2700, 
-        XP = 1880, 
+        Price = 1959, 
+        XP = 1570, 
         Seasons = {
             "None"
         }, 
@@ -32202,8 +33405,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Sapphire Krill", 
         FavouriteTime = nil, 
-        Price = 6250, 
-        XP = 2880, 
+        Price = 3459, 
+        XP = 2770, 
         Seasons = {
             "None"
         }, 
@@ -32236,8 +33439,8 @@ local v5 = {
         Hint = "Hidden where treasure resides.", 
         FavouriteBait = "Sapphire Krill", 
         FavouriteTime = nil, 
-        Price = 6750, 
-        XP = 3380, 
+        Price = 3511, 
+        XP = 2810, 
         Seasons = {
             "None"
         }, 
@@ -32270,8 +33473,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Golden Shrimp Bait", 
         FavouriteTime = nil, 
-        Price = 3750, 
-        XP = 4630, 
+        Price = 8487, 
+        XP = 11590, 
         Seasons = {
             "None"
         }, 
@@ -32304,8 +33507,8 @@ local v5 = {
         Hint = "???", 
         FavouriteBait = "Golden Shrimp Bait", 
         FavouriteTime = nil, 
-        Price = 20000, 
-        XP = 1250, 
+        Price = 5000, 
+        XP = 5000, 
         Seasons = {
             "None"
         }, 
@@ -32566,7 +33769,6 @@ local v5 = {
         Cataclysmic = Color3.fromRGB(255, 255, 255), 
         Special = Color3.fromRGB(255, 255, 255), 
         Nuclear = Color3.fromRGB(255, 255, 255)
-    }, 
+    },
 };
-
-return v5;
+return v4;
