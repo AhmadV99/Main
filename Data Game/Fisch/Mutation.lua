@@ -1,4 +1,22 @@
 return {
+    Gravy = {
+        PriceMultiply = 8, 
+        Chance = 0, 
+        Display = "Gravy", 
+        Color = Color3.fromRGB(85, 49, 31)
+    }, 
+    Pancake = {
+        PriceMultiply = 0, 
+        Chance = 0, 
+        Display = "Pancake", 
+        Color = Color3.fromRGB(241, 255, 222)
+    }, 
+    Putrid = {
+        PriceMultiply = -0.5, 
+        Chance = 0, 
+        Display = "Putrid", 
+        Color = Color3.fromRGB(67, 88, 49)
+    }, 
     Magical = {
         PriceMultiply = 7.2, 
         Chance = 0, 
