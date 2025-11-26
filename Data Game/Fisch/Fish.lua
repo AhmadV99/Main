@@ -107,6 +107,542 @@ local v3 = {
     }
 };
 local v4 = {
+    ["Pirate Turkey"] = {
+        Icon = "rbxassetid://129238269263054", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "This swashbuckling buccaneer of the ponds sports an eyepatch, tricorn hat, peg leg, and a thirst for treasure in the form of your bait. Arrr, but even pirates make fine Fischgiving dinners!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Sunny Turkey"] = {
+        Icon = "rbxassetid://73422375901069", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Radiating warmth with feathers that shimmer like sunbeams on water, this cheerful turkey brings a beachy vibe to chilly autumn ponds. Perfectly sunny for your Fischgiving platter!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Poseidon Turkey"] = {
+        Icon = "rbxassetid://119099714371682", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Topped with Poseidon's crown and gripping a miniature trident, this regal turkey commands the depths like the sea god himself. Bow before its might, then cook it up for Fischgiving!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Coral Turkey"] = {
+        Icon = "rbxassetid://140244673887948", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Adorned in vibrant colors mimicking a living reef, this turkey sways gracefully like coral in the current. A colorful reef dweller ripe for the Fischgiving harvest!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Magma Turkey"] = {
+        Icon = "rbxassetid://127257618776493", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Feathers aglow with crackling lava flows, this fiery turkey erupts from volcanic vents in the pond. Handle its scorching heat; it's magma-ficent for Fischgiving!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Lost Turkey"] = {
+        Icon = "rbxassetid://101648302456234", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Deep in the tangled jungle depths, this wild turkey has grown vines, leaves, and ancient tribal markings across its feathers. Lost to civilization, it squawks through the mist; until it ends up on your Fischgiving plate.", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Slate Turkey"] = {
+        Icon = "rbxassetid://138653185185636", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Chiseled from rugged gray slate stone, this stoic turkey camouflages among rocky shores and pebbles. A sturdy, timeless choice for the Fischgiving table.", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Ghost Turkey"] = {
+        Icon = "rbxassetid://138187012697979", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Translucent and eerie, this spectral turkey drifts through waters with haunting gobbles. Catch its ghostly form before it vanishes into your oven!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Mossy Turkey"] = {
+        Icon = "rbxassetid://93932279465744", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Blanketed in lush, verdant moss that sways like lily pads, this earthy turkey blends into forested shallows. A not-so fresh, green gobbler for Fischgiving feasting!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Frosty Turkey"] = {
+        Icon = "rbxassetid://114068240508803", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Coated in crystalline frost and ice shards, this wintry turkey chills autumn waters with its frosty breath. Thaw the chill for a cool Fischgiving centerpiece!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Murky Turkey"] = {
+        Icon = "rbxassetid://119538396114270", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Lurking in stagnant swamp waters, this bog-dwelling turkey is covered in slimy algae and sprouting glowing mushrooms from its back and tail. A turkey truly capable of an earthy Fischgiving roast!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Pioneer Turkey"] = {
+        Icon = "rbxassetid://137441876400247", 
+        WeightPool = {
+            80, 
+            300
+        }, 
+        Chance = 1, 
+        BlockPassiveCapture = true, 
+        FinalChanceDivisor = 10, 
+        MapleMeadowChanceDivisor = 10, 
+        GlobalStrictChance = 0.05, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.35, 
+        Description = "Wearing a weathered bucket hat covered in dangling fish hooks, this old-school turkey proudly sports the classic look. The original fisching pioneer, now ready to be the centerpiece of your Fischgiving feast!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 20250, 
+        XP = 11260, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "Woah! a Turkey!", 
+            "A Turkey!", 
+            "Gobble Gobble!", 
+            "Woah, A Turkey!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Pilgrim Hat"] = {
+        Icon = "rbxassetid://85462816017856", 
+        WeightPool = {
+            10, 
+            10
+        }, 
+        Chance = 0, 
+        BlockPassiveCapture = true, 
+        GlobalStrictChance = 0.25, 
+        Rarity = "Limited", 
+        Resilience = 100, 
+        ProgressEfficiency = 0.5, 
+        Description = "It seem's Pilgrim lost his hat at sea...", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Insect", 
+        FavouriteTime = nil, 
+        Price = 100, 
+        XP = 50, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "I found his hat!", 
+            "Can I wear it?", 
+            "I'll return it to Pilgrim!", 
+            "YAY THANKSGIVING!"
+        }, 
+        SparkleColor = Color3.fromRGB(208, 104, 135), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        AnnounceInChat = true, 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2"
+    }, 
+    ["Bountiful Bait Crate"] = {
+        Icon = "rbxassetid://108133170987367", 
+        WeightPool = {
+            80, 
+            80
+        }, 
+        Chance = 1, 
+        Rarity = "Limited", 
+        Resilience = 90, 
+        Description = "A bountiful wooden crate with Autumn themed fabric over top to preserve the bait inside. It looks like it drifted ashore after a Thanksgiving dinner! Opening it might reveal an assortment of seasonal, delicious baits!", 
+        Hint = "Only obtainable during Fischgiving 2", 
+        FavouriteBait = "Magnet", 
+        FavouriteTime = nil, 
+        BuyMult = 2.3, 
+        Price = 500, 
+        XP = 300, 
+        Seasons = {
+            "Autumn"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Crate of Bountiful Baits!", 
+            "A Bountiful Bait Crate!", 
+            "Woah! A Crate!", 
+            "A Crate!", 
+            "Who left this here?", 
+            "I smell Thanksgiving!", 
+            "A Crate full of gourd!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("crate"), 
+        FromLimited = "Fischgiving 2", 
+        From = "Fischgiving 2", 
+        IsLimitedBestiary = true, 
+        IsCrate = true, 
+        CrateType = "Bait", 
+        BaitContents = {
+            "Cranberry Cluster", 
+            "Gourd Bites", 
+            "Pumpkin Pieces"
+        }
+    }, 
     ["Admin Fish Barrel"] = {
         Icon = "rbxassetid://85580725974378", 
         WeightPool = {
@@ -10248,7 +10784,7 @@ local v4 = {
         }, 
         SparkleColor = Color3.fromRGB(29, 30, 77), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        From = "None", 
+        From = "Abyssal Zenith", 
         Unregistered = true
     }, 
     ["Crowned Anglerfish"] = {
@@ -12876,7 +13412,7 @@ local v4 = {
         }, 
         SparkleColor = Color3.fromRGB(151, 255, 212), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        From = "None"
+        From = "Snowcap"
     }, 
     ["Inferno Wood"] = {
         WeightPool = {
@@ -13214,7 +13750,6 @@ local v4 = {
     }, 
     Megalodon = {
         BlockPassiveCapture = true, 
-        HideFishModel = true, 
         WeightPool = {
             500000, 
             670000
@@ -13247,7 +13782,6 @@ local v4 = {
     }, 
     ["Phantom Megalodon"] = {
         BlockPassiveCapture = true, 
-        HideFishModel = true, 
         WeightPool = {
             500000, 
             670000
@@ -13279,7 +13813,6 @@ local v4 = {
     }, 
     ["Ancient Megalodon"] = {
         BlockPassiveCapture = true, 
-        HideFishModel = true, 
         WeightPool = {
             500000, 
             700000
@@ -14067,7 +14600,7 @@ local v4 = {
         }, 
         SparkleColor = Color3.fromRGB(126, 116, 78), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        From = "The Depths"
+        From = "None"
     }, 
     ["Scrap Metal"] = {
         WeightPool = {
@@ -14094,7 +14627,7 @@ local v4 = {
         }, 
         SparkleColor = Color3.fromRGB(125, 126, 123), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        From = "The Depths"
+        From = "None"
     }, 
     ["Deep-sea Hatchetfish"] = {
         WeightPool = {
@@ -14846,6 +15379,7 @@ local v4 = {
         From = "Forsaken Shores"
     }, 
     ["Pirate Captain's Goldfish"] = {
+        BlockPassiveCapture = true, 
         Icon = "rbxassetid://81214107375924", 
         WeightPool = {
             15, 
@@ -16156,7 +16690,7 @@ local v4 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 240, 162), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        From = "Brine Pool"
+        From = "None"
     }, 
     Gazerfish = {
         WeightPool = {
@@ -16406,7 +16940,7 @@ local v4 = {
         }, 
         SparkleColor = Color3.fromRGB(215, 210, 255), 
         HoldAnimation = l_fish_0:WaitForChild("underweight"), 
-        From = "Desolate Deep"
+        From = "None"
     }, 
     ["Coral Geode"] = {
         WeightPool = {
@@ -18397,7 +18931,7 @@ local v4 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 57, 57), 
         HoldAnimation = l_fish_0:WaitForChild("tiny"), 
-        HideInBestiary = true, 
+        From = "Ocean", 
         UtilityTier = 1, 
         UtilityType = "lobster"
     }, 
@@ -22147,7 +22681,7 @@ local v4 = {
             "What could be inside?"
         }, 
         SparkleColor = Color3.fromRGB(205, 169, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
         From = "Mineshaft"
     }, 
     ["Radiant Crystal"] = {
@@ -22157,14 +22691,15 @@ local v4 = {
             20
         }, 
         Chance = 1, 
+        FinalChanceDivisor = 20, 
         Rarity = "Gemstone", 
         Resilience = 30, 
-        ProgressEfficiency = 0.4, 
+        ProgressEfficiency = 0.2, 
         Description = "An otherworldly glowing crystal that pulses with divine energy...", 
         Hint = "???", 
         FavouriteBait = nil, 
         FavouriteTime = nil, 
-        Price = 10000, 
+        Price = 8500, 
         XP = 7500, 
         Seasons = {
             "None"
@@ -26616,7 +27151,7 @@ local v4 = {
         Chance = 1.0E-6, 
         Rarity = "Secret", 
         Resilience = 1, 
-        ProgressEfficiency = 0.05, 
+        ForcedProgressEfficiency = 0.05, 
         Description = "A direct descendant of the original Kraken, possessing a fraction of its progenitor's power. Its true form is impossible to comprehend, and its strength is beyond measure.", 
         Hint = "The oldest legends speak of its existence, Kraken Pool on Poseidon Wrath Event.", 
         FavouriteBait = "Truffle Worm", 
@@ -31811,7 +32346,7 @@ local v4 = {
             500
         }, 
         Chance = 0, 
-        Rarity = "Secret", 
+        Rarity = "Special", 
         Resilience = 6, 
         ProgressEfficiency = 0.35, 
         Description = "i need to take a dump", 
@@ -31832,7 +32367,8 @@ local v4 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 255, 255), 
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
-        From = "None", 
+        From = "Admin-Exclusive", 
+        Unregistered = true, 
         Worlds = {
             "Sea 1"
         }
@@ -31845,7 +32381,7 @@ local v4 = {
             500
         }, 
         Chance = 0, 
-        Rarity = "Secret", 
+        Rarity = "Special", 
         Resilience = 6, 
         ProgressEfficiency = 0.35, 
         Description = "hapapa.. hapa patata", 
@@ -31866,7 +32402,8 @@ local v4 = {
         }, 
         SparkleColor = Color3.fromRGB(255, 208, 174), 
         HoldAnimation = l_fish_0:WaitForChild("basic"), 
-        From = "None", 
+        From = "Admin-Exclusive", 
+        Unregistered = true, 
         Worlds = {
             "Sea 1"
         }
@@ -33722,6 +34259,7 @@ local v4 = {
             "Sea 1"
         }
     }, 
+
     Rarities = {
         [1] = "Trash", 
         [2] = "Common", 
@@ -33771,4 +34309,5 @@ local v4 = {
         Nuclear = Color3.fromRGB(255, 255, 255)
     },
 };
+
 return v4;
