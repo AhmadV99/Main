@@ -1,7 +1,48 @@
+local l_ReplicatedStorage_0 = game:GetService("ReplicatedStorage");
 return {
     DevTest = {
         Pool = {
             "Tartaruga"
+        }, 
+        CantBeWhormholed = true, 
+        Priority = 2
+    }, 
+    MapleMeadows = {
+        Pool = {
+            "Cod", 
+            "Tire", 
+            "Boot", 
+            "Common Crate", 
+            "Bait Crate", 
+            "Fish Barrel", 
+            "Seaweed", 
+            "Boots", 
+            "Amberjack", 
+            "Nurse Shark", 
+            "Porgy", 
+            "Sardine", 
+            "Halibut", 
+            "Mullet", 
+            "Salmon", 
+            "Yellowfin Tuna", 
+            "Sea Bass", 
+            "Chinook Salmon", 
+            "Haddock", 
+            "Barracuda", 
+            "Sea Pickle", 
+            "Bountiful Bait Crate", 
+            "Poseidon Turkey", 
+            "Coral Turkey", 
+            "Magma Turkey", 
+            "Sunny Turkey", 
+            "Pirate Turkey", 
+            "Lost Turkey", 
+            "Slate Turkey", 
+            "Ghost Turkey", 
+            "Mossy Turkey", 
+            "Frosty Turkey", 
+            "Murky Turkey", 
+            "Pioneer Turkey"
         }, 
         CantBeWhormholed = true, 
         Priority = 2
@@ -21,7 +62,14 @@ return {
             "Cathulid"
         }, 
         CantBeWhormholed = true, 
-        Priority = 2
+        Priority = 2, 
+        CustomCondition = function(_, v2) --[[ Line: 84 ]] --[[ Name: CustomCondition ]]
+            if not v2.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+                return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>.";
+            else
+                return true;
+            end;
+        end
     }, 
     PassageOfOaths = {
         Pool = {
@@ -37,7 +85,15 @@ return {
             "Cathulith"
         }, 
         CantBeWhormholed = true, 
-        Priority = 2
+        Priority = 2, 
+        CustomCondition = function(_, v4) --[[ Line: 110 ]] --[[ Name: CustomCondition ]]
+            for _, v6 in v4.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
+                if not v6 then
+                    return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>.";
+                end;
+            end;
+            return true;
+        end
     }, 
     MossjawHunt = {
         Pool = {
@@ -50,7 +106,20 @@ return {
             "Pirarucu"
         }, 
         CantBeWhormholed = true, 
-        Priority = 2
+        Priority = 2, 
+        CustomCondition = function(_, v8) --[[ Line: 134 ]] --[[ Name: CustomCondition ]]
+            local v9 = 0;
+            for _, v11 in v8.Data.NewFormat.LostJungle.Runes.Placed do
+                if v11 then
+                    v9 = v9 + 1;
+                end;
+            end;
+            if v9 < 5 then
+                return false, "You must place all 5 runes before fishing here.";
+            else
+                return true;
+            end;
+        end
     }, 
     ["Luminescent Cavern"] = {
         Pool = {
@@ -109,7 +178,14 @@ return {
             "Key of Whispers"
         }, 
         CantBeWhormholed = false, 
-        Priority = 2
+        Priority = 2, 
+        CustomCondition = function(_, v13) --[[ Line: 229 ]] --[[ Name: CustomCondition ]]
+            if not v13.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
+                return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>.";
+            else
+                return true;
+            end;
+        end
     }, 
     ["Hall of Whispers"] = {
         Pool = {
@@ -125,7 +201,14 @@ return {
             "Key of Oaths"
         }, 
         CantBeWhormholed = false, 
-        Priority = 2
+        Priority = 2, 
+        CustomCondition = function(_, v15) --[[ Line: 255 ]] --[[ Name: CustomCondition ]]
+            if not v15.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+                return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>.";
+            else
+                return true;
+            end;
+        end
     }, 
     ["Passage of Oaths"] = {
         Pool = {
@@ -140,7 +223,15 @@ return {
             "Abyssal Grenadier"
         }, 
         CantBeWhormholed = false, 
-        Priority = 2
+        Priority = 2, 
+        CustomCondition = function(_, v17) --[[ Line: 280 ]] --[[ Name: CustomCondition ]]
+            for _, v19 in v17.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
+                if not v19 then
+                    return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>.";
+                end;
+            end;
+            return true;
+        end
     }, 
     ["The Sanctum"] = {
         Pool = {
@@ -154,7 +245,14 @@ return {
             "Swampfish"
         }, 
         CantBeWhormholed = false, 
-        Priority = 2
+        Priority = 2, 
+        CustomCondition = function(_, v21) --[[ Line: 309 ]] --[[ Name: CustomCondition ]]
+            if not v21.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+                return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>.";
+            else
+                return true;
+            end;
+        end
     }, 
     ["The Sanctum Hunt"] = {
         Pool = {
@@ -168,7 +266,14 @@ return {
             "Leviathan"
         }, 
         CantBeWhormholed = true, 
-        Priority = 3
+        Priority = 3, 
+        CustomCondition = function(_, v23) --[[ Line: 336 ]] --[[ Name: CustomCondition ]]
+            if not v23.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+                return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>.";
+            else
+                return true;
+            end;
+        end
     }, 
     ["The Sanctum Profane Hunt"] = {
         Pool = {
@@ -182,7 +287,14 @@ return {
             "Profane Leviathan"
         }, 
         CantBeWhormholed = true, 
-        Priority = 3
+        Priority = 3, 
+        CustomCondition = function(_, v25) --[[ Line: 363 ]] --[[ Name: CustomCondition ]]
+            if not v25.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+                return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>.";
+            else
+                return true;
+            end;
+        end
     }, 
     ["Carrot Garden"] = {
         Pool = {
@@ -241,7 +353,7 @@ return {
             "Scalloped Hammerhead", 
             "Great Goldcursed Shark"
         }, 
-        CantBeWhormholed = true, 
+        CantBeWhormholed = false, 
         Priority = 2
     }, 
     ["Magician Narwhal - Sea 2"] = {
@@ -1191,7 +1303,8 @@ return {
             "Long Pike", 
             "Mustard"
         }, 
-        Priority = 4
+        Priority = 4, 
+        CantBeWhormholed = true
     }, 
     ["Notes Island Pool"] = {
         Pool = {
@@ -1338,7 +1451,8 @@ return {
             "Long Pike", 
             "Mustard"
         }, 
-        Priority = 4
+        Priority = 4, 
+        CantBeWhormholed = true
     }, 
     Ocean = {
         Pool = {
@@ -1505,7 +1619,8 @@ return {
             "Long Pike", 
             "Mustard"
         }, 
-        Priority = 1
+        Priority = 1, 
+        CantBeWhormholed = true
     }, 
     ["Grand Reef"] = {
         Pool = {
@@ -1838,7 +1953,8 @@ return {
             "Spectral Serpent"
         }, 
         Priority = 2, 
-        RequiredDurability = 200
+        RequiredDurability = 200, 
+        CantBeWhormholed = true
     }, 
     ["Ancient Isle Ocean"] = {
         Pool = {
@@ -2818,7 +2934,8 @@ return {
             "Mythic Fish", 
             "Glass Diamond"
         }, 
-        Priority = 2
+        Priority = 2, 
+        CantBeWhormholed = true
     }, 
     ["Forsaken Algae Pool"] = {
         Pool = {
@@ -3279,7 +3396,7 @@ return {
             "Twilight Tentaclefish", 
             "Scylla"
         }, 
-        CantBeWhormholed = false, 
+        CantBeWhormholed = true, 
         Priority = 4
     }, 
     Waveborne = {
@@ -3473,7 +3590,6 @@ return {
         Priority = 2
     }, 
     ["Blue Moon - First Sea"] = {
-        BlueMoonEvent = true, 
         Pool = {
             "Moon Arctic Char", 
             "Silver Scuttler", 
@@ -3493,10 +3609,17 @@ return {
             "Tarnished Moongill"
         }, 
         Priority = 3, 
-        CantBeWhormholed = false
+        CantBeWhormholed = false, 
+        CustomCondition = function(_, _) --[[ Line: 4662 ]] --[[ Name: CustomCondition ]]
+            -- upvalues: l_ReplicatedStorage_0 (copy)
+            if l_ReplicatedStorage_0:GetAttribute("BlueMoonEvent") ~= true then
+                return false, "<font color=\"#D20103\">You can only fish here during a Blue Moon event.</font>";
+            else
+                return true;
+            end;
+        end
     }, 
     ["Blue Moon - Second Sea"] = {
-        BlueMoonEvent = true, 
         Pool = {
             "Moonveil Killifish", 
             "Gloamfin Gar", 
@@ -3508,7 +3631,14 @@ return {
             "Moon Idol Sea 2"
         }, 
         Priority = 3, 
-        CantBeWhormholed = true
+        CantBeWhormholed = true, 
+        CustomCondition = function(_, _) --[[ Line: 4684 ]] --[[ Name: CustomCondition ]]
+            if l_ReplicatedStorage_0:GetAttribute("BlueMoonEvent") ~= true then
+                return false, "<font color=\"#D20103\">You can only fish here during a Blue Moon event.</font>";
+            else
+                return true;
+            end;
+        end
     }, 
     ["Jurassic Island Pool"] = {
         ExclusiveRods = {
@@ -3677,6 +3807,17 @@ return {
             "Gem Salmon"
         }, 
         CantBeWhormholed = false, 
+        Priority = 2
+    }, 
+    Default = {
+        Pool = {
+            "Rock", 
+            "Log", 
+            "Seaweed", 
+            "Tire", 
+            "Boot"
+        }, 
+        CantBeWhormholed = true, 
         Priority = 2
     }
 };
