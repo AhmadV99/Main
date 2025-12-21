@@ -7973,4 +7973,7 @@ return {
         ["From"] = "Animals1",
         ["Price"] = 700,
     },
+
+    Rarities = {[1] = "Trash", [2] = "Common", [3] = "Uncommon", [4] = "Unusual", [5] = "Rare", [6] = "Legendary", [7] = "Mythical", [8] = "Divine", [9] = "Exotic", [10] = "Secret", [11] = "Relic",  [12] = "Fragment",  [13] = "Gemstone", [14] = "Limited",  [15] = "Apex", [16] = "Extinct", [17] = "Cataclysmic",  [18] = "Special",  [19] = "Nuclear",  [20] = "Unique",  [21] = "Whistle",  [22] = "Mirror" }
+    RarityColours = {Trash = Color3.fromRGB(145, 145, 145), Common = Color3.fromRGB(142, 187, 191), Uncommon = Color3.fromRGB(161, 255, 169), Unusual = Color3.fromRGB(192, 135, 198), Rare = Color3.fromRGB(119, 108, 181), Legendary = Color3.fromRGB(240, 181, 109), Mythical = Color3.fromRGB(255, 62, 120), Exotic = Color3.fromRGB(255, 255, 255), Secret = Color3.fromRGB(255, 255, 255), Limited = Color3.fromRGB(74, 100, 217), Divine = Color3.fromRGB(202, 198, 255), Relic = Color3.fromRGB(120, 255, 183), Fragment = Color3.fromRGB(255, 63, 5), Gemstone = Color3.fromRGB(172, 57, 255), Apex = Color3.fromRGB(255, 0, 0), Extinct = Color3.fromRGB(255, 178, 178), Unique = Color3.fromRGB(255, 255, 255), Mirror = Color3.fromRGB(183, 214, 255), Whistle = Color3.fromRGB(230, 230, 230), Cataclysmic = Color3.fromRGB(255, 255, 255),  Special = Color3.fromRGB(255, 255, 255), Nuclear = Color3.fromRGB(255, 255, 255)}
 }
