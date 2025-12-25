@@ -1,3 +1,4 @@
+
 local v_u_1 = game:GetService("ReplicatedStorage")
 local v35 = {
     ["DevTest"] = {
@@ -77,7 +78,17 @@ local v35 = {
                 "Peppermint Rod",
                 "Jinglestar Rod",
                 "Santa\'s Miracle Rod",
-                "Maelstrom"
+                "Maelstrom",
+                "Boreal Rod",
+                "Cryolash",
+                "North Pole",
+                "Candy Cane Rod",
+                "North-Star Rod",
+                "Antler Rod",
+                "Krampus\'s Rod",
+                "Frost Warden Rod",
+                "Fischmas Rod",
+                "Frostfire Rod"
             },
             "Your rod lacks the magic of Fischmas..."
         },
@@ -115,6 +126,7 @@ local v35 = {
         ["Priority"] = 106,
         ["CantBeWhormholed"] = true,
         ["CustomCondition"] = function(p2, _, p3)
+            -- upvalues: (copy) v_u_1
             if p2:GetAttribute("CanCatchCryoshock") and v_u_1.world.weather.Value == "Frost_Moon" then
                 local v4 = p3:FindFirstChild("Stats")
                 if v4 then
@@ -4182,4 +4194,5 @@ local v35 = {
         ["Priority"] = 2
     }
 }
+
 return v35
