@@ -1,4 +1,10 @@
 local v7 = {
+    ["Astraeus"] = {
+        ["PriceMultiply"] = 8.7,
+        ["Chance"] = 0,
+        ["Display"] = "Astraeus",
+        ["Color"] = Color3.fromRGB(255, 170, 0)
+    },
     ["Noctic"] = {
         ["PriceMultiply"] = 8.5,
         ["Chance"] = 0,
@@ -66,7 +72,7 @@ local v7 = {
         ["Color"] = Color3.fromRGB(153, 184, 255)
     },
     ["Permafrost"] = {
-        ["PriceMultiply"] = 10,
+        ["PriceMultiply"] = 9.5,
         ["Chance"] = 0,
         ["Display"] = "Permafrost",
         ["Color"] = Color3.fromRGB(64, 96, 131)
@@ -137,7 +143,7 @@ local v7 = {
         ["Color"] = Color3.fromRGB(26, 31, 38)
     },
     ["Fabulous"] = {
-        ["PriceMultiply"] = 9.3,
+        ["PriceMultiply"] = 9.6,
         ["Chance"] = 0,
         ["Display"] = "Fabulous",
         ["Color"] = Color3.fromRGB(223, 149, 255)
@@ -182,6 +188,7 @@ local v7 = {
     ["Batty"] = {
         ["PriceMultiply"] = 2.5,
         ["Chance"] = 0,
+        ["Priority"] = 1,
         ["Display"] = "Batty",
         ["Color"] = Color3.fromRGB(33, 23, 23)
     },
@@ -204,7 +211,7 @@ local v7 = {
         ["Color"] = Color3.fromRGB(29, 73, 193)
     },
     ["Breezed"] = {
-        ["PriceMultiply"] = 8.2,
+        ["PriceMultiply"] = 8.6,
         ["Chance"] = 0,
         ["Display"] = "Breezed",
         ["Color"] = Color3.fromRGB(247, 255, 164)
@@ -558,7 +565,7 @@ v7.Evil = {
     ["Color"] = Color3.fromRGB(48, 0, 0)
 }
 v7.Serene = {
-    ["PriceMultiply"] = 8,
+    ["PriceMultiply"] = 8.5,
     ["Chance"] = 0,
     ["Display"] = "Serene",
     ["Color"] = Color3.fromRGB(0, 255, 225)
@@ -938,7 +945,7 @@ v7.Hexed = {
     ["Color"] = Color3.fromRGB(166, 0, 0)
 }
 v7.Sunken = {
-    ["PriceMultiply"] = 4.5,
+    ["PriceMultiply"] = 6.3,
     ["Chance"] = 0,
     ["Display"] = "Sunken",
     ["Priority"] = 1,
