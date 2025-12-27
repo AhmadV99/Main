@@ -1,4 +1,4 @@
-return {
+{
     ["Frightful Crate"] = {
         ["Chance"] = 40,
         ["Rarity"] = "Limited",
@@ -3648,6 +3648,8 @@ return {
         ["From"] = "Snowcap",
         ["Chance"] = 50,
     },
+    ["Rarities"] = {
+    },
     ["Abyssal Devourer"] = {
         ["Chance"] = 0.1,
         ["Rarity"] = "Mythical",
@@ -6888,6 +6890,8 @@ return {
         ["Price"] = 51,
         ["From"] = "Atlantis",
         ["Chance"] = 85,
+    },
+    ["RarityColours"] = {
     },
     ["Ruby Lionfish"] = {
         ["Chance"] = 15,
