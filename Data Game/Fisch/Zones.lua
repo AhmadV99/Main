@@ -5,6 +5,18 @@ local v35 = {
         ["CantBeWhormholed"] = true,
         ["Priority"] = 2
     },
+    ["New Years"] = {
+        ["Pool"] = {
+            "Eonshell",
+            "Confetti Carp",
+            "Party Pufferfish",
+            "Party Popperfish",
+            "Sparkler Sardine",
+            "Sparkling Corkfin"
+        },
+        ["CantBeWhormholed"] = true,
+        ["Priority"] = 5
+    },
     ["Glacial Ridge"] = {
         ["Pool"] = {
             "Ice",
