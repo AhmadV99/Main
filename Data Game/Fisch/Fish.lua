@@ -1,4 +1,4 @@
-{
+return {
     ["Frightful Crate"] = {
         ["Chance"] = 40,
         ["Rarity"] = "Limited",
