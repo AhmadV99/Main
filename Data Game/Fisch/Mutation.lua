@@ -1,6 +1,13 @@
 local v7 = {
+    ["New Years"] = {
+        ["PriceMultiply"] = 2.6,
+        ["Chance"] = 2.6,
+        ["Display"] = "New Years",
+        ["Color"] = Color3.fromRGB(255, 251, 149),
+        ["SpecificZones"] = { "New Years" }
+    },
     ["Astraeus"] = {
-        ["PriceMultiply"] = 8.7,
+        ["PriceMultiply"] = 9.6,
         ["Chance"] = 0,
         ["Display"] = "Astraeus",
         ["Color"] = Color3.fromRGB(255, 170, 0)
