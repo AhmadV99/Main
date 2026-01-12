@@ -1,7 +1,7 @@
 local v7 = {
     ["New Years"] = {
         ["PriceMultiply"] = 2.6,
-        ["Chance"] = 2.6,
+        ["Chance"] = 0,
         ["Display"] = "New Years",
         ["Color"] = Color3.fromRGB(255, 251, 149),
         ["SpecificZones"] = { "New Years" }
@@ -15,12 +15,14 @@ local v7 = {
     ["Noctic"] = {
         ["PriceMultiply"] = 8.5,
         ["Chance"] = 0,
+        ["Priority"] = 4,
         ["Display"] = "Noctic",
         ["Color"] = Color3.fromRGB(255, 255, 255)
     },
     ["Corvid"] = {
         ["PriceMultiply"] = 5,
         ["Chance"] = 0,
+        ["Priority"] = 4,
         ["Display"] = "Corvid",
         ["Color"] = Color3.fromRGB(176, 97, 255)
     },
@@ -38,13 +40,13 @@ local v7 = {
     },
     ["Merry"] = {
         ["PriceMultiply"] = 5,
-        ["Chance"] = 1,
+        ["Chance"] = 0,
         ["Display"] = "Merry",
         ["Color"] = Color3.fromRGB(22, 131, 26)
     },
     ["Jingle Bell"] = {
         ["PriceMultiply"] = 8,
-        ["Chance"] = 1,
+        ["Chance"] = 0,
         ["Display"] = "Jingle Bell",
         ["Color"] = Color3.fromRGB(255, 217, 102)
     },
@@ -62,13 +64,13 @@ local v7 = {
     },
     ["Peppermint"] = {
         ["PriceMultiply"] = 5,
-        ["Chance"] = 1,
+        ["Chance"] = 0,
         ["Display"] = "Peppermint",
         ["Color"] = Color3.fromRGB(255, 73, 73)
     },
     ["Gingerbread"] = {
         ["PriceMultiply"] = 5,
-        ["Chance"] = 1,
+        ["Chance"] = 0,
         ["Display"] = "Gingerbread",
         ["Color"] = Color3.fromRGB(140, 70, 43)
     },
@@ -279,6 +281,7 @@ v7.Mossy = {
 v7.Toxic = {
     ["PriceMultiply"] = 6,
     ["Chance"] = 0,
+    ["Priority"] = 1,
     ["Display"] = "Toxic",
     ["Color"] = Color3.fromRGB(98, 36, 197)
 }
@@ -1116,6 +1119,7 @@ v7.Subspace = {
 v7.Anomalous = {
     ["PriceMultiply"] = 5.55,
     ["Chance"] = 0,
+    ["Priority"] = 1,
     ["Display"] = "Anomalous",
     ["Color"] = Color3.fromRGB(255, 43, 43)
 }
@@ -1329,4 +1333,5 @@ v7.Rainbow = {
     ["Display"] = "Rainbow",
     ["Color"] = Color3.fromRGB(255, 158, 234)
 }
+
 return v7
