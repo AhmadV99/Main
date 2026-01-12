@@ -2,7 +2,7 @@ local v_u_1 = game:GetService("ReplicatedStorage")
 local v35 = {
     ["DevTest"] = {
         ["Pool"] = { "Tartaruga" },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
     ["New Years"] = {
@@ -14,7 +14,7 @@ local v35 = {
             "Sparkler Sardine",
             "Sparkling Corkfin"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Glacial Ridge"] = {
@@ -45,7 +45,7 @@ local v35 = {
             "Snowball"
         },
         ["Priority"] = 104,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Northstar Village"] = {
         ["Pool"] = {
@@ -79,7 +79,7 @@ local v35 = {
             "Festive Relic"
         },
         ["Priority"] = 105,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Cryoshock Serpent"] = {
         ["ExclusiveRods"] = {
@@ -135,7 +135,7 @@ local v35 = {
             "Cryoshock Serpent"
         },
         ["Priority"] = 106,
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["CustomCondition"] = function(p2, _, p3)
             -- upvalues: (copy) v_u_1
             if p2:GetAttribute("CanCatchCryoshock") and v_u_1.world.weather.Value == "Frost_Moon" then
@@ -201,7 +201,7 @@ local v35 = {
             "Murky Turkey",
             "Pioneer Turkey"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
     ["HallOfWhispers"] = {
@@ -218,7 +218,7 @@ local v35 = {
             "Key of Oaths",
             "Cathulid"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2,
         ["CustomCondition"] = function(_, p6)
             if p6.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
@@ -241,7 +241,7 @@ local v35 = {
             "Abyssal Grenadier",
             "Cathulith"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2,
         ["CustomCondition"] = function(_, p7)
             for _, v8 in p7.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
@@ -262,7 +262,7 @@ local v35 = {
             "Electric Eel",
             "Pirarucu"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2,
         ["CustomCondition"] = function(_, p9)
             local v10 = 0
@@ -289,7 +289,7 @@ local v35 = {
             "Glacial Squid"
         },
         ["Priority"] = 4,
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["CustomCondition"] = function(_, _)
             return true
         end
@@ -301,7 +301,7 @@ local v35 = {
             "Saffron Cod",
             "Greenland Halibut"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 1
     },
     ["Boreal Pines - Ice Fishing"] = {
@@ -313,7 +313,7 @@ local v35 = {
             "Eelpout",
             "Fourhorn Sculpin"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2
     },
     ["Boreal Pines - Cave"] = {
@@ -326,7 +326,7 @@ local v35 = {
             "Greenland Halibut",
             "Glacial Squid"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2
     },
     ["Boreal Pines - Peak"] = {
@@ -338,7 +338,7 @@ local v35 = {
             "Greenland Halibut",
             "Lake Whitefish"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2
     },
     ["Luminescent Cavern"] = {
@@ -351,7 +351,7 @@ local v35 = {
             "Kitefin Shark",
             "Atolla Jellyfish"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2
     },
     ["Lost Jungle"] = {
@@ -366,9 +366,10 @@ local v35 = {
             "Payara",
             "Electric Eel",
             "Pirarucu",
-            "Goliath Tigerfish"
+            "Goliath Tigerfish",
+            "Paradox Piranha"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2
     },
     ["Crimson Cavern"] = {
@@ -381,7 +382,7 @@ local v35 = {
             "Japanese Dragon Eel",
             "Vampire Squid"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2,
         ["CustomCondition"] = function(_, p12)
             if p12.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
@@ -404,7 +405,7 @@ local v35 = {
             "Sinocyclocheilus",
             "Key of Whispers"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2,
         ["CustomCondition"] = function(_, p13)
             if p13.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
@@ -427,7 +428,7 @@ local v35 = {
             "Blind Swamp Eel",
             "Key of Oaths"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2,
         ["CustomCondition"] = function(_, p14)
             if p14.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
@@ -449,7 +450,7 @@ local v35 = {
             "Garra Typhlops",
             "Abyssal Grenadier"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2,
         ["CustomCondition"] = function(_, p15)
             for _, v16 in p15.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
@@ -471,7 +472,7 @@ local v35 = {
             "Spiny Hatchetfish",
             "Swampfish"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2,
         ["CustomCondition"] = function(_, p17)
             if p17.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
@@ -492,7 +493,7 @@ local v35 = {
             "Swampfish",
             "Leviathan"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 3,
         ["CustomCondition"] = function(_, p18)
             if p18.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
@@ -513,7 +514,7 @@ local v35 = {
             "Swampfish",
             "Profane Leviathan"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 3,
         ["CustomCondition"] = function(_, p19)
             if p19.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
@@ -535,11 +536,11 @@ local v35 = {
             "Carrot Shark"
         },
         ["Priority"] = 102,
-        ["CantBeWhormholed"] = false
+        ["CantBeWormholed"] = false
     },
     ["AFK Pool - Trading Plaza"] = {
         ["Pool"] = { "Doubloon" },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 3,
         ["CustomCondition"] = function(_, _, p20)
             if p20 then
@@ -572,7 +573,7 @@ local v35 = {
             "Tilefish",
             "Black Grouper"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
     ["Castaway Cliffs"] = {
@@ -586,9 +587,10 @@ local v35 = {
             "Hidden Pipefish",
             "Mirage Toadfish",
             "Scalloped Hammerhead",
-            "Great Goldcursed Shark"
+            "Great Goldcursed Shark",
+            "Razorfin"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2
     },
     ["Magician Narwhal - Sea 2"] = {
@@ -619,7 +621,7 @@ local v35 = {
             "Toilet Fish",
             "Magician Narwhal"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Magician Narwhal - Sea 1"] = {
@@ -661,7 +663,7 @@ local v35 = {
             "Mustard",
             "Magician Narwhal"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Beluga - Sea 2"] = {
@@ -692,7 +694,7 @@ local v35 = {
             "Toilet Fish",
             "Beluga"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Beluga - Sea 1"] = {
@@ -734,7 +736,7 @@ local v35 = {
             "Mustard",
             "Beluga"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Narwhal - Sea 2"] = {
@@ -765,7 +767,7 @@ local v35 = {
             "Toilet Fish",
             "Narwhal"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Narwhal - Sea 1"] = {
@@ -807,7 +809,7 @@ local v35 = {
             "Mustard",
             "Narwhal"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Apex Leviathan"] = {
@@ -838,7 +840,7 @@ local v35 = {
             "Toilet Fish",
             "Apex Leviathan"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Mosslurker"] = {
@@ -880,7 +882,7 @@ local v35 = {
             "Mustard",
             "Mosslurker"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Bloop Fish"] = {
@@ -923,7 +925,7 @@ local v35 = {
             "Device Display",
             "Bloop Fish"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Baby Bloop Fish"] = {
@@ -966,7 +968,7 @@ local v35 = {
             "Device Display",
             "Baby Bloop Fish"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 4
     },
     ["Colossal Ethereal Dragon"] = {
@@ -979,7 +981,7 @@ local v35 = {
             "Kitefin Shark",
             "Atolla Jellyfish"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 3
     },
     ["Colossal Blue Dragon"] = {
@@ -992,7 +994,7 @@ local v35 = {
             "Kitefin Shark",
             "Atolla Jellyfish"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 3
     },
     ["Colossal Ancient Dragon"] = {
@@ -1005,7 +1007,7 @@ local v35 = {
             "Japanese Dragon Eel",
             "Vampire Squid"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 3,
         ["CustomCondition"] = function(_, p21)
             if p21.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
@@ -1029,7 +1031,7 @@ local v35 = {
             "Seacow"
         },
         ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Animal Pool - Second Sea"] = {
         ["Pool"] = {
@@ -1044,7 +1046,7 @@ local v35 = {
             "Capybass"
         },
         ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Octophant Pool Without Elephant"] = {
         ["Pool"] = {
@@ -1055,7 +1057,7 @@ local v35 = {
             "Orcanda"
         },
         ["Priority"] = 4,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Octophant Pool With Elephant"] = {
         ["Pool"] = {
@@ -1067,7 +1069,7 @@ local v35 = {
             "Octophant"
         },
         ["Priority"] = 4,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Sea Leviathan Pool"] = {
         ["Pool"] = {
@@ -1097,7 +1099,7 @@ local v35 = {
             "Toilet Fish"
         },
         ["Priority"] = 4,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Smurf Pool"] = {
         ["ExclusiveRods"] = {
@@ -1150,7 +1152,7 @@ local v35 = {
             "Vanity",
             "Grouchy Smurf"
         },
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Smurf Storm Pool"] = {
         ["ExclusiveRods"] = {
@@ -1184,7 +1186,7 @@ local v35 = {
             "Papa Smurf",
             "Grouchy Smurf"
         },
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Sunny O\'Coin"] = {
         ["Pool"] = {
@@ -1225,7 +1227,7 @@ local v35 = {
             "Mustard",
             "Sunny O\'Coin"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Rowdy McCharm"] = {
@@ -1267,7 +1269,7 @@ local v35 = {
             "Mustard",
             "Rowdy McCharm"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Plumrick O\'Luck"] = {
@@ -1309,7 +1311,7 @@ local v35 = {
             "Mustard",
             "Plumrick O\'Luck"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["O\'Mango Goldgrin"] = {
@@ -1351,7 +1353,7 @@ local v35 = {
             "Mustard",
             "O\'Mango Goldgrin"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Clover McRich"] = {
@@ -1393,7 +1395,7 @@ local v35 = {
             "Mustard",
             "Clover McRich"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Blarney McBreeze"] = {
@@ -1435,7 +1437,7 @@ local v35 = {
             "Mustard",
             "Blarney McBreeze"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 5
     },
     ["Ashfall Pool"] = {
@@ -1451,7 +1453,7 @@ local v35 = {
             "Burnt Betta",
             "Ashcloud Archerfish"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 1
     },
     ["Cults Curse Pool"] = {
@@ -1465,7 +1467,7 @@ local v35 = {
             "Hollow Gazer",
             "Wretched Guppy"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 1
     },
     ["Ancient Orcas Pool"] = {
@@ -1508,7 +1510,7 @@ local v35 = {
             "Long Pike",
             "Mustard"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 4
     },
     ["Orcas Pool"] = {
@@ -1551,7 +1553,7 @@ local v35 = {
             "Long Pike",
             "Mustard"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 4
     },
     ["Whales Pool"] = {
@@ -1595,7 +1597,7 @@ local v35 = {
             "Mustard"
         },
         ["Priority"] = 4,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Notes Island Pool"] = {
         ["Pool"] = {
@@ -1608,7 +1610,7 @@ local v35 = {
             "Harbinger Koi",
             "Slain Maw"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 4
     },
     ["Atlantean Storm"] = {
@@ -1724,7 +1726,7 @@ local v35 = {
             "Tiki Mask"
         },
         ["Priority"] = 1,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Ocean Greedy"] = {
         ["Pool"] = {
@@ -1764,7 +1766,7 @@ local v35 = {
             "Mustard"
         },
         ["Priority"] = 4,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Ocean"] = {
         ["Pool"] = {
@@ -1803,7 +1805,8 @@ local v35 = {
             "Mythic Fish",
             "Long Pike",
             "Mustard",
-            "Device Display"
+            "Device Display",
+            "Tuskmaw"
         },
         ["Priority"] = 0
     },
@@ -1846,7 +1849,8 @@ local v35 = {
             "Long Pike",
             "Mustard",
             "Blobfish",
-            "Device Display"
+            "Device Display",
+            "Tuskmaw"
         },
         ["Priority"] = 1
     },
@@ -1889,10 +1893,11 @@ local v35 = {
             "Mustard",
             "Akkorokamui",
             "Lusca",
-            "Charybdis"
+            "Charybdis",
+            "Tuskmaw"
         },
         ["Priority"] = 0,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Atlantis Ocean"] = {
         ["Pool"] = {
@@ -1934,7 +1939,7 @@ local v35 = {
             "Mustard"
         },
         ["Priority"] = 1,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Grand Reef"] = {
         ["Pool"] = {
@@ -2026,7 +2031,8 @@ local v35 = {
             "Anchovy",
             "Eel",
             "Moonfish",
-            "Bull Shark"
+            "Bull Shark",
+            "Cataclysm Carp"
         },
         ["Priority"] = 1
     },
@@ -2047,7 +2053,8 @@ local v35 = {
             "Anchovy",
             "Eel",
             "Whisker Bill",
-            "Treble Bass"
+            "Treble Bass",
+            "Cataclysm Carp"
         },
         ["Priority"] = 4
     },
@@ -2064,7 +2071,8 @@ local v35 = {
             "Mackerel",
             "Sockeye Salmon",
             "Anchovy",
-            "Pike"
+            "Pike",
+            "Cataclysm Carp"
         },
         ["Priority"] = 2
     },
@@ -2080,7 +2088,8 @@ local v35 = {
             "Bream",
             "Pike",
             "Eel",
-            "Whiptail Catfish"
+            "Whiptail Catfish",
+            "Cataclysm Carp"
         },
         ["Priority"] = 2
     },
@@ -2121,7 +2130,7 @@ local v35 = {
             "Ashclaw"
         },
         ["Priority"] = 3,
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["RequiredDurability"] = 100
     },
     ["Roslit Pond"] = {
@@ -2133,7 +2142,8 @@ local v35 = {
             "Pumpkinseed",
             "Chub",
             "Arapaima",
-            "Axolotl"
+            "Axolotl",
+            "Aetherfin"
         },
         ["Priority"] = 2
     },
@@ -2148,7 +2158,8 @@ local v35 = {
             "Trout",
             "Arapaima",
             "Suckermouth Catfish",
-            "Axolotl"
+            "Axolotl",
+            "Aetherfin"
         },
         ["Priority"] = 3
     },
@@ -2169,7 +2180,8 @@ local v35 = {
             "Crown Bass",
             "Manta Ray",
             "Dumbo Octopus",
-            "Translator Core"
+            "Translator Core",
+            "Aetherfin"
         },
         ["Priority"] = 3
     },
@@ -2190,7 +2202,8 @@ local v35 = {
             "Crown Bass",
             "Manta Ray",
             "Dumbo Octopus",
-            "Translator Core"
+            "Translator Core",
+            "Aetherfin"
         },
         ["Priority"] = 8000
     },
@@ -2220,7 +2233,8 @@ local v35 = {
             "Flying Fish",
             "Mythic Fish",
             "Manta Ray",
-            "Translator Core"
+            "Translator Core",
+            "Aetherfin"
         },
         ["Priority"] = 2
     },
@@ -2232,7 +2246,8 @@ local v35 = {
             "Clam",
             "Squid",
             "Flying Fish",
-            "Mythic Fish"
+            "Mythic Fish",
+            "Aetherfin"
         },
         ["Priority"] = 10000
     },
@@ -2252,7 +2267,8 @@ local v35 = {
             "Cockatoo Squid",
             "Midnight Axolotl",
             "Barbed Shark",
-            "Emperor Jellyfish"
+            "Emperor Jellyfish",
+            "Lumilotl"
         },
         ["Priority"] = 2
     },
@@ -2291,7 +2307,7 @@ local v35 = {
         },
         ["Priority"] = 2,
         ["RequiredDurability"] = 200,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Ancient Isle Ocean"] = {
         ["Pool"] = {
@@ -2537,7 +2553,8 @@ local v35 = {
             "Voltfish",
             "Tartaruga",
             "Speed Core",
-            "Communication Circuit"
+            "Communication Circuit",
+            "Crustal Colossus"
         },
         ["Priority"] = 2
     },
@@ -2547,6 +2564,7 @@ local v35 = {
             "Rock",
             "Boot",
             "Scrap Metal",
+            "Common Crate",
             "Rusty Bolt",
             "Iron Chunk",
             "Gold Piece",
@@ -2656,22 +2674,22 @@ local v35 = {
     ["Debug"] = {
         ["Pool"] = { "Colossal Squid" },
         ["Priority"] = 10,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Relics"] = {
         ["Pool"] = { "Enchant Relic" },
         ["Priority"] = 10,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["ExaltedRelics"] = {
         ["Pool"] = { "Exalted Relic" },
         ["Priority"] = 10,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["CosmicRelic"] = {
         ["Pool"] = { "Cosmic Relic" },
         ["Priority"] = 100,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["EmojiFish"] = {
         ["Pool"] = {
@@ -2682,12 +2700,12 @@ local v35 = {
             "\240\159\144\161"
         },
         ["Priority"] = 10,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Him"] = {
         ["Pool"] = { "Him" },
         ["Priority"] = 1000,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Lovestorm Eel"] = {
         ["Pool"] = {
@@ -2727,7 +2745,7 @@ local v35 = {
             "Mythic Fish",
             "Lovestorm Eel"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 100
     },
     ["Lovestorm Eel Supercharged"] = {
@@ -2768,7 +2786,7 @@ local v35 = {
             "Mythic Fish",
             "Lovestorm Eel Supercharged"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 100
     },
     ["Birthday Megalodon"] = {
@@ -2812,27 +2830,27 @@ local v35 = {
             "Birthday Goldfish",
             "Birthday Megalodon"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 100
     },
     ["BirthdayCake"] = {
         ["Pool"] = { "Birthday Cake" },
         ["Priority"] = 101,
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["StartDate"] = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
         ["InvalidDate"] = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
     },
     ["BabysFirstBalloon"] = {
         ["Pool"] = { "Baby\'s First Balloon" },
         ["Priority"] = 101,
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["StartDate"] = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
         ["InvalidDate"] = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
     },
     ["BirthdayGift"] = {
         ["Pool"] = { "Birthday Gift" },
         ["Priority"] = 101,
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["StartDate"] = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
         ["InvalidDate"] = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
     },
@@ -2875,7 +2893,7 @@ local v35 = {
             "Megalodon",
             "Ancient Megalodon"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 100
     },
     ["Megalodon Ancient"] = {
@@ -2918,7 +2936,7 @@ local v35 = {
             "Phantom Megalodon",
             "Ancient Megalodon"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 100
     },
     ["Great White Shark"] = {
@@ -3037,7 +3055,7 @@ local v35 = {
             "Stingray"
         },
         ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["FischFright25"] = {
         ["Pool"] = {
@@ -3073,7 +3091,7 @@ local v35 = {
             "Stingray"
         },
         ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["FrightfulVillage"] = {
         ["Pool"] = {
@@ -3089,7 +3107,7 @@ local v35 = {
             "Frightful Crate"
         },
         ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["NessieCatacomb"] = {
         ["Pool"] = {
@@ -3105,18 +3123,18 @@ local v35 = {
             "Gravestone Stingray"
         },
         ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Fischgiving"] = {
         ["Pool"] = { "Turkey" },
         ["Priority"] = 103,
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["InvalidDate"] = DateTime.fromUniversalTime(2024, 12, 7, 8)
     },
     ["SourGummy"] = {
         ["Pool"] = { "Xtra Sour Gummy Pack" },
         ["Priority"] = 110,
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["StartDate"] = DateTime.fromUniversalTime(2024, 11, 1, 16),
         ["InvalidDate"] = DateTime.fromUniversalTime(2025, 11, 1, 16)
     },
@@ -3139,7 +3157,7 @@ local v35 = {
             "Ornament Fish"
         },
         ["Priority"] = 104,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Overgrowth Caves"] = {
         ["Pool"] = {
@@ -3260,7 +3278,7 @@ local v35 = {
             "Glass Diamond"
         },
         ["Priority"] = 2,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Forsaken Algae Pool"] = {
         ["Pool"] = {
@@ -3301,7 +3319,7 @@ local v35 = {
             "Forsaken Algae"
         },
         ["Priority"] = 100,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Ancient Algae Pool"] = {
         ["Pool"] = {
@@ -3342,7 +3360,7 @@ local v35 = {
             "Ancient Algae"
         },
         ["Priority"] = 100,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Mushgrove Algae Pool"] = {
         ["Pool"] = {
@@ -3383,7 +3401,7 @@ local v35 = {
             "Mushgrove Algae"
         },
         ["Priority"] = 100,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Snowcap Algae Pool"] = {
         ["Pool"] = {
@@ -3424,7 +3442,7 @@ local v35 = {
             "Snowcap Algae"
         },
         ["Priority"] = 100,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Golden Tide"] = {
         ["Pool"] = {
@@ -3460,7 +3478,7 @@ local v35 = {
             "Stingray"
         },
         ["Priority"] = 102,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Zeus Pool"] = {
         ["Pool"] = {
@@ -3640,7 +3658,7 @@ local v35 = {
             "Abyssal Devourer",
             "The Kraken"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 1,
         ["CustomCondition"] = function(_, _, p31)
             if p31:FindFirstChild("Cache") and p31.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
@@ -3671,7 +3689,7 @@ local v35 = {
             "Abyssal Devourer",
             "Ancient Kraken"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 1,
         ["CustomCondition"] = function(_, _, p32)
             if p32:FindFirstChild("Cache") and p32.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
@@ -3694,7 +3712,7 @@ local v35 = {
             "Blisterback Blenny",
             "Magma Leviathan"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 3
     },
     ["Challengers Deep"] = {
@@ -3710,7 +3728,7 @@ local v35 = {
             "Cryoskin",
             "Cryo Coelacanth"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 3
     },
     ["Abyssal Zenith"] = {
@@ -3726,7 +3744,7 @@ local v35 = {
             "Giant Seadevil",
             "Crowned Anglerfish"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 3
     },
     ["Calm Zone"] = {
@@ -3741,7 +3759,7 @@ local v35 = {
             "Shimmering Silverside",
             "Crystallized Seadragon"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 3
     },
     ["Forsaken Veil"] = {
@@ -3755,7 +3773,7 @@ local v35 = {
             "Typhoon Tailfin",
             "Twilight Tentaclefish"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 3,
         ["CustomCondition"] = function(_, _, p33)
             if p33:FindFirstChild("Cache") and p33.Cache:FindFirstChild("ScyllaBossfight") then
@@ -3777,7 +3795,7 @@ local v35 = {
             "Twilight Tentaclefish",
             "Scylla"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 4,
         ["CustomCondition"] = function(_, _, p34)
             if p34:FindFirstChild("Cache") and p34.Cache:FindFirstChild("ScyllaBossfight") then
@@ -3805,7 +3823,7 @@ local v35 = {
             "Vortex Ray",
             "Storm Skipper"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
     ["Pine Shoal"] = {
@@ -3821,7 +3839,7 @@ local v35 = {
             "Sunray Sunscale",
             "Thornfish"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
     ["Lushgrove"] = {
@@ -3841,7 +3859,7 @@ local v35 = {
             "Idolfish",
             "Primordial Levi"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
     ["Emberreach"] = {
@@ -3860,7 +3878,7 @@ local v35 = {
             "Brimstone Angler",
             "Obsidian Koi"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
     ["Emberreach Ponds"] = {
@@ -3874,7 +3892,7 @@ local v35 = {
             "Cragscale",
             "Tropicspike"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 3
     },
     ["Emberreach Lava"] = {
@@ -3887,7 +3905,7 @@ local v35 = {
             "Emberwing",
             "Molten Ripple"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 3,
         ["RequiredDurability"] = 100
     },
@@ -3905,7 +3923,7 @@ local v35 = {
             "Phantom Koi",
             "Tartaruga"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
     ["Cursed Isle"] = {
@@ -3925,7 +3943,7 @@ local v35 = {
             "Dreaming Aberration",
             "Abyssborn Monstrosity"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2
     },
     ["Open Ocean"] = {
@@ -3956,7 +3974,7 @@ local v35 = {
             "Toilet Fish",
             "Device Display"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 0
     },
     ["Azure Lagoon"] = {
@@ -3975,7 +3993,7 @@ local v35 = {
             "Depth Drifter",
             "Verdant Mirage"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
     ["Blue Moon - First Sea"] = {
@@ -3998,7 +4016,7 @@ local v35 = {
             "Tarnished Moongill"
         },
         ["Priority"] = 3,
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["CustomCondition"] = function(_, _)
             -- upvalues: (copy) v_u_1
             if v_u_1:GetAttribute("BlueMoonEvent") == true then
@@ -4020,7 +4038,7 @@ local v35 = {
             "Moon Idol Sea 2"
         },
         ["Priority"] = 3,
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["CustomCondition"] = function(_, _)
             -- upvalues: (copy) v_u_1
             if v_u_1:GetAttribute("BlueMoonEvent") == true then
@@ -4054,7 +4072,7 @@ local v35 = {
             "Rhizodus"
         },
         ["Priority"] = 6,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Jurassic Island Ocean Pool"] = {
         ["ExclusiveRods"] = {
@@ -4080,7 +4098,7 @@ local v35 = {
             "Rhizodus"
         },
         ["Priority"] = 5,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["LEGO"] = {
         ["ExclusiveRods"] = {
@@ -4105,7 +4123,7 @@ local v35 = {
             "Azure Studfish"
         },
         ["Priority"] = 5,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["LEGO - Studolodon"] = {
         ["ExclusiveRods"] = {
@@ -4152,7 +4170,7 @@ local v35 = {
             "Mustard"
         },
         ["Priority"] = 5,
-        ["CantBeWhormholed"] = true
+        ["CantBeWormholed"] = true
     },
     ["Whale Interior"] = {
         ["Pool"] = {
@@ -4163,7 +4181,7 @@ local v35 = {
             "Smooth toadfish",
             "Splendid toadfish"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
     ["Treasure Island"] = {
@@ -4190,7 +4208,7 @@ local v35 = {
             "Gem Marlin",
             "Gem Salmon"
         },
-        ["CantBeWhormholed"] = false,
+        ["CantBeWormholed"] = false,
         ["Priority"] = 2
     },
     ["Default"] = {
@@ -4201,7 +4219,7 @@ local v35 = {
             "Tire",
             "Boot"
         },
-        ["CantBeWhormholed"] = true,
+        ["CantBeWormholed"] = true,
         ["Priority"] = 2
     }
 }
