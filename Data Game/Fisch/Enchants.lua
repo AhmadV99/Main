@@ -1,6 +1,6 @@
-local v3 = {}
-local v4 = {}
-local v5 = {
+local v_u_4 = {}
+local v5 = {}
+local v6 = {
     ["Description"] = "30% chance for a Fischmas mutation, increases fish size by <$WeightBoost$>%, & increases Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(234, 57, 57),
     ["StrokeColor"] = Color3.fromRGB(231, 231, 231),
@@ -31,8 +31,8 @@ local v5 = {
     },
     ["RelicGroup"] = "Santa"
 }
-v4.Santa = v5
-local v6 = {
+v5.Santa = v6
+local v7 = {
     ["Description"] = "<$Mutations.1.Chance$>% chance for <$Mutations.1.Name$> mutation, increases Lure Speed by <$Lure$>%, & increases Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(22, 131, 26),
     ["StrokeColor"] = Color3.fromRGB(3, 44, 0),
@@ -47,26 +47,39 @@ local v6 = {
     },
     ["RelicGroup"] = "Festive"
 }
-v4.Merry = v6
-local v7 = {
+v5.Merry = v7
+local v8 = {
     ["Description"] = "<$Mutations.1.Chance$>% chance for <$Mutations.1.Name$> mutation, rod has a high chance to lightly stab fish while reeling, & increases Luck by <$Luck$>%",
     ["Color"] = Color3.fromRGB(255, 0, 0),
     ["StrokeColor"] = Color3.fromRGB(255, 255, 255),
-    ["Display"] = "Peppermint",
-    ["Luck"] = 25,
-    ["SlashChance"] = 40,
-    ["SlashDamage"] = 1,
-    ["Mutations"] = {
-        {
-            ["Name"] = "Peppermint",
-            ["Chance"] = 10
-        }
-    },
-    ["Secondary"] = true,
-    ["RelicGroup"] = "Festive"
+    ["Display"] = "Peppermint"
 }
-v4.Peppermint = v7
-local v8 = {
+local v9 = {
+    ["Generic_Slashes"] = {
+        ["TriggerMode"] = "FishMove",
+        ["SlashChance"] = 40,
+        ["SlashDamage"] = 1,
+        ["StunTime"] = 0.1,
+        ["SourceType"] = "secondaryEnchant",
+        ["SourceName"] = "Peppermint",
+        ["SoundName"] = "stabbystab",
+        ["IconName"] = "Default",
+        ["IconColor"] = Color3.fromRGB(255, 0, 0),
+        ["GradientColor"] = Color3.fromRGB(255, 0, 0)
+    }
+}
+v8.ClientFishingPassives = v9
+v8.Luck = 25
+v8.Mutations = {
+    {
+        ["Name"] = "Peppermint",
+        ["Chance"] = 10
+    }
+}
+v8.Secondary = true
+v8.RelicGroup = "Festive"
+v5.Peppermint = v8
+local v10 = {
     ["Description"] = "<$Mutations.1.Chance$>% chance for <$Mutations.1.Name$> mutation, increases fish size by <$WeightBoost$>%, & increases Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(140, 70, 43),
     ["StrokeColor"] = Color3.fromRGB(35, 0, 0),
@@ -81,19 +94,33 @@ local v8 = {
     },
     ["RelicGroup"] = "Festive"
 }
-v4.Gingerbread = v8
-v4.Rage = {
+v5.Gingerbread = v10
+local v11 = {
     ["Description"] = "Slashes fish with unmatched force, Decreases Luck by <$Luck$>%, & Decreases Resilience by <$Resilience$>%",
     ["Color"] = Color3.fromRGB(209, 17, 17),
     ["StrokeColor"] = Color3.fromRGB(36, 17, 17),
     ["Display"] = "Rage",
     ["Luck"] = -50,
-    ["Resilience"] = -20,
-    ["SlashChance"] = 25,
-    ["SlashDamage"] = 8,
-    ["RelicGroup"] = "Twisted"
+    ["Resilience"] = -20
 }
-v4.Greed = {
+local v12 = {
+    ["Generic_Slashes"] = {
+        ["TriggerMode"] = "FishMove",
+        ["SlashChance"] = 25,
+        ["SlashDamage"] = 8,
+        ["StunTime"] = 0.25,
+        ["SourceType"] = "enchant",
+        ["SourceName"] = "Rage",
+        ["SoundName"] = "stabbystab",
+        ["IconName"] = "Default",
+        ["IconColor"] = Color3.fromRGB(209, 17, 17),
+        ["GradientColor"] = Color3.fromRGB(209, 17, 17)
+    }
+}
+v11.ClientFishingPassives = v12
+v11.RelicGroup = "Twisted"
+v5.Rage = v11
+v5.Greed = {
     ["Description"] = "Makes fish <$WeightBoost$>% bigger, Decreases Lure Speed by <$Lure$>%, & Decreases Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(255, 191, 0),
     ["StrokeColor"] = Color3.fromRGB(90, 57, 17),
@@ -103,7 +130,7 @@ v4.Greed = {
     ["WeightBoost"] = 50,
     ["RelicGroup"] = "Twisted"
 }
-v4.Fractured = {
+v5.Fractured = {
     ["Description"] = "Increases Progress Speed by <$ProgressSpeed$>%, & Decreases Control by <$Control$>",
     ["Color"] = Color3.fromRGB(213, 207, 185),
     ["StrokeColor"] = Color3.fromRGB(102, 99, 88),
@@ -112,7 +139,7 @@ v4.Fractured = {
     ["Control"] = -0.1,
     ["RelicGroup"] = "Twisted"
 }
-v4["Blessed Song"] = {
+v5["Blessed Song"] = {
     ["Description"] = "Increases Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(0, 170, 255),
     ["StrokeColor"] = Color3.fromRGB(0, 60, 90),
@@ -120,7 +147,7 @@ v4["Blessed Song"] = {
     ["ProgressSpeed"] = 40,
     ["RelicGroup"] = "SongOfTheDeep"
 }
-local v9 = {
+local v13 = {
     ["Description"] = "<$Mutations.1.Chance$>% chance for <$Mutations.1.Name$> mutation, increases Progress Speed by <$ProgressSpeed$>%, & decreases Resilience by <$Resilience$>%",
     ["Color"] = Color3.fromRGB(123, 104, 165),
     ["StrokeColor"] = Color3.fromRGB(44, 37, 50),
@@ -135,25 +162,38 @@ local v9 = {
     },
     ["RelicGroup"] = "Frightful"
 }
-v4.Frightful = v9
-local v10 = {
+v5.Frightful = v13
+local v14 = {
     ["Description"] = "<$Mutations.1.Chance$>% chance for <$Mutations.1.Name$> mutation, increases Control by <$Control$>, & rapid Slashes",
     ["Color"] = Color3.fromRGB(220, 151, 81),
     ["StrokeColor"] = Color3.fromRGB(50, 39, 28),
     ["Display"] = "Spooky",
-    ["Control"] = 0.1,
-    ["SlashChance"] = 30,
-    ["SlashDamage"] = 3,
-    ["Mutations"] = {
-        {
-            ["Name"] = "Spooky",
-            ["Chance"] = 10
-        }
-    },
-    ["RelicGroup"] = "Spooky"
+    ["Control"] = 0.1
 }
-v4.Spooky = v10
-local v11 = {
+local v15 = {
+    ["Generic_Slashes"] = {
+        ["TriggerMode"] = "FishMove",
+        ["SlashChance"] = 30,
+        ["SlashDamage"] = 3,
+        ["StunTime"] = 0.25,
+        ["SourceType"] = "enchant",
+        ["SourceName"] = "Spooky",
+        ["SoundName"] = "stabbystab",
+        ["IconName"] = "Default",
+        ["IconColor"] = Color3.fromRGB(220, 151, 81),
+        ["GradientColor"] = Color3.fromRGB(220, 151, 81)
+    }
+}
+v14.ClientFishingPassives = v15
+v14.Mutations = {
+    {
+        ["Name"] = "Spooky",
+        ["Chance"] = 10
+    }
+}
+v14.RelicGroup = "Spooky"
+v5.Spooky = v14
+local v16 = {
     ["Description"] = "<$Mutations.1.Chance$>% chance for <$Mutations.1.Name$> mutation, increases fish size by <$WeightBoost$>%, & increases Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(84, 211, 114),
     ["StrokeColor"] = Color3.fromRGB(67, 84, 72),
@@ -169,8 +209,8 @@ local v11 = {
     ["Secondary"] = true,
     ["RelicGroup"] = "Eerie"
 }
-v4.Eerie = v11
-v4["Sea King"] = {
+v5.Eerie = v16
+v5["Sea King"] = {
     ["Description"] = "Makes fish <$WeightBoost$>% bigger",
     ["Color"] = Color3.fromRGB(53, 77, 211),
     ["StrokeColor"] = Color3.fromRGB(9, 13, 35),
@@ -178,7 +218,7 @@ v4["Sea King"] = {
     ["WeightBoost"] = 30,
     ["RelicGroup"] = "Default"
 }
-v4.Swift = {
+v5.Swift = {
     ["Description"] = "Increases Lure Speed by <$Lure$>%, & Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(181, 227, 229),
     ["StrokeColor"] = Color3.fromRGB(40, 50, 50),
@@ -187,7 +227,7 @@ v4.Swift = {
     ["Lure"] = 30,
     ["RelicGroup"] = "Default"
 }
-v4.Long = {
+v5.Long = {
     ["Description"] = "Increases Line Distance by <$LineDistance$> studs, Resilience by <$Resilience$>%, & Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(223, 165, 64),
     ["StrokeColor"] = Color3.fromRGB(33, 25, 14),
@@ -197,28 +237,28 @@ v4.Long = {
     ["Resilience"] = 35,
     ["RelicGroup"] = "Default"
 }
-local v12 = {
+local v17 = {
     ["Description"] = "All caught fish become <$Mutations.1.Name$>, with a <$FishingPassives.Generic_DuplicateFish.DuplicateChance$>% chance to double caught fish",
     ["Color"] = Color3.fromRGB(129, 223, 173),
     ["StrokeColor"] = Color3.fromRGB(46, 79, 61),
     ["Display"] = "Ghastly"
 }
-local v13 = {
+local v18 = {
     ["Generic_DuplicateFish"] = {
         ["DuplicateChance"] = 10,
         ["DuplicateMutation"] = "Translucent"
     }
 }
-v12.FishingPassives = v13
-v12.Mutations = {
+v17.FishingPassives = v18
+v17.Mutations = {
     {
         ["Name"] = "Translucent",
         ["Chance"] = 100
     }
 }
-v12.RelicGroup = "Default"
-v4.Ghastly = v12
-v4.Lucky = {
+v17.RelicGroup = "Default"
+v5.Ghastly = v17
+v5.Lucky = {
     ["Description"] = "Increases Luck by <$Luck$>%, Lure Speed by <$Lure$>%, & natural Mutation chances by <$NaturalMutationChance$>%",
     ["Color"] = Color3.fromRGB(126, 229, 164),
     ["StrokeColor"] = Color3.fromRGB(25, 45, 32),
@@ -228,7 +268,7 @@ v4.Lucky = {
     ["NaturalMutationChance"] = 50,
     ["RelicGroup"] = "Default"
 }
-v4.Divine = {
+v5.Divine = {
     ["Description"] = "Increases luck by <$Luck$>%, Resilience by <$Resilience$>%, & Lure Speed by <$Lure$>%",
     ["Color"] = Color3.fromRGB(198, 229, 220),
     ["StrokeColor"] = Color3.fromRGB(118, 135, 132),
@@ -238,7 +278,7 @@ v4.Divine = {
     ["Resilience"] = 20,
     ["RelicGroup"] = "Default"
 }
-v4.Mutated = {
+v5.Mutated = {
     ["Description"] = "Increases natural Mutation chances by <$NaturalMutationChance$>%",
     ["Color"] = Color3.fromRGB(147, 229, 112),
     ["StrokeColor"] = Color3.fromRGB(45, 58, 39),
@@ -246,7 +286,7 @@ v4.Mutated = {
     ["NaturalMutationChance"] = 90,
     ["RelicGroup"] = "Default"
 }
-v4.Unbreakable = {
+v5.Unbreakable = {
     ["Description"] = "Increases Strength by <$Strength$>kg, & Control by <$Control$>",
     ["Color"] = Color3.fromRGB(225, 179, 229),
     ["StrokeColor"] = Color3.fromRGB(16, 13, 16),
@@ -255,7 +295,7 @@ v4.Unbreakable = {
     ["Control"] = 0.1,
     ["RelicGroup"] = "Default"
 }
-v4.Steady = {
+v5.Steady = {
     ["Description"] = "Increases Progress Speed by <$ProgressSpeed$>%, & Control by <$Control$>",
     ["Color"] = Color3.fromRGB(229, 207, 191),
     ["StrokeColor"] = Color3.fromRGB(21, 19, 18),
@@ -264,7 +304,7 @@ v4.Steady = {
     ["Control"] = 0.05,
     ["RelicGroup"] = "Default"
 }
-v4.Blessed = {
+v5.Blessed = {
     ["Description"] = "Increases Shiny & Sparkling chances by <$ShinyChance$>%, Lure Speed by <$Lure$>%, & Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(255, 79, 164),
     ["StrokeColor"] = Color3.fromRGB(42, 20, 34),
@@ -275,21 +315,21 @@ v4.Blessed = {
     ["ProgressSpeed"] = 5,
     ["RelicGroup"] = "Default"
 }
-local v14 = {
+local v19 = {
     ["Description"] = "<$FishingPassives.WormholeEnchant.ActivateChance$>% chance to catch a fish from a random place",
     ["Color"] = Color3.fromRGB(145, 90, 255),
     ["StrokeColor"] = Color3.fromRGB(13, 8, 22),
     ["Display"] = "Wormhole"
 }
-local v15 = {
+local v20 = {
     ["WormholeEnchant"] = {
         ["ActivateChance"] = 80
     }
 }
-v14.FishingPassives = v15
-v14.RelicGroup = "Default"
-v4.Wormhole = v14
-v4.Resilient = {
+v19.FishingPassives = v20
+v19.RelicGroup = "Default"
+v5.Wormhole = v19
+v5.Resilient = {
     ["Description"] = "Increases Resilience by <$Resilience$>%, & Fish Size by <$WeightBoost$>%",
     ["Color"] = Color3.fromRGB(106, 255, 198),
     ["StrokeColor"] = Color3.fromRGB(17, 29, 25),
@@ -298,7 +338,7 @@ v4.Resilient = {
     ["Resilience"] = 35,
     ["RelicGroup"] = "Default"
 }
-v4.Controlled = {
+v5.Controlled = {
     ["Description"] = "Increases Control by <$Control$>",
     ["Color"] = Color3.fromRGB(175, 155, 255),
     ["StrokeColor"] = Color3.fromRGB(32, 28, 39),
@@ -306,7 +346,7 @@ v4.Controlled = {
     ["Control"] = 0.15,
     ["RelicGroup"] = "Default"
 }
-local v18 = {
+local v23 = {
     ["Description"] = "Increases Luck by <$Luck$>%, Lure Speed by <$Lure$>%, & <$Mutations.1.Chance$>% chance for <$Mutations.1.Name$> mutation [Doubled during Rainy weather]",
     ["Color"] = Color3.fromRGB(255, 236, 131),
     ["StrokeColor"] = Color3.fromRGB(36, 36, 24),
@@ -319,26 +359,26 @@ local v18 = {
             ["Chance"] = 25
         }
     },
-    ["ConditionalBoosts"] = function(p16, _)
+    ["ConditionalBoosts"] = function(p21, _)
         -- upvalues: (copy) v_u_1
         if v_u_1.world.weather.Value == "Rain" then
-            local v17 = {
-                ["Luck"] = p16.Luck * 2,
-                ["Lure"] = p16.Lure * 2,
+            local v22 = {
+                ["Luck"] = p21.Luck * 2,
+                ["Lure"] = p21.Lure * 2,
                 ["Mutations"] = {
                     {
-                        ["Name"] = p16.Mutations[1].Name,
-                        ["Chance"] = p16.Mutations[1].Chance * 2
+                        ["Name"] = p21.Mutations[1].Name,
+                        ["Chance"] = p21.Mutations[1].Chance * 2
                     }
                 }
             }
-            return v17
+            return v22
         end
     end,
     ["RelicGroup"] = "Default"
 }
-v4.Storming = v18
-v4.Scrapper = {
+v5.Storming = v23
+v5.Scrapper = {
     ["Description"] = "<$BaitPreserveChance$>% chance to not consume Bait",
     ["Color"] = Color3.fromRGB(255, 155, 83),
     ["StrokeColor"] = Color3.fromRGB(36, 23, 13),
@@ -346,7 +386,7 @@ v4.Scrapper = {
     ["BaitPreserveChance"] = 60,
     ["RelicGroup"] = "Default"
 }
-v4.Breezed = {
+v5.Breezed = {
     ["Description"] = "Increases Luck by <$Luck$>%, Lure Speed by <$Lure$>%, & Progress Speed by <$ProgressSpeed$>% [Doubled during Windy weather]",
     ["Color"] = Color3.fromRGB(188, 208, 255),
     ["StrokeColor"] = Color3.fromRGB(28, 30, 36),
@@ -354,19 +394,19 @@ v4.Breezed = {
     ["Luck"] = 50,
     ["Lure"] = 20,
     ["ProgressSpeed"] = 10,
-    ["ConditionalBoosts"] = function(p19, _)
+    ["ConditionalBoosts"] = function(p24, _)
         -- upvalues: (copy) v_u_1
         if v_u_1.world.weather.Value == "Windy" then
             return {
-                ["Luck"] = p19.Luck * 2,
-                ["Lure"] = p19.Lure * 2,
-                ["ProgressSpeed"] = p19.ProgressSpeed * 2
+                ["Luck"] = p24.Luck * 2,
+                ["Lure"] = p24.Lure * 2,
+                ["ProgressSpeed"] = p24.ProgressSpeed * 2
             }
         end
     end,
     ["RelicGroup"] = "Default"
 }
-local v20 = {
+local v25 = {
     ["Description"] = "<$XpMultiply$>\195\151 XP after catching a fish, Lure Speed increased by <$Lure$>%, & grants a <$Mutations.1.Chance$>% chance to Purify caught fish",
     ["Color"] = Color3.fromRGB(128, 255, 114),
     ["StrokeColor"] = Color3.fromRGB(29, 36, 27),
@@ -381,8 +421,8 @@ local v20 = {
     },
     ["RelicGroup"] = "Default"
 }
-v4.Insight = v20
-v4.Clever = {
+v5.Insight = v25
+v5.Clever = {
     ["Description"] = "<$XpMultiply$>\195\151 XP after catching a fish",
     ["Color"] = Color3.fromRGB(255, 110, 166),
     ["StrokeColor"] = Color3.fromRGB(36, 18, 24),
@@ -390,7 +430,7 @@ v4.Clever = {
     ["XpMultiply"] = 2.25,
     ["RelicGroup"] = "Default"
 }
-local v21 = {
+local v26 = {
     ["Description"] = "Caught fish will be Albino or Darkened, with a <$WeightBoost$>% size boost",
     ["Color"] = Color3.fromRGB(255, 255, 255),
     ["StrokeColor"] = Color3.fromRGB(0, 0, 0),
@@ -408,8 +448,8 @@ local v21 = {
     },
     ["RelicGroup"] = "Default"
 }
-v4.Noir = v21
-v4.Hasty = {
+v5.Noir = v26
+v5.Hasty = {
     ["Description"] = "Increases Lure Speed by <$Lure$>%",
     ["Color"] = Color3.fromRGB(229, 209, 92),
     ["StrokeColor"] = Color3.fromRGB(50, 42, 12),
@@ -417,7 +457,7 @@ v4.Hasty = {
     ["Lure"] = 55,
     ["RelicGroup"] = "Default"
 }
-v4.Quality = {
+v5.Quality = {
     ["Description"] = "Increases Luck by <$Luck$>%, Resilience by <$Resilience$>%, Lure Speed by <$Lure$>%, & Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(158, 255, 55),
     ["StrokeColor"] = Color3.fromRGB(56, 90, 19),
@@ -428,7 +468,7 @@ v4.Quality = {
     ["Resilience"] = 10,
     ["RelicGroup"] = "Default"
 }
-local v22 = {
+local v27 = {
     ["Description"] = "Caught fish have a <$Mutations.1.Chance$>% chance to be <$Mutations.1.Name$>, & a chance to be larger, or a low chance to be notably smaller",
     ["Color"] = Color3.fromRGB(39, 57, 173),
     ["StrokeColor"] = Color3.fromRGB(83, 41, 173),
@@ -449,8 +489,8 @@ local v22 = {
     end,
     ["RelicGroup"] = "Default"
 }
-v4.Abyssal = v22
-v4.Herculean = {
+v5.Abyssal = v27
+v5.Herculean = {
     ["Description"] = "Increases Strength by <$Strength$>kg, Control by <$Control$>, & Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(255, 234, 0),
     ["StrokeColor"] = Color3.fromRGB(48, 43, 0),
@@ -460,7 +500,7 @@ v4.Herculean = {
     ["Control"] = 0.2,
     ["RelicGroup"] = "Exalted"
 }
-v4.Mystical = {
+v5.Mystical = {
     ["Description"] = "Increases Luck by <$Luck$>%, Resilience by <$Resilience$>%, Lure Speed by <$Lure$>%, & Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(194, 223, 255),
     ["StrokeColor"] = Color3.fromRGB(43, 50, 57),
@@ -471,7 +511,7 @@ v4.Mystical = {
     ["Resilience"] = 45,
     ["RelicGroup"] = "Exalted"
 }
-local v23 = {
+local v28 = {
     ["Description"] = "Caught fish have a <$Mutations.1.Chance$>% chance to be <$Mutations.1.Name$>, & increased Resilience by <$Resilience$>%",
     ["Color"] = Color3.fromRGB(255, 0, 179),
     ["StrokeColor"] = Color3.fromRGB(49, 0, 36),
@@ -485,8 +525,8 @@ local v23 = {
     },
     ["RelicGroup"] = "Exalted"
 }
-v4.Quantum = v23
-v4.Invincible = {
+v5.Quantum = v28
+v5.Invincible = {
     ["Description"] = "Grants infinite Strength, & allows fishing in any body of liquid",
     ["Color"] = Color3.fromRGB(255, 98, 25),
     ["StrokeColor"] = Color3.fromRGB(35, 13, 3),
@@ -495,32 +535,46 @@ v4.Invincible = {
     ["Durability"] = 200,
     ["RelicGroup"] = "Exalted"
 }
-v4.Piercing = {
+local v29 = {
     ["Description"] = "Rod has a chance to stab fish while reeling, & increases Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(13, 167, 141),
     ["StrokeColor"] = Color3.fromRGB(3, 40, 33),
     ["Display"] = "Piercing",
-    ["ProgressSpeed"] = 15,
-    ["SlashChance"] = 30,
-    ["SlashDamage"] = 6,
-    ["RelicGroup"] = "Exalted"
+    ["ProgressSpeed"] = 15
 }
-local v24 = {
+local v30 = {
+    ["Generic_Slashes"] = {
+        ["TriggerMode"] = "FishMove",
+        ["SlashChance"] = 30,
+        ["SlashDamage"] = 6,
+        ["StunTime"] = 0.35,
+        ["SourceType"] = "enchant",
+        ["SourceName"] = "Piercing",
+        ["SoundName"] = "stabbystab",
+        ["IconName"] = "Default",
+        ["IconColor"] = Color3.fromRGB(13, 167, 141),
+        ["GradientColor"] = Color3.fromRGB(13, 167, 141)
+    }
+}
+v29.ClientFishingPassives = v30
+v29.RelicGroup = "Exalted"
+v5.Piercing = v29
+local v31 = {
     ["Description"] = "Caught fish have a <$FishingPassives.Generic_DuplicateFish.DuplicateChance$>% chance to be duplicated & <$FishingPassives.Generic_DuplicateFish.DuplicateMutation$>",
     ["Color"] = Color3.fromRGB(255, 29, 29),
     ["StrokeColor"] = Color3.fromRGB(35, 4, 4),
     ["Display"] = "Anomalous"
 }
-local v25 = {
+local v32 = {
     ["Generic_DuplicateFish"] = {
         ["DuplicateChance"] = 20,
         ["DuplicateMutation"] = "Anomalous"
     }
 }
-v24.FishingPassives = v25
-v24.RelicGroup = "Exalted"
-v4.Anomalous = v24
-v4["Sea Overlord"] = {
+v31.FishingPassives = v32
+v31.RelicGroup = "Exalted"
+v5.Anomalous = v31
+v5["Sea Overlord"] = {
     ["Description"] = "Makes fish <$WeightBoost$>% bigger",
     ["Color"] = Color3.fromRGB(51, 168, 211),
     ["StrokeColor"] = Color3.fromRGB(9, 29, 35),
@@ -528,7 +582,7 @@ v4["Sea Overlord"] = {
     ["WeightBoost"] = 40,
     ["RelicGroup"] = "Exalted"
 }
-v4.Immortal = {
+v5.Immortal = {
     ["Description"] = "Increases Luck by <$Luck$>%, & Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(232, 217, 255),
     ["StrokeColor"] = Color3.fromRGB(69, 65, 76),
@@ -537,7 +591,7 @@ v4.Immortal = {
     ["ProgressSpeed"] = 30,
     ["RelicGroup"] = "Exalted"
 }
-v4.Flashline = {
+v5.Flashline = {
     ["Description"] = "A small chance of majorly boosted Progress Speed",
     ["Color"] = Color3.fromRGB(255, 255, 255),
     ["StrokeColor"] = Color3.fromRGB(49, 49, 49),
@@ -552,87 +606,100 @@ v4.Flashline = {
     end,
     ["RelicGroup"] = "Default"
 }
-local v26 = {
+local v33 = {
     ["Description"] = "Raised chances for utility catches",
     ["Color"] = Color3.fromRGB(255, 191, 102),
     ["StrokeColor"] = Color3.fromRGB(56, 39, 13),
     ["Display"] = "Scavenger"
 }
-local v27 = {}
-local v28 = {
+local v34 = {}
+local v35 = {
     ["Multiply"] = {
         ["Exalted Relic"] = 1.75,
         ["Enchant Relic"] = 3
     }
 }
-v27.Generic_BoostFishChances = v28
-v26.FishingPassives = v27
-v26.RelicGroup = "Default"
-v4.Scavenger = v26
-local v29 = {
+v34.Generic_BoostFishChances = v35
+v33.FishingPassives = v34
+v33.RelicGroup = "Default"
+v5.Scavenger = v33
+local v36 = {
     ["Description"] = "Unleash pure chaos with every cast. Slashes fish with an 8% chance to awaken the Chaotic mutation",
     ["Color"] = Color3.fromRGB(20, 19, 22),
     ["StrokeColor"] = Color3.fromRGB(255, 255, 255),
-    ["Display"] = "Chaotic",
-    ["SlashChance"] = 15,
-    ["SlashDamage"] = 6,
-    ["Mutations"] = {
-        {
-            ["Name"] = "Chaotic",
-            ["Chance"] = 8
-        }
-    },
-    ["RelicGroup"] = "Default"
+    ["Display"] = "Chaotic"
 }
-v4.Chaotic = v29
-local v30 = {
+local v37 = {
+    ["Generic_Slashes"] = {
+        ["TriggerMode"] = "FishMove",
+        ["SlashChance"] = 15,
+        ["SlashDamage"] = 6,
+        ["StunTime"] = 0.35,
+        ["SourceType"] = "enchant",
+        ["SourceName"] = "Chaotic",
+        ["SoundName"] = "stabbystab",
+        ["IconName"] = "Default",
+        ["IconColor"] = Color3.fromRGB(255, 255, 255),
+        ["GradientColor"] = Color3.fromRGB(20, 19, 22)
+    }
+}
+v36.ClientFishingPassives = v37
+v36.Mutations = {
+    {
+        ["Name"] = "Chaotic",
+        ["Chance"] = 8
+    }
+}
+v36.RelicGroup = "Default"
+v5.Chaotic = v36
+local v38 = {
     ["Description"] = "Sacrifice health for a health-dependent chance to apply the Sanguine mutation",
     ["Color"] = Color3.fromRGB(74, 8, 8),
     ["StrokeColor"] = Color3.fromRGB(163, 17, 17),
     ["Display"] = "Blood Reckoning"
 }
-local v31 = {
+local v39 = {
     ["BloodReckoning"] = {
         ["HealthCost"] = 30,
         ["HealthChanceRatio"] = 1,
         ["MutationName"] = "Sanguine"
     }
 }
-v30.FishingPassives = v31
-v30.RelicGroup = "Default"
-v4["Blood Reckoning"] = v30
-local v32 = {
+v38.FishingPassives = v39
+v38.RelicGroup = "Default"
+v5["Blood Reckoning"] = v38
+local v40 = {
     ["Description"] = "Occasionally freeze fish in place",
     ["Color"] = Color3.fromRGB(29, 84, 211),
     ["StrokeColor"] = Color3.fromRGB(11, 13, 35),
     ["Display"] = "Chronos"
 }
-local v33 = {
+local v41 = {
     ["Chronos"] = {
         ["FreezeChance"] = 50,
         ["FreezeCooldown"] = 2.5,
         ["FreezeDuration"] = 3
     }
 }
-v32.ClientFishingPassives = v33
-v32.RelicGroup = "Default"
-v4.Chronos = v32
-v4.Momentum = {
+v40.ClientFishingPassives = v41
+v40.RelicGroup = "Default"
+v5.Chronos = v40
+v5.Momentum = {
     ["Description"] = "Perfect Catches increase Lure, Resilience & Progress Speed incrementally",
     ["Color"] = Color3.fromRGB(211, 179, 128),
     ["StrokeColor"] = Color3.fromRGB(35, 27, 18),
     ["Display"] = "Momentum",
     ["ProgressSpeed"] = 0,
     ["RelicGroup"] = "Default",
-    ["ConditionalBoosts"] = function(_, p34)
+    ["ConditionalBoosts"] = function(_, p42)
         return {
-            ["ProgressSpeed"] = p34:GetAttribute("CurrentMomentumBoost") or 0,
-            ["Lure"] = p34:GetAttribute("CurrentMomentumBoost") or 0,
-            ["Resilience"] = p34:GetAttribute("CurrentMomentumBoost") or 0
+            ["ProgressSpeed"] = p42:GetAttribute("CurrentMomentumBoost") or 0,
+            ["Lure"] = p42:GetAttribute("CurrentMomentumBoost") or 0,
+            ["Resilience"] = p42:GetAttribute("CurrentMomentumBoost") or 0
         }
     end
 }
-v4.Overclocked = {
+v5.Overclocked = {
     ["Description"] = "Increases Progress Speed by <$ForcedProgressSpeed$>% for any fish",
     ["Color"] = Color3.fromRGB(0, 255, 204),
     ["StrokeColor"] = Color3.fromRGB(11, 35, 28),
@@ -641,20 +708,20 @@ v4.Overclocked = {
     ["Secondary"] = true,
     ["RelicGroup"] = "Cosmic"
 }
-v4.Tenacity = {
+v5.Tenacity = {
     ["Description"] = "Increases Progress Speed by 20% for every reel snapped in a row",
     ["Color"] = Color3.fromRGB(255, 248, 171),
     ["StrokeColor"] = Color3.fromRGB(71, 70, 54),
     ["Display"] = "Tenacity",
     ["Secondary"] = true,
     ["RelicGroup"] = "Cosmic",
-    ["ConditionalBoosts"] = function(_, p35)
+    ["ConditionalBoosts"] = function(_, p43)
         return {
-            ["ProgressSpeed"] = p35:GetAttribute("TenacityBoost")
+            ["ProgressSpeed"] = p43:GetAttribute("TenacityBoost")
         }
     end
 }
-v4.Tryhard = {
+v5.Tryhard = {
     ["Description"] = "Increases Progress Speed by <$ProgressSpeed$>%, & decreases Control by <$Control$>",
     ["Color"] = Color3.fromRGB(255, 0, 0),
     ["StrokeColor"] = Color3.fromRGB(49, 35, 35),
@@ -664,7 +731,7 @@ v4.Tryhard = {
     ["Secondary"] = true,
     ["RelicGroup"] = "Cosmic"
 }
-v4.Wise = {
+v5.Wise = {
     ["Description"] = "<$XpMultiply$>\195\151 XP after catching a fish",
     ["Color"] = Color3.fromRGB(200, 105, 255),
     ["StrokeColor"] = Color3.fromRGB(42, 36, 49),
@@ -673,24 +740,24 @@ v4.Wise = {
     ["Secondary"] = true,
     ["RelicGroup"] = "Cosmic"
 }
-local v36 = {
+local v44 = {
     ["Description"] = "<$ClientFishingPassives.Cryogenic.FreezeChance$>% chance to fully freeze a lured fish",
     ["Color"] = Color3.fromRGB(148, 235, 255),
     ["StrokeColor"] = Color3.fromRGB(21, 43, 49),
     ["Display"] = "Cryogenic"
 }
-local v37 = {
+local v45 = {
     ["Cryogenic"] = {
         ["AttemptDelay"] = 1,
         ["FreezeChance"] = 20,
         ["FreezeDuration"] = (1 / 0)
     }
 }
-v36.ClientFishingPassives = v37
-v36.Secondary = true
-v36.RelicGroup = "Cosmic"
-v4.Cryogenic = v36
-v4["Sea Prince"] = {
+v44.ClientFishingPassives = v45
+v44.Secondary = true
+v44.RelicGroup = "Cosmic"
+v5.Cryogenic = v44
+v5["Sea Prince"] = {
     ["Description"] = "Makes fish <$WeightBoost$>% bigger",
     ["Color"] = Color3.fromRGB(84, 118, 211),
     ["StrokeColor"] = Color3.fromRGB(18, 23, 35),
@@ -699,7 +766,7 @@ v4["Sea Prince"] = {
     ["Secondary"] = true,
     ["RelicGroup"] = "Cosmic"
 }
-v4.Glittered = {
+v5.Glittered = {
     ["Description"] = "Increases Shiny & Sparkling chances by <$ShinyChance$>%",
     ["Color"] = Color3.fromRGB(255, 241, 160),
     ["StrokeColor"] = Color3.fromRGB(42, 42, 29),
@@ -709,7 +776,7 @@ v4.Glittered = {
     ["Secondary"] = true,
     ["RelicGroup"] = "Cosmic"
 }
-v4.Weak = {
+v5.Weak = {
     ["Description"] = "Decreased Strength by <$StrengthPercent$>%",
     ["Color"] = Color3.fromRGB(134, 134, 134),
     ["StrokeColor"] = Color3.fromRGB(9, 9, 9),
@@ -717,7 +784,7 @@ v4.Weak = {
     ["StrengthPercent"] = -10,
     ["RelicGroup"] = "Twisted"
 }
-local v38 = {
+local v46 = {
     ["Description"] = "Decreased Luck by <$Luck$>%",
     ["Color"] = Color3.fromRGB(67, 88, 49),
     ["StrokeColor"] = Color3.fromRGB(9, 12, 7),
@@ -731,8 +798,8 @@ local v38 = {
     },
     ["RelicGroup"] = "Twisted"
 }
-v4.Putrid = v38
-local v39 = {
+v5.Putrid = v46
+local v47 = {
     ["Description"] = "Caught fish have a <$Mutations.1.Chance$>% chance to be <$Mutations.1.Name$>",
     ["Color"] = Color3.fromRGB(156, 139, 105),
     ["StrokeColor"] = Color3.fromRGB(40, 36, 27),
@@ -745,8 +812,8 @@ local v39 = {
     },
     ["RelicGroup"] = "Twisted"
 }
-v4["Pharaohs Curse"] = v39
-v4.Wobbly = {
+v5["Pharaohs Curse"] = v47
+v5.Wobbly = {
     ["Description"] = "Decreases Control by <$Control$>",
     ["Color"] = Color3.fromRGB(86, 91, 112),
     ["StrokeColor"] = Color3.fromRGB(20, 21, 24),
@@ -754,6 +821,6 @@ v4.Wobbly = {
     ["Control"] = -0.05,
     ["RelicGroup"] = "Twisted"
 }
-v3.Enchants = v4
+v_u_4.Enchants = v5
 
-return v3
+return v_u_4
