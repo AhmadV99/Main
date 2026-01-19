@@ -1,4 +1,66 @@
 local v7 = {
+    ["Rusty"] = {
+        ["PriceMultiply"] = 0.7,
+        ["Chance"] = 0,
+        ["Display"] = "Rusty",
+        ["Color"] = Color3.fromRGB(139, 90, 43)
+    },
+    ["Coral"] = {
+        ["PriceMultiply"] = 1.8,
+        ["Chance"] = 5,
+        ["Display"] = "Coral",
+        ["SpecificZones"] = { "Coral Bastion" },
+        ["Color"] = Color3.fromRGB(222, 155, 255)
+    },
+    ["Mourned"] = {
+        ["PriceMultiply"] = 7.5,
+        ["Chance"] = 1,
+        ["SpecificZones"] = { "Tidefall" },
+        ["Display"] = "Mourned",
+        ["Color"] = Color3.fromRGB(10, 20, 39)
+    },
+    ["Ocean\'s Ruin"] = {
+        ["PriceMultiply"] = 10.2,
+        ["Chance"] = 0,
+        ["Display"] = "Ocean\'s Ruin",
+        ["Color"] = Color3.fromRGB(39, 13, 13)
+    },
+    ["Forgotten"] = {
+        ["PriceMultiply"] = 2,
+        ["Chance"] = 0,
+        ["Display"] = "Forgotten",
+        ["Color"] = Color3.fromRGB(4, 3, 3)
+    },
+    ["Husk"] = {
+        ["PriceMultiply"] = 0.14,
+        ["Chance"] = 0,
+        ["Display"] = "Husk",
+        ["Color"] = Color3.fromRGB(149, 133, 115)
+    },
+    ["Requies"] = {
+        ["PriceMultiply"] = 9.8,
+        ["Chance"] = 0,
+        ["Display"] = "Requies",
+        ["Color"] = Color3.fromRGB(40, 207, 137)
+    },
+    ["Fallen"] = {
+        ["PriceMultiply"] = 6,
+        ["Chance"] = 2,
+        ["Display"] = "Fallen",
+        ["Color"] = Color3.fromRGB(98, 96, 86)
+    },
+    ["Withered"] = {
+        ["PriceMultiply"] = 9.5,
+        ["Chance"] = 0,
+        ["Display"] = "Withered",
+        ["Color"] = Color3.fromRGB(43, 33, 30)
+    },
+    ["Royal"] = {
+        ["PriceMultiply"] = 9.4,
+        ["Chance"] = 0,
+        ["Display"] = "Royal",
+        ["Color"] = Color3.fromRGB(243, 188, 93)
+    },
     ["New Years"] = {
         ["PriceMultiply"] = 2.6,
         ["Chance"] = 0,
@@ -25,12 +87,6 @@ local v7 = {
         ["Priority"] = 4,
         ["Display"] = "Corvid",
         ["Color"] = Color3.fromRGB(176, 97, 255)
-    },
-    ["Fallen"] = {
-        ["PriceMultiply"] = 8.5,
-        ["Chance"] = 0,
-        ["Display"] = "Fallen",
-        ["Color"] = Color3.fromRGB(71, 36, 30)
     },
     ["Frostnova"] = {
         ["PriceMultiply"] = 8,
@@ -1090,6 +1146,12 @@ v7.Aureolin = {
     ["Display"] = "Aureolin",
     ["Color"] = Color3.fromRGB(220, 154, 1)
 }
+v7.Sandstormy = {
+    ["PriceMultiply"] = 5,
+    ["Chance"] = 0,
+    ["Display"] = "Sandstormy",
+    ["Color"] = Color3.fromRGB(255, 219, 187)
+}
 v7.Sandy = {
     ["PriceMultiply"] = 1.2,
     ["Chance"] = 0,
@@ -1333,5 +1395,4 @@ v7.Rainbow = {
     ["Display"] = "Rainbow",
     ["Color"] = Color3.fromRGB(255, 158, 234)
 }
-
 return v7
