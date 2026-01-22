@@ -452,5 +452,35 @@ return {
         ["CashPerSecond"] = 40000,
         ["Type"] = "None",
         ["Craft"] = true
+    },
+    ["Banana Dancana"] = {
+        ["Rarity"] = 12,
+        ["RarityType"] = "OG",
+        ["CashPerSecond"] = 50000,
+        ["Type"] = "None"
+    },
+    ["Illuminato Triangolo"] = {
+        ["Rarity"] = 10,
+        ["RarityType"] = "OG",
+        ["CashPerSecond"] = 60000,
+        ["Type"] = "None"
+    },
+    ["Nyannini Cattalini"] = {
+        ["Rarity"] = 8,
+        ["RarityType"] = "OG",
+        ["CashPerSecond"] = 75000,
+        ["Type"] = "None"
+    },
+    ["Bananini Kittini"] = {
+        ["Rarity"] = 5,
+        ["RarityType"] = "OG",
+        ["CashPerSecond"] = 100000,
+        ["Type"] = "None"
+    },
+    ["Smurfo Gatto"] = {
+        ["Rarity"] = 2,
+        ["RarityType"] = "OG",
+        ["CashPerSecond"] = 150000,
+        ["Type"] = "None"
     }
 }
