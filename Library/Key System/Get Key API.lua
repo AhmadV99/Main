@@ -133,10 +133,10 @@ return {
       Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
       Icon = 137084367454843,
     },
-  }
+  },
 
-  [9344307274] = {
-    ["Linkvertise"] = { -- Break a Lucky Block
+  [9344307274] = { -- Break a Lucky Block
+    ["Linkvertise"] = {
       Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-jOqPFgJvjYNe",
       Icon = 122637139040192,
     },
@@ -150,5 +150,5 @@ return {
       Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
       Icon = 137084367454843,
     },
-  }
+  },
 }
