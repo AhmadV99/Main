@@ -1,4 +1,5 @@
 local v1 = {}
+
 v1.ClassNames = {
 	"Common",
 	"Uncommon",
@@ -11,9 +12,11 @@ v1.ClassNames = {
 	"Celestial",
 	"Divine"
 }
+
 v1.UnobtainableBrainrots = {
 	["Caffe Trinity"] = true
 }
+
 v1.BrainrotNames = {
 	"Noobini Cakenini",
 	"Lirili Larila",
@@ -290,18 +293,7 @@ v1.EffectiveChances = {
 	["Celestial"] = {},
 	["Divine"] = {}
 }
-for _, v11 in ipairs(v1.ClassNames) do
-	local v12 = 0
-	for v13, v14 in pairs(v1.Chances[v11]) do
-		local v15 = v1.GetEffectiveWeight(v11, v13, v14)
-		v1.EffectiveChances[v11][v13] = v15
-		v12 = v12 + v15
-	end
-	for v16, _ in pairs(v1.Chances[v11]) do
-		local v17 = v1.EffectiveChances[v11][v16]
-		v1.NormalizedChances[v11][v16] = v17 / v12
-	end
-end
+
 v1.IconIDs = {
 	["Noobini Cakenini"] = 140171735291415,
 	["Lirili Larila"] = 108050226666919,
