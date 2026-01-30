@@ -167,6 +167,12 @@ return {
         ["CashPerSecond"] = 200,
         ["Type"] = "Air"
     },
+    ["Quesadilla Crocodila"] = {
+        ["Rarity"] = 330000,
+        ["RarityType"] = "Epic",
+        ["CashPerSecond"] = 225,
+        ["Type"] = "None"
+    },
     ["Six Seven"] = {
         ["Rarity"] = 300000,
         ["RarityType"] = "Legendary",
@@ -383,6 +389,24 @@ return {
         ["CashPerSecond"] = 20000,
         ["Type"] = "None"
     },
+    ["Cachorrito Melonito"] = {
+        ["Rarity"] = 20,
+        ["RarityType"] = "God",
+        ["CashPerSecond"] = 35000,
+        ["Type"] = "None"
+    },
+    ["Noo My Examen"] = {
+        ["Rarity"] = 17,
+        ["RarityType"] = "God",
+        ["CashPerSecond"] = 43000,
+        ["Type"] = "None"
+    },
+    ["Yess My Examen"] = {
+        ["Rarity"] = 15,
+        ["RarityType"] = "God",
+        ["CashPerSecond"] = 47000,
+        ["Type"] = "None"
+    },
     ["Tric Trac Barabum"] = {
         ["Rarity"] = 0,
         ["RarityType"] = "Epic",
@@ -453,6 +477,13 @@ return {
         ["Type"] = "None",
         ["Craft"] = true
     },
+    ["W Or L"] = {
+        ["Rarity"] = 0,
+        ["RarityType"] = "God",
+        ["CashPerSecond"] = 45000,
+        ["Type"] = "None",
+        ["Craft"] = true
+    },
     ["Banana Dancana"] = {
         ["Rarity"] = 12,
         ["RarityType"] = "OG",
@@ -481,6 +512,12 @@ return {
         ["Rarity"] = 2,
         ["RarityType"] = "OG",
         ["CashPerSecond"] = 150000,
+        ["Type"] = "None"
+    },
+    ["Meowl"] = {
+        ["Rarity"] = 1,
+        ["RarityType"] = "OG",
+        ["CashPerSecond"] = 250000,
         ["Type"] = "None"
     }
 }
