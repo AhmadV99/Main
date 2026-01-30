@@ -132,6 +132,34 @@ return {
         ["HP"] = 67,
         ["Lifespan"] = 120,
         ["Color"] = Color3.fromRGB(0, 80, 200),
-        ["LuckMulti"] = 5
+        ["LuckMulti"] = 5,
+        ["Brainrots"] = { "Six Seven" }
+    },
+    ["Tralalero Block"] = {
+        ["RarityType"] = "Mythic",
+        ["Rarity"] = 10,
+        ["HP"] = 1500,
+        ["Lifespan"] = 120,
+        ["Color"] = Color3.fromRGB(0, 120, 255),
+        ["LuckMulti"] = 5,
+        ["Brainrots"] = { "Tralalero Tralala", "Tralalita Tralala" }
+    },
+    ["Pakrahmatmamat Block"] = {
+        ["RarityType"] = "Mythic",
+        ["Rarity"] = 7,
+        ["HP"] = 1800,
+        ["Lifespan"] = 120,
+        ["Color"] = Color3.fromRGB(255, 183, 0),
+        ["LuckMulti"] = 5,
+        ["Brainrots"] = { "Pakrahmatmamat", "Pakrahmatmamatina" }
+    },
+    ["Chicleteira Block"] = {
+        ["RarityType"] = "Mythic",
+        ["Rarity"] = 5,
+        ["HP"] = 1600,
+        ["Lifespan"] = 120,
+        ["Color"] = Color3.fromRGB(255, 50, 50),
+        ["LuckMulti"] = 5,
+        ["Brainrots"] = { "Chicleteira Bicicleteira", "Chicleteirina Bicicleteirina" }
     }
 }
