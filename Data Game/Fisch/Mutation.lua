@@ -1,7 +1,21 @@
 local v7 = {
+    ["Ascended"] = {
+        ["PriceMultiply"] = 9.9,
+        ["Chance"] = 0,
+        ["Priority"] = 1,
+        ["Display"] = "Ascended",
+        ["Color"] = Color3.fromRGB(203, 230, 255)
+    },
+    ["Brined"] = {
+        ["PriceMultiply"] = 3.5,
+        ["Chance"] = 0,
+        ["Display"] = "Brined",
+        ["Color"] = Color3.fromRGB(0, 255, 157)
+    },
     ["Rusty"] = {
         ["PriceMultiply"] = 0.7,
         ["Chance"] = 0,
+        ["Priority"] = 1,
         ["Display"] = "Rusty",
         ["Color"] = Color3.fromRGB(139, 90, 43)
     },
@@ -34,12 +48,14 @@ local v7 = {
     ["Husk"] = {
         ["PriceMultiply"] = 0.14,
         ["Chance"] = 0,
+        ["Priority"] = 1,
         ["Display"] = "Husk",
         ["Color"] = Color3.fromRGB(149, 133, 115)
     },
     ["Requies"] = {
         ["PriceMultiply"] = 9.8,
         ["Chance"] = 0,
+        ["Priority"] = 2,
         ["Display"] = "Requies",
         ["Color"] = Color3.fromRGB(40, 207, 137)
     },
@@ -488,13 +504,15 @@ v7.Nullified = {
     ["PriceMultiply"] = 5,
     ["Chance"] = 0,
     ["Display"] = "Nullified",
-    ["Color"] = Color3.fromRGB(94, 255, 66)
+    ["Color"] = Color3.fromRGB(94, 255, 66),
+    ["Priority"] = 100000
 }
 v7.Galactic = {
     ["PriceMultiply"] = 5,
     ["Chance"] = 0,
     ["Display"] = "Galactic",
-    ["Color"] = Color3.fromRGB(207, 182, 106)
+    ["Color"] = Color3.fromRGB(207, 182, 106),
+    ["Priority"] = 100000
 }
 v7.Spirit = {
     ["PriceMultiply"] = 5.2,
@@ -1395,4 +1413,5 @@ v7.Rainbow = {
     ["Display"] = "Rainbow",
     ["Color"] = Color3.fromRGB(255, 158, 234)
 }
+
 return v7
