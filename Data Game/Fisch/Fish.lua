@@ -8613,5 +8613,5 @@ return {
         ["Price"] = 50000,
     },
 
-    {[1] = "Unusual",[2] = "Mythical",[3] = "Exotic",[4] = "Limited",[5] = "Rare",[6] = "Fragment",[7] = "Gemstone",[8] = "Nuclear",[9] = "Trash",[10] = "Common",[11] = "Divine Secret",[12] = "Mirror",[13] = "Uncommon",[14] = "Cataclysmic",[15] = "Whistle",[16] = "Legendary",[17] = "Unique",[18] = "Special",[19] = "Extinct",[20] = "Relic",[21] = "Apex",[22] = "Secret"}
+    Rarities = {[1] = "Unusual",[2] = "Mythical",[3] = "Exotic",[4] = "Limited",[5] = "Rare",[6] = "Fragment",[7] = "Gemstone",[8] = "Nuclear",[9] = "Trash",[10] = "Common",[11] = "Divine Secret",[12] = "Mirror",[13] = "Uncommon",[14] = "Cataclysmic",[15] = "Whistle",[16] = "Legendary",[17] = "Unique",[18] = "Special",[19] = "Extinct",[20] = "Relic",[21] = "Apex",[22] = "Secret"}
 }
