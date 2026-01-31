@@ -1,5 +1,22 @@
 local v_u_4 = {}
-local v5 = {}
+local v5 = {
+    ["Hunter"] = {
+        ["Description"] = "Increases Disturbance by +<$Disturbance$>",
+        ["Color"] = Color3.fromRGB(86, 30, 229),
+        ["StrokeColor"] = Color3.fromRGB(23, 16, 45),
+        ["Display"] = "Hunter",
+        ["Disturbance"] = 2,
+        ["RelicGroup"] = "Default"
+    },
+    ["Ferocious"] = {
+        ["Description"] = "Increases Disturbance by +<$Disturbance$>",
+        ["Color"] = Color3.fromRGB(144, 21, 24),
+        ["StrokeColor"] = Color3.fromRGB(85, 12, 15),
+        ["Display"] = "Ferocious",
+        ["Disturbance"] = 4,
+        ["RelicGroup"] = "Exalted"
+    }
+}
 local v6 = {
     ["Description"] = "30% chance for a Fischmas mutation, increases fish size by <$WeightBoost$>%, & increases Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(234, 57, 57),
