@@ -1,5 +1,5 @@
 return {
-    ["Mutations"] = {
+    --["Mutations"] = {
         ["Sweet"] = {
             ["PriceMultiply"] = 7,
             ["Chance"] = 1,
@@ -1442,5 +1442,5 @@ return {
             ["Display"] = "Rainbow",
             ["Color"] = Color3.fromRGB(255, 158, 234)
         }
-    }
+    -- }
 }
