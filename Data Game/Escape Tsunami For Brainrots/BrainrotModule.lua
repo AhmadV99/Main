@@ -98,6 +98,7 @@ v_u_1.BrainrotNames = {
     "Chimpanzini Spiderini",
     "Darlungini Pandanneli",
     "Vroosh Boosh",
+    "Gatti Marshmallini",
     "Matteo",
     "Gattatino Neonino",
     "Statutino Libertino",
@@ -120,6 +121,8 @@ v_u_1.BrainrotNames = {
     "Onionello Penguini",
     "Sausaggini Sanitario",
     "Marietti Frigo",
+    "Tartarughi Attrezzini",
+    "Kissarini Heartini",
     "Job Job Job Sahur",
     "Dug Dug Dug",
     "Bisonte Giuppitere",
@@ -134,6 +137,8 @@ v_u_1.BrainrotNames = {
     "La Malita",
     "Capuccino Policia",
     "Money Elephant",
+    "Polpo Semaforini",
+    "Cioccolatone Draghettone",
     "Bulbito Bandito Traktorito",
     "Burgerini Bearini",
     "Strawberry Elephant",
@@ -144,6 +149,8 @@ v_u_1.BrainrotNames = {
     "Rubichetto Cubini",
     "Glacierello Infernetti",
     "Freezeti Cobretti",
+    "Biscotti Macarotti",
+    "Cupitron Consoletron",
     "Noobini Infeeny",
     "Anububu",
     "Meta Technetta"
@@ -242,7 +249,8 @@ v_u_1.Chances = {
         ["Agarrini la Palini"] = 0.07142857142857142,
         ["Chimpanzini Spiderini"] = 0.06666666666666667,
         ["Darlungini Pandanneli"] = 0.03125,
-        ["Vroosh Boosh"] = 0.015625
+        ["Vroosh Boosh"] = 0.015625,
+        ["Gatti Marshmallini"] = 0.00390625
     },
     ["Secret"] = {
         ["Matteo"] = 0.5,
@@ -266,7 +274,9 @@ v_u_1.Chances = {
         ["Patito Dinerito"] = 0.003125,
         ["Onionello Penguini"] = 0.002232142857142857,
         ["Sausaggini Sanitario"] = 0.0002,
-        ["Marietti Frigo"] = 0.0015625
+        ["Marietti Frigo"] = 0.0015625,
+        ["Tartarughi Attrezzini"] = 0.0625,
+        ["Kissarini Heartini"] = 0.00390625
     },
     ["Celestial"] = {
         ["Job Job Job Sahur"] = 0.5,
@@ -282,7 +292,9 @@ v_u_1.Chances = {
         ["La Malita"] = 0.041666666666666664,
         ["Money Elephant"] = 0.00390625,
         ["Capuccino Policia"] = 0.005208333333333333,
-        ["Rattini Machini"] = 0.0026041666666666665
+        ["Rattini Machini"] = 0.0026041666666666665,
+        ["Polpo Semaforini"] = 0.08333333333333333,
+        ["Cioccolatone Draghettone"] = 0.0028089887640449437
     },
     ["Divine"] = {
         ["Bulbito Bandito Traktorito"] = 0.2,
@@ -294,7 +306,9 @@ v_u_1.Chances = {
         ["Din Din Vaultero"] = 0.005208333333333333,
         ["Rubichetto Cubini"] = 0.001953125,
         ["Glacierello Infernetti"] = 0.00390625,
-        ["Freezeti Cobretti"] = 0.0011261261261261261
+        ["Freezeti Cobretti"] = 0.0011261261261261261,
+        ["Biscotti Macarotti"] = 0.0078125,
+        ["Cupitron Consoletron"] = 0.001
     },
     ["Infinity"] = {
         ["Noobini Infeeny"] = 1.000001000001e-6,
@@ -410,6 +424,7 @@ v_u_1.IconIDs = {
     ["Chimpanzini Spiderini"] = 123,
     ["Darlungini Pandanneli"] = 123,
     ["Vroosh Boosh"] = 123,
+    ["Gatti Marshmallini"] = 123,
     ["Matteo"] = 123,
     ["Gattatino Neonino"] = 123,
     ["Statutino Libertino"] = 123,
@@ -432,6 +447,8 @@ v_u_1.IconIDs = {
     ["Onionello Penguini"] = 123,
     ["Sausaggini Sanitario"] = 123,
     ["Marietti Frigo"] = 123,
+    ["Tartarughi Attrezzini"] = 123,
+    ["Kissarini Heartini"] = 123,
     ["Job Job Job Sahur"] = 123,
     ["Dug Dug Dug"] = 123,
     ["Bisonte Giuppitere"] = 123,
@@ -446,6 +463,8 @@ v_u_1.IconIDs = {
     ["La Malita"] = 123,
     ["Capuccino Policia"] = 123,
     ["Money Elephant"] = 123,
+    ["Polpo Semaforini"] = 123,
+    ["Cioccolatone Draghettone"] = 123,
     ["Bulbito Bandito Traktorito"] = 123,
     ["Burgerini Bearini"] = 123,
     ["Strawberry Elephant"] = 123,
@@ -456,6 +475,8 @@ v_u_1.IconIDs = {
     ["Rubichetto Cubini"] = 123,
     ["Glacierello Infernetti"] = 123,
     ["Freezeti Cobretti"] = 123,
+    ["Biscotti Macarotti"] = 123,
+    ["Cupitron Consoletron"] = 123,
     ["Noobini Infeeny"] = 140171735291415,
     ["Anububu"] = 123,
     ["Meta Technetta"] = 123
@@ -542,6 +563,7 @@ v_u_1.Rates = {
     ["Chimpanzini Spiderini"] = 170000,
     ["Darlungini Pandanneli"] = 190000,
     ["Vroosh Boosh"] = 240000,
+    ["Gatti Marshmallini"] = 1250000,
     ["Matteo"] = 200000,
     ["Gattatino Neonino"] = 250000,
     ["Statutino Libertino"] = 300000,
@@ -564,6 +586,8 @@ v_u_1.Rates = {
     ["Onionello Penguini"] = 2150000,
     ["Sausaggini Sanitario"] = 3120000,
     ["Marietti Frigo"] = 2500000,
+    ["Tartarughi Attrezzini"] = 1024999.9999999999,
+    ["Kissarini Heartini"] = 1750000,
     ["Job Job Job Sahur"] = 1500000,
     ["Dug Dug Dug"] = 1600000,
     ["Bisonte Giuppitere"] = 1700000,
@@ -578,6 +602,8 @@ v_u_1.Rates = {
     ["Money Elephant"] = 2950000,
     ["Capuccino Policia"] = 2900000,
     ["Rattini Machini"] = 3050000,
+    ["Polpo Semaforini"] = 2150000,
+    ["Cioccolatone Draghettone"] = 3000000,
     ["Bulbito Bandito Traktorito"] = 3000000,
     ["Burgerini Bearini"] = 3500000,
     ["Strawberry Elephant"] = 5000000,
@@ -588,6 +614,8 @@ v_u_1.Rates = {
     ["Rubichetto Cubini"] = 8880000,
     ["Glacierello Infernetti"] = 6000000,
     ["Freezeti Cobretti"] = 9000000,
+    ["Biscotti Macarotti"] = 7500000,
+    ["Cupitron Consoletron"] = 9250000,
     ["Noobini Infeeny"] = 10000000,
     ["Anububu"] = 15000000,
     ["Meta Technetta"] = 25000000
@@ -638,7 +666,7 @@ v_u_1.MutationMultipliers = {
     ["Radioactive"] = 3.5,
     ["UFO"] = 3.5,
     ["Money"] = 3.888,
-    ["Candy"] = 3.888,
+    ["Candy"] = 3.95,
     ["Gamer"] = 4,
     ["Hacker"] = 5,
     ["Lucky"] = 8
@@ -677,13 +705,21 @@ v_u_1.MutationColours = {
     ["Gamer"] = Color3.fromRGB(185, 110, 225),
     ["Hacker"] = Color3.new(0, 1, 0),
     ["Lucky"] = Color3.new(0, 1, 0.415),
-    ["Money"] = Color3.fromRGB(255, 255, 0)
+    ["Money"] = Color3.fromRGB(255, 255, 0),
+    ["Candy"] = Color3.fromRGB(247, 85, 234)
 }
 v_u_1.BrainrotRarities = {}
 v_u_1.BrainrotsWithModels = {}
 v_u_1.BrainrotRarities["Noobini Infeeny"] = "Infinity"
 v_u_1.BrainrotRarities.Anububu = "Infinity"
 v_u_1.BrainrotRarities["Meta Technetta"] = "Infinity"
+v_u_1.BrainrotRarities["Gatti Marshmallini"] = "Cosmic"
+v_u_1.BrainrotRarities["Tartarughi Attrezzini"] = "Secret"
+v_u_1.BrainrotRarities["Kissarini Heartini"] = "Secret"
+v_u_1.BrainrotRarities["Polpo Semaforini"] = "Celestial"
+v_u_1.BrainrotRarities["Cioccolatone Draghettone"] = "Celestial"
+v_u_1.BrainrotRarities["Biscotti Macarotti"] = "Divine"
+v_u_1.BrainrotRarities["Cupitron Consoletron"] = "Divine"
 v_u_1.IdleAnimations = {
     ["Bulbito Bandito Traktorito"] = 106146983860098,
     ["Strawberry Elephant"] = 113141781342356,
@@ -709,6 +745,13 @@ v_u_1.IdleAnimations = {
     ["Glacierello Infernetti"] = 114390045901948,
     ["Rubichetto Cubini"] = 118042376865629,
     ["Anububu"] = 72525577503169,
-    ["Meta Technetta"] = 80827254566997
+    ["Meta Technetta"] = 80827254566997,
+    ["Gatti Marshmallini"] = 123157482741909,
+    ["Tartarughi Attrezzini"] = 123195588930561,
+    ["Kissarini Heartini"] = 132370433669774,
+    ["Polpo Semaforini"] = 74950694431211,
+    ["Cioccolatone Draghettone"] = 113056198858213,
+    ["Biscotti Macarotti"] = 87905495789597,
+    ["Cupitron Consoletron"] = 126035852798597
 }
 return v_u_1;
