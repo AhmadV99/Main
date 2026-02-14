@@ -1,5 +1,29 @@
 return {
     --["Mutations"] = {
+        ["Amped"] = {
+            ["PriceMultiply"] = 4,
+            ["Chance"] = 0,
+            ["Display"] = "Amped",
+            ["Color"] = Color3.fromRGB(238, 238, 238)
+        },
+        ["Obsidian"] = {
+            ["PriceMultiply"] = 8.3,
+            ["Chance"] = 0,
+            ["Display"] = "Obsidian",
+            ["Color"] = Color3.fromRGB(50, 28, 59)
+        },
+        ["Igneous"] = {
+            ["PriceMultiply"] = 8.65,
+            ["Chance"] = 0,
+            ["Display"] = "Igneous",
+            ["Color"] = l_new_0(v4)
+        },
+        ["Solar"] = {
+            ["PriceMultiply"] = 5.3,
+            ["Chance"] = 0,
+            ["Display"] = "Solar",
+            ["Color"] = Color3.fromRGB(255, 225, 117)
+        },
         ["Sweet"] = {
             ["PriceMultiply"] = 7,
             ["Chance"] = 1,
@@ -1442,5 +1466,5 @@ return {
             ["Display"] = "Rainbow",
             ["Color"] = Color3.fromRGB(255, 158, 234)
         }
-    -- }
+    --}
 }
