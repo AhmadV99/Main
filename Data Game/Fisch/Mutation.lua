@@ -16,7 +16,7 @@ return {
             ["PriceMultiply"] = 8.65,
             ["Chance"] = 0,
             ["Display"] = "Igneous",
-            ["Color"] = l_new_0(v4)
+            ["Color"] = Color3.fromRGB(255, 85, 0)
         },
         ["Solar"] = {
             ["PriceMultiply"] = 5.3,
