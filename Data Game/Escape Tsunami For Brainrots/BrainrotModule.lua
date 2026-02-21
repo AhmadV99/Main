@@ -1,6 +1,5 @@
-local v_u_1 = {}
-
-v_u_1.ClassNames = {
+local t = {}
+t.ClassNames = {
     "Common",
     "Uncommon",
     "Rare",
@@ -13,10 +12,12 @@ v_u_1.ClassNames = {
     "Divine",
     "Infinity"
 }
-v_u_1.UnobtainableBrainrots = {
-    ["Caffe Trinity"] = true
+t.UnobtainableBrainrots = {
+    ["Caffe Trinity"] = true,
+    ["Noobini Infeeny"] = true,
+    ["Don Magmito"] = true
 }
-v_u_1.BrainrotNames = {
+t.BrainrotNames = {
     "Noobini Cakenini",
     "Lirili Larila",
     "Tim Cheese",
@@ -123,6 +124,7 @@ v_u_1.BrainrotNames = {
     "Marietti Frigo",
     "Tartarughi Attrezzini",
     "Kissarini Heartini",
+    "Scaldarino Derpino",
     "Job Job Job Sahur",
     "Dug Dug Dug",
     "Bisonte Giuppitere",
@@ -139,6 +141,7 @@ v_u_1.BrainrotNames = {
     "Money Elephant",
     "Polpo Semaforini",
     "Cioccolatone Draghettone",
+    "Ketupastro Infernetto",
     "Bulbito Bandito Traktorito",
     "Burgerini Bearini",
     "Strawberry Elephant",
@@ -151,11 +154,16 @@ v_u_1.BrainrotNames = {
     "Freezeti Cobretti",
     "Biscotti Macarotti",
     "Cupitron Consoletron",
+    "Explodini Cataclismi",
+    "Pastapot Infernotto",
+    "Draculini Meowlini",
+    "Don Magmito",
     "Noobini Infeeny",
     "Anububu",
-    "Meta Technetta"
+    "Meta Technetta",
+    "Magmew"
 }
-v_u_1.Chances = {
+t.Chances = {
     ["Common"] = {
         ["Noobini Cakenini"] = 0.5,
         ["Lirili Larila"] = 0.3333333333333333,
@@ -276,7 +284,8 @@ v_u_1.Chances = {
         ["Sausaggini Sanitario"] = 0.0002,
         ["Marietti Frigo"] = 0.0015625,
         ["Tartarughi Attrezzini"] = 0.0625,
-        ["Kissarini Heartini"] = 0.00390625
+        ["Kissarini Heartini"] = 0.00390625,
+        ["Scaldarino Derpino"] = 0.0026041666666666665
     },
     ["Celestial"] = {
         ["Job Job Job Sahur"] = 0.5,
@@ -294,7 +303,8 @@ v_u_1.Chances = {
         ["Capuccino Policia"] = 0.005208333333333333,
         ["Rattini Machini"] = 0.0026041666666666665,
         ["Polpo Semaforini"] = 0.08333333333333333,
-        ["Cioccolatone Draghettone"] = 0.0028089887640449437
+        ["Cioccolatone Draghettone"] = 0.0028089887640449437,
+        ["Ketupastro Infernetto"] = 0.0078125
     },
     ["Divine"] = {
         ["Bulbito Bandito Traktorito"] = 0.2,
@@ -308,15 +318,20 @@ v_u_1.Chances = {
         ["Glacierello Infernetti"] = 0.00390625,
         ["Freezeti Cobretti"] = 0.0011261261261261261,
         ["Biscotti Macarotti"] = 0.0078125,
-        ["Cupitron Consoletron"] = 0.001
+        ["Cupitron Consoletron"] = 0.001,
+        ["Explodini Cataclismi"] = 0.010416666666666666,
+        ["Pastapot Infernotto"] = 0.0026041666666666665,
+        ["Draculini Meowlini"] = 0.0008333333333333334,
+        ["Don Magmito"] = 0.0002
     },
     ["Infinity"] = {
         ["Noobini Infeeny"] = 1.000001000001e-6,
         ["Anububu"] = 0.25,
-        ["Meta Technetta"] = 0.0625
+        ["Meta Technetta"] = 0.015625,
+        ["Magmew"] = 0.0625
     }
 }
-v_u_1.NormalizedChances = {
+t.NormalizedChances = {
     ["Common"] = {},
     ["Uncommon"] = {},
     ["Rare"] = {},
@@ -329,7 +344,7 @@ v_u_1.NormalizedChances = {
     ["Divine"] = {},
     ["Infinity"] = {}
 }
-v_u_1.EffectiveChances = {
+t.EffectiveChances = {
     ["Common"] = {},
     ["Uncommon"] = {},
     ["Rare"] = {},
@@ -342,7 +357,8 @@ v_u_1.EffectiveChances = {
     ["Divine"] = {},
     ["Infinity"] = {}
 }
-v_u_1.IconIDs = {
+
+t.IconIDs = {
     ["Noobini Cakenini"] = 140171735291415,
     ["Lirili Larila"] = 108050226666919,
     ["Tim Cheese"] = 123,
@@ -449,6 +465,7 @@ v_u_1.IconIDs = {
     ["Marietti Frigo"] = 123,
     ["Tartarughi Attrezzini"] = 123,
     ["Kissarini Heartini"] = 123,
+    ["Scaldarino Derpino"] = 123,
     ["Job Job Job Sahur"] = 123,
     ["Dug Dug Dug"] = 123,
     ["Bisonte Giuppitere"] = 123,
@@ -465,6 +482,7 @@ v_u_1.IconIDs = {
     ["Money Elephant"] = 123,
     ["Polpo Semaforini"] = 123,
     ["Cioccolatone Draghettone"] = 123,
+    ["Ketupastro Infernetto"] = 123,
     ["Bulbito Bandito Traktorito"] = 123,
     ["Burgerini Bearini"] = 123,
     ["Strawberry Elephant"] = 123,
@@ -477,11 +495,16 @@ v_u_1.IconIDs = {
     ["Freezeti Cobretti"] = 123,
     ["Biscotti Macarotti"] = 123,
     ["Cupitron Consoletron"] = 123,
+    ["Explodini Cataclismi"] = 123,
+    ["Pastapot Infernotto"] = 123,
+    ["Draculini Meowlini"] = 123,
+    ["Don Magmito"] = 123,
     ["Noobini Infeeny"] = 140171735291415,
     ["Anububu"] = 123,
-    ["Meta Technetta"] = 123
+    ["Meta Technetta"] = 123,
+    ["Magmew"] = 123
 }
-v_u_1.Rates = {
+t.Rates = {
     ["Noobini Cakenini"] = 2,
     ["Lirili Larila"] = 4,
     ["Tim Cheese"] = 6,
@@ -588,6 +611,7 @@ v_u_1.Rates = {
     ["Marietti Frigo"] = 2500000,
     ["Tartarughi Attrezzini"] = 1024999.9999999999,
     ["Kissarini Heartini"] = 1750000,
+    ["Scaldarino Derpino"] = 2350000,
     ["Job Job Job Sahur"] = 1500000,
     ["Dug Dug Dug"] = 1600000,
     ["Bisonte Giuppitere"] = 1700000,
@@ -604,6 +628,7 @@ v_u_1.Rates = {
     ["Rattini Machini"] = 3050000,
     ["Polpo Semaforini"] = 2150000,
     ["Cioccolatone Draghettone"] = 3000000,
+    ["Ketupastro Infernetto"] = 3100000,
     ["Bulbito Bandito Traktorito"] = 3000000,
     ["Burgerini Bearini"] = 3500000,
     ["Strawberry Elephant"] = 5000000,
@@ -616,11 +641,16 @@ v_u_1.Rates = {
     ["Freezeti Cobretti"] = 9000000,
     ["Biscotti Macarotti"] = 7500000,
     ["Cupitron Consoletron"] = 9250000,
+    ["Explodini Cataclismi"] = 6500000,
+    ["Pastapot Infernotto"] = 8250000,
+    ["Draculini Meowlini"] = 9500000,
+    ["Don Magmito"] = 10000000,
     ["Noobini Infeeny"] = 10000000,
     ["Anububu"] = 15000000,
-    ["Meta Technetta"] = 25000000
+    ["Meta Technetta"] = 35000000,
+    ["Magmew"] = 30000000
 }
-v_u_1.ClassChances = {
+t.ClassChances = {
     ["Common"] = 0.4,
     ["Uncommon"] = 0.3,
     ["Rare"] = 0.2,
@@ -631,7 +661,7 @@ v_u_1.ClassChances = {
     ["Secret"] = 0.0015,
     ["Celestial"] = 0.0005
 }
-v_u_1.LuckyClassChances = {
+t.LuckyClassChances = {
     ["Common"] = 0.2,
     ["Uncommon"] = 0.2,
     ["Rare"] = 0.2,
@@ -642,7 +672,7 @@ v_u_1.LuckyClassChances = {
     ["Secret"] = 0.025,
     ["Celestial"] = 0.025
 }
-v_u_1.ClassColours = {
+t.ClassColours = {
     ["Common"] = Color3.fromRGB(206, 206, 206),
     ["Uncommon"] = Color3.fromRGB(103, 171, 15),
     ["Rare"] = Color3.fromRGB(53, 221, 255),
@@ -655,7 +685,7 @@ v_u_1.ClassColours = {
     ["Divine"] = Color3.fromRGB(255, 255, 0),
     ["Infinity"] = Color3.fromRGB(255, 0, 0)
 }
-v_u_1.MutationMultipliers = {
+t.MutationMultipliers = {
     ["None"] = 1,
     ["Emerald"] = 1.5,
     ["Gold"] = 1.5,
@@ -667,18 +697,24 @@ v_u_1.MutationMultipliers = {
     ["UFO"] = 3.5,
     ["Money"] = 3.888,
     ["Candy"] = 3.95,
+    ["Doom"] = 3.95,
     ["Gamer"] = 4,
     ["Hacker"] = 5,
     ["Lucky"] = 8
 }
-v_u_1.SizeScales = {
+t.TraitMultipliers = {
+    ["Galaxy"] = 2,
+    ["Magma"] = 2
+}
+t.SizeScales = {
     ["Baby"] = 0.25,
     ["Mini"] = 0.5,
     ["Default"] = 1,
     ["Big"] = 1.5,
     ["Titan"] = 2
 }
-v_u_1.MutationChances = {
+
+t.MutationChances = {
     ["None"] = 0.85,
     ["Emerald"] = 0.075,
     ["Gold"] = 0.045,
@@ -686,14 +722,14 @@ v_u_1.MutationChances = {
     ["Diamond"] = 0.004,
     ["Electric"] = 0.001
 }
-v_u_1.GuaranteedMutationChances = {
+t.GuaranteedMutationChances = {
     ["Emerald"] = 0.5,
     ["Gold"] = 0.3,
     ["Blood"] = 0.15,
     ["Diamond"] = 0.04,
     ["Electric"] = 0.01
 }
-v_u_1.MutationColours = {
+t.MutationColours = {
     ["Emerald"] = Color3.fromRGB(0, 255, 0),
     ["Gold"] = Color3.fromRGB(255, 255, 127),
     ["Blood"] = Color3.fromRGB(255, 0, 0),
@@ -706,21 +742,37 @@ v_u_1.MutationColours = {
     ["Hacker"] = Color3.new(0, 1, 0),
     ["Lucky"] = Color3.new(0, 1, 0.415),
     ["Money"] = Color3.fromRGB(255, 255, 0),
-    ["Candy"] = Color3.fromRGB(247, 85, 234)
+    ["Candy"] = Color3.fromRGB(247, 85, 234),
+    ["Doom"] = Color3.fromRGB(255, 120, 0)
 }
-v_u_1.BrainrotRarities = {}
-v_u_1.BrainrotsWithModels = {}
-v_u_1.BrainrotRarities["Noobini Infeeny"] = "Infinity"
-v_u_1.BrainrotRarities.Anububu = "Infinity"
-v_u_1.BrainrotRarities["Meta Technetta"] = "Infinity"
-v_u_1.BrainrotRarities["Gatti Marshmallini"] = "Cosmic"
-v_u_1.BrainrotRarities["Tartarughi Attrezzini"] = "Secret"
-v_u_1.BrainrotRarities["Kissarini Heartini"] = "Secret"
-v_u_1.BrainrotRarities["Polpo Semaforini"] = "Celestial"
-v_u_1.BrainrotRarities["Cioccolatone Draghettone"] = "Celestial"
-v_u_1.BrainrotRarities["Biscotti Macarotti"] = "Divine"
-v_u_1.BrainrotRarities["Cupitron Consoletron"] = "Divine"
-v_u_1.IdleAnimations = {
+t.BrainrotRarities = {}
+t.BrainrotsWithModels = {}
+for _, v12 in ipairs(ReplicatedStorage.Assets.Brainrots:GetChildren()) do
+    local Name = v12.Name
+    for _, v13 in ipairs(v12:GetChildren()) do
+        t.BrainrotRarities[v13.Name] = Name
+        t.BrainrotsWithModels[v13.Name] = true
+    end;
+end;
+
+t.BrainrotRarities["Noobini Infeeny"] = "Infinity"
+t.BrainrotRarities.Anububu = "Infinity"
+t.BrainrotRarities["Meta Technetta"] = "Infinity"
+t.BrainrotRarities["Gatti Marshmallini"] = "Cosmic"
+t.BrainrotRarities["Tartarughi Attrezzini"] = "Secret"
+t.BrainrotRarities["Kissarini Heartini"] = "Secret"
+t.BrainrotRarities["Polpo Semaforini"] = "Celestial"
+t.BrainrotRarities["Cioccolatone Draghettone"] = "Celestial"
+t.BrainrotRarities["Biscotti Macarotti"] = "Divine"
+t.BrainrotRarities["Cupitron Consoletron"] = "Divine"
+t.BrainrotRarities["Scaldarino Derpino"] = "Secret"
+t.BrainrotRarities["Ketupastro Infernetto"] = "Celestial"
+t.BrainrotRarities["Explodini Cataclismi"] = "Divine"
+t.BrainrotRarities["Pastapot Infernotto"] = "Divine"
+t.BrainrotRarities["Draculini Meowlini"] = "Divine"
+t.BrainrotRarities.Magmew = "Infinity"
+t.BrainrotRarities["Don Magmito"] = "Divine"
+t.IdleAnimations = {
     ["Bulbito Bandito Traktorito"] = 106146983860098,
     ["Strawberry Elephant"] = 113141781342356,
     ["Burgerini Bearini"] = 123801708236968,
@@ -752,6 +804,12 @@ v_u_1.IdleAnimations = {
     ["Polpo Semaforini"] = 74950694431211,
     ["Cioccolatone Draghettone"] = 113056198858213,
     ["Biscotti Macarotti"] = 87905495789597,
-    ["Cupitron Consoletron"] = 126035852798597
+    ["Cupitron Consoletron"] = 126035852798597,
+    ["Scaldarino Derpino"] = 85752283153756,
+    ["Pastapot Infernotto"] = 127571222833661,
+    ["Explodini Cataclismi"] = 94643850187622,
+    ["Ketupastro Infernetto"] = 116238553281937,
+    ["Draculini Meowlini"] = 86107459558022,
+    ["Magmew"] = 83447204203054
 }
-return v_u_1;
+return t;
