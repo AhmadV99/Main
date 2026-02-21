@@ -1,4 +1,4 @@
-return {
+{
     ["Frightful Crate"] = {
         ["Chance"] = 40,
         ["Rarity"] = "Limited",
@@ -2541,6 +2541,13 @@ return {
         ["From"] = "Ocean",
         ["Chance"] = 60,
     },
+    ["Harmonic Dove"] = {
+        ["Chance"] = 2,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 4, 10 },
+        ["From"] = "Above the Clouds",
+        ["Price"] = 4500,
+    },
     ["Candle Carp"] = {
         ["Chance"] = 50,
         ["Rarity"] = "Limited",
@@ -3792,9 +3799,9 @@ return {
         ["Price"] = 9500,
     },
     ["Cupid Relic"] = {
-        ["Price"] = 7500,
         ["Chance"] = 1,
         ["Rarity"] = "Limited",
+        ["Price"] = 7500,
         ["WeightPool"] = { 150, 150 },
         ["From"] = "Valentides 2",
     },
@@ -4480,6 +4487,27 @@ return {
         ["From"] = "Carrot Garden",
         ["Price"] = 103,
     },
+    ["Anchovy"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 1, 3 },
+        ["Price"] = 50,
+        ["From"] = "Moosewood",
+        ["Chance"] = 100,
+    },
+    ["Flying Pufferfish"] = {
+        ["Chance"] = 12,
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 5, 20 },
+        ["From"] = "Above the Clouds",
+        ["Price"] = 376,
+    },
+    ["Winged Carp"] = {
+        ["Chance"] = 60,
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 10, 50 },
+        ["From"] = "Above the Clouds",
+        ["Price"] = 128,
+    },
     ["Atlantic Goliath Grouper"] = {
         ["Chance"] = 15,
         ["Rarity"] = "Legendary",
@@ -4517,12 +4545,12 @@ return {
         ["From"] = "Animals1",
         ["Price"] = 900,
     },
-    ["Trout"] = {
+    ["Sky Bass"] = {
+        ["Chance"] = 75,
         ["Rarity"] = "Common",
-        ["WeightPool"] = { 9, 50 },
-        ["Price"] = 52,
-        ["From"] = "Moosewood",
-        ["Chance"] = 85,
+        ["WeightPool"] = { 20, 60 },
+        ["From"] = "Above the Clouds",
+        ["Price"] = 62,
     },
     ["Giant Moray"] = {
         ["Chance"] = 5,
@@ -4548,12 +4576,20 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 400,
     },
-    ["Rose Pearl"] = {
-        ["Chance"] = 25,
-        ["Rarity"] = "Unusual",
-        ["WeightPool"] = { 1, 4 },
-        ["From"] = "Roslit",
-        ["Price"] = 200,
+    ["Candy Cane Carp"] = {
+        ["Chance"] = 60,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 10, 50 },
+        ["From"] = "Fischmas",
+        ["Price"] = 75,
+    },
+    ["Goldfin Octopus"] = {
+        ["Chance"] = 0.05,
+        ["Rarity"] = "Exotic",
+        ["WeightPool"] = { 300, 1000 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Treasure Island",
+        ["Price"] = 8487,
     },
     ["Duckfin Tuna"] = {
         ["Chance"] = 60,
@@ -4583,13 +4619,13 @@ return {
         ["From"] = "Ashfall",
         ["Price"] = 300,
     },
-    ["Goldfin Octopus"] = {
-        ["Chance"] = 0.05,
-        ["Rarity"] = "Exotic",
-        ["WeightPool"] = { 300, 1000 },
+    ["Gemstone Whale Shark"] = {
+        ["Chance"] = 5,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 1200, 4000 },
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Treasure Island",
-        ["Price"] = 8487,
+        ["Price"] = 3459,
     },
     ["Infernal Isonade"] = {
         ["Chance"] = 1,
@@ -4606,13 +4642,12 @@ return {
         ["From"] = "Cursed Isle",
         ["Price"] = 271,
     },
-    ["Gemstone Whale Shark"] = {
-        ["Chance"] = 5,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 1200, 4000 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Treasure Island",
-        ["Price"] = 3459,
+    ["Red Snapper"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 10, 70 },
+        ["Price"] = 53,
+        ["From"] = "Moosewood",
+        ["Chance"] = 75,
     },
     ["Friend Fish"] = {
         ["Chance"] = 0,
@@ -4629,12 +4664,13 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 10125,
     },
-    ["Anchovy"] = {
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 1, 3 },
-        ["Price"] = 50,
-        ["From"] = "Moosewood",
-        ["Chance"] = 100,
+    ["Queen Angelfish"] = {
+        ["Chance"] = 25,
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 24, 80 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Treasure Island",
+        ["Price"] = 341,
     },
     ["Rock Gunnel"] = {
         ["Chance"] = 125,
@@ -4644,13 +4680,12 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 50,
     },
-    ["Queen Angelfish"] = {
-        ["Chance"] = 25,
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 24, 80 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Treasure Island",
-        ["Price"] = 341,
+    ["Icy Daggerfish"] = {
+        ["Chance"] = 60,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 80, 235 },
+        ["From"] = "Blue Moon - First Sea",
+        ["Price"] = 1706,
     },
     ["Tire"] = {
         ["Rarity"] = "Trash",
@@ -4658,21 +4693,6 @@ return {
         ["Price"] = 20,
         ["From"] = "None",
         ["Chance"] = 17,
-    },
-    ["Typhleotris"] = {
-        ["Chance"] = 55,
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 12, 45 },
-        ["From"] = "Cultist Lair",
-        ["Price"] = 108,
-    },
-    ["Spotted Moray Eel"] = {
-        ["Chance"] = 5,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 300, 1400 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 6500,
     },
     ["Coin Squid"] = {
         ["Chance"] = 37,
@@ -4682,6 +4702,14 @@ return {
         ["From"] = "Treasure Island",
         ["Price"] = 205,
     },
+    ["Spotted Moray Eel"] = {
+        ["Chance"] = 5,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 300, 1400 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 6500,
+    },
     ["Golden Dorado"] = {
         ["Chance"] = 39,
         ["Rarity"] = "Unusual",
@@ -4689,6 +4717,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Treasure Island",
         ["Price"] = 215,
+    },
+    ["Cookiecutter Shark"] = {
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 5, 15 },
+        ["Price"] = 352,
+        ["From"] = "Ocean",
+        ["Chance"] = 40,
     },
     ["Carrot Salmon"] = {
         ["Chance"] = 40,
@@ -4698,27 +4733,13 @@ return {
         ["From"] = "Carrot Garden",
         ["Price"] = 336,
     },
-    ["Bull Shark"] = {
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 900, 1300 },
-        ["Price"] = 1800,
-        ["From"] = "Ocean",
-        ["Chance"] = 0.3,
-    },
-    ["Thornfish"] = {
+    ["Sunray Sunscale"] = {
         ["Chance"] = 1,
         ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 100, 300 },
+        ["WeightPool"] = { 80, 200 },
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
-        ["Price"] = 12500,
-    },
-    ["Cutlass Fish"] = {
-        ["Rarity"] = "Unusual",
-        ["WeightPool"] = { 80, 250 },
-        ["Price"] = 230,
-        ["From"] = "Forsaken Shores",
-        ["Chance"] = 50,
+        ["Price"] = 8450,
     },
     ["Gemscale Mandarinfish"] = {
         ["Chance"] = 70,
@@ -4727,6 +4748,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Treasure Island",
         ["Price"] = 104,
+    },
+    ["Cutlass Fish"] = {
+        ["Rarity"] = "Unusual",
+        ["WeightPool"] = { 80, 250 },
+        ["Price"] = 230,
+        ["From"] = "Forsaken Shores",
+        ["Chance"] = 50,
     },
     ["Gem Anchovy"] = {
         ["Chance"] = 87,
@@ -4744,6 +4772,13 @@ return {
         ["From"] = "Treasure Island",
         ["Price"] = 50,
     },
+    ["Voltfish"] = {
+        ["Chance"] = 0.01,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 8, 16 },
+        ["From"] = "Sunstone",
+        ["Price"] = 3332,
+    },
     ["Trevally"] = {
         ["Chance"] = 25,
         ["Rarity"] = "Unusual",
@@ -4751,13 +4786,6 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Castaway Cliffs",
         ["Price"] = 225,
-    },
-    ["Rusty Bolt"] = {
-        ["Chance"] = 75,
-        ["Rarity"] = "Trash",
-        ["WeightPool"] = { 2, 4 },
-        ["From"] = "Mineshaft",
-        ["Price"] = 52,
     },
     ["Gem Salmon"] = {
         ["Chance"] = 100,
@@ -4767,13 +4795,6 @@ return {
         ["From"] = "Treasure Island",
         ["Price"] = 50,
     },
-    ["Seraphfin"] = {
-        ["Chance"] = 0,
-        ["Rarity"] = "Divine Secret",
-        ["WeightPool"] = { 10, 100000 },
-        ["Price"] = 60000,
-        ["From"] = "None",
-    },
     ["Studolodon"] = {
         ["Chance"] = 1,
         ["Rarity"] = "Limited",
@@ -4781,6 +4802,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "LEGO",
         ["Price"] = 1500,
+    },
+    ["Seraphfin"] = {
+        ["Chance"] = 0,
+        ["Rarity"] = "Divine Secret",
+        ["WeightPool"] = { 10, 100000 },
+        ["Price"] = 60000,
+        ["From"] = "None",
     },
     ["Studling Crab"] = {
         ["Chance"] = 15,
@@ -4790,13 +4818,6 @@ return {
         ["From"] = "LEGO",
         ["Price"] = 600,
     },
-    ["Festive Relic"] = {
-        ["Chance"] = 1,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 210, 210 },
-        ["Price"] = 25000,
-        ["From"] = "Fischmas 2",
-    },
     ["Stud Shark"] = {
         ["Chance"] = 25,
         ["Rarity"] = "Limited",
@@ -4804,6 +4825,21 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "LEGO",
         ["Price"] = 650,
+    },
+    ["Festive Relic"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 210, 210 },
+        ["Price"] = 25000,
+        ["From"] = "Fischmas 2",
+    },
+    ["Stud Koi"] = {
+        ["Chance"] = 35,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 550, 1900 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "LEGO",
+        ["Price"] = 550,
     },
     ["Moonveil Salmon School"] = {
         ["Chance"] = 45,
@@ -4820,21 +4856,6 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 10575,
     },
-    ["Stud Koi"] = {
-        ["Chance"] = 35,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 550, 1900 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "LEGO",
-        ["Price"] = 550,
-    },
-    ["Beach Ball Pufferfish"] = {
-        ["Chance"] = 86,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 5, 30 },
-        ["Price"] = 430,
-        ["From"] = "Fischfest",
-    },
     ["Cardinal Studfish"] = {
         ["Chance"] = 75,
         ["Rarity"] = "Limited",
@@ -4842,6 +4863,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "LEGO",
         ["Price"] = 400,
+    },
+    ["Beach Ball Pufferfish"] = {
+        ["Chance"] = 86,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 5, 30 },
+        ["Price"] = 430,
+        ["From"] = "Fischfest",
     },
     ["Yellow Studfish"] = {
         ["Chance"] = 105,
@@ -4851,12 +4879,19 @@ return {
         ["From"] = "LEGO",
         ["Price"] = 150,
     },
-    ["Umbral Shark"] = {
-        ["Chance"] = 0.4,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 1050, 1550 },
+    ["Keepers Guardian"] = {
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 200, 400 },
+        ["Price"] = 356,
         ["From"] = "Keepers Altar",
-        ["Price"] = 1877,
+        ["Chance"] = 15,
+    },
+    ["Pyrite Pufferfish"] = {
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 75, 190 },
+        ["Price"] = 330,
+        ["From"] = "Volcanic Vents",
+        ["Chance"] = 20,
     },
     ["Clowned Triggerfish"] = {
         ["Chance"] = 100,
@@ -4865,13 +4900,6 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Castaway Cliffs",
         ["Price"] = 50,
-    },
-    ["Serpent Surgeonfish"] = {
-        ["Chance"] = 55,
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 850, 2100 },
-        ["From"] = "Veil of the Forsaken",
-        ["Price"] = 108,
     },
     ["Dasyatis"] = {
         ["Chance"] = 30,
@@ -4889,20 +4917,13 @@ return {
         ["From"] = "Jurassic Island",
         ["Price"] = 3500,
     },
-    ["Primordial Levi"] = {
-        ["Chance"] = 1,
+    ["Glade Lurker"] = {
+        ["Chance"] = 14,
         ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 4500, 12000 },
+        ["WeightPool"] = { 650, 1600 },
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
-        ["Price"] = 12000,
-    },
-    ["RocketFuel"] = {
-        ["Chance"] = 0.05,
-        ["Rarity"] = "Exotic",
-        ["WeightPool"] = { 12, 13 },
-        ["From"] = "Mushgrove",
-        ["Price"] = 4526,
+        ["Price"] = 1300,
     },
     ["Oreochima"] = {
         ["Chance"] = 80,
@@ -4912,12 +4933,12 @@ return {
         ["From"] = "Jurassic Island",
         ["Price"] = 2000,
     },
-    ["Mosaic Swimmer"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 20, 40 },
-        ["Price"] = 108,
-        ["From"] = "Atlantis",
-        ["Chance"] = 55,
+    ["RocketFuel"] = {
+        ["Chance"] = 0.05,
+        ["Rarity"] = "Exotic",
+        ["WeightPool"] = { 12, 13 },
+        ["From"] = "Mushgrove",
+        ["Price"] = 4526,
     },
     ["Jurassic Mosasaurus"] = {
         ["Chance"] = 15,
@@ -4927,12 +4948,19 @@ return {
         ["From"] = "Jurassic Island",
         ["Price"] = 15000,
     },
-    ["Glass of Milk"] = {
-        ["Chance"] = 90,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 1, 6 },
-        ["From"] = "Fischmas",
-        ["Price"] = 20,
+    ["Mosaic Swimmer"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 20, 40 },
+        ["Price"] = 108,
+        ["From"] = "Atlantis",
+        ["Chance"] = 55,
+    },
+    ["Handfish"] = {
+        ["Chance"] = 0.01,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 20, 60 },
+        ["From"] = "Mushgrove",
+        ["Price"] = 3141,
     },
     ["Tartaruga"] = {
         ["Chance"] = 0.05,
@@ -4942,13 +4970,6 @@ return {
         ["From"] = "Sunstone",
         ["Price"] = 11580,
     },
-    ["Fungal Cluster"] = {
-        ["Rarity"] = "Trash",
-        ["WeightPool"] = { 9, 9 },
-        ["Price"] = 9,
-        ["From"] = "Mushgrove",
-        ["Chance"] = 22,
-    },
     ["Toilet Fish"] = {
         ["Chance"] = 0,
         ["Rarity"] = "Special",
@@ -4957,12 +4978,19 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 7030,
     },
-    ["Shipwreck Barracuda"] = {
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 100, 300 },
-        ["Price"] = 1838,
+    ["Fungal Cluster"] = {
+        ["Rarity"] = "Trash",
+        ["WeightPool"] = { 9, 9 },
+        ["Price"] = 9,
+        ["From"] = "Mushgrove",
+        ["Chance"] = 22,
+    },
+    ["Reefrunner Snapper"] = {
+        ["Chance"] = 35,
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 80, 250 },
         ["From"] = "Forsaken Shores",
-        ["Chance"] = 0.1,
+        ["Price"] = 380,
     },
     ["Bloomtail"] = {
         ["Chance"] = 18,
@@ -4980,13 +5008,6 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 1750,
     },
-    ["Nico"] = {
-        ["Chance"] = 0,
-        ["Rarity"] = "Special",
-        ["WeightPool"] = { 8, 10 },
-        ["From"] = "Admin-Exclusive",
-        ["Price"] = 10,
-    },
     ["Reed Striker"] = {
         ["Chance"] = 42,
         ["Rarity"] = "Extinct",
@@ -4994,6 +5015,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 515,
+    },
+    ["Nico"] = {
+        ["Chance"] = 0,
+        ["Rarity"] = "Special",
+        ["WeightPool"] = { 8, 10 },
+        ["From"] = "Admin-Exclusive",
+        ["Price"] = 10,
     },
     ["Algae Lurker"] = {
         ["Chance"] = 48,
@@ -5003,13 +5031,12 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 510,
     },
-    ["Sarcastic Fringehead"] = {
-        ["Chance"] = 30,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 550, 1400 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 1350,
+    ["Twilight Tentaclefish"] = {
+        ["Chance"] = 3,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 2800, 7500 },
+        ["From"] = "Veil of the Forsaken",
+        ["Price"] = 3653,
     },
     ["Glimmer Guppy"] = {
         ["Chance"] = 80,
@@ -5019,19 +5046,19 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 195,
     },
+    ["Shrimp"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 1, 2 },
+        ["Price"] = 50,
+        ["From"] = "Ocean",
+        ["Chance"] = 45,
+    },
     ["Banana"] = {
         ["Chance"] = 0.01,
         ["Rarity"] = "Secret",
         ["WeightPool"] = { 4, 10 },
         ["From"] = "Ancient Isle",
         ["Price"] = 5688,
-    },
-    ["Cod"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 20, 100 },
-        ["Price"] = 108,
-        ["From"] = "Ocean",
-        ["Chance"] = 75,
     },
     ["Brackscale"] = {
         ["Chance"] = 100,
@@ -5040,6 +5067,14 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 105,
+    },
+    ["Psychedelic Frogfish"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 80000, 200000 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 13200,
     },
     ["Red Tang"] = {
         ["Rarity"] = "Uncommon",
@@ -5055,14 +5090,6 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 11132,
     },
-    ["Psychedelic Frogfish"] = {
-        ["Chance"] = 1,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 80000, 200000 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 13200,
-    },
     ["X-ray Tetra"] = {
         ["Chance"] = 2,
         ["Rarity"] = "Extinct",
@@ -5070,6 +5097,14 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 4750,
+    },
+    ["Pelican Eel"] = {
+        ["Chance"] = 12,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 25000, 60000 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 2650,
     },
     ["Blisterfish"] = {
         ["Chance"] = 120,
@@ -5079,13 +5114,13 @@ return {
         ["From"] = "Cursed Isle",
         ["Price"] = 64,
     },
-    ["Pelican Eel"] = {
-        ["Chance"] = 12,
+    ["Tripod Fish"] = {
+        ["Chance"] = 15,
         ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 25000, 60000 },
+        ["WeightPool"] = { 900, 2200 },
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
-        ["Price"] = 2650,
+        ["Price"] = 2600,
     },
     ["Icy Salmon"] = {
         ["Rarity"] = "Uncommon",
@@ -5101,14 +5136,6 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 10421,
     },
-    ["Tripod Fish"] = {
-        ["Chance"] = 15,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 900, 2200 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 2600,
-    },
     ["Knifefish"] = {
         ["Chance"] = 26,
         ["Rarity"] = "Extinct",
@@ -5116,6 +5143,14 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 1380,
+    },
+    ["Sarcastic Fringehead"] = {
+        ["Chance"] = 30,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 550, 1400 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 1350,
     },
     ["Zeus' Herald"] = {
         ["Rarity"] = "Mythical",
@@ -5139,13 +5174,6 @@ return {
         ["From"] = "Overgrowth Caves",
         ["Chance"] = 40,
     },
-    ["Phanerorhynchus"] = {
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 600, 1400 },
-        ["Price"] = 345,
-        ["From"] = "Ancient Archives",
-        ["Chance"] = 3,
-    },
     ["Velvet Belly Lanternshark"] = {
         ["Chance"] = 28,
         ["Rarity"] = "Extinct",
@@ -5162,12 +5190,20 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 480,
     },
-    ["Ghoulfish"] = {
+    ["Isonade"] = {
         ["Chance"] = 0.1,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 45, 120 },
-        ["From"] = "FischFright",
-        ["Price"] = 1000,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 6000, 13000 },
+        ["From"] = "Vertigo",
+        ["Price"] = 3404,
+    },
+    ["Lumpclinger"] = {
+        ["Chance"] = 100,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 200, 500 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 175,
     },
     ["Watching Glowfin"] = {
         ["Chance"] = 230,
@@ -5183,14 +5219,6 @@ return {
         ["Price"] = 338,
         ["From"] = "Glacial Grotto",
         ["Chance"] = 35,
-    },
-    ["Lumpclinger"] = {
-        ["Chance"] = 100,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 200, 500 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 175,
     },
     ["Pupfish"] = {
         ["Chance"] = 127,
@@ -5215,6 +5243,14 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 40,
+    },
+    ["Screaming Fluke"] = {
+        ["Chance"] = 25,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 80, 192 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Cursed Isle",
+        ["Price"] = 2145,
     },
     ["Marsh Gar"] = {
         ["Rarity"] = "Rare",
@@ -5244,20 +5280,12 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 11345,
     },
-    ["Screaming Fluke"] = {
-        ["Chance"] = 25,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 80, 192 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Cursed Isle",
-        ["Price"] = 2145,
-    },
-    ["Olm"] = {
-        ["Chance"] = 2,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 1, 4 },
+    ["King Oyster"] = {
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 4, 10 },
+        ["Price"] = 304,
         ["From"] = "Terrapin",
-        ["Price"] = 1595,
+        ["Chance"] = 20,
     },
     ["Hollowfin"] = {
         ["Chance"] = 50,
@@ -5283,6 +5311,14 @@ return {
         ["From"] = "Cursed Isle",
         ["Price"] = 132,
     },
+    ["Rotjaw"] = {
+        ["Chance"] = 100,
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 15, 36 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Cursed Isle",
+        ["Price"] = 131,
+    },
     ["Clumsy Smurf"] = {
         ["Chance"] = 5,
         ["Rarity"] = "Limited",
@@ -5291,19 +5327,19 @@ return {
         ["Price"] = 3900,
     },
     ["Stuffed Bear"] = {
-        ["Chance"] = 30,
+        ["Chance"] = 10,
         ["Rarity"] = "Limited",
         ["WeightPool"] = { 10, 12 },
         ["From"] = "Valentides 2",
         ["Price"] = 280,
     },
-    ["Rotjaw"] = {
-        ["Chance"] = 100,
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 15, 36 },
+    ["Gloombiter"] = {
+        ["Chance"] = 115,
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 9, 22 },
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Cursed Isle",
-        ["Price"] = 131,
+        ["Price"] = 65,
     },
     ["Skeletal Serpent"] = {
         ["Chance"] = 0,
@@ -5327,14 +5363,6 @@ return {
         ["From"] = "Lost Jungle",
         ["Price"] = 3360,
     },
-    ["Gloombiter"] = {
-        ["Chance"] = 115,
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 9, 22 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Cursed Isle",
-        ["Price"] = 65,
-    },
     ["Phantom Koi"] = {
         ["Chance"] = 1,
         ["Rarity"] = "Extinct",
@@ -5342,6 +5370,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 13860,
+    },
+    ["Crystal Chorus"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 25, 50 },
+        ["Price"] = 110,
+        ["From"] = "Atlantis",
+        ["Chance"] = 50,
     },
     ["Sprayfin"] = {
         ["Chance"] = 70,
@@ -5351,13 +5386,6 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 90,
     },
-    ["Helios Ray"] = {
-        ["Rarity"] = "Unusual",
-        ["WeightPool"] = { 30, 60 },
-        ["Price"] = 222,
-        ["From"] = "Atlantis",
-        ["Chance"] = 45,
-    },
     ["Abyss Flicker"] = {
         ["Chance"] = 15,
         ["Rarity"] = "Extinct",
@@ -5365,6 +5393,14 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 2772,
+    },
+    ["Lantern Snapper"] = {
+        ["Chance"] = 30,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 330, 900 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 1386,
     },
     ["Deep Sea Fragment"] = {
         ["Rarity"] = "Fragment",
@@ -5394,14 +5430,6 @@ return {
         ["From"] = "The Depths",
         ["Price"] = 1877,
     },
-    ["Lantern Snapper"] = {
-        ["Chance"] = 30,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 330, 900 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 1386,
-    },
     ["Horizon Tetra"] = {
         ["Chance"] = 78,
         ["Rarity"] = "Extinct",
@@ -5417,6 +5445,13 @@ return {
         ["From"] = "Cults Curse",
         ["Price"] = 2200,
     },
+    ["Typhleotris"] = {
+        ["Chance"] = 55,
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 12, 45 },
+        ["From"] = "Cultist Lair",
+        ["Price"] = 108,
+    },
     ["Coin Piranha"] = {
         ["Chance"] = 31,
         ["Rarity"] = "Rare",
@@ -5425,12 +5460,13 @@ return {
         ["From"] = "Treasure Island",
         ["Price"] = 308,
     },
-    ["Icy Daggerfish"] = {
-        ["Chance"] = 60,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 80, 235 },
-        ["From"] = "Blue Moon - First Sea",
-        ["Price"] = 1706,
+    ["Inferno Chaser"] = {
+        ["Chance"] = 35,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 2040, 5610 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 473,
     },
     ["Midnight Axolotl"] = {
         ["Chance"] = 0.15,
@@ -5453,21 +5489,6 @@ return {
         ["From"] = "Ocean",
         ["Price"] = 1823,
     },
-    ["Inferno Chaser"] = {
-        ["Chance"] = 35,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 2040, 5610 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 473,
-    },
-    ["Akkorokamui"] = {
-        ["Chance"] = 0.05,
-        ["Rarity"] = "Apex",
-        ["WeightPool"] = { 10000000, 40000000 },
-        ["From"] = "Ocean",
-        ["Price"] = 24000,
-    },
     ["Volcanic Prowler"] = {
         ["Chance"] = 43,
         ["Rarity"] = "Extinct",
@@ -5475,6 +5496,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 441,
+    },
+    ["Akkorokamui"] = {
+        ["Chance"] = 0.05,
+        ["Rarity"] = "Apex",
+        ["WeightPool"] = { 10000000, 40000000 },
+        ["From"] = "Ocean",
+        ["Price"] = 24000,
     },
     ["Cragscale"] = {
         ["Chance"] = 37,
@@ -5484,13 +5512,6 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 465,
     },
-    ["Largemouth Bass"] = {
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 10, 45 },
-        ["Price"] = 52,
-        ["From"] = "Moosewood",
-        ["Chance"] = 75,
-    },
     ["Basalt Pike"] = {
         ["Chance"] = 62,
         ["Rarity"] = "Extinct",
@@ -5499,6 +5520,13 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 175,
     },
+    ["Largemouth Bass"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 10, 45 },
+        ["Price"] = 52,
+        ["From"] = "Moosewood",
+        ["Chance"] = 75,
+    },
     ["Searfin"] = {
         ["Chance"] = 74,
         ["Rarity"] = "Extinct",
@@ -5506,6 +5534,14 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 168,
+    },
+    ["Hellmaw Eel"] = {
+        ["Chance"] = 82,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 210, 510 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 105,
     },
     ["Brine Phantom"] = {
         ["Chance"] = 0.05,
@@ -5519,14 +5555,6 @@ return {
         ["Rarity"] = "Extinct",
         ["WeightPool"] = { 13, 40 },
         ["Price"] = 630,
-    },
-    ["Hellmaw Eel"] = {
-        ["Chance"] = 82,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 210, 510 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 105,
     },
     ["Magma Pike"] = {
         ["Chance"] = 88,
@@ -5544,14 +5572,6 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 115,
     },
-    ["Tarnished Moongill"] = {
-        ["Chance"] = 60,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 10, 35 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Blue Moon - First Sea",
-        ["Price"] = 2906,
-    },
     ["Lava Bream"] = {
         ["Chance"] = 92,
         ["Rarity"] = "Extinct",
@@ -5560,6 +5580,14 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 93,
     },
+    ["Tarnished Moongill"] = {
+        ["Chance"] = 60,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 10, 35 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Blue Moon - First Sea",
+        ["Price"] = 2906,
+    },
     ["Firecrest"] = {
         ["Chance"] = 102,
         ["Rarity"] = "Extinct",
@@ -5567,6 +5595,14 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 47,
+    },
+    ["Ashscale Minnow"] = {
+        ["Chance"] = 110,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 90, 210 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 35,
     },
     ["Skeletal Leviathan"] = {
         ["Chance"] = 1,
@@ -5582,13 +5618,13 @@ return {
         ["From"] = "Anniversary",
         ["Price"] = 12500,
     },
-    ["Ashscale Minnow"] = {
-        ["Chance"] = 110,
+    ["Primordial Levi"] = {
+        ["Chance"] = 1,
         ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 90, 210 },
+        ["WeightPool"] = { 4500, 12000 },
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
-        ["Price"] = 35,
+        ["Price"] = 12000,
     },
     ["Diplomystus"] = {
         ["Chance"] = 70,
@@ -5598,13 +5634,12 @@ return {
         ["From"] = "Jurassic Island",
         ["Price"] = 2500,
     },
-    ["Glade Lurker"] = {
-        ["Chance"] = 14,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 650, 1600 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 1300,
+    ["Glacier Swordfish"] = {
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 200, 450 },
+        ["Price"] = 345,
+        ["From"] = "Glacial Grotto",
+        ["Chance"] = 20,
     },
     ["Brine Sovereign"] = {
         ["Chance"] = 0.05,
@@ -5620,20 +5655,6 @@ return {
         ["From"] = "None",
         ["Price"] = 5125,
     },
-    ["Meg's Spine"] = {
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 25, 50 },
-        ["Price"] = 2500,
-        ["From"] = "Ancient Isle",
-        ["Chance"] = 0.05,
-    },
-    ["Aurora Trout"] = {
-        ["Chance"] = 0.5,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 2000, 4000 },
-        ["From"] = "Cryogenic Canal",
-        ["Price"] = 3294,
-    },
     ["Relic Dart"] = {
         ["Chance"] = 39,
         ["Rarity"] = "Extinct",
@@ -5641,6 +5662,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 450,
+    },
+    ["Aurora Trout"] = {
+        ["Chance"] = 0.5,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 2000, 4000 },
+        ["From"] = "Cryogenic Canal",
+        ["Price"] = 3294,
     },
     ["Temple Perch"] = {
         ["Chance"] = 39,
@@ -5650,13 +5678,6 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 420,
     },
-    ["Red Crabsquid"] = {
-        ["Chance"] = 60,
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 30, 100 },
-        ["From"] = "Crimson Cavern",
-        ["Price"] = 105,
-    },
     ["Hollow Snapper"] = {
         ["Chance"] = 70,
         ["Rarity"] = "Extinct",
@@ -5664,6 +5685,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 160,
+    },
+    ["Red Crabsquid"] = {
+        ["Chance"] = 60,
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 30, 100 },
+        ["From"] = "Crimson Cavern",
+        ["Price"] = 105,
     },
     ["Canopy Tetra"] = {
         ["Chance"] = 80,
@@ -5681,13 +5709,6 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 90,
     },
-    ["Sacred Lovestorm Turtle"] = {
-        ["Chance"] = 1,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 150000, 160000 },
-        ["Price"] = 45000,
-        ["From"] = "Valentides 2",
-    },
     ["Bogscale"] = {
         ["Chance"] = 110,
         ["Rarity"] = "Extinct",
@@ -5695,6 +5716,21 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 35,
+    },
+    ["Sacred Lovestorm Turtle"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 150000, 160000 },
+        ["Price"] = 45000,
+        ["From"] = "Valentides 2",
+    },
+    ["Thornfish"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 100, 300 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 12500,
     },
     ["Goldband Butterflyfish"] = {
         ["Chance"] = 65,
@@ -5712,20 +5748,12 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 140,
     },
-    ["Sunray Sunscale"] = {
-        ["Chance"] = 1,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 80, 200 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 8450,
-    },
-    ["Moby"] = {
-        ["Chance"] = 0.02,
-        ["Rarity"] = "Secret",
-        ["WeightPool"] = { 1000000, 2000000 },
+    ["Blue Whale"] = {
+        ["Chance"] = 5,
+        ["Rarity"] = "Exotic",
+        ["WeightPool"] = { 1300000, 3000000 },
         ["From"] = "Ocean",
-        ["Price"] = 7488,
+        ["Price"] = 14493,
     },
     ["Pine Zephyrfish"] = {
         ["Chance"] = 5,
@@ -5751,6 +5779,13 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 65,
     },
+    ["Radiant Crystal"] = {
+        ["Chance"] = 0.03,
+        ["Rarity"] = "Gemstone",
+        ["WeightPool"] = { 20, 20 },
+        ["Price"] = 8500,
+        ["From"] = "Mineshaft",
+    },
     ["Ornament Fish"] = {
         ["Chance"] = 15,
         ["Rarity"] = "Limited",
@@ -5772,26 +5807,12 @@ return {
         ["From"] = "Boreal Pines",
         ["Price"] = 112,
     },
-    ["King Oyster"] = {
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 4, 10 },
-        ["Price"] = 304,
-        ["From"] = "Terrapin",
-        ["Chance"] = 20,
-    },
-    ["Santa Salmon"] = {
-        ["Chance"] = 50,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 80, 200 },
-        ["From"] = "Fischmas",
-        ["Price"] = 120,
-    },
-    ["Stockingfish"] = {
-        ["Chance"] = 40,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 10, 20 },
-        ["Price"] = 342,
-        ["From"] = "Fischmas 2",
+    ["Echo Fisher"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 30, 65 },
+        ["Price"] = 110,
+        ["From"] = "Atlantis",
+        ["Chance"] = 48,
     },
     ["Vortex Ray"] = {
         ["Chance"] = 2,
@@ -5801,6 +5822,13 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 7500,
     },
+    ["Stockingfish"] = {
+        ["Chance"] = 40,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 10, 20 },
+        ["Price"] = 342,
+        ["From"] = "Fischmas 2",
+    },
     ["Wave Piercer"] = {
         ["Chance"] = 5,
         ["Rarity"] = "Extinct",
@@ -5808,6 +5836,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 2100,
+    },
+    ["Snow Crab"] = {
+        ["Chance"] = 60,
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 50, 200 },
+        ["From"] = "Boreal Pines",
+        ["Price"] = 110,
     },
     ["Racuda"] = {
         ["Chance"] = 50,
@@ -5824,12 +5859,13 @@ return {
         ["From"] = "Cultist Lair",
         ["Price"] = 346,
     },
-    ["Snow Crab"] = {
-        ["Chance"] = 60,
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 50, 200 },
-        ["From"] = "Boreal Pines",
-        ["Price"] = 110,
+    ["Abyss Dart"] = {
+        ["Chance"] = 30,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 650, 1800 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 400,
     },
     ["Bone"] = {
         ["Rarity"] = "Trash",
@@ -5859,13 +5895,12 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 10575,
     },
-    ["Abyss Dart"] = {
-        ["Chance"] = 30,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 650, 1800 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 400,
+    ["Manta Ray"] = {
+        ["Chance"] = 0.01,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 7750, 10000 },
+        ["From"] = "Roslit",
+        ["Price"] = 3128,
     },
     ["Lobster King"] = {
         ["Chance"] = 1,
@@ -5875,13 +5910,6 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 40000,
     },
-    ["Golden Sea Pearl"] = {
-        ["Chance"] = 0.2,
-        ["Rarity"] = "Exotic",
-        ["WeightPool"] = { 1, 4 },
-        ["From"] = "Roslit",
-        ["Price"] = 10000,
-    },
     ["Gale Snapper"] = {
         ["Chance"] = 100,
         ["Rarity"] = "Extinct",
@@ -5889,6 +5917,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 30,
+    },
+    ["Taco"] = {
+        ["Chance"] = 0,
+        ["Rarity"] = "Special",
+        ["WeightPool"] = { 1, 3 },
+        ["From"] = "Admin-Exclusive",
+        ["Price"] = 10125,
     },
     ["Snakehead"] = {
         ["Chance"] = 25,
@@ -5898,12 +5933,12 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 1400,
     },
-    ["Twilight Tentaclefish"] = {
-        ["Chance"] = 3,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 2800, 7500 },
+    ["Typhoon Tailfin"] = {
+        ["Chance"] = 5,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 12000, 34000 },
         ["From"] = "Veil of the Forsaken",
-        ["Price"] = 3653,
+        ["Price"] = 2153,
     },
     ["ðŸ¦ˆ"] = {
         ["Chance"] = 0,
@@ -5913,19 +5948,19 @@ return {
         ["From"] = "None",
         ["Price"] = 5000,
     },
-    ["Typhoon Tailfin"] = {
-        ["Chance"] = 5,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 12000, 34000 },
-        ["From"] = "Veil of the Forsaken",
-        ["Price"] = 2153,
-    },
     ["Siren Sculpin"] = {
         ["Chance"] = 10,
         ["Rarity"] = "Rare",
         ["WeightPool"] = { 900, 2500 },
         ["From"] = "Veil of the Forsaken",
         ["Price"] = 392,
+    },
+    ["Serpent Surgeonfish"] = {
+        ["Chance"] = 55,
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 850, 2100 },
+        ["From"] = "Veil of the Forsaken",
+        ["Price"] = 108,
     },
     ["Rhizodus"] = {
         ["Chance"] = 20,
@@ -5935,12 +5970,12 @@ return {
         ["From"] = "Jurassic Island",
         ["Price"] = 10000,
     },
-    ["Pyrite Pufferfish"] = {
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 75, 190 },
-        ["Price"] = 330,
+    ["Smoldering Stingray"] = {
+        ["Rarity"] = "Unusual",
+        ["WeightPool"] = { 80, 170 },
+        ["Price"] = 212,
         ["From"] = "Volcanic Vents",
-        ["Chance"] = 20,
+        ["Chance"] = 35,
     },
     ["Sandslasher"] = {
         ["Chance"] = 1,
@@ -5949,12 +5984,12 @@ return {
         ["Price"] = 30000,
         ["From"] = "Fischfest",
     },
-    ["Smoldering Stingray"] = {
-        ["Rarity"] = "Unusual",
-        ["WeightPool"] = { 80, 170 },
-        ["Price"] = 212,
-        ["From"] = "Volcanic Vents",
-        ["Chance"] = 35,
+    ["Crystal Corydoras"] = {
+        ["Chance"] = 5,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 1500, 4000 },
+        ["From"] = "Calm Zone",
+        ["Price"] = 1821,
     },
     ["Sea Raven"] = {
         ["Chance"] = 70,
@@ -5963,26 +5998,12 @@ return {
         ["From"] = "Crimson Cavern",
         ["Price"] = 104,
     },
-    ["Crystal Corydoras"] = {
-        ["Chance"] = 5,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 1500, 4000 },
-        ["From"] = "Calm Zone",
-        ["Price"] = 1821,
-    },
     ["Ruby Rasbora"] = {
         ["Rarity"] = "Rare",
         ["WeightPool"] = { 395, 1000 },
         ["Price"] = 322,
         ["From"] = "Calm Zone",
         ["Chance"] = 20,
-    },
-    ["Love Letter Long Pike"] = {
-        ["Chance"] = 3,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 20, 45 },
-        ["From"] = "Valentides 2",
-        ["Price"] = 1900,
     },
     ["Diamond Discus"] = {
         ["Rarity"] = "Uncommon",
@@ -5991,6 +6012,13 @@ return {
         ["From"] = "Calm Zone",
         ["Chance"] = 55,
     },
+    ["Love Letter Long Pike"] = {
+        ["Chance"] = 3,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 20, 45 },
+        ["From"] = "Valentides 2",
+        ["Price"] = 1900,
+    },
     ["Deeplight Footballfish"] = {
         ["Rarity"] = "Rare",
         ["WeightPool"] = { 175, 400 },
@@ -5998,18 +6026,11 @@ return {
         ["From"] = "Abyssal Zenith",
         ["Chance"] = 20,
     },
-    ["Northstar Whale"] = {
-        ["Chance"] = 1,
+    ["Santa Whale Shark"] = {
+        ["Chance"] = 3,
         ["Rarity"] = "Limited",
-        ["WeightPool"] = { 150000, 200000 },
-        ["From"] = "Fischmas 2",
-        ["Price"] = 35000,
-    },
-    ["Cryoshock Serpent"] = {
-        ["Chance"] = 1,
-        ["Rarity"] = "Limited",
-        ["Price"] = 63500,
-        ["WeightPool"] = { 50000, 80000 },
+        ["WeightPool"] = { 30, 50 },
+        ["Price"] = 3495,
         ["From"] = "Fischmas 2",
     },
     ["Abyssal Bearded Seadevil"] = {
@@ -6019,12 +6040,26 @@ return {
         ["From"] = "Abyssal Zenith",
         ["Price"] = 104,
     },
+    ["Cryoshock Serpent"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Limited",
+        ["Price"] = 63500,
+        ["WeightPool"] = { 50000, 80000 },
+        ["From"] = "Fischmas 2",
+    },
     ["Leviathan Humpback Anglerfish"] = {
         ["Rarity"] = "Common",
         ["WeightPool"] = { 350, 800 },
         ["Price"] = 51,
         ["From"] = "Abyssal Zenith",
         ["Chance"] = 70,
+    },
+    ["Moby"] = {
+        ["Chance"] = 0.02,
+        ["Rarity"] = "Secret",
+        ["WeightPool"] = { 1000000, 2000000 },
+        ["From"] = "Ocean",
+        ["Price"] = 7488,
     },
     ["Parktail Spinesnapper"] = {
         ["Chance"] = 3,
@@ -6034,19 +6069,19 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 2850,
     },
-    ["Blue Whale"] = {
-        ["Chance"] = 5,
-        ["Rarity"] = "Exotic",
-        ["WeightPool"] = { 1300000, 3000000 },
-        ["From"] = "Ocean",
-        ["Price"] = 14493,
-    },
-    ["Gingerbread Man"] = {
-        ["Chance"] = 34,
+    ["Hot Cocoa"] = {
+        ["Chance"] = 32,
         ["Rarity"] = "Limited",
-        ["WeightPool"] = { 8, 19 },
+        ["WeightPool"] = { 7, 17 },
         ["Price"] = 300,
         ["From"] = "Fischmas 2",
+    },
+    ["The Kraken"] = {
+        ["Chance"] = 0.02,
+        ["Rarity"] = "Exotic",
+        ["WeightPool"] = { 500000, 1800000 },
+        ["From"] = "Atlantis",
+        ["Price"] = 37500,
     },
     ["Oil Sardine"] = {
         ["Chance"] = 85,
@@ -6055,12 +6090,12 @@ return {
         ["From"] = "Crowned Ruins",
         ["Price"] = 45,
     },
-    ["The Kraken"] = {
-        ["Chance"] = 0.02,
-        ["Rarity"] = "Exotic",
-        ["WeightPool"] = { 500000, 1800000 },
+    ["Abyssal Devourer"] = {
+        ["Chance"] = 0.1,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 12000, 24000 },
         ["From"] = "Atlantis",
-        ["Price"] = 37500,
+        ["Price"] = 3543,
     },
     ["Holly Haddock"] = {
         ["Chance"] = 65,
@@ -6076,13 +6111,6 @@ return {
         ["From"] = "Atlantean Storm",
         ["Price"] = 2018,
     },
-    ["Abyssal Devourer"] = {
-        ["Chance"] = 0.1,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 12000, 24000 },
-        ["From"] = "Atlantis",
-        ["Price"] = 3543,
-    },
     ["Void Emperor"] = {
         ["Chance"] = 0.2,
         ["Rarity"] = "Mythical",
@@ -6097,6 +6125,13 @@ return {
         ["From"] = "Atlantis",
         ["Price"] = 2057,
     },
+    ["Kraken's Herald"] = {
+        ["Chance"] = 0.8,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 2500, 5000 },
+        ["From"] = "Atlantis",
+        ["Price"] = 2018,
+    },
     ["Anglers Lantern"] = {
         ["Chance"] = 0.1,
         ["Rarity"] = "Exotic",
@@ -6104,12 +6139,12 @@ return {
         ["From"] = "Abyssal Zenith",
         ["Price"] = 4925,
     },
-    ["Kraken's Herald"] = {
-        ["Chance"] = 0.8,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 2500, 5000 },
-        ["From"] = "Atlantis",
-        ["Price"] = 2018,
+    ["Horseshoe Crab"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 40, 90 },
+        ["Price"] = 54,
+        ["From"] = "Desolate Deep",
+        ["Chance"] = 90,
     },
     ["Forbidden Plesiosaur"] = {
         ["Chance"] = 0,
@@ -6125,13 +6160,6 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 11345,
     },
-    ["Phantom Ray"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 40, 60 },
-        ["Price"] = 114,
-        ["From"] = "Desolate Deep",
-        ["Chance"] = 162,
-    },
     ["Mage Marlin"] = {
         ["Rarity"] = "Legendary",
         ["WeightPool"] = { 1000, 2000 },
@@ -6146,6 +6174,13 @@ return {
         ["From"] = "Atlantis",
         ["Chance"] = 10,
     },
+    ["Voidscale Guppy"] = {
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 150, 300 },
+        ["Price"] = 352,
+        ["From"] = "Atlantis",
+        ["Chance"] = 12,
+    },
     ["Blackfin Icefish"] = {
         ["Chance"] = 65,
         ["Rarity"] = "Uncommon",
@@ -6153,12 +6188,12 @@ return {
         ["From"] = "Collapsed Ruins",
         ["Price"] = 175,
     },
-    ["Voidscale Guppy"] = {
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 150, 300 },
-        ["Price"] = 352,
-        ["From"] = "Atlantis",
-        ["Chance"] = 12,
+    ["Burnt Betta"] = {
+        ["Chance"] = 0.05,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 2000, 8000 },
+        ["Price"] = 3000,
+        ["From"] = "Ashfall",
     },
     ["Deepwater Stingray"] = {
         ["Chance"] = 35,
@@ -6190,13 +6225,6 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 10000,
     },
-    ["Echo Fisher"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 30, 65 },
-        ["Price"] = 110,
-        ["From"] = "Atlantis",
-        ["Chance"] = 48,
-    },
     ["Temple Drifter"] = {
         ["Rarity"] = "Uncommon",
         ["WeightPool"] = { 25, 55 },
@@ -6210,6 +6238,13 @@ return {
         ["WeightPool"] = { 2, 20 },
         ["From"] = "Admin-Exclusive",
         ["Price"] = 11250,
+    },
+    ["Neptune's Nibbler"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 5, 15 },
+        ["Price"] = 51,
+        ["From"] = "Atlantis",
+        ["Chance"] = 85,
     },
     ["Fourhorn Sculpin"] = {
         ["Chance"] = 50,
@@ -6232,19 +6267,19 @@ return {
         ["From"] = "Terrapin",
         ["Chance"] = 80,
     },
-    ["Neptune's Nibbler"] = {
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 5, 15 },
-        ["Price"] = 51,
-        ["From"] = "Atlantis",
-        ["Chance"] = 85,
-    },
     ["Atlantean Sardine"] = {
         ["Rarity"] = "Common",
         ["WeightPool"] = { 3, 10 },
         ["Price"] = 51,
         ["From"] = "Atlantis",
         ["Chance"] = 90,
+    },
+    ["Celestial Koi"] = {
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 5000, 10000 },
+        ["Price"] = 3062,
+        ["From"] = "Atlantis",
+        ["Chance"] = 0.1,
     },
     ["Goblin Shark"] = {
         ["Rarity"] = "Rare",
@@ -6253,12 +6288,12 @@ return {
         ["From"] = "The Depths",
         ["Chance"] = 25,
     },
-    ["Celestial Koi"] = {
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 5000, 10000 },
-        ["Price"] = 3062,
+    ["Helios Ray"] = {
+        ["Rarity"] = "Unusual",
+        ["WeightPool"] = { 30, 60 },
+        ["Price"] = 222,
         ["From"] = "Atlantis",
-        ["Chance"] = 0.1,
+        ["Chance"] = 45,
     },
     ["Whisper Eel"] = {
         ["Chance"] = 1,
@@ -6275,13 +6310,6 @@ return {
         ["From"] = "Crimson Cavern",
         ["Price"] = 51,
     },
-    ["Crystal Chorus"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 25, 50 },
-        ["Price"] = 110,
-        ["From"] = "Atlantis",
-        ["Chance"] = 50,
-    },
     ["Marble Maiden"] = {
         ["Rarity"] = "Uncommon",
         ["WeightPool"] = { 15, 35 },
@@ -6296,12 +6324,12 @@ return {
         ["From"] = "Atlantis",
         ["Chance"] = 80,
     },
-    ["Keepers Guardian"] = {
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 200, 400 },
-        ["Price"] = 356,
-        ["From"] = "Keepers Altar",
-        ["Chance"] = 15,
+    ["Trout"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 9, 50 },
+        ["Price"] = 52,
+        ["From"] = "Moosewood",
+        ["Chance"] = 85,
     },
     ["Sunken Silverscale"] = {
         ["Rarity"] = "Common",
@@ -6338,12 +6366,12 @@ return {
         ["From"] = "Atlantis",
         ["Chance"] = 12,
     },
-    ["Shrimp"] = {
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 1, 2 },
-        ["Price"] = 50,
-        ["From"] = "Ocean",
-        ["Chance"] = 45,
+    ["Spider Crab"] = {
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 80, 250 },
+        ["Price"] = 330,
+        ["From"] = "The Depths",
+        ["Chance"] = 20,
     },
     ["Colossal Carp"] = {
         ["Rarity"] = "Uncommon",
@@ -6352,26 +6380,19 @@ return {
         ["From"] = "Atlantis",
         ["Chance"] = 60,
     },
+    ["Profane Ray"] = {
+        ["Chance"] = 15,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 1200, 2800 },
+        ["From"] = "Cults Curse",
+        ["Price"] = 4500,
+    },
     ["Diplurus"] = {
         ["Rarity"] = "Legendary",
         ["WeightPool"] = { 800, 1600 },
         ["Price"] = 1762,
         ["From"] = "Ancient Archives",
         ["Chance"] = 0.1,
-    },
-    ["Ectoplasm Eel"] = {
-        ["Chance"] = 30,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 150, 450 },
-        ["Price"] = 1000,
-        ["From"] = "FischFright 2",
-    },
-    ["Sunny O'Coin"] = {
-        ["Chance"] = 2,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 900, 2100 },
-        ["From"] = "Lucky Event",
-        ["Price"] = 6500,
     },
     ["Storm Eel"] = {
         ["Rarity"] = "Unusual",
@@ -6380,12 +6401,19 @@ return {
         ["From"] = "Atlantis",
         ["Chance"] = 35,
     },
-    ["Iron Chunk"] = {
-        ["Chance"] = 60,
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 10, 40 },
+    ["Dave"] = {
+        ["Chance"] = 0,
+        ["Rarity"] = "Special",
+        ["WeightPool"] = { 800, 810 },
+        ["From"] = "Admin-Exclusive",
+        ["Price"] = 100,
+    },
+    ["Rusty Bolt"] = {
+        ["Chance"] = 75,
+        ["Rarity"] = "Trash",
+        ["WeightPool"] = { 2, 4 },
         ["From"] = "Mineshaft",
-        ["Price"] = 451,
+        ["Price"] = 52,
     },
     ["Cryo Coelacanth"] = {
         ["Rarity"] = "Rare",
@@ -6393,6 +6421,13 @@ return {
         ["Price"] = 352,
         ["From"] = "Challenger's Deep",
         ["Chance"] = 11,
+    },
+    ["Subzero Stargazer"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 20, 45 },
+        ["Price"] = 105,
+        ["From"] = "Challenger's Deep",
+        ["Chance"] = 50,
     },
     ["Pliosaur"] = {
         ["Chance"] = 0.03,
@@ -6416,12 +6451,12 @@ return {
         ["From"] = "Terrapin",
         ["Price"] = 6250,
     },
-    ["Subzero Stargazer"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 20, 45 },
-        ["Price"] = 105,
+    ["Cryoskin"] = {
+        ["Chance"] = 10,
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 30, 80 },
         ["From"] = "Challenger's Deep",
-        ["Chance"] = 50,
+        ["Price"] = 53,
     },
     ["DJ Spinopus"] = {
         ["Chance"] = 0.03,
@@ -6445,13 +6480,6 @@ return {
         ["From"] = "The Depths",
         ["Price"] = 14029,
     },
-    ["Cryoskin"] = {
-        ["Chance"] = 10,
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 30, 80 },
-        ["From"] = "Challenger's Deep",
-        ["Price"] = 53,
-    },
     ["Eternal Frostwhale"] = {
         ["Chance"] = 0.01,
         ["Rarity"] = "Limited",
@@ -6459,19 +6487,26 @@ return {
         ["From"] = "Golden Tide",
         ["Price"] = 12000,
     },
-    ["Nutcracker Catfish"] = {
-        ["Chance"] = 31,
+    ["Elf Eel"] = {
+        ["Chance"] = 29,
         ["Rarity"] = "Limited",
-        ["WeightPool"] = { 16, 29 },
-        ["Price"] = 345,
+        ["WeightPool"] = { 14, 26 },
+        ["Price"] = 349,
         ["From"] = "Fischmas 2",
     },
-    ["Angelfish"] = {
-        ["Rarity"] = "Unusual",
-        ["WeightPool"] = { 5, 20 },
-        ["Price"] = 220,
-        ["From"] = "Roslit",
-        ["Chance"] = 40,
+    ["Gummy Guppy"] = {
+        ["Chance"] = 60,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 5, 15 },
+        ["From"] = "FischFright 2",
+        ["Price"] = 200,
+    },
+    ["Northstar Whale"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 150000, 200000 },
+        ["From"] = "Fischmas 2",
+        ["Price"] = 35000,
     },
     ["Anglerfish"] = {
         ["Rarity"] = "Rare",
@@ -6487,19 +6522,12 @@ return {
         ["From"] = "Abyssal Zenith",
         ["Chance"] = 35,
     },
-    ["Santa Whale Shark"] = {
-        ["Chance"] = 3,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 30, 50 },
-        ["Price"] = 3495,
-        ["From"] = "Fischmas 2",
-    },
-    ["Frostling Goby"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 12, 28 },
-        ["Price"] = 108,
-        ["From"] = "Glacial Grotto",
-        ["Chance"] = 65,
+    ["Glacial Sturgeon"] = {
+        ["Chance"] = 0.25,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 2500, 5000 },
+        ["From"] = "Cryogenic Canal",
+        ["Price"] = 3294,
     },
     ["Present"] = {
         ["Chance"] = 10,
@@ -6515,19 +6543,19 @@ return {
         ["Price"] = 339,
         ["From"] = "Fischmas 2",
     },
+    ["Nutcracker Catfish"] = {
+        ["Chance"] = 31,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 16, 29 },
+        ["Price"] = 345,
+        ["From"] = "Fischmas 2",
+    },
     ["Tidal Pike"] = {
         ["Chance"] = 45,
         ["Rarity"] = "Limited",
         ["WeightPool"] = { 1500, 2500 },
         ["From"] = "Golden Tide",
         ["Price"] = 1500,
-    },
-    ["Elf Eel"] = {
-        ["Chance"] = 29,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 14, 26 },
-        ["Price"] = 349,
-        ["From"] = "Fischmas 2",
     },
     ["Mistletoe Minnow"] = {
         ["Chance"] = 48,
@@ -6543,6 +6571,13 @@ return {
         ["From"] = "Cultist Lair",
         ["Price"] = 349,
     },
+    ["Gingerbread Man"] = {
+        ["Chance"] = 34,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 8, 19 },
+        ["Price"] = 300,
+        ["From"] = "Fischmas 2",
+    },
     ["Orca"] = {
         ["Chance"] = 10,
         ["Rarity"] = "Exotic",
@@ -6557,19 +6592,19 @@ return {
         ["Price"] = 1000,
         ["From"] = "FischFright 2",
     },
-    ["Hot Cocoa"] = {
-        ["Chance"] = 32,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 7, 17 },
-        ["Price"] = 300,
-        ["From"] = "Fischmas 2",
-    },
     ["Olmdeer"] = {
         ["Chance"] = 2,
         ["Rarity"] = "Limited",
         ["WeightPool"] = { 1, 4 },
         ["From"] = "Fischmas",
         ["Price"] = 400,
+    },
+    ["Snowflake Flounder"] = {
+        ["Chance"] = 10,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 15, 55 },
+        ["From"] = "Fischmas",
+        ["Price"] = 145,
     },
     ["Christmas Ancient Megalodon"] = {
         ["Chance"] = 0,
@@ -6578,12 +6613,12 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 37500,
     },
-    ["Snowflake Flounder"] = {
-        ["Chance"] = 10,
+    ["Santa Salmon"] = {
+        ["Chance"] = 50,
         ["Rarity"] = "Limited",
-        ["WeightPool"] = { 15, 55 },
+        ["WeightPool"] = { 80, 200 },
         ["From"] = "Fischmas",
-        ["Price"] = 145,
+        ["Price"] = 120,
     },
     ["Glass Diamond"] = {
         ["Rarity"] = "Mythical",
@@ -6599,12 +6634,12 @@ return {
         ["From"] = "Atlantis",
         ["Chance"] = 28,
     },
-    ["Candy Cane Carp"] = {
-        ["Chance"] = 60,
+    ["Glass of Milk"] = {
+        ["Chance"] = 90,
         ["Rarity"] = "Limited",
-        ["WeightPool"] = { 10, 50 },
+        ["WeightPool"] = { 1, 6 },
         ["From"] = "Fischmas",
-        ["Price"] = 75,
+        ["Price"] = 20,
     },
     ["Tropical Bait Crate"] = {
         ["Chance"] = 15,
@@ -6621,12 +6656,12 @@ return {
         ["Price"] = 60000,
         ["From"] = "Ocean",
     },
-    ["Sea Bass"] = {
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 20, 60 },
-        ["Price"] = 52,
-        ["From"] = "Ocean",
-        ["Chance"] = 75,
+    ["Basic Present"] = {
+        ["Chance"] = 9,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 90, 90 },
+        ["From"] = "Fischmas",
+        ["Price"] = 120,
     },
     ["Gargantuan Taco"] = {
         ["Chance"] = 0,
@@ -6642,19 +6677,19 @@ return {
         ["From"] = "Ancient Archives",
         ["Chance"] = 0.05,
     },
-    ["Basic Present"] = {
-        ["Chance"] = 9,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 90, 90 },
-        ["From"] = "Fischmas",
-        ["Price"] = 120,
-    },
     ["Turkey"] = {
         ["Chance"] = 0,
         ["Rarity"] = "Limited",
         ["WeightPool"] = { 80, 300 },
         ["From"] = "Fischgiving",
         ["Price"] = 4000,
+    },
+    ["Gilded Pearl"] = {
+        ["Chance"] = 25,
+        ["Rarity"] = "Unusual",
+        ["WeightPool"] = { 1, 4 },
+        ["From"] = "Roslit",
+        ["Price"] = 200,
     },
     ["Confetti Shark"] = {
         ["Chance"] = 50,
@@ -6670,12 +6705,12 @@ return {
         ["From"] = "Animals1",
         ["Price"] = 2600,
     },
-    ["Gummy Guppy"] = {
-        ["Chance"] = 60,
+    ["Marshmallow Mackerel"] = {
+        ["Chance"] = 50,
         ["Rarity"] = "Limited",
-        ["WeightPool"] = { 5, 15 },
+        ["WeightPool"] = { 50, 200 },
+        ["Price"] = 400,
         ["From"] = "FischFright 2",
-        ["Price"] = 200,
     },
     ["Hollyscale Trout"] = {
         ["Chance"] = 30,
@@ -6705,19 +6740,19 @@ return {
         ["From"] = "Moosewood",
         ["Chance"] = 60,
     },
-    ["Marshmallow Mackerel"] = {
-        ["Chance"] = 50,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 50, 200 },
-        ["Price"] = 400,
-        ["From"] = "FischFright 2",
+    ["Umbral Shark"] = {
+        ["Chance"] = 0.4,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 1050, 1550 },
+        ["From"] = "Keepers Altar",
+        ["Price"] = 1877,
     },
-    ["Red Snapper"] = {
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 10, 70 },
-        ["Price"] = 53,
-        ["From"] = "Moosewood",
-        ["Chance"] = 75,
+    ["Ectoplasm Eel"] = {
+        ["Chance"] = 30,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 150, 450 },
+        ["Price"] = 1000,
+        ["From"] = "FischFright 2",
     },
     ["Hyneria"] = {
         ["Rarity"] = "Unusual",
@@ -6747,12 +6782,12 @@ return {
         ["Price"] = 5,
         ["From"] = "Valentides 2",
     },
-    ["Profane Ray"] = {
-        ["Chance"] = 15,
+    ["Vampire Perch"] = {
+        ["Chance"] = 25,
         ["Rarity"] = "Limited",
-        ["WeightPool"] = { 1200, 2800 },
-        ["From"] = "Cults Curse",
-        ["Price"] = 4500,
+        ["WeightPool"] = { 200, 600 },
+        ["Price"] = 1200,
+        ["From"] = "FischFright 2",
     },
     ["Flounder"] = {
         ["Rarity"] = "Unusual",
@@ -6760,13 +6795,6 @@ return {
         ["Price"] = 210,
         ["From"] = "Moosewood",
         ["Chance"] = 40,
-    },
-    ["Vampire Perch"] = {
-        ["Chance"] = 25,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 200, 600 },
-        ["Price"] = 1200,
-        ["From"] = "FischFright 2",
     },
     ["Caramel Chub"] = {
         ["Chance"] = 50,
@@ -6782,6 +6810,13 @@ return {
         ["From"] = "Anniversary",
         ["Price"] = 5500,
     },
+    ["Ghost Minnow"] = {
+        ["Chance"] = 90,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 1, 6 },
+        ["From"] = "FischFright 2",
+        ["Price"] = 150,
+    },
     ["Caustic Starwyrm"] = {
         ["Chance"] = 0.03,
         ["Rarity"] = "Secret",
@@ -6796,12 +6831,12 @@ return {
         ["From"] = "Valentides 2",
         ["Price"] = 2030,
     },
-    ["Ghost Minnow"] = {
-        ["Chance"] = 90,
+    ["Eerie Relic"] = {
+        ["Chance"] = 30,
         ["Rarity"] = "Limited",
-        ["WeightPool"] = { 1, 6 },
+        ["WeightPool"] = { 210, 210 },
+        ["Price"] = 1000,
         ["From"] = "FischFright 2",
-        ["Price"] = 150,
     },
     ["Cursed Eel"] = {
         ["Chance"] = 25,
@@ -6810,17 +6845,17 @@ return {
         ["From"] = "Forsaken Shores",
         ["Price"] = 403,
     },
-    ["Eerie Relic"] = {
-        ["Chance"] = 30,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 210, 210 },
-        ["Price"] = 1000,
-        ["From"] = "FischFright 2",
-    },
     ["Licorice Leech"] = {
         ["Chance"] = 60,
         ["Rarity"] = "Limited",
         ["WeightPool"] = { 3.2, 6.4 },
+        ["From"] = "FischFright 2",
+        ["Price"] = 200,
+    },
+    ["Pumpkin Pufferfish"] = {
+        ["Chance"] = 60,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 5, 20 },
         ["From"] = "FischFright 2",
         ["Price"] = 200,
     },
@@ -6831,20 +6866,20 @@ return {
         ["From"] = "Snowcap",
         ["Chance"] = 75,
     },
-    ["Pumpkin Pufferfish"] = {
-        ["Chance"] = 60,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 5, 20 },
-        ["From"] = "FischFright 2",
-        ["Price"] = 200,
-    },
-    ["Veinfin Tetra School"] = {
-        ["Chance"] = 80,
+    ["Sardines School"] = {
+        ["Chance"] = 90,
         ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 220, 660 },
+        ["WeightPool"] = { 50, 350 },
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
-        ["Price"] = 430,
+        ["Price"] = 125,
+    },
+    ["Nessie"] = {
+        ["Chance"] = 0.01,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 20000, 40000 },
+        ["From"] = "FischFright",
+        ["Price"] = 6500,
     },
     ["Royal Egg"] = {
         ["Chance"] = 0,
@@ -6860,12 +6895,12 @@ return {
         ["From"] = "Scoria Reach",
         ["Price"] = 7000,
     },
-    ["Nessie"] = {
-        ["Chance"] = 0.01,
+    ["Skelefish"] = {
+        ["Chance"] = 10,
         ["Rarity"] = "Limited",
-        ["WeightPool"] = { 20000, 40000 },
+        ["WeightPool"] = { 5, 10 },
         ["From"] = "FischFright",
-        ["Price"] = 6500,
+        ["Price"] = 200,
     },
     ["Mythic Fish"] = {
         ["Chance"] = 0.01,
@@ -6874,7 +6909,7 @@ return {
         ["From"] = "Ocean",
         ["Price"] = 3270,
     },
-    ["Skelefish"] = {
+    ["Candy Fish"] = {
         ["Chance"] = 10,
         ["Rarity"] = "Limited",
         ["WeightPool"] = { 5, 10 },
@@ -6888,12 +6923,12 @@ return {
         ["From"] = "Ocean",
         ["Chance"] = 90,
     },
-    ["Candy Fish"] = {
-        ["Chance"] = 10,
+    ["Ghoulfish"] = {
+        ["Chance"] = 0.1,
         ["Rarity"] = "Limited",
-        ["WeightPool"] = { 5, 10 },
+        ["WeightPool"] = { 45, 120 },
         ["From"] = "FischFright",
-        ["Price"] = 200,
+        ["Price"] = 1000,
     },
     ["Heartbreak Herring"] = {
         ["Chance"] = 10,
@@ -6910,13 +6945,6 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 460,
     },
-    ["Isonade"] = {
-        ["Chance"] = 0.1,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 6000, 13000 },
-        ["From"] = "Vertigo",
-        ["Price"] = 3404,
-    },
     ["Rubber Ducky"] = {
         ["Chance"] = 0.01,
         ["Rarity"] = "Legendary",
@@ -6930,6 +6958,13 @@ return {
         ["Price"] = 368,
         ["From"] = "Vertigo",
         ["Chance"] = 10,
+    },
+    ["Twilight Eel"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 100, 200 },
+        ["Price"] = 115,
+        ["From"] = "Vertigo",
+        ["Chance"] = 70,
     },
     ["Corrupted Mosslurker"] = {
         ["Chance"] = 0,
@@ -6945,12 +6980,12 @@ return {
         ["From"] = "Cryogenic Canal",
         ["Chance"] = 35,
     },
-    ["Twilight Eel"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 100, 200 },
-        ["Price"] = 115,
-        ["From"] = "Vertigo",
-        ["Chance"] = 70,
+    ["Sea Turtle"] = {
+        ["Chance"] = 0.005,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 700, 1500 },
+        ["From"] = "Terrapin",
+        ["Price"] = 3128,
     },
     ["Fish Barrel"] = {
         ["Chance"] = 12,
@@ -6959,12 +6994,12 @@ return {
         ["From"] = "None",
         ["Price"] = 100,
     },
-    ["Sea Turtle"] = {
-        ["Chance"] = 0.005,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 700, 1500 },
+    ["Olm"] = {
+        ["Chance"] = 2,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 1, 4 },
         ["From"] = "Terrapin",
-        ["Price"] = 3128,
+        ["Price"] = 1595,
     },
     ["Veinspawn"] = {
         ["Chance"] = 30,
@@ -6996,12 +7031,12 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 10125,
     },
-    ["Radiant Crystal"] = {
-        ["Chance"] = 0.03,
-        ["Rarity"] = "Gemstone",
-        ["WeightPool"] = { 20, 20 },
-        ["Price"] = 8500,
+    ["Iron Chunk"] = {
+        ["Chance"] = 60,
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 10, 40 },
         ["From"] = "Mineshaft",
+        ["Price"] = 451,
     },
     ["Cataclysm Carp"] = {
         ["Chance"] = 0,
@@ -7039,12 +7074,12 @@ return {
         ["From"] = "Treasure Island",
         ["Price"] = 50,
     },
-    ["Voltfish"] = {
-        ["Chance"] = 0.01,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 8, 16 },
+    ["Wiifish"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 200, 400 },
         ["From"] = "Sunstone",
-        ["Price"] = 3332,
+        ["Price"] = 1804,
     },
     ["Scurvy Sailfish"] = {
         ["Rarity"] = "Unusual",
@@ -7052,13 +7087,6 @@ return {
         ["Price"] = 235,
         ["From"] = "Forsaken Shores",
         ["Chance"] = 40,
-    },
-    ["Wiifish"] = {
-        ["Chance"] = 1,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 200, 400 },
-        ["From"] = "Sunstone",
-        ["Price"] = 1804,
     },
     ["Sunfish"] = {
         ["Chance"] = 1,
@@ -7103,6 +7131,13 @@ return {
         ["From"] = "Snowcap",
         ["Chance"] = 45,
     },
+    ["Blackfish"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 5, 20 },
+        ["Price"] = 110,
+        ["From"] = "Snowcap",
+        ["Chance"] = 80,
+    },
     ["Cinder Carp"] = {
         ["Chance"] = 0.0005,
         ["Rarity"] = "Limited",
@@ -7118,12 +7153,12 @@ return {
         ["From"] = "Octophant",
         ["Price"] = 1500,
     },
-    ["Blackfish"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 5, 20 },
-        ["Price"] = 110,
+    ["Bluegill"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 1, 6 },
+        ["Price"] = 51,
         ["From"] = "Snowcap",
-        ["Chance"] = 80,
+        ["Chance"] = 85,
     },
     ["Emperor Jellyfish"] = {
         ["Chance"] = 0.03,
@@ -7132,12 +7167,12 @@ return {
         ["From"] = "Desolate Deep",
         ["Price"] = 3493,
     },
-    ["Bluegill"] = {
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 1, 6 },
-        ["Price"] = 51,
+    ["Ice"] = {
+        ["Rarity"] = "Trash",
+        ["WeightPool"] = { 40, 60 },
+        ["Price"] = 15,
         ["From"] = "Snowcap",
-        ["Chance"] = 85,
+        ["Chance"] = 35,
     },
     ["Alien Buddy"] = {
         ["Chance"] = 0,
@@ -7146,12 +7181,12 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 9000,
     },
-    ["Ice"] = {
-        ["Rarity"] = "Trash",
-        ["WeightPool"] = { 40, 60 },
-        ["Price"] = 15,
-        ["From"] = "Snowcap",
-        ["Chance"] = 35,
+    ["Pyrogrub"] = {
+        ["Chance"] = 25,
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 300, 600 },
+        ["From"] = "Roslit Volcano",
+        ["Price"] = 372,
     },
     ["Pirate Captain's Goldfish"] = {
         ["Chance"] = 0.03,
@@ -7160,19 +7195,19 @@ return {
         ["From"] = "Forsaken Shores",
         ["Price"] = 30094,
     },
-    ["Pyrogrub"] = {
-        ["Chance"] = 25,
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 300, 600 },
-        ["From"] = "Roslit Volcano",
-        ["Price"] = 372,
-    },
     ["Ember Snapper"] = {
         ["Rarity"] = "Unusual",
         ["WeightPool"] = { 60, 120 },
         ["Price"] = 230,
         ["From"] = "Roslit Volcano",
         ["Chance"] = 50,
+    },
+    ["Cracked Egg"] = {
+        ["Chance"] = 0,
+        ["Rarity"] = "Special",
+        ["WeightPool"] = { 10, 40 },
+        ["From"] = "Admin-Exclusive",
+        ["Price"] = 10575,
     },
     ["Antarctic Icefish"] = {
         ["Chance"] = 30,
@@ -7195,12 +7230,12 @@ return {
         ["From"] = "Ancient Isle",
         ["Chance"] = 0,
     },
-    ["Cracked Egg"] = {
-        ["Chance"] = 0,
-        ["Rarity"] = "Special",
-        ["WeightPool"] = { 10, 40 },
-        ["From"] = "Admin-Exclusive",
-        ["Price"] = 10575,
+    ["Golden Sea Pearl"] = {
+        ["Chance"] = 0.2,
+        ["Rarity"] = "Exotic",
+        ["WeightPool"] = { 1, 4 },
+        ["From"] = "Roslit",
+        ["Price"] = 10000,
     },
     ["Surge Pike"] = {
         ["Chance"] = 40,
@@ -7239,13 +7274,6 @@ return {
         ["From"] = "Blue Moon - First Sea",
         ["Price"] = 110,
     },
-    ["Manta Ray"] = {
-        ["Chance"] = 0.01,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 7750, 10000 },
-        ["From"] = "Roslit",
-        ["Price"] = 3128,
-    },
     ["Mauve Pearl"] = {
         ["Chance"] = 10,
         ["Rarity"] = "Rare",
@@ -7267,6 +7295,13 @@ return {
         ["From"] = "Roslit",
         ["Chance"] = 15,
     },
+    ["Rose Pearl"] = {
+        ["Chance"] = 25,
+        ["Rarity"] = "Unusual",
+        ["WeightPool"] = { 1, 4 },
+        ["From"] = "Roslit",
+        ["Price"] = 200,
+    },
     ["Chronos Deep Swimmer"] = {
         ["Rarity"] = "Unusual",
         ["WeightPool"] = { 55, 100 },
@@ -7281,13 +7316,6 @@ return {
         ["From"] = "Lost Jungle",
         ["Price"] = 330,
     },
-    ["Grand Reef Guardian"] = {
-        ["Chance"] = 0.08,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 400, 800 },
-        ["From"] = "Grand Reef",
-        ["Price"] = 3462,
-    },
     ["Ribbon Eel"] = {
         ["Rarity"] = "Unusual",
         ["WeightPool"] = { 5, 150 },
@@ -7301,6 +7329,13 @@ return {
         ["WeightPool"] = { 5, 25 },
         ["From"] = "Roslit",
         ["Price"] = 228,
+    },
+    ["Angelfish"] = {
+        ["Rarity"] = "Unusual",
+        ["WeightPool"] = { 5, 20 },
+        ["Price"] = 220,
+        ["From"] = "Roslit",
+        ["Chance"] = 40,
     },
     ["Baby Nessie"] = {
         ["Chance"] = 25,
@@ -7323,13 +7358,6 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 430,
     },
-    ["Gilded Pearl"] = {
-        ["Chance"] = 25,
-        ["Rarity"] = "Unusual",
-        ["WeightPool"] = { 1, 4 },
-        ["From"] = "Roslit",
-        ["Price"] = 200,
-    },
     ["Pumpkinseed"] = {
         ["Rarity"] = "Uncommon",
         ["WeightPool"] = { 1, 5 },
@@ -7344,13 +7372,6 @@ return {
         ["From"] = "Roslit",
         ["Chance"] = 80,
     },
-    ["Sawfish"] = {
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 4000, 6000 },
-        ["Price"] = 1838,
-        ["From"] = "Ocean",
-        ["Chance"] = 0.7,
-    },
     ["Chub"] = {
         ["Rarity"] = "Common",
         ["WeightPool"] = { 10, 30 },
@@ -7358,12 +7379,26 @@ return {
         ["From"] = "Roslit",
         ["Chance"] = 100,
     },
+    ["Sawfish"] = {
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 4000, 6000 },
+        ["Price"] = 1838,
+        ["From"] = "Ocean",
+        ["Chance"] = 0.7,
+    },
     ["Long Pike"] = {
         ["Chance"] = 0.03,
         ["Rarity"] = "Secret",
         ["WeightPool"] = { 12, 35 },
         ["From"] = "Ocean",
         ["Price"] = 5562,
+    },
+    ["Whale Shark"] = {
+        ["Chance"] = 0.01,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 100000, 150000 },
+        ["From"] = "Ocean",
+        ["Price"] = 12273,
     },
     ["Cousin Tentacles"] = {
         ["Chance"] = 0,
@@ -7379,26 +7414,12 @@ return {
         ["From"] = "Fischfest",
         ["Price"] = 2780,
     },
-    ["Whale Shark"] = {
-        ["Chance"] = 0.01,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 100000, 150000 },
-        ["From"] = "Ocean",
-        ["Price"] = 12273,
-    },
     ["Colossal Squid"] = {
         ["Chance"] = 0.02,
         ["Rarity"] = "Mythical",
         ["WeightPool"] = { 7000, 12000 },
         ["From"] = "Ocean",
         ["Price"] = 8554,
-    },
-    ["Brine Shrimp"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 1, 3 },
-        ["Price"] = 109,
-        ["From"] = "Brine Pool",
-        ["Chance"] = 225,
     },
     ["Sea Pickle"] = {
         ["Rarity"] = "Mythical",
@@ -7407,12 +7428,26 @@ return {
         ["From"] = "Ocean",
         ["Chance"] = 0.01,
     },
+    ["Brine Shrimp"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 1, 3 },
+        ["Price"] = 109,
+        ["From"] = "Brine Pool",
+        ["Chance"] = 225,
+    },
     ["Dolphin"] = {
         ["Chance"] = 0.8,
         ["Rarity"] = "Legendary",
         ["WeightPool"] = { 1500, 2000 },
         ["From"] = "Ocean",
         ["Price"] = 1876,
+    },
+    ["Moonfish"] = {
+        ["Chance"] = 0.2,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 2500, 5000 },
+        ["From"] = "Ocean",
+        ["Price"] = 1958,
     },
     ["Colossal Ancient Dragon"] = {
         ["Chance"] = 0.03,
@@ -7428,12 +7463,12 @@ return {
         ["From"] = "Crowned Ruins",
         ["Price"] = 65000,
     },
-    ["Moonfish"] = {
-        ["Chance"] = 0.2,
+    ["Bull Shark"] = {
         ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 2500, 5000 },
+        ["WeightPool"] = { 900, 1300 },
+        ["Price"] = 1800,
         ["From"] = "Ocean",
-        ["Price"] = 1958,
+        ["Chance"] = 0.3,
     },
     ["Gem Eel"] = {
         ["Chance"] = 64,
@@ -7443,19 +7478,19 @@ return {
         ["From"] = "Treasure Island",
         ["Price"] = 110,
     },
-    ["Cookiecutter Shark"] = {
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 5, 15 },
-        ["Price"] = 352,
-        ["From"] = "Ocean",
-        ["Chance"] = 40,
-    },
     ["Sailfish"] = {
         ["Chance"] = 16,
         ["Rarity"] = "Rare",
         ["WeightPool"] = { 400, 600 },
         ["From"] = "Ocean",
         ["Price"] = 345,
+    },
+    ["Glacier Glowfish"] = {
+        ["Chance"] = 0.01,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 80, 150 },
+        ["From"] = "Winter's Edge",
+        ["Price"] = 1800,
     },
     ["Poseidon Turkey"] = {
         ["Chance"] = 1,
@@ -7464,12 +7499,12 @@ return {
         ["Price"] = 20250,
         ["From"] = "Fischgiving 2",
     },
-    ["Blue Energy Crystal"] = {
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 25, 50 },
-        ["Price"] = 2500,
-        ["From"] = "None",
-        ["Chance"] = 0,
+    ["Coelacanth"] = {
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 70, 100 },
+        ["Price"] = 345,
+        ["From"] = "Ocean",
+        ["Chance"] = 14,
     },
     ["Cave Angel Fish"] = {
         ["Chance"] = 5,
@@ -7492,12 +7527,13 @@ return {
         ["From"] = "Sunken Reliquary",
         ["Price"] = 145,
     },
-    ["Coelacanth"] = {
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 70, 100 },
-        ["Price"] = 345,
-        ["From"] = "Ocean",
-        ["Chance"] = 14,
+    ["Veinfin Tetra School"] = {
+        ["Chance"] = 80,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 220, 660 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 430,
     },
     ["Cathulid"] = {
         ["Chance"] = 20,
@@ -7513,14 +7549,6 @@ return {
         ["From"] = "FischFright 2",
         ["Price"] = 1600,
     },
-    ["Sardines School"] = {
-        ["Chance"] = 90,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 50, 350 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 125,
-    },
     ["Pufferling School"] = {
         ["Chance"] = 30,
         ["Rarity"] = "Extinct",
@@ -7529,18 +7557,18 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 2500,
     },
+    ["Terrapin Lobster"] = {
+        ["Chance"] = 35,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 18, 58 },
+        ["Price"] = 2300,
+    },
     ["Ancient Megalodon"] = {
         ["Chance"] = 0.05,
         ["Rarity"] = "Exotic",
         ["WeightPool"] = { 500000, 700000 },
         ["From"] = "Ancient Isle",
         ["Price"] = 37500,
-    },
-    ["Terrapin Lobster"] = {
-        ["Chance"] = 35,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 18, 58 },
-        ["Price"] = 2300,
     },
     ["Spiny Sunstone Lobster"] = {
         ["Chance"] = 85,
@@ -7576,6 +7604,13 @@ return {
         ["WeightPool"] = { 200, 650 },
         ["Price"] = 13000,
     },
+    ["Oyster"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 2, 5 },
+        ["Price"] = 101,
+        ["From"] = "Ocean",
+        ["Chance"] = 50,
+    },
     ["Islandhopper Butterflyfish"] = {
         ["Chance"] = 80,
         ["Rarity"] = "Extinct",
@@ -7584,12 +7619,12 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 300,
     },
-    ["Oyster"] = {
+    ["Prawn"] = {
         ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 2, 5 },
-        ["Price"] = 101,
+        ["WeightPool"] = { 1, 5 },
+        ["Price"] = 100,
         ["From"] = "Ocean",
-        ["Chance"] = 50,
+        ["Chance"] = 40,
     },
     ["Mossjaw Skull"] = {
         ["Chance"] = 1,
@@ -7598,12 +7633,12 @@ return {
         ["From"] = "Jungle's Echo",
         ["Price"] = 5100,
     },
-    ["Prawn"] = {
+    ["Cod"] = {
         ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 1, 5 },
-        ["Price"] = 100,
+        ["WeightPool"] = { 20, 100 },
+        ["Price"] = 108,
         ["From"] = "Ocean",
-        ["Chance"] = 40,
+        ["Chance"] = 75,
     },
     ["Lagoon Dart"] = {
         ["Chance"] = 95,
@@ -7627,13 +7662,6 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 11345,
     },
-    ["Nautilus"] = {
-        ["Chance"] = 0.2,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 400, 800 },
-        ["From"] = "The Depths",
-        ["Price"] = 1802,
-    },
     ["Mullet"] = {
         ["Rarity"] = "Common",
         ["WeightPool"] = { 5, 20 },
@@ -7647,6 +7675,13 @@ return {
         ["Price"] = 54,
         ["From"] = "Ocean",
         ["Chance"] = 60,
+    },
+    ["Sea Bass"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 20, 60 },
+        ["Price"] = 52,
+        ["From"] = "Ocean",
+        ["Chance"] = 75,
     },
     ["Supreme Present"] = {
         ["Chance"] = 0.4,
@@ -7662,12 +7697,12 @@ return {
         ["From"] = "Cultist Lair",
         ["Price"] = 222,
     },
-    ["Handfish"] = {
-        ["Chance"] = 0.01,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 20, 60 },
+    ["Catfish"] = {
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 50, 150 },
+        ["Price"] = 352,
         ["From"] = "Mushgrove",
-        ["Price"] = 3141,
+        ["Chance"] = 20,
     },
     ["Abyssal Slickhead"] = {
         ["Chance"] = 90,
@@ -7676,12 +7711,12 @@ return {
         ["From"] = "Cultist Lair",
         ["Price"] = 51,
     },
-    ["Catfish"] = {
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 50, 150 },
-        ["Price"] = 352,
-        ["From"] = "Mushgrove",
-        ["Chance"] = 20,
+    ["Treble Bass"] = {
+        ["Chance"] = 0.05,
+        ["Rarity"] = "Exotic",
+        ["WeightPool"] = { 10, 45 },
+        ["From"] = "Moosewood",
+        ["Price"] = 5316,
     },
     ["Longnose Chimaera"] = {
         ["Chance"] = 35,
@@ -7697,12 +7732,12 @@ return {
         ["From"] = "Moosewood",
         ["Chance"] = 55,
     },
-    ["White Perch"] = {
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 2, 12 },
-        ["Price"] = 54,
+    ["Swamp Scallop"] = {
+        ["Rarity"] = "Unusual",
+        ["WeightPool"] = { 6, 14 },
+        ["Price"] = 205,
         ["From"] = "Mushgrove",
-        ["Chance"] = 80,
+        ["Chance"] = 40,
     },
     ["Translator Core"] = {
         ["Chance"] = 20,
@@ -7711,19 +7746,19 @@ return {
         ["From"] = "Roslit",
         ["Price"] = 280,
     },
-    ["Swamp Scallop"] = {
-        ["Rarity"] = "Unusual",
-        ["WeightPool"] = { 6, 14 },
-        ["Price"] = 205,
-        ["From"] = "Mushgrove",
-        ["Chance"] = 40,
-    },
     ["Bowfin"] = {
         ["Rarity"] = "Uncommon",
         ["WeightPool"] = { 30, 60 },
         ["Price"] = 110,
         ["From"] = "Mushgrove",
         ["Chance"] = 60,
+    },
+    ["White Perch"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 2, 12 },
+        ["Price"] = 54,
+        ["From"] = "Mushgrove",
+        ["Chance"] = 80,
     },
     ["Mushgrove Crab"] = {
         ["Rarity"] = "Rare",
@@ -7732,12 +7767,12 @@ return {
         ["From"] = "Mushgrove",
         ["Chance"] = 14,
     },
-    ["Treble Bass"] = {
-        ["Chance"] = 0.05,
-        ["Rarity"] = "Exotic",
-        ["WeightPool"] = { 10, 45 },
+    ["Whiptail Catfish"] = {
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 10, 30 },
+        ["Price"] = 1725,
         ["From"] = "Moosewood",
-        ["Price"] = 5316,
+        ["Chance"] = 0.05,
     },
     ["Acanthodii"] = {
         ["Rarity"] = "Unusual",
@@ -7753,12 +7788,12 @@ return {
         ["From"] = "Luminescent Cavern",
         ["Price"] = 25000,
     },
-    ["Whiptail Catfish"] = {
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 10, 30 },
-        ["Price"] = 1725,
+    ["Pike"] = {
+        ["Rarity"] = "Unusual",
+        ["WeightPool"] = { 12, 35 },
+        ["Price"] = 222,
         ["From"] = "Moosewood",
-        ["Chance"] = 0.05,
+        ["Chance"] = 45,
     },
     ["Crystal Frilled Shark"] = {
         ["Chance"] = 3,
@@ -7768,12 +7803,12 @@ return {
         ["From"] = "Crystal Cove",
         ["Price"] = 1500,
     },
-    ["Pike"] = {
-        ["Rarity"] = "Unusual",
-        ["WeightPool"] = { 12, 35 },
-        ["Price"] = 222,
-        ["From"] = "Moosewood",
-        ["Chance"] = 45,
+    ["Pale Tang"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 3, 15 },
+        ["Price"] = 116,
+        ["From"] = "Keepers Altar",
+        ["Chance"] = 55,
     },
     ["Ken"] = {
         ["Chance"] = 19,
@@ -7835,19 +7870,19 @@ return {
         ["From"] = "Moosewood",
         ["Chance"] = 30,
     },
-    ["Pale Tang"] = {
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 3, 15 },
-        ["Price"] = 116,
-        ["From"] = "Keepers Altar",
-        ["Chance"] = 55,
-    },
     ["Sea Mine"] = {
         ["Rarity"] = "Mythical",
         ["WeightPool"] = { 2000, 3250 },
         ["Price"] = 10500,
         ["From"] = "Desolate Deep",
         ["Chance"] = 0.05,
+    },
+    ["Barbed Shark"] = {
+        ["Chance"] = 0.08,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 7000, 9500 },
+        ["From"] = "Desolate Deep",
+        ["Price"] = 2074,
     },
     ["Eyefestation"] = {
         ["Chance"] = 0,
@@ -7862,19 +7897,19 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 11345,
     },
-    ["Barbed Shark"] = {
-        ["Chance"] = 0.08,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 7000, 9500 },
-        ["From"] = "Desolate Deep",
-        ["Price"] = 2074,
-    },
     ["Banditfish"] = {
         ["Rarity"] = "Rare",
         ["WeightPool"] = { 150, 200 },
         ["Price"] = 352,
         ["From"] = "Desolate Deep",
         ["Chance"] = 105,
+    },
+    ["Phantom Ray"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 40, 60 },
+        ["Price"] = 114,
+        ["From"] = "Desolate Deep",
+        ["Chance"] = 162,
     },
     ["Carbon Crate"] = {
         ["Chance"] = 2,
@@ -7904,12 +7939,12 @@ return {
         ["From"] = "Boreal Pines",
         ["Price"] = 220,
     },
-    ["Horseshoe Crab"] = {
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 40, 90 },
-        ["Price"] = 54,
-        ["From"] = "Desolate Deep",
-        ["Chance"] = 90,
+    ["Stormgazer"] = {
+        ["Chance"] = 39,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 280, 340 },
+        ["From"] = "Brine Pool",
+        ["Price"] = 2452,
     },
     ["Spadefish"] = {
         ["Chance"] = 28,
@@ -7956,19 +7991,19 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 9000,
     },
-    ["Stormgazer"] = {
-        ["Chance"] = 39,
-        ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 280, 340 },
-        ["From"] = "Brine Pool",
-        ["Price"] = 2452,
-    },
     ["Dweller Catfish"] = {
         ["Chance"] = 60,
         ["Rarity"] = "Rare",
         ["WeightPool"] = { 100, 160 },
         ["From"] = "Brine Pool",
         ["Price"] = 376,
+    },
+    ["Cosmic Relic"] = {
+        ["Chance"] = 0,
+        ["Rarity"] = "Relic",
+        ["WeightPool"] = { 500, 500 },
+        ["From"] = "None",
+        ["Price"] = 20000,
     },
     ["Bombastic Egg"] = {
         ["Chance"] = 0,
@@ -7984,12 +8019,12 @@ return {
         ["Price"] = 20250,
         ["From"] = "Fischgiving 2",
     },
-    ["Cosmic Relic"] = {
-        ["Chance"] = 0,
+    ["Song of the Deep"] = {
+        ["Chance"] = 0.02,
         ["Rarity"] = "Relic",
-        ["WeightPool"] = { 500, 500 },
+        ["WeightPool"] = { 210, 210 },
         ["From"] = "None",
-        ["Price"] = 20000,
+        ["Price"] = 15000,
     },
     ["Scoria Swordfish"] = {
         ["Chance"] = 45,
@@ -7998,19 +8033,12 @@ return {
         ["From"] = "Scoria Reach",
         ["Price"] = 1450,
     },
-    ["Song of the Deep"] = {
-        ["Chance"] = 0.02,
-        ["Rarity"] = "Relic",
-        ["WeightPool"] = { 210, 210 },
-        ["From"] = "None",
-        ["Price"] = 15000,
-    },
-    ["Lapis Lazuli"] = {
+    ["Moonstone"] = {
         ["Chance"] = 0,
         ["Rarity"] = "Gemstone",
-        ["WeightPool"] = { 4, 14 },
+        ["WeightPool"] = { 5, 28 },
         ["From"] = "Ancient Isle",
-        ["Price"] = 700,
+        ["Price"] = 1000,
     },
     ["Common Crate"] = {
         ["Chance"] = 17,
@@ -8025,6 +8053,13 @@ return {
         ["Price"] = 9,
         ["From"] = "None",
         ["Chance"] = 20,
+    },
+    ["Helicoprion"] = {
+        ["Chance"] = 0.03,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 2500, 4200 },
+        ["From"] = "Ancient Isle",
+        ["Price"] = 3461,
     },
     ["Birgeria"] = {
         ["Rarity"] = "Unusual",
@@ -8068,26 +8103,12 @@ return {
         ["From"] = "Crimson Cavern",
         ["Price"] = 2016,
     },
-    ["Helicoprion"] = {
-        ["Chance"] = 0.03,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 2500, 4200 },
-        ["From"] = "Ancient Isle",
-        ["Price"] = 3461,
-    },
-    ["Scrap Metal"] = {
-        ["Rarity"] = "Trash",
-        ["WeightPool"] = { 10, 50 },
-        ["Price"] = 40,
-        ["From"] = "None",
-        ["Chance"] = 32,
-    },
-    ["Magmatic Hermit Crab"] = {
-        ["Chance"] = 30,
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 40, 48 },
-        ["From"] = "Scoria Reach",
-        ["Price"] = 550,
+    ["Speed Core"] = {
+        ["Chance"] = 0.05,
+        ["Rarity"] = "Exotic",
+        ["WeightPool"] = { 12, 13 },
+        ["From"] = "Sunstone",
+        ["Price"] = 5526,
     },
     ["Ginsu Shark"] = {
         ["Chance"] = 0.13,
@@ -8096,12 +8117,26 @@ return {
         ["From"] = "Ancient Isle",
         ["Price"] = 1879,
     },
+    ["Magmatic Hermit Crab"] = {
+        ["Chance"] = 30,
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 40, 48 },
+        ["From"] = "Scoria Reach",
+        ["Price"] = 550,
+    },
     ["Floppy"] = {
         ["Chance"] = 0.05,
         ["Rarity"] = "Legendary",
         ["WeightPool"] = { 80, 100 },
         ["From"] = "Ancient Isle",
         ["Price"] = 1821,
+    },
+    ["Shipwreck Barracuda"] = {
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 100, 300 },
+        ["Price"] = 1838,
+        ["From"] = "Forsaken Shores",
+        ["Chance"] = 0.1,
     },
     ["Hexeye Snapper"] = {
         ["Chance"] = 60,
@@ -8132,19 +8167,19 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 7500,
     },
-    ["Reefrunner Snapper"] = {
-        ["Chance"] = 35,
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 80, 250 },
-        ["From"] = "Forsaken Shores",
-        ["Price"] = 380,
-    },
     ["Mutated Shark"] = {
         ["Chance"] = 0.05,
         ["Rarity"] = "Mythical",
         ["WeightPool"] = { 2000, 4000 },
         ["From"] = "The Depths",
         ["Price"] = 3132,
+    },
+    ["Ancient Eel"] = {
+        ["Chance"] = 0.4,
+        ["Rarity"] = "Legendary",
+        ["WeightPool"] = { 1000, 2000 },
+        ["From"] = "The Depths",
+        ["Price"] = 1956,
     },
     ["Frostjaw Cod"] = {
         ["Chance"] = 5,
@@ -8174,12 +8209,12 @@ return {
         ["From"] = "Cultist Lair",
         ["Price"] = 50,
     },
-    ["Ancient Eel"] = {
-        ["Chance"] = 0.4,
+    ["Nautilus"] = {
+        ["Chance"] = 0.2,
         ["Rarity"] = "Legendary",
-        ["WeightPool"] = { 1000, 2000 },
+        ["WeightPool"] = { 400, 800 },
         ["From"] = "The Depths",
-        ["Price"] = 1956,
+        ["Price"] = 1802,
     },
     ["Cyclone Mako"] = {
         ["Rarity"] = "Rare",
@@ -8203,13 +8238,6 @@ return {
         ["From"] = "Animals1",
         ["Price"] = 1200,
     },
-    ["Spider Crab"] = {
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 80, 250 },
-        ["Price"] = 330,
-        ["From"] = "The Depths",
-        ["Chance"] = 20,
-    },
     ["Black Dragon Fish"] = {
         ["Rarity"] = "Rare",
         ["WeightPool"] = { 150, 400 },
@@ -8231,6 +8259,13 @@ return {
         ["From"] = "The Depths",
         ["Chance"] = 100,
     },
+    ["Scrap Metal"] = {
+        ["Rarity"] = "Trash",
+        ["WeightPool"] = { 10, 50 },
+        ["Price"] = 40,
+        ["From"] = "None",
+        ["Chance"] = 32,
+    },
     ["Dunkleosteus"] = {
         ["Chance"] = 0.09,
         ["Rarity"] = "Legendary",
@@ -8245,12 +8280,12 @@ return {
         ["From"] = "Sunken Reliquary",
         ["Price"] = 42000,
     },
-    ["Speed Core"] = {
-        ["Chance"] = 0.05,
-        ["Rarity"] = "Exotic",
-        ["WeightPool"] = { 12, 13 },
-        ["From"] = "Sunstone",
-        ["Price"] = 5526,
+    ["Phanerorhynchus"] = {
+        ["Rarity"] = "Rare",
+        ["WeightPool"] = { 600, 1400 },
+        ["Price"] = 345,
+        ["From"] = "Ancient Archives",
+        ["Chance"] = 3,
     },
     ["Sea Leviathan"] = {
         ["Chance"] = 1,
@@ -8259,13 +8294,6 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "Second Sea",
         ["Price"] = 21000,
-    },
-    ["Taco"] = {
-        ["Chance"] = 0,
-        ["Rarity"] = "Special",
-        ["WeightPool"] = { 1, 3 },
-        ["From"] = "Admin-Exclusive",
-        ["Price"] = 10125,
     },
     ["Cathulith"] = {
         ["Chance"] = 7,
@@ -8281,6 +8309,12 @@ return {
         ["From"] = "Archeological Site",
         ["Price"] = 60,
     },
+    ["Mushgrove Algae"] = {
+        ["Chance"] = 40,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 25, 50 },
+        ["Price"] = 50,
+    },
     ["Black Veil Ray"] = {
         ["Chance"] = 60,
         ["Rarity"] = "Limited",
@@ -8288,7 +8322,7 @@ return {
         ["From"] = "Crypt",
         ["Price"] = 110,
     },
-    ["Mushgrove Algae"] = {
+    ["Forsaken Algae"] = {
         ["Chance"] = 40,
         ["Rarity"] = "Limited",
         ["WeightPool"] = { 25, 50 },
@@ -8303,17 +8337,11 @@ return {
         ["Price"] = 7488,
     },
     ["Igneous Pearl"] = {
-        ["Chance"] = 0.2,
+        ["Chance"] = 0.5,
         ["Rarity"] = "Exotic",
         ["WeightPool"] = { 38, 40 },
         ["From"] = "Scoria Reach",
         ["Price"] = 9000,
-    },
-    ["Forsaken Algae"] = {
-        ["Chance"] = 40,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 25, 50 },
-        ["Price"] = 50,
     },
     ["Ancient Fragment"] = {
         ["Rarity"] = "Fragment",
@@ -8321,6 +8349,13 @@ return {
         ["Price"] = 500,
         ["From"] = "Ancient Isle",
         ["Chance"] = 0.01,
+    },
+    ["Lapis Lazuli"] = {
+        ["Chance"] = 0,
+        ["Rarity"] = "Gemstone",
+        ["WeightPool"] = { 4, 14 },
+        ["From"] = "Ancient Isle",
+        ["Price"] = 700,
     },
     ["Amethyst"] = {
         ["Chance"] = 100,
@@ -8336,19 +8371,19 @@ return {
         ["From"] = "None",
         ["Price"] = 75,
     },
-    ["Moonstone"] = {
-        ["Chance"] = 0,
-        ["Rarity"] = "Gemstone",
-        ["WeightPool"] = { 5, 28 },
-        ["From"] = "Ancient Isle",
-        ["Price"] = 1000,
-    },
     ["Void Wood"] = {
         ["Rarity"] = "Legendary",
         ["WeightPool"] = { 1, 2 },
         ["Price"] = 1500,
         ["From"] = "Keepers Altar",
         ["Chance"] = 0.5,
+    },
+    ["Meg's Spine"] = {
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 25, 50 },
+        ["Price"] = 2500,
+        ["From"] = "Ancient Isle",
+        ["Chance"] = 0.05,
     },
     ["Echo Koi"] = {
         ["Chance"] = 26,
@@ -8358,12 +8393,12 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 1200,
     },
-    ["Glacier Swordfish"] = {
-        ["Rarity"] = "Rare",
-        ["WeightPool"] = { 200, 450 },
-        ["Price"] = 345,
+    ["Frostling Goby"] = {
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 12, 28 },
+        ["Price"] = 108,
         ["From"] = "Glacial Grotto",
-        ["Chance"] = 20,
+        ["Chance"] = 65,
     },
     ["Rose Rockfish"] = {
         ["Chance"] = 10,
@@ -8378,13 +8413,6 @@ return {
         ["WeightPool"] = { 25, 40 },
         ["Price"] = 1893,
         ["From"] = "Fischmas 2",
-    },
-    ["Glacial Sturgeon"] = {
-        ["Chance"] = 0.25,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 2500, 5000 },
-        ["From"] = "Cryogenic Canal",
-        ["Price"] = 3294,
     },
     ["Snowback Char"] = {
         ["Rarity"] = "Unusual",
@@ -8407,6 +8435,14 @@ return {
         ["From"] = "Frigid Cavern",
         ["Price"] = 222,
     },
+    ["Squirrelfish"] = {
+        ["Chance"] = 125,
+        ["Rarity"] = "Extinct",
+        ["WeightPool"] = { 18, 50 },
+        ["Worlds"] = { "Sea 1" },
+        ["From"] = "Second Sea",
+        ["Price"] = 80,
+    },
     ["Kissing Gourami"] = {
         ["Chance"] = 30,
         ["Rarity"] = "Limited",
@@ -8420,14 +8456,6 @@ return {
         ["WeightPool"] = { 8, 25 },
         ["From"] = "Coral Bastion",
         ["Price"] = 275,
-    },
-    ["Squirrelfish"] = {
-        ["Chance"] = 125,
-        ["Rarity"] = "Extinct",
-        ["WeightPool"] = { 18, 50 },
-        ["Worlds"] = { "Sea 1" },
-        ["From"] = "Second Sea",
-        ["Price"] = 80,
     },
     ["Icy Tuna"] = {
         ["Rarity"] = "Rare",
@@ -8443,6 +8471,13 @@ return {
         ["From"] = "Overgrowth Caves",
         ["Chance"] = 65,
     },
+    ["Blue Energy Crystal"] = {
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 25, 50 },
+        ["Price"] = 2500,
+        ["From"] = "None",
+        ["Chance"] = 0,
+    },
     ["Pufferfish"] = {
         ["Rarity"] = "Rare",
         ["WeightPool"] = { 5, 20 },
@@ -8450,12 +8485,12 @@ return {
         ["From"] = "Ocean",
         ["Chance"] = 45,
     },
-    ["Glacier Glowfish"] = {
-        ["Chance"] = 0.01,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 80, 150 },
-        ["From"] = "Winter's Edge",
-        ["Price"] = 1800,
+    ["Grand Reef Guardian"] = {
+        ["Chance"] = 0.08,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 400, 800 },
+        ["From"] = "Grand Reef",
+        ["Price"] = 3462,
     },
     ["Yellow Boxfish"] = {
         ["Rarity"] = "Unusual",
@@ -8463,13 +8498,6 @@ return {
         ["Price"] = 230,
         ["From"] = "Roslit",
         ["Chance"] = 18,
-    },
-    ["Burnt Betta"] = {
-        ["Chance"] = 0.05,
-        ["Rarity"] = "Limited",
-        ["WeightPool"] = { 2000, 8000 },
-        ["Price"] = 3000,
-        ["From"] = "Ashfall",
     },
     ["Ember Catfish"] = {
         ["Chance"] = 90,
@@ -8484,6 +8512,13 @@ return {
         ["WeightPool"] = { 600, 1500 },
         ["From"] = "Lucky Event",
         ["Price"] = 10000,
+    },
+    ["Sunny O'Coin"] = {
+        ["Chance"] = 2,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 900, 2100 },
+        ["From"] = "Lucky Event",
+        ["Price"] = 6500,
     },
     ["No Name"] = {
         ["Chance"] = 11,
