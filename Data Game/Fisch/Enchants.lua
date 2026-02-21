@@ -1,4 +1,4 @@
-return {
+local t = {
     ["Enchants"] = {
         ["Cupid"] = {
             ["Description"] = "10% chance for the Sweet mutation, increases Lure Speed by <$Lure$>%, & increases Progress Speed by <$ProgressSpeed$>%",
@@ -206,7 +206,7 @@ return {
             ["Color"] = Color3.fromRGB(223, 165, 64),
             ["StrokeColor"] = Color3.fromRGB(33, 25, 14),
             ["Display"] = "Long",
-            ["LineDistance"] = 50,
+            ["LineDistance"] = 150,
             ["ProgressSpeed"] = 15,
             ["Resilience"] = 35,
             ["RelicGroup"] = "Default"
@@ -319,15 +319,17 @@ return {
             ["Luck"] = 50,
             ["Lure"] = 25,
             ["Mutations"] = {},
-            ["ConditionalBoosts"] = function(p2, _) --[[ Name: ConditionalBoosts ]] --[[ Line: 545 ]]
-                --[[ Upvalues: (copy 1): s_ReplicatedStorage_0 ]]
-                if s_ReplicatedStorage_0.world.weather.Value == "Rain" then
+            ["ConditionalBoosts"] = function(arg1, _): {[any]: any} --[[ Name: ConditionalBoosts ]] --[[ Line: 546 ]]
+                --[[ Upvalues: (copy 1): ReplicatedStorage ]]
+                if ReplicatedStorage.world.weather.Value == "Rain" then
                     return {
-                        ["Luck"] = p2.Luck * 2,
-                        ["Lure"] = p2.Lure * 2,
+                        ["Luck"] = arg1.Luck * 2,
+                        ["Lure"] = arg1.Lure * 2,
                         ["Mutations"] = {}
                     };
                 end;
+
+                return;
             end,
             ["RelicGroup"] = "Default"
         },
@@ -347,15 +349,17 @@ return {
             ["Luck"] = 50,
             ["Lure"] = 20,
             ["ProgressSpeed"] = 10,
-            ["ConditionalBoosts"] = function(p3, _) --[[ Name: ConditionalBoosts ]] --[[ Line: 584 ]]
-                --[[ Upvalues: (copy 1): s_ReplicatedStorage_0 ]]
-                if s_ReplicatedStorage_0.world.weather.Value == "Windy" then
+            ["ConditionalBoosts"] = function(arg2, _): {[any]: any} --[[ Name: ConditionalBoosts ]] --[[ Line: 585 ]]
+                --[[ Upvalues: (copy 1): ReplicatedStorage ]]
+                if ReplicatedStorage.world.weather.Value == "Windy" then
                     return {
-                        ["Luck"] = p3.Luck * 2,
-                        ["Lure"] = p3.Lure * 2,
-                        ["ProgressSpeed"] = p3.ProgressSpeed * 2
+                        ["Luck"] = arg2.Luck * 2,
+                        ["Lure"] = arg2.Lure * 2,
+                        ["ProgressSpeed"] = arg2.ProgressSpeed * 2
                     };
                 end;
+
+                return;
             end,
             ["RelicGroup"] = "Default"
         },
@@ -412,12 +416,14 @@ return {
             ["Display"] = "Abyssal",
             ["WeightBoost"] = 30,
             ["Mutations"] = {},
-            ["ConditionalBoosts"] = function(_, _) --[[ Name: ConditionalBoosts ]] --[[ Line: 683 ]]
+            ["ConditionalBoosts"] = function(_, _): {[any]: any} --[[ Name: ConditionalBoosts ]] --[[ Line: 684 ]]
                 if math.random() <= 0.2 then
                     return {
                         ["WeightBoost"] = -40
                     };
                 end;
+
+                return;
             end,
             ["RelicGroup"] = "Default"
         },
@@ -518,12 +524,14 @@ return {
             ["StrokeColor"] = Color3.fromRGB(49, 49, 49),
             ["Display"] = "Flashline",
             ["ProgressSpeed"] = 15,
-            ["ConditionalBoosts"] = function(_, _) --[[ Name: ConditionalBoosts ]] --[[ Line: 820 ]]
+            ["ConditionalBoosts"] = function(_, _): {[any]: any} --[[ Name: ConditionalBoosts ]] --[[ Line: 821 ]]
                 if math.random(1, 4) == 1 then
                     return {
                         ["ProgressSpeed"] = 100
                     };
                 end;
+
+                return;
             end,
             ["RelicGroup"] = "Default"
         },
@@ -600,13 +608,23 @@ return {
             ["Display"] = "Momentum",
             ["ProgressSpeed"] = 0,
             ["RelicGroup"] = "Default",
-            ["ConditionalBoosts"] = function(_, p4) --[[ Name: ConditionalBoosts ]] --[[ Line: 926 ]]
+            ["ConditionalBoosts"] = function(_, arg3): {[any]: any} --[[ Name: ConditionalBoosts ]] --[[ Line: 927 ]]
                 return {
-                    ["ProgressSpeed"] = p4:GetAttribute("CurrentMomentumBoost") or 0,
-                    ["Lure"] = p4:GetAttribute("CurrentMomentumBoost") or 0,
-                    ["Resilience"] = p4:GetAttribute("CurrentMomentumBoost") or 0
+                    ["ProgressSpeed"] = arg3:GetAttribute("CurrentMomentumBoost") or 0,
+                    ["Lure"] = arg3:GetAttribute("CurrentMomentumBoost") or 0,
+                    ["Resilience"] = arg3:GetAttribute("CurrentMomentumBoost") or 0
                 };
             end
+        },
+        ["Vicious"] = {
+            ["Description"] = "Increases Disturbance by +<$Disturbance$>, & increases Progress Speed by <$ProgressSpeed$>%",
+            ["Color"] = Color3.fromRGB(255, 103, 76),
+            ["StrokeColor"] = Color3.fromRGB(71, 29, 21),
+            ["Display"] = "Vicious",
+            ["Disturbance"] = 1,
+            ["ProgressSpeed"] = 10,
+            ["Secondary"] = true,
+            ["RelicGroup"] = "Cosmic"
         },
         ["Overclocked"] = {
             ["Description"] = "Increases Progress Speed by <$ForcedProgressSpeed$>% for any fish",
@@ -624,9 +642,9 @@ return {
             ["Display"] = "Tenacity",
             ["Secondary"] = true,
             ["RelicGroup"] = "Cosmic",
-            ["ConditionalBoosts"] = function(_, p5) --[[ Name: ConditionalBoosts ]] --[[ Line: 958 ]]
+            ["ConditionalBoosts"] = function(_, arg4): {[any]: any} --[[ Name: ConditionalBoosts ]] --[[ Line: 971 ]]
                 return {
-                    ["ProgressSpeed"] = p5:GetAttribute("TenacityBoost")
+                    ["ProgressSpeed"] = arg4:GetAttribute("TenacityBoost")
                 };
             end
         },
@@ -715,29 +733,23 @@ return {
             ["Display"] = "Wobbly",
             ["Control"] = -0.05,
             ["RelicGroup"] = "Twisted"
+        },
+        ["Restricted"] = {
+            ["Description"] = "Can only be used under specific conditions until relevant quest(s) are completed",
+            ["Color"] = Color3.fromRGB(255, 28, 62),
+            ["StrokeColor"] = Color3.fromRGB(53, 9, 18),
+            ["Display"] = "Restricted",
+            ["FishingPassives"] = {
+                ["Restricted"] = {
+                    ["Pinion\'s Aria"] = {
+                        ["AllowedZones"] = {},
+                        ["BlockMessage"] = "Your Pinion\'s Aria can only fish at Crystal Cove and certain Hunts. Complete the Songstress\' quests to unlock it fully!"
+                    }
+                }
+            },
+            ["RelicGroup"] = "None"
         }
-    },
-    ["GetCurrentBoosts"] = function(p6, p7, p8) --[[ Name: GetCurrentBoosts ]] --[[ Line: 1097 ]]
-        if not p6.Enchants[p7] then
-            return {};
-        end;
-        if not p6.Enchants[p7].ConditionalBoosts then
-            return p6.Enchants[p7];
-        end;
-        local v9 = table.clone(p6.Enchants[p7])
-        for v10, v11 in v9:ConditionalBoosts(p8) or {} do
-            v9[v10] = v11
-        end;
-        return v9;
-    end,
-    ["UpdateDescriptions"] = function(p12) --[[ Name: UpdateDescriptions ]] --[[ Line: 1147 ]]
-        --[[ Upvalues: (copy 1): v_u_1 ]]
-        for _, v13 in p12.Enchants do
-            if not v13._DescriptionTemplate then
-                v13._DescriptionTemplate = v13.Description
-            end;
-            v13.Description = v_u_1:Format(v13._DescriptionTemplate, v13)
-        end;
-    end
+    }
 }
 
+return t
