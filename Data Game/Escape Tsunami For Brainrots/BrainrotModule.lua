@@ -747,13 +747,6 @@ t.MutationColours = {
 }
 t.BrainrotRarities = {}
 t.BrainrotsWithModels = {}
-for _, v12 in ipairs(ReplicatedStorage.Assets.Brainrots:GetChildren()) do
-    local Name = v12.Name
-    for _, v13 in ipairs(v12:GetChildren()) do
-        t.BrainrotRarities[v13.Name] = Name
-        t.BrainrotsWithModels[v13.Name] = true
-    end;
-end;
 
 t.BrainrotRarities["Noobini Infeeny"] = "Infinity"
 t.BrainrotRarities.Anububu = "Infinity"
