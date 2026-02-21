@@ -16,7 +16,7 @@ return {
             ["PriceMultiply"] = 8.65,
             ["Chance"] = 0,
             ["Display"] = "Igneous",
-            ["Color"] = Color3.fromRGB(255, 85, 0)
+            ["Color"] = new(t_4)
         },
         ["Solar"] = {
             ["PriceMultiply"] = 5.3,
@@ -26,7 +26,7 @@ return {
         },
         ["Sweet"] = {
             ["PriceMultiply"] = 7,
-            ["Chance"] = 1,
+            ["Chance"] = 0,
             ["Display"] = "Sweet",
             ["Color"] = Color3.fromRGB(255, 176, 225)
         },
@@ -1269,9 +1269,7 @@ return {
             ["PriceMultiply"] = 4.2,
             ["Chance"] = 0,
             ["Display"] = "Harmonized",
-            ["Color"] = Color3.fromRGB(201, 176, 255),
-            ["Untradeable"] = true,
-            ["BlockCatchMessage"] = true
+            ["Color"] = ColorSequence.new(Color3.fromRGB(178, 202, 255), Color3.fromRGB(218, 175, 255))
         },
         ["Sinister"] = {
             ["PriceMultiply"] = 2.9,
