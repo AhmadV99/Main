@@ -168,4 +168,21 @@ return {
       Icon = 136208327751718,
     },
   },
+
+  [9509842868] = { -- Garden Horizons
+    ["Linkvertise"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-jOqPFgJvjYNe",
+      Icon = 122637139040192,
+    },
+
+    ["LootLabs"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-cNYdzGiBsPbi",
+      Icon = 81598390322167,
+    },
+
+    ["Admint.club"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
+      Icon = 136208327751718,
+    },
+  },
 }
