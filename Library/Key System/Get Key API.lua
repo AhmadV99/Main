@@ -16,23 +16,6 @@ return {
     },
   },
 
-  [7326934954] = { -- 99 Nights In The Forest 
-    ["Linkvertise"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-tQKVHBHFRhIN",
-      Icon = 122637139040192,
-    },
-
-    ["LootLabs"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-cNYdzGiBsPbi",
-      Icon = 81598390322167,
-    },
-
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
-    },
-  },
-
   [8316902627] = { -- Plants vs brainrots
     ["Linkvertise"] = {
       Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-jOqPFgJvjYNe",
@@ -188,12 +171,12 @@ return {
 
   [994732206] = { -- Blox Fruits
     ["Linkvertise"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-jOqPFgJvjYNe",
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-tQKVHBHFRhIN",
       Icon = 122637139040192,
     },
 
     ["LootLabs"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-tQKVHBHFRhIN",
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-cNYdzGiBsPbi",
       Icon = 81598390322167,
     },
 
