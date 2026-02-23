@@ -171,12 +171,12 @@ return {
 
   [994732206] = { -- Blox Fruits
     ["Linkvertise"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-tQKVHBHFRhIN",
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-jOqPFgJvjYNe",
       Icon = 122637139040192,
     },
 
     ["LootLabs"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-cNYdzGiBsPbi",
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-tQKVHBHFRhIN",
       Icon = 81598390322167,
     },
 
