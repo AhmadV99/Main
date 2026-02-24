@@ -10,9 +10,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 
@@ -27,9 +27,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 
@@ -44,9 +44,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 
@@ -61,9 +61,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 
@@ -78,9 +78,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 
@@ -95,9 +95,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 
@@ -112,9 +112,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 
@@ -129,9 +129,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 
@@ -146,9 +146,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 
@@ -163,9 +163,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 
@@ -180,9 +180,9 @@ return {
       Icon = 81598390322167,
     },
 
-    ["Admint.club"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_admint_club-jQqTbtWgCdeQ",
-      Icon = 136208327751718,
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
     },
   },
 }
