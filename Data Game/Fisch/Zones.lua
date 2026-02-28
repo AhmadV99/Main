@@ -1,4 +1,3 @@
-
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 return {
@@ -11,14 +10,33 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 1,
+        ["Disturbs"] = "WyvernHunt",
         ["RarityLuckFactorBoosts"] = {
             ["Mythical"] = 0.5,
             ["Exotic"] = 0.5,
             ["Secret"] = 0.5
         },
-        ["CustomCondition"] = function(_, arg1, _): boolean --[[ Name: CustomCondition ]] --[[ Line: 41 ]]
+        ["CustomCondition"] = function(_, arg1, _): boolean --[[ Name: CustomCondition ]] --[[ Line: 42 ]]
             local AboveTheClouds = arg1.Data.NewFormat.TimeTrials.AboveTheClouds
             if AboveTheClouds and (AboveTheClouds.CompleteCount and AboveTheClouds.CompleteCount >= 1) then
+                return true;
+            else
+                return false, "You must complete the gliding challenge before fishing here.";
+            end;
+        end
+    },
+    ["Wyvern Hunt"] = {
+        ["Pool"] = {},
+        ["CantBeWormholed"] = true,
+        ["Priority"] = 2,
+        ["RarityLuckFactorBoosts"] = {
+            ["Mythical"] = 0.5,
+            ["Exotic"] = 0.5,
+            ["Secret"] = 0.5
+        },
+        ["CustomCondition"] = function(_, arg2, _): boolean --[[ Name: CustomCondition ]] --[[ Line: 70 ]]
+            local AboveTheClouds_1 = arg2.Data.NewFormat.TimeTrials.AboveTheClouds
+            if AboveTheClouds_1 and (AboveTheClouds_1.CompleteCount and AboveTheClouds_1.CompleteCount >= 1) then
                 return true;
             else
                 return false, "You must complete the gliding challenge before fishing here.";
@@ -149,8 +167,8 @@ return {
         ["CantBeWormholed"] = true,
         ["Priority"] = 1,
         ["Disturbs"] = "Plesiosaur",
-        ["CustomCondition"] = function(_, arg2): boolean --[[ Name: CustomCondition ]] --[[ Line: 603 ]]
-            if arg2.Data.NewFormat.Tidefall.Obelisks.GateOpen then
+        ["CustomCondition"] = function(_, arg3): boolean --[[ Name: CustomCondition ]] --[[ Line: 632 ]]
+            if arg3.Data.NewFormat.Tidefall.Obelisks.GateOpen then
                 return true;
             else
                 return false, "You have not yet unlocked this area.";
@@ -184,8 +202,8 @@ return {
         ["Pool"] = {},
         ["Priority"] = 4,
         ["CantBeWormholed"] = true,
-        ["CustomCondition"] = function(_, arg3): boolean --[[ Name: CustomCondition ]] --[[ Line: 740 ]]
-            if arg3.Data.NewFormat.Tidefall.Obelisks.GateOpen then
+        ["CustomCondition"] = function(_, arg4): boolean --[[ Name: CustomCondition ]] --[[ Line: 769 ]]
+            if arg4.Data.NewFormat.Tidefall.Obelisks.GateOpen then
                 return true;
             else
                 return false, "You have not yet unlocked this area.";
@@ -232,13 +250,13 @@ return {
         ["Pool"] = {},
         ["Priority"] = 106,
         ["CantBeWormholed"] = true,
-        ["CustomCondition"] = function(arg4, _, arg5): boolean --[[ Name: CustomCondition ]] --[[ Line: 991 ]]
+        ["CustomCondition"] = function(arg5, _, arg6): boolean --[[ Name: CustomCondition ]] --[[ Line: 1020 ]]
             --[[ Upvalues: (copy 1): ReplicatedStorage ]]
-            if not arg4:GetAttribute("CanCatchCryoshock") or ReplicatedStorage.world.weather.Value ~= "Frost_Moon" then
+            if not arg5:GetAttribute("CanCatchCryoshock") or ReplicatedStorage.world.weather.Value ~= "Frost_Moon" then
                 return false, "You have not yet awakened the serpent.";
             end;
 
-            local v1 = arg5:FindFirstChild("Stats")
+            local v1 = arg6:FindFirstChild("Stats")
             if v1 then
                 v1 = v1:FindFirstChild("rod")
             end;
@@ -247,7 +265,7 @@ return {
                 return false, "Your rod lacks the magic of Fischmas...";
             end;
 
-            local v2 = arg5:WaitForChild("Rods"):FindFirstChild(v1.Value)
+            local v2 = arg6:WaitForChild("Rods"):FindFirstChild(v1.Value)
             if not v2 then
                 return false, "Your rod lacks the magic of Fischmas...";
             end;
@@ -272,8 +290,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 2,
-        ["CustomCondition"] = function(_, arg6): boolean --[[ Name: CustomCondition ]] --[[ Line: 1084 ]]
-            if arg6.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
+        ["CustomCondition"] = function(_, arg7): boolean --[[ Name: CustomCondition ]] --[[ Line: 1113 ]]
+            if arg7.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
                 return true;
             else
                 return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>.";
@@ -284,8 +302,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 2,
-        ["CustomCondition"] = function(_, arg7): boolean --[[ Name: CustomCondition ]] --[[ Line: 1110 ]]
-            for _, v3 in arg7.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
+        ["CustomCondition"] = function(_, arg8): boolean --[[ Name: CustomCondition ]] --[[ Line: 1139 ]]
+            for _, v3 in arg8.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
                 if not v3 then
                     return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>.";
                 end;
@@ -298,9 +316,9 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 4,
-        ["CustomCondition"] = function(_, arg8): boolean --[[ Name: CustomCondition ]] --[[ Line: 1134 ]]
+        ["CustomCondition"] = function(_, arg9): boolean --[[ Name: CustomCondition ]] --[[ Line: 1163 ]]
             local n_v_0 = 0
-            for _, v4 in arg8.Data.NewFormat.LostJungle.Runes.Placed do
+            for _, v4 in arg9.Data.NewFormat.LostJungle.Runes.Placed do
                 if v4 then
                     n_v_0 += 1
                 end;
@@ -317,7 +335,7 @@ return {
         ["Pool"] = {},
         ["Priority"] = 4,
         ["CantBeWormholed"] = true,
-        ["CustomCondition"] = function(_, _): boolean --[[ Name: CustomCondition ]] --[[ Line: 1163 ]]
+        ["CustomCondition"] = function(_, _): boolean --[[ Name: CustomCondition ]] --[[ Line: 1192 ]]
             return true;
         end
     },
@@ -364,8 +382,8 @@ return {
         ["CantBeWormholed"] = false,
         ["Priority"] = 2,
         ["Disturbs"] = "ColossalAncientDragon",
-        ["CustomCondition"] = function(_, arg9): boolean --[[ Name: CustomCondition ]] --[[ Line: 1316 ]]
-            if arg9.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
+        ["CustomCondition"] = function(_, arg10): boolean --[[ Name: CustomCondition ]] --[[ Line: 1345 ]]
+            if arg10.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
                 return true;
             else
                 return false, "You must unlock the Crimson Cavern before fishing here.";
@@ -376,8 +394,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = false,
         ["Priority"] = 2,
-        ["CustomCondition"] = function(_, arg10): boolean --[[ Name: CustomCondition ]] --[[ Line: 1346 ]]
-            if arg10.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
+        ["CustomCondition"] = function(_, arg11): boolean --[[ Name: CustomCondition ]] --[[ Line: 1375 ]]
+            if arg11.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
                 return true;
             else
                 return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>.";
@@ -388,8 +406,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = false,
         ["Priority"] = 2,
-        ["CustomCondition"] = function(_, arg11): boolean --[[ Name: CustomCondition ]] --[[ Line: 1372 ]]
-            if arg11.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
+        ["CustomCondition"] = function(_, arg12): boolean --[[ Name: CustomCondition ]] --[[ Line: 1401 ]]
+            if arg12.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
                 return true;
             else
                 return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>.";
@@ -400,8 +418,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = false,
         ["Priority"] = 2,
-        ["CustomCondition"] = function(_, arg12): boolean --[[ Name: CustomCondition ]] --[[ Line: 1397 ]]
-            for _, v5 in arg12.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
+        ["CustomCondition"] = function(_, arg13): boolean --[[ Name: CustomCondition ]] --[[ Line: 1426 ]]
+            for _, v5 in arg13.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
                 if not v5 then
                     return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>.";
                 end;
@@ -415,8 +433,8 @@ return {
         ["CantBeWormholed"] = false,
         ["Priority"] = 2,
         ["Disturbs"] = "LeviathanHunt",
-        ["CustomCondition"] = function(_, arg13): boolean --[[ Name: CustomCondition ]] --[[ Line: 1427 ]]
-            if arg13.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+        ["CustomCondition"] = function(_, arg14): boolean --[[ Name: CustomCondition ]] --[[ Line: 1456 ]]
+            if arg14.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
                 return true;
             else
                 return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>.";
@@ -427,8 +445,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 3,
-        ["CustomCondition"] = function(_, arg14): boolean --[[ Name: CustomCondition ]] --[[ Line: 1454 ]]
-            if arg14.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+        ["CustomCondition"] = function(_, arg15): boolean --[[ Name: CustomCondition ]] --[[ Line: 1483 ]]
+            if arg15.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
                 return true;
             else
                 return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>.";
@@ -439,8 +457,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 3,
-        ["CustomCondition"] = function(_, arg15): boolean --[[ Name: CustomCondition ]] --[[ Line: 1481 ]]
-            if arg15.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+        ["CustomCondition"] = function(_, arg16): boolean --[[ Name: CustomCondition ]] --[[ Line: 1510 ]]
+            if arg16.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
                 return true;
             else
                 return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>.";
@@ -456,12 +474,12 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 3,
-        ["CustomCondition"] = function(_, _, arg16): boolean --[[ Name: CustomCondition ]] --[[ Line: 1535 ]]
-            if arg16 then
-                arg16 = arg16:FindFirstChild("Stats")
+        ["CustomCondition"] = function(_, _, arg17): boolean --[[ Name: CustomCondition ]] --[[ Line: 1564 ]]
+            if arg17 then
+                arg17 = arg17:FindFirstChild("Stats")
             end;
 
-            if arg16 and (arg16:FindFirstChild("realLevel") and arg16.realLevel.Value >= 25) then
+            if arg17 and (arg17:FindFirstChild("realLevel") and arg17.realLevel.Value >= 25) then
                 return true;
             else
                 return false, "You must reach Level 25 before fishing here.";
@@ -542,8 +560,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 3,
-        ["CustomCondition"] = function(_, arg17): boolean --[[ Name: CustomCondition ]] --[[ Line: 2133 ]]
-            if arg17.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
+        ["CustomCondition"] = function(_, arg18): boolean --[[ Name: CustomCondition ]] --[[ Line: 2162 ]]
+            if arg18.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
                 return true;
             else
                 return false, "You must unlock the Crimson Cavern before fishing here.";
@@ -653,8 +671,8 @@ return {
         ["Pool"] = {},
         ["Priority"] = 2,
         ["Disturbs"] = "MoonlitMirage",
-        ["CustomCondition"] = function(_, _, arg18): boolean --[[ Name: CustomCondition ]] --[[ Line: 2925 ]]
-            if arg18:FindFirstChild("Cache") and arg18.Cache:FindFirstChild("Door.TheDepthsGate") then
+        ["CustomCondition"] = function(_, _, arg19): boolean --[[ Name: CustomCondition ]] --[[ Line: 2954 ]]
+            if arg19:FindFirstChild("Cache") and arg19.Cache:FindFirstChild("Door.TheDepthsGate") then
                 return true;
             else
                 return false, "You must unlock the gate to The Depths before fishing here.";
@@ -665,8 +683,8 @@ return {
         ["Pool"] = {},
         ["Priority"] = 1,
         ["Disturbs"] = "DepthsAbsoluteDarkness",
-        ["CustomCondition"] = function(_, _, arg19): boolean --[[ Name: CustomCondition ]] --[[ Line: 2967 ]]
-            if arg19:FindFirstChild("Cache") and arg19.Cache:FindFirstChild("Door.TheDepthsGate") then
+        ["CustomCondition"] = function(_, _, arg20): boolean --[[ Name: CustomCondition ]] --[[ Line: 2996 ]]
+            if arg20:FindFirstChild("Cache") and arg20.Cache:FindFirstChild("Door.TheDepthsGate") then
                 return true;
             else
                 return false, "You must unlock the gate to The Depths before fishing here.";
@@ -676,8 +694,8 @@ return {
     ["Crystal Cove"] = {
         ["Pool"] = {},
         ["Priority"] = 1,
-        ["CustomCondition"] = function(_, _, arg20): boolean --[[ Name: CustomCondition ]] --[[ Line: 3002 ]]
-            if arg20:FindFirstChild("Cache") and arg20.Cache:FindFirstChild("Door.TheDepthsGate") then
+        ["CustomCondition"] = function(_, _, arg21): boolean --[[ Name: CustomCondition ]] --[[ Line: 3031 ]]
+            if arg21:FindFirstChild("Cache") and arg21.Cache:FindFirstChild("Door.TheDepthsGate") then
                 return true;
             else
                 return false, "You must unlock the gate to The Depths before fishing here.";
@@ -866,8 +884,8 @@ return {
     ["Mineshaft"] = {
         ["Pool"] = {},
         ["Priority"] = 3,
-        ["CustomCondition"] = function(_, arg21): boolean --[[ Name: CustomCondition ]] --[[ Line: 4216 ]]
-            if arg21.Data.NewFormat.SunstoneExpansion.MerlinQuestProgress < 3 then
+        ["CustomCondition"] = function(_, arg22): boolean --[[ Name: CustomCondition ]] --[[ Line: 4245 ]]
+            if arg22.Data.NewFormat.SunstoneExpansion.MerlinQuestProgress < 3 then
                 return false, "You must complete Merlin\'s quest before fishing here.";
             else
                 return true;
@@ -1074,8 +1092,8 @@ return {
         ["Pool"] = {},
         ["Disturbs"] = "KrakenHunt",
         ["Priority"] = 1,
-        ["CustomCondition"] = function(_, _, arg22): boolean --[[ Name: CustomCondition ]] --[[ Line: 5366 ]]
-            if arg22:FindFirstChild("Cache") and arg22.Cache:FindFirstChild("Door.ZeusPuzzleDoor") then
+        ["CustomCondition"] = function(_, _, arg23): boolean --[[ Name: CustomCondition ]] --[[ Line: 5395 ]]
+            if arg23:FindFirstChild("Cache") and arg23.Cache:FindFirstChild("Door.ZeusPuzzleDoor") then
                 return true;
             else
                 return false, "You must complete the Zeus Trials before fishing here.";
@@ -1086,8 +1104,8 @@ return {
         ["Pool"] = {},
         ["Disturbs"] = "KrakenHunt",
         ["Priority"] = 1,
-        ["CustomCondition"] = function(_, _, arg23): boolean --[[ Name: CustomCondition ]] --[[ Line: 5418 ]]
-            if arg23:FindFirstChild("Cache") and arg23.Cache:FindFirstChild("Door.PoseidonPuzzleDoor") then
+        ["CustomCondition"] = function(_, _, arg24): boolean --[[ Name: CustomCondition ]] --[[ Line: 5447 ]]
+            if arg24:FindFirstChild("Cache") and arg24.Cache:FindFirstChild("Door.PoseidonPuzzleDoor") then
                 return true;
             else
                 return false, "You must complete the Poseidon Trial before fishing here.";
@@ -1098,8 +1116,8 @@ return {
         ["Pool"] = {},
         ["Disturbs"] = "KrakenHunt",
         ["Priority"] = 1,
-        ["CustomCondition"] = function(_, _, arg24): boolean --[[ Name: CustomCondition ]] --[[ Line: 5475 ]]
-            if arg24:FindFirstChild("Cache") and arg24.Cache:FindFirstChild("Door.SunkenDepthDoor") then
+        ["CustomCondition"] = function(_, _, arg25): boolean --[[ Name: CustomCondition ]] --[[ Line: 5504 ]]
+            if arg25:FindFirstChild("Cache") and arg25.Cache:FindFirstChild("Door.SunkenDepthDoor") then
                 return true;
             else
                 return false, "You must unlock the Sunken Depths before fishing here.";
@@ -1110,8 +1128,8 @@ return {
         ["Pool"] = {},
         ["Disturbs"] = "KrakenHunt",
         ["Priority"] = 1,
-        ["CustomCondition"] = function(_, _, arg25): boolean --[[ Name: CustomCondition ]] --[[ Line: 5532 ]]
-            if arg25:FindFirstChild("Cache") and arg25.Cache:FindFirstChild("Door.EtherealAbyssDoor") then
+        ["CustomCondition"] = function(_, _, arg26): boolean --[[ Name: CustomCondition ]] --[[ Line: 5561 ]]
+            if arg26:FindFirstChild("Cache") and arg26.Cache:FindFirstChild("Door.EtherealAbyssDoor") then
                 return true;
             else
                 return false, "You must unlock the Ethereal Abyss before fishing here.";
@@ -1122,8 +1140,8 @@ return {
         ["Pool"] = {},
         ["Disturbs"] = "KrakenHunt",
         ["Priority"] = 1,
-        ["CustomCondition"] = function(_, _, arg26): boolean --[[ Name: CustomCondition ]] --[[ Line: 5582 ]]
-            if arg26:FindFirstChild("Cache") and arg26.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+        ["CustomCondition"] = function(_, _, arg27): boolean --[[ Name: CustomCondition ]] --[[ Line: 5611 ]]
+            if arg27:FindFirstChild("Cache") and arg27.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
                 return true;
             else
                 return false, "You must unlock the Kraken Pool before fishing here.";
@@ -1134,8 +1152,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 1,
-        ["CustomCondition"] = function(_, _, arg27): boolean --[[ Name: CustomCondition ]] --[[ Line: 5633 ]]
-            if arg27:FindFirstChild("Cache") and arg27.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+        ["CustomCondition"] = function(_, _, arg28): boolean --[[ Name: CustomCondition ]] --[[ Line: 5662 ]]
+            if arg28:FindFirstChild("Cache") and arg28.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
                 return true;
             else
                 return false, "You must unlock the Kraken Pool before fishing here.";
@@ -1146,8 +1164,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 1,
-        ["CustomCondition"] = function(_, _, arg28): boolean --[[ Name: CustomCondition ]] --[[ Line: 5684 ]]
-            if arg28:FindFirstChild("Cache") and arg28.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+        ["CustomCondition"] = function(_, _, arg29): boolean --[[ Name: CustomCondition ]] --[[ Line: 5713 ]]
+            if arg29:FindFirstChild("Cache") and arg29.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
                 return true;
             else
                 return false, "You must unlock the Kraken Pool before fishing here.";
@@ -1183,8 +1201,8 @@ return {
         ["CantBeWormholed"] = false,
         ["Priority"] = 3,
         ["Disturbs"] = "ScyllaHunt",
-        ["CustomCondition"] = function(_, _, arg29): boolean --[[ Name: CustomCondition ]] --[[ Line: 5820 ]]
-            if arg29:FindFirstChild("Cache") and arg29.Cache:FindFirstChild("ScyllaBossfight") then
+        ["CustomCondition"] = function(_, _, arg30): boolean --[[ Name: CustomCondition ]] --[[ Line: 5849 ]]
+            if arg30:FindFirstChild("Cache") and arg30.Cache:FindFirstChild("ScyllaBossfight") then
                 return true;
             else
                 return false, "You must complete the Scylla bossfight to fish here.";
@@ -1195,8 +1213,8 @@ return {
         ["Pool"] = {},
         ["CantBeWormholed"] = true,
         ["Priority"] = 4,
-        ["CustomCondition"] = function(_, _, arg30): boolean --[[ Name: CustomCondition ]] --[[ Line: 5854 ]]
-            if arg30:FindFirstChild("Cache") and arg30.Cache:FindFirstChild("ScyllaBossfight") then
+        ["CustomCondition"] = function(_, _, arg31): boolean --[[ Name: CustomCondition ]] --[[ Line: 5883 ]]
+            if arg31:FindFirstChild("Cache") and arg31.Cache:FindFirstChild("ScyllaBossfight") then
                 return true;
             else
                 return false, "You must complete the Scylla bossfight to fish here.";
@@ -1258,7 +1276,7 @@ return {
         ["Pool"] = {},
         ["Priority"] = 3,
         ["CantBeWormholed"] = false,
-        ["CustomCondition"] = function(_, _): boolean --[[ Name: CustomCondition ]] --[[ Line: 6147 ]]
+        ["CustomCondition"] = function(_, _): boolean --[[ Name: CustomCondition ]] --[[ Line: 6176 ]]
             --[[ Upvalues: (copy 1): ReplicatedStorage ]]
             if ReplicatedStorage:GetAttribute("BlueMoonEvent") == true then
                 return true;
