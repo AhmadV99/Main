@@ -1,4 +1,5 @@
 local t = {}
+
 t.ClassNames = {
     "Common",
     "Uncommon",
@@ -125,6 +126,7 @@ t.BrainrotNames = {
     "Tartarughi Attrezzini",
     "Kissarini Heartini",
     "Scaldarino Derpino",
+    "Tostino Flambante",
     "Job Job Job Sahur",
     "Dug Dug Dug",
     "Bisonte Giuppitere",
@@ -142,6 +144,9 @@ t.BrainrotNames = {
     "Polpo Semaforini",
     "Cioccolatone Draghettone",
     "Ketupastro Infernetto",
+    "La Vaca Nebulosa Frostina",
+    "La Bruma Celta",
+    "Gelato Pinguino",
     "Bulbito Bandito Traktorito",
     "Burgerini Bearini",
     "Strawberry Elephant",
@@ -158,6 +163,8 @@ t.BrainrotNames = {
     "Pastapot Infernotto",
     "Draculini Meowlini",
     "Don Magmito",
+    "Cornettino Fuaco",
+    "Crostina Gelifio",
     "Noobini Infeeny",
     "Anububu",
     "Meta Technetta",
@@ -285,7 +292,8 @@ t.Chances = {
         ["Marietti Frigo"] = 0.0015625,
         ["Tartarughi Attrezzini"] = 0.0625,
         ["Kissarini Heartini"] = 0.00390625,
-        ["Scaldarino Derpino"] = 0.0026041666666666665
+        ["Scaldarino Derpino"] = 0.0026041666666666665,
+        ["Tostino Flambante"] = 0.001953125
     },
     ["Celestial"] = {
         ["Job Job Job Sahur"] = 0.5,
@@ -304,7 +312,10 @@ t.Chances = {
         ["Rattini Machini"] = 0.0026041666666666665,
         ["Polpo Semaforini"] = 0.08333333333333333,
         ["Cioccolatone Draghettone"] = 0.0028089887640449437,
-        ["Ketupastro Infernetto"] = 0.0078125
+        ["Ketupastro Infernetto"] = 0.0078125,
+        ["La Vaca Nebulosa Frostina"] = 0.00625,
+        ["La Bruma Celta"] = 0.0026041666666666665,
+        ["Gelato Pinguino"] = 0.002232142857142857
     },
     ["Divine"] = {
         ["Bulbito Bandito Traktorito"] = 0.2,
@@ -322,7 +333,9 @@ t.Chances = {
         ["Explodini Cataclismi"] = 0.010416666666666666,
         ["Pastapot Infernotto"] = 0.0026041666666666665,
         ["Draculini Meowlini"] = 0.0008333333333333334,
-        ["Don Magmito"] = 0.0002
+        ["Don Magmito"] = 0.0002,
+        ["Cornettino Fuaco"] = 0.00625,
+        ["Crostina Gelifio"] = 0.0007142857142857143
     },
     ["Infinity"] = {
         ["Noobini Infeeny"] = 1.000001000001e-6,
@@ -466,6 +479,7 @@ t.IconIDs = {
     ["Tartarughi Attrezzini"] = 123,
     ["Kissarini Heartini"] = 123,
     ["Scaldarino Derpino"] = 123,
+    ["Tostino Flambante"] = 123,
     ["Job Job Job Sahur"] = 123,
     ["Dug Dug Dug"] = 123,
     ["Bisonte Giuppitere"] = 123,
@@ -483,6 +497,9 @@ t.IconIDs = {
     ["Polpo Semaforini"] = 123,
     ["Cioccolatone Draghettone"] = 123,
     ["Ketupastro Infernetto"] = 123,
+    ["La Vaca Nebulosa Frostina"] = 123,
+    ["La Bruma Celta"] = 123,
+    ["Gelato Pinguino"] = 123,
     ["Bulbito Bandito Traktorito"] = 123,
     ["Burgerini Bearini"] = 123,
     ["Strawberry Elephant"] = 123,
@@ -499,6 +516,8 @@ t.IconIDs = {
     ["Pastapot Infernotto"] = 123,
     ["Draculini Meowlini"] = 123,
     ["Don Magmito"] = 123,
+    ["Cornettino Fuaco"] = 123,
+    ["Crostina Gelifio"] = 123,
     ["Noobini Infeeny"] = 140171735291415,
     ["Anububu"] = 123,
     ["Meta Technetta"] = 123,
@@ -612,6 +631,7 @@ t.Rates = {
     ["Tartarughi Attrezzini"] = 1024999.9999999999,
     ["Kissarini Heartini"] = 1750000,
     ["Scaldarino Derpino"] = 2350000,
+    ["Tostino Flambante"] = 2550000,
     ["Job Job Job Sahur"] = 1500000,
     ["Dug Dug Dug"] = 1600000,
     ["Bisonte Giuppitere"] = 1700000,
@@ -629,6 +649,9 @@ t.Rates = {
     ["Polpo Semaforini"] = 2150000,
     ["Cioccolatone Draghettone"] = 3000000,
     ["Ketupastro Infernetto"] = 3100000,
+    ["La Vaca Nebulosa Frostina"] = 3250000,
+    ["La Bruma Celta"] = 3350000,
+    ["Gelato Pinguino"] = 3450000,
     ["Bulbito Bandito Traktorito"] = 3000000,
     ["Burgerini Bearini"] = 3500000,
     ["Strawberry Elephant"] = 5000000,
@@ -644,7 +667,9 @@ t.Rates = {
     ["Explodini Cataclismi"] = 6500000,
     ["Pastapot Infernotto"] = 8250000,
     ["Draculini Meowlini"] = 9500000,
-    ["Don Magmito"] = 10000000,
+    ["Don Magmito"] = 15000000,
+    ["Cornettino Fuaco"] = 7250000,
+    ["Crostina Gelifio"] = 10250000,
     ["Noobini Infeeny"] = 10000000,
     ["Anububu"] = 15000000,
     ["Meta Technetta"] = 35000000,
@@ -698,6 +723,8 @@ t.MutationMultipliers = {
     ["Money"] = 3.888,
     ["Candy"] = 3.95,
     ["Doom"] = 3.95,
+    ["Fire"] = 4,
+    ["Ice"] = 4,
     ["Gamer"] = 4,
     ["Hacker"] = 5,
     ["Lucky"] = 8
@@ -743,7 +770,9 @@ t.MutationColours = {
     ["Lucky"] = Color3.new(0, 1, 0.415),
     ["Money"] = Color3.fromRGB(255, 255, 0),
     ["Candy"] = Color3.fromRGB(247, 85, 234),
-    ["Doom"] = Color3.fromRGB(255, 120, 0)
+    ["Doom"] = Color3.fromRGB(255, 120, 0),
+    ["Fire"] = Color3.fromRGB(255, 80, 0),
+    ["Ice"] = Color3.fromRGB(100, 200, 255)
 }
 t.BrainrotRarities = {}
 t.BrainrotsWithModels = {}
@@ -765,6 +794,12 @@ t.BrainrotRarities["Pastapot Infernotto"] = "Divine"
 t.BrainrotRarities["Draculini Meowlini"] = "Divine"
 t.BrainrotRarities.Magmew = "Infinity"
 t.BrainrotRarities["Don Magmito"] = "Divine"
+t.BrainrotRarities["Tostino Flambante"] = "Secret"
+t.BrainrotRarities["La Vaca Nebulosa Frostina"] = "Celestial"
+t.BrainrotRarities["La Bruma Celta"] = "Celestial"
+t.BrainrotRarities["Gelato Pinguino"] = "Celestial"
+t.BrainrotRarities["Cornettino Fuaco"] = "Divine"
+t.BrainrotRarities["Crostina Gelifio"] = "Divine"
 t.IdleAnimations = {
     ["Bulbito Bandito Traktorito"] = 106146983860098,
     ["Strawberry Elephant"] = 113141781342356,
@@ -791,6 +826,14 @@ t.IdleAnimations = {
     ["Rubichetto Cubini"] = 118042376865629,
     ["Anububu"] = 72525577503169,
     ["Meta Technetta"] = 80827254566997,
+    ["Boneca Ambalabu"] = 70545668338679,
+    ["Trenostruzzo Turbo 3000"] = 92264963362867,
+    ["Los Combinasionas"] = 122534341520313,
+    ["Burbaloni Luliloli"] = 94645105722661,
+    ["Pipi Corni"] = 78751006960254,
+    ["Svinino Bombondino"] = 98616041497302,
+    ["Tim Cheese"] = 73296803268437,
+    ["Udin Din Din Dun"] = 133206379149027,
     ["Gatti Marshmallini"] = 123157482741909,
     ["Tartarughi Attrezzini"] = 123195588930561,
     ["Kissarini Heartini"] = 132370433669774,
@@ -803,6 +846,14 @@ t.IdleAnimations = {
     ["Explodini Cataclismi"] = 94643850187622,
     ["Ketupastro Infernetto"] = 116238553281937,
     ["Draculini Meowlini"] = 86107459558022,
-    ["Magmew"] = 83447204203054
+    ["Magmew"] = 83447204203054,
+    ["Don Magmito"] = 81901745991671,
+    ["Crostina Gelifio"] = 104036814124370,
+    ["Tostino Flambante"] = 79710515141634,
+    ["La Vaca Nebulosa Frostina"] = 72900811850699,
+    ["Gelato Pinguino"] = 72511414570361,
+    ["Cornettino Fuaco"] = 90986983483182,
+    ["La Bruma Celta"] = 137728531300293
 }
+
 return t;
