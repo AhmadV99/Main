@@ -4479,6 +4479,13 @@ return {
         ["From"] = "Lost Jungle",
         ["Price"] = 50000,
     },
+    ["Anchovy"] = {
+        ["Rarity"] = "Common",
+        ["WeightPool"] = { 1, 3 },
+        ["Price"] = 50,
+        ["From"] = "Moosewood",
+        ["Chance"] = 100,
+    },
     ["Carrot Minnow"] = {
         ["Chance"] = 70,
         ["Rarity"] = "Uncommon",
@@ -4487,12 +4494,12 @@ return {
         ["From"] = "Carrot Garden",
         ["Price"] = 103,
     },
-    ["Anchovy"] = {
-        ["Rarity"] = "Common",
-        ["WeightPool"] = { 1, 3 },
-        ["Price"] = 50,
-        ["From"] = "Moosewood",
-        ["Chance"] = 100,
+    ["Isonade"] = {
+        ["Chance"] = 0.1,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 6000, 13000 },
+        ["From"] = "Vertigo",
+        ["Price"] = 3404,
     },
     ["Flying Pufferfish"] = {
         ["Chance"] = 12,
@@ -5190,12 +5197,12 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 480,
     },
-    ["Isonade"] = {
-        ["Chance"] = 0.1,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 6000, 13000 },
-        ["From"] = "Vertigo",
-        ["Price"] = 3404,
+    ["Wyvern"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Exotic",
+        ["WeightPool"] = { 8000, 10000 },
+        ["From"] = "Above the Clouds",
+        ["Price"] = 30500,
     },
     ["Lumpclinger"] = {
         ["Chance"] = 100,
@@ -8970,6 +8977,6 @@ return {
         ["From"] = "Admin-Exclusive",
         ["Price"] = 15000,
     },
-
+    
     Rarities = {[1] = "Unusual",[2] = "Mythical",[3] = "Exotic",[4] = "Limited",[5] = "Rare",[6] = "Fragment",[7] = "Gemstone",[8] = "Nuclear",[9] = "Trash",[10] = "Common",[11] = "Divine Secret",[12] = "Mirror",[13] = "Uncommon",[14] = "Cataclysmic",[15] = "Whistle",[16] = "Legendary",[17] = "Unique",[18] = "Special",[19] = "Extinct",[20] = "Relic",[21] = "Apex",[22] = "Secret"}
 }
