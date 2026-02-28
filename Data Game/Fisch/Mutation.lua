@@ -1,5 +1,5 @@
 return {
-    --["Mutations"] = {
+    -- ["Mutations"] = {
         ["Amped"] = {
             ["PriceMultiply"] = 4,
             ["Chance"] = 0,
@@ -16,7 +16,7 @@ return {
             ["PriceMultiply"] = 8.65,
             ["Chance"] = 0,
             ["Display"] = "Igneous",
-            ["Color"] = Color3.fromRGB(255, 106, 0)
+            ["Color"] = Color3.fromRGB(255, 69, 0)
         },
         ["Solar"] = {
             ["PriceMultiply"] = 5.3,
@@ -605,7 +605,7 @@ return {
             ["Color"] = Color3.fromRGB(34, 27, 27)
         },
         ["Surreal"] = {
-            ["PriceMultiply"] = math.random(0, 8),
+            ["PriceMultiply"] = 8,
             ["Chance"] = 0,
             ["Display"] = "Surreal",
             ["Color"] = Color3.fromRGB(214, 214, 214)
@@ -1464,5 +1464,5 @@ return {
             ["Display"] = "Rainbow",
             ["Color"] = Color3.fromRGB(255, 158, 234)
         }
-    --}
+    -- }
 }
