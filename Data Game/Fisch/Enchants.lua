@@ -1,4 +1,4 @@
-local t = {
+return {
     ["Enchants"] = {
         ["Cupid"] = {
             ["Description"] = "10% chance for the Sweet mutation, increases Lure Speed by <$Lure$>%, & increases Progress Speed by <$ProgressSpeed$>%",
@@ -749,7 +749,5 @@ local t = {
             },
             ["RelicGroup"] = "None"
         }
-    }
+    },
 }
-
-return t
