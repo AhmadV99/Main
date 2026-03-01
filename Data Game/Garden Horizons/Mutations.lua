@@ -68,5 +68,15 @@ return {
         ["id"] = "Mossy",
         ["priceMultiplier"] = 3.5,
         ["color"] = "#4A6741"
+    },
+    ["Banned"] = {
+        ["id"] = "Banned",
+        ["priceMultiplier"] = 20,
+        ["color"] = "#750203"
+    },
+    ["Salad"] = {
+        ["id"] = "Salad",
+        ["priceMultiplier"] = 20,
+        ["color"] = "#E3FFA1"
     }
 };
