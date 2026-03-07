@@ -60,7 +60,7 @@ local v2 = {
         ["StockAmount"] = { 1, 3 },
         ["StockChance"] = 1,
         ["LayoutOrder"] = 60,
-        ["DisplayInShop"] = false
+        ["DisplayInShop"] = true
     }
 }
 v1.ShopData = v2
