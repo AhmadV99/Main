@@ -129,7 +129,7 @@ local v2 = {
         ["StockAmount"] = { 1, 3 },
         ["StockChance"] = 90,
         ["LayoutOrder"] = 160,
-        ["DisplayInShop"] = false
+        ["DisplayInShop"] = true
     },
     ["Mango"] = {
         ["Name"] = "Mango Seed",
@@ -137,7 +137,7 @@ local v2 = {
         ["StockAmount"] = { 1, 1 },
         ["StockChance"] = 180,
         ["LayoutOrder"] = 170,
-        ["DisplayInShop"] = false
+        ["DisplayInShop"] = true
     }
 }
 v1.ShopData = v2
