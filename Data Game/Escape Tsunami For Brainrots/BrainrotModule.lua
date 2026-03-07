@@ -1,6 +1,6 @@
-local t = {}
-
-t.ClassNames = {
+local v1 = game:GetService("ReplicatedStorage")
+local v_u_2 = {}
+v_u_2.ClassNames = {
     "Common",
     "Uncommon",
     "Rare",
@@ -13,12 +13,12 @@ t.ClassNames = {
     "Divine",
     "Infinity"
 }
-t.UnobtainableBrainrots = {
+v_u_2.UnobtainableBrainrots = {
     ["Caffe Trinity"] = true,
     ["Noobini Infeeny"] = true,
     ["Don Magmito"] = true
 }
-t.BrainrotNames = {
+v_u_2.BrainrotNames = {
     "Noobini Cakenini",
     "Lirili Larila",
     "Tim Cheese",
@@ -147,6 +147,8 @@ t.BrainrotNames = {
     "La Vaca Nebulosa Frostina",
     "La Bruma Celta",
     "Gelato Pinguino",
+    "Fantasmelli Pipistrelli",
+    "Candelabra Spettacabra",
     "Bulbito Bandito Traktorito",
     "Burgerini Bearini",
     "Strawberry Elephant",
@@ -165,12 +167,16 @@ t.BrainrotNames = {
     "Don Magmito",
     "Cornettino Fuaco",
     "Crostina Gelifio",
+    "Burrascano Spettro Marinaro",
+    "Biscottino Scheletrino",
+    "Dutchmello Velerino",
     "Noobini Infeeny",
     "Anububu",
     "Meta Technetta",
-    "Magmew"
+    "Magmew",
+    "Doomini Tiktookini"
 }
-t.Chances = {
+v_u_2.Chances = {
     ["Common"] = {
         ["Noobini Cakenini"] = 0.5,
         ["Lirili Larila"] = 0.3333333333333333,
@@ -315,7 +321,9 @@ t.Chances = {
         ["Ketupastro Infernetto"] = 0.0078125,
         ["La Vaca Nebulosa Frostina"] = 0.00625,
         ["La Bruma Celta"] = 0.0026041666666666665,
-        ["Gelato Pinguino"] = 0.002232142857142857
+        ["Gelato Pinguino"] = 0.002232142857142857,
+        ["Fantasmelli Pipistrelli"] = 0.005208333333333333,
+        ["Candelabra Spettacabra"] = 0.001953125
     },
     ["Divine"] = {
         ["Bulbito Bandito Traktorito"] = 0.2,
@@ -335,16 +343,20 @@ t.Chances = {
         ["Draculini Meowlini"] = 0.0008333333333333334,
         ["Don Magmito"] = 0.0002,
         ["Cornettino Fuaco"] = 0.00625,
-        ["Crostina Gelifio"] = 0.0007142857142857143
+        ["Crostina Gelifio"] = 0.0007142857142857143,
+        ["Burrascano Spettro Marinaro"] = 0.0078125,
+        ["Biscottino Scheletrino"] = 0.0026041666666666665,
+        ["Dutchmello Velerino"] = 0.0015625
     },
     ["Infinity"] = {
         ["Noobini Infeeny"] = 1.000001000001e-6,
         ["Anububu"] = 0.25,
         ["Meta Technetta"] = 0.015625,
-        ["Magmew"] = 0.0625
+        ["Magmew"] = 0.0625,
+        ["Doomini Tiktookini"] = 0.03125
     }
 }
-t.NormalizedChances = {
+v_u_2.NormalizedChances = {
     ["Common"] = {},
     ["Uncommon"] = {},
     ["Rare"] = {},
@@ -357,7 +369,7 @@ t.NormalizedChances = {
     ["Divine"] = {},
     ["Infinity"] = {}
 }
-t.EffectiveChances = {
+v_u_2.EffectiveChances = {
     ["Common"] = {},
     ["Uncommon"] = {},
     ["Rare"] = {},
@@ -370,8 +382,7 @@ t.EffectiveChances = {
     ["Divine"] = {},
     ["Infinity"] = {}
 }
-
-t.IconIDs = {
+v_u_2.IconIDs = {
     ["Noobini Cakenini"] = 140171735291415,
     ["Lirili Larila"] = 108050226666919,
     ["Tim Cheese"] = 123,
@@ -500,6 +511,8 @@ t.IconIDs = {
     ["La Vaca Nebulosa Frostina"] = 123,
     ["La Bruma Celta"] = 123,
     ["Gelato Pinguino"] = 123,
+    ["Fantasmelli Pipistrelli"] = 123,
+    ["Candelabra Spettacabra"] = 123,
     ["Bulbito Bandito Traktorito"] = 123,
     ["Burgerini Bearini"] = 123,
     ["Strawberry Elephant"] = 123,
@@ -518,12 +531,16 @@ t.IconIDs = {
     ["Don Magmito"] = 123,
     ["Cornettino Fuaco"] = 123,
     ["Crostina Gelifio"] = 123,
+    ["Burrascano Spettro Marinaro"] = 123,
+    ["Biscottino Scheletrino"] = 123,
+    ["Dutchmello Velerino"] = 123,
     ["Noobini Infeeny"] = 140171735291415,
     ["Anububu"] = 123,
     ["Meta Technetta"] = 123,
-    ["Magmew"] = 123
+    ["Magmew"] = 123,
+    ["Doomini Tiktookini"] = 123
 }
-t.Rates = {
+v_u_2.Rates = {
     ["Noobini Cakenini"] = 2,
     ["Lirili Larila"] = 4,
     ["Tim Cheese"] = 6,
@@ -652,6 +669,8 @@ t.Rates = {
     ["La Vaca Nebulosa Frostina"] = 3250000,
     ["La Bruma Celta"] = 3350000,
     ["Gelato Pinguino"] = 3450000,
+    ["Fantasmelli Pipistrelli"] = 3600000,
+    ["Candelabra Spettacabra"] = 3700000,
     ["Bulbito Bandito Traktorito"] = 3000000,
     ["Burgerini Bearini"] = 3500000,
     ["Strawberry Elephant"] = 5000000,
@@ -670,12 +689,16 @@ t.Rates = {
     ["Don Magmito"] = 15000000,
     ["Cornettino Fuaco"] = 7250000,
     ["Crostina Gelifio"] = 10250000,
+    ["Burrascano Spettro Marinaro"] = 7500000,
+    ["Biscottino Scheletrino"] = 9000000,
+    ["Dutchmello Velerino"] = 10500000,
     ["Noobini Infeeny"] = 10000000,
     ["Anububu"] = 15000000,
     ["Meta Technetta"] = 35000000,
-    ["Magmew"] = 30000000
+    ["Magmew"] = 30000000,
+    ["Doomini Tiktookini"] = 32000000
 }
-t.ClassChances = {
+v_u_2.ClassChances = {
     ["Common"] = 0.4,
     ["Uncommon"] = 0.3,
     ["Rare"] = 0.2,
@@ -686,7 +709,7 @@ t.ClassChances = {
     ["Secret"] = 0.0015,
     ["Celestial"] = 0.0005
 }
-t.LuckyClassChances = {
+v_u_2.LuckyClassChances = {
     ["Common"] = 0.2,
     ["Uncommon"] = 0.2,
     ["Rare"] = 0.2,
@@ -697,7 +720,7 @@ t.LuckyClassChances = {
     ["Secret"] = 0.025,
     ["Celestial"] = 0.025
 }
-t.ClassColours = {
+v_u_2.ClassColours = {
     ["Common"] = Color3.fromRGB(206, 206, 206),
     ["Uncommon"] = Color3.fromRGB(103, 171, 15),
     ["Rare"] = Color3.fromRGB(53, 221, 255),
@@ -710,38 +733,38 @@ t.ClassColours = {
     ["Divine"] = Color3.fromRGB(255, 255, 0),
     ["Infinity"] = Color3.fromRGB(255, 0, 0)
 }
-t.MutationMultipliers = {
+v_u_2.MutationMultipliers = {
     ["None"] = 1,
     ["Emerald"] = 1.5,
     ["Gold"] = 1.5,
     ["Blood"] = 2,
     ["Electric"] = 3,
-    ["Admin"] = 4.5,
+    ["Admin"] = 5,
     ["Diamond"] = 4.25,
-    ["Radioactive"] = 3.5,
-    ["UFO"] = 3.5,
+    ["Radioactive"] = 4,
+    ["UFO"] = 4,
     ["Money"] = 3.888,
     ["Candy"] = 3.95,
     ["Doom"] = 3.95,
     ["Fire"] = 4,
     ["Ice"] = 4,
     ["Gamer"] = 4,
+    ["Phantom"] = 4,
     ["Hacker"] = 5,
     ["Lucky"] = 8
 }
-t.TraitMultipliers = {
+v_u_2.TraitMultipliers = {
     ["Galaxy"] = 2,
     ["Magma"] = 2
 }
-t.SizeScales = {
+v_u_2.SizeScales = {
     ["Baby"] = 0.25,
     ["Mini"] = 0.5,
     ["Default"] = 1,
     ["Big"] = 1.5,
     ["Titan"] = 2
 }
-
-t.MutationChances = {
+v_u_2.MutationChances = {
     ["None"] = 0.85,
     ["Emerald"] = 0.075,
     ["Gold"] = 0.045,
@@ -749,14 +772,14 @@ t.MutationChances = {
     ["Diamond"] = 0.004,
     ["Electric"] = 0.001
 }
-t.GuaranteedMutationChances = {
+v_u_2.GuaranteedMutationChances = {
     ["Emerald"] = 0.5,
     ["Gold"] = 0.3,
     ["Blood"] = 0.15,
     ["Diamond"] = 0.04,
     ["Electric"] = 0.01
 }
-t.MutationColours = {
+v_u_2.MutationColours = {
     ["Emerald"] = Color3.fromRGB(0, 255, 0),
     ["Gold"] = Color3.fromRGB(255, 255, 127),
     ["Blood"] = Color3.fromRGB(255, 0, 0),
@@ -772,35 +795,41 @@ t.MutationColours = {
     ["Candy"] = Color3.fromRGB(247, 85, 234),
     ["Doom"] = Color3.fromRGB(255, 120, 0),
     ["Fire"] = Color3.fromRGB(255, 80, 0),
-    ["Ice"] = Color3.fromRGB(100, 200, 255)
+    ["Ice"] = Color3.fromRGB(100, 200, 255),
+    ["Phantom"] = Color3.fromRGB(0, 177, 177)
 }
-t.BrainrotRarities = {}
-t.BrainrotsWithModels = {}
-
-t.BrainrotRarities["Noobini Infeeny"] = "Infinity"
-t.BrainrotRarities.Anububu = "Infinity"
-t.BrainrotRarities["Meta Technetta"] = "Infinity"
-t.BrainrotRarities["Gatti Marshmallini"] = "Cosmic"
-t.BrainrotRarities["Tartarughi Attrezzini"] = "Secret"
-t.BrainrotRarities["Kissarini Heartini"] = "Secret"
-t.BrainrotRarities["Polpo Semaforini"] = "Celestial"
-t.BrainrotRarities["Cioccolatone Draghettone"] = "Celestial"
-t.BrainrotRarities["Biscotti Macarotti"] = "Divine"
-t.BrainrotRarities["Cupitron Consoletron"] = "Divine"
-t.BrainrotRarities["Scaldarino Derpino"] = "Secret"
-t.BrainrotRarities["Ketupastro Infernetto"] = "Celestial"
-t.BrainrotRarities["Explodini Cataclismi"] = "Divine"
-t.BrainrotRarities["Pastapot Infernotto"] = "Divine"
-t.BrainrotRarities["Draculini Meowlini"] = "Divine"
-t.BrainrotRarities.Magmew = "Infinity"
-t.BrainrotRarities["Don Magmito"] = "Divine"
-t.BrainrotRarities["Tostino Flambante"] = "Secret"
-t.BrainrotRarities["La Vaca Nebulosa Frostina"] = "Celestial"
-t.BrainrotRarities["La Bruma Celta"] = "Celestial"
-t.BrainrotRarities["Gelato Pinguino"] = "Celestial"
-t.BrainrotRarities["Cornettino Fuaco"] = "Divine"
-t.BrainrotRarities["Crostina Gelifio"] = "Divine"
-t.IdleAnimations = {
+v_u_2.BrainrotRarities = {}
+v_u_2.BrainrotsWithModels = {}
+v_u_2.BrainrotRarities["Noobini Infeeny"] = "Infinity"
+v_u_2.BrainrotRarities.Anububu = "Infinity"
+v_u_2.BrainrotRarities["Meta Technetta"] = "Infinity"
+v_u_2.BrainrotRarities["Gatti Marshmallini"] = "Cosmic"
+v_u_2.BrainrotRarities["Tartarughi Attrezzini"] = "Secret"
+v_u_2.BrainrotRarities["Kissarini Heartini"] = "Secret"
+v_u_2.BrainrotRarities["Polpo Semaforini"] = "Celestial"
+v_u_2.BrainrotRarities["Cioccolatone Draghettone"] = "Celestial"
+v_u_2.BrainrotRarities["Biscotti Macarotti"] = "Divine"
+v_u_2.BrainrotRarities["Cupitron Consoletron"] = "Divine"
+v_u_2.BrainrotRarities["Scaldarino Derpino"] = "Secret"
+v_u_2.BrainrotRarities["Ketupastro Infernetto"] = "Celestial"
+v_u_2.BrainrotRarities["Explodini Cataclismi"] = "Divine"
+v_u_2.BrainrotRarities["Pastapot Infernotto"] = "Divine"
+v_u_2.BrainrotRarities["Draculini Meowlini"] = "Divine"
+v_u_2.BrainrotRarities.Magmew = "Infinity"
+v_u_2.BrainrotRarities["Don Magmito"] = "Divine"
+v_u_2.BrainrotRarities["Tostino Flambante"] = "Secret"
+v_u_2.BrainrotRarities["La Vaca Nebulosa Frostina"] = "Celestial"
+v_u_2.BrainrotRarities["La Bruma Celta"] = "Celestial"
+v_u_2.BrainrotRarities["Gelato Pinguino"] = "Celestial"
+v_u_2.BrainrotRarities["Cornettino Fuaco"] = "Divine"
+v_u_2.BrainrotRarities["Crostina Gelifio"] = "Divine"
+v_u_2.BrainrotRarities["Fantasmelli Pipistrelli"] = "Celestial"
+v_u_2.BrainrotRarities["Candelabra Spettacabra"] = "Celestial"
+v_u_2.BrainrotRarities["Burrascano Spettro Marinaro"] = "Divine"
+v_u_2.BrainrotRarities["Biscottino Scheletrino"] = "Divine"
+v_u_2.BrainrotRarities["Dutchmello Velerino"] = "Divine"
+v_u_2.BrainrotRarities["Doomini Tiktookini"] = "Infinity"
+v_u_2.IdleAnimations = {
     ["Bulbito Bandito Traktorito"] = 106146983860098,
     ["Strawberry Elephant"] = 113141781342356,
     ["Burgerini Bearini"] = 123801708236968,
@@ -834,6 +863,20 @@ t.IdleAnimations = {
     ["Svinino Bombondino"] = 98616041497302,
     ["Tim Cheese"] = 73296803268437,
     ["Udin Din Din Dun"] = 133206379149027,
+    ["Garama and Madundung"] = 96671378278787,
+    ["Esok Sekolah"] = 121800774443586,
+    ["Salamino Penguino"] = 112850805777910,
+    ["Job Job Job Sahur"] = 121043185840965,
+    ["Gattatino Neonino"] = 128915502754293,
+    ["Espresso Signora"] = 106902062487993,
+    ["Dug Dug Dug"] = 136863101485662,
+    ["Cappuccino Assassino"] = 123925047984361,
+    ["Ballerina Cappuccina"] = 78563455495749,
+    ["Graipuss Medussi"] = 86952384121098,
+    ["Statutino Libertino"] = 87054192714868,
+    ["Pot Hotspot"] = 120480754992710,
+    ["Bananita Dolphinita"] = 129063096231370,
+    ["Torrtuginni Dragonfrutini"] = 79057990604632,
     ["Gatti Marshmallini"] = 123157482741909,
     ["Tartarughi Attrezzini"] = 123195588930561,
     ["Kissarini Heartini"] = 132370433669774,
@@ -853,7 +896,12 @@ t.IdleAnimations = {
     ["La Vaca Nebulosa Frostina"] = 72900811850699,
     ["Gelato Pinguino"] = 72511414570361,
     ["Cornettino Fuaco"] = 90986983483182,
-    ["La Bruma Celta"] = 137728531300293
+    ["La Bruma Celta"] = 137728531300293,
+    ["Burrascano Spettro Marinaro"] = 95282582669460,
+    ["Biscottino Scheletrino"] = 105423740276117,
+    ["Candelabra Spettacabra"] = 97730553367145,
+    ["Fantasmelli Pipistrelli"] = 86390079134933,
+    ["Dutchmello Velerino"] = 102370779645134,
+    ["Doomini Tiktookini"] = 98148260192813
 }
-
-return t;
+return v_u_2
