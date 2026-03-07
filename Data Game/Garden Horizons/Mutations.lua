@@ -1,4 +1,4 @@
-return {
+local v1 = {
     ["Sandy"] = {
         ["id"] = "Sandy",
         ["priceMultiplier"] = 2.5,
@@ -71,12 +71,18 @@ return {
     },
     ["Banned"] = {
         ["id"] = "Banned",
-        ["priceMultiplier"] = 20,
+        ["priceMultiplier"] = 10,
         ["color"] = "#750203"
     },
     ["Salad"] = {
         ["id"] = "Salad",
-        ["priceMultiplier"] = 20,
+        ["priceMultiplier"] = 10,
         ["color"] = "#E3FFA1"
+    },
+    ["Party"] = {
+        ["id"] = "Party",
+        ["priceMultiplier"] = 11.5,
+        ["color"] = "#FF1493"
     }
-};
+}
+return v1
