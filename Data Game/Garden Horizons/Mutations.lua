@@ -83,6 +83,16 @@ local v1 = {
         ["id"] = "Party",
         ["priceMultiplier"] = 11.5,
         ["color"] = "#FF1493"
+    },
+    ["Strange"] = {
+        ["id"] = "Strange",
+        ["priceMultiplier"] = 2,
+        ["color"] = "#7FFF00"
+    },
+    ["Ancient"] = {
+        ["id"] = "Ancient",
+        ["priceMultiplier"] = 7.5,
+        ["color"] = "#4B0082"
     }
 }
 return v1
