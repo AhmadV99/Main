@@ -138,6 +138,22 @@ local v2 = {
         ["StockChance"] = 180,
         ["LayoutOrder"] = 170,
         ["DisplayInShop"] = true
+    },
+    ["Watermelon"] = {
+        ["Name"] = "Watermelon Seed",
+        ["Price"] = 2000000,
+        ["StockAmount"] = { 1, 2 },
+        ["StockChance"] = 135,
+        ["LayoutOrder"] = 180,
+        ["DisplayInShop"] = false
+    },
+    ["Pineapple"] = {
+        ["Name"] = "Pineapple Seed",
+        ["Price"] = 15000000,
+        ["StockAmount"] = { 1, 1 },
+        ["StockChance"] = 240,
+        ["LayoutOrder"] = 190,
+        ["DisplayInShop"] = false
     }
 }
 v1.ShopData = v2
