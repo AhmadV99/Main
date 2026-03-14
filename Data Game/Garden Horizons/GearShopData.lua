@@ -2,6 +2,7 @@ local v1 = {
     ["RestockInterval"] = 300,
     ["ShopId"] = "GearShop"
 }
+
 local v2 = {
     ["Watering Can"] = {
         ["Name"] = "Watering Can",
@@ -61,7 +62,17 @@ local v2 = {
         ["StockChance"] = 1,
         ["LayoutOrder"] = 60,
         ["DisplayInShop"] = true
+    },
+    ["Reverter"] = {
+        ["Name"] = "Reverter",
+        ["Price"] = 1000000,
+        ["StockAmount"] = { 1, 2 },
+        ["StockChance"] = 1,
+        ["LayoutOrder"] = 70,
+        ["DisplayInShop"] = false
     }
 }
+
 v1.ShopData = v2
+
 return v1
