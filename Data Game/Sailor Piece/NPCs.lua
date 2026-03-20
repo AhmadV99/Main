@@ -1,5 +1,5 @@
 return {
-  QuestNPC1 = {
+  ["QuestNPC11"] = {
     ["title"] = "Hollow Hunter",
     ["requirements"] = {
       {
@@ -10,7 +10,7 @@ return {
     ["id"] = "hollow_hunt_1",
     ["recommendedLevel"] = 5000,
   },
-  QuestNPC2 = {
+  ["QuestNPC5"] = {
     ["title"] = "Desert Bandit Hunter",
     ["requirements"] = {
       {
@@ -21,7 +21,7 @@ return {
     ["id"] = "desert_hunt_1",
     ["recommendedLevel"] = 750,
   },
-  QuestNPC3 = {
+  ["QuestNPC4"] = {
     ["title"] = "Monkey Boss",
     ["requirements"] = {
       {
@@ -32,7 +32,7 @@ return {
     ["id"] = "monkey_hunt_2",
     ["recommendedLevel"] = 500,
   },
-  QuestNPC4 = {
+  ["QuestNPC9"] = {
     ["title"] = "Sorcerer Hunter",
     ["requirements"] = {
       {
@@ -43,7 +43,7 @@ return {
     ["id"] = "jjk_hunt_1",
     ["recommendedLevel"] = 3000,
   },
-  QuestNPC5 = {
+  ["QuestNPC1"] = {
     ["title"] = "Thief Hunter",
     ["requirements"] = {
       {
@@ -54,7 +54,7 @@ return {
     ["id"] = "thief_hunt_1",
     ["recommendedLevel"] = 0,
   },
-  QuestNPC6 = {
+  ["QuestNPC2"] = {
     ["title"] = "Thief Boss",
     ["requirements"] = {
       {
@@ -65,7 +65,7 @@ return {
     ["id"] = "boss_hunt_1",
     ["recommendedLevel"] = 100,
   },
-  QuestNPC7 = {
+  ["QuestNPC7"] = {
     ["title"] = "Frost Rogue Hunter",
     ["requirements"] = {
       {
@@ -76,7 +76,7 @@ return {
     ["id"] = "snow_hunt_1",
     ["recommendedLevel"] = 1500,
   },
-  QuestNPC8 = {
+  ["QuestNPC16"] = {
     ["title"] = "Blade Masters",
     ["requirements"] = {
       {
@@ -87,7 +87,7 @@ return {
     ["id"] = "swordman_hunt_1",
     ["recommendedLevel"] = 10000,
   },
-  QuestNPC9 = {
+  ["QuestNPC6"] = {
     ["title"] = "Desert Bandit Boss",
     ["requirements"] = {
       {
@@ -98,7 +98,7 @@ return {
     ["id"] = "desert_hunt_2",
     ["recommendedLevel"] = 1000,
   },
-  QuestNPC10 = {
+  ["QuestNPC3"] = {
     ["title"] = "Monkey Hunter",
     ["requirements"] = {
       {
@@ -109,7 +109,7 @@ return {
     ["id"] = "monkey_hunt_1",
     ["recommendedLevel"] = 250,
   },
-  QuestNPC11 = {
+  ["QuestNPC13"] = {
     ["title"] = "Curse Hunter",
     ["requirements"] = {
       {
@@ -120,7 +120,7 @@ return {
     ["id"] = "curse_hunt_1",
     ["recommendedLevel"] = 7000,
   },
-  QuestNPC12 = {
+  ["QuestNPC14"] = {
     ["title"] = "Slime Warrior Hunter",
     ["requirements"] = {
       {
@@ -131,7 +131,7 @@ return {
     ["id"] = "slime_warrior_hunt_1",
     ["recommendedLevel"] = 8000,
   },
-  QuestNPC13 = {
+  ["QuestNPC17"] = {
     ["title"] = "Quincy Purge",
     ["requirements"] = {
       {
@@ -142,7 +142,7 @@ return {
     ["id"] = "quincy_hunt_1",
     ["recommendedLevel"] = 10750,
   },
-  QuestNPC14 = {
+  ["QuestNPC15"] = {
     ["title"] = "Academy Challenge",
     ["requirements"] = {
       {
@@ -153,7 +153,7 @@ return {
     ["id"] = "academy_teacher_hunt_1",
     ["recommendedLevel"] = 9000,
   },
-  QuestNPC15 = {
+  ["QuestNPC12"] = {
     ["title"] = "Strong Sorcerer Hunter",
     ["requirements"] = {
       {
@@ -164,7 +164,7 @@ return {
     ["id"] = "strong_sorcerer_hunt_1",
     ["recommendedLevel"] = 6250,
   },
-  QuestNPC16 = {
+  ["QuestNPC8"] = {
     ["title"] = "Winter Warden Boss",
     ["requirements"] = {
       {
@@ -175,7 +175,7 @@ return {
     ["id"] = "snow_hunt_2",
     ["recommendedLevel"] = 2000,
   },
-  QuestNPC17 = {
+  ["QuestNPC10"] = {
     ["title"] = "Panda Sorcerer Boss",
     ["requirements"] = {
       {
