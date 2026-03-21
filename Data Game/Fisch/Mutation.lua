@@ -690,7 +690,7 @@ v8.Tormented = {
     ["Color"] = Color3.fromRGB(34, 27, 27)
 }
 v8.Surreal = {
-    ["PriceMultiply"] = v5.ServerSharedRandom("SurrealMultiply"):NextInteger(0, 8),
+    ["PriceMultiply"] = math.random(),
     ["Chance"] = 0,
     ["Display"] = "Surreal",
     ["Color"] = Color3.fromRGB(214, 214, 214)
