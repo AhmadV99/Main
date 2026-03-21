@@ -1,4 +1,11 @@
 local v8 = {
+    ["Lucky Gold"] = {
+        ["PriceMultiply"] = 6.14,
+        ["Chance"] = 0,
+        ["Priority"] = 1,
+        ["Display"] = "Lucky Gold",
+        ["Color"] = ColorSequence.new(Color3.fromRGB(159, 255, 57), Color3.fromRGB(255, 222, 124))
+    },
     ["Floral"] = {
         ["PriceMultiply"] = 8.4,
         ["Chance"] = 2,
@@ -60,7 +67,7 @@ local v8 = {
     ["Noxious"] = {
         ["PriceMultiply"] = 0.3,
         ["Chance"] = 0,
-        ["Priority"] = 1,
+        ["Priority"] = 10,
         ["Display"] = "Noxious",
         ["Color"] = Color3.fromRGB(148, 37, 217)
     },
@@ -683,7 +690,7 @@ v8.Tormented = {
     ["Color"] = Color3.fromRGB(34, 27, 27)
 }
 v8.Surreal = {
-    ["PriceMultiply"] = math.random(),
+    ["PriceMultiply"] = v5.ServerSharedRandom("SurrealMultiply"):NextInteger(0, 8),
     ["Chance"] = 0,
     ["Display"] = "Surreal",
     ["Color"] = Color3.fromRGB(214, 214, 214)
@@ -903,7 +910,7 @@ v8.Sanguine = {
     ["Color"] = Color3.fromRGB(74, 8, 8)
 }
 v8.Chaotic = {
-    ["PriceMultiply"] = 8,
+    ["PriceMultiply"] = 6.2,
     ["Chance"] = 0,
     ["Display"] = "Chaotic",
     ["Color"] = Color3.fromRGB(20, 19, 22)
@@ -1337,7 +1344,7 @@ v8.Subspace = {
 v8.Anomalous = {
     ["PriceMultiply"] = 5.55,
     ["Chance"] = 0,
-    ["Priority"] = 1,
+    ["Priority"] = 0.5,
     ["Display"] = "Anomalous",
     ["Color"] = Color3.fromRGB(255, 43, 43)
 }
@@ -1355,6 +1362,23 @@ v8.Harmonized = {
     ["Chance"] = 0,
     ["Display"] = "Harmonized",
     ["Color"] = ColorSequence.new(Color3.fromRGB(178, 202, 255), Color3.fromRGB(218, 175, 255))
+}
+v8.Mesmerized = {
+    ["PriceMultiply"] = 3.2,
+    ["Chance"] = 0,
+    ["Priority"] = 1,
+    ["Display"] = "Mesmerized",
+    ["Color"] = Color3.fromRGB(255, 230, 3),
+    ["Untradeable"] = true,
+    ["BlockCatchMessage"] = true
+}
+v8.Supersonic = {
+    ["PriceMultiply"] = 8.01,
+    ["Chance"] = 0,
+    ["Display"] = "Supersonic",
+    ["Color"] = ColorSequence.new(Color3.fromRGB(255, 171, 171), Color3.fromRGB(255, 83, 83)),
+    ["Untradeable"] = true,
+    ["BlockCatchMessage"] = true
 }
 v8.Sinister = {
     ["PriceMultiply"] = 2.9,
