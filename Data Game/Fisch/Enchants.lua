@@ -431,7 +431,7 @@ v5.Controlled = {
     ["CanSelectFromAdmin"] = true
 }
 local v25 = {
-    ["Description"] = "Increases Luck by <$Luck$>%, Lure Speed by <$Lure$>%, & <$Mutations.1.Chance$>% chance for <$Mutations.1.Name$> mutation [Doubled during Rainy weather]",
+    ["Description"] = "Increases Luck by <$Luck$>%, Lure Speed by <$Lure$>%, & <$Mutations.1.Chance$>% chance for <$Mutations.1.Name$> mutation [Doubled during Rain, Tripled during Storms]",
     ["Color"] = Color3.fromRGB(255, 236, 131),
     ["StrokeColor"] = Color3.fromRGB(36, 36, 24),
     ["Display"] = "Storming",
@@ -448,18 +448,18 @@ local v25 = {
         Upvalues:
             [1] = u1
         --]]
-        if u1.world.weather.Value == "Rain" then
-            local v24 = {
-                ["Luck"] = p23.Luck * 2,
-                ["Lure"] = p23.Lure * 2,
+        local v24 = u1.world.weather.Value == "Rain" and 2 or (u1.world.weather.Value == "Stormy" and 3 or nil)
+        if v24 then
+            return {
+                ["Luck"] = p23.Luck * v24,
+                ["Lure"] = p23.Lure * v24,
                 ["Mutations"] = {
                     {
                         ["Name"] = p23.Mutations[1].Name,
-                        ["Chance"] = p23.Mutations[1].Chance * 2
+                        ["Chance"] = p23.Mutations[1].Chance * v24
                     }
                 }
             }
-            return v24
         end
     end,
     ["RelicGroup"] = "Default",
@@ -483,7 +483,7 @@ v5.Breezed = {
     ["Luck"] = 50,
     ["Lure"] = 20,
     ["ProgressSpeed"] = 10,
-    ["ConditionalBoosts"] = function(p26, _) --[[ Name: ConditionalBoosts, Line 616 ]]
+    ["ConditionalBoosts"] = function(p26, _) --[[ Name: ConditionalBoosts, Line 620 ]]
         --[[
         Upvalues:
             [1] = u1
@@ -578,7 +578,7 @@ local v29 = {
             ["Chance"] = 20
         }
     },
-    ["ConditionalBoosts"] = function(_, _) --[[ Name: ConditionalBoosts, Line 721 ]]
+    ["ConditionalBoosts"] = function(_, _) --[[ Name: ConditionalBoosts, Line 725 ]]
         if math.random() <= 0.2 then
             return {
                 ["WeightBoost"] = -40
@@ -705,7 +705,7 @@ v5.Flashline = {
     ["StrokeColor"] = Color3.fromRGB(49, 49, 49),
     ["Display"] = "Flashline",
     ["ProgressSpeed"] = 15,
-    ["ConditionalBoosts"] = function(_, _) --[[ Name: ConditionalBoosts, Line 868 ]]
+    ["ConditionalBoosts"] = function(_, _) --[[ Name: ConditionalBoosts, Line 872 ]]
         if math.random(1, 4) == 1 then
             return {
                 ["ProgressSpeed"] = 100
@@ -735,7 +735,7 @@ v35.RelicGroup = "Default"
 v35.CanSelectFromAdmin = true
 v5.Scavenger = v35
 local v38 = {
-    ["Description"] = "Unleash pure chaos with every cast. Slashes fish with an 8% chance to awaken the Chaotic mutation",
+    ["Description"] = "Unleash pure chaos with every cast. Slashes fish with an <$Mutations.1.Chance$>% chance to awaken the <$Mutations.1.Name$> mutation",
     ["Color"] = Color3.fromRGB(20, 19, 22),
     ["StrokeColor"] = Color3.fromRGB(255, 255, 255),
     ["Display"] = "Chaotic"
@@ -772,7 +772,7 @@ local v40 = {
 }
 local v41 = {
     ["BloodReckoning"] = {
-        ["HealthCost"] = 30,
+        ["HealthCost"] = 20,
         ["HealthChanceRatio"] = 1,
         ["MutationName"] = "Sanguine"
     }
@@ -798,22 +798,32 @@ v42.ClientFishingPassives = v43
 v42.RelicGroup = "Default"
 v42.CanSelectFromAdmin = true
 v5.Chronos = v42
-v5.Momentum = {
+local v44 = {
     ["Description"] = "Perfect Catches increase Lure, Resilience & Progress Speed incrementally",
     ["Color"] = Color3.fromRGB(211, 179, 128),
     ["StrokeColor"] = Color3.fromRGB(35, 27, 18),
     ["Display"] = "Momentum",
     ["ProgressSpeed"] = 0,
     ["RelicGroup"] = "Default",
-    ["CanSelectFromAdmin"] = true,
-    ["ConditionalBoosts"] = function(_, p44) --[[ Name: ConditionalBoosts, Line 981 ]]
-        return {
-            ["ProgressSpeed"] = p44:GetAttribute("CurrentMomentumBoost") or 0,
-            ["Lure"] = p44:GetAttribute("CurrentMomentumBoost") or 0,
-            ["Resilience"] = p44:GetAttribute("CurrentMomentumBoost") or 0
-        }
-    end
+    ["CanSelectFromAdmin"] = true
 }
+local v45 = {
+    ["MomentumEnchant"] = {
+        ["AttributeName"] = "CurrentMomentumBoost",
+        ["BoostPerStack"] = 2,
+        ["ReducePerImperfect"] = 4,
+        ["MaxBoost"] = 40
+    }
+}
+v44.FishingPassives = v45
+function v44.ConditionalBoosts(_, p46) --[[ Line: 994 ]]
+    return {
+        ["ProgressSpeed"] = p46:GetAttribute("CurrentMomentumBoost") or 0,
+        ["Lure"] = p46:GetAttribute("CurrentMomentumBoost") or 0,
+        ["Resilience"] = p46:GetAttribute("CurrentMomentumBoost") or 0
+    }
+end
+v5.Momentum = v44
 v5.Vicious = {
     ["Description"] = "Increases Disturbance by +<$Disturbance$>, & increases Progress Speed by <$ProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(255, 103, 76),
@@ -835,20 +845,29 @@ v5.Overclocked = {
     ["RelicGroup"] = "Cosmic",
     ["CanSelectFromAdmin"] = true
 }
-v5.Tenacity = {
+local v47 = {
     ["Description"] = "Increases Progress Speed by 20% for every reel snapped in a row",
     ["Color"] = Color3.fromRGB(255, 248, 171),
     ["StrokeColor"] = Color3.fromRGB(71, 70, 54),
     ["Display"] = "Tenacity",
     ["Secondary"] = true,
     ["RelicGroup"] = "Cosmic",
-    ["CanSelectFromAdmin"] = true,
-    ["ConditionalBoosts"] = function(_, p45) --[[ Name: ConditionalBoosts, Line 1028 ]]
-        return {
-            ["ProgressSpeed"] = p45:GetAttribute("TenacityBoost")
-        }
-    end
+    ["CanSelectFromAdmin"] = true
 }
+local v48 = {
+    ["TenacityEnchant"] = {
+        ["AttributeName"] = "TenacityBoost",
+        ["BoostPerStack"] = 20,
+        ["MaxBoost"] = (1 / 0)
+    }
+}
+v47.FishingPassives = v48
+function v47.ConditionalBoosts(_, p49) --[[ Line: 1049 ]]
+    return {
+        ["ProgressSpeed"] = p49:GetAttribute("TenacityBoost")
+    }
+end
+v5.Tenacity = v47
 v5.Tryhard = {
     ["Description"] = "Increases Progress Speed by <$ProgressSpeed$>%, Increases Strength by <$Strength$>kg, & decreases Control by <$Control$>",
     ["Color"] = Color3.fromRGB(255, 0, 0),
@@ -871,24 +890,24 @@ v5.Wise = {
     ["RelicGroup"] = "Cosmic",
     ["CanSelectFromAdmin"] = true
 }
-local v46 = {
+local v50 = {
     ["Description"] = "<$ClientFishingPassives.Cryogenic.FreezeChance$>% chance to fully freeze a lured fish",
     ["Color"] = Color3.fromRGB(148, 235, 255),
     ["StrokeColor"] = Color3.fromRGB(21, 43, 49),
     ["Display"] = "Cryogenic"
 }
-local v47 = {
+local v51 = {
     ["Cryogenic"] = {
         ["AttemptDelay"] = 1,
         ["FreezeChance"] = 20,
         ["FreezeDuration"] = (1 / 0)
     }
 }
-v46.ClientFishingPassives = v47
-v46.Secondary = true
-v46.RelicGroup = "Cosmic"
-v46.CanSelectFromAdmin = true
-v5.Cryogenic = v46
+v50.ClientFishingPassives = v51
+v50.Secondary = true
+v50.RelicGroup = "Cosmic"
+v50.CanSelectFromAdmin = true
+v5.Cryogenic = v50
 v5["Sea Prince"] = {
     ["Description"] = "Makes fish <$WeightBoost$>% bigger",
     ["Color"] = Color3.fromRGB(84, 118, 211),
@@ -919,7 +938,7 @@ v5.Weak = {
     ["RelicGroup"] = "Twisted",
     ["CanSelectFromAdmin"] = true
 }
-local v48 = {
+local v52 = {
     ["Description"] = "Decreased Luck by <$Luck$>%",
     ["Color"] = Color3.fromRGB(67, 88, 49),
     ["StrokeColor"] = Color3.fromRGB(9, 12, 7),
@@ -934,8 +953,8 @@ local v48 = {
     ["RelicGroup"] = "Twisted",
     ["CanSelectFromAdmin"] = true
 }
-v5.Putrid = v48
-local v49 = {
+v5.Putrid = v52
+local v53 = {
     ["Description"] = "Caught fish have a <$Mutations.1.Chance$>% chance to be <$Mutations.1.Name$>",
     ["Color"] = Color3.fromRGB(156, 139, 105),
     ["StrokeColor"] = Color3.fromRGB(40, 36, 27),
@@ -949,7 +968,7 @@ local v49 = {
     ["RelicGroup"] = "Twisted",
     ["CanSelectFromAdmin"] = true
 }
-v5["Pharaohs Curse"] = v49
+v5["Pharaohs Curse"] = v53
 v5.Wobbly = {
     ["Description"] = "Decreases Control by <$Control$>",
     ["Color"] = Color3.fromRGB(86, 91, 112),
@@ -959,14 +978,14 @@ v5.Wobbly = {
     ["RelicGroup"] = "Twisted",
     ["CanSelectFromAdmin"] = true
 }
-local v50 = {
+local v54 = {
     ["Description"] = "Can only be used under specific conditions until relevant quest(s) are completed",
     ["Color"] = Color3.fromRGB(255, 28, 62),
     ["StrokeColor"] = Color3.fromRGB(53, 9, 18),
     ["Display"] = "Restricted"
 }
-local v51 = {}
-local v52 = {
+local v55 = {}
+local v56 = {
     ["Pinion\'s Aria"] = {
         ["AllowedZones"] = {
             "Crystal Cove",
@@ -983,10 +1002,10 @@ local v52 = {
         ["BlockMessage"] = "Your Pinion\'s Aria can only fish at Crystal Cove and certain Hunts. Complete the Songstress\' quests to unlock it fully!"
     }
 }
-v51.Restricted = v52
-v50.FishingPassives = v51
-v50.RelicGroup = "None"
-v50.CanSelectFromAdmin = false
-v5.Restricted = v50
+v55.Restricted = v56
+v54.FishingPassives = v55
+v54.RelicGroup = "None"
+v54.CanSelectFromAdmin = false
+v5.Restricted = v54
 u4.Enchants = v5
 return u4
