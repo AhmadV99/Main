@@ -1,4 +1,37 @@
 local v8 = {
+    ["Marshmallow"] = {
+        ["PriceMultiply"] = 2.5,
+        ["Chance"] = 0,
+        ["Display"] = "Marshmallow",
+        ["Color"] = Color3.fromRGB(251, 246, 255)
+    },
+    ["Bunny"] = {
+        ["PriceMultiply"] = 4.5,
+        ["Chance"] = 0,
+        ["Display"] = "Bunny",
+        ["Color"] = Color3.fromRGB(247, 228, 255)
+    },
+    ["Aether"] = {
+        ["PriceMultiply"] = 12,
+        ["Chance"] = 0.1,
+        ["BlockAppraisal"] = true,
+        ["Priority"] = 1,
+        ["Display"] = "Aether",
+        ["Color"] = ColorSequence.new(Color3.fromRGB(137, 218, 255), Color3.fromRGB(255, 255, 255))
+    },
+    ["Rotting"] = {
+        ["PriceMultiply"] = 0.7,
+        ["Chance"] = 0,
+        ["Priority"] = 1,
+        ["Display"] = "Rotting",
+        ["Color"] = Color3.fromRGB(86, 79, 55)
+    },
+    ["Forest Spirit"] = {
+        ["PriceMultiply"] = 7.5,
+        ["Chance"] = 0,
+        ["Display"] = "Forest Spirit",
+        ["Color"] = Color3.fromRGB(74, 208, 64)
+    },
     ["Lucky Gold"] = {
         ["PriceMultiply"] = 6.14,
         ["Chance"] = 0,
@@ -690,7 +723,7 @@ v8.Tormented = {
     ["Color"] = Color3.fromRGB(34, 27, 27)
 }
 v8.Surreal = {
-    ["PriceMultiply"] = math.random(),
+    ["PriceMultiply"] = math.random(0, 10),
     ["Chance"] = 0,
     ["Display"] = "Surreal",
     ["Color"] = Color3.fromRGB(214, 214, 214)
@@ -1368,17 +1401,13 @@ v8.Mesmerized = {
     ["Chance"] = 0,
     ["Priority"] = 1,
     ["Display"] = "Mesmerized",
-    ["Color"] = Color3.fromRGB(255, 230, 3),
-    ["Untradeable"] = true,
-    ["BlockCatchMessage"] = true
+    ["Color"] = Color3.fromRGB(255, 230, 3)
 }
 v8.Supersonic = {
     ["PriceMultiply"] = 8.01,
     ["Chance"] = 0,
     ["Display"] = "Supersonic",
-    ["Color"] = ColorSequence.new(Color3.fromRGB(255, 171, 171), Color3.fromRGB(255, 83, 83)),
-    ["Untradeable"] = true,
-    ["BlockCatchMessage"] = true
+    ["Color"] = ColorSequence.new(Color3.fromRGB(255, 171, 171), Color3.fromRGB(255, 83, 83))
 }
 v8.Sinister = {
     ["PriceMultiply"] = 2.9,
@@ -1572,5 +1601,41 @@ v8.Rainbow = {
     ["Chance"] = 0,
     ["Display"] = "Rainbow",
     ["Color"] = Color3.fromRGB(255, 158, 234)
+}
+v8["Bellona\'s Infliction"] = {
+    ["PriceMultiply"] = 3,
+    ["Chance"] = 0,
+    ["Display"] = "Bellona\'s Infliction",
+    ["Color"] = Color3.fromRGB(200, 50, 50)
+}
+v8["Apollo\'s Infliction"] = {
+    ["PriceMultiply"] = 3.2,
+    ["Chance"] = 0,
+    ["Display"] = "Apollo\'s Infliction",
+    ["Color"] = Color3.fromRGB(255, 200, 50)
+}
+v8["Poseidon\'s Infliction"] = {
+    ["PriceMultiply"] = 3.5,
+    ["Chance"] = 0,
+    ["Display"] = "Poseidon\'s Infliction",
+    ["Color"] = Color3.fromRGB(50, 120, 220)
+}
+v8["Zeus\'s Infliction"] = {
+    ["PriceMultiply"] = 3.8,
+    ["Chance"] = 0,
+    ["Display"] = "Zeus\'s Infliction",
+    ["Color"] = Color3.fromRGB(255, 255, 100)
+}
+v8["Hades\' Infliction"] = {
+    ["PriceMultiply"] = 4,
+    ["Chance"] = 0,
+    ["Display"] = "Hades\' Infliction",
+    ["Color"] = Color3.fromRGB(100, 40, 150)
+}
+v8["Olympian Infliction"] = {
+    ["PriceMultiply"] = 5,
+    ["Chance"] = 0,
+    ["Display"] = "Olympian Infliction",
+    ["Color"] = Color3.fromRGB(220, 200, 255)
 }
 return v8
