@@ -1276,6 +1276,13 @@ return {
         ["Price"] = 20250,
         ["From"] = "Fischgiving 2",
     },
+    ["Thundering Seahorse"] = {
+        ["Chance"] = 12,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 150, 350 },
+        ["From"] = "Atlantean Storm",
+        ["Price"] = 360,
+    },
     ["Shortfin Mako Shark"] = {
         ["Rarity"] = "Common",
         ["WeightPool"] = { 250, 1000 },
@@ -1480,6 +1487,13 @@ return {
         ["WeightPool"] = { 8000, 10000 },
         ["From"] = "Toxic Grove",
         ["Price"] = 3800,
+    },
+    ["Easter Bunny"] = {
+        ["Chance"] = 0,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 20, 26 },
+        ["Price"] = 1500,
+        ["From"] = "Easter",
     },
     ["Kitefin Shark"] = {
         ["Chance"] = 10,
@@ -2453,6 +2467,13 @@ return {
         ["WeightPool"] = { 22, 30 },
         ["From"] = "Living Garden",
         ["Price"] = 520,
+    },
+    ["Baby Chick"] = {
+        ["Chance"] = 0,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 1, 2 },
+        ["Price"] = 150,
+        ["From"] = "Easter",
     },
     ["Edestus"] = {
         ["Chance"] = 50,
@@ -3984,6 +4005,13 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 9500,
     },
+    ["Tidecaller Squid"] = {
+        ["Chance"] = 15,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 100, 250 },
+        ["From"] = "Atlantean Storm",
+        ["Price"] = 290,
+    },
     ["Cupid Relic"] = {
         ["Chance"] = 1,
         ["Rarity"] = "Limited",
@@ -4048,6 +4076,13 @@ return {
         ["From"] = "Snowcap",
         ["Chance"] = 50,
     },
+    ["Sunscale Tortoise"] = {
+        ["Chance"] = 20,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 60, 150 },
+        ["From"] = "Atlantean Storm",
+        ["Price"] = 230,
+    },
     ["Rarities"] = {
     },
     ["Goldwraith"] = {
@@ -4079,6 +4114,13 @@ return {
         ["Worlds"] = { "Sea 1" },
         ["From"] = "LEGO",
         ["Price"] = 900,
+    },
+    ["Basketback Tortoise"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 120000, 135000 },
+        ["Price"] = 47000,
+        ["From"] = "Easter",
     },
     ["Pink Betta"] = {
         ["Chance"] = 10,
@@ -4196,6 +4238,41 @@ return {
         ["From"] = "Challenger's Deep",
         ["Chance"] = 20,
     },
+    ["Mutated Shark"] = {
+        ["Chance"] = 0.05,
+        ["Rarity"] = "Mythical",
+        ["WeightPool"] = { 2000, 4000 },
+        ["From"] = "The Depths",
+        ["Price"] = 3132,
+    },
+    ["Typhoon Devourer"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 500500, 671000 },
+        ["Price"] = 32000,
+        ["From"] = "Atlantean Storm",
+    },
+    ["Tempest Colossus"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 500500, 671000 },
+        ["Price"] = 32000,
+        ["From"] = "Atlantean Storm",
+    },
+    ["Stormbound Leviathan"] = {
+        ["Chance"] = 1,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 500500, 671000 },
+        ["Price"] = 32000,
+        ["From"] = "Atlantean Storm",
+    },
+    ["Golden Sea Pearl"] = {
+        ["Chance"] = 0.2,
+        ["Rarity"] = "Exotic",
+        ["WeightPool"] = { 1, 4 },
+        ["From"] = "Roslit",
+        ["Price"] = 10000,
+    },
     ["Swamp Bass"] = {
         ["Rarity"] = "Common",
         ["WeightPool"] = { 20, 60 },
@@ -4203,12 +4280,19 @@ return {
         ["From"] = "Mushgrove",
         ["Chance"] = 80,
     },
-    ["Mutated Shark"] = {
-        ["Chance"] = 0.05,
+    ["Dusky Blobfish"] = {
+        ["Chance"] = 8,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 200, 500 },
+        ["From"] = "Atlantean Storm",
+        ["Price"] = 420,
+    },
+    ["Handfish"] = {
+        ["Chance"] = 0.01,
         ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 2000, 4000 },
-        ["From"] = "The Depths",
-        ["Price"] = 3132,
+        ["WeightPool"] = { 20, 60 },
+        ["From"] = "Mushgrove",
+        ["Price"] = 3141,
     },
     ["Roundnose Grenadier"] = {
         ["Chance"] = 60,
@@ -7399,12 +7483,12 @@ return {
         ["From"] = "Valentides 2",
         ["Price"] = 2030,
     },
-    ["Golden Sea Pearl"] = {
-        ["Chance"] = 0.2,
-        ["Rarity"] = "Exotic",
-        ["WeightPool"] = { 1, 4 },
-        ["From"] = "Roslit",
-        ["Price"] = 10000,
+    ["Seraphic Whale"] = {
+        ["Chance"] = 3,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 3000, 8000 },
+        ["Price"] = 1850,
+        ["From"] = "Atlantean Storm",
     },
     ["Cursed Eel"] = {
         ["Chance"] = 25,
@@ -7926,12 +8010,12 @@ return {
         ["From"] = "Second Sea",
         ["Price"] = 430,
     },
-    ["Handfish"] = {
-        ["Chance"] = 0.01,
-        ["Rarity"] = "Mythical",
-        ["WeightPool"] = { 20, 60 },
-        ["From"] = "Mushgrove",
-        ["Price"] = 3141,
+    ["Battlescarred Serpent"] = {
+        ["Chance"] = 25,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 30, 70 },
+        ["From"] = "Atlantean Storm",
+        ["Price"] = 155,
     },
     ["Catfish"] = {
         ["Rarity"] = "Rare",
@@ -9539,5 +9623,5 @@ return {
         ["Price"] = 15000,
     },
 
-    Rarities = {[1] = "Unusual",[2] = "Mythical",[3] = "Exotic",[4] = "Limited",[5] = "Rare",[6] = "Fragment",[7] = "Gemstone",[8] = "Nuclear",[9] = "Divine Secret",[10] = "Trash",[11] = "Common",[12] = "Mirror",[13] = "Whistle",[14] = "Uncommon",[15] = "Cataclysmic",[16] = "Unique",[17] = "Legendary",[18] = "Special",[19] = "Seed",[20] = "Extinct",[21] = "Relic",[22] = "Apex",[23] = "Secret"}
+    Rarities = {[1] = "Unusual",[2] = "Mythical",[3] = "Exotic",[4] = "Limited",[5] = "Rare",[6] = "Fragment",[7] = "Gemstone",[8] = "Nuclear",[9] = "Divine Secret",[10] = "Trash",[11] = "Common",[12] = "Mirror",[13] = "Whistle",[14] = "Uncommon",[15] = "Cataclysmic",[16] = "Unique",[17] = "Legendary",[18] = "Special",[19] = "Seed",[20] = "Extinct",[21] = "Relic",[22] = "Apex",[23] = "Secret",}
 }
