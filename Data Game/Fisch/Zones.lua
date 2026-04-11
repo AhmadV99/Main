@@ -1,15 +1,324 @@
 local u1 = game:GetService("ReplicatedStorage")
-local v2 = {
+local v14 = {
     ["DevTest"] = {
         ["Pool"] = { "Scylla" },
         ["CantBeWormholed"] = true,
         ["Priority"] = 2
     },
+    ["Bellona\'s Frenzy of War"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Rusty Hook",
+            "Rustscale Minnow",
+            "Splinterfin Carp",
+            "Ironjaw Guppy",
+            "Speartail Pike",
+            "Warstripe Bass",
+            "Shieldbearer Koi",
+            "Gladiator Eel",
+            "Bloodfang Barracuda"
+        },
+        ["Priority"] = 3
+    },
+    ["Apollo\'s Song of Light"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Broken Arrow",
+            "Gleamfin Minnow",
+            "Sunscale Tetra",
+            "Beamtail Koi",
+            "Lumen Bass",
+            "Prismfin Trout",
+            "Auric Angelfish",
+            "Dawnflare Eel",
+            "Solstice Ray"
+        },
+        ["Priority"] = 3,
+        ["CustomCondition"] = function(_, p2, _) --[[ Name: CustomCondition, Line 75 ]]
+            if p2.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Bellona then
+                return true
+            else
+                return false, "You must break Bellona\'s seal before fishing here."
+            end
+        end
+    },
+    ["Poseidon\'s Storm of Floods"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Chipped Crown",
+            "Tidepool Minnow",
+            "Ripplefin Carp",
+            "Currenttail Bass",
+            "Surftail Guppy",
+            "Foamcrest Koi",
+            "King\'s Crest Eel"
+        },
+        ["Priority"] = 3,
+        ["CustomCondition"] = function(_, p3, _) --[[ Name: CustomCondition, Line 104 ]]
+            if p3.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Apollo then
+                return true
+            else
+                return false, "You must break Apollo\'s seal before fishing here."
+            end
+        end
+    },
+    ["Zeus\'s Thunder of Chaos"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Broken Gear",
+            "Sparkfin Minnow",
+            "Static Guppy",
+            "Voltstripe Carp",
+            "Chargeback Bass",
+            "Ion Pike",
+            "Arcflash Koi",
+            "Thunderclap Crab"
+        },
+        ["Priority"] = 4,
+        ["CustomCondition"] = function(_, p4, _) --[[ Name: CustomCondition, Line 133 ]]
+            if p4.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Poseidon then
+                return true
+            else
+                return false, "You must break Poseidon\'s seal before fishing here."
+            end
+        end
+    },
+    ["Hades\' Underworld of Indefinite"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Skull",
+            "Wispfin Minnow",
+            "Duskscale Carp",
+            "Murkback Bass",
+            "Hollow Pike",
+            "Veilfin Koi",
+            "Revenant Eel",
+            "Shadow Ray",
+            "Grave Serpent"
+        },
+        ["Priority"] = 3,
+        ["CustomCondition"] = function(_, p5, _) --[[ Name: CustomCondition, Line 162 ]]
+            if p5.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
+                return true
+            else
+                return false, "You must break Zeus\'s seal before fishing here."
+            end
+        end
+    },
+    ["Olympian Fissure"] = {
+        ["Pool"] = {
+            "Boot",
+            "Common Crate",
+            "Bait Crate",
+            "Fractured Minnow",
+            "Splitfin Koi",
+            "Divine Aberrant",
+            "Aegisbreaker Ray",
+            "Titanspawn Serpent",
+            "Primordial Devourer"
+        },
+        ["Priority"] = 3,
+        ["CustomCondition"] = function(_, p6, _) --[[ Name: CustomCondition, Line 187 ]]
+            if p6.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Hades then
+                return true
+            else
+                return false, "You must break Hades\' seal before fishing here."
+            end
+        end
+    },
+    ["Tidecrasher Archon Hunt"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Chipped Crown",
+            "Tidepool Minnow",
+            "Ripplefin Carp",
+            "Currenttail Bass",
+            "Surftail Guppy",
+            "Surge Pickerel",
+            "Foamcrest Koi",
+            "Tridentfish",
+            "Whirlpool Snapper",
+            "King\'s Crest Eel",
+            "Tsunami Whale"
+        },
+        ["Priority"] = 5,
+        ["CantBeWormholed"] = true,
+        ["IsHunt"] = true,
+        ["CustomCondition"] = function(_, p7, _) --[[ Name: CustomCondition, Line 238 ]]
+            if p7.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Apollo then
+                return true
+            else
+                return false, "You must break Apollo\'s seal before fishing here."
+            end
+        end
+    },
+    ["Soul Pool"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Skull",
+            "Wispfin Minnow",
+            "Duskscale Carp",
+            "Fading Guppy",
+            "Murkback Bass",
+            "Hollow Pike",
+            "Veilfin Koi",
+            "Revenant Eel",
+            "Shadow Ray",
+            "Grave Serpent",
+            "Spectral Whale"
+        },
+        ["Priority"] = 3,
+        ["CantBeWormholed"] = true,
+        ["CustomCondition"] = function(_, p8, _) --[[ Name: CustomCondition, Line 269 ]]
+            if p8.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
+                return true
+            else
+                return false, "You must break Zeus\'s seal before fishing here."
+            end
+        end
+    },
+    ["Helios Sunray Hunt"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Broken Arrow",
+            "Gleamfin Minnow",
+            "Sunscale Tetra",
+            "Radiant Guppy",
+            "Beamtail Koi",
+            "Lumen Bass",
+            "Prismfin Trout",
+            "Auric Angelfish",
+            "Dawnflare Eel",
+            "Solstice Ray",
+            "Empyrean Sunwhale",
+            "Helios Sunray"
+        },
+        ["Priority"] = 6,
+        ["CantBeWormholed"] = true,
+        ["IsHunt"] = true,
+        ["CustomCondition"] = function(_, p9, _) --[[ Name: CustomCondition, Line 303 ]]
+            if p9.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Bellona then
+                return true
+            else
+                return false, "You must break Bellona\'s seal before fishing here."
+            end
+        end
+    },
+    ["Styx Angler Hunt"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Skull",
+            "Wispfin Minnow",
+            "Duskscale Carp",
+            "Fading Guppy",
+            "Murkback Bass",
+            "Hollow Pike",
+            "Veilfin Koi",
+            "Revenant Eel",
+            "Shadow Ray",
+            "Grave Serpent",
+            "Spectral Whale"
+        },
+        ["Priority"] = 5,
+        ["CantBeWormholed"] = true,
+        ["IsHunt"] = true,
+        ["CustomCondition"] = function(_, p10, _) --[[ Name: CustomCondition, Line 335 ]]
+            if p10.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
+                return true
+            else
+                return false, "You must break Zeus\'s seal before fishing here."
+            end
+        end
+    },
+    ["Wisp Haunt"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Skull",
+            "Wispfin Minnow",
+            "Duskscale Carp",
+            "Fading Guppy",
+            "Murkback Bass",
+            "Hollow Pike",
+            "Veilfin Koi",
+            "Revenant Eel",
+            "Shadow Ray",
+            "Grave Serpent",
+            "Spectral Whale"
+        },
+        ["Priority"] = 3,
+        ["CantBeWormholed"] = true,
+        ["CustomCondition"] = function(_, p11, _) --[[ Name: CustomCondition, Line 366 ]]
+            if p11.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
+                return true
+            else
+                return false, "You must break Zeus\'s seal before fishing here."
+            end
+        end
+    },
     ["Legionnaire Lamprey Hunt"] = {
-        ["Pool"] = { "Tire" },
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Rusty Hook",
+            "Rustscale Minnow",
+            "Splinterfin Carp",
+            "Bladeback Perch",
+            "Ironjaw Guppy",
+            "Speartail Pike",
+            "Warstripe Bass",
+            "Shieldbearer Koi",
+            "Gladiator Eel",
+            "Bloodfang Barracuda",
+            "Warlord Sturgeon"
+        },
         ["Priority"] = 5,
         ["CantBeWormholed"] = true,
         ["IsHunt"] = true
+    },
+    ["Olympian Devil Hunt"] = {
+        ["Pool"] = {
+            "Boot",
+            "Common Crate",
+            "Bait Crate",
+            "Fractured Minnow",
+            "Splitfin Koi",
+            "Divine Aberrant",
+            "Aegisbreaker Ray",
+            "Titanspawn Serpent",
+            "Primordial Devourer",
+            "Olympian Devil"
+        },
+        ["Priority"] = 5,
+        ["IsHunt"] = true,
+        ["CantBeWormholed"] = true,
+        ["CustomCondition"] = function(_, p12, _) --[[ Name: CustomCondition, Line 417 ]]
+            if p12.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Hades then
+                return true
+            else
+                return false, "You must break Hades\' seal before fishing here."
+            end
+        end
     },
     ["Atlantean Storm"] = {
         ["Pool"] = {
@@ -23,6 +332,34 @@ local v2 = {
             "Maelstorm Shark"
         },
         ["Priority"] = 4
+    },
+    ["Kerauno Wyrm Pool"] = {
+        ["Pool"] = {
+            "Common Crate",
+            "Bait Crate",
+            "Fish Barrel",
+            "Broken Gear",
+            "Sparkfin Minnow",
+            "Static Guppy",
+            "Voltstripe Carp",
+            "Chargeback Bass",
+            "Ion Pike",
+            "Arcflash Koi",
+            "Stormscale Eel",
+            "Thunderclap Crab",
+            "Fulmina Serpent",
+            "Skybreaker Leviathan",
+            "Kerauno Wyrm"
+        },
+        ["IsHunt"] = true,
+        ["Priority"] = 10,
+        ["CustomCondition"] = function(_, p13, _) --[[ Name: CustomCondition, Line 462 ]]
+            if p13.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Poseidon then
+                return true
+            else
+                return false, "You must break Poseidon\'s seal before fishing here."
+            end
+        end
     },
     ["Everturn Forest"] = {
         ["Pool"] = {
@@ -100,7 +437,7 @@ local v2 = {
         ["IsHunt"] = true
     }
 }
-local v3 = {
+local v15 = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -147,8 +484,8 @@ local v3 = {
         ["Secret"] = 3
     }
 }
-v2["Lucky Gold"] = v3
-local v4 = {
+v14["Lucky Gold"] = v15
+local v16 = {
     ["Pool"] = {
         "Bone",
         "Spore Lurker",
@@ -167,8 +504,8 @@ local v4 = {
         ["Common"] = 0.25
     }
 }
-v2["Rotbloom Hunt"] = v4
-v2["Flower Guardian Hunt"] = {
+v14["Rotbloom Hunt"] = v16
+v14["Flower Guardian Hunt"] = {
     ["Pool"] = {
         "Driftwood",
         "Petal Ray",
@@ -187,7 +524,7 @@ v2["Flower Guardian Hunt"] = {
     ["CantBeWormholed"] = true,
     ["IsHunt"] = true
 }
-local v5 = {
+local v17 = {
     ["Pool"] = {
         "Spore Lurker",
         "Mire Krakenling",
@@ -208,8 +545,8 @@ local v5 = {
         ["Common"] = 0.25
     }
 }
-v2["Toxic Boil"] = v5
-local v8 = {
+v14["Toxic Boil"] = v17
+local v20 = {
     ["Pool"] = {
         "Sky Bass",
         "Winged Carp",
@@ -225,17 +562,17 @@ local v8 = {
         ["Exotic"] = 0.5,
         ["Secret"] = 0.5
     },
-    ["CustomCondition"] = function(_, p6, _) --[[ Name: CustomCondition, Line 281 ]]
-        local v7 = p6.Data.NewFormat.TimeTrials.AboveTheClouds
-        if v7 and (v7.CompleteCount and v7.CompleteCount >= 1) then
+    ["CustomCondition"] = function(_, p18, _) --[[ Name: CustomCondition, Line 699 ]]
+        local v19 = p18.Data.NewFormat.TimeTrials.AboveTheClouds
+        if v19 and (v19.CompleteCount and v19.CompleteCount >= 1) then
             return true
         else
             return false, "You must complete the gliding challenge before fishing here."
         end
     end
 }
-v2["Above the Clouds"] = v8
-local v11 = {
+v14["Above the Clouds"] = v20
+local v23 = {
     ["Pool"] = {
         "Sky Bass",
         "Winged Carp",
@@ -251,17 +588,17 @@ local v11 = {
         ["Mythical"] = 0.5,
         ["Secret"] = 0.5
     },
-    ["CustomCondition"] = function(_, p9, _) --[[ Name: CustomCondition, Line 309 ]]
-        local v10 = p9.Data.NewFormat.TimeTrials.AboveTheClouds
-        if v10 and (v10.CompleteCount and v10.CompleteCount >= 1) then
+    ["CustomCondition"] = function(_, p21, _) --[[ Name: CustomCondition, Line 727 ]]
+        local v22 = p21.Data.NewFormat.TimeTrials.AboveTheClouds
+        if v22 and (v22.CompleteCount and v22.CompleteCount >= 1) then
             return true
         else
             return false, "You must complete the gliding challenge before fishing here."
         end
     end
 }
-v2["Wyvern Hunt"] = v11
-v2["Skeletal Leviathan Hunt"] = {
+v14["Wyvern Hunt"] = v23
+v14["Skeletal Leviathan Hunt"] = {
     ["Pool"] = {
         "Volcanic Geode",
         "Rock",
@@ -284,7 +621,7 @@ v2["Skeletal Leviathan Hunt"] = {
     ["RequiredDurability"] = 100,
     ["IsHunt"] = true
 }
-v2["Scoria Reach"] = {
+v14["Scoria Reach"] = {
     ["Pool"] = {
         "Volcanic Geode",
         "Rock",
@@ -301,7 +638,7 @@ v2["Scoria Reach"] = {
     ["Priority"] = 2,
     ["RequiredDurability"] = 100
 }
-v2["Scoria Reach 2"] = {
+v14["Scoria Reach 2"] = {
     ["Pool"] = {
         "Volcanic Geode",
         "Rock",
@@ -318,7 +655,7 @@ v2["Scoria Reach 2"] = {
     ["Priority"] = 3,
     ["RequiredDurability"] = 200
 }
-v2["Scoria Reach Volcano"] = {
+v14["Scoria Reach Volcano"] = {
     ["Pool"] = {
         "Volcanic Geode",
         "Rock",
@@ -336,7 +673,7 @@ v2["Scoria Reach Volcano"] = {
     ["Priority"] = 4,
     ["RequiredDurability"] = 100
 }
-v2["Scoria Reach Molten Serpent"] = {
+v14["Scoria Reach Molten Serpent"] = {
     ["Pool"] = {
         "Volcanic Geode",
         "Rock",
@@ -354,7 +691,7 @@ v2["Scoria Reach Molten Serpent"] = {
     ["Priority"] = 3,
     ["RequiredDurability"] = 100
 }
-v2["Scoria Reach Cindercoil Eel"] = {
+v14["Scoria Reach Cindercoil Eel"] = {
     ["Pool"] = {
         "Volcanic Geode",
         "Rock",
@@ -372,7 +709,7 @@ v2["Scoria Reach Cindercoil Eel"] = {
     ["Priority"] = 3,
     ["RequiredDurability"] = 100
 }
-v2["Scoria Reach Infernal Isonade"] = {
+v14["Scoria Reach Infernal Isonade"] = {
     ["Pool"] = {
         "Volcanic Geode",
         "Rock",
@@ -390,7 +727,7 @@ v2["Scoria Reach Infernal Isonade"] = {
     ["Priority"] = 3,
     ["RequiredDurability"] = 100
 }
-v2["Scoria Reach Crag-Crab"] = {
+v14["Scoria Reach Crag-Crab"] = {
     ["Pool"] = {
         "Volcanic Geode",
         "Rock",
@@ -408,7 +745,7 @@ v2["Scoria Reach Crag-Crab"] = {
     ["Priority"] = 3,
     ["RequiredDurability"] = 100
 }
-v2["Streamer Hideout"] = {
+v14["Streamer Hideout"] = {
     ["Pool"] = {
         "Rock",
         "Common Crate",
@@ -435,7 +772,7 @@ v2["Streamer Hideout"] = {
     ["Priority"] = 2,
     ["CantBeWormholed"] = true
 }
-v2["Sweet Stream"] = {
+v14["Sweet Stream"] = {
     ["Pool"] = {
         "Salmon",
         "Sand Dollar",
@@ -454,7 +791,7 @@ v2["Sweet Stream"] = {
     ["Priority"] = 2,
     ["CantBeWormholed"] = true
 }
-local v12 = {
+local v24 = {
     ["Pool"] = {
         "Salmon",
         "Sand Dollar",
@@ -476,8 +813,8 @@ local v12 = {
         ["Rare"] = 0.5
     }
 }
-v2["Sweetheart Shores"] = v12
-local v13 = {
+v14["Sweetheart Shores"] = v24
+local v25 = {
     ["Pool"] = {
         "Rock",
         "Driftwood",
@@ -503,8 +840,8 @@ local v13 = {
         ["Rare"] = 0.5
     }
 }
-v2["Sweetheart Shores Waterfall"] = v13
-local v14 = {
+v14["Sweetheart Shores Waterfall"] = v25
+local v26 = {
     ["Pool"] = {
         "Driftwood",
         "Trout",
@@ -529,8 +866,8 @@ local v14 = {
         ["Rare"] = 0.5
     }
 }
-v2["Sweetheart Shores Pond"] = v14
-v2["Sweetheart Shores Well"] = {
+v14["Sweetheart Shores Pond"] = v26
+v14["Sweetheart Shores Well"] = {
     ["Pool"] = {
         "Rock",
         "Log",
@@ -544,7 +881,7 @@ v2["Sweetheart Shores Well"] = {
     ["Priority"] = 2,
     ["CantBeWormholed"] = true
 }
-local v15 = {
+local v27 = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -594,8 +931,8 @@ local v15 = {
         ["Rare"] = 0.5
     }
 }
-v2.Lovestorm = v15
-local v16 = {
+v14.Lovestorm = v27
+local v28 = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -645,8 +982,8 @@ local v16 = {
         ["Rare"] = 0.5
     }
 }
-v2["Supercharged Lovestorm"] = v16
-local v17 = {
+v14["Supercharged Lovestorm"] = v28
+local v29 = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -696,8 +1033,8 @@ local v17 = {
         ["Rare"] = 0.5
     }
 }
-v2["Sacred Lovestorm"] = v17
-v2.Tidefall = {
+v14["Sacred Lovestorm"] = v29
+v14.Tidefall = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -713,7 +1050,7 @@ v2.Tidefall = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 1
 }
-v2["Tidefall Castle"] = {
+v14["Tidefall Castle"] = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -730,15 +1067,15 @@ v2["Tidefall Castle"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 1,
     ["Disturbs"] = "Plesiosaur",
-    ["CustomCondition"] = function(_, p18) --[[ Name: CustomCondition, Line 875 ]]
-        if p18.Data.NewFormat.Tidefall.Obelisks.GateOpen then
+    ["CustomCondition"] = function(_, p30) --[[ Name: CustomCondition, Line 1293 ]]
+        if p30.Data.NewFormat.Tidefall.Obelisks.GateOpen then
             return true
         else
             return false, "You have not yet unlocked this area."
         end
     end
 }
-v2["Coral Bastion"] = {
+v14["Coral Bastion"] = {
     ["Pool"] = {
         "Sand Dollar",
         "Stalactite",
@@ -754,7 +1091,7 @@ v2["Coral Bastion"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2
 }
-v2["Sunken Reliquary"] = {
+v14["Sunken Reliquary"] = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -773,7 +1110,7 @@ v2["Sunken Reliquary"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2
 }
-v2["Collapsed Ruins"] = {
+v14["Collapsed Ruins"] = {
     ["Pool"] = {
         "Rock",
         "Dripstone",
@@ -790,7 +1127,7 @@ v2["Collapsed Ruins"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2
 }
-v2["Crowned Ruins"] = {
+v14["Crowned Ruins"] = {
     ["Pool"] = {
         "Scrap Metal",
         "Gnomefish",
@@ -807,7 +1144,7 @@ v2["Crowned Ruins"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 3
 }
-v2["Plesiosaur Hunt"] = {
+v14["Plesiosaur Hunt"] = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -822,15 +1159,15 @@ v2["Plesiosaur Hunt"] = {
     ["Priority"] = 4,
     ["CantBeWormholed"] = true,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, p19) --[[ Name: CustomCondition, Line 1014 ]]
-        if p19.Data.NewFormat.Tidefall.Obelisks.GateOpen then
+    ["CustomCondition"] = function(_, p31) --[[ Name: CustomCondition, Line 1432 ]]
+        if p31.Data.NewFormat.Tidefall.Obelisks.GateOpen then
             return true
         else
             return false, "You have not yet unlocked this area."
         end
     end
 }
-v2["Reef Titan Hunt"] = {
+v14["Reef Titan Hunt"] = {
     ["Pool"] = {
         "Sand Dollar",
         "Stalactite",
@@ -846,7 +1183,7 @@ v2["Reef Titan Hunt"] = {
     ["CantBeWormholed"] = true,
     ["IsHunt"] = true
 }
-v2["Omnithal Hunt"] = {
+v14["Omnithal Hunt"] = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -865,7 +1202,7 @@ v2["Omnithal Hunt"] = {
     ["CantBeWormholed"] = true,
     ["IsHunt"] = true
 }
-v2["Pliosaur Hunt"] = {
+v14["Pliosaur Hunt"] = {
     ["Pool"] = {
         "Rock",
         "Dripstone",
@@ -882,7 +1219,7 @@ v2["Pliosaur Hunt"] = {
     ["CantBeWormholed"] = true,
     ["IsHunt"] = true
 }
-v2["Goldwraith Hunt"] = {
+v14["Goldwraith Hunt"] = {
     ["Pool"] = {
         "Scrap Metal",
         "Gnomefish",
@@ -899,7 +1236,7 @@ v2["Goldwraith Hunt"] = {
     ["CantBeWormholed"] = true,
     ["IsHunt"] = true
 }
-v2["New Years"] = {
+v14["New Years"] = {
     ["Pool"] = {
         "Eonshell",
         "Confetti Carp",
@@ -911,7 +1248,7 @@ v2["New Years"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Glacial Ridge"] = {
+v14["Glacial Ridge"] = {
     ["Pool"] = {
         "Ice",
         "Tire",
@@ -941,7 +1278,7 @@ v2["Glacial Ridge"] = {
     ["Priority"] = 104,
     ["CantBeWormholed"] = true
 }
-v2["Northstar Village"] = {
+v14["Northstar Village"] = {
     ["Pool"] = {
         "Peppermint Pike",
         "Stockingfish",
@@ -975,7 +1312,7 @@ v2["Northstar Village"] = {
     ["Priority"] = 105,
     ["CantBeWormholed"] = true
 }
-v2["Cryoshock Serpent"] = {
+v14["Cryoshock Serpent"] = {
     ["ExclusiveRods"] = {
         {
             "Christmas Tree Rod",
@@ -1030,22 +1367,22 @@ v2["Cryoshock Serpent"] = {
     },
     ["Priority"] = 106,
     ["CantBeWormholed"] = true,
-    ["CustomCondition"] = function(p20, _, p21) --[[ Name: CustomCondition, Line 1269 ]]
+    ["CustomCondition"] = function(p32, _, p33) --[[ Name: CustomCondition, Line 1687 ]]
         --[[
         Upvalues:
             [1] = u1
         --]]
-        if p20:GetAttribute("CanCatchCryoshock") and u1.world.weather.Value == "Frost_Moon" then
-            local v22 = p21:FindFirstChild("Stats")
-            if v22 then
-                v22 = v22:FindFirstChild("rod")
+        if p32:GetAttribute("CanCatchCryoshock") and u1.world.weather.Value == "Frost_Moon" then
+            local v34 = p33:FindFirstChild("Stats")
+            if v34 then
+                v34 = v34:FindFirstChild("rod")
             end
-            if v22 then
-                local v23 = p21:WaitForChild("Rods"):FindFirstChild(v22.Value)
-                if v23 then
-                    if v23.Value == "Merry" or v23.Value == "Gingerbread" then
+            if v34 then
+                local v35 = p33:WaitForChild("Rods"):FindFirstChild(v34.Value)
+                if v35 then
+                    if v35.Value == "Merry" or v35.Value == "Gingerbread" then
                         return true
-                    elseif v23:FindFirstChild("secondaryEnchant") and v23.secondaryEnchant.Value == "Peppermint" then
+                    elseif v35:FindFirstChild("secondaryEnchant") and v35.secondaryEnchant.Value == "Peppermint" then
                         return true
                     else
                         return false, "Your rod lacks the magic of Fischmas..."
@@ -1061,7 +1398,7 @@ v2["Cryoshock Serpent"] = {
         end
     end
 }
-v2.MapleMeadows = {
+v14.MapleMeadows = {
     ["Pool"] = {
         "Cod",
         "Tire",
@@ -1101,7 +1438,7 @@ v2.MapleMeadows = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 2
 }
-v2.HallOfWhispers = {
+v14.HallOfWhispers = {
     ["Pool"] = {
         "Rock",
         "Destroyed Fossil",
@@ -1117,15 +1454,15 @@ v2.HallOfWhispers = {
     },
     ["CantBeWormholed"] = true,
     ["Priority"] = 2,
-    ["CustomCondition"] = function(_, p24) --[[ Name: CustomCondition, Line 1362 ]]
-        if p24.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
+    ["CustomCondition"] = function(_, p36) --[[ Name: CustomCondition, Line 1780 ]]
+        if p36.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
             return true
         else
             return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>."
         end
     end
 }
-v2.PassageOfOaths = {
+v14.PassageOfOaths = {
     ["Pool"] = {
         "Rock",
         "Destroyed Fossil",
@@ -1140,16 +1477,16 @@ v2.PassageOfOaths = {
     },
     ["CantBeWormholed"] = true,
     ["Priority"] = 2,
-    ["CustomCondition"] = function(_, p25) --[[ Name: CustomCondition, Line 1388 ]]
-        for _, v26 in p25.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
-            if not v26 then
+    ["CustomCondition"] = function(_, p37) --[[ Name: CustomCondition, Line 1806 ]]
+        for _, v38 in p37.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
+            if not v38 then
                 return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>."
             end
         end
         return true
     end
 }
-v2.MossjawHunt = {
+v14.MossjawHunt = {
     ["Pool"] = {
         "Bronze Corydoras",
         "Neon Tetra",
@@ -1162,21 +1499,21 @@ v2.MossjawHunt = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 4,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, p27) --[[ Name: CustomCondition, Line 1413 ]]
-        local v28 = 0
-        for _, v29 in p27.Data.NewFormat.LostJungle.Runes.Placed do
-            if v29 then
-                v28 = v28 + 1
+    ["CustomCondition"] = function(_, p39) --[[ Name: CustomCondition, Line 1831 ]]
+        local v40 = 0
+        for _, v41 in p39.Data.NewFormat.LostJungle.Runes.Placed do
+            if v41 then
+                v40 = v40 + 1
             end
         end
-        if v28 < 5 then
+        if v40 < 5 then
             return false, "You must place all 5 runes before fishing here."
         else
             return true
         end
     end
 }
-v2["Frostwyrm Hunt"] = {
+v14["Frostwyrm Hunt"] = {
     ["Pool"] = {
         "Ice",
         "Bone",
@@ -1189,11 +1526,11 @@ v2["Frostwyrm Hunt"] = {
     ["Priority"] = 4,
     ["CantBeWormholed"] = true,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, _) --[[ Name: CustomCondition, Line 1443 ]]
+    ["CustomCondition"] = function(_, _) --[[ Name: CustomCondition, Line 1861 ]]
         return true
     end
 }
-v2["Boreal Pines"] = {
+v14["Boreal Pines"] = {
     ["Pool"] = {
         "Ice",
         "Antarctic Icefish",
@@ -1203,7 +1540,7 @@ v2["Boreal Pines"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 1
 }
-v2["Boreal Pines - Ice Fishing"] = {
+v14["Boreal Pines - Ice Fishing"] = {
     ["Pool"] = {
         "Ice",
         "Antarctic Icefish",
@@ -1215,7 +1552,7 @@ v2["Boreal Pines - Ice Fishing"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2
 }
-v2["Boreal Pines - Cave"] = {
+v14["Boreal Pines - Cave"] = {
     ["Pool"] = {
         "Ice",
         "Bone",
@@ -1229,7 +1566,7 @@ v2["Boreal Pines - Cave"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2
 }
-v2["Boreal Pines - Peak"] = {
+v14["Boreal Pines - Peak"] = {
     ["Pool"] = {
         "Ice",
         "Antarctic Icefish",
@@ -1241,7 +1578,7 @@ v2["Boreal Pines - Peak"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2
 }
-v2["Luminescent Cavern"] = {
+v14["Luminescent Cavern"] = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -1255,7 +1592,7 @@ v2["Luminescent Cavern"] = {
     ["Priority"] = 2,
     ["Disturbs"] = "ColossalEtherealDragon"
 }
-v2["Lost Jungle"] = {
+v14["Lost Jungle"] = {
     ["Pool"] = {
         "Driftwood",
         "Neon Tetra",
@@ -1273,7 +1610,7 @@ v2["Lost Jungle"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2
 }
-v2["Mossjaw Rest"] = {
+v14["Mossjaw Rest"] = {
     ["Pool"] = {
         "Driftwood",
         "Rock",
@@ -1290,7 +1627,7 @@ v2["Mossjaw Rest"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 3
 }
-v2["Crimson Cavern"] = {
+v14["Crimson Cavern"] = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -1303,15 +1640,15 @@ v2["Crimson Cavern"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2,
     ["Disturbs"] = "ColossalAncientDragon",
-    ["CustomCondition"] = function(_, p30) --[[ Name: CustomCondition, Line 1596 ]]
-        if p30.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
+    ["CustomCondition"] = function(_, p42) --[[ Name: CustomCondition, Line 2014 ]]
+        if p42.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
             return true
         else
             return false, "You must unlock the Crimson Cavern before fishing here."
         end
     end
 }
-v2["Cultist Lair"] = {
+v14["Cultist Lair"] = {
     ["Pool"] = {
         "Rock",
         "Destroyed Fossil",
@@ -1326,15 +1663,15 @@ v2["Cultist Lair"] = {
     },
     ["CantBeWormholed"] = false,
     ["Priority"] = 2,
-    ["CustomCondition"] = function(_, p31) --[[ Name: CustomCondition, Line 1626 ]]
-        if p31.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
+    ["CustomCondition"] = function(_, p43) --[[ Name: CustomCondition, Line 2044 ]]
+        if p43.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
             return true
         else
             return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>."
         end
     end
 }
-v2["Hall of Whispers"] = {
+v14["Hall of Whispers"] = {
     ["Pool"] = {
         "Rock",
         "Destroyed Fossil",
@@ -1349,15 +1686,15 @@ v2["Hall of Whispers"] = {
     },
     ["CantBeWormholed"] = false,
     ["Priority"] = 2,
-    ["CustomCondition"] = function(_, p32) --[[ Name: CustomCondition, Line 1652 ]]
-        if p32.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
+    ["CustomCondition"] = function(_, p44) --[[ Name: CustomCondition, Line 2070 ]]
+        if p44.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
             return true
         else
             return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>."
         end
     end
 }
-v2["Passage of Oaths"] = {
+v14["Passage of Oaths"] = {
     ["Pool"] = {
         "Rock",
         "Destroyed Fossil",
@@ -1371,16 +1708,16 @@ v2["Passage of Oaths"] = {
     },
     ["CantBeWormholed"] = false,
     ["Priority"] = 2,
-    ["CustomCondition"] = function(_, p33) --[[ Name: CustomCondition, Line 1677 ]]
-        for _, v34 in p33.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
-            if not v34 then
+    ["CustomCondition"] = function(_, p45) --[[ Name: CustomCondition, Line 2095 ]]
+        for _, v46 in p45.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
+            if not v46 then
                 return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>."
             end
         end
         return true
     end
 }
-v2["The Sanctum"] = {
+v14["The Sanctum"] = {
     ["Pool"] = {
         "Rock",
         "Cave Angel Fish",
@@ -1394,15 +1731,15 @@ v2["The Sanctum"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2,
     ["Disturbs"] = "The Sanctum Hunt",
-    ["CustomCondition"] = function(_, p35) --[[ Name: CustomCondition, Line 1707 ]]
-        if p35.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+    ["CustomCondition"] = function(_, p47) --[[ Name: CustomCondition, Line 2125 ]]
+        if p47.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
             return true
         else
             return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>."
         end
     end
 }
-v2["The Sanctum Hunt"] = {
+v14["The Sanctum Hunt"] = {
     ["Pool"] = {
         "Cave Angel Fish",
         "Ozark Cavefish",
@@ -1416,15 +1753,15 @@ v2["The Sanctum Hunt"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 3,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, p36) --[[ Name: CustomCondition, Line 1735 ]]
-        if p36.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+    ["CustomCondition"] = function(_, p48) --[[ Name: CustomCondition, Line 2153 ]]
+        if p48.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
             return true
         else
             return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>."
         end
     end
 }
-v2["The Sanctum Profane Hunt"] = {
+v14["The Sanctum Profane Hunt"] = {
     ["Pool"] = {
         "Cave Angel Fish",
         "Ozark Cavefish",
@@ -1438,15 +1775,15 @@ v2["The Sanctum Profane Hunt"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 3,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, p37) --[[ Name: CustomCondition, Line 1763 ]]
-        if p37.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+    ["CustomCondition"] = function(_, p49) --[[ Name: CustomCondition, Line 2181 ]]
+        if p49.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
             return true
         else
             return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>."
         end
     end
 }
-v2["The Sanctum Shamrock Hunt"] = {
+v14["The Sanctum Shamrock Hunt"] = {
     ["Pool"] = {
         "Cave Angel Fish",
         "Ozark Cavefish",
@@ -1460,15 +1797,15 @@ v2["The Sanctum Shamrock Hunt"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 3,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, p38) --[[ Name: CustomCondition, Line 1791 ]]
-        if p38.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
+    ["CustomCondition"] = function(_, p50) --[[ Name: CustomCondition, Line 2209 ]]
+        if p50.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
             return true
         else
             return false, "The fish ignore you completely... Maybe it\'s best to get here <b>normally</b>."
         end
     end
 }
-v2["Carrot Garden"] = {
+v14["Carrot Garden"] = {
     ["Pool"] = {
         "Carrot Turtle",
         "Carrot Pufferfish",
@@ -1482,22 +1819,22 @@ v2["Carrot Garden"] = {
     ["Priority"] = 102,
     ["CantBeWormholed"] = false
 }
-v2["AFK Pool - Trading Plaza"] = {
+v14["AFK Pool - Trading Plaza"] = {
     ["Pool"] = { "Doubloon" },
     ["CantBeWormholed"] = true,
     ["Priority"] = 3,
-    ["CustomCondition"] = function(_, _, p39) --[[ Name: CustomCondition, Line 1845 ]]
-        if p39 then
-            p39 = p39:FindFirstChild("Stats")
+    ["CustomCondition"] = function(_, _, p51) --[[ Name: CustomCondition, Line 2263 ]]
+        if p51 then
+            p51 = p51:FindFirstChild("Stats")
         end
-        if p39 and (p39:FindFirstChild("realLevel") and p39.realLevel.Value >= 25) then
+        if p51 and (p51:FindFirstChild("realLevel") and p51.realLevel.Value >= 25) then
             return true
         else
             return false, "You must reach Level 25 before fishing here."
         end
     end
 }
-v2["Gilded Arch"] = {
+v14["Gilded Arch"] = {
     ["Pool"] = {
         "Squirrelfish",
         "French Grunt",
@@ -1520,7 +1857,7 @@ v2["Gilded Arch"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 2
 }
-v2["Castaway Cliffs"] = {
+v14["Castaway Cliffs"] = {
     ["Pool"] = {
         "Clowned Triggerfish",
         "Flamekissed Hawkfish",
@@ -1537,7 +1874,7 @@ v2["Castaway Cliffs"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2
 }
-v2["Magician Narwhal - Sea 2"] = {
+v14["Magician Narwhal - Sea 2"] = {
     ["Pool"] = {
         "Cursed Thread",
         "Hogchoker",
@@ -1568,7 +1905,7 @@ v2["Magician Narwhal - Sea 2"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Magician Narwhal - Sea 1"] = {
+v14["Magician Narwhal - Sea 1"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -1610,7 +1947,7 @@ v2["Magician Narwhal - Sea 1"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Beluga - Sea 2"] = {
+v14["Beluga - Sea 2"] = {
     ["Pool"] = {
         "Cursed Thread",
         "Hogchoker",
@@ -1641,7 +1978,7 @@ v2["Beluga - Sea 2"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Beluga - Sea 1"] = {
+v14["Beluga - Sea 1"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -1683,7 +2020,7 @@ v2["Beluga - Sea 1"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Narwhal - Sea 2"] = {
+v14["Narwhal - Sea 2"] = {
     ["Pool"] = {
         "Cursed Thread",
         "Hogchoker",
@@ -1714,7 +2051,7 @@ v2["Narwhal - Sea 2"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Narwhal - Sea 1"] = {
+v14["Narwhal - Sea 1"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -1756,7 +2093,7 @@ v2["Narwhal - Sea 1"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Apex Leviathan"] = {
+v14["Apex Leviathan"] = {
     ["Pool"] = {
         "Cursed Thread",
         "Hogchoker",
@@ -1787,7 +2124,7 @@ v2["Apex Leviathan"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2.Mosslurker = {
+v14.Mosslurker = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -1829,7 +2166,7 @@ v2.Mosslurker = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Bloop Fish"] = {
+v14["Bloop Fish"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -1873,7 +2210,7 @@ v2["Bloop Fish"] = {
     ["Priority"] = 5,
     ["IsHunt"] = true
 }
-v2["Baby Bloop Fish"] = {
+v14["Baby Bloop Fish"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -1917,7 +2254,7 @@ v2["Baby Bloop Fish"] = {
     ["Priority"] = 4,
     ["IsHunt"] = true
 }
-v2["Shamrock Bloop Fish"] = {
+v14["Shamrock Bloop Fish"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -1961,7 +2298,7 @@ v2["Shamrock Bloop Fish"] = {
     ["Priority"] = 50,
     ["IsHunt"] = true
 }
-v2["Colossal Ethereal Dragon"] = {
+v14["Colossal Ethereal Dragon"] = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -1975,7 +2312,7 @@ v2["Colossal Ethereal Dragon"] = {
     ["Priority"] = 3,
     ["IsHunt"] = true
 }
-v2["Colossal Blue Dragon"] = {
+v14["Colossal Blue Dragon"] = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -1989,7 +2326,7 @@ v2["Colossal Blue Dragon"] = {
     ["Priority"] = 3,
     ["IsHunt"] = true
 }
-v2["Colossal Ancient Dragon"] = {
+v14["Colossal Ancient Dragon"] = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -2002,15 +2339,15 @@ v2["Colossal Ancient Dragon"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 3,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, p40) --[[ Name: CustomCondition, Line 2500 ]]
-        if p40.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
+    ["CustomCondition"] = function(_, p52) --[[ Name: CustomCondition, Line 2918 ]]
+        if p52.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
             return true
         else
             return false, "You must unlock the Crimson Cavern before fishing here."
         end
     end
 }
-v2["Animal Pool"] = {
+v14["Animal Pool"] = {
     ["Pool"] = {
         "Cluckfin",
         "Zebrafishlet",
@@ -2026,7 +2363,7 @@ v2["Animal Pool"] = {
     ["Priority"] = 102,
     ["CantBeWormholed"] = true
 }
-v2["Animal Pool - Second Sea"] = {
+v14["Animal Pool - Second Sea"] = {
     ["Pool"] = {
         "Minnowse",
         "Kittyfish",
@@ -2041,7 +2378,7 @@ v2["Animal Pool - Second Sea"] = {
     ["Priority"] = 102,
     ["CantBeWormholed"] = true
 }
-v2["Octophant Pool Without Elephant"] = {
+v14["Octophant Pool Without Elephant"] = {
     ["Pool"] = {
         "Shrimpanzee",
         "Royal Tigerfish",
@@ -2052,7 +2389,7 @@ v2["Octophant Pool Without Elephant"] = {
     ["Priority"] = 4,
     ["CantBeWormholed"] = true
 }
-v2["Octophant Pool With Elephant"] = {
+v14["Octophant Pool With Elephant"] = {
     ["Pool"] = {
         "Shrimpanzee",
         "Royal Tigerfish",
@@ -2064,7 +2401,7 @@ v2["Octophant Pool With Elephant"] = {
     ["Priority"] = 4,
     ["CantBeWormholed"] = true
 }
-v2["Sea Leviathan Pool"] = {
+v14["Sea Leviathan Pool"] = {
     ["Pool"] = {
         "Sea Leviathan",
         "Hogchoker",
@@ -2094,7 +2431,7 @@ v2["Sea Leviathan Pool"] = {
     ["Priority"] = 4,
     ["CantBeWormholed"] = true
 }
-v2["Smurf Pool"] = {
+v14["Smurf Pool"] = {
     ["ExclusiveRods"] = {
         { "Smurf Rod" },
         "<font color=\"rgb(255,0,0)\">You must use the Smurf Rod in this pool!</font>"
@@ -2147,7 +2484,7 @@ v2["Smurf Pool"] = {
     },
     ["CantBeWormholed"] = true
 }
-v2["Smurf Storm Pool"] = {
+v14["Smurf Storm Pool"] = {
     ["ExclusiveRods"] = {
         { "Smurf Rod" },
         "<font color=\"rgb(255,0,0)\">You must use the Smurf Rod in this pool!</font>"
@@ -2181,7 +2518,7 @@ v2["Smurf Storm Pool"] = {
     },
     ["CantBeWormholed"] = true
 }
-v2["Sunny O\'Coin"] = {
+v14["Sunny O\'Coin"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2223,7 +2560,7 @@ v2["Sunny O\'Coin"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Rowdy McCharm"] = {
+v14["Rowdy McCharm"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2265,7 +2602,7 @@ v2["Rowdy McCharm"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Plumrick O\'Luck"] = {
+v14["Plumrick O\'Luck"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2307,7 +2644,7 @@ v2["Plumrick O\'Luck"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["O\'Mango Goldgrin"] = {
+v14["O\'Mango Goldgrin"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2349,7 +2686,7 @@ v2["O\'Mango Goldgrin"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Clover McRich"] = {
+v14["Clover McRich"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2391,7 +2728,7 @@ v2["Clover McRich"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Blarney McBreeze"] = {
+v14["Blarney McBreeze"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2433,7 +2770,7 @@ v2["Blarney McBreeze"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 5
 }
-v2["Ashfall Pool"] = {
+v14["Ashfall Pool"] = {
     ["Pool"] = {
         "Ember Catfish",
         "Blistered Eel",
@@ -2449,7 +2786,7 @@ v2["Ashfall Pool"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 1
 }
-v2["Cults Curse Pool"] = {
+v14["Cults Curse Pool"] = {
     ["Pool"] = {
         "The Whispering One",
         "Profane Ray",
@@ -2463,7 +2800,7 @@ v2["Cults Curse Pool"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 1
 }
-v2["Ancient Orcas Pool"] = {
+v14["Ancient Orcas Pool"] = {
     ["Pool"] = {
         "Ancient Orca",
         "Tire",
@@ -2506,7 +2843,7 @@ v2["Ancient Orcas Pool"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 4
 }
-v2["Orcas Pool"] = {
+v14["Orcas Pool"] = {
     ["Pool"] = {
         "Orca",
         "Tire",
@@ -2549,7 +2886,7 @@ v2["Orcas Pool"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 4
 }
-v2["Whales Pool"] = {
+v14["Whales Pool"] = {
     ["Pool"] = {
         "Blue Whale",
         "Tire",
@@ -2593,7 +2930,7 @@ v2["Whales Pool"] = {
     ["CantBeWormholed"] = true,
     ["IsHunt"] = true
 }
-v2["Notes Island Pool"] = {
+v14["Notes Island Pool"] = {
     ["Pool"] = {
         "Rotfin Eel",
         "Wraithfin",
@@ -2607,7 +2944,7 @@ v2["Notes Island Pool"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 4
 }
-v2["The Depths - Serpent"] = {
+v14["The Depths - Serpent"] = {
     ["Pool"] = {
         "Destroyed Fossil",
         "Scrap Metal",
@@ -2631,15 +2968,15 @@ v2["The Depths - Serpent"] = {
     },
     ["Priority"] = 2,
     ["Disturbs"] = "MoonlitMirage",
-    ["CustomCondition"] = function(_, _, p41) --[[ Name: CustomCondition, Line 3293 ]]
-        if p41:FindFirstChild("Cache") and p41.Cache:FindFirstChild("Door.TheDepthsGate") then
+    ["CustomCondition"] = function(_, _, p53) --[[ Name: CustomCondition, Line 3711 ]]
+        if p53:FindFirstChild("Cache") and p53.Cache:FindFirstChild("Door.TheDepthsGate") then
             return true
         else
             return false, "You must unlock the gate to The Depths before fishing here."
         end
     end
 }
-v2["The Depths"] = {
+v14["The Depths"] = {
     ["Pool"] = {
         "Destroyed Fossil",
         "Scrap Metal",
@@ -2662,15 +2999,15 @@ v2["The Depths"] = {
     },
     ["Priority"] = 1,
     ["Disturbs"] = "DepthsAbsoluteDarkness",
-    ["CustomCondition"] = function(_, _, p42) --[[ Name: CustomCondition, Line 3335 ]]
-        if p42:FindFirstChild("Cache") and p42.Cache:FindFirstChild("Door.TheDepthsGate") then
+    ["CustomCondition"] = function(_, _, p54) --[[ Name: CustomCondition, Line 3753 ]]
+        if p54:FindFirstChild("Cache") and p54.Cache:FindFirstChild("Door.TheDepthsGate") then
             return true
         else
             return false, "You must unlock the gate to The Depths before fishing here."
         end
     end
 }
-v2["Crystal Cove"] = {
+local v56 = {
     ["Pool"] = {
         "Destroyed Fossil",
         "Scrap Metal",
@@ -2687,15 +3024,19 @@ v2["Crystal Cove"] = {
         "DJ Spinopus"
     },
     ["Priority"] = 1,
-    ["CustomCondition"] = function(_, _, p43) --[[ Name: CustomCondition, Line 3370 ]]
-        if p43:FindFirstChild("Cache") and p43.Cache:FindFirstChild("Door.TheDepthsGate") then
+    ["RarityBaseChanceBoosts"] = {
+        ["Common"] = 0.25
+    },
+    ["CustomCondition"] = function(_, _, p55) --[[ Name: CustomCondition, Line 3792 ]]
+        if p55:FindFirstChild("Cache") and p55.Cache:FindFirstChild("Door.TheDepthsGate") then
             return true
         else
             return false, "You must unlock the gate to The Depths before fishing here."
         end
     end
 }
-v2.Fischfest = {
+v14["Crystal Cove"] = v56
+v14.Fischfest = {
     ["Pool"] = {
         "Sunsquid",
         "Surfboard Ray",
@@ -2711,7 +3052,7 @@ v2.Fischfest = {
     ["Priority"] = 1,
     ["CantBeWormholed"] = true
 }
-v2["Ocean Greedy"] = {
+v14["Ocean Greedy"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2751,7 +3092,7 @@ v2["Ocean Greedy"] = {
     ["Priority"] = 4,
     ["CantBeWormholed"] = true
 }
-v2.Ocean = {
+v14.Ocean = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2794,7 +3135,7 @@ v2.Ocean = {
     ["Priority"] = 0,
     ["Disturbs"] = "BabyBloopHunt"
 }
-v2["Deep Ocean"] = {
+v14["Deep Ocean"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2839,7 +3180,7 @@ v2["Deep Ocean"] = {
     ["Priority"] = 1,
     ["Disturbs"] = "BabyBloopHunt"
 }
-v2.Earthquake = {
+v14.Earthquake = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2885,7 +3226,7 @@ v2.Earthquake = {
     ["CantBeWormholed"] = true,
     ["Disturbs"] = "BabyBloopHunt"
 }
-v2["Atlantis Ocean"] = {
+v14["Atlantis Ocean"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2927,7 +3268,7 @@ v2["Atlantis Ocean"] = {
     ["Priority"] = 1,
     ["CantBeWormholed"] = true
 }
-v2["Grand Reef"] = {
+v14["Grand Reef"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2946,7 +3287,7 @@ v2["Grand Reef"] = {
     },
     ["Priority"] = 3
 }
-v2["Forsaken Shores"] = {
+v14["Forsaken Shores"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2961,7 +3302,7 @@ v2["Forsaken Shores"] = {
     },
     ["Priority"] = 1
 }
-v2["Forsaken Shores Ocean"] = {
+v14["Forsaken Shores Ocean"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2982,7 +3323,7 @@ v2["Forsaken Shores Ocean"] = {
     },
     ["Priority"] = 2
 }
-v2["Forsaken Shores Pond"] = {
+v14["Forsaken Shores Pond"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -2999,7 +3340,7 @@ v2["Forsaken Shores Pond"] = {
     },
     ["Priority"] = 3
 }
-v2["Moosewood Ocean"] = {
+v14["Moosewood Ocean"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3022,7 +3363,7 @@ v2["Moosewood Ocean"] = {
     },
     ["Priority"] = 1
 }
-v2["Moosewood Ocean Mythical"] = {
+v14["Moosewood Ocean Mythical"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3044,7 +3385,7 @@ v2["Moosewood Ocean Mythical"] = {
     },
     ["Priority"] = 4
 }
-v2["Moosewood Docks"] = {
+v14["Moosewood Docks"] = {
     ["Pool"] = {
         "Driftwood",
         "Seaweed",
@@ -3062,7 +3403,7 @@ v2["Moosewood Docks"] = {
     },
     ["Priority"] = 2
 }
-v2["Moosewood Pond"] = {
+v14["Moosewood Pond"] = {
     ["Pool"] = {
         "Tire",
         "Driftwood",
@@ -3079,7 +3420,7 @@ v2["Moosewood Pond"] = {
     },
     ["Priority"] = 2
 }
-v2.Lava = {
+v14.Lava = {
     ["Pool"] = {
         "Volcanic Geode",
         "Rock",
@@ -3098,7 +3439,7 @@ v2.Lava = {
     ["Priority"] = 2,
     ["RequiredDurability"] = 100
 }
-v2.Eruption = {
+v14.Eruption = {
     ["Pool"] = {
         "Volcanic Geode",
         "Rock",
@@ -3120,7 +3461,7 @@ v2.Eruption = {
     ["RequiredDurability"] = 100,
     ["IsHunt"] = true
 }
-v2["Roslit Pond"] = {
+v14["Roslit Pond"] = {
     ["Pool"] = {
         "Driftwood",
         "Alligator Gar",
@@ -3134,7 +3475,7 @@ v2["Roslit Pond"] = {
     },
     ["Priority"] = 2
 }
-v2["Roslit Pond Seaweed"] = {
+v14["Roslit Pond Seaweed"] = {
     ["Pool"] = {
         "Driftwood",
         "Seaweed",
@@ -3150,7 +3491,7 @@ v2["Roslit Pond Seaweed"] = {
     },
     ["Priority"] = 3
 }
-v2["Roslit Bay"] = {
+v14["Roslit Bay"] = {
     ["Pool"] = {
         "Driftwood",
         "Common Crate",
@@ -3172,7 +3513,7 @@ v2["Roslit Bay"] = {
     },
     ["Priority"] = 3
 }
-v2["Roslit Bay Alien"] = {
+v14["Roslit Bay Alien"] = {
     ["Pool"] = {
         "Driftwood",
         "Common Crate",
@@ -3194,7 +3535,7 @@ v2["Roslit Bay Alien"] = {
     },
     ["Priority"] = 8000
 }
-v2["Roslit Bay Ocean"] = {
+v14["Roslit Bay Ocean"] = {
     ["Pool"] = {
         "Driftwood",
         "Common Crate",
@@ -3225,11 +3566,11 @@ v2["Roslit Bay Ocean"] = {
     },
     ["Priority"] = 2
 }
-v2["Roslit Bay Clam"] = {
+v14["Roslit Bay Clam"] = {
     ["Pool"] = { "Clam", "Aetherfin" },
     ["Priority"] = 10000
 }
-v2["Desolate Deep"] = {
+v14["Desolate Deep"] = {
     ["Pool"] = {
         "Log",
         "Rock",
@@ -3250,7 +3591,7 @@ v2["Desolate Deep"] = {
     },
     ["Priority"] = 2
 }
-local v44 = {
+local v57 = {
     ["Pool"] = {
         "Dissolved Bone",
         "Stormgazer",
@@ -3264,8 +3605,8 @@ local v44 = {
         ["Lure"] = 0.5
     }
 }
-v2["Brine Storm"] = v44
-v2["Brine Pool Water"] = {
+v14["Brine Storm"] = v57
+v14["Brine Pool Water"] = {
     ["Pool"] = {
         "Rock",
         "Stalactite",
@@ -3285,7 +3626,7 @@ v2["Brine Pool Water"] = {
     ["RequiredDurability"] = 200,
     ["CantBeWormholed"] = true
 }
-local v45 = {
+local v58 = {
     ["Pool"] = {
         "Tire",
         "Carbon Crate",
@@ -3321,8 +3662,8 @@ local v45 = {
         ["Mythical"] = 2
     }
 }
-v2["Ancient Isle Ocean"] = v45
-local v46 = {
+v14["Ancient Isle Ocean"] = v58
+local v59 = {
     ["Pool"] = {
         "Log",
         "Piranha",
@@ -3340,8 +3681,8 @@ local v46 = {
         ["Mythical"] = 2
     }
 }
-v2["Ancient Isle Pond"] = v46
-local v47 = {
+v14["Ancient Isle Pond"] = v59
+local v60 = {
     ["Pool"] = {
         "Log",
         "Piranha",
@@ -3359,8 +3700,8 @@ local v47 = {
         ["Mythical"] = 2
     }
 }
-v2["Ancient Isle Waterfall"] = v47
-v2["Ancient Archives"] = {
+v14["Ancient Isle Waterfall"] = v60
+v14["Ancient Archives"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3377,7 +3718,7 @@ v2["Ancient Archives"] = {
     },
     ["Priority"] = 1
 }
-v2["Terrapin Ocean"] = {
+v14["Terrapin Ocean"] = {
     ["Pool"] = {
         "Log",
         "Driftwood",
@@ -3397,7 +3738,7 @@ v2["Terrapin Ocean"] = {
     },
     ["Priority"] = 2
 }
-v2["Terrapin Olm"] = {
+v14["Terrapin Olm"] = {
     ["Pool"] = {
         "Log",
         "Driftwood",
@@ -3415,7 +3756,7 @@ v2["Terrapin Olm"] = {
     },
     ["Priority"] = 3
 }
-v2["Mushgrove Water"] = {
+v14["Mushgrove Water"] = {
     ["Pool"] = {
         "Carbon Crate",
         "Common Crate",
@@ -3436,7 +3777,7 @@ v2["Mushgrove Water"] = {
     },
     ["Priority"] = 2
 }
-v2.Vertigo = {
+v14.Vertigo = {
     ["Pool"] = {
         "Carbon Crate",
         "Rock",
@@ -3453,7 +3794,7 @@ v2.Vertigo = {
     },
     ["Priority"] = 2
 }
-v2["Snowcap Pond"] = {
+v14["Snowcap Pond"] = {
     ["Pool"] = {
         "Common Crate",
         "Quality Bait Crate",
@@ -3469,7 +3810,7 @@ v2["Snowcap Pond"] = {
     },
     ["Priority"] = 2
 }
-v2["Snowcap Ocean"] = {
+v14["Snowcap Ocean"] = {
     ["Pool"] = {
         "Ice",
         "Tire",
@@ -3498,7 +3839,7 @@ v2["Snowcap Ocean"] = {
     },
     ["Priority"] = 2
 }
-v2.Snowburrow = {
+v14.Snowburrow = {
     ["Pool"] = {
         "Ice",
         "Stalactite",
@@ -3525,7 +3866,7 @@ v2.Snowburrow = {
     },
     ["Priority"] = 2
 }
-v2.Sunstone = {
+v14.Sunstone = {
     ["Pool"] = {
         "Seaweed",
         "Driftwood",
@@ -3550,7 +3891,7 @@ v2.Sunstone = {
     },
     ["Priority"] = 2
 }
-local v49 = {
+local v62 = {
     ["Pool"] = {
         "Stalactite",
         "Rock",
@@ -3569,16 +3910,16 @@ local v49 = {
         ["Legendary"] = 0.75,
         ["Mythical"] = 0.5
     },
-    ["CustomCondition"] = function(_, p48) --[[ Name: CustomCondition, Line 4598 ]]
-        if p48.Data.NewFormat.SunstoneExpansion.MerlinQuestProgress < 3 then
+    ["CustomCondition"] = function(_, p61) --[[ Name: CustomCondition, Line 5020 ]]
+        if p61.Data.NewFormat.SunstoneExpansion.MerlinQuestProgress < 3 then
             return false, "You must complete Merlin\'s quest before fishing here."
         else
             return true
         end
     end
 }
-v2.Mineshaft = v49
-v2["Sunstone Hidden"] = {
+v14.Mineshaft = v62
+v14["Sunstone Hidden"] = {
     ["Pool"] = {
         "Common Crate",
         "Carbon Crate",
@@ -3593,7 +3934,7 @@ v2["Sunstone Hidden"] = {
     },
     ["Priority"] = 2
 }
-v2["Keepers Altar"] = {
+v14["Keepers Altar"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3608,7 +3949,7 @@ v2["Keepers Altar"] = {
     },
     ["Priority"] = 3
 }
-v2["Harvesters Spike"] = {
+v14["Harvesters Spike"] = {
     ["Pool"] = {
         "Carbon Crate",
         "Common Crate",
@@ -3633,7 +3974,7 @@ v2["Harvesters Spike"] = {
     },
     ["Priority"] = 3
 }
-v2["The Arch"] = {
+v14["The Arch"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3661,7 +4002,7 @@ v2["The Arch"] = {
     },
     ["Priority"] = 3
 }
-v2["Scallop Ocean"] = {
+v14["Scallop Ocean"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3670,27 +4011,27 @@ v2["Scallop Ocean"] = {
     },
     ["Priority"] = 3
 }
-v2.Debug = {
+v14.Debug = {
     ["Pool"] = { "Colossal Squid" },
     ["Priority"] = 10,
     ["CantBeWormholed"] = true
 }
-v2.Relics = {
+v14.Relics = {
     ["Pool"] = { "Enchant Relic" },
     ["Priority"] = 10,
     ["CantBeWormholed"] = true
 }
-v2.ExaltedRelics = {
+v14.ExaltedRelics = {
     ["Pool"] = { "Exalted Relic" },
     ["Priority"] = 10,
     ["CantBeWormholed"] = true
 }
-v2.CosmicRelic = {
+v14.CosmicRelic = {
     ["Pool"] = { "Cosmic Relic" },
     ["Priority"] = 100,
     ["CantBeWormholed"] = true
 }
-v2.EmojiFish = {
+v14.EmojiFish = {
     ["Pool"] = {
         "\240\159\144\159",
         "\240\159\166\145",
@@ -3701,12 +4042,12 @@ v2.EmojiFish = {
     ["Priority"] = 10,
     ["CantBeWormholed"] = true
 }
-v2.Him = {
+v14.Him = {
     ["Pool"] = { "Him" },
     ["Priority"] = 1000,
     ["CantBeWormholed"] = true
 }
-v2["Lovestorm Eel"] = {
+v14["Lovestorm Eel"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3748,7 +4089,7 @@ v2["Lovestorm Eel"] = {
     ["Priority"] = 100,
     ["IsHunt"] = true
 }
-v2["Lovestorm Eel Supercharged"] = {
+v14["Lovestorm Eel Supercharged"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3790,7 +4131,7 @@ v2["Lovestorm Eel Supercharged"] = {
     ["Priority"] = 100,
     ["IsHunt"] = true
 }
-v2["Birthday Megalodon"] = {
+v14["Birthday Megalodon"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3835,28 +4176,28 @@ v2["Birthday Megalodon"] = {
     ["Priority"] = 100,
     ["IsHunt"] = true
 }
-v2.BirthdayCake = {
+v14.BirthdayCake = {
     ["Pool"] = { "Birthday Cake" },
     ["Priority"] = 101,
     ["CantBeWormholed"] = true,
     ["StartDate"] = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
     ["InvalidDate"] = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
 }
-v2.BabysFirstBalloon = {
+v14.BabysFirstBalloon = {
     ["Pool"] = { "Baby\'s First Balloon" },
     ["Priority"] = 101,
     ["CantBeWormholed"] = true,
     ["StartDate"] = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
     ["InvalidDate"] = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
 }
-v2.BirthdayGift = {
+v14.BirthdayGift = {
     ["Pool"] = { "Birthday Gift" },
     ["Priority"] = 101,
     ["CantBeWormholed"] = true,
     ["StartDate"] = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
     ["InvalidDate"] = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
 }
-v2["Megalodon Default"] = {
+v14["Megalodon Default"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3899,7 +4240,7 @@ v2["Megalodon Default"] = {
     ["Priority"] = 100,
     ["IsHunt"] = true
 }
-v2["Megalodon Ancient"] = {
+v14["Megalodon Ancient"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3943,7 +4284,7 @@ v2["Megalodon Ancient"] = {
     ["Priority"] = 100,
     ["IsHunt"] = true
 }
-v2["Shamrock Megalodon"] = {
+v14["Shamrock Megalodon"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -3985,7 +4326,7 @@ v2["Shamrock Megalodon"] = {
     ["Priority"] = 100,
     ["IsHunt"] = true
 }
-v2["Great White Shark"] = {
+v14["Great White Shark"] = {
     ["Pool"] = {
         "Great White Shark",
         "Mackerel",
@@ -4004,7 +4345,7 @@ v2["Great White Shark"] = {
     },
     ["Priority"] = 100
 }
-v2["Great Hammerhead Shark"] = {
+v14["Great Hammerhead Shark"] = {
     ["Pool"] = {
         "Great Hammerhead Shark",
         "Mackerel",
@@ -4023,7 +4364,7 @@ v2["Great Hammerhead Shark"] = {
     },
     ["Priority"] = 100
 }
-v2["Whale Shark"] = {
+v14["Whale Shark"] = {
     ["Pool"] = {
         "Whale Shark",
         "Mackerel",
@@ -4042,7 +4383,7 @@ v2["Whale Shark"] = {
     },
     ["Priority"] = 100
 }
-v2.Isonade = {
+v14.Isonade = {
     ["Pool"] = {
         "Isonade",
         "Tire",
@@ -4066,7 +4407,7 @@ v2.Isonade = {
     },
     ["Priority"] = 101
 }
-v2.FischFright24 = {
+v14.FischFright24 = {
     ["Pool"] = {
         "Lurkerfish",
         "Skelefish",
@@ -4103,7 +4444,7 @@ v2.FischFright24 = {
     ["Priority"] = 102,
     ["CantBeWormholed"] = true
 }
-v2.FischFright25 = {
+v14.FischFright25 = {
     ["Pool"] = {
         "Kelpie",
         "Phantom Jellyfish",
@@ -4139,7 +4480,7 @@ v2.FischFright25 = {
     ["Priority"] = 102,
     ["CantBeWormholed"] = true
 }
-v2.FrightfulVillage = {
+v14.FrightfulVillage = {
     ["Pool"] = {
         "Coffin Crab",
         "Pumpkin Pufferfish",
@@ -4155,7 +4496,7 @@ v2.FrightfulVillage = {
     ["Priority"] = 102,
     ["CantBeWormholed"] = true
 }
-v2.NessieCatacomb = {
+v14.NessieCatacomb = {
     ["Pool"] = {
         "Skeletal Nessie",
         "Coffin Crab",
@@ -4171,20 +4512,20 @@ v2.NessieCatacomb = {
     ["Priority"] = 102,
     ["CantBeWormholed"] = true
 }
-v2.Fischgiving = {
+v14.Fischgiving = {
     ["Pool"] = { "Turkey" },
     ["Priority"] = 103,
     ["CantBeWormholed"] = true,
     ["InvalidDate"] = DateTime.fromUniversalTime(2024, 12, 7, 8)
 }
-v2.SourGummy = {
+v14.SourGummy = {
     ["Pool"] = { "Xtra Sour Gummy Pack" },
     ["Priority"] = 110,
     ["CantBeWormholed"] = true,
     ["StartDate"] = DateTime.fromUniversalTime(2024, 11, 1, 16),
     ["InvalidDate"] = DateTime.fromUniversalTime(2025, 11, 1, 16)
 }
-v2.Fischmas24 = {
+v14.Fischmas24 = {
     ["Pool"] = {
         "Icicle",
         "Basic Present",
@@ -4205,7 +4546,7 @@ v2.Fischmas24 = {
     ["Priority"] = 104,
     ["CantBeWormholed"] = true
 }
-v2["Overgrowth Caves"] = {
+v14["Overgrowth Caves"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4225,7 +4566,7 @@ v2["Overgrowth Caves"] = {
     },
     ["Priority"] = 2
 }
-v2["Frigid Cavern"] = {
+v14["Frigid Cavern"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4245,7 +4586,7 @@ v2["Frigid Cavern"] = {
     },
     ["Priority"] = 2
 }
-v2["Cryogenic Canal"] = {
+v14["Cryogenic Canal"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4266,7 +4607,7 @@ v2["Cryogenic Canal"] = {
     },
     ["Priority"] = 2
 }
-v2["Glacial Grotto"] = {
+v14["Glacial Grotto"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4287,7 +4628,7 @@ v2["Glacial Grotto"] = {
     },
     ["Priority"] = 2
 }
-v2["The Summit Ocean"] = {
+v14["The Summit Ocean"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4326,7 +4667,7 @@ v2["The Summit Ocean"] = {
     ["Priority"] = 2,
     ["CantBeWormholed"] = true
 }
-v2["Forsaken Algae Pool"] = {
+v14["Forsaken Algae Pool"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4367,7 +4708,7 @@ v2["Forsaken Algae Pool"] = {
     ["Priority"] = 100,
     ["CantBeWormholed"] = true
 }
-v2["Ancient Algae Pool"] = {
+v14["Ancient Algae Pool"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4408,7 +4749,7 @@ v2["Ancient Algae Pool"] = {
     ["Priority"] = 100,
     ["CantBeWormholed"] = true
 }
-v2["Mushgrove Algae Pool"] = {
+v14["Mushgrove Algae Pool"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4449,7 +4790,7 @@ v2["Mushgrove Algae Pool"] = {
     ["Priority"] = 100,
     ["CantBeWormholed"] = true
 }
-v2["Snowcap Algae Pool"] = {
+v14["Snowcap Algae Pool"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4490,7 +4831,7 @@ v2["Snowcap Algae Pool"] = {
     ["Priority"] = 100,
     ["CantBeWormholed"] = true
 }
-v2["Golden Tide"] = {
+v14["Golden Tide"] = {
     ["Pool"] = {
         "Confetti Shark",
         "Countdown Perch",
@@ -4526,7 +4867,7 @@ v2["Golden Tide"] = {
     ["Priority"] = 102,
     ["CantBeWormholed"] = true
 }
-v2["Zeus Pool"] = {
+v14["Zeus Pool"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4549,15 +4890,15 @@ v2["Zeus Pool"] = {
     },
     ["Disturbs"] = "KrakenHunt",
     ["Priority"] = 1,
-    ["CustomCondition"] = function(_, _, p50) --[[ Name: CustomCondition, Line 5807 ]]
-        if p50:FindFirstChild("Cache") and p50.Cache:FindFirstChild("Door.ZeusPuzzleDoor") then
+    ["CustomCondition"] = function(_, _, p63) --[[ Name: CustomCondition, Line 6229 ]]
+        if p63:FindFirstChild("Cache") and p63.Cache:FindFirstChild("Door.ZeusPuzzleDoor") then
             return true
         else
             return false, "You must complete the Zeus Trials before fishing here."
         end
     end
 }
-v2["Poseidon Pool"] = {
+v14["Poseidon Pool"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4580,15 +4921,15 @@ v2["Poseidon Pool"] = {
     },
     ["Disturbs"] = "KrakenHunt",
     ["Priority"] = 1,
-    ["CustomCondition"] = function(_, _, p51) --[[ Name: CustomCondition, Line 5859 ]]
-        if p51:FindFirstChild("Cache") and p51.Cache:FindFirstChild("Door.PoseidonPuzzleDoor") then
+    ["CustomCondition"] = function(_, _, p64) --[[ Name: CustomCondition, Line 6281 ]]
+        if p64:FindFirstChild("Cache") and p64.Cache:FindFirstChild("Door.PoseidonPuzzleDoor") then
             return true
         else
             return false, "You must complete the Poseidon Trial before fishing here."
         end
     end
 }
-v2["Sunken\'s Depth"] = {
+v14["Sunken\'s Depth"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4615,15 +4956,15 @@ v2["Sunken\'s Depth"] = {
     },
     ["Disturbs"] = "KrakenHunt",
     ["Priority"] = 1,
-    ["CustomCondition"] = function(_, _, p52) --[[ Name: CustomCondition, Line 5916 ]]
-        if p52:FindFirstChild("Cache") and p52.Cache:FindFirstChild("Door.SunkenDepthDoor") then
+    ["CustomCondition"] = function(_, _, p65) --[[ Name: CustomCondition, Line 6338 ]]
+        if p65:FindFirstChild("Cache") and p65.Cache:FindFirstChild("Door.SunkenDepthDoor") then
             return true
         else
             return false, "You must unlock the Sunken Depths before fishing here."
         end
     end
 }
-v2["Ethereal Abyss"] = {
+v14["Ethereal Abyss"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4650,15 +4991,15 @@ v2["Ethereal Abyss"] = {
     },
     ["Disturbs"] = "KrakenHunt",
     ["Priority"] = 1,
-    ["CustomCondition"] = function(_, _, p53) --[[ Name: CustomCondition, Line 5973 ]]
-        if p53:FindFirstChild("Cache") and p53.Cache:FindFirstChild("Door.EtherealAbyssDoor") then
+    ["CustomCondition"] = function(_, _, p66) --[[ Name: CustomCondition, Line 6395 ]]
+        if p66:FindFirstChild("Cache") and p66.Cache:FindFirstChild("Door.EtherealAbyssDoor") then
             return true
         else
             return false, "You must unlock the Ethereal Abyss before fishing here."
         end
     end
 }
-v2["Kraken Pool"] = {
+v14["Kraken Pool"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4680,15 +5021,15 @@ v2["Kraken Pool"] = {
     },
     ["Disturbs"] = "KrakenHunt",
     ["Priority"] = 1,
-    ["CustomCondition"] = function(_, _, p54) --[[ Name: CustomCondition, Line 6023 ]]
-        if p54:FindFirstChild("Cache") and p54.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+    ["CustomCondition"] = function(_, _, p67) --[[ Name: CustomCondition, Line 6445 ]]
+        if p67:FindFirstChild("Cache") and p67.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
             return true
         else
             return false, "You must unlock the Kraken Pool before fishing here."
         end
     end
 }
-v2["The Kraken Pool"] = {
+v14["The Kraken Pool"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4712,15 +5053,15 @@ v2["The Kraken Pool"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 1,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, _, p55) --[[ Name: CustomCondition, Line 6075 ]]
-        if p55:FindFirstChild("Cache") and p55.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+    ["CustomCondition"] = function(_, _, p68) --[[ Name: CustomCondition, Line 6497 ]]
+        if p68:FindFirstChild("Cache") and p68.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
             return true
         else
             return false, "You must unlock the Kraken Pool before fishing here."
         end
     end
 }
-v2["Ancient Kraken Pool"] = {
+v14["Ancient Kraken Pool"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4744,15 +5085,15 @@ v2["Ancient Kraken Pool"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 1,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, _, p56) --[[ Name: CustomCondition, Line 6127 ]]
-        if p56:FindFirstChild("Cache") and p56.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+    ["CustomCondition"] = function(_, _, p69) --[[ Name: CustomCondition, Line 6549 ]]
+        if p69:FindFirstChild("Cache") and p69.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
             return true
         else
             return false, "You must unlock the Kraken Pool before fishing here."
         end
     end
 }
-v2["Shamrock Kraken Pool"] = {
+v14["Shamrock Kraken Pool"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -4776,15 +5117,15 @@ v2["Shamrock Kraken Pool"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 1,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, _, p57) --[[ Name: CustomCondition, Line 6177 ]]
-        if p57:FindFirstChild("Cache") and p57.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+    ["CustomCondition"] = function(_, _, p70) --[[ Name: CustomCondition, Line 6599 ]]
+        if p70:FindFirstChild("Cache") and p70.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
             return true
         else
             return false, "You must unlock the Kraken Pool before fishing here."
         end
     end
 }
-v2["Volcanic Vents"] = {
+v14["Volcanic Vents"] = {
     ["Pool"] = {
         "Inferno Hide",
         "Hellfire Haddock",
@@ -4801,7 +5142,7 @@ v2["Volcanic Vents"] = {
     ["Priority"] = 3,
     ["Disturbs"] = "ScyllaHunt"
 }
-v2["Challengers Deep"] = {
+v14["Challengers Deep"] = {
     ["Pool"] = {
         "Frozen Leviathan",
         "Frostscale Fangtooth",
@@ -4818,7 +5159,7 @@ v2["Challengers Deep"] = {
     ["Priority"] = 3,
     ["Disturbs"] = "ScyllaHunt"
 }
-v2["Abyssal Zenith"] = {
+v14["Abyssal Zenith"] = {
     ["Pool"] = {
         "Titanic Black Seadevil",
         "Leviathan Humpback Anglerfish",
@@ -4835,7 +5176,7 @@ v2["Abyssal Zenith"] = {
     ["Priority"] = 3,
     ["Disturbs"] = "ScyllaHunt"
 }
-v2["Calm Zone"] = {
+v14["Calm Zone"] = {
     ["Pool"] = {
         "Quartzfin Queenfish",
         "Diamond Discus",
@@ -4851,7 +5192,7 @@ v2["Calm Zone"] = {
     ["Priority"] = 3,
     ["Disturbs"] = "ScyllaHunt"
 }
-v2["Forsaken Veil"] = {
+v14["Forsaken Veil"] = {
     ["Pool"] = {
         "Hydra Haddock",
         "Serpent Surgeonfish",
@@ -4865,15 +5206,15 @@ v2["Forsaken Veil"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 3,
     ["Disturbs"] = "ScyllaHunt",
-    ["CustomCondition"] = function(_, _, p58) --[[ Name: CustomCondition, Line 6313 ]]
-        if p58:FindFirstChild("Cache") and p58.Cache:FindFirstChild("ScyllaBossfight") then
+    ["CustomCondition"] = function(_, _, p71) --[[ Name: CustomCondition, Line 6735 ]]
+        if p71:FindFirstChild("Cache") and p71.Cache:FindFirstChild("ScyllaBossfight") then
             return true
         else
             return false, "You must complete the Scylla bossfight to fish here."
         end
     end
 }
-v2["Forsaken Veil - Scylla"] = {
+v14["Forsaken Veil - Scylla"] = {
     ["Pool"] = {
         "Hydra Haddock",
         "Serpent Surgeonfish",
@@ -4888,15 +5229,15 @@ v2["Forsaken Veil - Scylla"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 4,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, _, p59) --[[ Name: CustomCondition, Line 6348 ]]
-        if p59:FindFirstChild("Cache") and p59.Cache:FindFirstChild("ScyllaBossfight") then
+    ["CustomCondition"] = function(_, _, p72) --[[ Name: CustomCondition, Line 6770 ]]
+        if p72:FindFirstChild("Cache") and p72.Cache:FindFirstChild("ScyllaBossfight") then
             return true
         else
             return false, "You must complete the Scylla bossfight to fish here."
         end
     end
 }
-v2["Forsaken Veil - Shamrock Scylla"] = {
+v14["Forsaken Veil - Shamrock Scylla"] = {
     ["Pool"] = {
         "Hydra Haddock",
         "Serpent Surgeonfish",
@@ -4911,15 +5252,15 @@ v2["Forsaken Veil - Shamrock Scylla"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 4,
     ["IsHunt"] = true,
-    ["CustomCondition"] = function(_, _, p60) --[[ Name: CustomCondition, Line 6383 ]]
-        if p60:FindFirstChild("Cache") and p60.Cache:FindFirstChild("ScyllaBossfight") then
+    ["CustomCondition"] = function(_, _, p73) --[[ Name: CustomCondition, Line 6805 ]]
+        if p73:FindFirstChild("Cache") and p73.Cache:FindFirstChild("ScyllaBossfight") then
             return true
         else
             return false, "You must complete the Scylla bossfight to fish here."
         end
     end
 }
-v2.Waveborne = {
+v14.Waveborne = {
     ["Pool"] = {
         "Gale Snapper",
         "Drift Claw",
@@ -4940,7 +5281,7 @@ v2.Waveborne = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 2
 }
-v2["Pine Shoal"] = {
+v14["Pine Shoal"] = {
     ["Pool"] = {
         "Watching Glowfin",
         "Drifting Gildfin",
@@ -4956,7 +5297,7 @@ v2["Pine Shoal"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 2
 }
-v2.Lushgrove = {
+v14.Lushgrove = {
     ["Pool"] = {
         "Bogscale",
         "Murkdrifter",
@@ -4976,7 +5317,7 @@ v2.Lushgrove = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 2
 }
-v2.Emberreach = {
+v14.Emberreach = {
     ["Pool"] = {
         "Ashscale Minnow",
         "Glowfin Skipper",
@@ -4995,7 +5336,7 @@ v2.Emberreach = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 2
 }
-v2["Emberreach Ponds"] = {
+v14["Emberreach Ponds"] = {
     ["Pool"] = {
         "Pyre Fang",
         "Firecrest",
@@ -5009,7 +5350,7 @@ v2["Emberreach Ponds"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 3
 }
-v2["Emberreach Lava"] = {
+v14["Emberreach Lava"] = {
     ["Pool"] = {
         "Lava Bream",
         "Magma Pike",
@@ -5023,7 +5364,7 @@ v2["Emberreach Lava"] = {
     ["Priority"] = 3,
     ["RequiredDurability"] = 100
 }
-v2["Isle of New Beginnings"] = {
+v14["Isle of New Beginnings"] = {
     ["Pool"] = {
         "Tidallow",
         "Reefdart",
@@ -5040,7 +5381,7 @@ v2["Isle of New Beginnings"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 2
 }
-v2["Cursed Isle"] = {
+v14["Cursed Isle"] = {
     ["Pool"] = {
         "Blisterfish",
         "Gloombiter",
@@ -5060,7 +5401,7 @@ v2["Cursed Isle"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2
 }
-v2["Open Ocean"] = {
+v14["Open Ocean"] = {
     ["Pool"] = {
         "Cursed Thread",
         "Hogchoker",
@@ -5091,7 +5432,7 @@ v2["Open Ocean"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 0
 }
-v2["Azure Lagoon"] = {
+v14["Azure Lagoon"] = {
     ["Pool"] = {
         "Murkfin",
         "Brackscale",
@@ -5110,7 +5451,7 @@ v2["Azure Lagoon"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 2
 }
-v2["Blue Moon - First Sea"] = {
+v14["Blue Moon - First Sea"] = {
     ["Pool"] = {
         "Moon Arctic Char",
         "Silver Scuttler",
@@ -5131,7 +5472,7 @@ v2["Blue Moon - First Sea"] = {
     },
     ["Priority"] = 3,
     ["CantBeWormholed"] = false,
-    ["CustomCondition"] = function(_, _) --[[ Name: CustomCondition, Line 6676 ]]
+    ["CustomCondition"] = function(_, _) --[[ Name: CustomCondition, Line 7098 ]]
         --[[
         Upvalues:
             [1] = u1
@@ -5143,7 +5484,7 @@ v2["Blue Moon - First Sea"] = {
         end
     end
 }
-v2["Jurassic Island Pool"] = {
+v14["Jurassic Island Pool"] = {
     ["ExclusiveRods"] = {
         {
             "Zora\'s Rod",
@@ -5169,7 +5510,7 @@ v2["Jurassic Island Pool"] = {
     ["Priority"] = 6,
     ["CantBeWormholed"] = true
 }
-v2["Jurassic Island Ocean Pool"] = {
+v14["Jurassic Island Ocean Pool"] = {
     ["ExclusiveRods"] = {
         {
             "Zora\'s Rod",
@@ -5195,7 +5536,7 @@ v2["Jurassic Island Ocean Pool"] = {
     ["Priority"] = 5,
     ["CantBeWormholed"] = true
 }
-v2.LEGO = {
+v14.LEGO = {
     ["ExclusiveRods"] = {
         { "Brick Built Rod", "Developers Rod" },
         "<font color=\"rgb(255,0,0)\">You must use the Brick Built Rod in this pool!</font>"
@@ -5220,7 +5561,7 @@ v2.LEGO = {
     ["Priority"] = 5,
     ["CantBeWormholed"] = true
 }
-v2["LEGO - Studolodon"] = {
+v14["LEGO - Studolodon"] = {
     ["ExclusiveRods"] = {
         { "Brick Built Rod", "Developers Rod" },
         "<font color=\"rgb(255,0,0)\">You must use the Brick Built Rod in this pool!</font>"
@@ -5267,7 +5608,7 @@ v2["LEGO - Studolodon"] = {
     ["Priority"] = 5,
     ["CantBeWormholed"] = true
 }
-v2["Whale Interior"] = {
+v14["Whale Interior"] = {
     ["Pool"] = {
         "Bearded Toadfish",
         "Giant Moray",
@@ -5279,7 +5620,7 @@ v2["Whale Interior"] = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 2
 }
-v2["Treasure Island"] = {
+v14["Treasure Island"] = {
     ["Pool"] = {
         "Bluegem Angelfish",
         "Coin Triggerfish",
@@ -5306,7 +5647,7 @@ v2["Treasure Island"] = {
     ["CantBeWormholed"] = false,
     ["Priority"] = 2
 }
-local v61 = {
+local v74 = {
     ["Pool"] = {
         "Honey Drifter",
         "Stinger Skipper",
@@ -5321,8 +5662,8 @@ local v61 = {
         ["Lure"] = -50
     }
 }
-v2["Nectar Den"] = v61
-local v62 = {
+v14["Nectar Den"] = v74
+local v75 = {
     ["Pool"] = {
         "Honey Drifter",
         "Stinger Skipper",
@@ -5338,8 +5679,8 @@ local v62 = {
         ["Lure"] = -50
     }
 }
-v2["Nectar Den - Serpent"] = v62
-v2["Living Garden"] = {
+v14["Nectar Den - Serpent"] = v75
+v14["Living Garden"] = {
     ["Pool"] = {
         "Driftwood",
         "Petal Ray",
@@ -5357,7 +5698,7 @@ v2["Living Garden"] = {
     ["Priority"] = 1,
     ["Disturbs"] = "FlowerGuardianHunt"
 }
-local v63 = {
+local v76 = {
     ["Pool"] = {
         "Bone",
         "Spore Lurker",
@@ -5376,8 +5717,8 @@ local v63 = {
         ["Common"] = 0.25
     }
 }
-v2["Toxic Grove"] = v63
-v2["Basketback Tortoise Hunt"] = {
+v14["Toxic Grove"] = v76
+v14["Basketback Tortoise Hunt"] = {
     ["Pool"] = {
         "Tire",
         "Boot",
@@ -5417,7 +5758,7 @@ v2["Basketback Tortoise Hunt"] = {
     ["IsHunt"] = true,
     ["CantBeWormholed"] = true
 }
-v2.Default = {
+v14.Default = {
     ["Pool"] = {
         "Rock",
         "Log",
@@ -5428,4 +5769,4 @@ v2.Default = {
     ["CantBeWormholed"] = true,
     ["Priority"] = 2
 }
-return v2
+return v14
