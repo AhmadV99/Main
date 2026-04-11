@@ -1,4 +1,68 @@
 local v8 = {
+    ["Olympian"] = {
+        ["PriceMultiply"] = 10,
+        ["Chance"] = 0,
+        ["Priority"] = 1,
+        ["Display"] = "Olympian",
+        ["Color"] = ColorSequence.new(Color3.fromRGB(80, 67, 59), Color3.fromRGB(33, 31, 30))
+    },
+    ["Sunlit"] = {
+        ["PriceMultiply"] = 6.8,
+        ["Chance"] = 0,
+        ["Display"] = "Sunlit",
+        ["Color"] = ColorSequence.new(Color3.fromRGB(255, 157, 58), Color3.fromRGB(255, 207, 61))
+    },
+    ["Poseidon\'s Blessing"] = {
+        ["PriceMultiply"] = 9.55,
+        ["Chance"] = 0,
+        ["Priority"] = 0.2,
+        ["Display"] = "Poseidon\'s Blessing",
+        ["Color"] = ColorSequence.new(Color3.fromRGB(62, 229, 255), Color3.fromRGB(42, 138, 255))
+    },
+    ["Zeus\'s Storm"] = {
+        ["PriceMultiply"] = 9.3,
+        ["Chance"] = 0,
+        ["Display"] = "Zeus\'s Storm",
+        ["Color"] = ColorSequence.new({ ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 238, 51)), ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 255, 189)), ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 238, 51)) })
+    },
+    ["Cragged"] = {
+        ["PriceMultiply"] = 7,
+        ["Chance"] = 0,
+        ["Priority"] = 0.25,
+        ["Display"] = "Cragged",
+        ["Color"] = ColorSequence.new(Color3.fromRGB(56, 49, 67), Color3.fromRGB(42, 50, 67))
+    },
+    ["Gravitas"] = {
+        ["PriceMultiply"] = 9.81,
+        ["Chance"] = 0,
+        ["Display"] = "Gravitas",
+        ["Color"] = ColorSequence.new({ ColorSequenceKeypoint.new(0, Color3.fromRGB(191, 146, 255)), ColorSequenceKeypoint.new(0.5, Color3.fromRGB(217, 111, 167)), ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 162, 48)) })
+    },
+    ["Hades\' Curse"] = {
+        ["PriceMultiply"] = 11.1,
+        ["Chance"] = 0,
+        ["Priority"] = 2,
+        ["Display"] = "Hades\' Curse",
+        ["Color"] = ColorSequence.new(Color3.fromRGB(108, 255, 206), Color3.fromRGB(112, 255, 124))
+    },
+    ["Soultouched"] = {
+        ["PriceMultiply"] = 7.5,
+        ["Chance"] = 0,
+        ["Display"] = "Soultouched",
+        ["Color"] = Color3.fromRGB(167, 255, 214)
+    },
+    ["Bellona\'s Fury"] = {
+        ["PriceMultiply"] = 7,
+        ["Chance"] = 0,
+        ["Display"] = "Bellona\'s Fury",
+        ["Color"] = Color3.fromRGB(255, 117, 82)
+    },
+    ["Tidal Surge"] = {
+        ["PriceMultiply"] = 8.5,
+        ["Chance"] = 0,
+        ["Display"] = "Tidal Surge",
+        ["Color"] = Color3.fromRGB(82, 180, 255)
+    },
     ["Marshmallow"] = {
         ["PriceMultiply"] = 2.5,
         ["Chance"] = 0,
@@ -723,7 +787,7 @@ v8.Tormented = {
     ["Color"] = Color3.fromRGB(34, 27, 27)
 }
 v8.Surreal = {
-    ["PriceMultiply"] = math.random(0, 10),
+    ["PriceMultiply"] = math.random(),
     ["Chance"] = 0,
     ["Display"] = "Surreal",
     ["Color"] = Color3.fromRGB(214, 214, 214)
