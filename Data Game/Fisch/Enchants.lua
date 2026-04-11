@@ -207,11 +207,12 @@ v5.Fractured = {
     ["CanSelectFromAdmin"] = true
 }
 v5["Blessed Song"] = {
-    ["Description"] = "Increases Progress Speed by <$ProgressSpeed$>%",
+    ["Description"] = "Increases Progress Speed by <$ProgressSpeed$>% and True Progress Speed by <$TrueProgressSpeed$>%",
     ["Color"] = Color3.fromRGB(0, 170, 255),
     ["StrokeColor"] = Color3.fromRGB(0, 60, 90),
     ["Display"] = "Blessed Song",
-    ["ProgressSpeed"] = 40,
+    ["ProgressSpeed"] = 20,
+    ["TrueProgressSpeed"] = 20,
     ["RelicGroup"] = "SongOfTheDeep",
     ["CanSelectFromAdmin"] = true
 }
@@ -443,7 +444,7 @@ local v25 = {
             ["Chance"] = 25
         }
     },
-    ["ConditionalBoosts"] = function(p23, _) --[[ Name: ConditionalBoosts, Line 575 ]]
+    ["ConditionalBoosts"] = function(p23, _) --[[ Name: ConditionalBoosts, Line 576 ]]
         --[[
         Upvalues:
             [1] = u1
@@ -483,7 +484,7 @@ v5.Breezed = {
     ["Luck"] = 50,
     ["Lure"] = 20,
     ["ProgressSpeed"] = 10,
-    ["ConditionalBoosts"] = function(p26, _) --[[ Name: ConditionalBoosts, Line 620 ]]
+    ["ConditionalBoosts"] = function(p26, _) --[[ Name: ConditionalBoosts, Line 621 ]]
         --[[
         Upvalues:
             [1] = u1
@@ -578,7 +579,7 @@ local v29 = {
             ["Chance"] = 20
         }
     },
-    ["ConditionalBoosts"] = function(_, _) --[[ Name: ConditionalBoosts, Line 725 ]]
+    ["ConditionalBoosts"] = function(_, _) --[[ Name: ConditionalBoosts, Line 726 ]]
         if math.random() <= 0.2 then
             return {
                 ["WeightBoost"] = -40
@@ -705,7 +706,7 @@ v5.Flashline = {
     ["StrokeColor"] = Color3.fromRGB(49, 49, 49),
     ["Display"] = "Flashline",
     ["ProgressSpeed"] = 15,
-    ["ConditionalBoosts"] = function(_, _) --[[ Name: ConditionalBoosts, Line 872 ]]
+    ["ConditionalBoosts"] = function(_, _) --[[ Name: ConditionalBoosts, Line 873 ]]
         if math.random(1, 4) == 1 then
             return {
                 ["ProgressSpeed"] = 100
@@ -816,7 +817,7 @@ local v45 = {
     }
 }
 v44.FishingPassives = v45
-function v44.ConditionalBoosts(_, p46) --[[ Line: 994 ]]
+function v44.ConditionalBoosts(_, p46) --[[ Line: 995 ]]
     return {
         ["ProgressSpeed"] = p46:GetAttribute("CurrentMomentumBoost") or 0,
         ["Lure"] = p46:GetAttribute("CurrentMomentumBoost") or 0,
@@ -862,7 +863,7 @@ local v48 = {
     }
 }
 v47.FishingPassives = v48
-function v47.ConditionalBoosts(_, p49) --[[ Line: 1049 ]]
+function v47.ConditionalBoosts(_, p49) --[[ Line: 1050 ]]
     return {
         ["ProgressSpeed"] = p49:GetAttribute("TenacityBoost")
     }
