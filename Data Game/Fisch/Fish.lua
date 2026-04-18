@@ -2266,8 +2266,8 @@ return {
         ["Chance"] = 10,
         ["Rarity"] = "Mythical",
         ["WeightPool"] = { 1500, 1800 },
-        ["From"] = "Scoria Reach",
         ["Price"] = 4100,
+        ["From"] = "Scoria Reach",
     },
     ["Crystallized Seadragon"] = {
         ["Chance"] = 0.1,
@@ -4024,7 +4024,7 @@ return {
         ["Price"] = 63500,
     },
     ["Enchant Relic"] = {
-        ["Chance"] = 0.2,
+        ["Chance"] = 0.01,
         ["Rarity"] = "Relic",
         ["WeightPool"] = { 210, 210 },
         ["From"] = "None",
@@ -4100,6 +4100,13 @@ return {
         ["From"] = "Ancient Isle",
         ["Price"] = 700,
     },
+    ["Common Crate"] = {
+        ["Chance"] = 17,
+        ["Rarity"] = "Uncommon",
+        ["WeightPool"] = { 80, 80 },
+        ["From"] = "None",
+        ["Price"] = 100,
+    },
     ["Scylla"] = {
         ["Chance"] = 0.1,
         ["Rarity"] = "Secret",
@@ -4107,12 +4114,11 @@ return {
         ["From"] = "Veil of the Forsaken",
         ["Price"] = 44238,
     },
-    ["Common Crate"] = {
-        ["Chance"] = 17,
-        ["Rarity"] = "Uncommon",
-        ["WeightPool"] = { 80, 80 },
-        ["From"] = "None",
-        ["Price"] = 100,
+    ["Redlip Batfish"] = {
+        ["Chance"] = 0,
+        ["Rarity"] = "Limited",
+        ["WeightPool"] = { 20, 60 },
+        ["Price"] = 7401,
     },
     ["Molten Moray"] = {
         ["Rarity"] = "Rare",
@@ -10092,5 +10098,5 @@ return {
         ["Price"] = 15000,
     },
 
-    Rarities = {[1] = "Unusual",[2] = "Mythical",[3] = "Exotic",[4] = "Limited",[5] = "Rare",[6] = "Fragment",[7] = "Gemstone",[8] = "Nuclear",[9] = "Divine Secret",[10] = "Trash",[11] = "Common",[12] = "Mirror",[13] = "Whistle",[14] = "Uncommon",[15] = "Cataclysmic",[16] = "Unique",[17] = "Legendary",[18] = "Special",[19] = "Seed",[20] = "Extinct",[21] = "Relic",[22] = "Apex",[23] = "Secret",}
+    Rarities = {[1] = "Unusual",[2] = "Mythical",[3] = "Exotic",[4] = "Limited",[5] = "Rare",[6] = "Fragment",[7] = "Gemstone",[8] = "Nuclear",[9] = "Divine Secret",[10] = "Trash",[11] = "Common",[12] = "Mirror",[13] = "Whistle",[14] = "Uncommon",[15] = "Cataclysmic",[16] = "Unique",[17] = "Legendary",[18] = "Special",[19] = "Seed",[20] = "Extinct",[21] = "Relic",[22] = "Apex",[23] = "Secret"}
 }
