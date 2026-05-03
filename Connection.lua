@@ -1,69 +1,91 @@
 local type = type
 local assert = assert
 
-local table_remove = table.remove
-local table_insert = table.insert
-
-local setmetatable = setmetatable
-
 local task_spawn = task.spawn
 
 local Connection = {}
 Connection.__index = Connection
 
-function Connection.new()
-  local New = setmetatable({}, Connection)
-  New._Callbacks = {}
+local ConnectionObject = {}
+ConnectionObject.__index = ConnectionObject
 
-  return New
+function ConnectionObject:Disconnect()
+  local Parent = self._Parent
+  if not Parent then return end
+
+  local List = Parent._Callbacks
+  local Index = self._Index
+
+  if Index and List[Index] == self then
+    List[Index] = false
+  end
+
+  self._Parent = nil
+  self._Callback = nil
+  self._Index = nil
 end
 
-function Connection.FireCallback(func, ...)
-  return task_spawn(func, ...)
+function Connection.new()
+  return setmetatable({
+    _Callbacks = {},
+    _Count = 0
+  }, Connection)
 end
 
 function Connection:Connect(Callback)
   if type(Callback) ~= "function" then return end
 
-  local Connection_Object = {}
+  local Index = self._Count + 1
+  self._Count = Index
 
-  Connection_Object._Callback = Callback
-  Connection_Object._Parent = self
+  local Obj = setmetatable({
+    _Callback = Callback,
+    _Parent = self,
+    _Index = Index
+  }, ConnectionObject)
 
-  setmetatable(Connection_Object, { __index = {
-    Disconnect = function(self)
-      local Callbacks = self._Parent._Callbacks
+  self._Callbacks[Index] = Obj
 
-      for i = #Callbacks, 1, -1 do
-        if Callbacks[i] == self._Callback then
-          table_remove(Callbacks, i)
-          break
-        end
-      end
-
-      self._Callback = nil
-      self._Parent = nil
-    end
-  }})
-
-  table_insert(self._Callbacks, Callback)
-
-  return Connection_Object
+  return Obj
 end
 
 function Connection:Fire(...)
-  for _, func in ipairs(self._Callbacks) do
-    Connection.FireCallback(func, ...)
+  local List = self._Callbacks
+
+  for i = 1, self._Count do
+    local Object = List[i]
+    if Object then
+      task_spawn(Object._Callback, ...)
+    end
   end
 end
 
+function Connection:Clean()
+  local List = self._Callbacks
+  local New = {}
+  local n = 0
+
+  for i = 1, self._Count do
+    local Object = List[i]
+
+    if Object then
+      n = n + 1
+      Object._Index = n
+      New[n] = Object
+    end
+  end
+
+  self._Callbacks = New
+  self._Count = n
+end
+
 function Connection.Create(Names)
-  assert(type(Names) == "table", "Expected table of names")
+  assert(type(Names) == "table", "Expected table")
 
   local Events = {}
 
-  for _, Name in ipairs(Names) do
-    Events[Name] = Connection.new()
+  for i = 1, #Names do
+    Events[Names[i]] = Connection.new()
   end
 
   return Events
