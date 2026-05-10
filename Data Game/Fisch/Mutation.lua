@@ -1,4 +1,82 @@
 return {
+	Sovereign = {
+		PriceMultiply = 8.5,
+		Chance = 0,
+		Display = "Sovereign",
+		Color = Color3.fromRGB(173, 166, 255)
+	},
+	Sanctified = {
+		PriceMultiply = 7.5,
+		Chance = 0,
+		Display = "Sanctified",
+		Color = ColorSequence.new(Color3.fromRGB(255, 206, 128), Color3.fromRGB(222, 208, 193))
+	},
+	Veilfallen = {
+		PriceMultiply = 5,
+		Chance = 0,
+		Display = "Veilfallen",
+		Color = Color3.fromRGB(69, 68, 94)
+	},
+	Clockwork = {
+		PriceMultiply = 3.75,
+		Chance = 0,
+		Display = "Clockwork",
+		Color = ColorSequence.new(Color3.fromRGB(255, 206, 128), Color3.fromRGB(112, 90, 56))
+	},
+	Acidic = {
+		PriceMultiply = 7.3,
+		Chance = 0,
+		Display = "Acidic",
+		Color = ColorSequence.new(Color3.fromRGB(0, 231, 8), Color3.fromRGB(106, 0, 255))
+	},
+	Fury = {
+		PriceMultiply = 11.7,
+		Chance = 0,
+		Display = "Fury",
+		Color = ColorSequence.new(Color3.fromRGB(255, 231, 66), Color3.fromRGB(254, 158, 35), Color3.fromRGB(254, 105, 47))
+	},
+	Energy = {
+		PriceMultiply = 8.55,
+		Chance = 0,
+		Display = "Energy",
+		Color = ColorSequence.new(Color3.fromRGB(193, 255, 219), Color3.fromRGB(0, 242, 170), Color3.fromRGB(0, 160, 170))
+	},
+	Nebula = {
+		PriceMultiply = 9.2,
+		Chance = 0,
+		Display = "Nebula",
+		Color = ColorSequence.new(Color3.fromRGB(254, 190, 243), Color3.fromRGB(255, 126, 228), Color3.fromRGB(191, 30, 209))
+	},
+	Cosmos = {
+		PriceMultiply = 10.85,
+		Chance = 0,
+		Display = "Cosmos",
+		Color = ColorSequence.new(Color3.fromRGB(104, 214, 255), Color3.fromRGB(0, 174, 238), Color3.fromRGB(0, 107, 185))
+	},
+	Departed = {
+		PriceMultiply = 10.5,
+		Chance = 0,
+		Display = "Departed",
+		Color = Color3.fromRGB(25, 25, 25)
+	},
+	Fluttering = {
+		PriceMultiply = 7,
+		Chance = 0,
+		Display = "Fluttering",
+		Color = Color3.fromRGB(216, 216, 216)
+	},
+	Prismatic = {
+		PriceMultiply = 6.5,
+		Chance = 0,
+		Display = "Prismatic",
+		Color = ColorSequence.new(Color3.fromRGB(160, 135, 203), Color3.fromRGB(210, 165, 255))
+	},
+	Paranormal = {
+		PriceMultiply = 5,
+		Chance = 0,
+		Display = "Paranormal",
+		Color = ColorSequence.new(Color3.fromRGB(124, 147, 202), Color3.fromRGB(146, 170, 202))
+	},
 	Olympian = {
 		PriceMultiply = 10,
 		Chance = 0,
@@ -114,23 +192,23 @@ return {
 	Floral = {
 		PriceMultiply = 8.4,
 		Chance = 2,
-		SpecificZones = { "Living Garden" },
 		BlockAppraisal = true,
 		Display = "Floral",
+		SpecificZones = { "Living Garden" },
 		Color = Color3.fromRGB(242, 190, 255)
 	},
 	Decayed = {
 		PriceMultiply = 0.45,
 		Chance = 5,
-		SpecificZones = { "Toxic Grove" },
 		Display = "Decayed",
+		SpecificZones = { "Toxic Grove" },
 		Color = Color3.fromRGB(63, 59, 75)
 	},
 	Honey = {
 		PriceMultiply = 2.6,
 		Chance = 3,
-		SpecificZones = { "Nectar Den" },
 		Display = "Honey",
+		SpecificZones = { "Nectar Den" },
 		Color = Color3.fromRGB(255, 180, 51)
 	},
 	Vitalic = {
@@ -291,8 +369,8 @@ return {
 	Mourned = {
 		PriceMultiply = 7.5,
 		Chance = 1,
-		SpecificZones = { "Tidefall" },
 		Display = "Mourned",
+		SpecificZones = { "Tidefall" },
 		Color = Color3.fromRGB(10, 20, 39)
 	},
 	["Ocean's Ruin"] = {
@@ -460,11 +538,11 @@ return {
 		Color = Color3.fromRGB(195, 14, 255)
 	},
 	Gleebous = {
-		SpecificZones = { "Roslit Bay Alien" },
 		PriceMultiply = 8,
 		Chance = 50,
 		BlockAppraisal = true,
 		Display = "Gleebous",
+		SpecificZones = { "Roslit Bay Alien" },
 		Color = Color3.fromRGB(169, 255, 98)
 	},
 	Distraught = {
@@ -584,34 +662,34 @@ return {
 		}
 	},
 	Poisoned = {
-		SpecificZones = {
-			"Lost Jungle",
-			"MossjawHunt"
-		},
 		PriceMultiply = 0.9,
 		Priority = 1,
 		Chance = 5,
 		Display = "Poisoned",
+		SpecificZones = {
+			"Lost Jungle",
+			"MossjawHunt"
+		},
 		Color = Color3.fromRGB(103, 73, 145)
 	},
 	Vined = {
-		SpecificZones = {
-			"Lost Jungle",
-			"MossjawHunt"
-		},
 		PriceMultiply = 3.5,
 		Chance = 4,
 		Display = "Vined",
-		Color = Color3.fromRGB(120, 206, 122)
-	},
-	Shrouded = {
 		SpecificZones = {
 			"Lost Jungle",
 			"MossjawHunt"
 		},
+		Color = Color3.fromRGB(120, 206, 122)
+	},
+	Shrouded = {
 		PriceMultiply = 7,
 		Chance = 1,
 		Display = "Shrouded",
+		SpecificZones = {
+			"Lost Jungle",
+			"MossjawHunt"
+		},
 		Color = Color3.fromRGB(54, 67, 53)
 	},
 	Mossy = {
@@ -641,7 +719,7 @@ return {
 		Color = Color3.fromRGB(89, 71, 58)
 	},
 	Mastered = {
-		PriceMultiply = 9,
+		PriceMultiply = 8,
 		Chance = 0,
 		Display = "Mastered",
 		Color = Color3.fromRGB(84, 101, 255)
@@ -653,13 +731,13 @@ return {
 		Color = Color3.fromRGB(82, 226, 255)
 	},
 	Crimson = {
+		PriceMultiply = 4,
+		Chance = 3,
+		Display = "Crimson",
 		SpecificZones = {
 			"Crimson Cavern",
 			"Colossal Ancient Dragon"
 		},
-		PriceMultiply = 4,
-		Chance = 3,
-		Display = "Crimson",
 		Color = Color3.fromRGB(145, 34, 34)
 	},
 	Exploded = {
@@ -777,15 +855,15 @@ return {
 		PriceMultiply = 5,
 		Chance = 0,
 		Display = "Nullified",
-		Color = Color3.fromRGB(94, 255, 66),
-		Priority = 100000
+		Priority = 100000,
+		Color = Color3.fromRGB(94, 255, 66)
 	},
 	Galactic = {
 		PriceMultiply = 5,
 		Chance = 0,
 		Display = "Galactic",
-		Color = Color3.fromRGB(207, 182, 106),
-		Priority = 100000
+		Priority = 100000,
+		Color = Color3.fromRGB(207, 182, 106)
 	},
 	Spirit = {
 		PriceMultiply = 5.2,
@@ -818,9 +896,9 @@ return {
 		Color = Color3.fromRGB(34, 27, 27)
 	},
 	Surreal = {
-		PriceMultiply = math.random(),
 		Chance = 0,
 		Display = "Surreal",
+		PriceMultiply = math.random(),
 		Color = Color3.fromRGB(214, 214, 214)
 	},
 	Chilled = {
@@ -1212,7 +1290,7 @@ return {
 		Color = Color3.fromRGB(106, 80, 207)
 	},
 	Albino = {
-		PriceMultiply = 1.2,
+		PriceMultiply = 1.5,
 		Chance = 30,
 		Display = "Albino",
 		Color = Color3.fromRGB(252, 254, 255)
@@ -1327,13 +1405,13 @@ return {
 		Color = Color3.fromRGB(189, 169, 255)
 	},
 	Abyssal = {
+		PriceMultiply = 5.5,
+		Chance = 5,
+		Display = "Abyssal",
 		SpecificZones = {
 			"The Depths",
 			"The Depths - Serpent"
 		},
-		PriceMultiply = 5.5,
-		Chance = 5,
-		Display = "Abyssal",
 		Color = Color3.fromRGB(12, 15, 212)
 	},
 	Fungal = {
@@ -1361,6 +1439,9 @@ return {
 		Color = Color3.fromRGB(208, 181, 255)
 	},
 	Amber = {
+		PriceMultiply = 1.2,
+		Chance = 8,
+		Display = "Amber",
 		SpecificZones = {
 			"Ancient Isle Ocean",
 			"Ancient Isle Pond",
@@ -1369,9 +1450,6 @@ return {
 			"Megalodon Default",
 			"Megalodon Ancient"
 		},
-		PriceMultiply = 1.2,
-		Chance = 8,
-		Display = "Amber",
 		Color = Color3.fromRGB(255, 116, 51)
 	},
 	Scorched = {
@@ -1462,12 +1540,12 @@ return {
 		PriceMultiply = 0,
 		Chance = 0,
 		Display = "Unsellable",
-		Color = Color3.fromRGB(255, 76, 76),
 		Priority = 100,
-		Untradeable = true
+		Untradeable = true,
+		Color = Color3.fromRGB(255, 76, 76)
 	},
 	Subspace = {
-		PriceMultiply = 6,
+		PriceMultiply = 6.4,
 		Chance = 0,
 		Display = "Subspace",
 		Color = Color3.fromRGB(255, 0, 200)
@@ -1484,9 +1562,9 @@ return {
 		Chance = 0,
 		Display = "Glyphed",
 		Priority = 1,
-		Color = Color3.fromRGB(109, 135, 143),
 		Untradeable = true,
-		BlockCatchMessage = true
+		BlockCatchMessage = true,
+		Color = Color3.fromRGB(109, 135, 143)
 	},
 	Harmonized = {
 		PriceMultiply = 4.2,
@@ -1624,8 +1702,8 @@ return {
 		PriceMultiply = 0.5,
 		Chance = 0,
 		Display = "Charred",
-		Color = Color3.fromRGB(76, 76, 76),
-		Untradeable = true
+		Untradeable = true,
+		Color = Color3.fromRGB(76, 76, 76)
 	},
 	Red = {
 		PriceMultiply = 1,
@@ -1684,17 +1762,17 @@ return {
 		PriceMultiply = 5,
 		Chance = 0,
 		Display = "Colossal Ink",
-		Color = Color3.fromRGB(221, 241, 255),
 		Priority = 4,
-		CommerceMutation = true
+		CommerceMutation = true,
+		Color = Color3.fromRGB(221, 241, 255)
 	},
 	Neon = {
 		PriceMultiply = 1,
 		Chance = 0,
 		Display = "Neon",
-		Color = Color3.fromRGB(255, 229, 126),
 		Priority = 4,
-		CommerceMutation = true
+		CommerceMutation = true,
+		Color = Color3.fromRGB(255, 229, 126)
 	},
 	Lobster = {
 		PriceMultiply = 5,
