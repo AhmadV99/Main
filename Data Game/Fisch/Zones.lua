@@ -2,11 +2,29 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 return {
 	DevTest = {
-		Pool = { "Scylla" },
 		CantBeWormholed = true,
-		Priority = 2
+		Priority = 2,
+		Pool = { "Scylla" }
+	},
+	["Enchanted Crevice"] = {
+		Priority = 2,
+		Pool = {
+			"Tire",
+			"Boot",
+			"Seaweed",
+			"Crackfin Minnow",
+			"Dustscale Dace",
+			"Pale Crevice Tang",
+			"Glassblue Herring",
+			"Lapisjaw Jack",
+			"Crevice Sturgeon",
+			"Altarfin Grouper",
+			"Adumbral Shark",
+			"Sovereign Oarfish"
+		}
 	},
 	["Bellona's Frenzy of War"] = {
+		Priority = 3,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -21,13 +39,13 @@ return {
 			"Gladiator Eel",
 			"Bloodfang Barracuda"
 		},
-		Priority = 3,
 		Disturbs = {
 			"WarSurge",
 			"LegionnaireLampreyHunt"
 		}
 	},
 	["Apollo's Song of Light"] = {
+		Priority = 3,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -42,12 +60,11 @@ return {
 			"Dawnflare Eel",
 			"Solstice Ray"
 		},
-		Priority = 3,
 		Disturbs = {
 			"SolarChorus",
 			"HeliosRayHunt"
 		},
-		CustomCondition = function(_, p2, _) --[[ CustomCondition ]] -- line: 83
+		CustomCondition = function(_, p2, _) --[[ CustomCondition ]] -- line: 100
 			if not p2.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Bellona then
 				return false, "You must break Bellona's seal before fishing here."
 			end
@@ -56,6 +73,7 @@ return {
 		end
 	},
 	["Poseidon's Storm of Floods"] = {
+		Priority = 3,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -68,12 +86,11 @@ return {
 			"Foamcrest Koi",
 			"King's Crest Eel"
 		},
-		Priority = 3,
 		Disturbs = {
 			"StormFlood",
 			"TidecrasherArchonHunt"
 		},
-		CustomCondition = function(_, p5, _) --[[ CustomCondition ]] -- line: 116
+		CustomCondition = function(_, p5, _) --[[ CustomCondition ]] -- line: 133
 			if not p5.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Apollo then
 				return false, "You must break Apollo's seal before fishing here."
 			end
@@ -82,6 +99,8 @@ return {
 		end
 	},
 	["Zeus's Thunder of Chaos"] = {
+		Priority = 4,
+		Disturbs = "KeraunoWyrmHunt",
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -95,9 +114,7 @@ return {
 			"Arcflash Koi",
 			"Thunderclap Crab"
 		},
-		Priority = 4,
-		Disturbs = "KeraunoWyrmHunt",
-		CustomCondition = function(_, p8, _) --[[ CustomCondition ]] -- line: 146
+		CustomCondition = function(_, p8, _) --[[ CustomCondition ]] -- line: 163
 			if not p8.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Poseidon then
 				return false, "You must break Poseidon's seal before fishing here."
 			end
@@ -106,6 +123,7 @@ return {
 		end
 	},
 	["Hades' Underworld of Indefinite"] = {
+		Priority = 3,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -120,8 +138,7 @@ return {
 			"Shadow Ray",
 			"Grave Serpent"
 		},
-		Priority = 3,
-		CustomCondition = function(_, p11, _) --[[ CustomCondition ]] -- line: 175
+		CustomCondition = function(_, p11, _) --[[ CustomCondition ]] -- line: 192
 			if not p11.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
 				return false, "You must break Zeus's seal before fishing here."
 			end
@@ -130,6 +147,7 @@ return {
 		end
 	},
 	["Olympian Fissure"] = {
+		Priority = 3,
 		Pool = {
 			"Boot",
 			"Common Crate",
@@ -141,8 +159,7 @@ return {
 			"Titanspawn Serpent",
 			"Primordial Devourer"
 		},
-		Priority = 3,
-		CustomCondition = function(_, p14, _) --[[ CustomCondition ]] -- line: 200
+		CustomCondition = function(_, p14, _) --[[ CustomCondition ]] -- line: 217
 			if not p14.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Hades then
 				return false, "You must break Hades' seal before fishing here."
 			end
@@ -151,6 +168,9 @@ return {
 		end
 	},
 	["Tidecrasher Archon Hunt"] = {
+		Priority = 5,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -167,10 +187,7 @@ return {
 			"King's Crest Eel",
 			"Tsunami Whale"
 		},
-		Priority = 5,
-		CantBeWormholed = true,
-		IsHunt = true,
-		CustomCondition = function(_, p17, _) --[[ CustomCondition ]] -- line: 251
+		CustomCondition = function(_, p17, _) --[[ CustomCondition ]] -- line: 268
 			if not p17.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Apollo then
 				return false, "You must break Apollo's seal before fishing here."
 			end
@@ -179,6 +196,8 @@ return {
 		end
 	},
 	["Soul Pool"] = {
+		Priority = 3,
+		CantBeWormholed = true,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -195,9 +214,7 @@ return {
 			"Grave Serpent",
 			"Spectral Whale"
 		},
-		Priority = 3,
-		CantBeWormholed = true,
-		CustomCondition = function(_, p20, _) --[[ CustomCondition ]] -- line: 282
+		CustomCondition = function(_, p20, _) --[[ CustomCondition ]] -- line: 299
 			if not p20.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
 				return false, "You must break Zeus's seal before fishing here."
 			end
@@ -206,6 +223,9 @@ return {
 		end
 	},
 	["Helios Sunray Hunt"] = {
+		Priority = 6,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -223,10 +243,7 @@ return {
 			"Empyrean Sunwhale",
 			"Helios Sunray"
 		},
-		Priority = 6,
-		CantBeWormholed = true,
-		IsHunt = true,
-		CustomCondition = function(_, p23, _) --[[ CustomCondition ]] -- line: 316
+		CustomCondition = function(_, p23, _) --[[ CustomCondition ]] -- line: 333
 			if not p23.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Bellona then
 				return false, "You must break Bellona's seal before fishing here."
 			end
@@ -235,6 +252,9 @@ return {
 		end
 	},
 	["Styx Angler Hunt"] = {
+		Priority = 5,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -251,10 +271,7 @@ return {
 			"Grave Serpent",
 			"Spectral Whale"
 		},
-		Priority = 5,
-		CantBeWormholed = true,
-		IsHunt = true,
-		CustomCondition = function(_, p26, _) --[[ CustomCondition ]] -- line: 348
+		CustomCondition = function(_, p26, _) --[[ CustomCondition ]] -- line: 365
 			if not p26.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
 				return false, "You must break Zeus's seal before fishing here."
 			end
@@ -263,6 +280,8 @@ return {
 		end
 	},
 	["Wisp Haunt"] = {
+		Priority = 3,
+		CantBeWormholed = true,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -279,9 +298,7 @@ return {
 			"Grave Serpent",
 			"Spectral Whale"
 		},
-		Priority = 3,
-		CantBeWormholed = true,
-		CustomCondition = function(_, p29, _) --[[ CustomCondition ]] -- line: 379
+		CustomCondition = function(_, p29, _) --[[ CustomCondition ]] -- line: 396
 			if not p29.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
 				return false, "You must break Zeus's seal before fishing here."
 			end
@@ -290,6 +307,9 @@ return {
 		end
 	},
 	["Legionnaire Lamprey Hunt"] = {
+		Priority = 5,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -305,12 +325,12 @@ return {
 			"Gladiator Eel",
 			"Bloodfang Barracuda",
 			"Warlord Sturgeon"
-		},
-		Priority = 5,
-		CantBeWormholed = true,
-		IsHunt = true
+		}
 	},
 	["Olympian Devil Hunt"] = {
+		Priority = 5,
+		IsHunt = true,
+		CantBeWormholed = true,
 		Pool = {
 			"Boot",
 			"Common Crate",
@@ -323,10 +343,7 @@ return {
 			"Primordial Devourer",
 			"Olympian Devil"
 		},
-		Priority = 5,
-		IsHunt = true,
-		CantBeWormholed = true,
-		CustomCondition = function(_, p32, _) --[[ CustomCondition ]] -- line: 430
+		CustomCondition = function(_, p32, _) --[[ CustomCondition ]] -- line: 447
 			if not p32.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Hades then
 				return false, "You must break Hades' seal before fishing here."
 			end
@@ -335,6 +352,7 @@ return {
 		end
 	},
 	["Atlantean Storm"] = {
+		Priority = 4,
 		Pool = {
 			"Void Angler",
 			"Tempest Ray",
@@ -344,10 +362,12 @@ return {
 			"Typhoon Tuna",
 			"Cyclone Mako",
 			"Maelstorm Shark"
-		},
-		Priority = 4
+		}
 	},
 	["Kerauno Wyrm Pool"] = {
+		IsHunt = true,
+		Priority = 10,
+		CantBeWormholed = true,
 		Pool = {
 			"Common Crate",
 			"Bait Crate",
@@ -365,10 +385,7 @@ return {
 			"Skybreaker Leviathan",
 			"Kerauno Wyrm"
 		},
-		IsHunt = true,
-		Priority = 10,
-		CantBeWormholed = true,
-		CustomCondition = function(_, p35, _) --[[ CustomCondition ]] -- line: 476
+		CustomCondition = function(_, p35, _) --[[ CustomCondition ]] -- line: 493
 			if not p35.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Poseidon then
 				return false, "You must break Poseidon's seal before fishing here."
 			end
@@ -377,6 +394,7 @@ return {
 		end
 	},
 	["Everturn Forest"] = {
+		Priority = 2,
 		Pool = {
 			"Boot",
 			"Common Crate",
@@ -404,10 +422,12 @@ return {
 			"Duskbriar Gar",
 			"Umbraleaf Sturgeon",
 			"Oakling"
-		},
-		Priority = 2
+		}
 	},
 	["Dreadfin Hunt"] = {
+		Priority = 5,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -446,12 +466,11 @@ return {
 			"Long Pike",
 			"Mustard",
 			"Dreadfin"
-		},
-		Priority = 5,
-		CantBeWormholed = true,
-		IsHunt = true
+		}
 	},
 	["Lucky Gold"] = {
+		Priority = 5,
+		CantBeWormholed = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -490,8 +509,6 @@ return {
 			"Fortune Flounder",
 			"Rainbow Leviathan"
 		},
-		Priority = 5,
-		CantBeWormholed = true,
 		RarityLuckFactorBoosts = {
 			Mythical = 2,
 			Exotic = 3,
@@ -499,6 +516,9 @@ return {
 		}
 	},
 	["Rotbloom Hunt"] = {
+		Priority = 5,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Bone",
 			"Spore Lurker",
@@ -510,14 +530,14 @@ return {
 			"Toxic Jellymass",
 			"Blight Idol"
 		},
-		Priority = 5,
-		CantBeWormholed = true,
-		IsHunt = true,
 		RarityBaseChanceBoosts = {
 			Common = 0.25
 		}
 	},
 	["Flower Guardian Hunt"] = {
+		Priority = 5,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Driftwood",
 			"Petal Ray",
@@ -531,12 +551,13 @@ return {
 			"Butterfly",
 			"Orchid Anglerfish",
 			"Leafscale Lemon Shark"
-		},
-		Priority = 5,
-		CantBeWormholed = true,
-		IsHunt = true
+		}
 	},
 	["Toxic Boil"] = {
+		Priority = 100,
+		CantBeWormholed = true,
+		Disturbs = "RotbloomHunt",
+		RequiredDurability = 150,
 		Pool = {
 			"Spore Lurker",
 			"Mire Krakenling",
@@ -549,15 +570,15 @@ return {
 			"Venom Maw",
 			"Blight Idol"
 		},
-		Priority = 100,
-		CantBeWormholed = true,
-		Disturbs = "RotbloomHunt",
-		RequiredDurability = 150,
 		RarityBaseChanceBoosts = {
 			Common = 0.25
 		}
 	},
 	["Above the Clouds"] = {
+		CantBeWormholed = true,
+		Priority = 1,
+		Disturbs = "WyvernHunt",
+		MutationIndicatorEnabled = true,
 		Pool = {
 			"Sky Bass",
 			"Winged Carp",
@@ -565,15 +586,12 @@ return {
 			"Flying Fish",
 			"Harmonic Dove"
 		},
-		CantBeWormholed = true,
-		Priority = 1,
-		Disturbs = "WyvernHunt",
 		RarityLuckFactorBoosts = {
 			Mythical = 0.5,
 			Exotic = 0.5,
 			Secret = 0.5
 		},
-		CustomCondition = function(_, p38, _) --[[ CustomCondition ]] -- line: 713
+		CustomCondition = function(_, p38, _) --[[ CustomCondition ]] -- line: 731
 			local AboveTheClouds = p38.Data.NewFormat.TimeTrials.AboveTheClouds
 
 			if not AboveTheClouds or (not AboveTheClouds.CompleteCount or AboveTheClouds.CompleteCount < 1) then
@@ -584,6 +602,10 @@ return {
 		end
 	},
 	["Wyvern Hunt"] = {
+		CantBeWormholed = true,
+		Priority = 2,
+		IsHunt = true,
+		MutationIndicatorEnabled = true,
 		Pool = {
 			"Sky Bass",
 			"Winged Carp",
@@ -592,14 +614,11 @@ return {
 			"Harmonic Dove",
 			"Wyvern"
 		},
-		CantBeWormholed = true,
-		Priority = 2,
-		IsHunt = true,
 		RarityLuckFactorBoosts = {
 			Mythical = 0.5,
 			Secret = 0.5
 		},
-		CustomCondition = function(_, p41, _) --[[ CustomCondition ]] -- line: 741
+		CustomCondition = function(_, p41, _) --[[ CustomCondition ]] -- line: 760
 			local AboveTheClouds = p41.Data.NewFormat.TimeTrials.AboveTheClouds
 
 			if not AboveTheClouds or (not AboveTheClouds.CompleteCount or AboveTheClouds.CompleteCount < 1) then
@@ -610,6 +629,10 @@ return {
 		end
 	},
 	["Skeletal Leviathan Hunt"] = {
+		Priority = 5,
+		CantBeWormholed = true,
+		RequiredDurability = 100,
+		IsHunt = true,
 		Pool = {
 			"Volcanic Geode",
 			"Rock",
@@ -626,13 +649,11 @@ return {
 			"Infernal Isonade",
 			"Cindercoil Eel",
 			"Skeletal Leviathan"
-		},
-		Priority = 5,
-		CantBeWormholed = true,
-		RequiredDurability = 100,
-		IsHunt = true
+		}
 	},
 	["Scoria Reach"] = {
+		Priority = 2,
+		RequiredDurability = 100,
 		Pool = {
 			"Volcanic Geode",
 			"Rock",
@@ -645,11 +666,11 @@ return {
 			"Slag",
 			"Smeltjaw Snapper",
 			"Magmatic Hermit Crab"
-		},
-		Priority = 2,
-		RequiredDurability = 100
+		}
 	},
 	["Scoria Reach 2"] = {
+		Priority = 3,
+		RequiredDurability = 200,
 		Pool = {
 			"Volcanic Geode",
 			"Rock",
@@ -662,11 +683,12 @@ return {
 			"Slag",
 			"Smeltjaw Snapper",
 			"Magmatic Hermit Crab"
-		},
-		Priority = 3,
-		RequiredDurability = 200
+		}
 	},
 	["Scoria Reach Volcano"] = {
+		Disturbs = "SkeletalLeviathanHunt",
+		Priority = 4,
+		RequiredDurability = 100,
 		Pool = {
 			"Volcanic Geode",
 			"Rock",
@@ -679,12 +701,11 @@ return {
 			"Slag",
 			"Smeltjaw Snapper",
 			"Magmatic Hermit Crab"
-		},
-		Disturbs = "SkeletalLeviathanHunt",
-		Priority = 4,
-		RequiredDurability = 100
+		}
 	},
 	["Scoria Reach Molten Serpent"] = {
+		Priority = 3,
+		RequiredDurability = 100,
 		Pool = {
 			"Volcanic Geode",
 			"Rock",
@@ -698,11 +719,11 @@ return {
 			"Smeltjaw Snapper",
 			"Magmatic Hermit Crab",
 			"Molten Serpent"
-		},
-		Priority = 3,
-		RequiredDurability = 100
+		}
 	},
 	["Scoria Reach Cindercoil Eel"] = {
+		Priority = 3,
+		RequiredDurability = 100,
 		Pool = {
 			"Volcanic Geode",
 			"Rock",
@@ -716,11 +737,11 @@ return {
 			"Smeltjaw Snapper",
 			"Magmatic Hermit Crab",
 			"Cindercoil Eel"
-		},
-		Priority = 3,
-		RequiredDurability = 100
+		}
 	},
 	["Scoria Reach Infernal Isonade"] = {
+		Priority = 3,
+		RequiredDurability = 100,
 		Pool = {
 			"Volcanic Geode",
 			"Rock",
@@ -734,11 +755,11 @@ return {
 			"Smeltjaw Snapper",
 			"Magmatic Hermit Crab",
 			"Infernal Isonade"
-		},
-		Priority = 3,
-		RequiredDurability = 100
+		}
 	},
 	["Scoria Reach Crag-Crab"] = {
+		Priority = 3,
+		RequiredDurability = 100,
 		Pool = {
 			"Volcanic Geode",
 			"Rock",
@@ -752,11 +773,11 @@ return {
 			"Smeltjaw Snapper",
 			"Magmatic Hermit Crab",
 			"Crag-Crab"
-		},
-		Priority = 3,
-		RequiredDurability = 100
+		}
 	},
 	["Streamer Hideout"] = {
+		Priority = 2,
+		CantBeWormholed = true,
 		Pool = {
 			"Rock",
 			"Common Crate",
@@ -779,11 +800,11 @@ return {
 			"Haddock",
 			"Barracuda",
 			"Clout Carp"
-		},
-		Priority = 2,
-		CantBeWormholed = true
+		}
 	},
 	["Sweet Stream"] = {
+		Priority = 2,
+		CantBeWormholed = true,
 		Pool = {
 			"Salmon",
 			"Sand Dollar",
@@ -798,11 +819,11 @@ return {
 			"Heart Sand Dollar",
 			"Sweetheart Seahorse",
 			"Cupid Relic"
-		},
-		Priority = 2,
-		CantBeWormholed = true
+		}
 	},
 	["Sweetheart Shores"] = {
+		Priority = 1,
+		CantBeWormholed = true,
 		Pool = {
 			"Salmon",
 			"Sand Dollar",
@@ -817,14 +838,14 @@ return {
 			"Heart Sand Dollar",
 			"Cupid Relic"
 		},
-		Priority = 1,
-		CantBeWormholed = true,
 		RarityBaseChanceBoosts = {
 			Common = 0.3,
 			Rare = 0.5
 		}
 	},
 	["Sweetheart Shores Waterfall"] = {
+		Priority = 2,
+		CantBeWormholed = true,
 		Pool = {
 			"Rock",
 			"Driftwood",
@@ -843,14 +864,14 @@ return {
 			"Heart Sand Dollar",
 			"Cupid Relic"
 		},
-		Priority = 2,
-		CantBeWormholed = true,
 		RarityBaseChanceBoosts = {
 			Common = 0.3,
 			Rare = 0.5
 		}
 	},
 	["Sweetheart Shores Pond"] = {
+		Priority = 2,
+		CantBeWormholed = true,
 		Pool = {
 			"Driftwood",
 			"Trout",
@@ -868,14 +889,14 @@ return {
 			"Heart Sand Dollar",
 			"Cupid Relic"
 		},
-		Priority = 2,
-		CantBeWormholed = true,
 		RarityBaseChanceBoosts = {
 			Common = 0.3,
 			Rare = 0.5
 		}
 	},
 	["Sweetheart Shores Well"] = {
+		Priority = 2,
+		CantBeWormholed = true,
 		Pool = {
 			"Rock",
 			"Log",
@@ -885,11 +906,12 @@ return {
 			"Common Crate",
 			"Bait Crate",
 			"Quality Bait Crate"
-		},
-		Priority = 2,
-		CantBeWormholed = true
+		}
 	},
 	Lovestorm = {
+		Priority = 100,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -930,9 +952,6 @@ return {
 			"Pink Betta",
 			"Lovestorm Turtle"
 		},
-		Priority = 100,
-		CantBeWormholed = true,
-		IsHunt = true,
 		RarityBaseChanceBoosts = {
 			Trash = 0.1,
 			Common = 0.3,
@@ -940,6 +959,9 @@ return {
 		}
 	},
 	["Supercharged Lovestorm"] = {
+		Priority = 101,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -980,9 +1002,6 @@ return {
 			"Pink Betta",
 			"Lovestorm Turtle Supercharged"
 		},
-		Priority = 101,
-		CantBeWormholed = true,
-		IsHunt = true,
 		RarityBaseChanceBoosts = {
 			Trash = 0.1,
 			Common = 0.3,
@@ -990,6 +1009,9 @@ return {
 		}
 	},
 	["Sacred Lovestorm"] = {
+		Priority = 102,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -1030,9 +1052,6 @@ return {
 			"Pink Betta",
 			"Sacred Lovestorm Turtle"
 		},
-		Priority = 102,
-		CantBeWormholed = true,
-		IsHunt = true,
 		RarityBaseChanceBoosts = {
 			Trash = 0.1,
 			Common = 0.3,
@@ -1040,6 +1059,9 @@ return {
 		}
 	},
 	Tidefall = {
+		CantBeWormholed = false,
+		Priority = 1,
+		Disturbs = "TidefallDripstoneCollapse",
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -1051,12 +1073,12 @@ return {
 			"Bumpy Snailfish",
 			"Metal Strongbox",
 			"Forbidden Plesiosaur"
-		},
-		CantBeWormholed = false,
-		Priority = 1,
-		Disturbs = "TidefallDripstoneCollapse"
+		}
 	},
 	["Tidefall Castle"] = {
+		CantBeWormholed = true,
+		Priority = 1,
+		Disturbs = "Plesiosaur",
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -1070,10 +1092,7 @@ return {
 			"Gold Piece",
 			"Forbidden Plesiosaur"
 		},
-		CantBeWormholed = true,
-		Priority = 1,
-		Disturbs = "Plesiosaur",
-		CustomCondition = function(_, p44) --[[ CustomCondition ]] -- line: 1308
+		CustomCondition = function(_, p44) --[[ CustomCondition ]] -- line: 1327
 			if not p44.Data.NewFormat.Tidefall.Obelisks.GateOpen then
 				return false, "You have not yet unlocked this area."
 			end
@@ -1082,6 +1101,9 @@ return {
 		end
 	},
 	["Coral Bastion"] = {
+		Disturbs = "ReefTitan",
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Sand Dollar",
 			"Stalactite",
@@ -1092,12 +1114,12 @@ return {
 			"Regal Angelfish",
 			"Bigeye Trevally",
 			"Atlantic Goliath Grouper"
-		},
-		Disturbs = "ReefTitan",
-		CantBeWormholed = false,
-		Priority = 2
+		}
 	},
 	["Sunken Reliquary"] = {
+		Disturbs = "Omnithal",
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -1111,12 +1133,12 @@ return {
 			"Porcupinefish",
 			"John Dory",
 			"Cornetfish"
-		},
-		Disturbs = "Omnithal",
-		CantBeWormholed = false,
-		Priority = 2
+		}
 	},
 	["Collapsed Ruins"] = {
+		Disturbs = "Pliosaur",
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Rock",
 			"Dripstone",
@@ -1128,12 +1150,12 @@ return {
 			"Atlantic Halosaur",
 			"Blackfin Barracuda",
 			"Black Scabbardfish"
-		},
-		Disturbs = "Pliosaur",
-		CantBeWormholed = false,
-		Priority = 2
+		}
 	},
 	["Crowned Ruins"] = {
+		Disturbs = "Goldwraith",
+		CantBeWormholed = false,
+		Priority = 3,
 		Pool = {
 			"Scrap Metal",
 			"Gnomefish",
@@ -1145,12 +1167,12 @@ return {
 			"Spotted Drum",
 			"Greater Weever",
 			"Black Snoek"
-		},
-		Disturbs = "Goldwraith",
-		CantBeWormholed = false,
-		Priority = 3
+		}
 	},
 	["Plesiosaur Hunt"] = {
+		Priority = 4,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -1162,10 +1184,7 @@ return {
 			"Metal Strongbox",
 			"Forbidden Plesiosaur"
 		},
-		Priority = 4,
-		CantBeWormholed = true,
-		IsHunt = true,
-		CustomCondition = function(_, p46) --[[ CustomCondition ]] -- line: 1447
+		CustomCondition = function(_, p46) --[[ CustomCondition ]] -- line: 1466
 			if not p46.Data.NewFormat.Tidefall.Obelisks.GateOpen then
 				return false, "You have not yet unlocked this area."
 			end
@@ -1174,6 +1193,9 @@ return {
 		end
 	},
 	["Reef Titan Hunt"] = {
+		Priority = 4,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Sand Dollar",
 			"Stalactite",
@@ -1184,12 +1206,12 @@ return {
 			"Regal Angelfish",
 			"Bigeye Trevally",
 			"Atlantic Goliath Grouper"
-		},
-		Priority = 4,
-		CantBeWormholed = true,
-		IsHunt = true
+		}
 	},
 	["Omnithal Hunt"] = {
+		Priority = 4,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -1203,12 +1225,12 @@ return {
 			"Porcupinefish",
 			"John Dory",
 			"Cornetfish"
-		},
-		Priority = 4,
-		CantBeWormholed = true,
-		IsHunt = true
+		}
 	},
 	["Pliosaur Hunt"] = {
+		Priority = 4,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Rock",
 			"Dripstone",
@@ -1220,12 +1242,12 @@ return {
 			"Atlantic Halosaur",
 			"Blackfin Barracuda",
 			"Black Scabbardfish"
-		},
-		Priority = 4,
-		CantBeWormholed = true,
-		IsHunt = true
+		}
 	},
 	["Goldwraith Hunt"] = {
+		Priority = 4,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Scrap Metal",
 			"Gnomefish",
@@ -1237,12 +1259,11 @@ return {
 			"Spotted Drum",
 			"Greater Weever",
 			"Black Snoek"
-		},
-		Priority = 4,
-		CantBeWormholed = true,
-		IsHunt = true
+		}
 	},
 	["New Years"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Eonshell",
 			"Confetti Carp",
@@ -1250,11 +1271,11 @@ return {
 			"Party Popperfish",
 			"Sparkler Sardine",
 			"Sparkling Corkfin"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Glacial Ridge"] = {
+		Priority = 104,
+		CantBeWormholed = true,
 		Pool = {
 			"Ice",
 			"Tire",
@@ -1280,11 +1301,11 @@ return {
 			"Colossal Squid",
 			"Ringle",
 			"Snowball"
-		},
-		Priority = 104,
-		CantBeWormholed = true
+		}
 	},
 	["Northstar Village"] = {
+		Priority = 105,
+		CantBeWormholed = true,
 		Pool = {
 			"Peppermint Pike",
 			"Stockingfish",
@@ -1314,11 +1335,11 @@ return {
 			"Santa Whale Shark",
 			"Northstar Whale",
 			"Festive Relic"
-		},
-		Priority = 105,
-		CantBeWormholed = true
+		}
 	},
 	["Cryoshock Serpent"] = {
+		Priority = 106,
+		CantBeWormholed = true,
 		ExclusiveRods = {
 			{
 				"Christmas Tree Rod",
@@ -1371,9 +1392,7 @@ return {
 			"Festive Relic",
 			"Cryoshock Serpent"
 		},
-		Priority = 106,
-		CantBeWormholed = true,
-		CustomCondition = function(p47, p48, p49) --[[ CustomCondition ]] -- line: 1702
+		CustomCondition = function(p47, p48, p49) --[[ CustomCondition ]] -- line: 1721
 			-- upvalues: ReplicatedStorage (copy)
 			if not p47:GetAttribute("CanCatchCryoshock") or ReplicatedStorage.world.weather.Value ~= "Frost_Moon" then
 				return false, "You have not yet awakened the serpent."
@@ -1404,6 +1423,8 @@ return {
 		end
 	},
 	MapleMeadows = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Cod",
 			"Tire",
@@ -1439,11 +1460,11 @@ return {
 			"Frosty Turkey",
 			"Murky Turkey",
 			"Pioneer Turkey"
-		},
-		CantBeWormholed = true,
-		Priority = 2
+		}
 	},
 	HallOfWhispers = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Rock",
 			"Destroyed Fossil",
@@ -1457,9 +1478,7 @@ return {
 			"Key of Oaths",
 			"Cathulid"
 		},
-		CantBeWormholed = true,
-		Priority = 2,
-		CustomCondition = function(_, p51) --[[ CustomCondition ]] -- line: 1795
+		CustomCondition = function(_, p51) --[[ CustomCondition ]] -- line: 1814
 			if not p51.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1468,6 +1487,8 @@ return {
 		end
 	},
 	PassageOfOaths = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Rock",
 			"Destroyed Fossil",
@@ -1480,9 +1501,7 @@ return {
 			"Abyssal Grenadier",
 			"Cathulith"
 		},
-		CantBeWormholed = true,
-		Priority = 2,
-		CustomCondition = function(_, p53) --[[ CustomCondition ]] -- line: 1821
+		CustomCondition = function(_, p53) --[[ CustomCondition ]] -- line: 1840
 			for _, v61 in p53.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
 				if not v61 then
 					return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
@@ -1493,6 +1512,9 @@ return {
 		end
 	},
 	MossjawHunt = {
+		CantBeWormholed = true,
+		Priority = 4,
+		IsHunt = true,
 		Pool = {
 			"Bronze Corydoras",
 			"Neon Tetra",
@@ -1502,19 +1524,16 @@ return {
 			"Electric Eel",
 			"Pirarucu"
 		},
-		CantBeWormholed = true,
-		Priority = 4,
-		IsHunt = true,
-		CustomCondition = function(_, p55) --[[ CustomCondition ]] -- line: 1846
-			local v64 = 0
+		CustomCondition = function(_, p55) --[[ CustomCondition ]] -- line: 1865
+			local n1 = 0
 
 			for _, v66 in p55.Data.NewFormat.LostJungle.Runes.Placed do
 				if v66 then
-					v64 += 1
+					n1 += 1
 				end
 			end
 
-			if v64 < 5 then
+			if n1 < 5 then
 				return false, "You must place all 5 runes before fishing here."
 			end
 
@@ -1522,6 +1541,9 @@ return {
 		end
 	},
 	["Frostwyrm Hunt"] = {
+		Priority = 4,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Ice",
 			"Bone",
@@ -1531,24 +1553,23 @@ return {
 			"Greenland Halibut",
 			"Glacial Squid"
 		},
-		Priority = 4,
-		CantBeWormholed = true,
-		IsHunt = true,
-		CustomCondition = function(_, _) --[[ CustomCondition ]] -- line: 1876
+		CustomCondition = function(_, _) --[[ CustomCondition ]] -- line: 1895
 			return true
 		end
 	},
 	["Boreal Pines"] = {
+		CantBeWormholed = false,
+		Priority = 1,
 		Pool = {
 			"Ice",
 			"Antarctic Icefish",
 			"Saffron Cod",
 			"Greenland Halibut"
-		},
-		CantBeWormholed = false,
-		Priority = 1
+		}
 	},
 	["Boreal Pines - Ice Fishing"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Ice",
 			"Antarctic Icefish",
@@ -1556,11 +1577,12 @@ return {
 			"Greenland Halibut",
 			"Eelpout",
 			"Fourhorn Sculpin"
-		},
-		CantBeWormholed = false,
-		Priority = 2
+		}
 	},
 	["Boreal Pines - Cave"] = {
+		Disturbs = "FrostwyrmHunt",
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Ice",
 			"Bone",
@@ -1569,12 +1591,11 @@ return {
 			"Saffron Cod",
 			"Greenland Halibut",
 			"Glacial Squid"
-		},
-		Disturbs = "FrostwyrmHunt",
-		CantBeWormholed = false,
-		Priority = 2
+		}
 	},
 	["Boreal Pines - Peak"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Ice",
 			"Antarctic Icefish",
@@ -1582,11 +1603,11 @@ return {
 			"Saffron Cod",
 			"Greenland Halibut",
 			"Lake Whitefish"
-		},
-		CantBeWormholed = false,
-		Priority = 2
+		}
 	},
 	["Luminescent Cavern"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -1596,14 +1617,14 @@ return {
 			"Kitefin Shark",
 			"Atolla Jellyfish"
 		},
-		CantBeWormholed = false,
-		Priority = 2,
 		Disturbs = {
 			"ColossalEtherealDragon",
 			"ColossalBlueDragon"
 		}
 	},
 	["Lost Jungle"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Driftwood",
 			"Neon Tetra",
@@ -1617,11 +1638,12 @@ return {
 			"Pirarucu",
 			"Goliath Tigerfish",
 			"Paradox Piranha"
-		},
-		CantBeWormholed = false,
-		Priority = 2
+		}
 	},
 	["Mossjaw Rest"] = {
+		Disturbs = "MossjawHunt",
+		CantBeWormholed = false,
+		Priority = 3,
 		Pool = {
 			"Driftwood",
 			"Rock",
@@ -1633,12 +1655,11 @@ return {
 			"Pirarucu",
 			"Goliath Tigerfish",
 			"Paradox Piranha"
-		},
-		Disturbs = "MossjawHunt",
-		CantBeWormholed = false,
-		Priority = 3
+		}
 	},
 	["Crimson Cavern"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -1648,13 +1669,11 @@ return {
 			"Japanese Dragon Eel",
 			"Vampire Squid"
 		},
-		CantBeWormholed = false,
-		Priority = 2,
 		Disturbs = {
 			"ColossalAncientDragon",
 			"ColossalEtherealDragon"
 		},
-		CustomCondition = function(_, p59) --[[ CustomCondition ]] -- line: 2035
+		CustomCondition = function(_, p59) --[[ CustomCondition ]] -- line: 2054
 			if not p59.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
 				return false, "You must unlock the Crimson Cavern before fishing here."
 			end
@@ -1663,6 +1682,8 @@ return {
 		end
 	},
 	["Cultist Lair"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Rock",
 			"Destroyed Fossil",
@@ -1675,9 +1696,7 @@ return {
 			"Sinocyclocheilus",
 			"Key of Whispers"
 		},
-		CantBeWormholed = false,
-		Priority = 2,
-		CustomCondition = function(_, p61) --[[ CustomCondition ]] -- line: 2065
+		CustomCondition = function(_, p61) --[[ CustomCondition ]] -- line: 2084
 			if not p61.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1686,6 +1705,8 @@ return {
 		end
 	},
 	["Hall of Whispers"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Rock",
 			"Destroyed Fossil",
@@ -1698,9 +1719,7 @@ return {
 			"Blind Swamp Eel",
 			"Key of Oaths"
 		},
-		CantBeWormholed = false,
-		Priority = 2,
-		CustomCondition = function(_, p63) --[[ CustomCondition ]] -- line: 2091
+		CustomCondition = function(_, p63) --[[ CustomCondition ]] -- line: 2110
 			if not p63.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1709,6 +1728,8 @@ return {
 		end
 	},
 	["Passage of Oaths"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Rock",
 			"Destroyed Fossil",
@@ -1720,9 +1741,7 @@ return {
 			"Garra Typhlops",
 			"Abyssal Grenadier"
 		},
-		CantBeWormholed = false,
-		Priority = 2,
-		CustomCondition = function(_, p65) --[[ CustomCondition ]] -- line: 2116
+		CustomCondition = function(_, p65) --[[ CustomCondition ]] -- line: 2135
 			for _, v78 in p65.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
 				if not v78 then
 					return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
@@ -1733,6 +1752,9 @@ return {
 		end
 	},
 	["The Sanctum"] = {
+		CantBeWormholed = false,
+		Priority = 2,
+		Disturbs = "The Sanctum Hunt",
 		Pool = {
 			"Rock",
 			"Cave Angel Fish",
@@ -1743,10 +1765,7 @@ return {
 			"Spiny Hatchetfish",
 			"Swampfish"
 		},
-		CantBeWormholed = false,
-		Priority = 2,
-		Disturbs = "The Sanctum Hunt",
-		CustomCondition = function(_, p67) --[[ CustomCondition ]] -- line: 2146
+		CustomCondition = function(_, p67) --[[ CustomCondition ]] -- line: 2165
 			if not p67.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1755,6 +1774,9 @@ return {
 		end
 	},
 	["The Sanctum Hunt"] = {
+		CantBeWormholed = true,
+		Priority = 3,
+		IsHunt = true,
 		Pool = {
 			"Cave Angel Fish",
 			"Ozark Cavefish",
@@ -1765,10 +1787,7 @@ return {
 			"Swampfish",
 			"Leviathan"
 		},
-		CantBeWormholed = true,
-		Priority = 3,
-		IsHunt = true,
-		CustomCondition = function(_, p69) --[[ CustomCondition ]] -- line: 2174
+		CustomCondition = function(_, p69) --[[ CustomCondition ]] -- line: 2193
 			if not p69.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1777,6 +1796,9 @@ return {
 		end
 	},
 	["The Sanctum Profane Hunt"] = {
+		CantBeWormholed = true,
+		Priority = 3,
+		IsHunt = true,
 		Pool = {
 			"Cave Angel Fish",
 			"Ozark Cavefish",
@@ -1787,10 +1809,7 @@ return {
 			"Swampfish",
 			"Profane Leviathan"
 		},
-		CantBeWormholed = true,
-		Priority = 3,
-		IsHunt = true,
-		CustomCondition = function(_, p71) --[[ CustomCondition ]] -- line: 2202
+		CustomCondition = function(_, p71) --[[ CustomCondition ]] -- line: 2221
 			if not p71.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1799,6 +1818,9 @@ return {
 		end
 	},
 	["The Sanctum Shamrock Hunt"] = {
+		CantBeWormholed = true,
+		Priority = 3,
+		IsHunt = true,
 		Pool = {
 			"Cave Angel Fish",
 			"Ozark Cavefish",
@@ -1809,10 +1831,7 @@ return {
 			"Swampfish",
 			"Shamrock Leviathan"
 		},
-		CantBeWormholed = true,
-		Priority = 3,
-		IsHunt = true,
-		CustomCondition = function(_, p73) --[[ CustomCondition ]] -- line: 2230
+		CustomCondition = function(_, p73) --[[ CustomCondition ]] -- line: 2249
 			if not p73.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1821,6 +1840,9 @@ return {
 		end
 	},
 	["Carrot Garden"] = {
+		Priority = 102,
+		CantBeWormholed = false,
+		MutationIndicatorEnabled = true,
 		Pool = {
 			"Carrot Turtle",
 			"Carrot Pufferfish",
@@ -1830,15 +1852,13 @@ return {
 			"Carrot Goldfish",
 			"Carrot Snapper",
 			"Carrot Shark"
-		},
-		Priority = 102,
-		CantBeWormholed = false
+		}
 	},
 	["AFK Pool - Trading Plaza"] = {
-		Pool = { "Doubloon" },
 		CantBeWormholed = true,
 		Priority = 3,
-		CustomCondition = function(_, _, p76) --[[ CustomCondition ]] -- line: 2284
+		Pool = { "Doubloon" },
+		CustomCondition = function(_, _, p76) --[[ CustomCondition ]] -- line: 2304
 			local v90 = p76 and p76:FindFirstChild("Stats")
 
 			if not v90 or (not v90:FindFirstChild("realLevel") or v90.realLevel.Value < 25) then
@@ -1849,6 +1869,8 @@ return {
 		end
 	},
 	["Gilded Arch"] = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Squirrelfish",
 			"French Grunt",
@@ -1867,11 +1889,11 @@ return {
 			"Great Barracuda",
 			"Tilefish",
 			"Black Grouper"
-		},
-		CantBeWormholed = true,
-		Priority = 2
+		}
 	},
 	["Castaway Cliffs"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Clowned Triggerfish",
 			"Flamekissed Hawkfish",
@@ -1884,11 +1906,11 @@ return {
 			"Scalloped Hammerhead",
 			"Great Goldcursed Shark",
 			"Razorfin"
-		},
-		CantBeWormholed = false,
-		Priority = 2
+		}
 	},
 	["Magician Narwhal - Sea 2"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Cursed Thread",
 			"Hogchoker",
@@ -1915,11 +1937,11 @@ return {
 			"Dogefin",
 			"Toilet Fish",
 			"Magician Narwhal"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Magician Narwhal - Sea 1"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -1957,11 +1979,11 @@ return {
 			"Long Pike",
 			"Mustard",
 			"Magician Narwhal"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Beluga - Sea 2"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Cursed Thread",
 			"Hogchoker",
@@ -1988,11 +2010,11 @@ return {
 			"Dogefin",
 			"Toilet Fish",
 			"Beluga"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Beluga - Sea 1"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2030,11 +2052,11 @@ return {
 			"Long Pike",
 			"Mustard",
 			"Beluga"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Narwhal - Sea 2"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Cursed Thread",
 			"Hogchoker",
@@ -2061,11 +2083,11 @@ return {
 			"Dogefin",
 			"Toilet Fish",
 			"Narwhal"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Narwhal - Sea 1"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2103,11 +2125,11 @@ return {
 			"Long Pike",
 			"Mustard",
 			"Narwhal"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Apex Leviathan"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Cursed Thread",
 			"Hogchoker",
@@ -2134,11 +2156,11 @@ return {
 			"Dogefin",
 			"Toilet Fish",
 			"Apex Leviathan"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	Mosslurker = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2176,11 +2198,12 @@ return {
 			"Long Pike",
 			"Mustard",
 			"Mosslurker"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Bloop Fish"] = {
+		CantBeWormholed = true,
+		Priority = 5,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2219,12 +2242,12 @@ return {
 			"Mustard",
 			"Device Display",
 			"Bloop Fish"
-		},
-		CantBeWormholed = true,
-		Priority = 5,
-		IsHunt = true
+		}
 	},
 	["Baby Bloop Fish"] = {
+		CantBeWormholed = true,
+		Priority = 4,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2263,12 +2286,12 @@ return {
 			"Mustard",
 			"Device Display",
 			"Baby Bloop Fish"
-		},
-		CantBeWormholed = true,
-		Priority = 4,
-		IsHunt = true
+		}
 	},
 	["Shamrock Bloop Fish"] = {
+		CantBeWormholed = true,
+		Priority = 50,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2307,12 +2330,12 @@ return {
 			"Mustard",
 			"Device Display",
 			"Shamrock Bloop Fish"
-		},
-		CantBeWormholed = true,
-		Priority = 50,
-		IsHunt = true
+		}
 	},
 	["Colossal Ethereal Dragon"] = {
+		CantBeWormholed = true,
+		Priority = 3,
+		IsHunt = true,
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -2321,12 +2344,12 @@ return {
 			"Bluelip Batfish",
 			"Kitefin Shark",
 			"Atolla Jellyfish"
-		},
-		CantBeWormholed = true,
-		Priority = 3,
-		IsHunt = true
+		}
 	},
 	["Colossal Blue Dragon"] = {
+		CantBeWormholed = true,
+		Priority = 3,
+		IsHunt = true,
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -2335,12 +2358,12 @@ return {
 			"Bluelip Batfish",
 			"Kitefin Shark",
 			"Atolla Jellyfish"
-		},
-		CantBeWormholed = true,
-		Priority = 3,
-		IsHunt = true
+		}
 	},
 	["Colossal Ancient Dragon"] = {
+		CantBeWormholed = true,
+		Priority = 3,
+		IsHunt = true,
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -2350,10 +2373,7 @@ return {
 			"Japanese Dragon Eel",
 			"Vampire Squid"
 		},
-		CantBeWormholed = true,
-		Priority = 3,
-		IsHunt = true,
-		CustomCondition = function(_, p78) --[[ CustomCondition ]] -- line: 2939
+		CustomCondition = function(_, p78) --[[ CustomCondition ]] -- line: 2959
 			if not p78.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
 				return false, "You must unlock the Crimson Cavern before fishing here."
 			end
@@ -2362,6 +2382,8 @@ return {
 		end
 	},
 	["Animal Pool"] = {
+		Priority = 102,
+		CantBeWormholed = true,
 		Pool = {
 			"Cluckfin",
 			"Zebrafishlet",
@@ -2373,11 +2395,11 @@ return {
 			"Salmoose",
 			"Mained Lionfish",
 			"Seacow"
-		},
-		Priority = 102,
-		CantBeWormholed = true
+		}
 	},
 	["Animal Pool - Second Sea"] = {
+		Priority = 102,
+		CantBeWormholed = true,
 		Pool = {
 			"Minnowse",
 			"Kittyfish",
@@ -2388,22 +2410,22 @@ return {
 			"Krabbit",
 			"Siren Sheep",
 			"Capybass"
-		},
-		Priority = 102,
-		CantBeWormholed = true
+		}
 	},
 	["Octophant Pool Without Elephant"] = {
+		Priority = 4,
+		CantBeWormholed = true,
 		Pool = {
 			"Shrimpanzee",
 			"Royal Tigerfish",
 			"Slurpfloth",
 			"Flamangler",
 			"Orcanda"
-		},
-		Priority = 4,
-		CantBeWormholed = true
+		}
 	},
 	["Octophant Pool With Elephant"] = {
+		Priority = 4,
+		CantBeWormholed = true,
 		Pool = {
 			"Shrimpanzee",
 			"Royal Tigerfish",
@@ -2411,11 +2433,11 @@ return {
 			"Flamangler",
 			"Orcanda",
 			"Octophant"
-		},
-		Priority = 4,
-		CantBeWormholed = true
+		}
 	},
 	["Sea Leviathan Pool"] = {
+		Priority = 4,
+		CantBeWormholed = true,
 		Pool = {
 			"Sea Leviathan",
 			"Hogchoker",
@@ -2441,11 +2463,10 @@ return {
 			"Psychedelic Frogfish",
 			"Dogefin",
 			"Toilet Fish"
-		},
-		Priority = 4,
-		CantBeWormholed = true
+		}
 	},
 	["Smurf Pool"] = {
+		CantBeWormholed = true,
 		ExclusiveRods = {
 			{ "Smurf Rod" },
 			"<font color=\"rgb(255,0,0)\">You must use the Smurf Rod in this pool!</font>"
@@ -2495,10 +2516,10 @@ return {
 			"Mama Poot",
 			"Vanity",
 			"Grouchy Smurf"
-		},
-		CantBeWormholed = true
+		}
 	},
 	["Smurf Storm Pool"] = {
+		CantBeWormholed = true,
 		ExclusiveRods = {
 			{ "Smurf Rod" },
 			"<font color=\"rgb(255,0,0)\">You must use the Smurf Rod in this pool!</font>"
@@ -2529,10 +2550,11 @@ return {
 			"Vanity",
 			"Papa Smurf",
 			"Grouchy Smurf"
-		},
-		CantBeWormholed = true
+		}
 	},
 	["Sunny O'Coin"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2570,11 +2592,11 @@ return {
 			"Long Pike",
 			"Mustard",
 			"Sunny O'Coin"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Rowdy McCharm"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2612,11 +2634,11 @@ return {
 			"Long Pike",
 			"Mustard",
 			"Rowdy McCharm"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Plumrick O'Luck"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2654,11 +2676,11 @@ return {
 			"Long Pike",
 			"Mustard",
 			"Plumrick O'Luck"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["O'Mango Goldgrin"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2696,11 +2718,11 @@ return {
 			"Long Pike",
 			"Mustard",
 			"O'Mango Goldgrin"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Clover McRich"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2738,11 +2760,11 @@ return {
 			"Long Pike",
 			"Mustard",
 			"Clover McRich"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Blarney McBreeze"] = {
+		CantBeWormholed = true,
+		Priority = 5,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -2780,11 +2802,11 @@ return {
 			"Long Pike",
 			"Mustard",
 			"Blarney McBreeze"
-		},
-		CantBeWormholed = true,
-		Priority = 5
+		}
 	},
 	["Ashfall Pool"] = {
+		CantBeWormholed = true,
+		Priority = 1,
 		Pool = {
 			"Ember Catfish",
 			"Blistered Eel",
@@ -2796,11 +2818,11 @@ return {
 			"Scooty Salmon",
 			"Burnt Betta",
 			"Ashcloud Archerfish"
-		},
-		CantBeWormholed = true,
-		Priority = 1
+		}
 	},
 	["Cults Curse Pool"] = {
+		CantBeWormholed = true,
+		Priority = 1,
 		Pool = {
 			"The Whispering One",
 			"Profane Ray",
@@ -2810,11 +2832,11 @@ return {
 			"Eldritch Spineback",
 			"Hollow Gazer",
 			"Wretched Guppy"
-		},
-		CantBeWormholed = true,
-		Priority = 1
+		}
 	},
 	["Ancient Orcas Pool"] = {
+		CantBeWormholed = true,
+		Priority = 4,
 		Pool = {
 			"Ancient Orca",
 			"Tire",
@@ -2853,11 +2875,11 @@ return {
 			"Mythic Fish",
 			"Long Pike",
 			"Mustard"
-		},
-		CantBeWormholed = true,
-		Priority = 4
+		}
 	},
 	["Orcas Pool"] = {
+		CantBeWormholed = true,
+		Priority = 4,
 		Pool = {
 			"Orca",
 			"Tire",
@@ -2896,11 +2918,12 @@ return {
 			"Mythic Fish",
 			"Long Pike",
 			"Mustard"
-		},
-		CantBeWormholed = true,
-		Priority = 4
+		}
 	},
 	["Whales Pool"] = {
+		Priority = 4,
+		CantBeWormholed = true,
+		IsHunt = true,
 		Pool = {
 			"Blue Whale",
 			"Tire",
@@ -2939,12 +2962,11 @@ return {
 			"Mythic Fish",
 			"Long Pike",
 			"Mustard"
-		},
-		Priority = 4,
-		CantBeWormholed = true,
-		IsHunt = true
+		}
 	},
 	["Notes Island Pool"] = {
+		CantBeWormholed = true,
+		Priority = 4,
 		Pool = {
 			"Rotfin Eel",
 			"Wraithfin",
@@ -2954,11 +2976,11 @@ return {
 			"Bone Lanternfish",
 			"Harbinger Koi",
 			"Slain Maw"
-		},
-		CantBeWormholed = true,
-		Priority = 4
+		}
 	},
 	["The Depths - Serpent"] = {
+		Priority = 2,
+		Disturbs = "MoonlitMirage",
 		Pool = {
 			"Destroyed Fossil",
 			"Scrap Metal",
@@ -2980,9 +3002,7 @@ return {
 			"Ancient Depth Serpent",
 			"Enchant Relic"
 		},
-		Priority = 2,
-		Disturbs = "MoonlitMirage",
-		CustomCondition = function(_, _, p81) --[[ CustomCondition ]] -- line: 3732
+		CustomCondition = function(_, _, p81) --[[ CustomCondition ]] -- line: 3752
 			if not p81:FindFirstChild("Cache") or not p81.Cache:FindFirstChild("Door.TheDepthsGate") then
 				return false, "You must unlock the gate to The Depths before fishing here."
 			end
@@ -2991,6 +3011,7 @@ return {
 		end
 	},
 	["The Depths"] = {
+		Priority = 1,
 		Pool = {
 			"Destroyed Fossil",
 			"Scrap Metal",
@@ -3011,12 +3032,11 @@ return {
 			"Sea Snake",
 			"Enchant Relic"
 		},
-		Priority = 1,
 		Disturbs = {
 			"DepthsAbsoluteDarkness",
 			"MoonlitMirage"
 		},
-		CustomCondition = function(_, _, p84) --[[ CustomCondition ]] -- line: 3777
+		CustomCondition = function(_, _, p84) --[[ CustomCondition ]] -- line: 3797
 			if not p84:FindFirstChild("Cache") or not p84.Cache:FindFirstChild("Door.TheDepthsGate") then
 				return false, "You must unlock the gate to The Depths before fishing here."
 			end
@@ -3024,7 +3044,48 @@ return {
 			return true
 		end
 	},
+	Shimmer = {
+		CantBeWormholed = true,
+		Priority = 10000000,
+		Pool = { "Sockeye Salmon" },
+		Disturbs = {},
+		CustomCondition = function(_, _, p87) --[[ CustomCondition ]] -- line: 3818
+			if not p87:FindFirstChild("Stats") or p87.Stats.rod.Value ~= "Castbound" then
+				return false, "You can only use Castbound for Shimmer."
+			end
+
+			return true
+		end
+	},
+	["Mutated Sharky Whirlpool"] = {
+		Priority = 10,
+		CantBeWormholed = true,
+		Pool = {
+			"Goblin Shark",
+			"Black Dragon Fish",
+			"Spider Crab",
+			"Nautilus",
+			"Small Spine Chimera",
+			"Ancient Eel",
+			"Mutated Shark",
+			"Barreleye Fish",
+			"Sea Snake",
+			"Enchant Relic"
+		},
+		CustomCondition = function(_, p89, p90) --[[ CustomCondition ]] -- line: 3860
+			if not p90:FindFirstChild("Cache") or not p90.Cache:FindFirstChild("Door.TheDepthsGate") then
+				return false, nil
+			end
+
+			if p89.Data.NewFormat.Companions.Equipped ~= "Mutated Sharky" then
+				return false, nil
+			end
+
+			return true
+		end
+	},
 	["Crystal Cove"] = {
+		Priority = 1,
 		Pool = {
 			"Destroyed Fossil",
 			"Scrap Metal",
@@ -3040,12 +3101,11 @@ return {
 			"Crystal Frilled Shark",
 			"DJ Spinopus"
 		},
-		Priority = 1,
 		RarityBaseChanceBoosts = {
 			Common = 0.25
 		},
-		CustomCondition = function(_, _, p87) --[[ CustomCondition ]] -- line: 3816
-			if not p87:FindFirstChild("Cache") or not p87.Cache:FindFirstChild("Door.TheDepthsGate") then
+		CustomCondition = function(_, _, p93) --[[ CustomCondition ]] -- line: 3903
+			if not p93:FindFirstChild("Cache") or not p93.Cache:FindFirstChild("Door.TheDepthsGate") then
 				return false, "You must unlock the gate to The Depths before fishing here."
 			end
 
@@ -3053,6 +3113,8 @@ return {
 		end
 	},
 	Fischfest = {
+		Priority = 1,
+		CantBeWormholed = true,
 		Pool = {
 			"Sunsquid",
 			"Surfboard Ray",
@@ -3064,11 +3126,11 @@ return {
 			"Popsicle",
 			"Message in a Bottle",
 			"Tiki Mask"
-		},
-		Priority = 1,
-		CantBeWormholed = true
+		}
 	},
 	["Ocean Greedy"] = {
+		Priority = 4,
+		CantBeWormholed = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3104,11 +3166,11 @@ return {
 			"Mythic Fish",
 			"Long Pike",
 			"Mustard"
-		},
-		Priority = 4,
-		CantBeWormholed = true
+		}
 	},
 	Ocean = {
+		Priority = 0,
+		Disturbs = "BabyBloopHunt",
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3147,11 +3209,11 @@ return {
 			"Mustard",
 			"Device Display",
 			"Tuskmaw"
-		},
-		Priority = 0,
-		Disturbs = "BabyBloopHunt"
+		}
 	},
 	["Deep Ocean"] = {
+		Priority = 1,
+		Disturbs = "BabyBloopHunt",
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3192,11 +3254,12 @@ return {
 			"Blobfish",
 			"Device Display",
 			"Tuskmaw"
-		},
-		Priority = 1,
-		Disturbs = "BabyBloopHunt"
+		}
 	},
 	Earthquake = {
+		Priority = 0,
+		CantBeWormholed = true,
+		Disturbs = "BabyBloopHunt",
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3237,12 +3300,11 @@ return {
 			"Lusca",
 			"Charybdis",
 			"Tuskmaw"
-		},
-		Priority = 0,
-		CantBeWormholed = true,
-		Disturbs = "BabyBloopHunt"
+		}
 	},
 	["Atlantis Ocean"] = {
+		Priority = 1,
+		CantBeWormholed = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3280,11 +3342,10 @@ return {
 			"Mythic Fish",
 			"Long Pike",
 			"Mustard"
-		},
-		Priority = 1,
-		CantBeWormholed = true
+		}
 	},
 	["Grand Reef"] = {
+		Priority = 3,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3300,10 +3361,10 @@ return {
 			"Reef Parrotfish",
 			"Coral Emperor",
 			"Grand Reef Guardian"
-		},
-		Priority = 3
+		}
 	},
 	["Forsaken Shores"] = {
+		Priority = 1,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3315,10 +3376,10 @@ return {
 			"Scurvy Sailfish",
 			"Cutlass Fish",
 			"Reefrunner Snapper"
-		},
-		Priority = 1
+		}
 	},
 	["Forsaken Shores Ocean"] = {
+		Priority = 2,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3336,10 +3397,10 @@ return {
 			"Cursed Eel",
 			"Shipwreck Barracuda",
 			"Golden Seahorse"
-		},
-		Priority = 2
+		}
 	},
 	["Forsaken Shores Pond"] = {
+		Priority = 3,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3353,10 +3414,10 @@ return {
 			"Reefrunner Snapper",
 			"Captain's Goldfish",
 			"Pirate Captain's Goldfish"
-		},
-		Priority = 3
+		}
 	},
 	["Moosewood Ocean"] = {
+		Priority = 1,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3376,10 +3437,10 @@ return {
 			"Moonfish",
 			"Bull Shark",
 			"Cataclysm Carp"
-		},
-		Priority = 1
+		}
 	},
 	["Moosewood Ocean Mythical"] = {
+		Priority = 4,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3398,10 +3459,10 @@ return {
 			"Whisker Bill",
 			"Treble Bass",
 			"Cataclysm Carp"
-		},
-		Priority = 4
+		}
 	},
 	["Moosewood Docks"] = {
+		Priority = 2,
 		Pool = {
 			"Driftwood",
 			"Seaweed",
@@ -3416,10 +3477,10 @@ return {
 			"Anchovy",
 			"Pike",
 			"Cataclysm Carp"
-		},
-		Priority = 2
+		}
 	},
 	["Moosewood Pond"] = {
+		Priority = 2,
 		Pool = {
 			"Tire",
 			"Driftwood",
@@ -3433,10 +3494,11 @@ return {
 			"Eel",
 			"Whiptail Catfish",
 			"Cataclysm Carp"
-		},
-		Priority = 2
+		}
 	},
 	Lava = {
+		Priority = 2,
+		RequiredDurability = 100,
 		Pool = {
 			"Volcanic Geode",
 			"Rock",
@@ -3451,11 +3513,13 @@ return {
 			"Obsidian Swordfish",
 			"Molten Banshee",
 			"Molten Ripple"
-		},
-		Priority = 2,
-		RequiredDurability = 100
+		}
 	},
 	Eruption = {
+		Priority = 3,
+		CantBeWormholed = true,
+		RequiredDurability = 100,
+		IsHunt = true,
 		Pool = {
 			"Volcanic Geode",
 			"Rock",
@@ -3471,13 +3535,10 @@ return {
 			"Molten Banshee",
 			"Molten Ripple",
 			"Ashclaw"
-		},
-		Priority = 3,
-		CantBeWormholed = true,
-		RequiredDurability = 100,
-		IsHunt = true
+		}
 	},
 	["Roslit Pond"] = {
+		Priority = 2,
 		Pool = {
 			"Driftwood",
 			"Alligator Gar",
@@ -3488,10 +3549,10 @@ return {
 			"Arapaima",
 			"Axolotl",
 			"Aetherfin"
-		},
-		Priority = 2
+		}
 	},
 	["Roslit Pond Seaweed"] = {
+		Priority = 3,
 		Pool = {
 			"Driftwood",
 			"Seaweed",
@@ -3504,10 +3565,10 @@ return {
 			"Suckermouth Catfish",
 			"Axolotl",
 			"Aetherfin"
-		},
-		Priority = 3
+		}
 	},
 	["Roslit Bay"] = {
+		Priority = 3,
 		Pool = {
 			"Driftwood",
 			"Common Crate",
@@ -3526,10 +3587,10 @@ return {
 			"Dumbo Octopus",
 			"Translator Core",
 			"Aetherfin"
-		},
-		Priority = 3
+		}
 	},
 	["Roslit Bay Alien"] = {
+		Priority = 8000,
 		Pool = {
 			"Driftwood",
 			"Common Crate",
@@ -3548,10 +3609,10 @@ return {
 			"Dumbo Octopus",
 			"Translator Core",
 			"Aetherfin"
-		},
-		Priority = 8000
+		}
 	},
 	["Roslit Bay Ocean"] = {
+		Priority = 2,
 		Pool = {
 			"Driftwood",
 			"Common Crate",
@@ -3579,17 +3640,17 @@ return {
 			"Manta Ray",
 			"Translator Core",
 			"Aetherfin"
-		},
-		Priority = 2
+		}
 	},
 	["Roslit Bay Clam"] = {
+		Priority = 10000,
 		Pool = {
 			"Clam",
 			"Aetherfin"
-		},
-		Priority = 10000
+		}
 	},
 	["Desolate Deep"] = {
+		Priority = 2,
 		Pool = {
 			"Log",
 			"Rock",
@@ -3607,24 +3668,27 @@ return {
 			"Barbed Shark",
 			"Emperor Jellyfish",
 			"Lumilotl"
-		},
-		Priority = 2
+		}
 	},
 	["Brine Storm"] = {
+		Priority = 10,
+		RequiredDurability = 200,
+		CantBeWormholed = true,
 		Pool = {
 			"Dissolved Bone",
 			"Stormgazer",
 			"Brine Sovereign",
 			"Caustic Starwyrm"
 		},
-		Priority = 10,
-		RequiredDurability = 200,
-		CantBeWormholed = true,
 		FishingStatsMultiply = {
 			Lure = 0.5
 		}
 	},
 	["Brine Pool Water"] = {
+		Disturbs = "BrineStorm",
+		Priority = 2,
+		RequiredDurability = 200,
+		CantBeWormholed = true,
 		Pool = {
 			"Rock",
 			"Stalactite",
@@ -3638,13 +3702,11 @@ return {
 			"Dweller Catfish",
 			"Brine Phantom",
 			"Spectral Serpent"
-		},
-		Disturbs = "BrineStorm",
-		Priority = 2,
-		RequiredDurability = 200,
-		CantBeWormholed = true
+		}
 	},
 	["Ancient Isle Ocean"] = {
+		Disturbs = "MegHunt",
+		Priority = 2,
 		Pool = {
 			"Tire",
 			"Carbon Crate",
@@ -3673,14 +3735,13 @@ return {
 			"Meg's Fang",
 			"Meg's Spine"
 		},
-		Disturbs = "MegHunt",
-		Priority = 2,
 		RarityLuckFactorBoosts = {
 			Legendary = 1.5,
 			Mythical = 2
 		}
 	},
 	["Ancient Isle Pond"] = {
+		Priority = 3,
 		Pool = {
 			"Log",
 			"Piranha",
@@ -3692,13 +3753,13 @@ return {
 			"Floppy",
 			"Banana"
 		},
-		Priority = 3,
 		RarityLuckFactorBoosts = {
 			Legendary = 1.5,
 			Mythical = 2
 		}
 	},
 	["Ancient Isle Waterfall"] = {
+		Priority = 4,
 		Pool = {
 			"Log",
 			"Piranha",
@@ -3710,13 +3771,13 @@ return {
 			"Leedsichthys",
 			"Banana"
 		},
-		Priority = 4,
 		RarityLuckFactorBoosts = {
 			Legendary = 1.5,
 			Mythical = 2
 		}
 	},
 	["Ancient Archives"] = {
+		Priority = 1,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3730,10 +3791,10 @@ return {
 			"Diplurus",
 			"Lepidotes",
 			"Amblypterus"
-		},
-		Priority = 1
+		}
 	},
 	["Terrapin Ocean"] = {
+		Priority = 2,
 		Pool = {
 			"Log",
 			"Driftwood",
@@ -3750,10 +3811,10 @@ return {
 			"Golden Smallmouth Bass",
 			"Sea Turtle",
 			"Manatee"
-		},
-		Priority = 2
+		}
 	},
 	["Terrapin Olm"] = {
+		Priority = 3,
 		Pool = {
 			"Log",
 			"Driftwood",
@@ -3768,10 +3829,10 @@ return {
 			"Gudgeon",
 			"Walleye",
 			"Olm"
-		},
-		Priority = 3
+		}
 	},
 	["Mushgrove Water"] = {
+		Priority = 2,
 		Pool = {
 			"Carbon Crate",
 			"Common Crate",
@@ -3789,10 +3850,10 @@ return {
 			"Alligator",
 			"Handfish",
 			"RocketFuel"
-		},
-		Priority = 2
+		}
 	},
 	Vertigo = {
+		Priority = 2,
 		Pool = {
 			"Carbon Crate",
 			"Rock",
@@ -3806,10 +3867,10 @@ return {
 			"Abyssacuda",
 			"Voidfin Mahi",
 			"Rubber Ducky"
-		},
-		Priority = 2
+		}
 	},
 	["Snowcap Pond"] = {
+		Priority = 2,
 		Pool = {
 			"Common Crate",
 			"Quality Bait Crate",
@@ -3822,10 +3883,10 @@ return {
 			"Sturgeon",
 			"Pond Emperor",
 			"Baby Pond Emperor"
-		},
-		Priority = 2
+		}
 	},
 	["Snowcap Ocean"] = {
+		Priority = 2,
 		Pool = {
 			"Ice",
 			"Tire",
@@ -3851,10 +3912,10 @@ return {
 			"Moonfish",
 			"Colossal Squid",
 			"Ringle"
-		},
-		Priority = 2
+		}
 	},
 	Snowburrow = {
+		Priority = 2,
 		Pool = {
 			"Ice",
 			"Stalactite",
@@ -3878,10 +3939,10 @@ return {
 			"Ringle",
 			"White Sturgeon",
 			"Glacial Fragment"
-		},
-		Priority = 2
+		}
 	},
 	Sunstone = {
+		Priority = 2,
 		Pool = {
 			"Seaweed",
 			"Driftwood",
@@ -3903,10 +3964,10 @@ return {
 			"Speed Core",
 			"Communication Circuit",
 			"Crustal Colossus"
-		},
-		Priority = 2
+		}
 	},
 	Mineshaft = {
+		Priority = 3,
 		Pool = {
 			"Stalactite",
 			"Rock",
@@ -3920,13 +3981,12 @@ return {
 			"Crystal Geode",
 			"Radiant Crystal"
 		},
-		Priority = 3,
 		RarityLuckFactorBoosts = {
 			Legendary = 0.75,
 			Mythical = 0.5
 		},
-		CustomCondition = function(_, p89) --[[ CustomCondition ]] -- line: 5044
-			if p89.Data.NewFormat.SunstoneExpansion.MerlinQuestProgress < 3 then
+		CustomCondition = function(_, p95) --[[ CustomCondition ]] -- line: 5131
+			if p95.Data.NewFormat.SunstoneExpansion.MerlinQuestProgress < 3 then
 				return false, "You must complete Merlin's quest before fishing here."
 			end
 
@@ -3934,6 +3994,7 @@ return {
 		end
 	},
 	["Sunstone Hidden"] = {
+		Priority = 2,
 		Pool = {
 			"Common Crate",
 			"Carbon Crate",
@@ -3945,10 +4006,10 @@ return {
 			"Driftwood",
 			"Boot",
 			"Rock"
-		},
-		Priority = 2
+		}
 	},
 	["Keepers Altar"] = {
+		Priority = 3,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -3960,10 +4021,10 @@ return {
 			"Pale Tang",
 			"Umbral Shark",
 			"Boulder"
-		},
-		Priority = 3
+		}
 	},
 	["Harvesters Spike"] = {
+		Priority = 3,
 		Pool = {
 			"Carbon Crate",
 			"Common Crate",
@@ -3985,10 +4046,10 @@ return {
 			"Pufferfish",
 			"Swordfish",
 			"Sawfish"
-		},
-		Priority = 3
+		}
 	},
 	["The Arch"] = {
+		Priority = 3,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4013,55 +4074,57 @@ return {
 			"Sailfish",
 			"Rabbitfish",
 			"Moonfish"
-		},
-		Priority = 3
+		}
 	},
 	["Scallop Ocean"] = {
+		Priority = 3,
 		Pool = {
 			"Tire",
 			"Boot",
 			"Seaweed",
 			"Scallop"
-		},
-		Priority = 3
+		}
 	},
 	Debug = {
-		Pool = { "Colossal Squid" },
 		Priority = 10,
-		CantBeWormholed = true
+		CantBeWormholed = true,
+		Pool = { "Colossal Squid" }
 	},
 	Relics = {
-		Pool = { "Enchant Relic" },
 		Priority = 10,
-		CantBeWormholed = true
+		CantBeWormholed = true,
+		Pool = { "Enchant Relic" }
 	},
 	ExaltedRelics = {
-		Pool = { "Exalted Relic" },
 		Priority = 10,
-		CantBeWormholed = true
+		CantBeWormholed = true,
+		Pool = { "Exalted Relic" }
 	},
 	CosmicRelic = {
-		Pool = { "Cosmic Relic" },
 		Priority = 100,
-		CantBeWormholed = true
+		CantBeWormholed = true,
+		Pool = { "Cosmic Relic" }
 	},
 	EmojiFish = {
+		Priority = 10,
+		CantBeWormholed = true,
 		Pool = {
 			"🐟",
 			"🦑",
 			"🦈",
 			"🐋",
 			"🐡"
-		},
-		Priority = 10,
-		CantBeWormholed = true
+		}
 	},
 	Him = {
-		Pool = { "Him" },
 		Priority = 1000,
-		CantBeWormholed = true
+		CantBeWormholed = true,
+		Pool = { "Him" }
 	},
 	["Lovestorm Eel"] = {
+		CantBeWormholed = true,
+		Priority = 100,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4098,12 +4161,12 @@ return {
 			"Crown Bass",
 			"Mythic Fish",
 			"Lovestorm Eel"
-		},
-		CantBeWormholed = true,
-		Priority = 100,
-		IsHunt = true
+		}
 	},
 	["Lovestorm Eel Supercharged"] = {
+		CantBeWormholed = true,
+		Priority = 100,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4140,12 +4203,12 @@ return {
 			"Crown Bass",
 			"Mythic Fish",
 			"Lovestorm Eel Supercharged"
-		},
-		CantBeWormholed = true,
-		Priority = 100,
-		IsHunt = true
+		}
 	},
 	["Birthday Megalodon"] = {
+		CantBeWormholed = true,
+		Priority = 100,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4185,33 +4248,33 @@ return {
 			"Birthday Dumbo Octopus",
 			"Birthday Goldfish",
 			"Birthday Megalodon"
-		},
-		CantBeWormholed = true,
-		Priority = 100,
-		IsHunt = true
+		}
 	},
 	BirthdayCake = {
-		Pool = { "Birthday Cake" },
 		Priority = 101,
 		CantBeWormholed = true,
+		Pool = { "Birthday Cake" },
 		StartDate = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
 		InvalidDate = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
 	},
 	BabysFirstBalloon = {
-		Pool = { "Baby's First Balloon" },
 		Priority = 101,
 		CantBeWormholed = true,
+		Pool = { "Baby's First Balloon" },
 		StartDate = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
 		InvalidDate = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
 	},
 	BirthdayGift = {
-		Pool = { "Birthday Gift" },
 		Priority = 101,
 		CantBeWormholed = true,
+		Pool = { "Birthday Gift" },
 		StartDate = DateTime.fromUniversalTime(2025, 10, 5, 18, 0, 0),
 		InvalidDate = DateTime.fromUniversalTime(2025, 10, 6, 18, 0, 0)
 	},
 	["Megalodon Default"] = {
+		CantBeWormholed = true,
+		Priority = 100,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4249,12 +4312,12 @@ return {
 			"Mythic Fish",
 			"Megalodon",
 			"Ancient Megalodon"
-		},
-		CantBeWormholed = true,
-		Priority = 100,
-		IsHunt = true
+		}
 	},
 	["Megalodon Ancient"] = {
+		CantBeWormholed = true,
+		Priority = 100,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4293,12 +4356,12 @@ return {
 			"Megalodon",
 			"Phantom Megalodon",
 			"Ancient Megalodon"
-		},
-		CantBeWormholed = true,
-		Priority = 100,
-		IsHunt = true
+		}
 	},
 	["Shamrock Megalodon"] = {
+		CantBeWormholed = true,
+		Priority = 100,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4335,12 +4398,10 @@ return {
 			"Crown Bass",
 			"Mythic Fish",
 			"Shamrock Megalodon"
-		},
-		CantBeWormholed = true,
-		Priority = 100,
-		IsHunt = true
+		}
 	},
 	["Great White Shark"] = {
+		Priority = 100,
 		Pool = {
 			"Great White Shark",
 			"Mackerel",
@@ -4356,10 +4417,10 @@ return {
 			"Cookiecutter Shark",
 			"Driftwood",
 			"Common Crate"
-		},
-		Priority = 100
+		}
 	},
 	["Great Hammerhead Shark"] = {
+		Priority = 100,
 		Pool = {
 			"Great Hammerhead Shark",
 			"Mackerel",
@@ -4375,10 +4436,10 @@ return {
 			"Cookiecutter Shark",
 			"Driftwood",
 			"Common Crate"
-		},
-		Priority = 100
+		}
 	},
 	["Whale Shark"] = {
+		Priority = 100,
 		Pool = {
 			"Whale Shark",
 			"Mackerel",
@@ -4394,10 +4455,10 @@ return {
 			"Cookiecutter Shark",
 			"Driftwood",
 			"Common Crate"
-		},
-		Priority = 100
+		}
 	},
 	Isonade = {
+		Priority = 101,
 		Pool = {
 			"Isonade",
 			"Tire",
@@ -4418,10 +4479,11 @@ return {
 			"Mullet",
 			"Cookiecutter Shark",
 			"The Depths Key"
-		},
-		Priority = 101
+		}
 	},
 	FischFright24 = {
+		Priority = 102,
+		CantBeWormholed = true,
 		Pool = {
 			"Lurkerfish",
 			"Skelefish",
@@ -4454,11 +4516,11 @@ return {
 			"Coelacanth",
 			"Sailfish",
 			"Stingray"
-		},
-		Priority = 102,
-		CantBeWormholed = true
+		}
 	},
 	FischFright25 = {
+		Priority = 102,
+		CantBeWormholed = true,
 		Pool = {
 			"Kelpie",
 			"Phantom Jellyfish",
@@ -4490,11 +4552,11 @@ return {
 			"Coelacanth",
 			"Sailfish",
 			"Stingray"
-		},
-		Priority = 102,
-		CantBeWormholed = true
+		}
 	},
 	FrightfulVillage = {
+		Priority = 102,
+		CantBeWormholed = true,
 		Pool = {
 			"Coffin Crab",
 			"Pumpkin Pufferfish",
@@ -4506,11 +4568,11 @@ return {
 			"Candle Carp",
 			"Gravestone Stingray",
 			"Frightful Crate"
-		},
-		Priority = 102,
-		CantBeWormholed = true
+		}
 	},
 	NessieCatacomb = {
+		Priority = 102,
+		CantBeWormholed = true,
 		Pool = {
 			"Skeletal Nessie",
 			"Coffin Crab",
@@ -4522,24 +4584,24 @@ return {
 			"Mourning Manta Ray",
 			"Candle Carp",
 			"Gravestone Stingray"
-		},
-		Priority = 102,
-		CantBeWormholed = true
+		}
 	},
 	Fischgiving = {
-		Pool = { "Turkey" },
 		Priority = 103,
 		CantBeWormholed = true,
+		Pool = { "Turkey" },
 		InvalidDate = DateTime.fromUniversalTime(2024, 12, 7, 8)
 	},
 	SourGummy = {
-		Pool = { "Xtra Sour Gummy Pack" },
 		Priority = 110,
 		CantBeWormholed = true,
+		Pool = { "Xtra Sour Gummy Pack" },
 		StartDate = DateTime.fromUniversalTime(2024, 11, 1, 16),
 		InvalidDate = DateTime.fromUniversalTime(2025, 11, 1, 16)
 	},
 	Fischmas24 = {
+		Priority = 104,
+		CantBeWormholed = true,
 		Pool = {
 			"Icicle",
 			"Basic Present",
@@ -4556,11 +4618,10 @@ return {
 			"Northstar Serpent",
 			"Glass of Milk",
 			"Ornament Fish"
-		},
-		Priority = 104,
-		CantBeWormholed = true
+		}
 	},
 	["Overgrowth Caves"] = {
+		Priority = 2,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4577,10 +4638,10 @@ return {
 			"Frigid Antlers",
 			"Frozen Walnut",
 			"Glass Diamond"
-		},
-		Priority = 2
+		}
 	},
 	["Frigid Cavern"] = {
+		Priority = 2,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4597,10 +4658,10 @@ return {
 			"Polar Alligator",
 			"Frigid Mammoth Tusk",
 			"Glass Diamond"
-		},
-		Priority = 2
+		}
 	},
 	["Cryogenic Canal"] = {
+		Priority = 2,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4618,10 +4679,10 @@ return {
 			"Frostjaw Cod",
 			"Aurora Trout",
 			"Glacial Sturgeon"
-		},
-		Priority = 2
+		}
 	},
 	["Glacial Grotto"] = {
+		Priority = 2,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4639,10 +4700,11 @@ return {
 			"Icefang Barracuda",
 			"Borealis Snapper",
 			"Icebeard Shark"
-		},
-		Priority = 2
+		}
 	},
 	["The Summit Ocean"] = {
+		Priority = 2,
+		CantBeWormholed = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4677,11 +4739,11 @@ return {
 			"Flying Fish",
 			"Mythic Fish",
 			"Glass Diamond"
-		},
-		Priority = 2,
-		CantBeWormholed = true
+		}
 	},
 	["Forsaken Algae Pool"] = {
+		Priority = 100,
+		CantBeWormholed = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4718,11 +4780,11 @@ return {
 			"Crown Bass",
 			"Mythic Fish",
 			"Forsaken Algae"
-		},
-		Priority = 100,
-		CantBeWormholed = true
+		}
 	},
 	["Ancient Algae Pool"] = {
+		Priority = 100,
+		CantBeWormholed = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4759,11 +4821,11 @@ return {
 			"Crown Bass",
 			"Mythic Fish",
 			"Ancient Algae"
-		},
-		Priority = 100,
-		CantBeWormholed = true
+		}
 	},
 	["Mushgrove Algae Pool"] = {
+		Priority = 100,
+		CantBeWormholed = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4800,11 +4862,11 @@ return {
 			"Crown Bass",
 			"Mythic Fish",
 			"Mushgrove Algae"
-		},
-		Priority = 100,
-		CantBeWormholed = true
+		}
 	},
 	["Snowcap Algae Pool"] = {
+		Priority = 100,
+		CantBeWormholed = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4841,11 +4903,11 @@ return {
 			"Crown Bass",
 			"Mythic Fish",
 			"Snowcap Algae"
-		},
-		Priority = 100,
-		CantBeWormholed = true
+		}
 	},
 	["Golden Tide"] = {
+		Priority = 102,
+		CantBeWormholed = true,
 		Pool = {
 			"Confetti Shark",
 			"Countdown Perch",
@@ -4877,11 +4939,10 @@ return {
 			"Coelacanth",
 			"Sailfish",
 			"Stingray"
-		},
-		Priority = 102,
-		CantBeWormholed = true
+		}
 	},
 	["Zeus Pool"] = {
+		Priority = 1,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4902,9 +4963,8 @@ return {
 			"Thunder Serpent",
 			"Zeus' Herald"
 		},
-		Priority = 1,
-		CustomCondition = function(_, _, p92) --[[ CustomCondition ]] -- line: 6252
-			if not p92:FindFirstChild("Cache") or not p92.Cache:FindFirstChild("Door.ZeusPuzzleDoor") then
+		CustomCondition = function(_, _, p98) --[[ CustomCondition ]] -- line: 6339
+			if not p98:FindFirstChild("Cache") or not p98.Cache:FindFirstChild("Door.ZeusPuzzleDoor") then
 				return false, "You must complete the Zeus Trials before fishing here."
 			end
 
@@ -4912,6 +4972,7 @@ return {
 		end
 	},
 	["Poseidon Pool"] = {
+		Priority = 1,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4932,9 +4993,8 @@ return {
 			"Deep Behemoth",
 			"Abyssal Goliath"
 		},
-		Priority = 1,
-		CustomCondition = function(_, _, p95) --[[ CustomCondition ]] -- line: 6303
-			if not p95:FindFirstChild("Cache") or not p95.Cache:FindFirstChild("Door.PoseidonPuzzleDoor") then
+		CustomCondition = function(_, _, p101) --[[ CustomCondition ]] -- line: 6390
+			if not p101:FindFirstChild("Cache") or not p101.Cache:FindFirstChild("Door.PoseidonPuzzleDoor") then
 				return false, "You must complete the Poseidon Trial before fishing here."
 			end
 
@@ -4942,6 +5002,7 @@ return {
 		end
 	},
 	["Sunken's Depth"] = {
+		Priority = 1,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -4966,9 +5027,8 @@ return {
 			"Deep Crownfish",
 			"Celestial Koi"
 		},
-		Priority = 1,
-		CustomCondition = function(_, _, p98) --[[ CustomCondition ]] -- line: 6359
-			if not p98:FindFirstChild("Cache") or not p98.Cache:FindFirstChild("Door.SunkenDepthDoor") then
+		CustomCondition = function(_, _, p104) --[[ CustomCondition ]] -- line: 6446
+			if not p104:FindFirstChild("Cache") or not p104.Cache:FindFirstChild("Door.SunkenDepthDoor") then
 				return false, "You must unlock the Sunken Depths before fishing here."
 			end
 
@@ -4976,6 +5036,7 @@ return {
 		end
 	},
 	["Ethereal Abyss"] = {
+		Priority = 1,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -5000,9 +5061,8 @@ return {
 			"Mage Marlin",
 			"King Jellyfish"
 		},
-		Priority = 1,
-		CustomCondition = function(_, _, p101) --[[ CustomCondition ]] -- line: 6415
-			if not p101:FindFirstChild("Cache") or not p101.Cache:FindFirstChild("Door.EtherealAbyssDoor") then
+		CustomCondition = function(_, _, p107) --[[ CustomCondition ]] -- line: 6502
+			if not p107:FindFirstChild("Cache") or not p107.Cache:FindFirstChild("Door.EtherealAbyssDoor") then
 				return false, "You must unlock the Ethereal Abyss before fishing here."
 			end
 
@@ -5010,6 +5070,8 @@ return {
 		end
 	},
 	["Kraken Pool"] = {
+		Disturbs = "KrakenHunt",
+		Priority = 1,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -5029,10 +5091,8 @@ return {
 			"Void Emperor",
 			"Abyssal Devourer"
 		},
-		Disturbs = "KrakenHunt",
-		Priority = 1,
-		CustomCondition = function(_, _, p104) --[[ CustomCondition ]] -- line: 6465
-			if not p104:FindFirstChild("Cache") or not p104.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+		CustomCondition = function(_, _, p110) --[[ CustomCondition ]] -- line: 6552
+			if not p110:FindFirstChild("Cache") or not p110.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
 				return false, "You must unlock the Kraken Pool before fishing here."
 			end
 
@@ -5040,6 +5100,9 @@ return {
 		end
 	},
 	["The Kraken Pool"] = {
+		CantBeWormholed = true,
+		Priority = 1,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -5060,11 +5123,8 @@ return {
 			"Abyssal Devourer",
 			"The Kraken"
 		},
-		CantBeWormholed = true,
-		Priority = 1,
-		IsHunt = true,
-		CustomCondition = function(_, _, p107) --[[ CustomCondition ]] -- line: 6517
-			if not p107:FindFirstChild("Cache") or not p107.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+		CustomCondition = function(_, _, p113) --[[ CustomCondition ]] -- line: 6604
+			if not p113:FindFirstChild("Cache") or not p113.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
 				return false, "You must unlock the Kraken Pool before fishing here."
 			end
 
@@ -5072,6 +5132,9 @@ return {
 		end
 	},
 	["Ancient Kraken Pool"] = {
+		CantBeWormholed = true,
+		Priority = 1,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -5092,11 +5155,8 @@ return {
 			"Abyssal Devourer",
 			"Ancient Kraken"
 		},
-		CantBeWormholed = true,
-		Priority = 1,
-		IsHunt = true,
-		CustomCondition = function(_, _, p110) --[[ CustomCondition ]] -- line: 6569
-			if not p110:FindFirstChild("Cache") or not p110.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+		CustomCondition = function(_, _, p116) --[[ CustomCondition ]] -- line: 6656
+			if not p116:FindFirstChild("Cache") or not p116.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
 				return false, "You must unlock the Kraken Pool before fishing here."
 			end
 
@@ -5104,6 +5164,9 @@ return {
 		end
 	},
 	["Shamrock Kraken Pool"] = {
+		CantBeWormholed = true,
+		Priority = 1,
+		IsHunt = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -5124,11 +5187,8 @@ return {
 			"Abyssal Devourer",
 			"Shamrock Kraken"
 		},
-		CantBeWormholed = true,
-		Priority = 1,
-		IsHunt = true,
-		CustomCondition = function(_, _, p113) --[[ CustomCondition ]] -- line: 6619
-			if not p113:FindFirstChild("Cache") or not p113.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
+		CustomCondition = function(_, _, p119) --[[ CustomCondition ]] -- line: 6706
+			if not p119:FindFirstChild("Cache") or not p119.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
 				return false, "You must unlock the Kraken Pool before fishing here."
 			end
 
@@ -5136,6 +5196,8 @@ return {
 		end
 	},
 	["Volcanic Vents"] = {
+		CantBeWormholed = false,
+		Priority = 3,
 		Pool = {
 			"Inferno Hide",
 			"Hellfire Haddock",
@@ -5147,11 +5209,11 @@ return {
 			"Scalding Swordfish",
 			"Blisterback Blenny",
 			"Magma Leviathan"
-		},
-		CantBeWormholed = false,
-		Priority = 3
+		}
 	},
 	["Challengers Deep"] = {
+		CantBeWormholed = false,
+		Priority = 3,
 		Pool = {
 			"Frozen Leviathan",
 			"Frostscale Fangtooth",
@@ -5163,11 +5225,11 @@ return {
 			"Chillfin Chimaera",
 			"Cryoskin",
 			"Cryo Coelacanth"
-		},
-		CantBeWormholed = false,
-		Priority = 3
+		}
 	},
 	["Abyssal Zenith"] = {
+		CantBeWormholed = false,
+		Priority = 3,
 		Pool = {
 			"Titanic Black Seadevil",
 			"Leviathan Humpback Anglerfish",
@@ -5179,11 +5241,11 @@ return {
 			"Infant Giant Seadevil",
 			"Giant Seadevil",
 			"Crowned Anglerfish"
-		},
-		CantBeWormholed = false,
-		Priority = 3
+		}
 	},
 	["Calm Zone"] = {
+		CantBeWormholed = false,
+		Priority = 3,
 		Pool = {
 			"Quartzfin Queenfish",
 			"Diamond Discus",
@@ -5194,11 +5256,12 @@ return {
 			"Crystal Corydoras",
 			"Shimmering Silverside",
 			"Crystallized Seadragon"
-		},
-		CantBeWormholed = false,
-		Priority = 3
+		}
 	},
 	["Forsaken Veil"] = {
+		CantBeWormholed = false,
+		Priority = 3,
+		Disturbs = "ScyllaHunt",
 		Pool = {
 			"Hydra Haddock",
 			"Serpent Surgeonfish",
@@ -5209,11 +5272,8 @@ return {
 			"Typhoon Tailfin",
 			"Twilight Tentaclefish"
 		},
-		CantBeWormholed = false,
-		Priority = 3,
-		Disturbs = "ScyllaHunt",
-		CustomCondition = function(_, _, p116) --[[ CustomCondition ]] -- line: 6751
-			if not p116:FindFirstChild("Cache") or not p116.Cache:FindFirstChild("ScyllaBossfight") then
+		CustomCondition = function(_, _, p122) --[[ CustomCondition ]] -- line: 6838
+			if not p122:FindFirstChild("Cache") or not p122.Cache:FindFirstChild("ScyllaBossfight") then
 				return false, "You must complete the Scylla bossfight to fish here."
 			end
 
@@ -5221,6 +5281,9 @@ return {
 		end
 	},
 	["Forsaken Veil - Scylla"] = {
+		CantBeWormholed = true,
+		Priority = 4,
+		IsHunt = true,
 		Pool = {
 			"Hydra Haddock",
 			"Serpent Surgeonfish",
@@ -5232,11 +5295,8 @@ return {
 			"Twilight Tentaclefish",
 			"Scylla"
 		},
-		CantBeWormholed = true,
-		Priority = 4,
-		IsHunt = true,
-		CustomCondition = function(_, _, p119) --[[ CustomCondition ]] -- line: 6786
-			if not p119:FindFirstChild("Cache") or not p119.Cache:FindFirstChild("ScyllaBossfight") then
+		CustomCondition = function(_, _, p125) --[[ CustomCondition ]] -- line: 6873
+			if not p125:FindFirstChild("Cache") or not p125.Cache:FindFirstChild("ScyllaBossfight") then
 				return false, "You must complete the Scylla bossfight to fish here."
 			end
 
@@ -5244,6 +5304,9 @@ return {
 		end
 	},
 	["Forsaken Veil - Shamrock Scylla"] = {
+		CantBeWormholed = true,
+		Priority = 4,
+		IsHunt = true,
 		Pool = {
 			"Hydra Haddock",
 			"Serpent Surgeonfish",
@@ -5255,11 +5318,8 @@ return {
 			"Twilight Tentaclefish",
 			"Shamrock Scylla"
 		},
-		CantBeWormholed = true,
-		Priority = 4,
-		IsHunt = true,
-		CustomCondition = function(_, _, p122) --[[ CustomCondition ]] -- line: 6821
-			if not p122:FindFirstChild("Cache") or not p122.Cache:FindFirstChild("ScyllaBossfight") then
+		CustomCondition = function(_, _, p128) --[[ CustomCondition ]] -- line: 6908
+			if not p128:FindFirstChild("Cache") or not p128.Cache:FindFirstChild("ScyllaBossfight") then
 				return false, "You must complete the Scylla bossfight to fish here."
 			end
 
@@ -5267,6 +5327,8 @@ return {
 		end
 	},
 	Waveborne = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Gale Snapper",
 			"Drift Claw",
@@ -5283,11 +5345,11 @@ return {
 			"Gust Tail",
 			"Vortex Ray",
 			"Storm Skipper"
-		},
-		CantBeWormholed = true,
-		Priority = 2
+		}
 	},
 	["Pine Shoal"] = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Watching Glowfin",
 			"Drifting Gildfin",
@@ -5299,11 +5361,11 @@ return {
 			"Parktail Spinesnapper",
 			"Sunray Sunscale",
 			"Thornfish"
-		},
-		CantBeWormholed = true,
-		Priority = 2
+		}
 	},
 	Lushgrove = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Bogscale",
 			"Murkdrifter",
@@ -5319,11 +5381,11 @@ return {
 			"Jungle Phantom",
 			"Idolfish",
 			"Primordial Levi"
-		},
-		CantBeWormholed = true,
-		Priority = 2
+		}
 	},
 	Emberreach = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Ashscale Minnow",
 			"Glowfin Skipper",
@@ -5338,11 +5400,11 @@ return {
 			"Scorchray",
 			"Brimstone Angler",
 			"Obsidian Koi"
-		},
-		CantBeWormholed = true,
-		Priority = 2
+		}
 	},
 	["Emberreach Ponds"] = {
+		CantBeWormholed = true,
+		Priority = 3,
 		Pool = {
 			"Pyre Fang",
 			"Firecrest",
@@ -5352,11 +5414,12 @@ return {
 			"Blazebelly",
 			"Cragscale",
 			"Tropicspike"
-		},
-		CantBeWormholed = true,
-		Priority = 3
+		}
 	},
 	["Emberreach Lava"] = {
+		CantBeWormholed = true,
+		Priority = 3,
+		RequiredDurability = 100,
 		Pool = {
 			"Lava Bream",
 			"Magma Pike",
@@ -5365,12 +5428,11 @@ return {
 			"Basalt Pike",
 			"Emberwing",
 			"Molten Ripple"
-		},
-		CantBeWormholed = true,
-		Priority = 3,
-		RequiredDurability = 100
+		}
 	},
 	["Isle of New Beginnings"] = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Tidallow",
 			"Reefdart",
@@ -5383,11 +5445,11 @@ return {
 			"Whisper Eel",
 			"Phantom Koi",
 			"Tartaruga"
-		},
-		CantBeWormholed = true,
-		Priority = 2
+		}
 	},
 	["Cursed Isle"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Blisterfish",
 			"Gloombiter",
@@ -5403,11 +5465,11 @@ return {
 			"Chasm Leech",
 			"Dreaming Aberration",
 			"Abyssborn Monstrosity"
-		},
-		CantBeWormholed = false,
-		Priority = 2
+		}
 	},
 	["Open Ocean"] = {
+		CantBeWormholed = true,
+		Priority = 0,
 		Pool = {
 			"Cursed Thread",
 			"Hogchoker",
@@ -5434,11 +5496,11 @@ return {
 			"Dogefin",
 			"Toilet Fish",
 			"Device Display"
-		},
-		CantBeWormholed = true,
-		Priority = 0
+		}
 	},
 	["Azure Lagoon"] = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Murkfin",
 			"Brackscale",
@@ -5453,11 +5515,11 @@ return {
 			"Bloomtail",
 			"Depth Drifter",
 			"Verdant Mirage"
-		},
-		CantBeWormholed = true,
-		Priority = 2
+		}
 	},
 	["Blue Moon - First Sea"] = {
+		Priority = 3,
+		CantBeWormholed = false,
 		Pool = {
 			"Moon Arctic Char",
 			"Silver Scuttler",
@@ -5476,9 +5538,7 @@ return {
 			"Bog Lantern Goby",
 			"Tarnished Moongill"
 		},
-		Priority = 3,
-		CantBeWormholed = false,
-		CustomCondition = function(_, _) --[[ CustomCondition ]] -- line: 7114
+		CustomCondition = function(_, _) --[[ CustomCondition ]] -- line: 7201
 			-- upvalues: ReplicatedStorage (copy)
 			if ReplicatedStorage:GetAttribute("BlueMoonEvent") ~= true then
 				return false, "<font color=\"#D20103\">You can only fish here during a Blue Moon event.</font>"
@@ -5488,6 +5548,8 @@ return {
 		end
 	},
 	["Jurassic Island Pool"] = {
+		Priority = 6,
+		CantBeWormholed = true,
 		ExclusiveRods = {
 			{
 				"Zora's Rod",
@@ -5509,11 +5571,11 @@ return {
 			"Jurassic Helicoprion",
 			"Dasyatis",
 			"Rhizodus"
-		},
-		Priority = 6,
-		CantBeWormholed = true
+		}
 	},
 	["Jurassic Island Ocean Pool"] = {
+		Priority = 5,
+		CantBeWormholed = true,
 		ExclusiveRods = {
 			{
 				"Zora's Rod",
@@ -5535,11 +5597,11 @@ return {
 			"Jurassic Helicoprion",
 			"Dasyatis",
 			"Rhizodus"
-		},
-		Priority = 5,
-		CantBeWormholed = true
+		}
 	},
 	LEGO = {
+		Priority = 5,
+		CantBeWormholed = true,
 		ExclusiveRods = {
 			{
 				"Brick Built Rod",
@@ -5563,11 +5625,11 @@ return {
 			"Goldbrick",
 			"Clown Brickfish",
 			"Azure Studfish"
-		},
-		Priority = 5,
-		CantBeWormholed = true
+		}
 	},
 	["LEGO - Studolodon"] = {
+		Priority = 5,
+		CantBeWormholed = true,
 		ExclusiveRods = {
 			{
 				"Brick Built Rod",
@@ -5613,11 +5675,11 @@ return {
 			"Mythic Fish",
 			"Long Pike",
 			"Mustard"
-		},
-		Priority = 5,
-		CantBeWormholed = true
+		}
 	},
 	["Whale Interior"] = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Bearded Toadfish",
 			"Giant Moray",
@@ -5625,11 +5687,11 @@ return {
 			"Oyster toadfish",
 			"Smooth toadfish",
 			"Splendid toadfish"
-		},
-		CantBeWormholed = true,
-		Priority = 2
+		}
 	},
 	["Treasure Island"] = {
+		CantBeWormholed = false,
+		Priority = 2,
 		Pool = {
 			"Bluegem Angelfish",
 			"Coin Triggerfish",
@@ -5652,11 +5714,11 @@ return {
 			"Gem Eel",
 			"Gem Marlin",
 			"Gem Salmon"
-		},
-		CantBeWormholed = false,
-		Priority = 2
+		}
 	},
 	["Nectar Den"] = {
+		Priority = 1,
+		Disturbs = "NectarBloom",
 		Pool = {
 			"Honey Drifter",
 			"Stinger Skipper",
@@ -5665,13 +5727,12 @@ return {
 			"Honey Clump",
 			"Bee"
 		},
-		Priority = 1,
-		Disturbs = "NectarBloom",
 		FishingStats = {
 			Lure = -50
 		}
 	},
 	["Nectar Den - Serpent"] = {
+		Priority = 2,
 		Pool = {
 			"Honey Drifter",
 			"Stinger Skipper",
@@ -5681,12 +5742,13 @@ return {
 			"Bee",
 			"Queen Bee Serpent"
 		},
-		Priority = 2,
 		FishingStats = {
 			Lure = -50
 		}
 	},
 	["Living Garden"] = {
+		Priority = 1,
+		Disturbs = "FlowerGuardianHunt",
 		Pool = {
 			"Driftwood",
 			"Petal Ray",
@@ -5700,11 +5762,12 @@ return {
 			"Butterfly",
 			"Orchid Anglerfish",
 			"Leafscale Lemon Shark"
-		},
-		Priority = 1,
-		Disturbs = "FlowerGuardianHunt"
+		}
 	},
 	["Toxic Grove"] = {
+		Priority = 1,
+		Disturbs = "RotbloomHunt",
+		RequiredDurability = 150,
 		Pool = {
 			"Bone",
 			"Spore Lurker",
@@ -5716,14 +5779,14 @@ return {
 			"Toxic Jellymass",
 			"Blight Idol"
 		},
-		Priority = 1,
-		Disturbs = "RotbloomHunt",
-		RequiredDurability = 150,
 		RarityBaseChanceBoosts = {
 			Common = 0.25
 		}
 	},
 	["Basketback Tortoise Hunt"] = {
+		Priority = 100,
+		IsHunt = true,
+		CantBeWormholed = true,
 		Pool = {
 			"Tire",
 			"Boot",
@@ -5758,20 +5821,17 @@ return {
 			"Flying Fish",
 			"Mythic Fish",
 			"Basketback Tortoise"
-		},
-		Priority = 100,
-		IsHunt = true,
-		CantBeWormholed = true
+		}
 	},
 	Default = {
+		CantBeWormholed = true,
+		Priority = 2,
 		Pool = {
 			"Rock",
 			"Log",
 			"Seaweed",
 			"Tire",
 			"Boot"
-		},
-		CantBeWormholed = true,
-		Priority = 2
+		}
 	}
 }
