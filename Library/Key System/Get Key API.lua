@@ -220,9 +220,26 @@ return {
     },
   },
 
-  [9792947201] = { -- Bite By Night
+  [9792947201] = { -- Slime RNG
     ["Linkvertise"] = {
       Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-jOqPFgJvjYNe",
+      Icon = 122637139040192,
+    },
+
+    ["LootLabs"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-cNYdzGiBsPbi",
+      Icon = 81598390322167,
+    },
+
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
+    },
+  },
+
+  [9098570654] = { -- Survive the Apocalypse
+    ["Linkvertise"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-tQKVHBHFRhIN",
       Icon = 122637139040192,
     },
 
