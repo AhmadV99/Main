@@ -1,4 +1,4 @@
-{
+return {
     ["Frightful Crate"] = {
         ["Icon"] = "rbxassetid://96490445202648",
         ["Chance"] = 40,
