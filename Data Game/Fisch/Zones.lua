@@ -108,7 +108,7 @@ return {
 			"SolarChorus",
 			"HeliosRayHunt"
 		},
-		CustomCondition = function(_, p2, _) --[[ CustomCondition ]] -- line: 153
+		CustomCondition = function(_, p2, _) -- line: 153
 			if not p2.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Bellona then
 				return false, "You must break Bellona's seal before fishing here."
 			end
@@ -134,7 +134,7 @@ return {
 			"StormFlood",
 			"TidecrasherArchonHunt"
 		},
-		CustomCondition = function(_, p5, _) --[[ CustomCondition ]] -- line: 186
+		CustomCondition = function(_, p5, _) -- line: 186
 			if not p5.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Apollo then
 				return false, "You must break Apollo's seal before fishing here."
 			end
@@ -158,7 +158,7 @@ return {
 			"Arcflash Koi",
 			"Thunderclap Crab"
 		},
-		CustomCondition = function(_, p8, _) --[[ CustomCondition ]] -- line: 216
+		CustomCondition = function(_, p8, _) -- line: 216
 			if not p8.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Poseidon then
 				return false, "You must break Poseidon's seal before fishing here."
 			end
@@ -182,7 +182,7 @@ return {
 			"Shadow Ray",
 			"Grave Serpent"
 		},
-		CustomCondition = function(_, p11, _) --[[ CustomCondition ]] -- line: 245
+		CustomCondition = function(_, p11, _) -- line: 245
 			if not p11.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
 				return false, "You must break Zeus's seal before fishing here."
 			end
@@ -203,7 +203,7 @@ return {
 			"Titanspawn Serpent",
 			"Primordial Devourer"
 		},
-		CustomCondition = function(_, p14, _) --[[ CustomCondition ]] -- line: 270
+		CustomCondition = function(_, p14, _) -- line: 270
 			if not p14.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Hades then
 				return false, "You must break Hades' seal before fishing here."
 			end
@@ -231,7 +231,7 @@ return {
 			"King's Crest Eel",
 			"Tsunami Whale"
 		},
-		CustomCondition = function(_, p17, _) --[[ CustomCondition ]] -- line: 321
+		CustomCondition = function(_, p17, _) -- line: 321
 			if not p17.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Apollo then
 				return false, "You must break Apollo's seal before fishing here."
 			end
@@ -258,7 +258,7 @@ return {
 			"Grave Serpent",
 			"Spectral Whale"
 		},
-		CustomCondition = function(_, p20, _) --[[ CustomCondition ]] -- line: 352
+		CustomCondition = function(_, p20, _) -- line: 352
 			if not p20.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
 				return false, "You must break Zeus's seal before fishing here."
 			end
@@ -287,7 +287,7 @@ return {
 			"Empyrean Sunwhale",
 			"Helios Sunray"
 		},
-		CustomCondition = function(_, p23, _) --[[ CustomCondition ]] -- line: 386
+		CustomCondition = function(_, p23, _) -- line: 386
 			if not p23.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Bellona then
 				return false, "You must break Bellona's seal before fishing here."
 			end
@@ -315,7 +315,7 @@ return {
 			"Grave Serpent",
 			"Spectral Whale"
 		},
-		CustomCondition = function(_, p26, _) --[[ CustomCondition ]] -- line: 418
+		CustomCondition = function(_, p26, _) -- line: 418
 			if not p26.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
 				return false, "You must break Zeus's seal before fishing here."
 			end
@@ -342,7 +342,7 @@ return {
 			"Grave Serpent",
 			"Spectral Whale"
 		},
-		CustomCondition = function(_, p29, _) --[[ CustomCondition ]] -- line: 449
+		CustomCondition = function(_, p29, _) -- line: 449
 			if not p29.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Zeus then
 				return false, "You must break Zeus's seal before fishing here."
 			end
@@ -387,7 +387,7 @@ return {
 			"Primordial Devourer",
 			"Olympian Devil"
 		},
-		CustomCondition = function(_, p32, _) --[[ CustomCondition ]] -- line: 500
+		CustomCondition = function(_, p32, _) -- line: 500
 			if not p32.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Hades then
 				return false, "You must break Hades' seal before fishing here."
 			end
@@ -429,7 +429,7 @@ return {
 			"Skybreaker Leviathan",
 			"Kerauno Wyrm"
 		},
-		CustomCondition = function(_, p35, _) --[[ CustomCondition ]] -- line: 546
+		CustomCondition = function(_, p35, _) -- line: 546
 			if not p35.Data.NewFormat.WrathOfOlympus.DivineSealsBroken.Poseidon then
 				return false, "You must break Poseidon's seal before fishing here."
 			end
@@ -563,6 +563,7 @@ return {
 		Priority = 5,
 		CantBeWormholed = true,
 		IsHunt = true,
+		RequiredDurability = 150,
 		Pool = {
 			"Bone",
 			"Spore Lurker",
@@ -635,7 +636,7 @@ return {
 			Exotic = 0.5,
 			Secret = 0.5
 		},
-		CustomCondition = function(_, p38, _) --[[ CustomCondition ]] -- line: 784
+		CustomCondition = function(_, p38, _) -- line: 785
 			local AboveTheClouds = p38.Data.NewFormat.TimeTrials.AboveTheClouds
 
 			if not AboveTheClouds or (not AboveTheClouds.CompleteCount or AboveTheClouds.CompleteCount < 1) then
@@ -662,7 +663,7 @@ return {
 			Mythical = 0.5,
 			Secret = 0.5
 		},
-		CustomCondition = function(_, p41, _) --[[ CustomCondition ]] -- line: 813
+		CustomCondition = function(_, p41, _) -- line: 814
 			local AboveTheClouds = p41.Data.NewFormat.TimeTrials.AboveTheClouds
 
 			if not AboveTheClouds or (not AboveTheClouds.CompleteCount or AboveTheClouds.CompleteCount < 1) then
@@ -1136,7 +1137,7 @@ return {
 			"Gold Piece",
 			"Forbidden Plesiosaur"
 		},
-		CustomCondition = function(_, p44) --[[ CustomCondition ]] -- line: 1380
+		CustomCondition = function(_, p44) -- line: 1381
 			if not p44.Data.NewFormat.Tidefall.Obelisks.GateOpen then
 				return false, "You have not yet unlocked this area."
 			end
@@ -1228,7 +1229,7 @@ return {
 			"Metal Strongbox",
 			"Forbidden Plesiosaur"
 		},
-		CustomCondition = function(_, p46) --[[ CustomCondition ]] -- line: 1519
+		CustomCondition = function(_, p46) -- line: 1520
 			if not p46.Data.NewFormat.Tidefall.Obelisks.GateOpen then
 				return false, "You have not yet unlocked this area."
 			end
@@ -1436,7 +1437,7 @@ return {
 			"Festive Relic",
 			"Cryoshock Serpent"
 		},
-		CustomCondition = function(p47, p48, p49) --[[ CustomCondition ]] -- line: 1774
+		CustomCondition = function(p47, p48, p49) -- line: 1775
 			-- upvalues: ReplicatedStorage (copy)
 			if not p47:GetAttribute("CanCatchCryoshock") or ReplicatedStorage.world.weather.Value ~= "Frost_Moon" then
 				return false, "You have not yet awakened the serpent."
@@ -1522,7 +1523,7 @@ return {
 			"Key of Oaths",
 			"Cathulid"
 		},
-		CustomCondition = function(_, p51) --[[ CustomCondition ]] -- line: 1867
+		CustomCondition = function(_, p51) -- line: 1868
 			if not p51.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1545,7 +1546,7 @@ return {
 			"Abyssal Grenadier",
 			"Cathulith"
 		},
-		CustomCondition = function(_, p53) --[[ CustomCondition ]] -- line: 1893
+		CustomCondition = function(_, p53) -- line: 1894
 			for _, v61 in p53.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
 				if not v61 then
 					return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
@@ -1568,7 +1569,7 @@ return {
 			"Electric Eel",
 			"Pirarucu"
 		},
-		CustomCondition = function(_, p55) --[[ CustomCondition ]] -- line: 1918
+		CustomCondition = function(_, p55) -- line: 1919
 			local n1 = 0
 
 			for _, v66 in p55.Data.NewFormat.LostJungle.Runes.Placed do
@@ -1597,7 +1598,7 @@ return {
 			"Greenland Halibut",
 			"Glacial Squid"
 		},
-		CustomCondition = function(_, _) --[[ CustomCondition ]] -- line: 1948
+		CustomCondition = function(_, _) -- line: 1949
 			return true
 		end
 	},
@@ -1717,7 +1718,7 @@ return {
 			"ColossalAncientDragon",
 			"ColossalEtherealDragon"
 		},
-		CustomCondition = function(_, p59) --[[ CustomCondition ]] -- line: 2107
+		CustomCondition = function(_, p59) -- line: 2108
 			if not p59.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
 				return false, "You must unlock the Crimson Cavern before fishing here."
 			end
@@ -1740,7 +1741,7 @@ return {
 			"Sinocyclocheilus",
 			"Key of Whispers"
 		},
-		CustomCondition = function(_, p61) --[[ CustomCondition ]] -- line: 2137
+		CustomCondition = function(_, p61) -- line: 2138
 			if not p61.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1763,7 +1764,7 @@ return {
 			"Blind Swamp Eel",
 			"Key of Oaths"
 		},
-		CustomCondition = function(_, p63) --[[ CustomCondition ]] -- line: 2163
+		CustomCondition = function(_, p63) -- line: 2164
 			if not p63.Data.NewFormat.TerrapinExpansion.HasUnlockedInitialHiddenArea then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1785,7 +1786,7 @@ return {
 			"Garra Typhlops",
 			"Abyssal Grenadier"
 		},
-		CustomCondition = function(_, p65) --[[ CustomCondition ]] -- line: 2188
+		CustomCondition = function(_, p65) -- line: 2189
 			for _, v78 in p65.Data.NewFormat.TerrapinExpansion.HallOfWhispers.PassageRequirements do
 				if not v78 then
 					return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
@@ -1809,7 +1810,7 @@ return {
 			"Spiny Hatchetfish",
 			"Swampfish"
 		},
-		CustomCondition = function(_, p67) --[[ CustomCondition ]] -- line: 2218
+		CustomCondition = function(_, p67) -- line: 2219
 			if not p67.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1831,7 +1832,7 @@ return {
 			"Swampfish",
 			"Leviathan"
 		},
-		CustomCondition = function(_, p69) --[[ CustomCondition ]] -- line: 2246
+		CustomCondition = function(_, p69) -- line: 2247
 			if not p69.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1853,7 +1854,7 @@ return {
 			"Swampfish",
 			"Profane Leviathan"
 		},
-		CustomCondition = function(_, p71) --[[ CustomCondition ]] -- line: 2274
+		CustomCondition = function(_, p71) -- line: 2275
 			if not p71.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1875,7 +1876,7 @@ return {
 			"Swampfish",
 			"Shamrock Leviathan"
 		},
-		CustomCondition = function(_, p73) --[[ CustomCondition ]] -- line: 2302
+		CustomCondition = function(_, p73) -- line: 2303
 			if not p73.Data.NewFormat.TerrapinExpansion.UnlockedSanctum then
 				return false, "The fish ignore you completely... Maybe it's best to get here <b>normally</b>."
 			end
@@ -1902,7 +1903,7 @@ return {
 		CantBeWormholed = true,
 		Priority = 3,
 		Pool = { "Doubloon" },
-		CustomCondition = function(_, _, p76) --[[ CustomCondition ]] -- line: 2357
+		CustomCondition = function(_, _, p76) -- line: 2358
 			local v90 = p76 and p76:FindFirstChild("Stats")
 
 			if not v90 or (not v90:FindFirstChild("realLevel") or v90.realLevel.Value < 25) then
@@ -2417,7 +2418,7 @@ return {
 			"Japanese Dragon Eel",
 			"Vampire Squid"
 		},
-		CustomCondition = function(_, p78) --[[ CustomCondition ]] -- line: 3012
+		CustomCondition = function(_, p78) -- line: 3013
 			if not p78.Data.NewFormat.LuminescentCavern.KeystoneData.CrimsonCavernUnlocked then
 				return false, "You must unlock the Crimson Cavern before fishing here."
 			end
@@ -2965,7 +2966,7 @@ return {
 		}
 	},
 	["Whales Pool"] = {
-		Priority = 4,
+		Priority = 40,
 		CantBeWormholed = true,
 		IsHunt = true,
 		Pool = {
@@ -3090,7 +3091,7 @@ return {
 			"Ancient Depth Serpent",
 			"Enchant Relic"
 		},
-		CustomCondition = function(_, _, p81) --[[ CustomCondition ]] -- line: 3858
+		CustomCondition = function(_, _, p81) -- line: 3859
 			if not p81:FindFirstChild("Cache") or not p81.Cache:FindFirstChild("Door.TheDepthsGate") then
 				return false, "You must unlock the gate to The Depths before fishing here."
 			end
@@ -3124,7 +3125,7 @@ return {
 			"DepthsAbsoluteDarkness",
 			"MoonlitMirage"
 		},
-		CustomCondition = function(_, _, p84) --[[ CustomCondition ]] -- line: 3903
+		CustomCondition = function(_, _, p84) -- line: 3904
 			if not p84:FindFirstChild("Cache") or not p84.Cache:FindFirstChild("Door.TheDepthsGate") then
 				return false, "You must unlock the gate to The Depths before fishing here."
 			end
@@ -3137,7 +3138,7 @@ return {
 		Priority = 10000000,
 		Pool = { "Sockeye Salmon" },
 		Disturbs = {},
-		CustomCondition = function(_, _, p87) --[[ CustomCondition ]] -- line: 3924
+		CustomCondition = function(_, _, p87) -- line: 3925
 			if not p87:FindFirstChild("Stats") or p87.Stats.rod.Value ~= "Castbound" then
 				return false, "You can only use Castbound for Shimmer."
 			end
@@ -3160,7 +3161,7 @@ return {
 			"Sea Snake",
 			"Enchant Relic"
 		},
-		CustomCondition = function(_, p89, p90) --[[ CustomCondition ]] -- line: 3966
+		CustomCondition = function(_, p89, p90) -- line: 3967
 			if not p90:FindFirstChild("Cache") or not p90.Cache:FindFirstChild("Door.TheDepthsGate") then
 				return false, nil
 			end
@@ -3192,7 +3193,7 @@ return {
 		RarityBaseChanceBoosts = {
 			Common = 0.25
 		},
-		CustomCondition = function(_, _, p93) --[[ CustomCondition ]] -- line: 4009
+		CustomCondition = function(_, _, p93) -- line: 4010
 			if not p93:FindFirstChild("Cache") or not p93.Cache:FindFirstChild("Door.TheDepthsGate") then
 				return false, "You must unlock the gate to The Depths before fishing here."
 			end
@@ -4073,7 +4074,7 @@ return {
 			Legendary = 0.75,
 			Mythical = 0.5
 		},
-		CustomCondition = function(_, p95) --[[ CustomCondition ]] -- line: 5237
+		CustomCondition = function(_, p95) -- line: 5238
 			if p95.Data.NewFormat.SunstoneExpansion.MerlinQuestProgress < 3 then
 				return false, "You must complete Merlin's quest before fishing here."
 			end
@@ -5051,7 +5052,7 @@ return {
 			"Thunder Serpent",
 			"Zeus' Herald"
 		},
-		CustomCondition = function(_, _, p98) --[[ CustomCondition ]] -- line: 6445
+		CustomCondition = function(_, _, p98) -- line: 6446
 			if not p98:FindFirstChild("Cache") or not p98.Cache:FindFirstChild("Door.ZeusPuzzleDoor") then
 				return false, "You must complete the Zeus Trials before fishing here."
 			end
@@ -5081,7 +5082,7 @@ return {
 			"Deep Behemoth",
 			"Abyssal Goliath"
 		},
-		CustomCondition = function(_, _, p101) --[[ CustomCondition ]] -- line: 6496
+		CustomCondition = function(_, _, p101) -- line: 6497
 			if not p101:FindFirstChild("Cache") or not p101.Cache:FindFirstChild("Door.PoseidonPuzzleDoor") then
 				return false, "You must complete the Poseidon Trial before fishing here."
 			end
@@ -5115,7 +5116,7 @@ return {
 			"Deep Crownfish",
 			"Celestial Koi"
 		},
-		CustomCondition = function(_, _, p104) --[[ CustomCondition ]] -- line: 6552
+		CustomCondition = function(_, _, p104) -- line: 6553
 			if not p104:FindFirstChild("Cache") or not p104.Cache:FindFirstChild("Door.SunkenDepthDoor") then
 				return false, "You must unlock the Sunken Depths before fishing here."
 			end
@@ -5149,7 +5150,7 @@ return {
 			"Mage Marlin",
 			"King Jellyfish"
 		},
-		CustomCondition = function(_, _, p107) --[[ CustomCondition ]] -- line: 6608
+		CustomCondition = function(_, _, p107) -- line: 6609
 			if not p107:FindFirstChild("Cache") or not p107.Cache:FindFirstChild("Door.EtherealAbyssDoor") then
 				return false, "You must unlock the Ethereal Abyss before fishing here."
 			end
@@ -5179,7 +5180,7 @@ return {
 			"Void Emperor",
 			"Abyssal Devourer"
 		},
-		CustomCondition = function(_, _, p110) --[[ CustomCondition ]] -- line: 6658
+		CustomCondition = function(_, _, p110) -- line: 6659
 			if not p110:FindFirstChild("Cache") or not p110.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
 				return false, "You must unlock the Kraken Pool before fishing here."
 			end
@@ -5211,7 +5212,7 @@ return {
 			"Abyssal Devourer",
 			"The Kraken"
 		},
-		CustomCondition = function(_, _, p113) --[[ CustomCondition ]] -- line: 6710
+		CustomCondition = function(_, _, p113) -- line: 6711
 			if not p113:FindFirstChild("Cache") or not p113.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
 				return false, "You must unlock the Kraken Pool before fishing here."
 			end
@@ -5243,7 +5244,7 @@ return {
 			"Abyssal Devourer",
 			"Ancient Kraken"
 		},
-		CustomCondition = function(_, _, p116) --[[ CustomCondition ]] -- line: 6762
+		CustomCondition = function(_, _, p116) -- line: 6763
 			if not p116:FindFirstChild("Cache") or not p116.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
 				return false, "You must unlock the Kraken Pool before fishing here."
 			end
@@ -5275,7 +5276,7 @@ return {
 			"Abyssal Devourer",
 			"Shamrock Kraken"
 		},
-		CustomCondition = function(_, _, p119) --[[ CustomCondition ]] -- line: 6812
+		CustomCondition = function(_, _, p119) -- line: 6813
 			if not p119:FindFirstChild("Cache") or not p119.Cache:FindFirstChild("Door.KrakenPuzzleDoor2") then
 				return false, "You must unlock the Kraken Pool before fishing here."
 			end
@@ -5360,7 +5361,7 @@ return {
 			"Typhoon Tailfin",
 			"Twilight Tentaclefish"
 		},
-		CustomCondition = function(_, _, p122) --[[ CustomCondition ]] -- line: 6944
+		CustomCondition = function(_, _, p122) -- line: 6945
 			if not p122:FindFirstChild("Cache") or not p122.Cache:FindFirstChild("ScyllaBossfight") then
 				return false, "You must complete the Scylla bossfight to fish here."
 			end
@@ -5383,7 +5384,7 @@ return {
 			"Twilight Tentaclefish",
 			"Scylla"
 		},
-		CustomCondition = function(_, _, p125) --[[ CustomCondition ]] -- line: 6979
+		CustomCondition = function(_, _, p125) -- line: 6980
 			if not p125:FindFirstChild("Cache") or not p125.Cache:FindFirstChild("ScyllaBossfight") then
 				return false, "You must complete the Scylla bossfight to fish here."
 			end
@@ -5406,7 +5407,7 @@ return {
 			"Twilight Tentaclefish",
 			"Shamrock Scylla"
 		},
-		CustomCondition = function(_, _, p128) --[[ CustomCondition ]] -- line: 7014
+		CustomCondition = function(_, _, p128) -- line: 7015
 			if not p128:FindFirstChild("Cache") or not p128.Cache:FindFirstChild("ScyllaBossfight") then
 				return false, "You must complete the Scylla bossfight to fish here."
 			end
@@ -5626,7 +5627,7 @@ return {
 			"Bog Lantern Goby",
 			"Tarnished Moongill"
 		},
-		CustomCondition = function(_, _) --[[ CustomCondition ]] -- line: 7307
+		CustomCondition = function(_, _) -- line: 7308
 			-- upvalues: ReplicatedStorage (copy)
 			if ReplicatedStorage:GetAttribute("BlueMoonEvent") ~= true then
 				return false, "<font color=\"#D20103\">You can only fish here during a Blue Moon event.</font>"
