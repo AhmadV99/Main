@@ -414,7 +414,7 @@ return {
 				Name = "Electric",
 				Chance = 25
 			}},
-			ConditionalBoosts = function(p1, _) --[[ ConditionalBoosts ]] -- line: 582
+			ConditionalBoosts = function(p1, _) -- line: 582
 				-- upvalues: ReplicatedStorage (copy)
 				local v8 = if ReplicatedStorage.world.weather.Value ~= "Rain" then if ReplicatedStorage.world.weather.Value ~= "Stormy" then nil else 3 else 2
 
@@ -449,7 +449,7 @@ return {
 			CanSelectFromAdmin = true,
 			Color = Color3.fromRGB(188, 208, 255),
 			StrokeColor = Color3.fromRGB(28, 30, 36),
-			ConditionalBoosts = function(p3, _) --[[ ConditionalBoosts ]] -- line: 627
+			ConditionalBoosts = function(p3, _) -- line: 627
 				-- upvalues: ReplicatedStorage (copy)
 				if ReplicatedStorage.world.weather.Value == "Windy" then
 					return {
@@ -535,7 +535,7 @@ return {
 				Name = "Abyssal",
 				Chance = 20
 			}},
-			ConditionalBoosts = function(_, _) --[[ ConditionalBoosts ]] -- line: 732
+			ConditionalBoosts = function(_, _) -- line: 732
 				if math.random() <= 0.2 then
 					return {
 						WeightBoost = -40
@@ -661,7 +661,7 @@ return {
 			CanSelectFromAdmin = true,
 			Color = Color3.fromRGB(255, 255, 255),
 			StrokeColor = Color3.fromRGB(49, 49, 49),
-			ConditionalBoosts = function(_, _) --[[ ConditionalBoosts ]] -- line: 887
+			ConditionalBoosts = function(_, _) -- line: 887
 				if math.random(1, 4) == 1 then
 					return {
 						ProgressSpeed = 100
@@ -713,16 +713,16 @@ return {
 				Chance = 12
 			}}
 		},
-		["Blood Reckoning"] = {
+		Sacrificial = {
 			Description = "Sacrifice health for a health-dependent chance to apply the Sanguine mutation",
 			ForceStroke = true,
-			Display = "Blood Reckoning",
+			Display = "Sacrificial",
 			RelicGroup = "Default",
 			CanSelectFromAdmin = true,
 			Color = Color3.fromRGB(74, 8, 8),
 			StrokeColor = Color3.fromRGB(163, 17, 17),
 			FishingPassives = {
-				BloodReckoning = {
+				Sacrificial = {
 					HealthCost = 20,
 					HealthChanceRatio = 1,
 					MutationName = "Sanguine"
@@ -760,7 +760,7 @@ return {
 					MaxBoost = 40
 				}
 			},
-			ConditionalBoosts = function(_, p10) --[[ ConditionalBoosts ]] -- line: 1011
+			ConditionalBoosts = function(_, p10) -- line: 1032
 				return {
 					ProgressSpeed = p10:GetAttribute("CurrentMomentumBoost") or 0,
 					Lure = p10:GetAttribute("CurrentMomentumBoost") or 0,
@@ -804,7 +804,7 @@ return {
 					MaxBoost = 1e999
 				}
 			},
-			ConditionalBoosts = function(_, p12) --[[ ConditionalBoosts ]] -- line: 1066
+			ConditionalBoosts = function(_, p12) -- line: 1087
 				return {
 					ProgressSpeed = p12:GetAttribute("TenacityBoost")
 				}
@@ -1070,7 +1070,7 @@ return {
 					GradientColor = Color3.fromRGB(255, 116, 118)
 				}
 			},
-			ConditionalBoosts = function(t1: {[any]: any}, _, n1: number?) --[[ ConditionalBoosts ]] -- line: 1427
+			ConditionalBoosts = function(t1: {[any]: any}, _, n1: number?) -- line: 1448
 				t1.ClientFishingPassives.Generic_Slashes.SlashChance = 30 * (n1 or 1)
 				t1.ClientFishingPassives.Generic_Slashes.SlashDamage = 6 * (n1 or 1)
 			end
@@ -1123,7 +1123,7 @@ return {
 					GradientColor = Color3.fromRGB(255, 147, 181)
 				}
 			},
-			ConditionalBoosts = function(t2: {[any]: any}, _, n2: number?) --[[ ConditionalBoosts ]] -- line: 1496
+			ConditionalBoosts = function(t2: {[any]: any}, _, n2: number?) -- line: 1517
 				t2.ClientFishingPassives.Cryogenic.FreezeChance = 15 * (n2 or 1)
 				t2.ClientFishingPassives.Generic_Slashes.SlashChance = 35 * (n2 or 1)
 				t2.ClientFishingPassives.Generic_Slashes.SlashDamage = 5 * (n2 or 1)
