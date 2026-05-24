@@ -1,4 +1,29 @@
 return {
+	Blackwater = {
+		PriceMultiply = 4.5,
+		Chance = 0,
+		Display = "Blackwater",
+		Color = ColorSequence.new(Color3.fromRGB(22, 33, 38), Color3.fromRGB(38, 71, 71))
+	},
+	Barnacle = {
+		PriceMultiply = 3,
+		Chance = 0,
+		Display = "Barnacle",
+		Color = Color3.fromRGB(132, 132, 0)
+	},
+	Shady = {
+		PriceMultiply = 6,
+		Chance = 0,
+		Display = "Shady",
+		Color = ColorSequence.new(Color3.fromRGB(82, 82, 82), Color3.fromRGB(150, 150, 150))
+	},
+	Sludged = {
+		PriceMultiply = 2.5,
+		Chance = 0,
+		Priority = 1,
+		Display = "Sludged",
+		Color = Color3.fromRGB(94, 49, 116)
+	},
 	Sovereign = {
 		PriceMultiply = 8.5,
 		Chance = 0,
@@ -718,6 +743,13 @@ return {
 		Priority = 1,
 		Color = Color3.fromRGB(89, 71, 58)
 	},
+	Stone = {
+		PriceMultiply = 0.8,
+		Chance = 0,
+		Display = "Stone",
+		Priority = 4,
+		Color = Color3.fromRGB(89, 89, 89)
+	},
 	Mastered = {
 		PriceMultiply = 8,
 		Chance = 0,
@@ -739,6 +771,12 @@ return {
 			"Colossal Ancient Dragon"
 		},
 		Color = Color3.fromRGB(145, 34, 34)
+	},
+	Crimsonwrath = {
+		PriceMultiply = 8,
+		Chance = 0,
+		Display = "Crimsonwrath",
+		Color = Color3.fromRGB(208, 19, 19)
 	},
 	Exploded = {
 		PriceMultiply = 0.1,
@@ -898,7 +936,7 @@ return {
 	Surreal = {
 		Chance = 0,
 		Display = "Surreal",
-		PriceMultiply = math.random(),
+		PriceMultiply = RngUtil.ServerSharedRandom("SurrealMultiply"):NextInteger(0, 8),
 		Color = Color3.fromRGB(214, 214, 214)
 	},
 	Chilled = {
