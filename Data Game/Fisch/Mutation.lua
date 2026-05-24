@@ -936,7 +936,7 @@ return {
 	Surreal = {
 		Chance = 0,
 		Display = "Surreal",
-		PriceMultiply = RngUtil.ServerSharedRandom("SurrealMultiply"):NextInteger(0, 8),
+		PriceMultiply = math.random(),
 		Color = Color3.fromRGB(214, 214, 214)
 	},
 	Chilled = {
