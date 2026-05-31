@@ -1,6 +1,6 @@
 local t1 = {}
 
-local getMaxStages = function() end
+local getMaxStages = function()end
 
 t1.Carrot = {
 	StageGrowTime = 3,
@@ -9,6 +9,9 @@ t1.Carrot = {
 	Cost = 100,
 	Rarity = "Common",
 	Icon = "rbxassetid://126354973861436",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Carrot")
 }
 t1.Beetroot = {
@@ -18,6 +21,9 @@ t1.Beetroot = {
 	Cost = 250,
 	Rarity = "Common",
 	Icon = "rbxassetid://75683972262936",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Beetroot")
 }
 t1.Pumpkin = {
@@ -27,6 +33,9 @@ t1.Pumpkin = {
 	Cost = 500,
 	Rarity = "Common",
 	Icon = "rbxassetid://120071384785086",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Pumpkin")
 }
 t1.Wheat = {
@@ -36,6 +45,9 @@ t1.Wheat = {
 	Cost = 600,
 	Rarity = "Uncommon",
 	Icon = "rbxassetid://105958411706292",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Wheat")
 }
 t1.Melon = {
@@ -45,6 +57,9 @@ t1.Melon = {
 	Cost = 1200,
 	Rarity = "Uncommon",
 	Icon = "rbxassetid://89823771870478",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Melon")
 }
 t1.Onion = {
@@ -54,6 +69,9 @@ t1.Onion = {
 	Cost = 2500,
 	Rarity = "Uncommon",
 	Icon = "rbxassetid://76027442310193",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Onion")
 }
 t1.Cantaloupe = {
@@ -63,6 +81,9 @@ t1.Cantaloupe = {
 	Cost = 3500,
 	Rarity = "Uncommon",
 	Icon = "rbxassetid://76461849031765",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Cantaloupe")
 }
 t1.Watermelon = {
@@ -72,6 +93,9 @@ t1.Watermelon = {
 	Cost = 5000,
 	Rarity = "Uncommon",
 	Icon = "rbxassetid://82631082958471",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Watermelon")
 }
 t1.Blueberry = {
@@ -81,6 +105,9 @@ t1.Blueberry = {
 	Cost = 15000,
 	Rarity = "Rare",
 	Icon = "rbxassetid://101258457596899",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Blueberry")
 }
 t1.Cabbage = {
@@ -90,6 +117,9 @@ t1.Cabbage = {
 	Cost = 40000,
 	Rarity = "Rare",
 	Icon = "rbxassetid://70494334993203",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Cabbage")
 }
 t1.Grape = {
@@ -99,6 +129,9 @@ t1.Grape = {
 	Cost = 65000,
 	Rarity = "Rare",
 	Icon = "rbxassetid://107020576069494",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Grape")
 }
 t1.Peach = {
@@ -108,6 +141,9 @@ t1.Peach = {
 	Cost = 120000,
 	Rarity = "Rare",
 	Icon = "rbxassetid://78416136335603",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Peach")
 }
 t1.Bamboo = {
@@ -117,6 +153,9 @@ t1.Bamboo = {
 	Cost = 90000,
 	Rarity = "Rare",
 	Icon = "rbxassetid://127970209139418",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Bamboo")
 }
 t1.Corn = {
@@ -126,6 +165,9 @@ t1.Corn = {
 	Cost = 200000,
 	Rarity = "Epic",
 	Icon = "rbxassetid://82869356626181",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Corn")
 }
 t1.Plum = {
@@ -135,6 +177,9 @@ t1.Plum = {
 	Cost = 300000,
 	Rarity = "Epic",
 	Icon = "rbxassetid://96266560720274",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Plum")
 }
 t1.Cauliflower = {
@@ -144,6 +189,9 @@ t1.Cauliflower = {
 	Cost = 500000,
 	Rarity = "Epic",
 	Icon = "rbxassetid://104954005138604",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Cauliflower")
 }
 t1.Nectarine = {
@@ -153,6 +201,9 @@ t1.Nectarine = {
 	Cost = 600000,
 	Rarity = "Epic",
 	Icon = "rbxassetid://78042422558451",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Nectarine")
 }
 t1.Sunflower = {
@@ -162,6 +213,9 @@ t1.Sunflower = {
 	Cost = 650000,
 	Rarity = "Epic",
 	Icon = "rbxassetid://117253232535322",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Sunflower")
 }
 t1.Citrus = {
@@ -171,6 +225,9 @@ t1.Citrus = {
 	Cost = 850000,
 	Rarity = "Epic",
 	Icon = "rbxassetid://96654353770726",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Citrus")
 }
 t1["Spring Onion"] = {
@@ -180,6 +237,9 @@ t1["Spring Onion"] = {
 	Cost = 2500000,
 	Rarity = "Legendary",
 	Icon = "rbxassetid://76427912984352",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Spring Onion")
 }
 t1.Mango = {
@@ -189,6 +249,9 @@ t1.Mango = {
 	Cost = 4000000,
 	Rarity = "Legendary",
 	Icon = "rbxassetid://109503576202591",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Mango")
 }
 t1.Mushroom = {
@@ -198,6 +261,9 @@ t1.Mushroom = {
 	Cost = 7000000,
 	Rarity = "Legendary",
 	Icon = "rbxassetid://130334558322984",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Mushroom")
 }
 t1.Banana = {
@@ -207,6 +273,9 @@ t1.Banana = {
 	Cost = 9000000,
 	Rarity = "Legendary",
 	Icon = "rbxassetid://110806023176063",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Banana")
 }
 t1.Potato = {
@@ -216,6 +285,9 @@ t1.Potato = {
 	Cost = 15000000,
 	Rarity = "Legendary",
 	Icon = "rbxassetid://106274750283922",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Potato")
 }
 t1.Strawberry = {
@@ -225,6 +297,9 @@ t1.Strawberry = {
 	Cost = 30000000,
 	Rarity = "Secret",
 	Icon = "rbxassetid://122861611492960",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Strawberry")
 }
 t1.Glowshroom = {
@@ -234,6 +309,9 @@ t1.Glowshroom = {
 	Cost = 45000000,
 	Rarity = "Secret",
 	Icon = "rbxassetid://131144371916248",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Glowshroom")
 }
 t1.Beanstalk = {
@@ -243,6 +321,9 @@ t1.Beanstalk = {
 	Cost = 55000000,
 	Rarity = "Secret",
 	Icon = "rbxassetid://85500096008978",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Beanstalk")
 }
 t1.Tomato = {
@@ -252,6 +333,9 @@ t1.Tomato = {
 	Cost = 100000000,
 	Rarity = "Secret",
 	Icon = "rbxassetid://114056065292567",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Tomato")
 }
 t1.Starfruit = {
@@ -261,6 +345,9 @@ t1.Starfruit = {
 	Cost = 130000000,
 	Rarity = "Secret",
 	Icon = "rbxassetid://113159680322143",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Starfruit")
 }
 t1.Apple = {
@@ -270,6 +357,9 @@ t1.Apple = {
 	Cost = 500000000,
 	Rarity = "Prismatic",
 	Icon = "rbxassetid://114648889310706",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Apple")
 }
 t1.Pineapple = {
@@ -279,6 +369,9 @@ t1.Pineapple = {
 	Cost = 800000000,
 	Rarity = "Prismatic",
 	Icon = "rbxassetid://96965977404334",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Pineapple")
 }
 t1["Cherry Blossom"] = {
@@ -288,6 +381,9 @@ t1["Cherry Blossom"] = {
 	Cost = 1500000000,
 	Rarity = "Prismatic",
 	Icon = "rbxassetid://113089617020491",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Cherry Blossom")
 }
 t1["Blood Orange"] = {
@@ -297,6 +393,9 @@ t1["Blood Orange"] = {
 	Cost = 1200000000,
 	Rarity = "Prismatic",
 	Icon = "rbxassetid://91735058553113",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Blood Orange")
 }
 t1.Cinnamon = {
@@ -306,6 +405,9 @@ t1.Cinnamon = {
 	Cost = 1500000000,
 	Rarity = "Prismatic",
 	Icon = "rbxassetid://115406750726940",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Cinnamon")
 }
 t1.Garlic = {
@@ -315,6 +417,9 @@ t1.Garlic = {
 	Cost = 5500000000,
 	Rarity = "Prismatic",
 	Icon = "rbxassetid://125906680429478",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Garlic")
 }
 t1["Diamond Blossom"] = {
@@ -324,6 +429,9 @@ t1["Diamond Blossom"] = {
 	Cost = 2500000000,
 	Rarity = "Divine",
 	Icon = "rbxassetid://122417569106706",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Diamond Blossom")
 }
 t1.Pomegranate = {
@@ -333,6 +441,9 @@ t1.Pomegranate = {
 	Cost = 4000000000,
 	Rarity = "Divine",
 	Icon = "rbxassetid://103967157117109",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Pomegranate")
 }
 t1["Golden Apple"] = {
@@ -342,6 +453,9 @@ t1["Golden Apple"] = {
 	Cost = 5000000000,
 	Rarity = "Divine",
 	Icon = "rbxassetid://139460315400136",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Golden Apple")
 }
 t1["Horned Melon"] = {
@@ -351,6 +465,9 @@ t1["Horned Melon"] = {
 	Cost = 3500000000,
 	Rarity = "Divine",
 	Icon = "rbxassetid://104091122254403",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Horned Melon")
 }
 t1.Cocoa = {
@@ -360,6 +477,9 @@ t1.Cocoa = {
 	Cost = 10000000000,
 	Rarity = "Divine",
 	Icon = "rbxassetid://114725155379714",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Cocoa")
 }
 t1.Kiwi = {
@@ -369,6 +489,9 @@ t1.Kiwi = {
 	Cost = 60000000000,
 	Rarity = "Exotic",
 	Icon = "rbxassetid://95748217573017",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Kiwi")
 }
 t1.Moonflower = {
@@ -378,6 +501,9 @@ t1.Moonflower = {
 	Cost = 70000000000,
 	Rarity = "Exotic",
 	Icon = "rbxassetid://135603884964310",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Moonflower")
 }
 t1.Pepper = {
@@ -387,6 +513,9 @@ t1.Pepper = {
 	Cost = 900000000000,
 	Rarity = "Exotic",
 	Icon = "rbxassetid://92168908105918",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Pepper")
 }
 t1["Void Fruit"] = {
@@ -396,6 +525,9 @@ t1["Void Fruit"] = {
 	Cost = 15000000000000,
 	Rarity = "Exotic",
 	Icon = "rbxassetid://107149331882043",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Void Fruit")
 }
 t1.Dragonfruit = {
@@ -405,6 +537,9 @@ t1.Dragonfruit = {
 	Cost = 8000000000,
 	Rarity = "Exotic",
 	Icon = "rbxassetid://114062222095400",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Dragonfruit")
 }
 t1.Passionfruit = {
@@ -414,6 +549,9 @@ t1.Passionfruit = {
 	Cost = 100000000000,
 	Rarity = "Exotic",
 	Icon = "rbxassetid://133826304800248",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Passionfruit")
 }
 t1.Durian = {
@@ -423,6 +561,9 @@ t1.Durian = {
 	Cost = 100000000000000,
 	Rarity = "Transcended",
 	Icon = "rbxassetid://136005865293840",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Durian")
 }
 t1.Papaya = {
@@ -432,6 +573,9 @@ t1.Papaya = {
 	Cost = 150000000000000,
 	Rarity = "Transcended",
 	Icon = "rbxassetid://86766975895017",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Papaya")
 }
 t1["Ghost Pepper"] = {
@@ -441,6 +585,9 @@ t1["Ghost Pepper"] = {
 	Cost = 275000000000000,
 	Rarity = "Transcended",
 	Icon = "rbxassetid://79932279226146",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Ghost Pepper")
 }
 t1["Ember Fruit"] = {
@@ -450,6 +597,9 @@ t1["Ember Fruit"] = {
 	Cost = 350000000000000,
 	Rarity = "Transcended",
 	Icon = "rbxassetid://122005165931520",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Ember Fruit")
 }
 t1["Promise Lily"] = {
@@ -459,6 +609,9 @@ t1["Promise Lily"] = {
 	Cost = 2650,
 	Rarity = "Uncommon",
 	Icon = "rbxassetid://111529285577664",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Promise Lily")
 }
 t1["Twinflame Tulip"] = {
@@ -468,6 +621,9 @@ t1["Twinflame Tulip"] = {
 	Cost = 520000,
 	Rarity = "Epic",
 	Icon = "rbxassetid://83749180026101",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Twinflame Tulip")
 }
 t1["Amulet Anemone"] = {
@@ -477,6 +633,9 @@ t1["Amulet Anemone"] = {
 	Cost = 4500000,
 	Rarity = "Legendary",
 	Icon = "rbxassetid://99839924513909",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Amulet Anemone")
 }
 t1["Duoheart Daisy"] = {
@@ -486,6 +645,9 @@ t1["Duoheart Daisy"] = {
 	Cost = 525000000,
 	Rarity = "Prismatic",
 	Icon = "rbxassetid://102842502980199",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Duoheart Daisy")
 }
 t1["Heartvine Bloom"] = {
@@ -495,6 +657,9 @@ t1["Heartvine Bloom"] = {
 	Cost = 1000000000000,
 	Rarity = "Exotic",
 	Icon = "rbxassetid://113402139211947",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Heartvine Bloom")
 }
 t1["Soulbound Orchid"] = {
@@ -504,6 +669,9 @@ t1["Soulbound Orchid"] = {
 	Cost = 275000000000000,
 	Rarity = "Transcended",
 	Icon = "rbxassetid://98392262882061",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Soulbound Orchid")
 }
 t1.Honeysuckle = {
@@ -513,6 +681,9 @@ t1.Honeysuckle = {
 	Cost = 615000,
 	Rarity = "Epic",
 	Icon = "rbxassetid://133873295727596",
+	RollWeather = "",
+	EventFiltering = "Queen Bee",
+	Event = true,
 	MaxStages = getMaxStages("Honeysuckle")
 }
 t1["Martian Melon"] = {
@@ -522,6 +693,9 @@ t1["Martian Melon"] = {
 	Cost = 700000,
 	Rarity = "Epic",
 	Icon = "rbxassetid://106038784487820",
+	RollWeather = "",
+	EventFiltering = "Alien",
+	Event = true,
 	MaxStages = getMaxStages("Martian Melon")
 }
 t1["Truckers Delight"] = {
@@ -531,6 +705,9 @@ t1["Truckers Delight"] = {
 	Cost = 1100000000000,
 	Rarity = "Exotic",
 	Icon = "rbxassetid://104238821963098",
+	RollWeather = "",
+	EventFiltering = "Trucker",
+	Event = true,
 	MaxStages = getMaxStages("Truckers Delight")
 }
 t1["Galaxy Hibiscus"] = {
@@ -540,6 +717,9 @@ t1["Galaxy Hibiscus"] = {
 	Cost = 1550000000,
 	Rarity = "Prismatic",
 	Icon = "rbxassetid://83921504164479",
+	RollWeather = "",
+	EventFiltering = "Alien",
+	Event = true,
 	MaxStages = getMaxStages("Galaxy Hibiscus")
 }
 t1["Queens Blossom"] = {
@@ -549,6 +729,9 @@ t1["Queens Blossom"] = {
 	Cost = 400000000000000,
 	Rarity = "Transcended",
 	Icon = "rbxassetid://139834284110532",
+	RollWeather = "",
+	EventFiltering = "Queen Bee",
+	Event = true,
 	MaxStages = getMaxStages("Queens Blossom")
 }
 t1["Crimson Higanbana"] = {
@@ -558,6 +741,9 @@ t1["Crimson Higanbana"] = {
 	Cost = 35000000000000,
 	Rarity = "Exotic",
 	Icon = "rbxassetid://135675001780251",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Crimson Higanbana")
 }
 t1["Striped Starfruit"] = {
@@ -567,6 +753,9 @@ t1["Striped Starfruit"] = {
 	Cost = 120000000000,
 	Rarity = "Exotic",
 	Icon = "rbxassetid://131887947770411",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Striped Starfruit")
 }
 t1["Rush Root"] = {
@@ -576,6 +765,9 @@ t1["Rush Root"] = {
 	Cost = 850000000,
 	Rarity = "Prismatic",
 	Icon = "rbxassetid://97782489653316",
+	RollWeather = "",
+	EventFiltering = "Plant Rush",
+	Event = true,
 	MaxStages = getMaxStages("Rush Root")
 }
 t1["Compost Hydra"] = {
@@ -585,6 +777,9 @@ t1["Compost Hydra"] = {
 	Cost = 115000000000,
 	Rarity = "Divine",
 	Icon = "rbxassetid://124923772419773",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Compost Hydra")
 }
 t1["Garden Devourer"] = {
@@ -594,6 +789,9 @@ t1["Garden Devourer"] = {
 	Cost = 80000000000000,
 	Rarity = "Transcended",
 	Icon = "rbxassetid://137021612636352",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
 	MaxStages = getMaxStages("Garden Devourer")
 }
 t1["Garden Golem"] = {
@@ -603,7 +801,298 @@ t1["Garden Golem"] = {
 	Cost = 425000000000000,
 	Rarity = "Transcended",
 	Icon = "rbxassetid://110990877607783",
+	RollWeather = "",
+	EventFiltering = "Plant Rush",
+	Event = true,
 	MaxStages = getMaxStages("Garden Golem")
+}
+t1.Glasswing = {
+	StageGrowTime = 41,
+	Price = 10000,
+	RollChance = 7.5E-05,
+	Cost = 80000000,
+	Rarity = "Secret",
+	Icon = "rbxassetid://82366620503706",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Glasswing")
+}
+t1["Iron Fern"] = {
+	StageGrowTime = 52,
+	Price = 42500,
+	RollChance = 2.5E-06,
+	Cost = 4000000000,
+	Rarity = "Prismatic",
+	Icon = "rbxassetid://93526557279965",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Iron Fern")
+}
+t1.Crystalberry = {
+	StageGrowTime = 56,
+	Price = 88000,
+	RollChance = 1E-06,
+	Cost = 20000000000,
+	Rarity = "Divine",
+	Icon = "rbxassetid://106340122212417",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Crystalberry")
+}
+t1["Elder Dragonroot"] = {
+	StageGrowTime = 70,
+	Price = 230000,
+	RollChance = 1.5E-07,
+	Cost = 50000000000000,
+	Rarity = "Exotic",
+	Icon = "rbxassetid://134754280320777",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Elder Dragonroot")
+}
+t1["Aurora Lotus"] = {
+	StageGrowTime = 60,
+	Price = 750000,
+	RollChance = 3E-17,
+	Cost = 750000000000000,
+	Rarity = "Transcended",
+	Icon = "rbxassetid://131766012265909",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Aurora Lotus")
+}
+t1["Monsoon Crown"] = {
+	StageGrowTime = 35,
+	Price = 6500,
+	RollChance = 5E-06,
+	Cost = 65000000,
+	Rarity = "Secret",
+	Icon = "rbxassetid://121002761040161",
+	RollWeather = "Rain",
+	EventFiltering = "Weather",
+	Event = true,
+	MaxStages = getMaxStages("Monsoon Crown")
+}
+t1.Frostbell = {
+	StageGrowTime = 50,
+	Price = 32000,
+	RollChance = 9E-06,
+	Cost = 1750000000,
+	Rarity = "Prismatic",
+	Icon = "rbxassetid://125844493720907",
+	RollWeather = "Blizzard",
+	EventFiltering = "Weather",
+	Event = true,
+	MaxStages = getMaxStages("Frostbell")
+}
+t1["Amber Wisp"] = {
+	StageGrowTime = 54,
+	Price = 72000,
+	RollChance = 1E-06,
+	Cost = 12500000000,
+	Rarity = "Divine",
+	Icon = "rbxassetid://130173668484705",
+	RollWeather = "Fall",
+	EventFiltering = "Weather",
+	Event = true,
+	MaxStages = getMaxStages("Amber Wisp")
+}
+t1["Darkmatter Bramble"] = {
+	StageGrowTime = 58,
+	Price = 145000,
+	RollChance = 1.5E-06,
+	Cost = 1000000000000,
+	Rarity = "Exotic",
+	Icon = "rbxassetid://102413526368017",
+	RollWeather = "Blackhole",
+	EventFiltering = "Weather",
+	Event = true,
+	MaxStages = getMaxStages("Darkmatter Bramble")
+}
+t1["Uranium Reed"] = {
+	StageGrowTime = 62,
+	Price = 165000,
+	RollChance = 9E-07,
+	Cost = 10000000000000,
+	Rarity = "Exotic",
+	Icon = "rbxassetid://137757501867318",
+	RollWeather = "Nuclear",
+	EventFiltering = "Weather",
+	Event = true,
+	MaxStages = getMaxStages("Uranium Reed")
+}
+t1.Mooncap = {
+	StageGrowTime = 58,
+	Price = 380000,
+	RollChance = 7.5E-13,
+	Cost = 175000000000000,
+	Rarity = "Transcended",
+	Icon = "rbxassetid://74454900498138",
+	RollWeather = "Galaxy",
+	EventFiltering = "Weather",
+	Event = true,
+	MaxStages = getMaxStages("Mooncap")
+}
+t1["Crowned Pear"] = {
+	StageGrowTime = 56,
+	Price = 135000,
+	RollChance = 0,
+	Cost = 125000000000,
+	Rarity = "Exotic",
+	Icon = "rbxassetid://117029356491793",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Crowned Pear")
+}
+t1["Golden Quillflower"] = {
+	StageGrowTime = 59,
+	Price = 425000,
+	RollChance = 0,
+	Cost = 125000000000000,
+	Rarity = "Transcended",
+	Icon = "rbxassetid://86346738176362",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Golden Quillflower")
+}
+t1["Muck Monarch"] = {
+	StageGrowTime = 58,
+	Price = 525000,
+	RollChance = 0,
+	Cost = 200000000000000,
+	Rarity = "Transcended",
+	Icon = "rbxassetid://90508370462397",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Muck Monarch")
+}
+t1["Admin Sunflower"] = {
+	StageGrowTime = 21,
+	Price = 725,
+	RollChance = 0.08,
+	Cost = 865000,
+	Rarity = "Epic",
+	Icon = "rbxassetid://90162458295480",
+	RollWeather = "Admin",
+	EventFiltering = "Admin",
+	Event = true,
+	MaxStages = getMaxStages("Admin Sunflower")
+}
+t1["Admin Crownflower"] = {
+	StageGrowTime = 34,
+	Price = 7000,
+	RollChance = 0.0001,
+	Cost = 32000000,
+	Rarity = "Secret",
+	Icon = "rbxassetid://95630689832590",
+	RollWeather = "Admin",
+	EventFiltering = "Admin",
+	Event = true,
+	MaxStages = getMaxStages("Admin Crownflower")
+}
+t1["Admin Bloom"] = {
+	StageGrowTime = 55,
+	Price = 85000,
+	RollChance = 1E-06,
+	Cost = 25000000000,
+	Rarity = "Divine",
+	Icon = "rbxassetid://99216323833948",
+	RollWeather = "Admin",
+	EventFiltering = "Admin",
+	Event = true,
+	MaxStages = getMaxStages("Admin Bloom")
+}
+t1["Admin Starroot"] = {
+	StageGrowTime = 68,
+	Price = 190000,
+	RollChance = 5E-07,
+	Cost = 17500000000000,
+	Rarity = "Exotic",
+	Icon = "rbxassetid://131204514559443",
+	RollWeather = "Admin",
+	EventFiltering = "Admin",
+	Event = true,
+	MaxStages = getMaxStages("Admin Starroot")
+}
+t1["Admin Rose"] = {
+	StageGrowTime = 54,
+	Price = 575000,
+	RollChance = 1E-13,
+	Cost = 375000000000000,
+	Rarity = "Transcended",
+	Icon = "rbxassetid://89331633081487",
+	RollWeather = "Admin",
+	EventFiltering = "Admin",
+	Event = true,
+	MaxStages = getMaxStages("Admin Rose")
+}
+t1["Hex Sprout"] = {
+	StageGrowTime = 52,
+	Price = 55000,
+	RollChance = 0,
+	Cost = 7500000000,
+	Rarity = "Prismatic",
+	Icon = "rbxassetid://124930182457336",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Hex Sprout")
+}
+t1.Dreadcap = {
+	StageGrowTime = 55,
+	Price = 95000,
+	RollChance = 0,
+	Cost = 25000000000,
+	Rarity = "Divine",
+	Icon = "rbxassetid://95946980515780",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Dreadcap")
+}
+t1.Muckthorn = {
+	StageGrowTime = 60,
+	Price = 170000,
+	RollChance = 0,
+	Cost = 1500000000000,
+	Rarity = "Exotic",
+	Icon = "rbxassetid://103384718661122",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Muckthorn")
+}
+t1.Witherfang = {
+	StageGrowTime = 62,
+	Price = 280000,
+	RollChance = 0,
+	Cost = 15000000000000,
+	Rarity = "Exotic",
+	Icon = "rbxassetid://118591383003002",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Witherfang")
+}
+t1["Heart of Corruption"] = {
+	StageGrowTime = 56,
+	Price = 600000,
+	RollChance = 0,
+	Cost = 350000000000000,
+	Rarity = "Transcended",
+	Icon = "rbxassetid://110500571236439",
+	RollWeather = nil,
+	EventFiltering = nil,
+	Event = nil,
+	MaxStages = getMaxStages("Heart of Corruption")
 }
 
 return t1
