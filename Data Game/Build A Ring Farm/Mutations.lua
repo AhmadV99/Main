@@ -1,0 +1,98 @@
+return {
+  ["Autumn"] = {
+    IncomeMultiplier = 2,
+    Exclusive = false,
+    Chance = 2.5,
+    Icon = "rbxassetid://75583245048327",
+  },
+  ["Radioactive"] = {
+    IncomeMultiplier = 3,
+    Exclusive = false,
+    Chance = 1,
+    Icon = "rbxassetid://71770679306731",
+  },
+  ["Cosmic"] = {
+    IncomeMultiplier = 8,
+    Exclusive = false,
+    Chance = 0,
+    Icon = "rbxassetid://98542381873665",
+  },
+  ["Wet"] = {
+    IncomeMultiplier = 1.35,
+    Exclusive = false,
+    Chance = 4,
+    Icon = "rbxassetid://122050688091032",
+  },
+  ["Normal"] = {
+    IncomeMultiplier = 1,
+    Exclusive = false,
+    Chance = 100,
+    Icon = "",
+  },
+  ["Bubblegum"] = {
+    IncomeMultiplier = 9,
+    Exclusive = false,
+    Chance = 0,
+    Icon = "rbxassetid://75311916018178",
+  },
+  ["Honeycomb"] = {
+    IncomeMultiplier = 6.5,
+    Exclusive = true,
+    Chance = 0,
+    Icon = "rbxassetid://82870365269108",
+  },
+  ["Starfall"] = {
+    IncomeMultiplier = 4,
+    Exclusive = true,
+    Chance = 0,
+    Icon = "rbxassetid://114705452962380",
+  },
+  ["Alien"] = {
+    IncomeMultiplier = 3.25,
+    Exclusive = true,
+    Chance = 0,
+    Icon = "rbxassetid://113114612996887",
+  },
+  ["Rainbow"] = {
+    IncomeMultiplier = 5,
+    Exclusive = false,
+    Chance = 0.5,
+    Icon = "rbxassetid://124504009338339",
+  },
+  ["Admin"] = {
+    IncomeMultiplier = 5,
+    Exclusive = true,
+    Event = true,
+    Chance = 0,
+    Icon = "rbxassetid://118168219362263",
+  },
+  ["Farm"] = {
+    IncomeMultiplier = 4,
+    Exclusive = true,
+    Chance = 0,
+    Icon = "rbxassetid://109535950112499",
+  },
+  ["Void"] = {
+    IncomeMultiplier = 2.25,
+    Exclusive = false,
+    Chance = 2,
+    Icon = "rbxassetid://117135194542014",
+  },
+  ["Fire"] = {
+    IncomeMultiplier = 10,
+    Exclusive = false,
+    Chance = 0,
+    Icon = "rbxassetid://110131658510427",
+  },
+  ["Trucker"] = {
+    IncomeMultiplier = 4,
+    Exclusive = true,
+    Chance = 0,
+  },
+  ["Frozen"] = {
+    IncomeMultiplier = 1.75,
+    Exclusive = false,
+    Chance = 3,
+    Icon = "rbxassetid://104786728852121",
+  },
+}
