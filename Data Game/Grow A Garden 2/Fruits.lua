@@ -360,4 +360,278 @@ return {
       GrowRate = 0.06,
     },
   },
+  ["Buttercup"] = {
+    GrowData = {
+      BaseWeight = 5,
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Pineapple"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Grape"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Apple"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["PartFruit"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Carrot"] = {
+    GrowData = {
+      BaseWeight = 0.8,
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Strawberry"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Blueberry"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Tomato"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Pumpkin"] = {
+    GrowData = {
+      BaseWeight = 5,
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Bamboo"] = {
+    GrowData = {
+      BaseWeight = 4,
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Lotus"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Coconut"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Cactus"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Mango"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Thorn Rose"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Venus Fly Trap"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Poison Apple"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Beanstalk"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Acorn"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Sunflower"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Cherry"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Pomegranate"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Mushroom"] = {
+    GrowData = {
+      BaseWeight = 5,
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Ghost Pepper"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Poison Ivy"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Romanesco"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Baby Cactus"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Glow Mushroom"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Horned Melon"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Corn"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Pinetree"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Moon Bloom OLD"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Banana"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Magic Beanstalk"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Green Bean"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Tulip"] = {
+    GrowData = {
+      BaseWeight = 0.5,
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Dragon Fruit"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Dragon's Breath"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
+  ["Moon Bloom"] = {
+    Extras = {
+    },
+    GrowData = {
+      InheritPlantSizeMultiplier = 0.25,
+    },
+  },
 }
