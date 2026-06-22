@@ -239,12 +239,12 @@ return {
 
   [9098570654] = { -- Survive the Apocalypse
     ["Linkvertise"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-jOqPFgJvjYNe",
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-tQKVHBHFRhIN",
       Icon = 122637139040192,
     },
 
     ["LootLabs"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-tQKVHBHFRhIN",
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-cNYdzGiBsPbi",
       Icon = 81598390322167,
     },
 
@@ -256,12 +256,12 @@ return {
 
   [10004244222] = { -- Kick a Lucky Block
     ["Linkvertise"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-jOqPFgJvjYNe",
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-tQKVHBHFRhIN",
       Icon = 122637139040192,
     },
 
     ["LootLabs"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-tQKVHBHFRhIN",
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-cNYdzGiBsPbi",
       Icon = 81598390322167,
     },
 
