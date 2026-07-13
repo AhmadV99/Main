@@ -570,7 +570,7 @@ if RunService:IsServer() then
 	t23 = {}
 	t24 = {}
 	u28 = 0
-	RemoteEvent = Instance.new("RemoteEvent", script)
+	RemoteEvent = Instance.new("RemoteEvent", game:GetService("ReplicatedStorage").SharedModules.Packet)
 
 	local t25 = {}
 	local thread = task.spawn(function() -- line: 375
@@ -915,7 +915,7 @@ else
 	t33 = {
 		Index = 0
 	}
-	RemoteEvent = script:WaitForChild("RemoteEvent")
+	RemoteEvent = game:GetService("ReplicatedStorage").SharedModules.Packet:WaitForChild("RemoteEvent")
 
 	local n6 = 0
 	local thread = task.spawn(function() -- line: 557
