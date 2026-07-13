@@ -1,10 +1,14 @@
-local v1 = game:GetService("RunService"):IsServer()
+local RunService = game:GetService("RunService")
+
+local v1 = RunService:IsServer()
+
 local u2 = nil
 local u3 = nil
 local u4 = nil
 local u5 = nil
 local Instances = nil
 local u7 = nil
+
 local t1 = {}
 local t2 = {}
 local t3 = {}
