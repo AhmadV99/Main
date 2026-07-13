@@ -1,19 +1,26 @@
 local Signal = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Data%20Game/Grow%20A%20Garden%202/Module/Signal.lua"))()
 local Task = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Data%20Game/Grow%20A%20Garden%202/Module/Task.lua"))()
 local Types = loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Data%20Game/Grow%20A%20Garden%202/Module/Types.lua"))()
+
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local SharedModules = ReplicatedStorage:WaitForChild("SharedModules", 10)
+local Packet = SharedModules:WaitForChild("Packet", 10)
+
 local t1 = {
 	UseBuffers = true,
 	DebugOutgoing = false,
 	DebugOutgoingInterval = 5,
 	DebugOutgoingTop = 10
 }
+
 local ParametersToFunctions = nil
 local TableToFunctions = nil
 local ReadParameters = nil
 local WriteParameters = nil
 local Timeout = nil
-local RunService = game:GetService("RunService")
-local Players = game:GetService("Players")
 local Reads = Types.Reads
 local Writes = Types.Writes
 local Import = Types.Import
@@ -24,13 +31,17 @@ local NumberU8 = Reads.NumberU8
 local NumberU8_2 = Writes.NumberU8
 local NumberU16 = Reads.NumberU16
 local NumberU16_2 = Writes.NumberU16
+
 local t2 = {}
 local t3 = {}
+
 local t23 = nil
 local t24 = nil
 local t33 = nil
+
 local RemoteEvent = nil
 local u28 = nil
+
 local t4 = {
 	BufferLength = 128,
 	BufferOffset = 0,
@@ -38,6 +49,7 @@ local t4 = {
 	Buffer = buffer.create(128),
 	Instances = {}
 }
+
 local u30 = nil
 local n1 = 0
 local u32 = nil
@@ -570,7 +582,7 @@ if RunService:IsServer() then
 	t23 = {}
 	t24 = {}
 	u28 = 0
-	RemoteEvent = Instance.new("RemoteEvent", game:GetService("ReplicatedStorage").SharedModules.Packet)
+	RemoteEvent = Instance.new("RemoteEvent", Packet)
 
 	local t25 = {}
 	local thread = task.spawn(function() -- line: 375
@@ -915,7 +927,7 @@ else
 	t33 = {
 		Index = 0
 	}
-	RemoteEvent = game:GetService("ReplicatedStorage").SharedModules.Packet:WaitForChild("RemoteEvent")
+	RemoteEvent = Packet:WaitForChild("RemoteEvent")
 
 	local n6 = 0
 	local thread = task.spawn(function() -- line: 557
