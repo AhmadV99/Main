@@ -321,4 +321,21 @@ return {
       Icon = 137084367454843,
     },
   },
+
+  [10144280947] = { -- +1 Speed Monkey Escape
+    ["Linkvertise"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-TvHBCBqhGNCg",
+      Icon = 122637139040192,
+    },
+
+    ["LootLabs"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-cNYdzGiBsPbi",
+      Icon = 81598390322167,
+    },
+
+    ["Work.ink"] = {
+      Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Workink-AaIaLIEtfopE",
+      Icon = 137084367454843,
+    },
+  },
 }
