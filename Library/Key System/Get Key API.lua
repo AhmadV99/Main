@@ -363,7 +363,10 @@ return {
     },
 
     ["LootLabs"] = {
-      Url = "https://ads.luarmor.net/get_key?for=Lootlabs_2-kExMLtKrcbgL",
+      Url = ({
+        "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Lootlabs-cNYdzGiBsPbi",
+        "https://ads.luarmor.net/get_key?for=Lootlabs_2-kExMLtKrcbgL"
+      })[math.random(1, 2)],
       Icon = 81598390322167,
     },
 
