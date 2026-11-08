@@ -373,7 +373,7 @@ return {
     },
   },
 
-  [game.GameId] = { -- Throw Food For Animals
+  [10766972131] = { -- Throw Food For Animals
     ["Linkvertise"] = {
       Url = "https://ads.luarmor.net/get_key?for=Speed_Hub_X_Linkvertise-jOqPFgJvjYNe",
       Icon = 122637139040192,
